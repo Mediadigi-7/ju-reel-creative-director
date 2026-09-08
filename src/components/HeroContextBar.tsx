@@ -14,7 +14,7 @@ interface HeroContextBarProps {
   isLoading: boolean;
 }
 
-const LANGUAGES: LanguageOption[] = ['English', 'Tanglish', 'Tamil'];
+const LANGUAGES: LanguageOption[] = ['English', 'Tamil', 'Telugu', 'Malayalam', 'Hindi', 'Tanglish'];
 const DURATIONS = ['20s (Fast)', '28s (Standard)', '45s (Deep Dive)'];
 
 export const HeroContextBar: React.FC<HeroContextBarProps> = ({

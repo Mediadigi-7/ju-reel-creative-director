@@ -876,9 +876,15 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:00 – 00:04',
           visual: `Protagonist turns directly to the camera with an engaging, candid expression in a student lounge, holding up a notebook with "${cleanTitle}" written on it.`,
           dialogue: isTamil
-            ? `"${cleanTitle} pathi yosichu confuse aagite irukeengala? Let's break it down."`
+            ? `"${cleanTitle} pathi yosichu confuse aagite irukeengala? Idhai oru nimisham paarunga, unga confusion theerum."`
+            : isTelugu
+            ? `"${cleanTitle} gurinchi alochinchi confuse avthunnara? Oka sari idi chudandi, clear clarity vasthundi."`
+            : isMalayalam
+            ? `"${cleanTitle}-ne patti aalochichu confuse aakukayaano? Oru nimisham idhu kaanu, theerchayaayum clarity kittum."`
+            : isHindi
+            ? `"${cleanTitle} ko lekar confuse ho rahe ho? Ek minute ruko, poori clarity mil jayegi."`
             : isTanglish
-            ? `"If you are asking '${cleanTitle}', you are not alone. Here is the real breakdown."`
+            ? `"${cleanTitle} pathi yosikareengala? Stop listening to random advice, here is the real breakdown."`
             : `"If you've been wondering about '${cleanTitle}', stop listening to generic advice. Here's the truth."`,
           onscreenText: `${cleanTitle.toUpperCase()}? 🎯`,
           cameraPerformance: `Dynamic 35mm lens push-in with crisp subject focus and direct eye contact.`,
@@ -890,9 +896,15 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:04 – 00:08',
           visual: `Protagonist highlights conflicting opinions on a tablet: one side showing old traditional routes, the other showing unguided trends.`,
           dialogue: isTamil
-            ? `"Everyone gives different opinions. Trying to please everyone will leave you stuck."`
+            ? `"Ovvovvoru aalum ovvovvoru advice solvaanga. Ellaraiyum satisfy panna paatha, neenga dhaan stuck aaveenga."`
+            : isTelugu
+            ? `"Prathi okkalu okko mata chepthaaru. Andari matalu vini follow ayithe, meere stuck avthaaru."`
+            : isMalayalam
+            ? `"Ellaavarum oro upadesham parayum. Ellaavareyum kettu poyaal, ningal arikkum thalayil aakunnath."`
+            : isHindi
+            ? `"Har koi alag-alag advice deta hai. Sabki sunoge toh khud phans jaoge."`
             : isTanglish
-            ? `"Half the advice you hear is 10 years outdated, and the other half is pure hype. How do you find what actually works?"`
+            ? `"Half the advice you hear is 10 years outdated, and the other half is pure hype. You need a practical decision rule."`
             : `"Half the advice you hear is 10 years out of date, and the other half is hype. You need a practical decision rule."`,
           onscreenText: `OUTDATED ADVICE VS HYPE`,
           cameraPerformance: `Over-the-shoulder POV shot panning from tablet screen to thoughtful expression.`,
@@ -904,10 +916,16 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:08 – 00:12',
           visual: `Protagonist closes the tablet decisively, camera cuts instantly to a lively outdoor setting on Joy University campus.`,
           dialogue: isTamil
-            ? `"Stop the noise. Ask yourself this one simple question."`
+            ? `"Vera yarodaiyum advice-ah kekaadheenga. Ungalukku neengale indha oru kelviya kettukonga."`
+            : isTelugu
+            ? `"Inka andari matalu aapandi. Meeku meere ee chinna question veskondi."`
+            : isMalayalam
+            ? `"Mathullavarude shabdam onnu nirthu. Ningal ningaloduthanne ee oru chodyam chodhikku."`
+            : isHindi
+            ? `"Sabka shor band karo. Khud se sirf ye ek seedha sawaal poocho."`
             : isTanglish
-            ? `"Hold up! Cut through the noise. Here is the single filter that matters."`
-            : `"Stop the noise. Here is the single 3-part filter that cuts through the confusion."`,
+            ? `"Hold up! Cut through the noise. Here is the single question that actually matters."`
+            : `"Stop the noise. Ask yourself this one simple question."`,
           onscreenText: `CUT THROUGH THE NOISE ✂️`,
           cameraPerformance: `Quick match-cut from indoor desk to bright open-air campus corridor.`,
         },
@@ -918,10 +936,16 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:12 – 00:22',
           visual: `Protagonist walks alongside modern labs, detailing 3 concrete checkpoints for "${cleanTitle}".`,
           dialogue: isTamil
-            ? `"Check these 3 things: 1. Practical day-to-day problem fit, 2. Digital & AI tool integration, 3. Real campus mentorship with industry projects."`
+            ? `"Indha 3 vishayatha check pannunga: 1. Ungalukku daily idhula interest irukka? 2. Syllabus-la modern tech & AI irukka? 3. Real campus project & lab access kidaikkuma?"`
+            : isTelugu
+            ? `"Ee 3 vishayalu check cheyandi: 1. Meeku daily indhulo interest unda? 2. Syllabus lo modern tech & AI unda? 3. College lo hands-on project labs unnaaya?"`
+            : isMalayalam
+            ? `"Ee 3 kaaryangal check cheyyu: 1. Ningalkku idhil nalla interest undo? 2. Syllabus-il modern tech & AI undo? 3. College-il real practical lab facilities kittumo?"`
+            : isHindi
+            ? `"Ye 3 cheezein check karo: 1. Kya daily ye kaam karne mein interest hai? 2. Syllabus mein modern tech aur AI hai? 3. Campus mein real project labs milenge?"`
             : isTanglish
-            ? `"3 Checkpoints for ${cleanTitle}: Day-1 practical labs, cross-disciplinary tech exposure, and real industry mentors."`
-            : `"Apply these 3 filters to ${cleanTitle}: 1. What daily problems do you enjoy solving? 2. Is modern technology embedded in the syllabus? 3. Does the campus offer active project labs?"`,
+            ? `"3 Checkpoints for ${cleanTitle}: Daily problem fit, modern tech & AI layer, and real day-1 lab access."`
+            : `"Apply these 3 filters to ${cleanTitle}: 1. Practical day-to-day problem fit, 2. Digital & AI tool integration, 3. Real campus mentorship with industry projects."`,
           onscreenText: `1. PROBLEM FIT  2. TECH LAYER  3. ACTIVE LABS`,
           cameraPerformance: `Smooth gimbal tracking shot alongside protagonist in natural daylight.`,
         },
@@ -932,10 +956,16 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:22 – 00:26',
           visual: `Protagonist joins a group of engaged student peers around an outdoor study pod on Joy University campus.`,
           dialogue: isTamil
-            ? `"When you choose based on real capability, your entire future becomes clear."`
+            ? `"Real capability irukka degree-ah choose panna, unga future pathina bayame irukaadhu."`
+            : isTelugu
+            ? `"Real capability iche course choose cheskunte, future gurinchi bhayapadalsina pani undadu."`
+            : isMalayalam
+            ? `"Real capability tharunna course thiranjeduthaal, future-ne patti oru pediyum venda."`
+            : isHindi
+            ? `"Jab real capability dene wala course choose karoge, toh future ka darr khatam ho jayega."`
             : isTanglish
-            ? `"The right decision isn\'t about pleasing others. It\'s about building who you become."`
-            : `"The right choice isn\'t about pleasing others. It\'s about picking a launchpad that builds who you want to become."`,
+            ? `"The right decision isn't about pleasing others. It's about building who you become."`
+            : `"The right choice isn't about pleasing others. It's about picking a launchpad that builds who you want to become."`,
           onscreenText: `CHOOSE YOUR LAUNCHPAD`,
           cameraPerformance: `Medium wide heroic framing with vibrant green campus backdrop.`,
         },
@@ -946,9 +976,15 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:26 – 00:30',
           visual: `Protagonist smiles at camera with friendly nod.`,
           dialogue: isTamil
-            ? `"Save this reel before your counseling starts."`
+            ? `"Admissions start aaguradhukku munnadi, indha reel-ah save pannivechukkonga."`
+            : isTelugu
+            ? `"Admissions start ayye mundhe, ee reel ni thappakunda save cheskondi."`
+            : isMalayalam
+            ? `"Admissions thudangunnathinu munpaayi, ee reel ippol thanne save cheythu vekku."`
+            : isHindi
+            ? `"Admissions shuru hone se pehle, ye reel abhi save kar lo."`
             : isTanglish
-            ? `"Save this reel right now before you make your decision."`
+            ? `"Save this reel right now before you make your final college decision."`
             : `"Save this reel before you finalize your college decision."`,
           onscreenText: `SAVE THIS REEL`,
           cameraPerformance: `Centered portrait framing with Joy University signature badge.`,

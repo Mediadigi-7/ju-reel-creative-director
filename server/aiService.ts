@@ -454,9 +454,23 @@ export async function generateStoryboard(req: GenerateReelRequest): Promise<Reel
     const isGemini = req.apiProvider === 'gemini' || apiKey.startsWith('AIza') || Boolean(process.env.GEMINI_API_KEY);
     let rawJsonText = '';
 
+    const langInstruction = `
+CRITICAL LANGUAGE MANDATE:
+The user selected spoken language: "${language.toUpperCase()}".
+- ALL DIALOGUE and VOICEOVER lines across ALL 6 shots MUST be written purely and authentically in conversational ${language}.
+- If language is Tamil: write natural, authentic spoken Tamil (colloquial conversational Tamil that students actually speak, NOT English).
+- If language is Telugu: write natural, authentic spoken Telugu (conversational Telugu, NOT English).
+- If language is Malayalam: write natural, authentic spoken Malayalam (conversational Malayalam, NOT English).
+- If language is Hindi: write natural, relatable student Hindi (NOT English).
+- If language is Tanglish: write authentic modern Tamil + English conversational blend.
+- If language is English: write punchy, relatable Indian student English.
+- NEVER revert dialogue to English when ${language} is chosen!
+- Visual action, camera direction, and production notes should stay in English for the film production crew.
+`;
+
     if (isGemini) {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-      const prompt = `${SYSTEM_PROMPT}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
+      const prompt = `${SYSTEM_PROMPT}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -464,7 +478,7 @@ export async function generateStoryboard(req: GenerateReelRequest): Promise<Reel
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
           generationConfig: {
-            temperature: 0.7,
+            temperature: 0.8,
             responseMimeType: 'application/json',
           },
         }),
@@ -479,7 +493,7 @@ export async function generateStoryboard(req: GenerateReelRequest): Promise<Reel
     } else {
       // OpenAI-compatible endpoint
       const endpoint = 'https://api.openai.com/v1/chat/completions';
-      const prompt = `USER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"`;
+      const prompt = `${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"`;
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -494,7 +508,7 @@ export async function generateStoryboard(req: GenerateReelRequest): Promise<Reel
             { role: 'user', content: prompt },
           ],
           response_format: { type: 'json_object' },
-          temperature: 0.7,
+          temperature: 0.8,
         }),
       });
 
