@@ -124,12 +124,27 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   }}
                   className={`px-3.5 py-2.5 rounded-lg text-xs font-bold border transition-all text-left flex items-center justify-between ${
                     provider === 'gemini'
-                      ? 'border-[#AF1E2A] bg-red-50/80 text-[#AF1E2A] ring-1 ring-[#AF1E2A]'
+                      ? apiKey.trim().length > 0 && testResult?.status !== 'error'
+                        ? 'border-emerald-600 bg-emerald-50/80 text-emerald-800 ring-2 ring-emerald-500/60 shadow-xs'
+                        : 'border-stone-400 bg-stone-100 text-stone-900 ring-1 ring-stone-400'
                       : 'border-stone-200 text-stone-700 hover:bg-stone-50'
                   }`}
                 >
-                  <span>Google Gemini (2.0 Flash)</span>
-                  {provider === 'gemini' && <Check className="w-3.5 h-3.5" />}
+                  <span className="flex items-center gap-1.5">
+                    {provider === 'gemini' && apiKey.trim().length > 0 && testResult?.status !== 'error' && (
+                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    )}
+                    <span>Google Gemini (2.0 Flash)</span>
+                  </span>
+                  {provider === 'gemini' && (
+                    <Check
+                      className={`w-3.5 h-3.5 ${
+                        apiKey.trim().length > 0 && testResult?.status !== 'error'
+                          ? 'text-emerald-600'
+                          : 'text-stone-700'
+                      }`}
+                    />
+                  )}
                 </button>
                 <button
                   type="button"
@@ -139,12 +154,27 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   }}
                   className={`px-3.5 py-2.5 rounded-lg text-xs font-bold border transition-all text-left flex items-center justify-between ${
                     provider === 'openai'
-                      ? 'border-[#AF1E2A] bg-red-50/80 text-[#AF1E2A] ring-1 ring-[#AF1E2A]'
+                      ? apiKey.trim().length > 0 && testResult?.status !== 'error'
+                        ? 'border-emerald-600 bg-emerald-50/80 text-emerald-800 ring-2 ring-emerald-500/60 shadow-xs'
+                        : 'border-stone-400 bg-stone-100 text-stone-900 ring-1 ring-stone-400'
                       : 'border-stone-200 text-stone-700 hover:bg-stone-50'
                   }`}
                 >
-                  <span>OpenAI (GPT-4o)</span>
-                  {provider === 'openai' && <Check className="w-3.5 h-3.5" />}
+                  <span className="flex items-center gap-1.5">
+                    {provider === 'openai' && apiKey.trim().length > 0 && testResult?.status !== 'error' && (
+                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    )}
+                    <span>OpenAI (GPT-4o)</span>
+                  </span>
+                  {provider === 'openai' && (
+                    <Check
+                      className={`w-3.5 h-3.5 ${
+                        apiKey.trim().length > 0 && testResult?.status !== 'error'
+                          ? 'text-emerald-600'
+                          : 'text-stone-700'
+                      }`}
+                    />
+                  )}
                 </button>
               </div>
             </div>
@@ -170,7 +200,11 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     ? 'AIzaSy... (Paste your free key from Google AI Studio)'
                     : 'sk-... (Paste your OpenAI API key)'
                 }
-                className="w-full px-3.5 py-2.5 text-xs rounded-lg border border-stone-300 font-mono text-stone-900 focus:outline-none focus:ring-1 focus:ring-[#AF1E2A] bg-white font-medium"
+                className={`w-full px-3.5 py-2.5 text-xs rounded-lg border font-mono text-stone-900 focus:outline-none bg-white font-medium transition-all ${
+                  apiKey.trim().length > 0 && testResult?.status !== 'error'
+                    ? 'border-emerald-500 ring-2 ring-emerald-500/30 bg-emerald-50/10'
+                    : 'border-stone-300 focus:ring-1 focus:ring-[#AF1E2A]'
+                }`}
               />
 
               {/* Test Button & Status */}
