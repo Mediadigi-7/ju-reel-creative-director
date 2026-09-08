@@ -7,6 +7,7 @@ interface NavbarProps {
   onOpenSettings: () => void;
   savedCount: number;
   currentView?: 'creator' | 'library';
+  apiSettings?: { apiKey?: string; apiProvider?: 'gemini' | 'openai' };
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -15,7 +16,11 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenSettings,
   savedCount,
   currentView = 'creator',
+  apiSettings,
 }) => {
+  const hasKey = Boolean(apiSettings?.apiKey && apiSettings.apiKey.trim().length > 0);
+  const providerName = apiSettings?.apiProvider === 'openai' ? 'OpenAI' : 'Gemini';
+
   return (
     <header className="sticky top-0 z-30 bg-white border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
@@ -33,7 +38,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </button>
 
         {/* Nav Actions */}
-        <nav className="flex items-center gap-1">
+        <nav className="flex items-center gap-1.5">
           <button
             onClick={onNewReel}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition-colors ${
@@ -65,13 +70,28 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <span className="w-px h-4 bg-stone-200 mx-1" />
 
-          <button
-            onClick={onOpenSettings}
-            title="API Settings"
-            className="p-2 rounded text-stone-400 hover:text-stone-700 hover:bg-stone-50 transition-colors"
-          >
-            <Settings className="w-4 h-4" />
-          </button>
+          {/* AI Status & Settings Button */}
+          {hasKey ? (
+            <button
+              onClick={onOpenSettings}
+              title={`${providerName} AI Active — Click to configure`}
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 transition-colors shadow-xs"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-[11px] hidden sm:inline">{providerName} Active</span>
+              <Settings className="w-3.5 h-3.5 text-emerald-700" />
+            </button>
+          ) : (
+            <button
+              onClick={onOpenSettings}
+              title="Running on Offline Fallback — Click to add Gemini/OpenAI API key"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold text-stone-600 bg-stone-100 border border-stone-300 hover:bg-stone-200 transition-colors"
+            >
+              <span className="w-2 h-2 rounded-full bg-amber-400" />
+              <span className="text-[11px] hidden sm:inline">Add AI Key</span>
+              <Settings className="w-3.5 h-3.5 text-stone-500" />
+            </button>
+          )}
         </nav>
       </div>
     </header>

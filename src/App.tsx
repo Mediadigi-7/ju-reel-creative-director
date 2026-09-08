@@ -288,6 +288,8 @@ export const App: React.FC = () => {
           onCopyWhatsApp={handleCopyWhatsApp}
           onCopyBrief={handleCopyBrief}
           onSave={handleSaveToLibrary}
+          onOpenSettings={() => setIsSettingsOpen(true)}
+          apiSettings={apiSettings}
           isRegenerating={isRegeneratingEntire}
           isSaved={isSaved}
         />
@@ -298,6 +300,7 @@ export const App: React.FC = () => {
           onOpenSettings={() => setIsSettingsOpen(true)}
           savedCount={savedProjects.length}
           currentView={currentView}
+          apiSettings={apiSettings}
         />
       )}
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Key, ShieldCheck, Check, ExternalLink, HelpCircle, Info } from 'lucide-react';
+import { X, Key, ShieldCheck, Check, ExternalLink, HelpCircle, Info, Loader2, AlertCircle } from 'lucide-react';
 import { ApiSettings, saveApiSettings } from '../services/storage.js';
 
 interface SettingsModalProps {
@@ -18,8 +18,60 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const [apiKey, setApiKey] = useState(settings.apiKey || '');
   const [provider, setProvider] = useState<'gemini' | 'openai'>(settings.apiProvider || 'gemini');
   const [savedSuccess, setSavedSuccess] = useState(false);
+  const [testingKey, setTestingKey] = useState(false);
+  const [testResult, setTestResult] = useState<{ status: 'success' | 'error'; message: string } | null>(null);
 
   if (!isOpen) return null;
+
+  const handleTestKey = async () => {
+    const key = apiKey.trim();
+    if (!key) {
+      setTestResult({ status: 'error', message: 'Please enter an API key to test.' });
+      return;
+    }
+    setTestingKey(true);
+    setTestResult(null);
+
+    try {
+      if (provider === 'gemini') {
+        const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`;
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: 'ping' }] }],
+            generationConfig: { maxOutputTokens: 5 },
+          }),
+        });
+
+        if (res.ok) {
+          setTestResult({ status: 'success', message: '✓ Connected! Your Gemini API key is valid and working.' });
+        } else {
+          const errData = await res.json().catch(() => ({}));
+          const msg = errData.error?.message || `Google API returned status ${res.status}`;
+          setTestResult({ status: 'error', message: `Gemini Error: ${msg}` });
+        }
+      } else {
+        const endpoint = 'https://api.openai.com/v1/models';
+        const res = await fetch(endpoint, {
+          method: 'GET',
+          headers: { Authorization: `Bearer ${key}` },
+        });
+
+        if (res.ok) {
+          setTestResult({ status: 'success', message: '✓ Connected! Your OpenAI API key is valid and working.' });
+        } else {
+          const errData = await res.json().catch(() => ({}));
+          const msg = errData.error?.message || `OpenAI API returned status ${res.status}`;
+          setTestResult({ status: 'error', message: `OpenAI Error: ${msg}` });
+        }
+      }
+    } catch (err: any) {
+      setTestResult({ status: 'error', message: `Connection failed: ${err.message}` });
+    } finally {
+      setTestingKey(false);
+    }
+  };
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,7 +118,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <div className="grid grid-cols-2 gap-2">
                 <button
                   type="button"
-                  onClick={() => setProvider('gemini')}
+                  onClick={() => {
+                    setProvider('gemini');
+                    setTestResult(null);
+                  }}
                   className={`px-3.5 py-2.5 rounded-lg text-xs font-bold border transition-all text-left flex items-center justify-between ${
                     provider === 'gemini'
                       ? 'border-[#AF1E2A] bg-red-50/80 text-[#AF1E2A] ring-1 ring-[#AF1E2A]'
@@ -78,7 +133,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 </button>
                 <button
                   type="button"
-                  onClick={() => setProvider('openai')}
+                  onClick={() => {
+                    setProvider('openai');
+                    setTestResult(null);
+                  }}
                   className={`px-3.5 py-2.5 rounded-lg text-xs font-bold border transition-all text-left flex items-center justify-between ${
                     provider === 'openai'
                       ? 'border-[#AF1E2A] bg-red-50/80 text-[#AF1E2A] ring-1 ring-[#AF1E2A]'
@@ -97,22 +155,77 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 htmlFor="api-key-input"
                 className="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1.5"
               >
-                {provider === 'gemini' ? 'Google Gemini API Key' : 'OpenAI API Key'} (Optional)
+                {provider === 'gemini' ? 'Google Gemini API Key' : 'OpenAI API Key'}
               </label>
               <input
                 id="api-key-input"
                 type="password"
                 value={apiKey}
-                onChange={(e) => setApiKey(e.target.value)}
+                onChange={(e) => {
+                  setApiKey(e.target.value);
+                  setTestResult(null);
+                }}
                 placeholder={
                   provider === 'gemini'
-                    ? 'AIzaSy... (Leave empty for built-in Creative Engine)'
-                    : 'sk-... (Leave empty for built-in Creative Engine)'
+                    ? 'AIzaSy... (Paste your free key from Google AI Studio)'
+                    : 'sk-... (Paste your OpenAI API key)'
                 }
                 className="w-full px-3.5 py-2.5 text-xs rounded-lg border border-stone-300 font-mono text-stone-900 focus:outline-none focus:ring-1 focus:ring-[#AF1E2A] bg-white font-medium"
               />
+
+              {/* Test Button & Status */}
+              <div className="flex items-center gap-2 mt-2">
+                <button
+                  type="button"
+                  onClick={handleTestKey}
+                  disabled={testingKey || !apiKey.trim()}
+                  className="px-3 py-1.5 rounded-lg border border-stone-300 hover:border-stone-400 bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-semibold flex items-center gap-1.5 transition-colors disabled:opacity-50 cursor-pointer"
+                >
+                  {testingKey ? (
+                    <>
+                      <Loader2 className="w-3.5 h-3.5 animate-spin text-[#AF1E2A]" />
+                      <span>Testing Key...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Key className="w-3.5 h-3.5" />
+                      <span>Test Key Connection</span>
+                    </>
+                  )}
+                </button>
+                {apiKey && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setApiKey('');
+                      setTestResult(null);
+                    }}
+                    className="text-[11px] text-stone-400 hover:text-stone-700 underline"
+                  >
+                    Clear key
+                  </button>
+                )}
+              </div>
+
+              {testResult && (
+                <div
+                  className={`mt-2.5 p-2.5 rounded-lg text-xs flex items-start gap-2 ${
+                    testResult.status === 'success'
+                      ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+                      : 'bg-red-50 text-red-800 border border-red-200'
+                  }`}
+                >
+                  {testResult.status === 'success' ? (
+                    <Check className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  ) : (
+                    <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
+                  )}
+                  <span className="leading-snug">{testResult.message}</span>
+                </div>
+              )}
+
               <p className="text-[11px] text-stone-500 mt-1.5 leading-relaxed">
-                💡 <strong>Zero Setup:</strong> When left empty, the application runs on the built-in Joy University Creative Intelligence rules.
+                💡 When left empty, the app runs on the built-in offline Joy University Knowledge Engine. Adding a key enables live, hyper-creative AI generation.
               </p>
             </div>
           </form>

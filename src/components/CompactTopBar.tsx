@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ArrowLeft, Share2, Download, RotateCw, Check, Link2, Copy, Bookmark, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Share2, Download, RotateCw, Check, Link2, Copy, Bookmark, ChevronDown, Settings } from 'lucide-react';
 import { ReelStoryboard } from '../../shared/types.js';
 
 interface CompactTopBarProps {
@@ -11,6 +11,8 @@ interface CompactTopBarProps {
   onCopyWhatsApp: () => void;
   onCopyBrief: () => void;
   onSave: () => void;
+  onOpenSettings?: () => void;
+  apiSettings?: { apiKey?: string; apiProvider?: 'gemini' | 'openai' };
   isRegenerating: boolean;
   isSaved: boolean;
 }
@@ -24,6 +26,8 @@ export const CompactTopBar: React.FC<CompactTopBarProps> = ({
   onCopyWhatsApp,
   onCopyBrief,
   onSave,
+  onOpenSettings,
+  apiSettings,
   isRegenerating,
   isSaved,
 }) => {
@@ -156,6 +160,23 @@ export const CompactTopBar: React.FC<CompactTopBarProps> = ({
             <Download className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Export PDF</span>
           </button>
+
+          {/* AI Settings / Status */}
+          {onOpenSettings && (
+            <button
+              onClick={onOpenSettings}
+              title={apiSettings?.apiKey ? `${apiSettings.apiProvider === 'openai' ? 'OpenAI' : 'Gemini'} Active — Click to configure` : 'Running on Offline Fallback — Click to add API key'}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition-colors ${
+                apiSettings?.apiKey
+                  ? 'bg-emerald-50 text-emerald-800 border-emerald-300 hover:bg-emerald-100'
+                  : 'bg-stone-50 text-stone-600 border-stone-200 hover:bg-stone-100'
+              }`}
+            >
+              <span className={`w-2 h-2 rounded-full ${apiSettings?.apiKey ? 'bg-emerald-500 animate-pulse' : 'bg-amber-400'}`} />
+              <span className="hidden md:inline">{apiSettings?.apiKey ? (apiSettings.apiProvider === 'openai' ? 'GPT-4o' : 'Gemini') : 'AI Key'}</span>
+              <Settings className="w-3.5 h-3.5" />
+            </button>
+          )}
 
           {/* Clean Primary Action: Regenerate All (Brand Red) */}
           <button
