@@ -561,7 +561,7 @@ Do NOT produce an obvious, surface-level, or generic university marketing Reel.
 `;
 
     if (isGemini) {
-      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
       const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
 
       const res = await fetch(endpoint, {
@@ -690,7 +690,7 @@ Return ONLY a valid JSON object matching:
 }
 `;
 
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
     const res = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

@@ -34,7 +34,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
     try {
       if (provider === 'gemini') {
-        const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`;
+        const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${key}`;
         const res = await fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -134,7 +134,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     {provider === 'gemini' && apiKey.trim().length > 0 && testResult?.status !== 'error' && (
                       <span className="w-2 h-2 rounded-full bg-emerald-500" />
                     )}
-                    <span>Google Gemini (2.0 Flash)</span>
+                    <span>Google Gemini (Flash)</span>
                   </span>
                   {provider === 'gemini' && (
                     <Check
