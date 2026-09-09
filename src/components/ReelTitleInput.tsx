@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ArrowRight, ChevronDown, Check, Sparkles } from 'lucide-react';
+import { ArrowRight, ChevronDown, Check, Sparkles, AlertCircle, Key } from 'lucide-react';
 import { CREATIVE_DIRECTIONS } from '../../shared/knowledgeBase.js';
 import { CreativeDirection, LanguageOption } from '../../shared/types.js';
 
 interface ReelTitleInputProps {
   onGenerate: (title: string, direction: CreativeDirection, language: LanguageOption) => void;
   isLoading: boolean;
+  hasApiKey?: boolean;
+  onOpenSettings?: () => void;
 }
 
 const TESTED_IDEAS: string[] = [
@@ -31,7 +33,12 @@ const LANGUAGE_OPTIONS: LanguageSelectOption[] = [
   { id: 'Hindi', label: 'Hindi', nativeLabel: 'हिन्दी' },
 ];
 
-export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLoading }) => {
+export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
+  onGenerate,
+  isLoading,
+  hasApiKey = false,
+  onOpenSettings,
+}) => {
   const [title, setTitle] = useState('');
   const [direction, setDirection] = useState<CreativeDirection>('Student Relatable');
   const [language, setLanguage] = useState<LanguageOption>('English');
@@ -59,6 +66,13 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const isTestedIdea = (userTitle: string): boolean => {
+    const clean = userTitle.trim().toLowerCase().replace(/[?.,!']/g, '');
+    return TESTED_IDEAS.some(
+      (idea) => idea.toLowerCase().replace(/[?.,!']/g, '') === clean
+    );
+  };
+
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     if (isLoading) return; // Prevent duplicate generation requests
@@ -68,6 +82,18 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
       inputRef.current?.focus();
       return;
     }
+
+    // If user enters a custom topic (not one of the 6 tested sample ideas) and has no API key:
+    if (!hasApiKey && !isTestedIdea(cleanTitle)) {
+      setError(
+        'API Key Required: To generate custom topics outside the 6 sample ideas, please configure your free Google Gemini or OpenAI API key.'
+      );
+      if (onOpenSettings) {
+        onOpenSettings();
+      }
+      return;
+    }
+
     setError(null);
     setToneMenuOpen(false);
     setLangMenuOpen(false);
@@ -151,9 +177,22 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
           </div>
 
           {error && (
-            <p className="mt-2 text-xs text-red-600 font-medium text-left pl-6 animate-fade-in">
-              {error}
-            </p>
+            <div className="mt-3.5 p-3.5 rounded-2xl bg-amber-50 border border-amber-300 text-amber-950 text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left w-full shadow-xs animate-fade-in">
+              <div className="flex items-start gap-2.5">
+                <AlertCircle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                <span className="font-medium text-amber-900 leading-snug">{error}</span>
+              </div>
+              {onOpenSettings && (
+                <button
+                  type="button"
+                  onClick={onOpenSettings}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs flex-shrink-0 transition-colors shadow-xs cursor-pointer"
+                >
+                  <Key className="w-3.5 h-3.5" />
+                  <span>Configure API Key</span>
+                </button>
+              )}
+            </div>
           )}
         </div>
 
@@ -276,11 +315,16 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
 
       {/* 4. Prompt Suggestion Chips ("Try a tested idea") */}
       <div className="mt-12 sm:mt-14 w-full flex flex-col items-center">
-        <div className="flex items-center gap-1.5 mb-4">
+        <div className="flex items-center gap-2 mb-4">
           <Sparkles className="w-3.5 h-3.5 text-[#8c1618]" />
           <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#70757A]">
             Try a tested idea
           </span>
+          {!hasApiKey && (
+            <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+              6 Ideas Work Offline
+            </span>
+          )}
         </div>
 
         {/* Balanced Grid of Chips without truncation */}

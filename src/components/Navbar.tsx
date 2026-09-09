@@ -98,12 +98,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           ) : (
             <button
               onClick={onOpenSettings}
-              title="Running on Offline Fallback — Click to add Gemini/OpenAI API key"
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold text-stone-600 bg-stone-100 border border-stone-200 hover:bg-stone-200 transition-colors cursor-pointer"
+              title="API Key Required for Custom Topics — Click to add Gemini or OpenAI key"
+              className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-amber-950 bg-amber-100 border border-amber-400 hover:bg-amber-200 transition-all shadow-xs cursor-pointer ring-2 ring-amber-400/30 animate-pulse"
             >
-              <span className="w-2 h-2 rounded-full bg-stone-400" />
-              <span className="text-[11px] hidden sm:inline">Add AI Key</span>
-              <Settings className="w-3.5 h-3.5 text-stone-500" />
+              <span className="w-2 h-2 rounded-full bg-amber-500" />
+              <span className="text-[11px] font-bold">⚠️ Add AI Key</span>
+              <Settings className="w-3.5 h-3.5 text-amber-800" />
             </button>
           )}
         </nav>

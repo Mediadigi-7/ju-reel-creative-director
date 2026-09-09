@@ -173,14 +173,14 @@ export const CompactTopBar: React.FC<CompactTopBarProps> = ({
                 onClick={onOpenSettings}
                 title={
                   !hasKey
-                    ? 'Running on Offline Knowledge Engine — Click to add API key'
+                    ? 'API Key Required for Custom Topics — Click to add Gemini or OpenAI key'
                     : isVerified
                     ? `${providerLabel} Active & Connected — Click to configure`
                     : `${providerLabel} Disconnected / Unverified — Click to fix`
                 }
-                className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition-colors cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-bold border transition-colors cursor-pointer ${
                   !hasKey
-                    ? 'bg-stone-50 text-stone-600 border-stone-200 hover:bg-stone-100'
+                    ? 'bg-amber-100 text-amber-950 border-amber-400 hover:bg-amber-200 ring-2 ring-amber-400/30'
                     : isVerified
                     ? 'bg-emerald-50 text-emerald-800 border-emerald-300 hover:bg-emerald-100'
                     : 'bg-amber-50 text-amber-900 border-amber-300 hover:bg-amber-100'
@@ -189,14 +189,17 @@ export const CompactTopBar: React.FC<CompactTopBarProps> = ({
                 <span
                   className={`w-2 h-2 rounded-full ${
                     !hasKey
-                      ? 'bg-stone-400'
+                      ? 'bg-amber-500 animate-pulse'
                       : isVerified
                       ? 'bg-emerald-500 animate-pulse'
                       : 'bg-amber-500'
                   }`}
                 />
                 <span className="hidden md:inline">
-                  {!hasKey ? 'AI Key' : isVerified ? `${providerLabel} Active` : `${providerLabel} Disconnected`}
+                  {!hasKey ? '⚠️ Add AI Key' : isVerified ? `${providerLabel} Active` : `${providerLabel} Disconnected`}
+                </span>
+                <span className="md:hidden">
+                  {!hasKey ? 'Key' : isVerified ? providerLabel : 'Check Key'}
                 </span>
                 <Settings className="w-3.5 h-3.5" />
               </button>

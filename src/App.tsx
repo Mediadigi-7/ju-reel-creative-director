@@ -393,7 +393,12 @@ export const App: React.FC = () => {
             }}
           />
         ) : !currentReel ? (
-          <ReelTitleInput onGenerate={handleGenerate} isLoading={isLoading} />
+          <ReelTitleInput
+            onGenerate={handleGenerate}
+            isLoading={isLoading}
+            hasApiKey={Boolean(apiSettings.apiKey && apiSettings.isVerified)}
+            onOpenSettings={() => setIsSettingsOpen(true)}
+          />
         ) : (
           /* Focus Mode: 90% Screen Real Estate Reserved for Storyboard Cards */
           <div className="pb-16 max-w-5xl mx-auto">
