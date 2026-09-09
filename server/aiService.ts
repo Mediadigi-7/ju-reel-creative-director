@@ -459,6 +459,29 @@ Ask: "Why would someone who has never heard of Joy University keep watching this
 If there is no compelling second-by-second reason, REWRITE IT.
 
 
+# 34 — VIRAL CONTENT ENGINE
+
+Transform every title into a high-interest viral blueprint before writing the storyboard.
+Do not simply explain the title. Find the more interesting idea hidden behind it:
+FAMILIAR TOPIC → UNEXPECTED ANGLE → HUMAN RELEVANCE → NEW INSIGHT → SATISFYING PAYOFF.
+
+1. FIND THE HIDDEN CONTENT:
+- Identify Surface Topic vs Hidden Problem, Hidden Desire, Hidden Fear, and Hidden Contradiction.
+2. HUMAN TRUTH OVER GENERIC ADVICE:
+- Identify what students fear, compare, or feel pressured about (parents, relatives, marks, status, uncertainty).
+3. CENTRAL INFORMATION GAP & TENSION:
+- Create one compelling question the content will answer without fake suspense.
+4. PROGRESSIVE REVELATION SEQUENCE:
+- Reveal 1: The familiar assumption.
+- Reveal 2: The unexpected complication.
+- Reveal 3: The deeper truth or useful distinction.
+- Final Reveal: The answer, realization, or practical takeaway.
+5. ENGAGEMENT TRIGGERS:
+- Share Trigger (relatability/urgency: "My friend needs this"), Save Trigger (decision framework/checklist), Comment Trigger (genuine discussion/debate).
+6. FACTUAL SAFETY:
+- Never invent rankings, placements, or unverified claims. Use Joy University's verified facts as genuine proof points only when naturally fitting.
+
+
 # FINAL PRINCIPLE
 
 STUDENT FIRST.
@@ -484,6 +507,23 @@ Return ONLY a valid JSON object matching this exact schema (no markdown fences, 
   "format": "9:16 Vertical Reel",
   "creativeDirection": string,
   "language": "English" | "Tamil" | "Telugu" | "Malayalam" | "Hindi" | "Tanglish",
+  "viralBlueprint": {
+    "viralScore": number, // 80 to 98
+    "obviousAngleAvoided": string,
+    "humanTruth": string,
+    "hiddenProblem": string,
+    "centralInformationGap": string,
+    "contentTension": string,
+    "progressiveRevelation": [string, string, string, string],
+    "contentSurprise": string,
+    "practicalValue": string,
+    "payoff": string,
+    "shareTrigger": string,
+    "saveTrigger": string,
+    "commentTrigger": string,
+    "joyUniversityConnection": string,
+    "directorInstruction": string
+  },
   "shots": [
     {
       "number": 1,
@@ -624,9 +664,33 @@ Every single second must compel the viewer to continue watching!
 6. SINGLE CTA (00:27–00:30): Place one clear CTA strictly AFTER the payoff.
 `;
 
+    const viralInstruction = `
+CRITICAL VIRAL CONTENT BLUEPRINT MANDATE:
+Before drafting the 6 storyboard beats, formulate a complete "viralBlueprint" object:
+1. OBVIOUS ANGLE TO AVOID: Pinpoint the predictable, generic version of this topic and reject it.
+2. HUMAN TRUTH: Identify the real psychological, peer, or parental struggle the student experiences.
+3. HIDDEN PROBLEM: Reveal the deeper, unaddressed problem behind the title.
+4. CENTRAL INFORMATION GAP: Formulate the single burning question that keeps the viewer watching.
+5. CONTENT TENSION: Define the clash between common expectation and real-world industry reality.
+6. PROGRESSIVE REVELATION: Map exactly 4 escalating reveals:
+   - Reveal 1: The familiar assumption
+   - Reveal 2: The unexpected complication
+   - Reveal 3: The deeper truth / practical distinction
+   - Reveal 4: The actionable payoff and decision test
+7. CONTENT SURPRISE: A counterintuitive truth that reframes the topic.
+8. PRACTICAL VALUE: Concrete framework, filter, or checklist the viewer gains.
+9. PAYOFF: Satisfying resolution that makes watching worthwhile.
+10. ENGAGEMENT TRIGGERS: Specific Share Trigger, Save Trigger, and Comment Trigger.
+11. JOY UNIVERSITY CONNECTION: Natural proof point (labs, multidisciplinary majors, 104-acre campus) without forced marketing.
+12. VIRAL SCORE: Rigorously score the concept from 85 to 98 out of 100 based on freshness, tension, and shareability.
+13. DIRECTOR INSTRUCTION: One sharp guiding instruction for the production crew.
+
+Ensure the "viralBlueprint" object is fully populated in your JSON output, and use its progressive revelation directly to drive Shots 1 through 6!
+`;
+
     if (isGemini) {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
-      const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${retentionInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
+      const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${retentionInstruction}\n\n${viralInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -649,7 +713,7 @@ Every single second must compel the viewer to continue watching!
     } else {
       // OpenAI-compatible endpoint
       const endpoint = 'https://api.openai.com/v1/chat/completions';
-      const prompt = `${freshnessInstruction}\n\n${retentionInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"`;
+      const prompt = `${freshnessInstruction}\n\n${retentionInstruction}\n\n${viralInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"`;
 
       const res = await fetch(endpoint, {
         method: 'POST',

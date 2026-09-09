@@ -57,6 +57,24 @@ export type ProjectStatus =
   | 'Published'
   | 'Archived';
 
+export interface ViralBlueprint {
+  viralScore: number;
+  obviousAngleAvoided: string;
+  humanTruth: string;
+  hiddenProblem: string;
+  centralInformationGap: string;
+  contentTension: string;
+  progressiveRevelation: string[];
+  contentSurprise: string;
+  practicalValue: string;
+  payoff: string;
+  shareTrigger: string;
+  saveTrigger: string;
+  commentTrigger: string;
+  joyUniversityConnection: string;
+  directorInstruction: string;
+}
+
 export interface ReelStoryboard {
   id: string;
   reelTitle: string;
@@ -70,6 +88,7 @@ export interface ReelStoryboard {
   shots: Shot[]; // Exactly 6 shots
   productionNotes: ProductionNotes;
   creativeSummary: CreativeSummary;
+  viralBlueprint?: ViralBlueprint;
   tags: string[];
   createdAt: string;
   updatedAt: string;

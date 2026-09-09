@@ -38,6 +38,24 @@ export const CreativeSummarySchema = z.object({
   shootingPriority: z.array(z.string()).default([]),
 });
 
+export const ViralBlueprintSchema = z.object({
+  viralScore: z.number().min(0).max(100).default(85),
+  obviousAngleAvoided: z.string().default(''),
+  humanTruth: z.string().default(''),
+  hiddenProblem: z.string().default(''),
+  centralInformationGap: z.string().default(''),
+  contentTension: z.string().default(''),
+  progressiveRevelation: z.array(z.string()).default([]),
+  contentSurprise: z.string().default(''),
+  practicalValue: z.string().default(''),
+  payoff: z.string().default(''),
+  shareTrigger: z.string().default(''),
+  saveTrigger: z.string().default(''),
+  commentTrigger: z.string().default(''),
+  joyUniversityConnection: z.string().default(''),
+  directorInstruction: z.string().default(''),
+});
+
 export const ReelStoryboardSchema = z.object({
   id: z.string(),
   reelTitle: z.string().min(1),
@@ -51,6 +69,7 @@ export const ReelStoryboardSchema = z.object({
   shots: z.array(ShotSchema).length(6),
   productionNotes: ProductionNotesSchema,
   creativeSummary: CreativeSummarySchema,
+  viralBlueprint: ViralBlueprintSchema.optional(),
   tags: z.array(z.string()).default([]),
   createdAt: z.string(),
   updatedAt: z.string(),
@@ -77,12 +96,41 @@ export function validateAndRepairStoryboard(raw: any, fallbackTitle: string): { 
   repaired.duration = repaired.duration || '28 sec';
   repaired.format = '9:16 Vertical Reel';
   repaired.creativeDirection = repaired.creativeDirection || 'Student Relatable';
-  repaired.language = (['English', 'Tamil', 'Tanglish'].includes(repaired.language)) ? repaired.language : 'English';
+  repaired.language = (['English', 'Tamil', 'Telugu', 'Malayalam', 'Hindi', 'Tanglish'].includes(repaired.language)) ? repaired.language : 'English';
   repaired.createdAt = repaired.createdAt || new Date().toISOString();
   repaired.updatedAt = new Date().toISOString();
   repaired.status = repaired.status || 'Draft';
   repaired.version = repaired.version || 1;
   repaired.tags = Array.isArray(repaired.tags) && repaired.tags.length > 0 ? repaired.tags : ['+2', 'careers', 'joy-university', 'course-choice'];
+
+  // Repair viralBlueprint if present
+  if (repaired.viralBlueprint && typeof repaired.viralBlueprint === 'object') {
+    const rawVb = repaired.viralBlueprint;
+    repaired.viralBlueprint = {
+      viralScore: typeof rawVb.viralScore === 'number' ? Math.min(100, Math.max(0, Math.round(rawVb.viralScore))) : 92,
+      obviousAngleAvoided: rawVb.obviousAngleAvoided || rawVb.obvious_angle_avoided || 'Generic promotional or superficial advice',
+      humanTruth: rawVb.humanTruth || rawVb.human_truth || repaired.creativeAngle,
+      hiddenProblem: rawVb.hiddenProblem || rawVb.hidden_problem || 'Students picking courses without knowing true industry workflows',
+      centralInformationGap: rawVb.centralInformationGap || rawVb.central_information_gap || 'What separates an obsolete degree from one with compounding leverage?',
+      contentTension: rawVb.contentTension || rawVb.content_tension || 'Safe expectation vs emerging reality',
+      progressiveRevelation: Array.isArray(rawVb.progressiveRevelation) && rawVb.progressiveRevelation.length > 0
+        ? rawVb.progressiveRevelation
+        : [
+            'Reveal 1: The familiar assumption students make',
+            'Reveal 2: The unexpected complication nobody mentions',
+            'Reveal 3: The deeper industry truth and distinction',
+            'Reveal 4: The actionable payoff and decision test'
+          ],
+      contentSurprise: rawVb.contentSurprise || rawVb.content_surprise || 'What sounds safe often carries the highest risk of stagnation',
+      practicalValue: rawVb.practicalValue || rawVb.practical_value || 'Concrete framework for evaluating career pathways',
+      payoff: rawVb.payoff || 'Clarity and confidence in making the right educational choice',
+      shareTrigger: rawVb.shareTrigger || rawVb.share_trigger || 'Relevant to every +2 student navigating this dilemma',
+      saveTrigger: rawVb.saveTrigger || rawVb.save_trigger || 'Actionable decision checklist worth re-reading',
+      commentTrigger: rawVb.commentTrigger || rawVb.comment_trigger || 'Which option would you choose? Share below.',
+      joyUniversityConnection: rawVb.joyUniversityConnection || rawVb.joy_university_connection || 'Practical hands-on ecosystem at Joy University',
+      directorInstruction: rawVb.directorInstruction || rawVb.director_instruction || 'Lead with genuine student empathy before introducing solutions',
+    };
+  }
 
   // Validate or convert shots
   const shotSequence: Array<{ type: z.infer<typeof ShotTypeEnum>; name: string; time: string }> = [
