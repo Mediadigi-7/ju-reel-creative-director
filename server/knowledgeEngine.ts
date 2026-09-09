@@ -133,6 +133,227 @@ export function analyzeTitle(title: string): TitleThemeAnalysis {
   };
 }
 
+function enforceNativeScriptForShots(
+  shots: Shot[],
+  language: LanguageOption,
+  cleanTitle: string,
+  category: string
+): Shot[] {
+  if (language === 'English' || language === 'Tanglish') return shots;
+
+  const scriptPatterns: Record<string, RegExp> = {
+    Tamil: /[\u0B80-\u0BFF]/,
+    Telugu: /[\u0C00-\u0C7F]/,
+    Malayalam: /[\u0D00-\u0D7F]/,
+    Hindi: /[\u0900-\u097F]/,
+  };
+
+  const pattern = scriptPatterns[language];
+  if (!pattern) return shots;
+
+  // Category-specific native templates
+  const categoryNativeContent: Record<string, Record<string, { dialogue: string[]; onscreen: string[] }>> = {
+    mistakes: {
+      Tamil: {
+        dialogue: [
+          `"+2 முடிச்சிட்டு 90% மாணவர்கள் பண்ற மிகப்பெரிய தப்பு என்ன தெரியுமா?"`,
+          `"நண்பர்கள் போறாங்கன்னு நீங்களும் அதே கோர்ஸ் எடுத்தா, 4 வருஷம் கழிச்சு ரொம்ப வருத்தப்படுவீங்க."`,
+          `"கொஞ்சம் நில்லுங்க! முடிவெடுக்கறதுக்கு முன்னாடி இந்த எளிய விதியை கவனிங்க."`,
+          `"3 விஷயத்தை செக் பண்ணுங்க: 1. சிலபஸ்ல நவீன AI & டெக்னாலஜி இருக்கா? 2. முதல் வருஷத்திலிருந்தே பிராக்டிகல் லேப் கிடைக்குமா? 3. இண்டஸ்ட்ரி மென்டர்ஷிப் இருக்கா?"`,
+          `"4 வருஷம் எக்ஸாம் பாஸ் பண்ண மட்டும் காலேஜ் போகாதீங்க. உங்க திறமையை வளர்க்கும் வழியை தேர்ந்தெடுங்க."`,
+          `"அட்மிஷன் கவுன்சிலிங் ஆரம்பிக்கிறதுக்கு முன்னாடி, இந்த ரீலை சேவ் பண்ணி வச்சுக்கோங்க."`,
+        ],
+        onscreen: [
+          `பெரிய +2 தவறு ⚠️`,
+          `நண்பர்களை காப்பி பண்ணாதீங்க`,
+          `நில்லுங்க 🛑 சரியான வழி`,
+          `1. AI சிலபஸ்  2. நேரடி லேப்  3. வழிகாட்டல்`,
+          `உண்மையான திறனை உருவாக்குங்கள்`,
+          `கவுன்சிலிங்கிற்கு சேவ் பண்ணுங்க`,
+        ],
+      },
+      Telugu: {
+        dialogue: [
+          `"+2 అయిపోయిన తర్వాత 90% విద్యార్థులు చేసే అతి పెద్ద పొరపాటు ఏమిటో తెలుసా?"`,
+          `"స్నేహితులు జాయిన్ అయ్యారని మీరూ అదే కోర్సు తీసుకుంటే, నాలుగేళ్ల తర్వాత తీవ్రంగా బాధపడతారు."`,
+          `"ఒక్క నిమిషం ఆగండి! నిర్ణయం తీసుకునే ముందు ఈ చిన్న నిబంధనను గమనించండి."`,
+          `"ఈ 3 విషయాలు తప్పక చూడండి: 1. సిలబస్‌లో ఆధునిక AI & టెక్నాలజీ ఉందా? 2. మొదటి సంవత్సరం నుంచే ప్రాక్టికల్ ల్యాబ్ సదుపాయం ఉందా? 3. ఇండస్ట్రీ మెంటార్షిప్ ఉందా?"`,
+          `"కేవలం పరీక్షలు పాస్ అవ్వడానికి కాలేజీ ఎంచుకోవద్దు. మీ నిజమైన నైపుణ్యాన్ని పెంచే మార్గాన్ని ఎంచుకోండి."`,
+          `"అడ్మిషన్ల కౌన్సిలింగ్ ప్రారంభమయ్యే లోపే ఈ రీల్‌ను సేవ్ చేసి పెట్టుకోండి."`,
+        ],
+        onscreen: [
+          `+2 పెద్ద పొరపాటు ⚠️`,
+          `స్నేహితులను చూసి కాపీ చేయొద్దు`,
+          `ఆగండి 🛑 సరైన మార్గం`,
+          `1. AI సిలబస్  2. ప్రాక్టికల్ ల్యాబ్  3. గైడెన్స్`,
+          `నిజమైన నైపుణ్యం నిర్మించుకోండి`,
+          `కౌన్సిలింగ్ కోసం సేవ్ చేసుకోండి`,
+        ],
+      },
+      Malayalam: {
+        dialogue: [
+          `"+2 കഴിഞ്ഞതിന് ശേഷം 90% വിദ്യാർത്ഥികളും ചെയ്യുന്ന ഏറ്റവും വലിയ തെറ്റ് എന്താണെന്ന് അറിയാമോ?"`,
+          `"സുഹൃത്തുക്കൾ ചേർന്നതുകൊണ്ട് മാത്രം നിങ്ങളും അതേ കോഴ്സ് എടുത്താൽ, നാല് വർഷം കഴിഞ്ഞ് നിങ്ങൾ ഖേദിക്കേണ്ടി വരും."`,
+          `"ഒരു നിമിഷം നിൽക്കൂ! തീരുമാനം എടുക്കുന്നതിന് മുൻപ് ഈ ലളിതമായ നിയമം ശ്രദ്ധിക്കൂ."`,
+          `"ഈ 3 കാര്യങ്ങൾ പരിശോധിക്കൂ: 1. സിലബസിൽ ആധുനിക AI & ടെക്നോളജി ഉണ്ടോ? 2. ആദ്യ വർഷം മുതൽ പ്രാക്ടിക്കൽ ലാബ് സൗകര്യം ലഭിക്കുമോ? 3. ഇൻഡസ്ട്രി മെന്റർഷിപ്പ് ഉണ്ടോ?"`,
+          `"പരീക്ഷ ജയിക്കാൻ വേണ്ടി മാത്രം കോഴ്സ് തിരഞ്ഞെടുക്കരുത്. നിങ്ങളുടെ ഭാവി കരുപ്പിടിപ്പിക്കുന്ന അവസരം തിരഞ്ഞെടുക്കൂ."`,
+          `"അഡ്മിഷൻ കൗൺസിലിംഗ് തുടങ്ങുന്നതിന് മുൻപായി ഈ റീൽ ഇപ്പോൾ തന്നെ സേവ് ചെയ്തു വെക്കൂ."`,
+        ],
+        onscreen: [
+          `+2 വലിയ തെറ്റ് ⚠️`,
+          `സുഹൃത്തുക്കളെ അനുകരിക്കരുത്`,
+          `നിൽക്കൂ 🛑 ശരിയായ വഴി`,
+          `1. AI സിലബസ്  2. ലാബ് സൗകര്യം  3. മെന്റർഷിപ്പ്`,
+          `യഥാർത്ഥ കഴിവ് വളർത്തൂ`,
+          `കൗൺസിലിംഗിനായി സേവ് ചെയ്യൂ`,
+        ],
+      },
+      Hindi: {
+        dialogue: [
+          `"+2 के बाद 90% छात्र सबसे बड़ी गलती क्या करते हैं, जानते हैं?"`,
+          `"सिर्फ इसलिए कोई कोर्स चुन लेना क्योंकि दोस्तों ने लिया है, चार साल बाद आपको भारी पड़ सकता है।"`,
+          `"एक सेकंड रुको! कोई भी फॉर्म भरने से पहले यह 3-स्टेप नियम समझ लो।"`,
+          `"ये 3 बातें चेक करो: 1. क्या सिलेबस में मॉडर्न AI और टेक शामिल है? 2. क्या पहले साल से रियल लैब एक्सेस मिलेगा? 3. क्या इंडस्ट्री मेंटर्स गाइड करेंगे?"`,
+          `"कॉलेज सिर्फ डिग्री लेने की जगह नहीं, बल्कि अपने करियर को लॉन्च करने का मंच होना चाहिए।"`,
+          `"एडमिशन काउंसलिंग शुरू होने से पहले इस रील को अभी सेव कर लो।"`,
+        ],
+        onscreen: [
+          `+2 की सबसे बड़ी गलती ⚠️`,
+          `दोस्तों की देखा-देखी मत चुनो`,
+          `रुको 🛑 सही रास्ता समझो`,
+          `1. AI सिलेबस  2. प्रैक्टिकल लैब्स  3. मेंटरशिप`,
+          `सच्ची काबिलियत बनाओ`,
+          `काउंसलिंग के लिए सेव करें`,
+        ],
+      },
+    },
+    ai_tech: {
+      Tamil: {
+        dialogue: [
+          `"AI உங்க எதிர்கால வேலையை பறிச்சிடும்னு பயமா இருக்கா? இதோ உண்மையான தகவல்."`,
+          `"பழைய தியரியை மட்டும் படிச்சா வேலை கிடைப்பது கஷ்டம். ஆனா நவீன AI டூல்ஸ் பயன்படுத்த தெரிஞ்சா டிமாண்ட் 10 மடங்கு அதிகம்."`,
+          `"கொஞ்சம் நில்லுங்க! உண்மையான வளர்ச்சி தியரில இல்ல, Joy University-ன் பிராக்டிகல் AI லேப்ல தான் இருக்கு."`,
+          `"டாப் 3 எதிர்காலத் துறைகள்: 1. AI & டேட்டா இன்டெலிஜென்ஸ், 2. ஸ்மார்ட் அக்ரி-டெக், 3. கார்ப்பரேட் சைபர் லா."`,
+          `"AI உங்களை மாற்றாது. ஆனால் AI-யை சரியாக பயன்படுத்த தெரிந்த ஒருவர்தான் எதிர்காலத்தை வழிநடத்துவார்."`,
+          `"கீழே 'AI' ன்னு கமெண்ட் பண்ணுங்க, சிறந்த எதிர்கால கோர்ஸ்களை உங்களுக்கு அனுப்புகிறோம்."`,
+        ],
+        onscreen: [
+          `AI vs உங்க எதிர்காலம் 🤖`,
+          `தியரி போதாது`,
+          `உண்மையான AI லேப் ⚡`,
+          `1. AI & டேட்டா  2. அக்ரி-டெக்  3. சைபர் லா`,
+          `நீங்களே உருவாக்குங்கள்`,
+          `'AI' என கமெண்ட் பண்ணுங்க`,
+        ],
+      },
+      Telugu: {
+        dialogue: [
+          `"AI మీ భవిష్యత్ ఉద్యోగాలను తీసేసుకుంటుందని భయపడుతున్నారా? అసలు నిజం ఇదీ."`,
+          `"పాత పుస్తకాల థియరీ చదివితే కష్టం. కానీ AI టూల్స్ వాడటం తెలిస్తే మీ డిమాండ్ పది రెట్లు పెరుగుతుంది."`,
+          `"ఒక్క నిమిషం ఆగండి! నిజమైన ఎదుగుదల థియరీలో కాదు, Joy University ప్రాక్టికల్ AI ల్యాబ్స్ లో ఉంది."`,
+          `"టాప్ 3 ఫ్యూచర్ కెరీర్లు: 1. AI & డేటా సైన్స్, 2. స్మార్ట్ అగ్రి-టెక్, 3. కార్పొరేట్ సైబర్ లా."`,
+          `"AI మిమ్మల్ని రీప్లేస్ చేయదు. AI ను సమర్థవంతంగా ఉపయోగించే వ్యక్తే ముందంజలో ఉంటాడు."`,
+          `"కింద 'AI' అని కామెంట్ చేయండి, బెస్ట్ ఫ్యూచర్ కోర్సుల వివరాలు పంపుతాం."`,
+        ],
+        onscreen: [
+          `AI vs మీ భవిష్యత్తు 🤖`,
+          `థియరీ సరిపోదు`,
+          `ప్రాక్టికల్ AI ల్యాబ్స్ ⚡`,
+          `1. AI & డేటా  2. అగ్రి-టెక్  3. సైబర్ లా`,
+          `నైపుణ్యంతో ముందుండండి`,
+          `'AI' అని కామెంట్ చేయండి`,
+        ],
+      },
+      Malayalam: {
+        dialogue: [
+          `"AI നിങ്ങളുടെ ഭാവി ജോലി ഇല്ലാതാക്കുമെന്ന് ഭയമുണ്ടോ? ഇതാണ് യഥാർത്ഥ വസ്തുത."`,
+          `"പഴയ തിയറി മാത്രം പഠിച്ചാൽ പോരാ. എന്നാൽ ആധുനിക AI ടൂളുകൾ കൈകാര്യം ചെയ്യാൻ അറിയാമെങ്കിൽ ഡിമാൻഡ് പത്തിരട്ടിയാണ്."`,
+          `"ഒരു നിമിഷം നിൽക്കൂ! യഥാർത്ഥ മാറ്റം പുസ്തകങ്ങളിലല്ല, Joy University-ലെ പ്രാക്ടിക്കൽ AI ലാബുകളിലാണ്."`,
+          `"3 മികച്ച ഭാവി കരിയറുകൾ: 1. AI & ഡാറ്റാ സയൻസ്, 2. സ്മാർട്ട് അഗ്രി-ടെക്, 3. സൈബർ ലോ."`,
+          `"AI നിങ്ങളെ മാറ്റിവെക്കില്ല. എന്നാൽ AI ഉപയോഗിക്കാൻ അറിയുന്ന ഒരാൾ മുന്നിലെത്തും."`,
+          `"താഴെ 'AI' എന്ന് കമന്റ് ചെയ്യൂ, മികച്ച ഫ്യൂച്ചർ കോഴ്സുകൾ ഞങ്ങൾ അയച്ചുതരാം."`,
+        ],
+        onscreen: [
+          `AI vs നിങ്ങളുടെ കരിയർ 🤖`,
+          `തിയറി മാത്രം പോരാ`,
+          `യഥാർത്ഥ AI ലാബ് ⚡`,
+          `1. AI & ഡാറ്റ  2. അഗ്രി-ടെക്  3. സൈബർ ലോ`,
+          `നിങ്ങൾ മുന്നേറൂ`,
+          `'AI' എന്ന് കമന്റ് ചെയ്യൂ`,
+        ],
+      },
+      Hindi: {
+        dialogue: [
+          `"क्या डर लग रहा है कि AI आपकी भविष्य की नौकरी खा जाएगा? यह रहा असली सच।"`,
+          `"सिर्फ पुरानी थ्योरी पढ़ने से बात नहीं बनेगी। लेकिन अगर AI टूल्स इस्तेमाल करना आता है, तो आपकी डिमांड 10 गुना होगी।"`,
+          `"एक सेकंड रुको! असली इनोवेशन सिर्फ किताबों में नहीं, Joy University की प्रैक्टिकल AI लैब्स में होता है।"`,
+          `"टॉप 3 फ्यूचर ट्रैक्स: 1. AI और डेटा इंटेलिजेंस, 2. स्मार्ट एग्री-टेक, 3. टेक और कॉर्पोरेट लॉ।"`,
+          `"AI आपको रिप्लेस नहीं करेगा, बल्कि AI को सही इस्तेमाल करने वाला इंसान सबसे आगे निकलेगा।"`,
+          `"नीचे 'AI' कमेंट करें, हम आपको बेस्ट फ्यूचर-रेडी कोर्सेस की लिस्ट भेजेंगे।"`,
+        ],
+        onscreen: [
+          `AI vs आपका करियर 🤖`,
+          `थ्योरी काफी नहीं`,
+          `रियल AI लैब्स ⚡`,
+          `1. AI & डेटा  2. एग्री-टेक  3. टेक लॉ`,
+          `खुद को तैयार करो`,
+          `'AI' कमेंट करें`,
+        ],
+      },
+    },
+  };
+
+  // If we have a dedicated category match for this language, apply it
+  const catData = categoryNativeContent[category]?.[language];
+  if (catData) {
+    return shots.map((s, idx) => ({
+      ...s,
+      dialogue: catData.dialogue[idx] || s.dialogue,
+      onscreenText: catData.onscreen[idx] || s.onscreenText,
+    }));
+  }
+
+  // Otherwise, inspect each shot: if dialogue is missing native script, apply universal high-impact native dialogue
+  return shots.map((s) => {
+    if (!pattern.test(s.dialogue)) {
+      if (language === 'Tamil') {
+        if (s.type === 'HOOK') s.dialogue = `"${cleanTitle} பத்தி யோசிச்சு கன்பியூஸ் ஆகிட்டே இருக்கீங்களா? இந்த ஒரு நிமிஷம் கவனிங்க."`;
+        else if (s.type === 'PROBLEM') s.dialogue = `"எல்லாரும் சொல்ற ஒவ்வொரு அட்வைஸையும் கேட்டு குழம்பாதீங்க. உங்களுக்கான சரியான வழியை தேர்வு செய்யுங்க."`;
+        else if (s.type === 'PATTERN_INTERRUPT') s.dialogue = `"கொஞ்சம் நில்லுங்க! மத்தவங்க சொல்றதை விட்டுட்டு, இந்த ஒரு கேள்வியை யோசிங்க."`;
+        else if (s.type === 'VALUE') s.dialogue = `"3 விஷயத்தை செக் பண்ணுங்க: பிராக்டிகல் வேலை, நவீன டெக்னாலஜி சிலபஸ், அப்புறம் நேரடி லேப் அனுபவம்."`;
+        else if (s.type === 'PAYOFF') s.dialogue = `"உண்மையான திறமையை வளர்க்கும் வழியை தேர்வு செஞ்சா, எதிர்கால பயமே இருக்காது."`;
+        else if (s.type === 'CTA') s.dialogue = `"அட்மிஷன் ஆரம்பிக்கிறதுக்கு முன்னாடி இந்த ரீலை சேவ் பண்ணி வச்சுக்கோங்க."`;
+        if (!pattern.test(s.onscreenText)) s.onscreenText = `${cleanTitle}? 🎯`;
+      } else if (language === 'Telugu') {
+        if (s.type === 'HOOK') s.dialogue = `"${cleanTitle} గురించి ఆలోచించి కన్‌ఫ్యూజ్ అవుతున్నారా? ఒక్క నిమిషం ఇది చూడండి."`;
+        else if (s.type === 'PROBLEM') s.dialogue = `"అందరూ చెప్పే ప్రతి సలహానూ గుడ్డిగా నమ్మి మీ కెరీర్‌ను అయోమయంలో పడేయకండి."`;
+        else if (s.type === 'PATTERN_INTERRUPT') s.dialogue = `"ఒక్క నిమిషం ఆగండి! ఇతరుల మాటలను పక్కనపెట్టి, ఈ ఒక్క ప్రశ్న ఆలోచించండి."`;
+        else if (s.type === 'VALUE') s.dialogue = `"ఈ 3 విషయాలు చూడండి: ప్రాక్టికల్ నైపుణ్యం, మోడరన్ సిలబస్, మరియు లైవ్ ల్యాబ్స్."`;
+        else if (s.type === 'PAYOFF') s.dialogue = `"నిజమైన నైపుణ్యాన్ని అందించే కోర్సును ఎంచుకుంటే, భవిష్యత్తు గురించి ఎలాంటి భయమూ ఉండదు."`;
+        else if (s.type === 'CTA') s.dialogue = `"అడ్మిషన్ల కౌన్సిలింగ్ కంటే ముందే ఈ రీల్‌ను సేవ్ చేసుకోండి."`;
+        if (!pattern.test(s.onscreenText)) s.onscreenText = `${cleanTitle}? 🎯`;
+      } else if (language === 'Malayalam') {
+        if (s.type === 'HOOK') s.dialogue = `"${cleanTitle}-നെ കുറിച്ച് ആലോചിച്ച് കൺഫ്യൂസ് ആകുകയാണോ? ഒരു നിമിഷം ഇത് കാണൂ."`;
+        else if (s.type === 'PROBLEM') s.dialogue = `"എല്ലാവരും പറയുന്ന ഓരോ വാക്കും കേട്ട് നിങ്ങളുടെ ഭാവി അപകടത്തിലാക്കരുത്."`;
+        else if (s.type === 'PATTERN_INTERRUPT') s.dialogue = `"ഒരു നിമിഷം നിൽക്കൂ! ബാക്കിയെല്ലാം മറന്ന് ഈ ഒരു ചോദ്യത്തിന് ഉത്തരം കണ്ടെത്തൂ."`;
+        else if (s.type === 'VALUE') s.dialogue = `"3 കാര്യങ്ങൾ ശ്രദ്ധിക്കൂ: പ്രായോഗിക താല്പര്യം, ആധുനിക സിലബസ്, മികച്ച ലാബ് സൗകര്യം."`;
+        else if (s.type === 'PAYOFF') s.dialogue = `"യഥാർത്ഥ കഴിവ് തരുന്ന കോഴ്സ് തിരഞ്ഞെടുത്താൽ ഭാവി സുരക്ഷിതമായിരിക്കും."`;
+        else if (s.type === 'CTA') s.dialogue = `"അഡ്മിഷന് മുൻപായി ഈ റീൽ ഇപ്പോൾ തന്നെ സേവ് ചെയ്തു വെക്കൂ."`;
+        if (!pattern.test(s.onscreenText)) s.onscreenText = `${cleanTitle}? 🎯`;
+      } else if (language === 'Hindi') {
+        if (s.type === 'HOOK') s.dialogue = `"${cleanTitle} को लेकर क्या आप भी परेशान हैं? एक मिनट यह वीडियो ध्यान से देखिए।"`;
+        else if (s.type === 'PROBLEM') s.dialogue = `"सबकी अलग-अलग सलाह सुनकर खुद को उलझन में मत डालिए।"`;
+        else if (s.type === 'PATTERN_INTERRUPT') s.dialogue = `"एक सेकंड रुकिए! बाकी सब छोड़िए और खुद से यह एक सवाल पूछिए।"`;
+        else if (s.type === 'VALUE') s.dialogue = `"ये 3 बातें चेक करें: असली रुचि, मॉडर्न टेक सिलेबस, और प्रैक्टिकल लैब सुविधाएं।"`;
+        else if (s.type === 'PAYOFF') s.dialogue = `"सच्ची काबिलियत देने वाला रास्ता चुनेंगे तो करियर में कभी रुकावट नहीं आएगी।"`;
+        else if (s.type === 'CTA') s.dialogue = `"काउंसलिंग शुरू होने से पहले इस रील को अभी सेव कर लें।"`;
+        if (!pattern.test(s.onscreenText)) s.onscreenText = `${cleanTitle}? 🎯`;
+      }
+    }
+    return s;
+  });
+}
+
 export function generateKnowledgeEngineStoryboard(
   title: string,
   direction: CreativeDirection = 'Student Relatable',
@@ -876,17 +1097,25 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:00 – 00:04',
           visual: `Protagonist turns directly to the camera with an engaging, candid expression in a student lounge, holding up a notebook with "${cleanTitle}" written on it.`,
           dialogue: isTamil
-            ? `"${cleanTitle} pathi yosichu confuse aagite irukeengala? Idhai oru nimisham paarunga, unga confusion theerum."`
+            ? `"${cleanTitle} பத்தி யோசிச்சு ரொம்ப கன்பியூஸ் ஆகிட்டே இருக்கீங்களா? இந்த ஒரு நிமிஷம் பாருங்க, உங்களுக்கு தெளிவான கிளாரிட்டி கிடைக்கும்."`
             : isTelugu
-            ? `"${cleanTitle} gurinchi alochinchi confuse avthunnara? Oka sari idi chudandi, clear clarity vasthundi."`
+            ? `"${cleanTitle} గురించి ఆలోచించి చాలా కన్‌ఫ్యూజ్ అవుతున్నారా? ఒక్క నిమిషం ఇది చూడండి, మీకు స్పష్టమైన క్లారిటీ వస్తుంది."`
             : isMalayalam
-            ? `"${cleanTitle}-ne patti aalochichu confuse aakukayaano? Oru nimisham idhu kaanu, theerchayaayum clarity kittum."`
+            ? `"${cleanTitle}-നെ കുറിച്ച് ആലോചിച്ച് കൺഫ്യൂസ് ആകുകയാണോ? ഒരു നിമിഷം ഇത് കാണൂ, തീർച്ചയായും കൃത്യമായ വ്യക്തത ലഭിക്കും."`
             : isHindi
-            ? `"${cleanTitle} ko lekar confuse ho rahe ho? Ek minute ruko, poori clarity mil jayegi."`
+            ? `"${cleanTitle} को लेकर बहुत कन्फ्यूज़ हो रहे हैं? एक मिनट यह देखिए, आपको पूरी क्लैरिटी मिल जाएगी।"`
             : isTanglish
             ? `"${cleanTitle} pathi yosikareengala? Stop listening to random advice, here is the real breakdown."`
             : `"If you've been wondering about '${cleanTitle}', stop listening to generic advice. Here's the truth."`,
-          onscreenText: `${cleanTitle.toUpperCase()}? 🎯`,
+          onscreenText: isTamil
+            ? `${cleanTitle}? 🎯`
+            : isTelugu
+            ? `${cleanTitle}? 🎯`
+            : isMalayalam
+            ? `${cleanTitle}? 🎯`
+            : isHindi
+            ? `${cleanTitle}? 🎯`
+            : `${cleanTitle.toUpperCase()}? 🎯`,
           cameraPerformance: `Dynamic 35mm lens push-in with crisp subject focus and direct eye contact.`,
         },
         {
@@ -896,17 +1125,25 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:04 – 00:08',
           visual: `Protagonist highlights conflicting opinions on a tablet: one side showing old traditional routes, the other showing unguided trends.`,
           dialogue: isTamil
-            ? `"Ovvovvoru aalum ovvovvoru advice solvaanga. Ellaraiyum satisfy panna paatha, neenga dhaan stuck aaveenga."`
+            ? `"ஆளுக்கு ஒரு அட்வைஸ் சொல்வாங்க. எல்லாரையும் சமாதானப்படுத்த பார்த்தா, நீங்கதான் கடைசில குழம்பிப் போவீங்க."`
             : isTelugu
-            ? `"Prathi okkalu okko mata chepthaaru. Andari matalu vini follow ayithe, meere stuck avthaaru."`
+            ? `"ప్రతి ఒక్కరూ ఒక్కో సలహా ఇస్తారు. అందరి మాటలు వింటూ పోతే, మీరే చివరికి అయోమయంలో పడతారు."`
             : isMalayalam
-            ? `"Ellaavarum oro upadesham parayum. Ellaavareyum kettu poyaal, ningal arikkum thalayil aakunnath."`
+            ? `"എല്ലാവരും ഓരോ ഉപദേശങ്ങൾ തരും. എല്ലാവരുടെയും വാക്ക് കേട്ട് പോയാൽ നിങ്ങൾ കൂടുതൽ ആശയക്കുഴപ്പത്തിലാകും."`
             : isHindi
-            ? `"Har koi alag-alag advice deta hai. Sabki sunoge toh khud phans jaoge."`
+            ? `"हर कोई अपनी अलग सलाह देता है। अगर सबकी सुनोगे तो खुद सबसे ज़्यादा उलझ जाओगे।"`
             : isTanglish
             ? `"Half the advice you hear is 10 years outdated, and the other half is pure hype. You need a practical decision rule."`
             : `"Half the advice you hear is 10 years out of date, and the other half is hype. You need a practical decision rule."`,
-          onscreenText: `OUTDATED ADVICE VS HYPE`,
+          onscreenText: isTamil
+            ? `பழைய யோசனை vs புதிய வாய்ப்பு`
+            : isTelugu
+            ? `పాత సలహా vs కొత్త అవకాశం`
+            : isMalayalam
+            ? `പഴയ ഉപദേശം vs പുതിയ മാറ്റം`
+            : isHindi
+            ? `पुराना तरीका vs नया अवसर`
+            : `OUTDATED ADVICE VS HYPE`,
           cameraPerformance: `Over-the-shoulder POV shot panning from tablet screen to thoughtful expression.`,
         },
         {
@@ -916,17 +1153,25 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:08 – 00:12',
           visual: `Protagonist closes the tablet decisively, camera cuts instantly to a lively outdoor setting on Joy University campus.`,
           dialogue: isTamil
-            ? `"Vera yarodaiyum advice-ah kekaadheenga. Ungalukku neengale indha oru kelviya kettukonga."`
+            ? `"மத்தவங்க சொல்ற சத்தத்தை நிறுத்துங்க. உங்களுக்குள்ள இந்த ஒரு எளிய கேள்வியை கேட்டுக்கோங்க."`
             : isTelugu
-            ? `"Inka andari matalu aapandi. Meeku meere ee chinna question veskondi."`
+            ? `"ఇతరుల గోల ఆపండి. మీకు మీరు ఈ ఒక్క చిన్న ప్రశ్న వేసుకోండి."`
             : isMalayalam
-            ? `"Mathullavarude shabdam onnu nirthu. Ningal ningaloduthanne ee oru chodyam chodhikku."`
+            ? `"മറ്റുള്ളവരുടെ ബഹളം ഒന്ന് നിർത്തൂ. നിങ്ങളോട് തന്നെ ഈ ഒരു ലളിതമായ ചോദ്യം ചോദിക്കൂ."`
             : isHindi
-            ? `"Sabka shor band karo. Khud se sirf ye ek seedha sawaal poocho."`
+            ? `"बाकी सबका शोर बंद करो। खुद से सिर्फ यह एक सीधा सवाल पूछो।"`
             : isTanglish
             ? `"Hold up! Cut through the noise. Here is the single question that actually matters."`
             : `"Stop the noise. Ask yourself this one simple question."`,
-          onscreenText: `CUT THROUGH THE NOISE ✂️`,
+          onscreenText: isTamil
+            ? `நில்லுங்க 🛑 இந்தக் கேள்வியைக் கேளுங்கள்`
+            : isTelugu
+            ? `ఆగండి 🛑 ఈ ప్రశ్న వేసుకోండి`
+            : isMalayalam
+            ? `നിൽക്കൂ 🛑 ഈ ചോദ്യം ചോദിക്കൂ`
+            : isHindi
+            ? `रुको 🛑 यह सवाल पूछो`
+            : `CUT THROUGH THE NOISE ✂️`,
           cameraPerformance: `Quick match-cut from indoor desk to bright open-air campus corridor.`,
         },
         {
@@ -936,17 +1181,25 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:12 – 00:22',
           visual: `Protagonist walks alongside modern labs, detailing 3 concrete checkpoints for "${cleanTitle}".`,
           dialogue: isTamil
-            ? `"Indha 3 vishayatha check pannunga: 1. Ungalukku daily idhula interest irukka? 2. Syllabus-la modern tech & AI irukka? 3. Real campus project & lab access kidaikkuma?"`
+            ? `"இந்த 3 விஷயத்தை செக் பண்ணுங்க: 1. பிராக்டிகல் வேலை உங்களுக்கு பிடிக்குமா? 2. சிலபஸ்ல நவீன AI & டெக்னாலஜி இருக்கா? 3. கல்லூரி வளாகத்துல நேரடி லேப் பயிற்சி கிடைக்குமா?"`
             : isTelugu
-            ? `"Ee 3 vishayalu check cheyandi: 1. Meeku daily indhulo interest unda? 2. Syllabus lo modern tech & AI unda? 3. College lo hands-on project labs unnaaya?"`
+            ? `"ఈ 3 విషయాలు పరిశీలించండి: 1. ప్రాక్టికల్ వర్క్ మీకు నచ్చుతుందా? 2. సిలబస్‌లో ఆధునిక AI & టెక్నాలజీ ఉందా? 3. క్యాంపస్‌లో లైవ్ ల్యాబ్స్ ఉన్నాయా?"`
             : isMalayalam
-            ? `"Ee 3 kaaryangal check cheyyu: 1. Ningalkku idhil nalla interest undo? 2. Syllabus-il modern tech & AI undo? 3. College-il real practical lab facilities kittumo?"`
+            ? `"ഈ 3 കാര്യങ്ങൾ പരിശോധിക്കൂ: 1. പ്രാക്ടിക്കൽ ജോലി ചെയ്യാൻ താല്പര്യമുണ്ടോ? 2. സിലബസിൽ ആധുനിക AI & ടെക്നോളജി ഉൾപ്പെടുത്തിയിട്ടുണ്ടോ? 3. മികച്ച ലാബ് സൗകര്യങ്ങളുണ്ടോ?"`
             : isHindi
-            ? `"Ye 3 cheezein check karo: 1. Kya daily ye kaam karne mein interest hai? 2. Syllabus mein modern tech aur AI hai? 3. Campus mein real project labs milenge?"`
+            ? `"ये 3 बातें चेक करो: 1. क्या इस काम में आपका रियल इंटरेस्ट है? 2. क्या सिलेबस में मॉडर्न टेक और AI शामिल है? 3. क्या कॉलेज में प्रैक्टिकल प्रोजेक्ट लैब्स हैं?"`
             : isTanglish
             ? `"3 Checkpoints for ${cleanTitle}: Daily problem fit, modern tech & AI layer, and real day-1 lab access."`
             : `"Apply these 3 filters to ${cleanTitle}: 1. Practical day-to-day problem fit, 2. Digital & AI tool integration, 3. Real campus mentorship with industry projects."`,
-          onscreenText: `1. PROBLEM FIT  2. TECH LAYER  3. ACTIVE LABS`,
+          onscreenText: isTamil
+            ? `1. வேலை ஆர்வம்  2. AI சிலபஸ்  3. நேரடி லேப்`
+            : isTelugu
+            ? `1. నైపుణ్యం  2. AI సిలబస్  3. ప్రాక్టికల్ ల్యాబ్స్`
+            : isMalayalam
+            ? `1. താല്പര്യം  2. AI സിലബസ്  3. മികച്ച ലാബ്സ്`
+            : isHindi
+            ? `1. असली रुचि  2. AI सिलेबस  3. प्रोजेक्ट लैब्स`
+            : `1. PROBLEM FIT  2. TECH LAYER  3. ACTIVE LABS`,
           cameraPerformance: `Smooth gimbal tracking shot alongside protagonist in natural daylight.`,
         },
         {
@@ -956,17 +1209,25 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:22 – 00:26',
           visual: `Protagonist joins a group of engaged student peers around an outdoor study pod on Joy University campus.`,
           dialogue: isTamil
-            ? `"Real capability irukka degree-ah choose panna, unga future pathina bayame irukaadhu."`
+            ? `"உண்மையான திறமையை வளர்க்கும் கோர்ஸை தேர்ந்தெடுத்தா, எதிர்காலத்தை நினைச்சு எந்த பயமும் இருக்காது."`
             : isTelugu
-            ? `"Real capability iche course choose cheskunte, future gurinchi bhayapadalsina pani undadu."`
+            ? `"నిజమైన నైపుణ్యాన్ని అందించే కోర్సును ఎంచుకుంటే, మీ భవిష్యత్తు గురించి ఎలాంటి భయం ఉండదు."`
             : isMalayalam
-            ? `"Real capability tharunna course thiranjeduthaal, future-ne patti oru pediyum venda."`
+            ? `"യഥാർത്ഥ പ്രാപ്തി തരുന്ന കോഴ്സ് തിരഞ്ഞെടുത്താൽ, ഭാവിയെ കുറിച്ച് യാതൊരു ഭയവും വേണ്ടതില്ല."`
             : isHindi
-            ? `"Jab real capability dene wala course choose karoge, toh future ka darr khatam ho jayega."`
+            ? `"जब आप रियल स्किल देने वाला कोर्स चुनेंगे, तो करियर को लेकर कोई डर नहीं रहेगा।"`
             : isTanglish
             ? `"The right decision isn't about pleasing others. It's about building who you become."`
             : `"The right choice isn't about pleasing others. It's about picking a launchpad that builds who you want to become."`,
-          onscreenText: `CHOOSE YOUR LAUNCHPAD`,
+          onscreenText: isTamil
+            ? `சரியான பாதையை தேர்வு செய்யுங்கள்`
+            : isTelugu
+            ? `సరైన భవిష్యత్తును ఎంచుకోండి`
+            : isMalayalam
+            ? `ശരിയായ വഴി തിരഞ്ഞെടുക്കൂ`
+            : isHindi
+            ? `सही रास्ता चुनें`
+            : `CHOOSE YOUR LAUNCHPAD`,
           cameraPerformance: `Medium wide heroic framing with vibrant green campus backdrop.`,
         },
         {
@@ -976,22 +1237,33 @@ export function generateKnowledgeEngineStoryboard(
           timestamp: '00:26 – 00:30',
           visual: `Protagonist smiles at camera with friendly nod.`,
           dialogue: isTamil
-            ? `"Admissions start aaguradhukku munnadi, indha reel-ah save pannivechukkonga."`
+            ? `"அட்மிஷன் கவுன்சிலிங் ஆரம்பிக்கிறதுக்கு முன்னாடி, இந்த ரீலை சேவ் பண்ணி வச்சுக்கோங்க."`
             : isTelugu
-            ? `"Admissions start ayye mundhe, ee reel ni thappakunda save cheskondi."`
+            ? `"అడ్మిషన్ల కౌన్సిలింగ్ ప్రారంభమయ్యే ముందే, ఈ రీల్‌ను సేవ్ చేసి పెట్టుకోండి."`
             : isMalayalam
-            ? `"Admissions thudangunnathinu munpaayi, ee reel ippol thanne save cheythu vekku."`
+            ? `"അഡ്മിഷൻ തുടങ്ങുന്നതിന് മുൻപായി, ഈ റീൽ ഇപ്പോൾ തന്നെ സേവ് ചെയ്തു വെക്കൂ."`
             : isHindi
-            ? `"Admissions shuru hone se pehle, ye reel abhi save kar lo."`
+            ? `"एडमिशन काउंसलिंग से पहले, इस रील को ज़रूर सेव कर लें।"`
             : isTanglish
             ? `"Save this reel right now before you make your final college decision."`
             : `"Save this reel before you finalize your college decision."`,
-          onscreenText: `SAVE THIS REEL`,
+          onscreenText: isTamil
+            ? `ரீலை சேவ் பண்ணுங்க`
+            : isTelugu
+            ? `ఈ రీల్ సేవ్ చేసుకోండి`
+            : isMalayalam
+            ? `റീൽ സേവ് ചെയ്യൂ`
+            : isHindi
+            ? `यह रील सेव करें`
+            : `SAVE THIS REEL`,
           cameraPerformance: `Centered portrait framing with Joy University signature badge.`,
         },
       ];
       break;
   }
+
+  // Enforce pure native script for Tamil, Telugu, Malayalam, and Hindi across all category outputs
+  shots = enforceNativeScriptForShots(shots, language, cleanTitle, analysis.category);
 
   // Direction adaptations
   if (direction === 'Funny') {
@@ -1014,85 +1286,125 @@ export function generateKnowledgeEngineStoryboard(
     // Seed 2 – POV / Confession
     {
       dialogue: isTamil
-        ? `"Nan +2 results vandha udane wrong decision panna ready-a irundhen. Stop panni kelu."`
+        ? `"+2 ரிசல்ட்ஸ் வந்த உடனே நானும் தவறான முடிவு எடுக்கத்தான் இருந்தேன். ஒரு நிமிஷம் கேட்டுட்டு முடிவு பண்ணுங்க."`
         : isTelugu
-        ? `"Nenu +2 results vachaka wrong decision tesukodaaniki ready ga unnanu. Okasari aagi vinandi."`
+        ? `"+2 రిజల్ట్స్ రాగానే నేను కూడా తప్పుడు నిర్ణయం తీసుకునేవాడిని. ఒక్క నిమిషం ఆగి వినండి."`
         : isMalayalam
-        ? `"Njan +2 results vannappol thettaya theerumaanam edukkan ready aayirunnu. Onnu nirthi kelkku."`
+        ? `"+2 റിസൾട്ട് വന്നപ്പോൾ ഞാനും തെറ്റായ തീരുമാനമെടുക്കാൻ പോയതാണ്. ഒരു നിമിഷം ഇതൊന്ന് കേൾക്കൂ."`
         : isHindi
-        ? `"Maine +2 results aane ke baad galat decision lene ki sochi thi. Ek second ruko aur suno."`
+        ? `"+2 का रिजल्ट आते ही मैं भी गलत फैसला लेने वाला था। एक सेकंड रुको और ध्यान से सुनो।"`
         : isTanglish
         ? `"POV: +2 result vandhuchu. Enna study panna nu theriyama phone scroll pannitu irukka? Same here bro."`
         : `"POV: Your +2 results just arrived. You have no idea what to do next. You're not alone."`,
-      onscreenText: `POV: YOU JUST FINISHED +2`,
+      onscreenText: isTamil
+        ? `+2 ரிசல்ட் வந்தாச்சா? 🎯`
+        : isTelugu
+        ? `+2 రిజల్ట్స్ వచ్చాయా? 🎯`
+        : isMalayalam
+        ? `+2 റിസൾട്ട് വന്നോ? 🎯`
+        : isHindi
+        ? `+2 रिजल्ट के बाद क्या? 🎯`
+        : `POV: YOU JUST FINISHED +2`,
       cameraPerformance: `Intimate close-up selfie-style from protagonist POV, then flips camera outward.`,
       visual: `Protagonist sits on bed holding phone showing results screen — slow exhale, direct look to camera.`,
     },
     // Seed 3 – Contrarian / Myth Buster
     {
       dialogue: isTamil
-        ? `"Ellorum solra advice follow pannathey. Unga career-la avanga live panna maataanga."`
+        ? `"எல்லாரும் சொல்ற பொதுவான அட்வைஸை அப்படியே நம்பாதீங்க. உங்க வாழ்க்கையில நீங்கதான் வாழப்போறீங்க."`
         : isTelugu
-        ? `"Andaru cheppe advice blindly follow avvaddhu. Me career lo vallu undaru, meere untaru."`
+        ? `"అందరూ చెప్పే సలహాలను గుడ్డిగా నమ్మకండి. మీ కెరీర్ లో మీరే బ్రతకాలి, వారు కాదు."`
         : isMalayalam
-        ? `"Ellaavarum parayunna upadesham kannumadachu vishwasikkaruthu. Ningalude career-il ningal aanu jeevikendathu."`
+        ? `"എല്ലാവരും പറയുന്ന ഉപദേശങ്ങൾ കണ്ണുമടച്ച് വിശ്വസിക്കരുത്. നിങ്ങളുടെ കരിയറിൽ നിങ്ങൾ തന്നെയാണ് ജീവിക്കേണ്ടത്."`
         : isHindi
-        ? `"Sabki advice aankh band karke follow mat karo. Aapke career mein aapko jeena hai, unhe nahi."`
+        ? `"सबकी सलाह आँख बंद करके मत मानो। आपके करियर में आपको जीना है, किसी और को नहीं।"`
         : isTanglish
         ? `"Everyone giving you advice about '${cleanTitle}'? Most of them chose wrong themselves. Let's fix that."`
         : `"Everyone has an opinion about '${cleanTitle}'. Most of them got it wrong. Here's what actually matters."`,
-      onscreenText: `STOP FOLLOWING THE CROWD`,
+      onscreenText: isTamil
+        ? `கூட்டத்தோடு போகாதீங்க 🛑`
+        : isTelugu
+        ? `గుంపును గుడ్డిగా అనుసరించవద్దు 🛑`
+        : isMalayalam
+        ? `കൂട്ടത്തോടെ പോകരുത് 🛑`
+        : isHindi
+        ? `भीड़ के पीछे मत भागो 🛑`
+        : `STOP FOLLOWING THE CROWD`,
       cameraPerformance: `Camera pulls back from extreme close-up of protagonist's eyes to medium — deliberate and slow.`,
       visual: `Protagonist stands still as crowd of students rushes past — holds up hand to stop.`,
     },
     // Seed 4 – Question / Curiosity
     {
       dialogue: isTamil
-        ? `"Oru simple question. Unga answer mattum unga future-a change pannatum."`
+        ? `"ஒரே ஒரு கேள்வி. இந்த கேள்விக்கு நீங்க சொல்ற பதில் உங்க எதிர்காலத்தையே மாற்றி அமைக்கும்."`
         : isTelugu
-        ? `"Oka simple question. Me answer me future ni complete ga change chestundi."`
+        ? `"ఒకే ఒక్క ప్రశ్న. ఈ ప్రశ్నకు మీరిచ్చే సమాధానం మీ భవిష్యత్తును పూర్తిగా మార్చగలదు."`
         : isMalayalam
-        ? `"Oru simple question. Ningalude uthram ningalude future mathram maatti ezhuthum."`
+        ? `"ഒറ്റ ചോദ്യം. ഈ ചോദ്യത്തിന് നിങ്ങൾ നൽകുന്ന ഉത്തരം നിങ്ങളുടെ ഭാവിയെ പൂർണ്ണമായും മാറ്റിമറിക്കും."`
         : isHindi
-        ? `"Ek simple sawaal. Aur aapka jawaab aapka future badal sakta hai."`
+        ? `"सिर्फ एक सीधा सवाल। और आपका जवाब आपका पूरा भविष्य तय कर सकता है।"`
         : isTanglish
         ? `"One question. Just one. And your answer will change how you see '${cleanTitle}' forever."`
         : `"Before you decide anything — answer this one question honestly. It changes everything."`,
-      onscreenText: `ANSWER THIS FIRST 🧠`,
+      onscreenText: isTamil
+        ? `முதலில் இதற்கு பதிலளியுங்கள் 🧠`
+        : isTelugu
+        ? `ముందు దీనికి సమాధానం ఇవ్వండి 🧠`
+        : isMalayalam
+        ? `ആദ്യം ഇതിന് മറുപടി നൽകൂ 🧠`
+        : isHindi
+        ? `पहले इसका जवाब दो 🧠`
+        : `ANSWER THIS FIRST 🧠`,
       cameraPerformance: `Tight static shot, protagonist leans slightly forward — low ambient sound, tension hold.`,
       visual: `Protagonist sits at empty table with single blank notebook — pauses, looks up at camera.`,
     },
     // Seed 5 – Stat Shock
     {
       dialogue: isTamil
-        ? `"70% students wrong course-la join pannuvaanga. Neenga avanga-la oru aalaa aaganumaa?"`
+        ? `"70% மாணவர்கள் தவறான கோர்ஸை தேர்ந்தெடுக்கிறாங்க. நீங்களும் அவங்கள்ல ஒருத்தரா ஆகணுமா?"`
         : isTelugu
-        ? `"70% students wrong course lo join avutharu. Meeru kuda valla lanti vallu avvaalanukuntunnara?"`
+        ? `"70% విద్యార్థులు తప్పుడు కోర్సులో చేరుతున్నారు. మీరు కూడా వారిలాగే మారాలనుకుంటున్నారా?"`
         : isMalayalam
-        ? `"70% vidyarthikal thettaya course-il cheraan idayundu. Ningalkkum avaril oral aakano?"`
+        ? `"70% വിദ്യാർത്ഥികളും തെറ്റായ കോഴ്സുകളിൽ ചേരുന്നു. നിങ്ങൾക്കും അവരിൽ ഒരാളാകണോ?"`
         : isHindi
-        ? `"70% students galat course choose kar lete hain. Kya aapko bhi unme se ek banna hai?"`
+        ? `"70% छात्र गलत कोर्स चुन लेते हैं। क्या आपको भी उन 70% में शामिल होना है?"`
         : isTanglish
         ? `"Bro, 7 out of 10 students regret their course choice by second year. Let's make sure you're not one of them."`
         : `"7 out of 10 students say they'd have chosen differently. Don't become that statistic."`,
-      onscreenText: `70% REGRET THIS DECISION ⚠️`,
+      onscreenText: isTamil
+        ? `70% மாணவர்கள் வருந்துகிறார்கள் ⚠️`
+        : isTelugu
+        ? `70% మంది బాధపడుతున్నారు ⚠️`
+        : isMalayalam
+        ? `70% പേരും ഖേദിക്കുന്നു ⚠️`
+        : isHindi
+        ? `70% पछताते हैं ⚠️`
+        : `70% REGRET THIS DECISION ⚠️`,
       cameraPerformance: `Fast smash-cut from wide campus shot to extreme close-up of protagonist's concerned face.`,
       visual: `Split screen: left shows a stressed student in wrong lecture; right shows a happy, engaged student.`,
     },
     // Seed 6 – Challenge / Framework Teaser
     {
       dialogue: isTamil
-        ? `"Oru 30-second framework. Correct course choose pannurathu ippove easy-aa agum."`
+        ? `"ஒரு 30-வினாடி பிரேம்வொர்க். சரியான கோர்ஸை தேர்வு செய்றது இப்போவே ரொம்ப எளிதாகும்."`
         : isTelugu
-        ? `"Oka 30-second framework. Correct course choose cheskovadam ippude chaala easy avuthundi."`
+        ? `"ఒక 30-సెకన్ల ఫ్రేమ్‌వర్క్. సరైన కోర్సును ఎంచుకోవడం ఇప్పుడే చాలా సులభం అవుతుంది."`
         : isMalayalam
-        ? `"Oru 30-second framework. Nalla course thiranjedukkunnath ippol thanne easy aakum."`
+        ? `"ഒരു 30-സെക്കൻഡ് ഫോർമുല. ശരിയായ കോഴ്സ് തിരഞ്ഞെടുക്കുന്നത് ഇപ്പോൾ തന്നെ വളരെ എളുപ്പമാകും."`
         : isHindi
-        ? `"Sirf 30-second ka ek framework. Sahi course chunna abhi se easy ho jayega."`
+        ? `"सिर्फ 30 सेकंड का एक फ्रेमवर्क। सही कोर्स चुनना अभी से बेहद आसान हो जाएगा।"`
         : isTanglish
         ? `"30 seconds. That's all I need to give you a framework for '${cleanTitle}' that actually works."`
         : `"Give me 30 seconds. I'll give you a decision framework for '${cleanTitle}' that nobody tells you."`,
-      onscreenText: `30-SECOND FRAMEWORK ⚡`,
+      onscreenText: isTamil
+        ? `30-வினாடி வழிகாட்டல் ⚡`
+        : isTelugu
+        ? `30-సెకన్ల గైడ్ ⚡`
+        : isMalayalam
+        ? `30-സെക്കൻഡ് ഗൈഡ് ⚡`
+        : isHindi
+        ? `30-सेकंड गाइड ⚡`
+        : `30-SECOND FRAMEWORK ⚡`,
       cameraPerformance: `Protagonist writes on whiteboard/glass — camera tracks the hand writing the framework title.`,
       visual: `Protagonist stands at glass wall writing a framework outline with bold marker strokes.`,
     },
@@ -1108,12 +1420,12 @@ export function generateKnowledgeEngineStoryboard(
   ];
 
   const ctaVariants = [
-    isTamil ? `"Save pannitu unga friends-ku share pannunga."` : isTelugu ? `"Save cheskoni me friends tho share cheyandi."` : isMalayalam ? `"Save cheythu ningalude friends-num share cheyyu."` : isHindi ? `"Save karke apne doston ke sath share karo."` : `"Save this reel and share it with a friend who needs to hear this."`,
-    isTamil ? `"Comment-la unga stream type pannunga — next reel unga-ku."` : isTelugu ? `"Comment lo me stream cheppandi — next reel me kosame."` : isMalayalam ? `"Comment-il ningalude stream parayu — adutha reel ningalkkaayi."` : isHindi ? `"Comment mein apna stream batao — agla reel aapke liye."` : `"Comment your stream below — we'll break down the best path just for you."`,
-    isTamil ? `"Follow pannunga — every week honest advice."` : isTelugu ? `"Follow cheyandi — every week honest guidance."` : isMalayalam ? `"Follow cheyyu — every week nalla career advice."` : isHindi ? `"Follow karo — har hafte authentic career guidance ke liye."` : `"Follow Joy University for weekly honest post-+2 decision content."`,
-    isTamil ? `"Save pannunga — admissions-ku munnadiye review pannunga."` : isTelugu ? `"Save cheskondi — admissions mundhe review cheyandi."` : isMalayalam ? `"Save cheythu vekku — admissions munpu review cheyyu."` : isHindi ? `"Save kar lo — admission se pehle ye checklist zaroor dekhna."` : `"Tap save — review this checklist before you fill any application form."`,
-    isTamil ? `"Share pannunga — unga da/ma-ku show pannunga."` : isTelugu ? `"Share cheyandi — me parents tho ee vishayam matladandi."` : isMalayalam ? `"Share cheyyu — ningalude parents-num idhu kaanichu kodukku."` : isHindi ? `"Share karo — apne parents ke sath ye baat start karo."` : `"Share this with your parents — it'll start the right conversation."`,
-    isTamil ? `"Comment pannunga: Entha course confuse pannudu nu."` : isTelugu ? `"Comment cheyandi: Ee course meku confusion ga undi?"` : isMalayalam ? `"Comment cheyyu: Ethellam course aanu ningale confuse aakkunnath?"` : isHindi ? `"Comment karo: Kaunsa course aapko confuse kar raha hai?"` : `"Comment the course you're confused about — we'll answer in the next reel."`,
+    isTamil ? `"இந்த ரீலை சேவ் பண்ணிட்டு உங்க பிரண்ட்ஸுக்கும் ஷேர் பண்ணுங்க."` : isTelugu ? `"ఈ రీల్ ని సేవ్ చేసుకుని మీ ఫ్రెండ్స్ తో షేర్ చేయండి."` : isMalayalam ? `"ഈ റീൽ സേവ് ചെയ്ത് കൂട്ടുകാർക്ക് ഷെയർ ചെയ്യൂ."` : isHindi ? `"इस रील को सेव करें और अपने दोस्तों के साथ शेयर करें।"` : `"Save this reel and share it with a friend who needs to hear this."`,
+    isTamil ? `"கமெண்ட்ல உங்க ஸ்ட்ரீம் சொல்லுங்க — அடுத்த ரீல் உங்களுக்காக."` : isTelugu ? `"కామెంట్ లో మీ స్ట్రీమ్ చెప్పండి — నెక్స్ట్ రీల్ మీ కోసమే."` : isMalayalam ? `"കമന്റിൽ നിങ്ങളുടെ സ്ട്രീം പറയൂ — അടുത്ത റീൽ നിങ്ങൾക്കായി."` : isHindi ? `"कमेंट में अपनी स्ट्रीम बताएं — अगला रील आपके लिए।"` : `"Comment your stream below — we'll break down the best path just for you."`,
+    isTamil ? `"ஃபாலோ பண்ணுங்க — வாரந்தோறும் தெளிவான கெரியர் வழிகாட்டல்."` : isTelugu ? `"ఫాలో చేయండి — ప్రతి వారం నిజమైన కెరీర్ గైడెన్స్ కోసం."` : isMalayalam ? `"ഫോളോ ചെയ്യൂ — എല്ലാ ആഴ്ചയും കൃത്യമായ കരിയർ ഗൈഡൻസ്."` : isHindi ? `"फॉलो करें — हर हफ्ते सच्ची और सटीक करियर गाइडेंस के लिए।"` : `"Follow Joy University for weekly honest post-+2 decision content."`,
+    isTamil ? `"சேவ் பண்ணி வச்சுக்கோங்க — அட்மிஷன் போறதுக்கு முன்னாடி கண்டிப்பா பாருங்க."` : isTelugu ? `"సేవ్ చేసుకోండి — అడ్మిషన్స్ కంటే ముందే ఈ చెక్‌లిస్ట్ చూడండి."` : isMalayalam ? `"സേവ് ചെയ്തു വെക്കൂ — അഡ്മിഷന് മുൻപ് ഇതൊന്ന് ഉറപ്പായും കാണൂ."` : isHindi ? `"सेव कर लें — एडमिशन से पहले यह चेकलिस्ट ज़रूर देखें।"` : `"Tap save — review this checklist before you fill any application form."`,
+    isTamil ? `"ஷேர் பண்ணுங்க — உங்க பெற்றோர்கிட்டயும் இந்த விஷயத்தை பேசுங்க."` : isTelugu ? `"షేర్ చేయండి — మీ పేరెంట్స్ తో ఈ విషయం గురించి మాట్లాడండి."` : isMalayalam ? `"ഷെയർ ചെയ്യൂ — മാതാപിതാക്കളോടും ഈ വിഷയം സംസാരിക്കൂ."` : isHindi ? `"शेयर करें — अपने पेरेंट्स के साथ यह ज़रूरी बात शुरू करें।"` : `"Share this with your parents — it'll start the right conversation."`,
+    isTamil ? `"கமெண்ட் பண்ணுங்க: எந்த கோர்ஸ் உங்களை குழப்புது?"` : isTelugu ? `"కామెంట్ చేయండి: ఏ కోర్స్ మీకు కన్ఫ్యూషన్ గా ఉంది?"` : isMalayalam ? `"കമന്റ് ചെയ്യൂ: ഏത് കോഴ്സ് ആണ് നിങ്ങൾക്ക് ആശയക്കുഴപ്പമുണ്ടാക്കുന്നത്?"` : isHindi ? `"कमेंट करें: कौन सा कोर्स आपको सबसे ज़्यादा कन्फ्यूज़ कर रहा है?"` : `"Comment the course you're confused about — we'll answer in the next reel."`,
   ];
 
   const angleVariants = [

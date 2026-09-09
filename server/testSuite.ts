@@ -1,4 +1,4 @@
-import { generateStoryboard, regenerateShot } from './aiService.js';
+import { generateStoryboard, regenerateShot, checkLanguageCompliance } from './aiService.js';
 import { validateAndRepairStoryboard, ReelStoryboardSchema } from '../shared/schema.js';
 import { MVP_TEST_TITLES, JOY_UNIVERSITY_VERIFIED_FACTS } from '../shared/knowledgeBase.js';
 import { ReelStoryboard } from '../shared/types.js';
@@ -125,6 +125,15 @@ async function runValidationTests() {
   }
 
   assert(validCount === MVP_TEST_TITLES.length, `100% of 20-title test set passed (${validCount}/${MVP_TEST_TITLES.length})`);
+
+  // 6. Strict Language Control Tests
+  console.log('\n--- 6. STRICT LANGUAGE CONTROL & NATIVE SCRIPT TESTS ---');
+  const testLangs: Array<'Tamil' | 'Telugu' | 'Malayalam' | 'Hindi' | 'English'> = ['Tamil', 'Telugu', 'Malayalam', 'Hindi', 'English'];
+  for (const lang of testLangs) {
+    const langReel = await generateStoryboard({ reelTitle: '3 mistakes students make after +2', language: lang });
+    const langCheck = checkLanguageCompliance(langReel, lang);
+    assert(langCheck.pass, `Language "${lang}" passes strict native script compliance`);
+  }
 
   console.log('\n========================================');
   console.log(`📊 FINAL RESULT: ${passedTests}/${totalTests} TESTS PASSED`);

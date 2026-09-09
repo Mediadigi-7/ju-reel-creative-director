@@ -17,7 +17,19 @@ const TESTED_IDEAS: string[] = [
   'How do I choose the right college?',
 ];
 
-const LANGUAGE_OPTIONS: LanguageOption[] = ['English', 'Tamil', 'Telugu', 'Malayalam', 'Hindi', 'Tanglish'];
+interface LanguageSelectOption {
+  id: LanguageOption;
+  label: string;
+  nativeLabel: string;
+}
+
+const LANGUAGE_OPTIONS: LanguageSelectOption[] = [
+  { id: 'English', label: 'English', nativeLabel: 'English' },
+  { id: 'Tamil', label: 'Tamil', nativeLabel: 'தமிழ்' },
+  { id: 'Telugu', label: 'Telugu', nativeLabel: 'తెలుగు' },
+  { id: 'Malayalam', label: 'Malayalam', nativeLabel: 'മലയാളം' },
+  { id: 'Hindi', label: 'Hindi', nativeLabel: 'हिन्दी' },
+];
 
 export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLoading }) => {
   const [title, setTitle] = useState('');
@@ -214,7 +226,9 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
               }`}
             >
               <span className="text-[#70757A] font-normal">Spoken Language:</span>
-              <span className="font-semibold text-[#1F1F1F]">{language}</span>
+              <span className="font-semibold text-[#1F1F1F]">
+                {LANGUAGE_OPTIONS.find((l) => l.id === language)?.nativeLabel || language}
+              </span>
               <ChevronDown
                 className={`w-3.5 h-3.5 text-[#70757A] transition-transform duration-200 ${
                   langMenuOpen ? 'rotate-180 text-[#8c1618]' : ''
@@ -223,18 +237,18 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
             </button>
 
             {langMenuOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-2xl border border-[#E0E0E0] shadow-xl z-50 py-1.5 text-left animate-in fade-in zoom-in-95 duration-100">
-                <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#70757A] border-b border-stone-100">
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-52 bg-white rounded-2xl border border-[#E0E0E0] shadow-xl z-50 py-1.5 text-left animate-in fade-in zoom-in-95 duration-100">
+                <div className="px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#70757A] border-b border-stone-100">
                   Select Spoken Language
                 </div>
-                {LANGUAGE_OPTIONS.map((lang) => {
-                  const isSelected = lang === language;
+                {LANGUAGE_OPTIONS.map((item) => {
+                  const isSelected = item.id === language;
                   return (
                     <button
-                      key={lang}
+                      key={item.id}
                       type="button"
                       onClick={() => {
-                        setLanguage(lang);
+                        setLanguage(item.id);
                         setLangMenuOpen(false);
                       }}
                       className={`w-full px-3.5 py-2 text-xs sm:text-[13px] flex items-center justify-between transition-colors ${
@@ -243,7 +257,10 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
                           : 'text-[#3C4043] hover:bg-[#F1F3F4] font-medium'
                       }`}
                     >
-                      <span>{lang}</span>
+                      <span className="flex items-center gap-2">
+                        <span className="font-semibold">{item.nativeLabel}</span>
+                        <span className="text-[11px] text-[#70757A]">({item.label})</span>
+                      </span>
                       {isSelected && <Check className="w-4 h-4 text-[#8c1618]" />}
                     </button>
                   );

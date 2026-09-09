@@ -14,7 +14,18 @@ interface HeroContextBarProps {
   isLoading: boolean;
 }
 
-const LANGUAGES: LanguageOption[] = ['English', 'Tamil', 'Telugu', 'Malayalam', 'Hindi', 'Tanglish'];
+interface LanguageItem {
+  value: LanguageOption;
+  label: string;
+}
+
+const LANGUAGES: LanguageItem[] = [
+  { value: 'English', label: 'English' },
+  { value: 'Tamil', label: 'தமிழ் (Tamil)' },
+  { value: 'Telugu', label: 'తెలుగు (Telugu)' },
+  { value: 'Malayalam', label: 'മലയാളം (Malayalam)' },
+  { value: 'Hindi', label: 'हिन्दी (Hindi)' },
+];
 const DURATIONS = ['20s (Fast)', '28s (Standard)', '45s (Deep Dive)'];
 
 export const HeroContextBar: React.FC<HeroContextBarProps> = ({
@@ -106,7 +117,7 @@ export const HeroContextBar: React.FC<HeroContextBarProps> = ({
                   className="w-full px-2.5 py-1.5 text-xs rounded-md border border-stone-200 bg-stone-50/50 text-stone-800 font-medium focus:outline-none focus:border-[#8B1721]"
                 >
                   {LANGUAGES.map((lang) => (
-                    <option key={lang} value={lang}>{lang}</option>
+                    <option key={lang.value} value={lang.value}>{lang.label}</option>
                   ))}
                 </select>
               </div>

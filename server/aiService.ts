@@ -1,4 +1,4 @@
-import { GenerateReelRequest, RegenerateShotRequest, ReelStoryboard, Shot } from '../shared/types.js';
+import { GenerateReelRequest, RegenerateShotRequest, ReelStoryboard, Shot, LanguageOption } from '../shared/types.js';
 import { validateAndRepairStoryboard } from '../shared/schema.js';
 import { generateKnowledgeEngineStoryboard, analyzeTitle } from './knowledgeEngine.js';
 import { JOY_UNIVERSITY_VERIFIED_FACTS } from '../shared/knowledgeBase.js';
@@ -302,16 +302,71 @@ Use verified facts only:
 If a factual claim is needed but unavailable: VERIFICATION REQUIRED.
 
 
-# 27 — LANGUAGE
+# 27 — LANGUAGE CONTROL (STRICT & MANDATORY)
 
-Choose the most appropriate language or use the specified language:
-- English (conversational Indian student English)
-- Tamil (authentic spoken Tamil)
-- Telugu (authentic spoken Telugu)
-- Malayalam (authentic spoken Malayalam)
-- Hindi (authentic conversational Hindi)
-- Tanglish (authentic Tamil + English conversational blend)
-Dialogue must sound natural, never forced.
+The application provides the selected spoken language.
+The selected language is an ABSOLUTE OUTPUT CONSTRAINT.
+
+SUPPORTED LANGUAGES:
+- English
+- Tamil
+- Telugu
+- Malayalam
+- Hindi
+
+The model MUST use the exact language selected by the user.
+
+DO NOT:
+- choose another language
+- infer a different language
+- mix languages
+- translate into another language
+- switch languages because another language feels more natural
+- use regional slang from another language
+- return bilingual dialogue unless explicitly requested
+- use Tanglish or Latin transliterations for Indian languages
+
+The UI language selection has priority over the model's language preference.
+
+### NATIVE SCRIPT REQUIREMENTS:
+1. If English:
+   - Dialogue / Voiceover: Natural conversational English for +2 students.
+   - On-screen text: English.
+   - Do not use Tamil, Telugu, Malayalam, or Hindi sentences.
+
+2. If Tamil:
+   - Dialogue / Voiceover: Natural spoken Tamil in TAMIL SCRIPT (தமிழ் எழுத்துக்கள்). Sound like a real student. Do not use Tanglish.
+   - On-screen text: Tamil script.
+   - Example: "+2 முடித்தாச்சு... அடுத்து என்ன படிக்கணும்னு தெரியலையா?"
+
+3. If Telugu:
+   - Dialogue / Voiceover: Natural spoken Telugu in TELUGU SCRIPT (తెలుగు లిపి). Sound like a real student. Avoid literal English translation.
+   - On-screen text: Telugu script.
+   - Example: "+2 అయిపోయింది... ఇప్పుడు ఏం చదవాలో అర్థం కావడం లేదా?"
+
+4. If Malayalam:
+   - Dialogue / Voiceover: Natural spoken Malayalam in MALAYALAM SCRIPT (മലയാളം ലിപി). Sound like a real student. Avoid overly literary Malayalam.
+   - On-screen text: Malayalam script.
+   - Example: "+2 കഴിഞ്ഞു... ഇനി എന്ത് പഠിക്കണമെന്ന് അറിയില്ലേ?"
+
+5. If Hindi:
+   - Dialogue / Voiceover: Natural conversational Hindi in DEVANAGARI SCRIPT (देवनागरी लिपि). Sound like a real student.
+   - On-screen text: Hindi / Devanagari script.
+   - Example: "+2 खत्म हो गया... अब आगे क्या पढ़ना है, समझ नहीं आ रहा?"
+
+### PROPER NOUNS & TECHNICAL TERMS:
+Official names may remain unchanged when appropriate (Joy University, B.Tech, B.Sc, B.Com, MBA, AI, ML, Engineering).
+Do not translate official brand names unnecessarily.
+However, surrounding sentences MUST remain in the selected language native script!
+Example (Tamil): "Joy University-ல உங்களுக்கு பிடித்த course-ஐ explore பண்ணலாம்."
+
+### PRODUCTION INSTRUCTIONS:
+Visual Action, Camera Direction, and Production Notes remain in English for the film production crew.
+Dialogue / Voiceover, On-screen text, and CTA must strictly use the selected language native script.
+
+### NO AUTOMATIC CODE-SWITCHING / HARD FAILURE RULE:
+Do not mix languages. The title language does NOT determine the output language.
+Never silently fall back to English, Tamil, or Hindi.
 
 
 # 28 — CREATIVE VARIATION ENGINE
@@ -625,17 +680,44 @@ export async function generateStoryboard(req: GenerateReelRequest): Promise<Reel
     let rawJsonText = '';
 
     const langInstruction = `
-CRITICAL LANGUAGE MANDATE:
-The user selected spoken language: "${language.toUpperCase()}".
-- ALL DIALOGUE and VOICEOVER lines across ALL 6 shots MUST be written purely and authentically in conversational ${language}.
-- If language is Tamil: write natural, authentic spoken Tamil (colloquial conversational Tamil that students actually speak, NOT English).
-- If language is Telugu: write natural, authentic spoken Telugu (conversational Telugu, NOT English).
-- If language is Malayalam: write natural, authentic spoken Malayalam (conversational Malayalam, NOT English).
-- If language is Hindi: write natural, relatable student Hindi (NOT English).
-- If language is Tanglish: write authentic modern Tamil + English conversational blend.
-- If language is English: write punchy, relatable Indian student English.
-- NEVER revert dialogue to English when ${language} is chosen!
-- Visual action, camera direction, and production notes should stay in English for the film production crew.
+CRITICAL LANGUAGE CONTROL MANDATE — STRICT:
+SELECTED_LANGUAGE: "${language}"
+
+The selected language is an ABSOLUTE OUTPUT CONSTRAINT.
+The user explicitly selected: ${language.toUpperCase()}.
+The model MUST use the exact language selected by the user.
+
+RULES FOR DIALOGUE, ON-SCREEN TEXT, & CTA ACROSS ALL 6 SHOTS:
+- If language is "Tamil":
+  * Dialogue / Voiceover: Natural spoken Tamil in TAMIL SCRIPT (தமிழ் எழுத்துக்கள்). Sound like a real student. Do NOT use Tanglish or English sentences.
+  * On-screen text: Tamil script (தமிழ்).
+  * Example: "+2 முடித்தாச்சு... அடுத்து என்ன படிக்கணும்னு தெரியலையா?"
+- If language is "Telugu":
+  * Dialogue / Voiceover: Natural spoken Telugu in TELUGU SCRIPT (తెలుగు లిపి). Sound like a real student. Avoid literal English translation.
+  * On-screen text: Telugu script (తెలుగు).
+  * Example: "+2 అయిపోయింది... ఇప్పుడు ఏం చదవాలో అర్థం కావడం లేదా?"
+- If language is "Malayalam":
+  * Dialogue / Voiceover: Natural spoken Malayalam in MALAYALAM SCRIPT (മലയാളം ലിപി). Sound like a real student. Avoid overly literary Malayalam.
+  * On-screen text: Malayalam script (മലയാളം).
+  * Example: "+2 കഴിഞ്ഞു... ഇനി എന്ത് പഠിക്കണമെന്ന് അറിയില്ലേ?"
+- If language is "Hindi":
+  * Dialogue / Voiceover: Natural conversational Hindi in DEVANAGARI SCRIPT (देवनागरी लिपि). Sound like a real student.
+  * On-screen text: Hindi / Devanagari script (हिन्दी).
+  * Example: "+2 खत्म हो गया... अब आगे क्या पढ़ना है, समझ नहीं आ रहा?"
+- If language is "English":
+  * Dialogue / Voiceover and On-screen text: Natural conversational student English. Avoid formal lecture English.
+
+PROPER NOUNS & TECHNICAL TERMS:
+- Official names may remain unchanged when appropriate (Joy University, B.Tech, B.Sc, B.Com, MBA, AI, ML, Engineering).
+- Do not translate official brand names unnecessarily.
+- However, all surrounding sentences MUST remain in the selected language script!
+
+PRODUCTION INSTRUCTIONS:
+- Visual Action, Camera Direction, and Production Notes remain in English for the film production crew.
+- Dialogue, On-Screen Text, and CTA must strictly use the selected language script.
+
+HARD FAILURE:
+- Mixing languages, silent fallback to English, or returning Latin transliteration instead of native script for Tamil/Telugu/Malayalam/Hindi is a TOTAL FAILURE.
 `;
 
     const freshnessInstruction = `
@@ -746,16 +828,64 @@ Ensure the "viralBlueprint" object is fully populated in your JSON output, and u
 
     // Schema validation and automatic repair to ensure 6 shots, correct types, single CTA
     const validation = validateAndRepairStoryboard(parsedData, title);
-    if (validation.valid && validation.data) {
-      return validation.data as ReelStoryboard;
-    } else {
-      console.warn('[AI Service] Validation errors repaired:', validation.errors);
-      return validation.data as ReelStoryboard;
+    const candidate = validation.data as ReelStoryboard;
+    candidate.language = language; // Guarantee user-selected language constraint
+
+    // ─── LANGUAGE QA GATE ─────────────────────────────────────────────────────
+    const compliance = checkLanguageCompliance(candidate, language);
+    if (!compliance.pass) {
+      console.warn(`[AI Service] Language QA Gate FAIL: ${compliance.reason}. Falling back to native Knowledge Engine for ${language}.`);
+      return generateKnowledgeEngineStoryboard(title, direction, language, duration, 1);
     }
+
+    return candidate;
   } catch (err) {
     console.error('[AI Service] Error calling external API, falling back to Knowledge Engine:', err);
     return generateKnowledgeEngineStoryboard(title, direction, language, duration, 1);
   }
+}
+
+// ─── LANGUAGE COMPLIANCE VALIDATOR ──────────────────────────────────────────
+export function checkLanguageCompliance(
+  storyboard: ReelStoryboard,
+  targetLanguage: LanguageOption
+): { pass: boolean; reason?: string } {
+  if (targetLanguage === 'English') {
+    const nonEnglishRegex = /[\u0B80-\u0BFF\u0C00-\u0C7F\u0D00-\u0D7F\u0900-\u097F]/;
+    for (const shot of storyboard.shots) {
+      if (nonEnglishRegex.test(shot.dialogue)) {
+        return { pass: false, reason: `English selected but non-English script found in shot #${shot.number}` };
+      }
+    }
+    return { pass: true };
+  }
+
+  const scriptPatterns: Record<string, RegExp> = {
+    Tamil: /[\u0B80-\u0BFF]/,
+    Telugu: /[\u0C00-\u0C7F]/,
+    Malayalam: /[\u0D00-\u0D7F]/,
+    Hindi: /[\u0900-\u097F]/,
+  };
+
+  const pattern = scriptPatterns[targetLanguage];
+  if (!pattern) return { pass: true }; // Tanglish or others
+
+  let nativeScriptHits = 0;
+  for (const shot of storyboard.shots) {
+    if (pattern.test(shot.dialogue) || pattern.test(shot.onscreenText)) {
+      nativeScriptHits++;
+    }
+  }
+
+  // At least 4 of 6 shots must have native script characters
+  if (nativeScriptHits < 4) {
+    return {
+      pass: false,
+      reason: `${targetLanguage} selected, but only ${nativeScriptHits}/6 shots contained native script characters.`,
+    };
+  }
+
+  return { pass: true };
 }
 
 export async function regenerateShot(req: RegenerateShotRequest): Promise<Shot> {
@@ -795,6 +925,7 @@ Regenerate ONLY shot #${shotNumber} (${shotType}) for this existing Reel storybo
 CRITICAL CONTINUITY RULE:
 You must preserve narrative continuity with the other 5 shots while applying the core principles:
 - STUDENT FIRST, VALUE FIRST, JOY UNIVERSITY SECOND.
+- CRITICAL LANGUAGE RULE: The storyboard language is "${currentStoryboard.language}". Dialogue and on-screen text MUST be written strictly in the native script of ${currentStoryboard.language}!
 - Natural speech (write for speech, not brochure).
 - Concrete visual action (People -> Action -> Environment).
 - Short punchy on-screen graphics.
