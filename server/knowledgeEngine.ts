@@ -1,8 +1,9 @@
 import { ReelStoryboard, Shot, CreativeDirection, LanguageOption, ShotType } from '../shared/types.js';
-import { JOY_UNIVERSITY_VERIFIED_FACTS, HOOK_FRAMEWORKS, PATTERN_INTERRUPTS, SINGLE_CTAS } from '../shared/knowledgeBase.js';
+import { JOY_UNIVERSITY_VERIFIED_FACTS, HOOK_FRAMEWORKS, PATTERN_INTERRUPTS, SINGLE_CTAS, findRelevantJoyCourses } from '../shared/knowledgeBase.js';
 
 interface TitleThemeAnalysis {
   category:
+    | 'robotics'
     | 'commerce'
     | 'engineering'
     | 'ai_tech'
@@ -18,11 +19,24 @@ interface TitleThemeAnalysis {
   coreInsight: string;
   defaultAngle: string;
   relevantSchools: string[];
+  relevantCourses?: string[];
 }
 
 export function analyzeTitle(title: string): TitleThemeAnalysis {
   const lower = title.toLowerCase();
   const clean = title.replace(/[?!.]+$/, '').trim();
+
+  if (lower.includes('robot') || lower.includes('automation') || (lower.includes('ai') && lower.includes('robot'))) {
+    return {
+      category: 'robotics',
+      cleanTopic: clean,
+      studentTension: 'Students are confused between software AI coding and hardware robotics automation.',
+      coreInsight: 'Joy University offers two specific B.Tech pathways: B.Tech CSE (AI & Robotics) for software/algorithms and B.Tech Mech (Robotics & Automation) for machines and automation.',
+      defaultAngle: 'Software vs Hardware Robotics: Which B.Tech course matches your actual strength?',
+      relevantSchools: ['School of Computational Intelligence', 'School of Engineering & Technology'],
+      relevantCourses: ['B.Tech CSE (AI & Robotics)', 'B.Tech Mech (Robotics & Automation)'],
+    };
+  }
 
   if (lower.includes('mistake') || lower.includes('wrong') || lower.includes('regret') || lower.includes('dont choose') || lower.includes("don't choose")) {
     return {
@@ -32,6 +46,7 @@ export function analyzeTitle(title: string): TitleThemeAnalysis {
       coreInsight: 'Most post-+2 mistakes come from copying friends, chasing vanity rankings, or ignoring syllabus relevance.',
       defaultAngle: `Breaking down the real pitfalls behind "${clean}" before you lock in your choice.`,
       relevantSchools: ['School of Computational Intelligence', 'School of Engineering & Technology', 'School of Entrepreneurship & Management'],
+      relevantCourses: ['B.Tech CSE (AI & Robotics)', 'B.Tech Mech (Robotics & Automation)', 'B.Com (FinTech & AI)'],
     };
   }
 
@@ -43,6 +58,7 @@ export function analyzeTitle(title: string): TitleThemeAnalysis {
       coreInsight: 'Modern commerce combines business analytics, fintech, entrepreneurship, and corporate law.',
       defaultAngle: 'Debunking the "plain B.Com" myth with high-impact corporate fintech pathways.',
       relevantSchools: ['School of Entrepreneurship & Management', 'School of Law', 'Computational Intelligence'],
+      relevantCourses: ['B.Com (FinTech & AI)', 'B.Com (Accounting & Finance)', 'BBA (Business Analytics)'],
     };
   }
 
@@ -54,10 +70,11 @@ export function analyzeTitle(title: string): TitleThemeAnalysis {
       coreInsight: 'Modern tech requires applied, project-first learning with AI integration, not just rote book theory.',
       defaultAngle: `How to evaluate whether "${clean}" actually matches your career ambitions.`,
       relevantSchools: ['School of Engineering & Technology', 'School of Computational Intelligence', 'School of Design'],
+      relevantCourses: ['B.Tech CSE (AI & Robotics)', 'B.Tech Mech (Robotics & Automation)', 'B.Tech ECE (VLSI Design)'],
     };
   }
 
-  if (lower.includes('ai') || lower.includes('artificial') || lower.includes('future') || lower.includes('tech') || lower.includes('robot')) {
+  if (lower.includes('ai') || lower.includes('artificial') || lower.includes('future') || lower.includes('tech')) {
     return {
       category: 'ai_tech',
       cleanTopic: clean,
@@ -65,6 +82,7 @@ export function analyzeTitle(title: string): TitleThemeAnalysis {
       coreInsight: 'AI displaces repetitive tasks, but skyrockets demand for skilled builders and prompt-enabled domain specialists.',
       defaultAngle: `The real emerging careers shaped by AI — and what to study today to stay ahead.`,
       relevantSchools: ['School of Computational Intelligence', 'School of Design', 'School of Agricultural Sciences'],
+      relevantCourses: ['B.Tech CSE (AI & Robotics)', 'B.Tech CSE (AI & Data Science)', 'B.Tech CSE (Cyber Security)'],
     };
   }
 
@@ -224,6 +242,80 @@ function enforceNativeScriptForShots(
           `1. AI सिलेबस  2. प्रैक्टिकल लैब्स  3. मेंटरशिप`,
           `सच्ची काबिलियत बनाओ`,
           `काउंसलिंग के लिए सेव करें`,
+        ],
+      },
+    },
+    robotics: {
+      Tamil: {
+        dialogue: [
+          `"ரோபோடிக்ஸ் அண்ட் AI படிக்க ஆசை... ஆனா எந்த கோர்ஸ் எடுக்கணும்னு குழப்பமா இருக்கா?"`,
+          `"வெறும் தியரி காலேஜ்ல சேர்ந்தா நாலு வருஷம் வேஸ்ட்! ரோபோடிக்ஸ்ல ரெண்டு முக்கியமான வழிகள் இருக்கு."`,
+          `"கொஞ்சம் நில்லுங்க! கோடிங் பிடிக்குமா இல்ல மெஷின் செய்ய பிடிக்குமா? இந்த வித்தியாசம் புரிஞ்சுக்கோங்க."`,
+          `"Joy University-ல 2 ஸ்பெஷல் கோர்ஸ் இருக்கு: 1. கோடிங் & AI-க்கு B.Tech CSE (AI & Robotics)! 2. ஹார்டுவேர் & மெஷின்ஸ்க்கு B.Tech Mech (Robotics & Automation)!"`,
+          `"உங்க ஆர்வம் கோடிங்கில் இருக்கா இல்ல மெஷின்கள்ல இருக்கா? சரியான கோர்ஸை தேர்வு செஞ்சா எதிர்காலம் பிரகாசம்."`,
+          `"இந்த ரெண்டு கோர்ஸ்ல உங்க சாய்ஸ் எது? கீழே 'ROBOT' ன்னு கமெண்ட் பண்ணுங்க, சிலபஸ் & அட்மிஷன் டீட்டெய்ல்ஸ் அனுப்புறோம்!"`,
+        ],
+        onscreen: [
+          `ரோபோடிக்ஸ்: எந்த கோர்ஸ்? 🤖`,
+          `2 தனித்தனி வழிகள் ⚠️`,
+          `கோடிங் vs மெஷின்ஸ் ⚙️`,
+          `1. CSE (AI & Robotics)  2. Mech (Robotics)`,
+          `சரியான கோர்ஸை தேர்வு செய்யுங்கள் 🎯`,
+          `'ROBOT' என கமெண்ட் பண்ணுங்க 📩`,
+        ],
+      },
+      Telugu: {
+        dialogue: [
+          `"రోబోటిక్స్ & AI చదవాలని ఉందా? కానీ ఏ కోర్స్ ఎంచుకోవాలో అర్థం కావట్లేదా?"`,
+          `"కేవలం థియరీ చదివితే వేస్ట్! రోబోటిక్స్‌లో రెండు వేర్వేరు మార్గాలున్నాయి."`,
+          `"ఒక్క నిమిషం ఆగండి! మీకు కోడింగ్ ఇష్టమా లేక మెషీన్లు తయారు చేయడం ఇష్టమా? ఈ తేడా తెలుసుకోండి."`,
+          `"Joy University-లో 2 ప్రత్యేక కోర్సులు ఉన్నాయి: 1. కోడింగ్ & AI కోసం B.Tech CSE (AI & Robotics)! 2. హార్డ్‌వేర్ కోసం B.Tech Mech (Robotics & Automation)!"`,
+          `"మీ ఆసక్తికి తగిన ఖచ్చితమైన కోర్సును ఎంచుకుంటే, కెరీర్‌లో అద్భుతమైన ఎదుగుదల ఉంటుంది."`,
+          `"ఈ రెండింటిలో మీ ఛాయిస్ ఏది? కింద 'ROBOT' అని కామెంట్ చేయండి, పూర్తి వివరాలు పంపుతాం!"`,
+        ],
+        onscreen: [
+          `రోబోటిక్స్: ఏ కోర్స్? 🤖`,
+          `2 వేర్వేరు మార్గాలు ⚠️`,
+          `కోడింగ్ vs మెషీన్లు ⚙️`,
+          `1. CSE (AI & Robotics)  2. Mech (Robotics)`,
+          `సరైన కోర్సును ఎంచుకోండి 🎯`,
+          `'ROBOT' అని కామెంట్ చేయండి 📩`,
+        ],
+      },
+      Malayalam: {
+        dialogue: [
+          `"റോബോട്ടിക്സും AI-യും പഠിക്കാൻ ആഗ്രഹമുണ്ടോ? എന്നാൽ ഏത് കോഴ്സ് തിരഞ്ഞെടുക്കണമെന്ന് സംശയമാണോ?"`,
+          `"വെറും തിയറി മാത്രം പഠിച്ചാൽ പോരാ. റോബോട്ടിക്സിൽ രണ്ട് വ്യത്യസ്ത വഴികളുണ്ട്."`,
+          `"ഒരു നിമിഷം നിൽക്കൂ! നിങ്ങൾക്ക് കോഡിംഗ് ആണോ അതോ മെഷീനുകൾ നിർമ്മിക്കുന്നതാണോ കൂടുതൽ താല്പര്യം?"`,
+          `"Joy University-ൽ 2 മികച്ച കോഴ്സുകളുണ്ട്: 1. കോഡിംഗിനായി B.Tech CSE (AI & Robotics)! 2. മെഷീനുകൾക്കായി B.Tech Mech (Robotics & Automation)!"`,
+          `"നിങ്ങളുടെ അഭിരുചിക്ക് ചേർന്ന ശരിയായ കോഴ്സ് തിരഞ്ഞെടുത്താൽ മികച്ച ഒരു കരിയർ ഉറപ്പാണ്."`,
+          `"ഈ രണ്ട് കോഴ്സുകളിൽ നിങ്ങളുടെ ചോയ്സ് ഏതാണ്? താഴെ 'ROBOT' എന്ന് കമന്റ് ചെയ്യൂ, സിലബസ് അയച്ചുതരാം!"`,
+        ],
+        onscreen: [
+          `റോബോട്ടിക്സ്: ഏത് കോഴ്സ്? 🤖`,
+          `2 വ്യത്യസ്ത വഴികൾ ⚠️`,
+          `കോഡിംഗ് vs മെഷീനുകൾ ⚙️`,
+          `1. CSE (AI & Robotics)  2. Mech (Robotics)`,
+          `ശരിയായ കോഴ്സ് തിരഞ്ഞെടുക്കൂ 🎯`,
+          `'ROBOT' എന്ന് കമന്റ് ചെയ്യൂ 📩`,
+        ],
+      },
+      Hindi: {
+        dialogue: [
+          `"रोबोटिक्स और AI में करियर बनाना है? लेकिन समझ नहीं आ रहा कि कौन सा कोर्स चुनें?"`,
+          `"सिर्फ पुरानी थ्योरी पढ़ने से बात नहीं बनेगी। रोबोटिक्स में दो बिल्कुल अलग रास्ते होते हैं।"`,
+          `"एक सेकंड रुकिए! आपको कोडिंग पसंद है या मशीनें और हार्डवेयर बनाना? यह फर्क समझिए।"` ,
+          `"Joy University में 2 खास डिग्री कोर्सेस हैं: 1. कोडिंग और AI के लिए B.Tech CSE (AI & Robotics)! 2. हार्डवेयर के लिए B.Tech Mech (Robotics & Automation)!"`,
+          `"अपनी असली पसंद के अनुसार सही कोर्स चुनेंगे, तो फ्यूचर में हाई-ग्रोथ करियर पक्का है।"` ,
+          `"इन दोनों में आपकी पसंद क्या है? नीचे 'ROBOT' कमेंट करें, हम पूरा सिलेबस और एडमिशन गाइड भेजेंगे!"`,
+        ],
+        onscreen: [
+          `रोबोटिक्स: कौन सा कोर्स? 🤖`,
+          `2 अलग-अलग रास्ते ⚠️`,
+          `कोडिंग vs मशीनें ⚙️`,
+          `1. CSE (AI & Robotics)  2. Mech (Robotics)`,
+          `सही कोर्स चुनें 🎯`,
+          `'ROBOT' कमेंट करें 📩`,
         ],
       },
     },
@@ -460,6 +552,95 @@ export function generateKnowledgeEngineStoryboard(
             : `"Save this reel before you finalize your college applications."`,
           onscreenText: `SAVE THIS FOR COUNSELING`,
           cameraPerformance: `Centered portrait framing with subtle Joy University red lower-third accent.`,
+        },
+      ];
+      break;
+
+    case 'robotics':
+      shots = [
+        {
+          number: 1,
+          type: 'HOOK',
+          name: 'Hook',
+          timestamp: '00:00 – 00:04',
+          visual: `Protagonist looks into camera while an advanced robotics arm articulates dynamically in Joy University\'s state-of-the-art laboratory.`,
+          dialogue: isTamil
+            ? `"ரோபோடிக்ஸ் அண்ட் AI படிக்க ஆசை... ஆனா எந்த கோர்ஸ் எடுக்கணும்னு குழப்பமா இருக்கா?"`
+            : isTanglish
+            ? `"Robotics padikanum nu aasai, but which course to pick after +2? Let\'s break it down."`
+            : `"Dreaming of a career in Robotics and AI? Stop and check this before you apply."`,
+          onscreenText: `ROBOTICS: WHICH COURSE? 🤖`,
+          cameraPerformance: `Low-angle rapid push-in with dynamic robotic arm movement in background.`,
+        },
+        {
+          number: 2,
+          type: 'PROBLEM',
+          name: 'Problem',
+          timestamp: '00:04 – 00:08',
+          visual: `Student holds two notebooks labelled 'Coding' and 'Machines', showing the exact dilemma facing +2 applicants.`,
+          dialogue: isTamil
+            ? `"வெறும் தியரி காலேஜ்ல சேர்ந்தா நாலு வருஷம் வேஸ்ட்! ரோபோடிக்ஸ்ல ரெண்டு முக்கியமான வழிகள் இருக்கு."`
+            : isTanglish
+            ? `"Don\'t join a generic degree. Robotics has 2 completely different career pathways."`
+            : `"Most students don\'t realize Robotics actually splits into two completely different degree pathways."`,
+          onscreenText: `2 DIFFERENT PATHWAYS ⚡`,
+          cameraPerformance: `Split-screen focus comparing software code on laptop vs physical robotic joints.`,
+        },
+        {
+          number: 3,
+          type: 'PATTERN_INTERRUPT',
+          name: 'Pattern Interrupt',
+          timestamp: '00:08 – 00:12',
+          visual: `Protagonist gestures towards two student teams actively testing prototypes in Joy University robotics labs.`,
+          dialogue: isTamil
+            ? `"கொஞ்சம் நில்லுங்க! கோடிங் பிடிக்குமா இல்ல மெஷின் செய்ய பிடிக்குமா? இந்த வித்தியாசம் புரிஞ்சுக்கோங்க."`
+            : isTanglish
+            ? `"Wait! Do you love writing AI algorithms or building physical machines? That decides your degree."`
+            : `"Wait! Do you want to write the AI brain, or build the physical machine? That decides your course."`,
+          onscreenText: `AI CODE vs PHYSICAL MACHINE ⚙️`,
+          cameraPerformance: `Kinetic whip-pan connecting the programming station to the mechanical assembly bench.`,
+        },
+        {
+          number: 4,
+          type: 'VALUE',
+          name: 'Value',
+          timestamp: '00:12 – 00:22',
+          visual: `Protagonist displays both official Joy University robotics degree pathways on an interactive display.`,
+          dialogue: isTamil
+            ? `"Joy University-ல 2 ஸ்பெஷல் கோர்ஸ் இருக்கு: 1. கோடிங் & AI-க்கு B.Tech CSE (AI & Robotics)! 2. ஹார்டுவேர் & மெஷின்ஸ்க்கு B.Tech Mech (Robotics & Automation)!"`
+            : isTanglish
+            ? `"Joy University offers 2 verified degrees: 1. B.Tech CSE (AI & Robotics) for software, 2. B.Tech Mech (Robotics & Automation) for machines!"`
+            : `"Joy University offers 2 specialized degree tracks: 1. B.Tech CSE (AI & Robotics) for algorithms and software, and 2. B.Tech Mech (Robotics & Automation) for physical automation!"`,
+          onscreenText: `1. B.TECH CSE (AI & ROBOTICS)\n2. B.TECH MECH (ROBOTICS & AUTOMATION)`,
+          cameraPerformance: `Steady lateral tracking shot revealing both course names on graphic cards.`,
+        },
+        {
+          number: 5,
+          type: 'PAYOFF',
+          name: 'Payoff',
+          timestamp: '00:22 – 00:26',
+          visual: `Student operates an autonomous mobile robot navigating campus pathways, looking up with genuine pride.`,
+          dialogue: isTamil
+            ? `"உங்க ஆர்வம் கோடிங்கில் இருக்கா இல்ல மெஷின்கள்ல இருக்கா? சரியான கோர்ஸை தேர்வு செஞ்சா எதிர்காலம் பிரகாசம்."`
+            : isTanglish
+            ? `"Pick the course that matches your true strength — and you graduate industry-ready from day one."`
+            : `"When you align your natural interest with the exact right degree, you become an unstoppable builder."`,
+          onscreenText: `CHOOSE YOUR EXACT TRACK 🎯`,
+          cameraPerformance: `Cinematic medium close-up with soft background campus lighting.`,
+        },
+        {
+          number: 6,
+          type: 'CTA',
+          name: 'Call to Action',
+          timestamp: '00:26 – 00:30',
+          visual: `Protagonist smiles confidently at camera, pointing down to comment section.`,
+          dialogue: isTamil
+            ? `"இந்த ரெண்டு கோர்ஸ்ல உங்க சாய்ஸ் எது? கீழே 'ROBOT' ன்னு கமெண்ட் பண்ணுங்க, சிலபஸ் & அட்மிஷன் டீட்டெய்ல்ஸ் அனுப்புறோம்!"`
+            : isTanglish
+            ? `"Comment 'ROBOT' below to get syllabus comparisons and admission guidance for both degrees!"`
+            : `"Comment 'ROBOT' below and we\'ll send you the detailed syllabus and admission breakdown for both courses!"`,
+          onscreenText: `COMMENT 'ROBOT' FOR SYLLABUS 📩`,
+          cameraPerformance: `Centered portrait framing with Joy University admission handle and logo.`,
         },
       ];
       break;
@@ -1454,9 +1635,9 @@ export function generateKnowledgeEngineStoryboard(
     shots[2].cameraPerformance = patternInterruptVariants[idx];
   }
 
-  // Swap CTA dialogue (last shot)
+  // Swap CTA dialogue (last shot) - preserve dedicated category-specific course CTA
   const lastShot = shots[shots.length - 1];
-  if (lastShot && lastShot.type === 'CTA') {
+  if (lastShot && lastShot.type === 'CTA' && analysis.category !== 'robotics') {
     lastShot.dialogue = ctaVariants[idx];
   }
 

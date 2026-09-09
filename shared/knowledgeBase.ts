@@ -31,8 +31,77 @@ export const JOY_UNIVERSITY_VERIFIED_FACTS = {
   strictFactRules: [
     "NEVER fabricate rankings, fees, average salaries, or placement percentages.",
     "NEVER promise guaranteed jobs.",
+    "STUDENTS ENROLL IN COURSES, NOT SCHOOLS: Always name the specific Course/Degree (e.g. B.Tech CSE (AI & Robotics) or B.Tech Mech (Robotics & Automation)), never the internal school division.",
     "If factual data is unavailable, state 'VERIFICATION REQUIRED'.",
     "Brand red: #AF1E2A. Neutral secondary: #524F4F. Font: Montserrat.",
+  ],
+};
+
+/**
+ * Official Joy University Course Catalogue.
+ * Students enroll in these specific courses, not internal faculty/school divisions.
+ */
+export const JOY_UNIVERSITY_COURSES = {
+  roboticsAndAI: [
+    { name: "B.Tech CSE (AI & Robotics)", focus: "Software, Intelligent Systems, Computer Vision & Algorithms" },
+    { name: "B.Tech Mech (Robotics & Automation)", focus: "Hardware, Mechanical Systems, Industrial Automation & Mechatronics" },
+  ],
+  computationalIntelligence: [
+    "B.Tech CSE (AI & Robotics)",
+    "B.Tech CSE (AI & Data Science)",
+    "B.Tech CSE (AI & Machine Learning)",
+    "B.Tech CSE (AI & IoT)",
+    "B.Tech CSE (Cyber Security)",
+    "B.Tech Computer Science & Engineering",
+    "B.Tech Information & Communication Technology",
+    "BCA (Full Stack Development / AI / Cyber Security)",
+    "B.Sc. (Hons) CSE (AI & Data Science)",
+  ],
+  engineeringAndTechnology: [
+    "B.Tech Mech (Robotics & Automation)",
+    "B.Tech Mech (AI & Machine Learning)",
+    "B.Tech Mechatronics",
+    "B.Tech Mechanical Engineering",
+    "B.Tech Electronics & Communication Engineering (ECE)",
+    "B.Tech ECE (VLSI Design)",
+    "B.Tech Biomedical Engineering",
+    "B.Tech Biotechnology",
+    "B.Tech Aeronautical Engineering",
+    "B.Tech Civil Engineering",
+    "B.Design (Fashion Design)",
+  ],
+  managementAndCommerce: [
+    "B.Com (FinTech & AI)",
+    "B.Com (Accounting & Finance)",
+    "B.Com (Computer Application)",
+    "BBA (Business Analytics)",
+    "BBA (Digital Marketing)",
+    "BBA (Logistics & Supply Chain Management)",
+    "MBA (Business Analytics / Digital Marketing)",
+  ],
+  agriculture: [
+    "B.Sc. (Hons.) Agriculture",
+    "B.Sc. (Hons.) Horticulture",
+    "B.Tech Agricultural Engineering",
+  ],
+  law: [
+    "B.A. LL.B (Hons.) — 5 Years",
+    "B.B.A. LL.B (Hons.) — 5 Years",
+    "LL.B (Hons.) — 3 Years",
+  ],
+  healthAndMedicalSciences: [
+    "B.Pharm (Bachelor of Pharmacy)",
+    "B.Sc. Nursing",
+    "B.P.T. (Bachelor of Physiotherapy)",
+    "B.Sc. Operation Theatre & Anaesthesia Technology",
+    "B.Sc. Cardiac Perfusion Technology",
+    "B.Sc. Medical Radiology & Imaging Technology",
+    "B.Sc. Physician Assistant",
+  ],
+  appliedSciencesAndMedia: [
+    "B.Sc. Forensic Science",
+    "B.Sc. Psychology",
+    "B.Sc. Film & TV Production",
   ],
 };
 
@@ -345,3 +414,120 @@ export const SINGLE_CTAS = [
   "Follow Joy University for honest post-+2 decision breakdowns.",
   "Drop your dream career below and let's check which degree actually matches it.",
 ];
+
+/**
+ * Match a topic or student interest directly to specific Joy University courses.
+ * Guaranteed to return specific degree programs, NOT internal school divisions.
+ */
+export function findRelevantJoyCourses(topic: string): { courses: string[]; dualTrackPrompt?: string } {
+  const query = topic.toLowerCase();
+
+  // Dual-track Robotics & AI
+  if (query.includes('robot') || (query.includes('ai') && query.includes('robot')) || query.includes('automation')) {
+    return {
+      courses: [
+        "B.Tech CSE (AI & Robotics)",
+        "B.Tech Mech (Robotics & Automation)",
+      ],
+      dualTrackPrompt: "Dual-track degree options: 1. B.Tech CSE (AI & Robotics) for software/AI algorithms, 2. B.Tech Mech (Robotics & Automation) for machines & industrial automation.",
+    };
+  }
+
+  // Artificial Intelligence, Data Science & Tech
+  if (query.includes('ai') || query.includes('artificial') || query.includes('data') || query.includes('machine learning') || query.includes('ml')) {
+    return {
+      courses: [
+        "B.Tech CSE (AI & Data Science)",
+        "B.Tech CSE (AI & Machine Learning)",
+        "B.Tech CSE (AI & Robotics)",
+      ],
+    };
+  }
+
+  // Cyber Security & Coding
+  if (query.includes('cyber') || query.includes('hack') || query.includes('security') || query.includes('coding') || query.includes('software')) {
+    return {
+      courses: [
+        "B.Tech CSE (Cyber Security)",
+        "B.Tech Computer Science & Engineering",
+        "BCA (Full Stack Development / Cyber Security)",
+      ],
+    };
+  }
+
+  // Commerce & FinTech
+  if (query.includes('commerce') || query.includes('b.com') || query.includes('finance') || query.includes('fintech') || query.includes('account') || query.includes('money')) {
+    return {
+      courses: [
+        "B.Com (FinTech & AI)",
+        "B.Com (Accounting & Finance)",
+        "BBA (Financial Management)",
+      ],
+    };
+  }
+
+  // Business, Management & Analytics
+  if (query.includes('business') || query.includes('bba') || query.includes('mba') || query.includes('management') || query.includes('marketing') || query.includes('startup')) {
+    return {
+      courses: [
+        "BBA (Business Analytics)",
+        "BBA (Digital Marketing)",
+        "BBA (Logistics & Supply Chain Management)",
+      ],
+    };
+  }
+
+  // Agriculture & Horticulture
+  if (query.includes('agri') || query.includes('farm') || query.includes('crop') || query.includes('horticulture')) {
+    return {
+      courses: [
+        "B.Sc. (Hons.) Agriculture",
+        "B.Sc. (Hons.) Horticulture",
+        "B.Tech Agricultural Engineering",
+      ],
+    };
+  }
+
+  // Law
+  if (query.includes('law') || query.includes('advocate') || query.includes('court') || query.includes('legal') || query.includes('judge')) {
+    return {
+      courses: [
+        "B.A. LL.B (Hons.)",
+        "B.B.A. LL.B (Hons.)",
+        "LL.B (Hons.)",
+      ],
+    };
+  }
+
+  // Healthcare, Pharmacy & Nursing
+  if (query.includes('medic') || query.includes('doctor') || query.includes('pharm') || query.includes('nurse') || query.includes('physio') || query.includes('health') || query.includes('hospital')) {
+    return {
+      courses: [
+        "B.Pharm (Bachelor of Pharmacy)",
+        "B.Sc. Nursing",
+        "B.P.T. (Physiotherapy)",
+        "B.Sc. Cardiac Perfusion / Anaesthesia Technology",
+      ],
+    };
+  }
+
+  // Creative & Media
+  if (query.includes('film') || query.includes('media') || query.includes('design') || query.includes('fashion') || query.includes('tv') || query.includes('camera')) {
+    return {
+      courses: [
+        "B.Design (Fashion Design)",
+        "B.Sc. Film & TV Production",
+      ],
+    };
+  }
+
+  // Default core technology & modern pathways
+  return {
+    courses: [
+      "B.Tech CSE (AI & Robotics)",
+      "B.Tech CSE (AI & Data Science)",
+      "B.Com (FinTech & AI)",
+    ],
+  };
+}
+

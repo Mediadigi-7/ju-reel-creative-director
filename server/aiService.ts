@@ -1,7 +1,7 @@
 import { GenerateReelRequest, RegenerateShotRequest, ReelStoryboard, Shot, LanguageOption } from '../shared/types.js';
 import { validateAndRepairStoryboard } from '../shared/schema.js';
 import { generateKnowledgeEngineStoryboard, analyzeTitle } from './knowledgeEngine.js';
-import { JOY_UNIVERSITY_VERIFIED_FACTS } from '../shared/knowledgeBase.js';
+import { JOY_UNIVERSITY_VERIFIED_FACTS, findRelevantJoyCourses } from '../shared/knowledgeBase.js';
 
 export const SYSTEM_PROMPT = `
 # JOY UNIVERSITY — REEL CREATIVE DIRECTOR
@@ -288,18 +288,79 @@ Use university branding when strategically appropriate:
 Never force branding into discovery/entertainment content.
 
 
-# 26 — FACTUAL ACCURACY
+# 26 — FACTUAL ACCURACY & COURSE-FIRST RULE
 
 Never invent:
 Rankings, awards, placement percentages, salaries, fees, accreditations, partnerships, facilities.
-Use verified facts only:
+
+### CRITICAL RULE — STUDENTS ENROLL IN COURSES, NOT SCHOOLS:
+- University "Schools" (e.g., School of Computational Intelligence, School of Engineering & Technology) are purely INTERNAL administrative divisions.
+- NEVER use generic School names in dialogue, on-screen text, visuals, or CTAs. (e.g. DO NOT say "Join Joy University School of Computational Intelligence").
+- ALWAYS cite the specific COURSE / DEGREE NAME (e.g. "B.Tech CSE (AI & Robotics)", "B.Tech Mech (Robotics & Automation)").
+- If the user's title relates to ANY academic field, present Joy University's EXACT relevant courses.
+- SPECIAL DUAL-TRACK RULE FOR "AI & ROBOTICS" / "ROBOTICS":
+  Joy University offers TWO distinct 4-Year B.Tech degrees for Robotics:
+  1. Software/Coding Track: B.Tech CSE (AI & Robotics)
+  2. Hardware/Machines Track: B.Tech Mech (Robotics & Automation)
+  When generating reels about Robotics or AI & Robotics, ALWAYS present or compare BOTH tracks so the student/parent understands which option suits them (Software vs Hardware)!
+
+### VERIFIED JOY UNIVERSITY COURSE CATALOGUE:
+Use ONLY these real degrees offered at Joy University:
+1. Robotics, AI & Computing:
+   - B.Tech CSE (AI & Robotics)
+   - B.Tech Mech (Robotics & Automation)
+   - B.Tech CSE (AI & Data Science)
+   - B.Tech CSE (AI & Machine Learning)
+   - B.Tech CSE (AI & IoT)
+   - B.Tech CSE (Cyber Security)
+   - B.Tech Computer Science & Engineering
+   - B.Tech Information & Communication Technology
+   - BCA (Full Stack Development / AI / Cyber Security)
+   - B.Sc. (Hons) CSE (AI & Data Science)
+2. Core Engineering & Mechatronics:
+   - B.Tech Mech (Robotics & Automation)
+   - B.Tech Mechatronics
+   - B.Tech Mech (AI & Machine Learning)
+   - B.Tech Mechanical Engineering
+   - B.Tech Electronics & Communication Engineering (ECE)
+   - B.Tech ECE (VLSI Design / AI & ML)
+   - B.Tech Biomedical Engineering
+   - B.Tech Biotechnology
+   - B.Tech Aeronautical Engineering
+   - B.Tech Civil Engineering
+3. Commerce, Management & FinTech:
+   - B.Com (FinTech & AI)
+   - B.Com (Accounting & Finance)
+   - B.Com (Computer Application)
+   - BBA (Business Analytics / Digital Marketing / Logistics)
+   - MBA (Business Analytics / Digital Marketing)
+4. Agricultural Sciences:
+   - B.Sc. (Hons.) Agriculture
+   - B.Sc. (Hons.) Horticulture
+   - B.Tech Agricultural Engineering
+5. Law:
+   - B.A. LL.B (Hons.) — 5 Years
+   - B.B.A. LL.B (Hons.) — 5 Years
+   - LL.B (Hons.) — 3 Years
+6. Health & Medical Sciences:
+   - B.Pharm (Bachelor of Pharmacy)
+   - B.Sc. Nursing
+   - B.P.T. (Bachelor of Physiotherapy)
+   - B.Sc. Operation Theatre & Anaesthesia / Cardiac Perfusion Technology
+7. Design & Media:
+   - B.Design (Fashion Design)
+   - B.Sc. Film & TV Production
+   - B.Sc. Psychology / Forensic Science
+
+Verified Institutional Facts:
 - Established vide Tamil Nadu State Private Universities Act 2019
 - Location: Vadakkankulam, Tirunelveli district, Tamil Nadu (Near Kanyakumari)
 - Campus: 104+ acres green campus
 - Legacy: 43 years academic legacy (Rajas Group, 1 Lakh+ alumni placed worldwide)
 - Recognition: UGC Section 2(f) recognized, AISHE: U-1412
-- Schools: Computational Intelligence, Engineering & Technology, Agriculture, Entrepreneurship & Management, Law, Pharmacy, Nursing, Life & Health Sciences, Research
+- Corporate Partners: IBM, NEC, Intel, ISDC, Siemens
 If a factual claim is needed but unavailable: VERIFICATION REQUIRED.
+
 
 
 # 27 — LANGUAGE CONTROL (STRICT & MANDATORY)
@@ -772,9 +833,22 @@ Before drafting the 6 storyboard beats, formulate a complete "viralBlueprint" ob
 Ensure the "viralBlueprint" object is fully populated in your JSON output, and use its progressive revelation directly to drive Shots 1 through 6!
 `;
 
+    const relevantCourseData = findRelevantJoyCourses(title);
+    const courseContextInstruction = `
+CRITICAL COURSE RECOMMENDATION MANDATE (STUDENTS ENROLL IN COURSES, NOT SCHOOLS):
+Joy University offers these SPECIFIC verified degree courses directly relevant to "${title}":
+${relevantCourseData.courses.map(c => `- ${c}`).join('\n')}
+${relevantCourseData.dualTrackPrompt ? `DUAL TRACK GUIDANCE: ${relevantCourseData.dualTrackPrompt}` : ''}
+
+RULES:
+1. In Shot 4 (Value / Transformation) and Shot 6 (CTA / Payoff), cite these EXACT course/degree names.
+2. NEVER cite generic internal school names (like "School of Computational Intelligence" or "School of Engineering & Technology").
+3. For robotics/automation, present both tracks so the student knows: Software/AI track is B.Tech CSE (AI & Robotics) and Hardware/Machines track is B.Tech Mech (Robotics & Automation)!
+`;
+
     if (isGemini) {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
-      const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${retentionInstruction}\n\n${viralInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
+      const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${retentionInstruction}\n\n${viralInstruction}\n\n${courseContextInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -797,7 +871,7 @@ Ensure the "viralBlueprint" object is fully populated in your JSON output, and u
     } else {
       // OpenAI-compatible endpoint
       const endpoint = 'https://api.openai.com/v1/chat/completions';
-      const prompt = `${freshnessInstruction}\n\n${retentionInstruction}\n\n${viralInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"`;
+      const prompt = `${freshnessInstruction}\n\n${retentionInstruction}\n\n${viralInstruction}\n\n${courseContextInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"`;
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -931,6 +1005,7 @@ You must preserve narrative continuity with the other 5 shots while applying the
 - Natural speech (write for speech, not brochure).
 - Concrete visual action (People -> Action -> Environment).
 - Short punchy on-screen graphics.
+- STUDENTS ENROLL IN COURSES, NOT SCHOOLS: Never cite generic school divisions (e.g. "School of Computational Intelligence"). Cite specific Joy University degree courses (e.g. B.Tech CSE (AI & Robotics) or B.Tech Mech (Robotics & Automation)).
 
 Reel Title: "${reelTitle}"
 Creative Angle: "${creativeAngle}"
