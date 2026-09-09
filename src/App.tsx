@@ -277,8 +277,18 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F8F9FA]">
-      {/* Top Bar: Compact Fixed Header in Focus Mode, Standard Navbar otherwise */}
-      {currentView === 'creator' && currentReel ? (
+      {/* Primary Header Navbar - Always Visible */}
+      <Navbar
+        onNewReel={handleNewReel}
+        onOpenLibrary={() => navigateToView('library')}
+        onOpenSettings={() => setIsSettingsOpen(true)}
+        savedCount={savedProjects.length}
+        currentView={currentView}
+        apiSettings={apiSettings}
+      />
+
+      {/* Storyboard Action Sub-Bar - Appears when editing an active Reel */}
+      {currentView === 'creator' && currentReel && (
         <CompactTopBar
           reel={currentReel}
           onBack={handleNewReel}
@@ -292,15 +302,6 @@ export const App: React.FC = () => {
           apiSettings={apiSettings}
           isRegenerating={isRegeneratingEntire}
           isSaved={isSaved}
-        />
-      ) : (
-        <Navbar
-          onNewReel={handleNewReel}
-          onOpenLibrary={() => navigateToView('library')}
-          onOpenSettings={() => setIsSettingsOpen(true)}
-          savedCount={savedProjects.length}
-          currentView={currentView}
-          apiSettings={apiSettings}
         />
       )}
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ArrowLeft, Share2, Download, RotateCw, Check, Link2, Copy, Bookmark, ChevronDown, Settings } from 'lucide-react';
 import { ReelStoryboard } from '../../shared/types.js';
+import { ApiSettings } from '../services/storage.js';
 
 interface CompactTopBarProps {
   reel: ReelStoryboard;
@@ -12,7 +13,7 @@ interface CompactTopBarProps {
   onCopyBrief: () => void;
   onSave: () => void;
   onOpenSettings?: () => void;
-  apiSettings?: { apiKey?: string; apiProvider?: 'gemini' | 'openai' };
+  apiSettings?: ApiSettings;
   isRegenerating: boolean;
   isSaved: boolean;
 }
@@ -66,7 +67,7 @@ export const CompactTopBar: React.FC<CompactTopBarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200">
+    <header className="sticky top-14 z-30 bg-white/95 backdrop-blur-md border-b border-stone-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
         {/* Left: Back button, Title (medium bold), subtle metadata pill */}
         <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
@@ -162,21 +163,45 @@ export const CompactTopBar: React.FC<CompactTopBarProps> = ({
           </button>
 
           {/* AI Settings / Status */}
-          {onOpenSettings && (
-            <button
-              onClick={onOpenSettings}
-              title={apiSettings?.apiKey ? `${apiSettings.apiProvider === 'openai' ? 'OpenAI' : 'Gemini'} Active — Click to configure` : 'Running on Offline Fallback — Click to add API key'}
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition-colors ${
-                apiSettings?.apiKey
-                  ? 'bg-emerald-50 text-emerald-800 border-emerald-300 hover:bg-emerald-100'
-                  : 'bg-stone-50 text-stone-600 border-stone-200 hover:bg-stone-100'
-              }`}
-            >
-              <span className={`w-2 h-2 rounded-full ${apiSettings?.apiKey ? 'bg-emerald-500 animate-pulse' : 'bg-amber-400'}`} />
-              <span className="hidden md:inline">{apiSettings?.apiKey ? (apiSettings.apiProvider === 'openai' ? 'GPT-4o' : 'Gemini') : 'AI Key'}</span>
-              <Settings className="w-3.5 h-3.5" />
-            </button>
-          )}
+          {onOpenSettings && (() => {
+            const hasKey = Boolean(apiSettings?.apiKey && apiSettings.apiKey.trim().length > 0);
+            const isVerified = Boolean(hasKey && apiSettings?.isVerified);
+            const providerLabel = apiSettings?.apiProvider === 'openai' ? 'GPT-4o' : 'Gemini';
+
+            return (
+              <button
+                onClick={onOpenSettings}
+                title={
+                  !hasKey
+                    ? 'Running on Offline Knowledge Engine — Click to add API key'
+                    : isVerified
+                    ? `${providerLabel} Active & Connected — Click to configure`
+                    : `${providerLabel} Disconnected / Unverified — Click to fix`
+                }
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition-colors cursor-pointer ${
+                  !hasKey
+                    ? 'bg-stone-50 text-stone-600 border-stone-200 hover:bg-stone-100'
+                    : isVerified
+                    ? 'bg-emerald-50 text-emerald-800 border-emerald-300 hover:bg-emerald-100'
+                    : 'bg-amber-50 text-amber-900 border-amber-300 hover:bg-amber-100'
+                }`}
+              >
+                <span
+                  className={`w-2 h-2 rounded-full ${
+                    !hasKey
+                      ? 'bg-stone-400'
+                      : isVerified
+                      ? 'bg-emerald-500 animate-pulse'
+                      : 'bg-amber-500'
+                  }`}
+                />
+                <span className="hidden md:inline">
+                  {!hasKey ? 'AI Key' : isVerified ? `${providerLabel} Active` : `${providerLabel} Disconnected`}
+                </span>
+                <Settings className="w-3.5 h-3.5" />
+              </button>
+            );
+          })()}
 
           {/* Clean Primary Action: Regenerate All (Brand Red) */}
           <button

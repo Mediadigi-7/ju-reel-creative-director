@@ -676,7 +676,9 @@ export async function generateStoryboard(req: GenerateReelRequest): Promise<Reel
 
   // Attempt external LLM generation
   try {
-    const isGemini = req.apiProvider === 'gemini' || apiKey.startsWith('AIza') || Boolean(process.env.GEMINI_API_KEY);
+    const isGemini = req.apiProvider
+      ? req.apiProvider === 'gemini'
+      : (apiKey.startsWith('AIza') || apiKey.startsWith('AQ.') || Boolean(process.env.GEMINI_API_KEY));
     let rawJsonText = '';
 
     const langInstruction = `
@@ -949,19 +951,49 @@ Return ONLY a valid JSON object matching:
 }
 `;
 
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
-    const res = await fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { responseMimeType: 'application/json', temperature: 0.8 },
-      }),
-    });
+    const isGemini = req.apiProvider
+      ? req.apiProvider === 'gemini'
+      : (apiKey.startsWith('AIza') || apiKey.startsWith('AQ.') || Boolean(process.env.GEMINI_API_KEY));
 
-    if (res.ok) {
-      const data = await res.json();
-      const rawText = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    let rawText = '';
+    if (isGemini) {
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { responseMimeType: 'application/json', temperature: 0.8 },
+        }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        rawText = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+      }
+    } else {
+      const endpoint = 'https://api.openai.com/v1/chat/completions';
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: 'gpt-4o-mini',
+          messages: [{ role: 'user', content: prompt }],
+          response_format: { type: 'json_object' },
+          temperature: 0.8,
+        }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        rawText = data.choices?.[0]?.message?.content || '';
+      }
+    }
+
+    if (rawText) {
       const parsed = JSON.parse(rawText.replace(/```json/g, '').replace(/```/g, '').trim());
       return {
         number: shotNumber,

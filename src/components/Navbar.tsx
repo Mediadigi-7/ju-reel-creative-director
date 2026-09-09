@@ -1,5 +1,6 @@
 import React from 'react';
 import { Library, Settings, Plus } from 'lucide-react';
+import { ApiSettings } from '../services/storage.js';
 
 interface NavbarProps {
   onNewReel: () => void;
@@ -7,7 +8,7 @@ interface NavbarProps {
   onOpenSettings: () => void;
   savedCount: number;
   currentView?: 'creator' | 'library';
-  apiSettings?: { apiKey?: string; apiProvider?: 'gemini' | 'openai' };
+  apiSettings?: ApiSettings;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -19,7 +20,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   apiSettings,
 }) => {
   const hasKey = Boolean(apiSettings?.apiKey && apiSettings.apiKey.trim().length > 0);
-  const providerName = apiSettings?.apiProvider === 'openai' ? 'OpenAI' : 'Gemini';
+  const isVerified = Boolean(hasKey && apiSettings?.isVerified);
+  const providerLabel = apiSettings?.apiProvider === 'openai' ? 'GPT-4o' : 'Gemini';
 
   return (
     <header className="sticky top-0 z-30 bg-white border-b border-stone-200">
@@ -72,22 +74,34 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* AI Status & Settings Button */}
           {hasKey ? (
-            <button
-              onClick={onOpenSettings}
-              title={`${providerName} AI Active — Click to configure`}
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 transition-colors shadow-xs"
-            >
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[11px] hidden sm:inline">{providerName} Active</span>
-              <Settings className="w-3.5 h-3.5 text-emerald-700" />
-            </button>
+            isVerified ? (
+              <button
+                onClick={onOpenSettings}
+                title={`${providerLabel} Active & Connected — Click to configure`}
+                className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 transition-colors shadow-xs cursor-pointer"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[11px] hidden sm:inline">{providerLabel} Active</span>
+                <Settings className="w-3.5 h-3.5 text-emerald-700" />
+              </button>
+            ) : (
+              <button
+                onClick={onOpenSettings}
+                title={`${providerLabel} Disconnected / Unverified — Click to test and verify`}
+                className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold text-amber-900 bg-amber-50 border border-amber-300 hover:bg-amber-100 transition-colors shadow-xs cursor-pointer"
+              >
+                <span className="w-2 h-2 rounded-full bg-amber-500" />
+                <span className="text-[11px] hidden sm:inline">{providerLabel} Disconnected</span>
+                <Settings className="w-3.5 h-3.5 text-amber-700" />
+              </button>
+            )
           ) : (
             <button
               onClick={onOpenSettings}
               title="Running on Offline Fallback — Click to add Gemini/OpenAI API key"
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold text-stone-600 bg-stone-100 border border-stone-300 hover:bg-stone-200 transition-colors"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold text-stone-600 bg-stone-100 border border-stone-200 hover:bg-stone-200 transition-colors cursor-pointer"
             >
-              <span className="w-2 h-2 rounded-full bg-amber-400" />
+              <span className="w-2 h-2 rounded-full bg-stone-400" />
               <span className="text-[11px] hidden sm:inline">Add AI Key</span>
               <Settings className="w-3.5 h-3.5 text-stone-500" />
             </button>

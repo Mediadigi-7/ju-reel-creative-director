@@ -7,6 +7,8 @@ const STORAGE_KEY_API_SETTINGS = 'joy_reel_api_settings';
 export interface ApiSettings {
   apiKey?: string;
   apiProvider?: 'gemini' | 'openai';
+  isVerified?: boolean;
+  lastTestedProvider?: 'gemini' | 'openai';
 }
 
 // Autosave current storyboard
@@ -103,10 +105,16 @@ export function deleteProjectFromLibrary(projectId: string): ReelProject[] {
 export function loadApiSettings(): ApiSettings {
   try {
     const raw = localStorage.getItem(STORAGE_KEY_API_SETTINGS);
-    if (!raw) return { apiProvider: 'gemini' };
-    return JSON.parse(raw);
+    if (!raw) return { apiProvider: 'gemini', isVerified: false };
+    const parsed = JSON.parse(raw);
+    return {
+      apiProvider: parsed.apiProvider || 'gemini',
+      apiKey: parsed.apiKey || '',
+      isVerified: parsed.isVerified ?? false,
+      lastTestedProvider: parsed.lastTestedProvider,
+    };
   } catch {
-    return { apiProvider: 'gemini' };
+    return { apiProvider: 'gemini', isVerified: false };
   }
 }
 
