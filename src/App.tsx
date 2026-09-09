@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Navbar } from './components/Navbar.js';
 import { CompactTopBar } from './components/CompactTopBar.js';
 import { HeroContextBar } from './components/HeroContextBar.js';
@@ -42,6 +42,20 @@ export const App: React.FC = () => {
   const [savedProjects, setSavedProjects] = useState<ReelProject[]>([]);
   const [apiSettings, setApiSettings] = useState<ApiSettings>({ apiProvider: 'gemini' });
   const [isSaved, setIsSaved] = useState(false);
+
+  // Creative Pipeline Generation State
+  const [isGenerationComplete, setIsGenerationComplete] = useState(false);
+  const [pendingReel, setPendingReel] = useState<ReelStoryboard | null>(null);
+  const [generationMeta, setGenerationMeta] = useState<{
+    title: string;
+    direction: CreativeDirection;
+    language: LanguageOption;
+  }>({
+    title: '',
+    direction: 'Student Relatable',
+    language: 'English',
+  });
+  const isGeneratingRef = useRef(false);
 
   // Load state on mount (including checking for ?share= or /library or ?data= parameter)
   useEffect(() => {
@@ -120,13 +134,30 @@ export const App: React.FC = () => {
     }
   }, [currentReel, isSharedView]);
 
+  const handleGenerationAnimationComplete = () => {
+    if (pendingReel) {
+      setCurrentReel(pendingReel);
+      setPendingReel(null);
+      setIsSaved(false);
+    }
+    setIsLoading(false);
+    setIsGenerationComplete(false);
+    isGeneratingRef.current = false;
+  };
+
   const handleGenerate = async (
     title: string,
     direction: CreativeDirection = 'Student Relatable',
     language: LanguageOption = 'English'
   ) => {
+    if (isGeneratingRef.current || isLoading) return;
+    isGeneratingRef.current = true;
     setIsLoading(true);
+    setIsGenerationComplete(false);
+    setPendingReel(null);
     setError(null);
+    setGenerationMeta({ title, direction, language });
+
     try {
       const generated = await apiGenerateReel({
         reelTitle: title,
@@ -135,20 +166,29 @@ export const App: React.FC = () => {
         apiKey: apiSettings.apiKey,
         apiProvider: apiSettings.apiProvider,
       });
-      setCurrentReel(generated);
-      setIsSaved(false);
+      setPendingReel(generated);
+      setIsGenerationComplete(true);
     } catch (err: any) {
       console.error(err);
-      setError("We couldn't generate the storyboard. Please try again.");
-    } finally {
-      setIsLoading(false);
+      setError("We couldn't generate the storyboard. Please verify your connection or API key and try again.");
+      isGeneratingRef.current = false;
     }
   };
 
   const handleRegenerateEntire = async () => {
-    if (!currentReel) return;
-    setIsRegeneratingEntire(true);
+    if (!currentReel || isGeneratingRef.current || isLoading) return;
+    isGeneratingRef.current = true;
+    setIsLoading(true);
+    setIsGenerationComplete(false);
+    setPendingReel(null);
     setError(null);
+    setIsRegeneratingEntire(true);
+    setGenerationMeta({
+      title: currentReel.reelTitle,
+      direction: currentReel.creativeDirection as CreativeDirection,
+      language: currentReel.language,
+    });
+
     try {
       const regenerated = await apiGenerateReel({
         reelTitle: currentReel.reelTitle,
@@ -159,11 +199,12 @@ export const App: React.FC = () => {
         apiProvider: apiSettings.apiProvider,
       });
       regenerated.version = (currentReel.version || 1) + 1;
-      setCurrentReel(regenerated);
-      setIsSaved(false);
+      setPendingReel(regenerated);
+      setIsGenerationComplete(true);
     } catch (err: any) {
       console.error(err);
       setError("We couldn't regenerate the storyboard. Please try again.");
+      isGeneratingRef.current = false;
     } finally {
       setIsRegeneratingEntire(false);
     }
@@ -255,7 +296,9 @@ export const App: React.FC = () => {
   };
 
   const handleNewReel = () => {
+    if (isLoading) return; // Prevent aborting active generation
     setCurrentReel(null);
+    setPendingReel(null);
     saveCurrentStoryboard(null);
     navigateToView('creator');
   };
@@ -336,7 +379,19 @@ export const App: React.FC = () => {
             onImportSharedLibrary={handleImportSharedLibrary}
           />
         ) : isLoading ? (
-          <GenerationLoader />
+          <GenerationLoader
+            title={generationMeta.title}
+            direction={generationMeta.direction}
+            language={generationMeta.language}
+            isComplete={isGenerationComplete}
+            error={error}
+            onCompleteAnimation={handleGenerationAnimationComplete}
+            onRetry={() => {
+              setError(null);
+              isGeneratingRef.current = false;
+              handleGenerate(generationMeta.title, generationMeta.direction, generationMeta.language);
+            }}
+          />
         ) : !currentReel ? (
           <ReelTitleInput onGenerate={handleGenerate} isLoading={isLoading} />
         ) : (

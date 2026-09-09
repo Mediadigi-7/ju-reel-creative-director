@@ -61,6 +61,7 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
 
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
+    if (isLoading) return; // Prevent duplicate generation requests
     const cleanTitle = title.trim();
     if (!cleanTitle) {
       setError('Please enter a reel idea to continue.');
@@ -76,11 +77,13 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({ onGenerate, isLo
   const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
+      if (isLoading) return; // Guard against multiple Enter presses
       handleSubmit();
     }
   };
 
   const handleChipClick = (idea: string) => {
+    if (isLoading) return;
     setTitle(idea);
     setError(null);
     inputRef.current?.focus();
