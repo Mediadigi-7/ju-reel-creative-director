@@ -7,7 +7,6 @@ import { GenerationLoader } from './components/GenerationLoader.js';
 import { ShotCard } from './components/ShotCard.js';
 import { ProductionNotesCard } from './components/ProductionNotesCard.js';
 import { CreativeSummaryCard } from './components/CreativeSummaryCard.js';
-import { ViralBlueprintCard } from './components/ViralBlueprintCard.js';
 import { SettingsModal } from './components/SettingsModal.js';
 import { apiGenerateReel, apiRegenerateShot } from './services/api.js';
 import { exportStoryboardPdf } from './services/exportPdf.js';
@@ -368,9 +367,6 @@ export const App: React.FC = () => {
               onShiftDuration={handleShiftDuration}
               isLoading={isLoading}
             />
-
-            {/* 2.5 Viral Content Blueprint (Score, Triggers, Revelations) */}
-            <ViralBlueprintCard blueprint={currentReel.viralBlueprint} />
 
             {/* 3. Main Storyboard Canvas (The Hero Content) */}
             <div className="space-y-4 sm:space-y-5">
