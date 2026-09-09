@@ -406,6 +406,59 @@ Rank candidate ideas internally:
 FRESHNESS MEANS: "THE VIEWER HAS NOT HEARD THIS IDEA PRESENTED THIS WAY."
 
 
+# 33 — VIDEO RETENTION ENGINE (MANDATORY)
+
+Retention is one of the primary objectives of every Reel.
+Do not create a storyboard simply because the content is informative, emotional, or visually attractive.
+The viewer must have a reason to continue watching at every second.
+
+CORE PRINCIPLE:
+The next second must create enough curiosity, tension, information, emotion, surprise, or anticipation to make continuing worthwhile.
+
+RETENTION ARCHITECTURE (6-BEAT INTEGRATION):
+HOOK (00:00–00:04) → OPEN LOOP (00:04–00:08) → PATTERN INTERRUPT (00:08–00:12) → ESCALATION & PROGRESSIVE REVEAL (00:12–00:21) → PAYOFF (00:21–00:27) → CTA (00:27–00:30)
+
+1. HOOK — STOP THE SCROLL (00:00–00:04):
+The first 1–2 seconds must immediately create curiosity, tension, surprise, contradiction, recognition, or unanswered question.
+DO NOT simply repeat or expand the title. The viewer must immediately think: "Wait, why?"
+
+2. OPEN LOOP (PROBLEM BEAT 00:04–00:08):
+Create an information gap or high-stakes dilemma that is ONLY resolved later in the Reel.
+DO NOT reveal the full answer or list solutions in the opening. Give the viewer a genuine psychological reason to keep watching.
+
+3. PATTERN INTERRUPT (00:08–00:12):
+Deliver a meaningful interruption when attention naturally declines (hard audio cut, physical demonstration, unexpected objection, sudden perspective change).
+The interruption must actively ADVANCE the story, not just act as decorative editing.
+
+4. PROGRESSIVE REVEAL & ESCALATION (VALUE BEAT 00:12–00:21):
+Structure insights progressively: Reveal 1 → Reveal 2 → Reveal 3 → Core Breakthrough.
+Each reveal must build upon the last and escalate stakes. Avoid static monologues — use visual progression (Object → Action → Reaction → Environment Shift → Result).
+
+5. NO EARLY PAYOFF:
+Never list solutions early (e.g. "Here are 3 courses: 1, 2, 3"). Build the mystery, show why standard answers fail, and reveal the breakthrough in the second half.
+
+6. MEANINGFUL PAYOFF (00:21–00:27):
+Reward the viewer for staying until the end. The payoff must decisively answer the open loop and resolve the hook's tension with empowering clarity.
+
+7. SINGLE CTA (00:27–00:30):
+Place CTA strictly AFTER the payoff. Never interrupt early with "Follow for more". Choose ONE frictionless action (Save, Share, or Comment).
+
+RETENTION ANTI-PATTERNS (AUTOMATICALLY REJECT):
+- Explaining everything in the first 3 seconds
+- Generic greetings ("Hey guys!") or institutional introductions
+- Title repetitions or boring listicle recitation
+- Motivational filler without concrete practical frameworks
+- Fake curiosity / clickbait that does not pay off
+- Logo or brand placements before the story earns trust
+
+RETENTION SCORECARD (INTERNALLY ENSURE 8+/10 ON ALL):
+Hook Strength | Open Loop | Escalation | Visual Progression | Information Density | Payoff Strength | CTA Fit
+
+CORE RETENTION TEST:
+Ask: "Why would someone who has never heard of Joy University keep watching this Reel?"
+If there is no compelling second-by-second reason, REWRITE IT.
+
+
 # FINAL PRINCIPLE
 
 STUDENT FIRST.
@@ -560,9 +613,20 @@ Do NOT produce an obvious, surface-level, or generic university marketing Reel.
 5. Build all 6 shots strictly around this unique angle, ensuring the viewer has never heard this idea presented this way!
 `;
 
+    const retentionInstruction = `
+CRITICAL VIDEO RETENTION MANDATE:
+Every single second must compel the viewer to continue watching!
+1. HOOK (00:00–00:04): Stop the scroll with tension, surprise, or contradiction. NEVER repeat the title.
+2. OPEN LOOP (00:04–00:08): Create an unresolved psychological question or information gap. Do NOT give away answers early.
+3. PATTERN INTERRUPT (00:08–00:12): Use a sharp disruption that advances the story when attention drops.
+4. PROGRESSIVE REVEAL (00:12–00:21): Deliver value in escalating stages (Reveal 1 → Reveal 2 → Core insight). No listicle recitation.
+5. MEANINGFUL PAYOFF (00:21–00:27): Decisively answer the hook's tension with empowering clarity.
+6. SINGLE CTA (00:27–00:30): Place one clear CTA strictly AFTER the payoff.
+`;
+
     if (isGemini) {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
-      const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
+      const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${retentionInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -585,7 +649,7 @@ Do NOT produce an obvious, surface-level, or generic university marketing Reel.
     } else {
       // OpenAI-compatible endpoint
       const endpoint = 'https://api.openai.com/v1/chat/completions';
-      const prompt = `${freshnessInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"`;
+      const prompt = `${freshnessInstruction}\n\n${retentionInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"`;
 
       const res = await fetch(endpoint, {
         method: 'POST',
