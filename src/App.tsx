@@ -52,7 +52,7 @@ export const App: React.FC = () => {
     language: LanguageOption;
   }>({
     title: '',
-    direction: 'Student Relatable',
+    direction: 'Informative',
     language: 'English',
   });
   const isGeneratingRef = useRef(false);
@@ -147,7 +147,7 @@ export const App: React.FC = () => {
 
   const handleGenerate = async (
     title: string,
-    direction: CreativeDirection = 'Student Relatable',
+    direction: CreativeDirection = 'Informative',
     language: LanguageOption = 'English'
   ) => {
     if (isGeneratingRef.current || isLoading) return;

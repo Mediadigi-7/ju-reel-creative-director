@@ -40,7 +40,7 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
   onOpenSettings,
 }) => {
   const [title, setTitle] = useState('');
-  const [direction, setDirection] = useState<CreativeDirection>('Student Relatable');
+  const [direction, setDirection] = useState<CreativeDirection>('Informative');
   const [language, setLanguage] = useState<LanguageOption>('English');
   const [error, setError] = useState<string | null>(null);
 

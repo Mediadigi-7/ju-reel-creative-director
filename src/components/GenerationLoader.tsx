@@ -80,7 +80,7 @@ const PIPELINE_STAGES: PipelineStage[] = [
 
 export const GenerationLoader: React.FC<GenerationLoaderProps> = ({
   title,
-  direction = 'Student Relatable',
+  direction = 'Informative',
   language = 'English',
   isComplete = false,
   error = null,

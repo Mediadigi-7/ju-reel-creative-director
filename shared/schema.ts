@@ -64,7 +64,7 @@ export const ReelStoryboardSchema = z.object({
   targetAudience: z.string().min(1),
   duration: z.string().min(1),
   format: z.string().default('9:16 Vertical Reel'),
-  creativeDirection: z.string().default('Student Relatable'),
+  creativeDirection: z.enum(['Informative', 'Funny', 'Trendy']).default('Informative'),
   language: z.enum(['English', 'Tamil', 'Telugu', 'Malayalam', 'Hindi', 'Tanglish']).default('English'),
   shots: z.array(ShotSchema).length(6),
   productionNotes: ProductionNotesSchema,
@@ -95,7 +95,7 @@ export function validateAndRepairStoryboard(raw: any, fallbackTitle: string): { 
   repaired.targetAudience = repaired.targetAudience || '+2 Completed Students';
   repaired.duration = repaired.duration || '28 sec';
   repaired.format = '9:16 Vertical Reel';
-  repaired.creativeDirection = repaired.creativeDirection || 'Student Relatable';
+  repaired.creativeDirection = (['Informative', 'Funny', 'Trendy'].includes(repaired.creativeDirection)) ? repaired.creativeDirection : 'Informative';
   repaired.language = (['English', 'Tamil', 'Telugu', 'Malayalam', 'Hindi', 'Tanglish'].includes(repaired.language)) ? repaired.language : 'English';
   repaired.createdAt = repaired.createdAt || new Date().toISOString();
   repaired.updatedAt = new Date().toISOString();

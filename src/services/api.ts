@@ -22,7 +22,7 @@ export async function apiGenerateReel(req: GenerateReelRequest): Promise<ReelSto
   // Seamless client-side fallback if server is offline
   return generateKnowledgeEngineStoryboard(
     req.reelTitle,
-    req.creativeDirection || 'Student Relatable',
+    req.creativeDirection || 'Informative',
     req.language || 'English',
     req.duration || '28 sec',
     1

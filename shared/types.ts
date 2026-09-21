@@ -36,16 +36,9 @@ export interface CreativeSummary {
 }
 
 export type CreativeDirection =
-  | 'Student Relatable'
+  | 'Informative'
   | 'Funny'
-  | 'Emotional'
-  | 'Cinematic'
-  | 'Bold'
-  | 'Educational'
-  | 'Gorilla Marketing'
-  | 'Premium'
-  | 'Storytelling'
-  | 'Trend-Based';
+  | 'Trendy';
 
 export type LanguageOption = 'English' | 'Tamil' | 'Telugu' | 'Malayalam' | 'Hindi' | 'Tanglish';
 

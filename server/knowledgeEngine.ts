@@ -448,7 +448,7 @@ function enforceNativeScriptForShots(
 
 export function generateKnowledgeEngineStoryboard(
   title: string,
-  direction: CreativeDirection = 'Student Relatable',
+  direction: CreativeDirection = 'Informative',
   language: LanguageOption = 'English',
   customDuration: string = '28 sec',
   variationSeed: number = 1
@@ -1446,16 +1446,16 @@ export function generateKnowledgeEngineStoryboard(
   // Enforce pure native script for Tamil, Telugu, Malayalam, and Hindi across all category outputs
   shots = enforceNativeScriptForShots(shots, language, cleanTitle, analysis.category);
 
-  // Direction adaptations
-  if (direction === 'Funny') {
+  // Direction adaptations for the 3 Creative Types (Informative, Funny, Trendy)
+  if (direction === 'Informative') {
+    shots[0].cameraPerformance = 'Clean studio-grade framing with high-clarity direct eye contact.';
+    if (shots[3]) shots[3].cameraPerformance = 'Side tracking shot with clear visual framework and step-by-step breakdown.';
+  } else if (direction === 'Funny') {
     shots[0].visual = `Protagonist dramatic face-plant onto a mound of application brochures for "${cleanTitle}" with comedy cartoon sigh.`;
-    shots[2].dialogue = '"Hold up. Is anyone actually asking what WE want to study?"';
-  } else if (direction === 'Cinematic') {
-    shots[0].cameraPerformance = 'Anamorphic 2.39:1 letterbox simulation with cinematic rim lighting.';
-    shots[4].cameraPerformance = 'Epic golden-hour tracking shot rising above the 104-acre Joy University campus.';
-  } else if (direction === 'Bold') {
-    shots[0].dialogue = `"Most advice you received about '${cleanTitle}' is 10 years out of date."`;
-    shots[0].onscreenText = 'COLLEGE ADVICE IS BROKEN ⚡';
+    if (shots[2]) shots[2].dialogue = '"Hold up. Is anyone actually asking what WE want to study?"';
+  } else if (direction === 'Trendy') {
+    shots[0].cameraPerformance = 'Ultra-fast kinetic whip pan with trending audio beats and quick cuts.';
+    if (shots[2]) shots[2].cameraPerformance = 'Dynamic split-screen jump cut with viral pattern interrupt audio drop.';
   }
 
   // ─── VARIATION SEED ROTATION ───────────────────────────────────────────────

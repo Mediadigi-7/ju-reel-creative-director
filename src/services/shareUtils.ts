@@ -51,7 +51,7 @@ export function decodeStoryboardFromUrl(shareParam: string): ReelStoryboard | nu
         targetAudience: parsed.aud,
         duration: parsed.d || '28 sec',
         format: '9:16 Vertical Reel',
-        creativeDirection: parsed.cd || 'Student Relatable',
+        creativeDirection: parsed.cd || 'Informative',
         language: parsed.lang || 'English',
         shots: parsed.s.map((shot: any) => ({
           number: shot.n,

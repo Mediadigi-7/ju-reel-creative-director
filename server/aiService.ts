@@ -418,6 +418,21 @@ The UI language selection has priority over the model's language preference.
 ### PROPER NOUNS & TECHNICAL TERMS:
 Official names may remain unchanged when appropriate (Joy University, B.Tech, B.Sc, B.Com, MBA, AI, ML, Engineering).
 Do not translate official brand names unnecessarily.
+
+
+# 28 — CREATIVE TYPES & AUTOMATIC OPTIMIZATION
+
+The system supports 3 simplified Creative Types:
+
+1. **Informative** (Primary Objective: Teach / provide value):
+   - AI automatically optimizes for: Clarity, credibility, useful information, educational hook, concrete real-world examples, and actionable decision frameworks.
+
+2. **Funny** (Primary Objective: Entertain / relate):
+   - AI automatically optimizes for: Relatable student humor, comical exaggeration, funny POV framing, relatable daily struggles, and witty punchlines.
+
+3. **Trendy** (Primary Objective: Capture attention / relevance):
+   - AI automatically optimizes for: Current trending social media formats, fast energetic hooks, dynamic visual transitions, pop-culture relevance, and high remixability.
+
 However, surrounding sentences MUST remain in the selected language native script!
 Example (Tamil): "Joy University-ல உங்களுக்கு பிடித்த course-ஐ explore பண்ணலாம்."
 
@@ -722,7 +737,7 @@ Return ONLY a valid JSON object matching this exact schema (no markdown fences, 
 
 export async function generateStoryboard(req: GenerateReelRequest): Promise<ReelStoryboard> {
   const title = (req.reelTitle || '').trim();
-  const direction = req.creativeDirection || 'Student Relatable';
+  const direction = req.creativeDirection || 'Informative';
   const language = req.language || 'English';
   const duration = req.duration || '28 sec';
   const apiKey = req.apiKey || process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY;
@@ -817,7 +832,7 @@ Before drafting the 6 storyboard beats, formulate a complete "viralBlueprint" ob
 3. HIDDEN PROBLEM: Reveal the deeper, unaddressed problem behind the title.
 4. CENTRAL INFORMATION GAP: Formulate the single burning question that keeps the viewer watching.
 5. CONTENT TENSION: Define the clash between common expectation and real-world industry reality.
-6. PROGRESSIVE REVELATION: Map exactly 4 escalating reveals:
+6. PROGRESSIVE REVEAL: Map exactly 4 escalating reveals:
    - Reveal 1: The familiar assumption
    - Reveal 2: The unexpected complication
    - Reveal 3: The deeper truth / practical distinction
@@ -846,9 +861,18 @@ RULES:
 3. For robotics/automation, present both tracks so the student knows: Software/AI track is B.Tech CSE (AI & Robotics) and Hardware/Machines track is B.Tech Mech (Robotics & Automation)!
 `;
 
+    const creativeTypeInstruction = `
+CRITICAL CREATIVE TYPE OPTIMIZATION MANDATE:
+The user selected Creative Type: "${direction}".
+You MUST automatically optimize the Reel storyboard according to these rules:
+- If Creative Type = "Informative" (Primary Objective: Teach / provide value): AI automatically optimizes for clarity, credibility, useful information, educational hooks, concrete examples, and step-by-step decision frameworks.
+- If Creative Type = "Funny" (Primary Objective: Entertain / relate): AI automatically optimizes for humor, student relatability, comical exaggeration, POV framing, and sharp punchlines.
+- If Creative Type = "Trendy" (Primary Objective: Capture attention / relevance): AI automatically optimizes for current trending social media formats, fast hooks, dynamic visual transitions, cultural relevance, and remixability.
+`;
+
     if (isGemini) {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
-      const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${retentionInstruction}\n\n${viralInstruction}\n\n${courseContextInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
+      const prompt = `${SYSTEM_PROMPT}\n\n${freshnessInstruction}\n\n${retentionInstruction}\n\n${viralInstruction}\n\n${courseContextInstruction}\n\n${creativeTypeInstruction}\n\n${langInstruction}\n\nUSER REEL TITLE: "${title}"\nCREATIVE DIRECTION: "${direction}"\nLANGUAGE: "${language}"\nTARGET DURATION: "${duration}"\n\nReturn strictly valid JSON only without markdown formatting.`;
 
       const res = await fetch(endpoint, {
         method: 'POST',

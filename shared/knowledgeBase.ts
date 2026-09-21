@@ -353,16 +353,9 @@ export const ALL_PROGRAMMES_FLAT = [
 
 
 export const CREATIVE_DIRECTIONS = [
-  'Student Relatable',
+  'Informative',
   'Funny',
-  'Emotional',
-  'Cinematic',
-  'Bold',
-  'Educational',
-  'Gorilla Marketing',
-  'Premium',
-  'Storytelling',
-  'Trend-Based',
+  'Trendy',
 ] as const;
 
 export const MVP_TEST_TITLES = [
