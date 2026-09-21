@@ -135,6 +135,21 @@ async function runValidationTests() {
     assert(langCheck.pass, `Language "${lang}" passes strict native script compliance`);
   }
 
+  // 7. Explicit Zero Language Mixing Test for "I finished +2... now what?"
+  console.log('\n--- 7. ZERO LANGUAGE MIXING TEST ---');
+  const rawEnglishTitle = 'I finished +2... now what';
+  const indianLangs: Array<'Tamil' | 'Telugu' | 'Malayalam' | 'Hindi'> = ['Tamil', 'Telugu', 'Malayalam', 'Hindi'];
+  for (const lang of indianLangs) {
+    const reel = await generateStoryboard({ reelTitle: 'I finished +2... now what?', language: lang });
+    let containsRawTitle = false;
+    for (const shot of reel.shots) {
+      if (shot.dialogue.includes(rawEnglishTitle) || shot.onscreenText.includes(rawEnglishTitle)) {
+        containsRawTitle = true;
+      }
+    }
+    assert(!containsRawTitle, `Language "${lang}" output has ZERO raw English title mixing`);
+  }
+
   console.log('\n========================================');
   console.log(`📊 FINAL RESULT: ${passedTests}/${totalTests} TESTS PASSED`);
   console.log('========================================\n');

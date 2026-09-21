@@ -433,8 +433,12 @@ The system supports 3 simplified Creative Types:
 3. **Trendy** (Primary Objective: Capture attention / relevance):
    - AI automatically optimizes for: Current trending social media formats, fast energetic hooks, dynamic visual transitions, pop-culture relevance, and high remixability.
 
-However, surrounding sentences MUST remain in the selected language native script!
-Example (Tamil): "Joy University-ல உங்களுக்கு பிடித்த course-ஐ explore பண்ணலாம்."
+### ZERO LANGUAGE MIXING RULE (STRICT):
+- NEVER insert raw English title strings or English phrases (e.g. "I finished +2... now what") into Tamil, Telugu, Malayalam, or Hindi dialogue or on-screen text.
+- If the user enters an English title, translate the topic fully into the selected native script for dialogue and on-screen graphics.
+- Dialogue and On-Screen Graphics MUST be 100% in the selected native script (except proper degree names like B.Tech, B.Sc, B.Com, MBA, or brand name Joy University).
+
+Example (Tamil): "Joy University-ல் உங்களுக்கு பிடித்த படிப்பை தேர்வு செய்யலாம்."
 
 ### PRODUCTION INSTRUCTIONS:
 Visual Action, Camera Direction, and Production Notes remain in English for the film production crew.
@@ -974,6 +978,23 @@ export function checkLanguageCompliance(
   for (const shot of storyboard.shots) {
     if (pattern.test(shot.dialogue) || pattern.test(shot.onscreenText)) {
       nativeScriptHits++;
+    }
+  }
+
+  // Check for raw English title string mixing into non-English output
+  const titleClean = (storyboard.reelTitle || '').trim();
+  const titleNoPunct = titleClean.replace(/[?!.]+$/, '').trim();
+  if (titleClean && targetLanguage !== 'Tanglish') {
+    for (const shot of storyboard.shots) {
+      if (
+        (titleClean.length > 5 && (shot.dialogue.includes(titleClean) || shot.onscreenText.includes(titleClean))) ||
+        (titleNoPunct.length > 5 && (shot.dialogue.includes(titleNoPunct) || shot.onscreenText.includes(titleNoPunct)))
+      ) {
+        return {
+          pass: false,
+          reason: `Raw English title string "${titleClean}" found mixed into ${targetLanguage} shot #${shot.number}`,
+        };
+      }
     }
   }
 

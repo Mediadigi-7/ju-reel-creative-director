@@ -151,6 +151,277 @@ export function analyzeTitle(title: string): TitleThemeAnalysis {
   };
 }
 
+const TITLE_NATIVE_MAP: Record<string, Record<string, string>> = {
+  "I finished +2... now what?": {
+    Tamil: "+2 முடிச்சப்புறம் அடுத்து என்ன?",
+    Telugu: "+2 పూర్తయిన తర్వాత ఏమిటి?",
+    Malayalam: "+2 കഴിഞ്ഞാൽ ഇനി എന്ത്?",
+    Hindi: "+2 के बाद क्या करें?",
+  },
+  "I finished +2... now what": {
+    Tamil: "+2 முடிச்சப்புறம் அடுத்து என்ன?",
+    Telugu: "+2 పూర్తయిన తర్వాత ఏమిటి?",
+    Malayalam: "+2 കഴിഞ്ഞാൽ ഇനി എന്ത്?",
+    Hindi: "+2 के बाद क्या करें?",
+  },
+  "3 mistakes students make after +2": {
+    Tamil: "+2-க்கு அப்புறம் பண்ற 3 தவறுகள்",
+    Telugu: "+2 తర్వాత చేసే 3 పొరపాట్లు",
+    Malayalam: "+2-ന് ശേഷം വരുത്തുന്ന 3 തെറ്റുകൾ",
+    Hindi: "+2 के बाद की 3 गलतियाँ",
+  },
+  "Engineering is not for everyone.": {
+    Tamil: "இன்ஜினியரிங் எல்லாரையும் போல இல்லை",
+    Telugu: "ఇంజనీరింగ్ అందరి కోసం కాదు",
+    Malayalam: "എൻജിനീയറിംഗ് എല്ലാവർക്കും ഉള്ളതല്ല",
+    Hindi: "इंजीनियरिंग हर किसी के लिए नहीं है",
+  },
+  "Engineering is not for everyone": {
+    Tamil: "இன்ஜினியரிங் எல்லாரையும் போல இல்லை",
+    Telugu: "ఇంజనీరింగ్ అందరి కోసం కాదు",
+    Malayalam: "എൻജിനീയറിംഗ് എല്ലാവർക്കും ഉള്ളതല്ല",
+    Hindi: "इंजीनियरिंग हर किसी के लिए नहीं है",
+  },
+  "What should I study after Commerce?": {
+    Tamil: "காமர்ஸ் முடிச்சதும் என்ன படிக்கலாம்?",
+    Telugu: "కామర్స్ తర్వాత ఏం చదవాలి?",
+    Malayalam: "കോമേഴ്‌സിന് ശേഷം എന്ത് പഠിക്കണം?",
+    Hindi: "कॉमर्स के बाद क्या पढ़ें?",
+  },
+  "What should I study after Commerce": {
+    Tamil: "காமர்ஸ் முடிச்சதும் என்ன படிக்கலாம்?",
+    Telugu: "కామర్స్ తర్వాత ఏం చదవాలి?",
+    Malayalam: "കോമേഴ്‌സിന് ശേഷം എന്ത് പഠിക്കണം?",
+    Hindi: "कॉमर्स के बाद क्या पढ़ें?",
+  },
+  "AI will change these careers.": {
+    Tamil: "AI மாற்றப்போகும் எதிர்கால வேலைகள்",
+    Telugu: "AI మార్చేయబోయే కెరీర్లు",
+    Malayalam: "AI മാറ്റുന്ന ഭാവി കരിയറുകൾ",
+    Hindi: "AI इन करियर को बदल देगा",
+  },
+  "AI will change these careers": {
+    Tamil: "AI மாற்றப்போகும் எதிர்கால வேலைகள்",
+    Telugu: "AI మార్చేయబోయే కెరీర్లు",
+    Malayalam: "AI മാറ്റുന്ന ഭാവി കരിയറുകൾ",
+    Hindi: "AI इन करियर को बदल देगा",
+  },
+  "How do I choose the right college?": {
+    Tamil: "சரியான காலேஜை தேர்ந்தெடுப்பது எப்படி?",
+    Telugu: "సరియైన కాలేజీని ఎలా ఎంచుకోవాలి?",
+    Malayalam: "ശരിയായ കോളേജ് എങ്ങനെ തിരഞ്ഞെടുക്കാം?",
+    Hindi: "सही कॉलेज कैसे चुनें?",
+  },
+  "How do I choose the right college": {
+    Tamil: "சரியான காலேஜை தேர்ந்தெடுப்பது எப்படி?",
+    Telugu: "సరియైన కాలేజీని ఎలా ఎంచుకోవాలి?",
+    Malayalam: "ശരിയായ കോളേജ് എങ്ങനെ തിരഞ്ഞെടുക്കാം?",
+    Hindi: "सही कॉलेज कैसे चुनें?",
+  },
+  "Everyone says choose a course with scope.": {
+    Tamil: "ஸ்கோப் இருக்குற கோர்ஸ் எடுன்னு சொல்றாங்களா?",
+    Telugu: "స్కోప్ ఉన్న కోర్స్ ఎంచుకోమంటున్నారా?",
+    Malayalam: "സ്കോപ്പുള്ള കോഴ്സ് തിരഞ്ഞെടുക്കാൻ പറയുന്നോ?",
+    Hindi: "क्या सब स्कोप वाला कोर्स चुनने को कहते हैं?",
+  },
+  "Everyone says choose a course with scope": {
+    Tamil: "ஸ்கோப் இருக்குற கோர்ஸ் எடுன்னு சொல்றாங்களா?",
+    Telugu: "స్కోప్ ఉన్న కోర్స్ ఎంచుకోమంటున్నారా?",
+    Malayalam: "സ്കോപ്പുള്ള കോഴ്സ് തിരഞ്ഞെടുക്കാൻ പറയുന്നോ?",
+    Hindi: "क्या सब स्कोप वाला कोर्स चुनने को कहते हैं?",
+  },
+  "My friends already know what they're studying.": {
+    Tamil: "நண்பர்கள் எல்லாம் கோர்ஸ் முடிவு பண்ணிட்டாங்களா?",
+    Telugu: "స్నేహితులందరూ కోర్స్ నిర్ణయించుకున్నారా?",
+    Malayalam: "കൂട്ടുകാരെല്ലാം കോഴ്സ് തീരുമാനിച്ചോ?",
+    Hindi: "क्या दोस्तों ने पहले ही कोर्स चुन लिया है?",
+  },
+  "My friends already know what they're studying": {
+    Tamil: "நண்பர்கள் எல்லாம் கோர்ஸ் முடிவு பண்ணிட்டாங்களா?",
+    Telugu: "స్నేహితులందరూ కోర్స్ నిర్ణయించుకున్నారా?",
+    Malayalam: "കൂട്ടുകാരെല്ലാം കോഴ്സ് തീരുമാനിച്ചോ?",
+    Hindi: "क्या दोस्तों ने पहले ही कोर्स चुन लिया है?",
+  },
+  "Marks don't define your career.": {
+    Tamil: "மார்க் மட்டும் உங்க வாழ்க்கையை தீர்மானிக்காது",
+    Telugu: "మార్కులు మాత్రమే మీ కెరీర్‌ను నిర్ణయించవు",
+    Malayalam: "മാർക്ക് മാത്രമല്ല നിങ്ങളുടെ കരിയർ",
+    Hindi: "सिर्फ मार्क्स आपका करियर तय नहीं करते",
+  },
+  "Marks don't define your career": {
+    Tamil: "மார்க் மட்டும் உங்க வாழ்க்கையை தீர்மானிக்காது",
+    Telugu: "మార్కులు మాత్రమే మీ కెరీర్‌ను నిర్ణయించవు",
+    Malayalam: "മാർക്ക് മാത്രമല്ല നിങ്ങളുടെ കരിയർ",
+    Hindi: "सिर्फ मार्क्स आपका करियर तय नहीं करते",
+  },
+  "B.Tech or B.Sc?": {
+    Tamil: "B.Tech-ஆ இல்லை B.Sc-ஆ?",
+    Telugu: "B.Tech-ஆ లేదా B.Sc-ஆ?",
+    Malayalam: "B.Tech ആണോ B.Sc ആണോ?",
+    Hindi: "B.Tech या B.Sc?",
+  },
+  "B.Tech or B.Sc": {
+    Tamil: "B.Tech-ஆ இல்லை B.Sc-ஆ?",
+    Telugu: "B.Tech-ஆ లేదా B.Sc-ஆ?",
+    Malayalam: "B.Tech ആണോ B.Sc ആണോ?",
+    Hindi: "B.Tech या B.Sc?",
+  },
+  "What if I choose the wrong course?": {
+    Tamil: "தவறான கோர்ஸ் எடுத்துட்டா என்ன பண்றது?",
+    Telugu: "తప్పుడు కోర్స్ ఎంచుకుంటే ఏమవుతుంది?",
+    Malayalam: "തെറ്റായ കോഴ്സ് എടുത്താൽ എന്ത് ചെയ്യും?",
+    Hindi: "अगर गलत कोर्स चुन लिया तो क्या होगा?",
+  },
+  "What if I choose the wrong course": {
+    Tamil: "தவறான கோர்ஸ் எடுத்துட்டா என்ன பண்றது?",
+    Telugu: "తప్పుడు కోర్స్ ఎంచుకుంటే ఏమవుతుంది?",
+    Malayalam: "തെറ്റായ കോഴ്സ് എടുത്താൽ എന്ത് ചെയ്യും?",
+    Hindi: "अगर गलत कोर्स चुन लिया तो क्या होगा?",
+  },
+  "Is college really about marks?": {
+    Tamil: "காலேஜ்னா வெறும் மார்க் தானா?",
+    Telugu: "కాలేజీ అంటే కేవలం మార్కులేనా?",
+    Malayalam: "കോളേജ് എന്നാൽ മാർക്ക് മാത്രമാണോ?",
+    Hindi: "क्या कॉलेज सिर्फ मार्क्स के लिए होता है?",
+  },
+  "Is college really about marks": {
+    Tamil: "காலேஜ்னா வெறும் மார்க் தானா?",
+    Telugu: "కాలేజీ అంటే కేవలం మార్కులేనా?",
+    Malayalam: "കോളേജ് എന്നാൽ മാർക്ക് മാത്രമാണോ?",
+    Hindi: "क्या कॉलेज सिर्फ मार्क्स के लिए होता है?",
+  },
+  "What should I compare before choosing a college?": {
+    Tamil: "காலேஜ் சேருறதுக்கு முன்னாடி எதை செக் பண்ணனும்?",
+    Telugu: "కాలేజీ ఎంచుకునే ముందు ఏమి సరిచూడాలి?",
+    Malayalam: "ശരിയായ കോളേജ് എങ്ങനെ തിരഞ്ഞെടുക്കാം?",
+    Hindi: "कॉलेज चुनने से पहले क्या चेक करें?",
+  },
+  "What should I compare before choosing a college": {
+    Tamil: "காலேஜ் சேருறதுக்கு முன்னாடி எதை செக் பண்ணனும்?",
+    Telugu: "కాలేజీ ఎంచుకునే ముందు ఏమి సరిచూడాలి?",
+    Malayalam: "ശരിയായ കോളേജ് എങ്ങനെ തിരഞ്ഞെടുക്കാം?",
+    Hindi: "कॉलेज चुनने से पहले क्या चेक करें?",
+  },
+  "I don't know what I'm good at.": {
+    Tamil: "உங்க திறமை என்னன்னு தெரியலையா?",
+    Telugu: "మీ ప్రతిభ ఏమిటో తెలియడం లేదా?",
+    Malayalam: "നിങ്ങളുടെ കഴിവ് എന്താണെന്ന് അറിയില്ലേ?",
+    Hindi: "समझ नहीं आ रहा कि आप किसमें अच्छे हैं?",
+  },
+  "I don't know what I'm good at": {
+    Tamil: "உங்க திறமை என்னன்னு தெரியலையா?",
+    Telugu: "మీ ప్రతిభ ఏమిటో తెలియడం లేదా?",
+    Malayalam: "നിങ്ങളുടെ കഴിവ் என்னன்னு தெரியலையா?",
+    Hindi: "समझ नहीं आ रहा कि आप किसमें अच्छे हैं?",
+  },
+  "Should I follow my passion?": {
+    Tamil: "பேஷனை ஃபாலோ பண்ணலாமா?",
+    Telugu: "ప్యాషన్‌ను ఫాలో అవ్వాలా?",
+    Malayalam: "പാഷനെ പിന്തുടരണമോ?",
+    Hindi: "क्या अपने पैशन को फॉलो करना चाहिए?",
+  },
+  "Should I follow my passion": {
+    Tamil: "பேஷனை ஃபாலோ பண்ணலாமா?",
+    Telugu: "ప్యాషన్‌ను ఫాలో అవ్వాలా?",
+    Malayalam: "പാഷനെ പിന്തുടരണമോ?",
+    Hindi: "क्या अपने पैशन को फॉलो करना चाहिए?",
+  },
+  "Parents want one course. I want another.": {
+    Tamil: "பெற்றோர்கள் ஒரு கோர்ஸ், நீங்க ஒரு கோர்ஸ் விரும்புறீங்களா?",
+    Telugu: "తల్లిదండ్రులు ఒక కోర్స్, మీరు ఇంకొకటి కోరుకుంటున్నారా?",
+    Malayalam: "രക്ഷിതാക്കൾ ഒരു കോഴ്സ്, നിങ്ങൾ മറ്റൊരു കോഴ്സ് ആഗ്രഹിക്കുന്നുവോ?",
+    Hindi: "माता-पिता एक कोर्स चाहते हैं, आप दूसरा?",
+  },
+  "Parents want one course. I want another": {
+    Tamil: "பெற்றோர்கள் ஒரு கோர்ஸ், நீங்க ஒரு கோர்ஸ் விரும்புறீங்களா?",
+    Telugu: "తల్లిదండ్రులు ఒక కోర్స్, మీరు ఇంకొకటి కోరుకుంటున్నారా?",
+    Malayalam: "രക്ഷിതാക്കൾ ഒരു കോഴ്സ്, നിങ്ങൾ മറ്റൊരു കോഴ്സ് ആഗ്രഹിക്കുന്നുവോ?",
+    Hindi: "माता-पिता एक कोर्स चाहते हैं, आप दूसरा?",
+  },
+  "What careers will AI create?": {
+    Tamil: "AI உருவாக்கப்போகும் புதிய வேலைவாய்ப்புகள்",
+    Telugu: "AI సృష్టించబోయే కొత్త కెరీర్లు",
+    Malayalam: "AI സൃഷ്ടിക്കുന്ന പുതിയ കരിയറുകൾ",
+    Hindi: "AI कौन से नए करियर बनाएगा?",
+  },
+  "What careers will AI create": {
+    Tamil: "AI உருவாக்கப்போகும் புதிய வேலைவாய்ப்புகள்",
+    Telugu: "AI సృష్టించబోయే కొత్త కెరీర్లు",
+    Malayalam: "AI സൃഷ്ടിക്കുന്ന പുതിയ കരിയറുകൾ",
+    Hindi: "AI कौन से नए करियर बनाएगा?",
+  },
+  "Is a degree enough anymore?": {
+    Tamil: "வெறும் டிகிரி மட்டும் இப்போ போதுமா?",
+    Telugu: "కేవలం డిగ్రీ మాత్రమే ఇప్పుడు సరిపోతుందా?",
+    Malayalam: "വെറും ഒരു ഡിഗ്രി മാത്രം മതിയോ?",
+    Hindi: "क्या अब सिर्फ एक डिग्री काफी है?",
+  },
+  "Is a degree enough anymore": {
+    Tamil: "வெறும் டிகிரி மட்டும் இப்போ போதுமா?",
+    Telugu: "కేవలం డిగ్రీ மட்டுமே இப்போது సరిపోతుందా?",
+    Malayalam: "വെറും ഒരു ഡിഗ്രി മാത്രം മതിയോ?",
+    Hindi: "क्या अब सिर्फ एक डिग्री काफी है?",
+  },
+  "The biggest mistake after +2.": {
+    Tamil: "+2-க்கு அப்புறம் பண்ற பெரிய தவறு",
+    Telugu: "+2 తర్వాత చేసే అతిపెద్ద పొరపాటు",
+    Malayalam: "+2-ന് ശേഷമുള്ള ഏറ്റവും വലിയ തെറ്റ്",
+    Hindi: "+2 के बाद की सबसे बड़ी गलती",
+  },
+  "The biggest mistake after +2": {
+    Tamil: "+2-க்கு அப்புறம் பண்ற பெரிய தவறு",
+    Telugu: "+2 తర్వాత చేసే అతిపెద్ద పొరపాటు",
+    Malayalam: "+2-ന് ശേഷമുള്ള ഏറ്റവും വലിയ തെറ്റ്",
+    Hindi: "+2 के बाद की सबसे बड़ी गलती",
+  },
+  "Don't choose a college because of this.": {
+    Tamil: "இந்த காரணத்துக்காக காலேஜ் தேர்வு செய்யாதீங்க",
+    Telugu: "ఈ కారణంతో కాలేజీని ఎంచుకోవద్దు",
+    Malayalam: "ഈ കാരണം കൊണ്ട് കോളേജ് തിരഞ്ഞെടുക്കരുത്",
+    Hindi: "इस वजह से कॉलेज मत चुनना",
+  },
+  "Don't choose a college because of this": {
+    Tamil: "இந்த காரணத்துக்காக காலேஜ் தேர்வு செய்யாதீங்க",
+    Telugu: "ఈ కారణంతో కాలేజీని ఎంచుకోవద్దు",
+    Malayalam: "ഈ കാരണം കൊണ്ട് കോളേജ് തിരഞ്ഞെടുക്കരുത്",
+    Hindi: "इस वजह से कॉलेज मत चुनना",
+  },
+  "AI Robotic": {
+    Tamil: "AI & ரோபோடிக்ஸ்",
+    Telugu: "AI & రోబోటిక్స్",
+    Malayalam: "AI & റോബോട്ടിക്സ്",
+    Hindi: "AI और रोबोटिक्स",
+  },
+  "AI Careers": {
+    Tamil: "AI & எதிர்கால வேலைவாய்ப்புகள்",
+    Telugu: "AI & భవిష్యత్ ఉద్యోగాలు",
+    Malayalam: "AI & ഭാവി ജോലிகள்",
+    Hindi: "AI और भविष्य का करियर",
+  },
+};
+
+const scriptPatternsRegex: Record<string, RegExp> = {
+  Tamil: /[\u0B80-\u0BFF]/,
+  Telugu: /[\u0C00-\u0C7F]/,
+  Malayalam: /[\u0D00-\u0D7F]/,
+  Hindi: /[\u0900-\u097F]/,
+};
+
+export function getNativeScriptTitle(cleanT: string, lang: LanguageOption): string {
+  if (lang === 'English' || lang === 'Tanglish') return cleanT;
+  const trimmed = cleanT.trim();
+  const match = TITLE_NATIVE_MAP[trimmed] || TITLE_NATIVE_MAP[trimmed.replace(/[?!.]+$/, '')];
+  if (match && match[lang]) return match[lang];
+  if (scriptPatternsRegex[lang]?.test(cleanT)) return cleanT;
+  const fallbacks: Record<string, string> = {
+    Tamil: "+2-க்கு அப்புறம் என்ன படிப்பு?",
+    Telugu: "+2 తర్వాత ఏ కోర్సు?",
+    Malayalam: "+2-ന് ശേഷം ഏത് കോഴ്സ്?",
+    Hindi: "+2 के बाद कौन सा कोर्स?",
+  };
+  return fallbacks[lang] || cleanT;
+}
+
 function enforceNativeScriptForShots(
   shots: Shot[],
   language: LanguageOption,
@@ -397,52 +668,65 @@ function enforceNativeScriptForShots(
 
   // If we have a dedicated category match for this language, apply it
   const catData = categoryNativeContent[category]?.[language];
-  if (catData) {
-    return shots.map((s, idx) => ({
-      ...s,
-      dialogue: catData.dialogue[idx] || s.dialogue,
-      onscreenText: catData.onscreen[idx] || s.onscreenText,
-    }));
-  }
+  const nativeTitle = getNativeScriptTitle(cleanTitle, language);
+  const cleanTitleTrimmed = cleanTitle.trim();
+  const cleanTitleNoPunct = cleanTitleTrimmed.replace(/[?!.]+$/, '').trim();
 
-  // Otherwise, inspect each shot: if dialogue is missing native script, apply universal high-impact native dialogue
-  return shots.map((s) => {
-    if (!pattern.test(s.dialogue)) {
+  return shots.map((s, idx) => {
+    let dialogue = catData?.dialogue[idx] || s.dialogue;
+    let onscreenText = catData?.onscreen[idx] || s.onscreenText;
+
+    // Replace any instances of raw English title strings with nativeTitle
+    if (cleanTitleTrimmed && cleanTitleTrimmed !== nativeTitle) {
+      dialogue = dialogue.replaceAll(cleanTitleTrimmed, nativeTitle);
+      onscreenText = onscreenText.replaceAll(cleanTitleTrimmed, nativeTitle);
+    }
+    if (cleanTitleNoPunct && cleanTitleNoPunct !== nativeTitle) {
+      dialogue = dialogue.replaceAll(cleanTitleNoPunct, nativeTitle);
+      onscreenText = onscreenText.replaceAll(cleanTitleNoPunct, nativeTitle);
+    }
+
+    if (!pattern.test(dialogue)) {
       if (language === 'Tamil') {
-        if (s.type === 'HOOK') s.dialogue = `"${cleanTitle} பத்தி யோசிச்சு கன்பியூஸ் ஆகிட்டே இருக்கீங்களா? இந்த ஒரு நிமிஷம் கவனிங்க."`;
-        else if (s.type === 'PROBLEM') s.dialogue = `"எல்லாரும் சொல்ற ஒவ்வொரு அட்வைஸையும் கேட்டு குழம்பாதீங்க. உங்களுக்கான சரியான வழியை தேர்வு செய்யுங்க."`;
-        else if (s.type === 'PATTERN_INTERRUPT') s.dialogue = `"கொஞ்சம் நில்லுங்க! மத்தவங்க சொல்றதை விட்டுட்டு, இந்த ஒரு கேள்வியை யோசிங்க."`;
-        else if (s.type === 'VALUE') s.dialogue = `"3 விஷயத்தை செக் பண்ணுங்க: பிராக்டிகல் வேலை, நவீன டெக்னாலஜி சிலபஸ், அப்புறம் நேரடி லேப் அனுபவம்."`;
-        else if (s.type === 'PAYOFF') s.dialogue = `"உண்மையான திறமையை வளர்க்கும் வழியை தேர்வு செஞ்சா, எதிர்கால பயமே இருக்காது."`;
-        else if (s.type === 'CTA') s.dialogue = `"அட்மிஷன் ஆரம்பிக்கிறதுக்கு முன்னாடி இந்த ரீலை சேவ் பண்ணி வச்சுக்கோங்க."`;
-        if (!pattern.test(s.onscreenText)) s.onscreenText = `${cleanTitle}? 🎯`;
+        if (s.type === 'HOOK') dialogue = `"${nativeTitle} - யோசிச்சு ரொம்ப குழப்பமா இருக்கீங்களா? இந்த ஒரு நிமிஷம் கவனிங்க."`;
+        else if (s.type === 'PROBLEM') dialogue = `"எல்லாரும் சொல்ற ஒவ்வொரு அட்வைஸையும் கேட்டு குழம்பாதீங்க. உங்களுக்கான சரியான வழியை தேர்வு செய்யுங்க."`;
+        else if (s.type === 'PATTERN_INTERRUPT') dialogue = `"கொஞ்சம் நில்லுங்க! மத்தவங்க சொல்றதை விட்டுட்டு, இந்த ஒரு கேள்வியை யோசிங்க."`;
+        else if (s.type === 'VALUE') dialogue = `"3 விஷயத்தை செக் பண்ணுங்க: பிராக்டிகல் வேலை, நவீன டெக்னாலஜி சிலபஸ், அப்புறம் நேரடி லேப் அனுபவம்."`;
+        else if (s.type === 'PAYOFF') dialogue = `"உண்மையான திறமையை வளர்க்கும் வழியை தேர்வு செஞ்சா, எதிர்கால பயமே இருக்காது."`;
+        else if (s.type === 'CTA') dialogue = `"அட்மிஷன் ஆரம்பிக்கிறதுக்கு முன்னாடி இந்த ரீலை சேவ் பண்ணி வச்சுக்கோங்க."`;
       } else if (language === 'Telugu') {
-        if (s.type === 'HOOK') s.dialogue = `"${cleanTitle} గురించి ఆలోచించి కన్‌ఫ్యూజ్ అవుతున్నారా? ఒక్క నిమిషం ఇది చూడండి."`;
-        else if (s.type === 'PROBLEM') s.dialogue = `"అందరూ చెప్పే ప్రతి సలహానూ గుడ్డిగా నమ్మి మీ కెరీర్‌ను అయోమయంలో పడేయకండి."`;
-        else if (s.type === 'PATTERN_INTERRUPT') s.dialogue = `"ఒక్క నిమిషం ఆగండి! ఇతరుల మాటలను పక్కనపెట్టి, ఈ ఒక్క ప్రశ్న ఆలోచించండి."`;
-        else if (s.type === 'VALUE') s.dialogue = `"ఈ 3 విషయాలు చూడండి: ప్రాక్టికల్ నైపుణ్యం, మోడరన్ సిలబస్, మరియు లైవ్ ల్యాబ్స్."`;
-        else if (s.type === 'PAYOFF') s.dialogue = `"నిజమైన నైపుణ్యాన్ని అందించే కోర్సును ఎంచుకుంటే, భవిష్యత్తు గురించి ఎలాంటి భయమూ ఉండదు."`;
-        else if (s.type === 'CTA') s.dialogue = `"అడ్మిషన్ల కౌన్సిలింగ్ కంటే ముందే ఈ రీల్‌ను సేవ్ చేసుకోండి."`;
-        if (!pattern.test(s.onscreenText)) s.onscreenText = `${cleanTitle}? 🎯`;
+        if (s.type === 'HOOK') dialogue = `"${nativeTitle} గురించి ఆలోచించి చాలా కన్‌ఫ్యూజ్ అవుతున్నారా? ఒక్క నిమిషం ఇది చూడండి."`;
+        else if (s.type === 'PROBLEM') dialogue = `"అందరూ చెప్పే ప్రతి సలహానూ గుడ్డిగా నమ్మి మీ కెరీర్‌ను అయోమయంలో పడేయకండి."`;
+        else if (s.type === 'PATTERN_INTERRUPT') dialogue = `"ఒక్క నిమిషం ఆగండి! ఇతరుల మాటలను పక్కనపెట్టి, ఈ ఒక్క ప్రశ్న ఆలోచించండి."`;
+        else if (s.type === 'VALUE') dialogue = `"ఈ 3 విషయాలు చూడండి: ప్రాక్టికల్ నైపుణ్యం, మోడరన్ సిలబస్, మరియు లైవ్ ల్యాబ్స్."`;
+        else if (s.type === 'PAYOFF') dialogue = `"నిజమైన నైపుణ్యాన్ని అందించే కోర్సును ఎంచుకుంటే, భవిష్యత్తు గురించి ఎలాంటి భయమూ ఉండదు."`;
+        else if (s.type === 'CTA') dialogue = `"అడ్మిషన్ల కౌన్సిలింగ్ కంటే ముందే ఈ రీల్‌ను సేవ్ చేసుకోండి."`;
       } else if (language === 'Malayalam') {
-        if (s.type === 'HOOK') s.dialogue = `"${cleanTitle}-നെ കുറിച്ച് ആലോചിച്ച് കൺഫ്യൂസ് ആകുകയാണോ? ഒരു നിമിഷം ഇത് കാണൂ."`;
-        else if (s.type === 'PROBLEM') s.dialogue = `"എല്ലാവരും പറയുന്ന ഓരോ വാക്കും കേട്ട് നിങ്ങളുടെ ഭാവി അപകടത്തിലാക്കരുത്."`;
-        else if (s.type === 'PATTERN_INTERRUPT') s.dialogue = `"ഒരു നിമിഷം നിൽക്കൂ! ബാക്കിയെല്ലാം മറന്ന് ഈ ഒരു ചോദ്യത്തിന് ഉത്തരം കണ്ടെത്തൂ."`;
-        else if (s.type === 'VALUE') s.dialogue = `"3 കാര്യങ്ങൾ ശ്രദ്ധിക്കൂ: പ്രായോഗിക താല്പര്യം, ആധുനിക സിലബസ്, മികച്ച ലാബ് സൗകര്യം."`;
-        else if (s.type === 'PAYOFF') s.dialogue = `"യഥാർത്ഥ കഴിവ് തരുന്ന കോഴ്സ് തിരഞ്ഞെടുത്താൽ ഭാവി സുരക്ഷിതമായിരിക്കും."`;
-        else if (s.type === 'CTA') s.dialogue = `"അഡ്മിഷന് മുൻപായി ഈ റീൽ ഇപ്പോൾ തന്നെ സേവ് ചെയ്തു വെക്കൂ."`;
-        if (!pattern.test(s.onscreenText)) s.onscreenText = `${cleanTitle}? 🎯`;
+        if (s.type === 'HOOK') dialogue = `"${nativeTitle}-നെ കുറിച്ച് ആലോചിച്ച് കൺഫ്യൂസ് ആകുകയാണോ? ഒരു നിമിഷം ഇത് കാണൂ."`;
+        else if (s.type === 'PROBLEM') dialogue = `"എല്ലാവരും പറയുന്ന ഓരോ വാക്കും കേട്ട് നിങ്ങളുടെ ഭാവി അപകടത്തിലാക്കരുത്."`;
+        else if (s.type === 'PATTERN_INTERRUPT') dialogue = `"ഒരു നിമിഷം നിൽക്കൂ! ബാക്കിയെല്ലാം മറന്ന് ഈ ഒരു ചോദ്യത്തിന് ഉത്തരം കണ്ടെത്തൂ."`;
+        else if (s.type === 'VALUE') dialogue = `"3 കാര്യങ്ങൾ ശ്രദ്ധിക്കൂ: പ്രായോഗിക താല്പര്യം, ആധുനിക സിലബസ്, മികച്ച ലാബ് സൗകര്യം."`;
+        else if (s.type === 'PAYOFF') dialogue = `"യഥാർത്ഥ കഴിവ് തരുന്ന കോഴ്സ് തിരഞ്ഞെടുത്താൽ ഭാവി സുരക്ഷിതമായിരിക്കും."`;
+        else if (s.type === 'CTA') dialogue = `"അഡ്മിഷന് മുൻപായി ഈ റീൽ ഇപ്പോൾ തന്നെ സേവ് ചെയ്തു വെക്കൂ."`;
       } else if (language === 'Hindi') {
-        if (s.type === 'HOOK') s.dialogue = `"${cleanTitle} को लेकर क्या आप भी परेशान हैं? एक मिनट यह वीडियो ध्यान से देखिए।"`;
-        else if (s.type === 'PROBLEM') s.dialogue = `"सबकी अलग-अलग सलाह सुनकर खुद को उलझन में मत डालिए।"`;
-        else if (s.type === 'PATTERN_INTERRUPT') s.dialogue = `"एक सेकंड रुकिए! बाकी सब छोड़िए और खुद से यह एक सवाल पूछिए।"`;
-        else if (s.type === 'VALUE') s.dialogue = `"ये 3 बातें चेक करें: असली रुचि, मॉडर्न टेक सिलेबस, और प्रैक्टिकल लैब सुविधाएं।"`;
-        else if (s.type === 'PAYOFF') s.dialogue = `"सच्ची काबिलियत देने वाला रास्ता चुनेंगे तो करियर में कभी रुकावट नहीं आएगी।"`;
-        else if (s.type === 'CTA') s.dialogue = `"काउंसलिंग शुरू होने से पहले इस रील को अभी सेव कर लें।"`;
-        if (!pattern.test(s.onscreenText)) s.onscreenText = `${cleanTitle}? 🎯`;
+        if (s.type === 'HOOK') dialogue = `"${nativeTitle} को लेकर क्या आप भी परेशान हैं? एक मिनट यह वीडियो ध्यान से देखिए।"`;
+        else if (s.type === 'PROBLEM') dialogue = `"सबकी अलग-अलग सलाह सुनकर खुद को उलझन में मत डालिए।"`;
+        else if (s.type === 'PATTERN_INTERRUPT') dialogue = `"एक सेकंड रुकिए! बाकी सब छोड़िए और खुद से यह एक सवाल पूछिए।"`;
+        else if (s.type === 'VALUE') dialogue = `"ये 3 बातें चेक करें: असली रुचि, मॉडर्न टेक सिलेबस, और प्रैक्टिकल लैब सुविधाएं।"`;
+        else if (s.type === 'PAYOFF') dialogue = `"सच्ची काबिलियत देने वाला रास्ता चुनेंगे तो करियर में कभी रुकावट नहीं आएगी।"`;
+        else if (s.type === 'CTA') dialogue = `"काउंसलिंग शुरू होने से पहले इस रील को अभी सेव कर लें।"`;
       }
     }
-    return s;
+
+    if (!pattern.test(onscreenText)) {
+      onscreenText = `${nativeTitle} 🎯`;
+    }
+
+    return {
+      ...s,
+      dialogue,
+      onscreenText,
+    };
   });
 }
 
@@ -457,6 +741,7 @@ export function generateKnowledgeEngineStoryboard(
   const now = new Date().toISOString();
   const id = `joy_reel_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
   const cleanTitle = analysis.cleanTopic;
+  const nativeTitle = getNativeScriptTitle(cleanTitle, language);
 
   const isTamil = language === 'Tamil';
   const isTanglish = language === 'Tanglish';
@@ -1643,6 +1928,9 @@ export function generateKnowledgeEngineStoryboard(
 
   // Vary the creative angle
   const creativeAngle = angleVariants[idx];
+
+  // Final Native Script Enforcement Gate across all generated & rotated shots
+  shots = enforceNativeScriptForShots(shots, language, cleanTitle, analysis.category);
   // ────────────────────────────────────────────────────────────────────────────
 
   return {
