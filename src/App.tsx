@@ -8,6 +8,7 @@ import { ShotCard } from './components/ShotCard.js';
 import { ProductionNotesCard } from './components/ProductionNotesCard.js';
 import { CreativeSummaryCard } from './components/CreativeSummaryCard.js';
 import { SettingsModal } from './components/SettingsModal.js';
+import { IdeasView } from './components/IdeasView.js';
 import { apiGenerateReel, apiRegenerateShot } from './services/api.js';
 import { exportStoryboardPdf } from './services/exportPdf.js';
 import { formatStoryboardForWhatsApp, formatProductionBriefing } from './services/copyUtils.js';
@@ -27,7 +28,7 @@ import { AlertCircle } from 'lucide-react';
 import { LibraryView } from './components/LibraryView.js';
 
 export const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<'creator' | 'library'>('creator');
+  const [currentView, setCurrentView] = useState<'creator' | 'library' | 'ideas'>('creator');
   const [currentReel, setCurrentReel] = useState<ReelStoryboard | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [regeneratingShotNumber, setRegeneratingShotNumber] = useState<number | null>(null);
@@ -65,7 +66,9 @@ export const App: React.FC = () => {
     const libraryDataParam = urlParams.get('data');
     const viewParam = urlParams.get('view');
 
-    if (pathname === '/library' || viewParam === 'library' || libraryDataParam) {
+    if (pathname === '/ideas' || viewParam === 'ideas') {
+      setCurrentView('ideas');
+    } else if (pathname === '/library' || viewParam === 'library' || libraryDataParam) {
       setCurrentView('library');
       if (libraryDataParam) {
         const decodedLib = decodeLibraryFromUrl(libraryDataParam);
@@ -94,7 +97,9 @@ export const App: React.FC = () => {
 
     // Listen to browser forward/back buttons
     const handlePopState = () => {
-      if (window.location.pathname === '/library' || window.location.search.includes('view=library')) {
+      if (window.location.pathname === '/ideas' || window.location.search.includes('view=ideas')) {
+        setCurrentView('ideas');
+      } else if (window.location.pathname === '/library' || window.location.search.includes('view=library')) {
         setCurrentView('library');
       } else {
         setCurrentView('creator');
@@ -104,9 +109,11 @@ export const App: React.FC = () => {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  const navigateToView = (view: 'creator' | 'library') => {
+  const navigateToView = (view: 'creator' | 'library' | 'ideas') => {
     setCurrentView(view);
-    if (view === 'library') {
+    if (view === 'ideas') {
+      window.history.pushState({}, '', '/ideas');
+    } else if (view === 'library') {
       window.history.pushState({}, '', '/library');
     } else {
       window.history.pushState({}, '', '/');
@@ -303,6 +310,14 @@ export const App: React.FC = () => {
     navigateToView('creator');
   };
 
+  const handleSelectIdea = (ideaTitle: string, direction: CreativeDirection = 'Informative') => {
+    setCurrentReel(null);
+    setPendingReel(null);
+    saveCurrentStoryboard(null);
+    navigateToView('creator');
+    handleGenerate(ideaTitle, direction);
+  };
+
   const handleShareLink = () => {
     if (!currentReel) return;
     navigator.clipboard.writeText(getShareableUrl(currentReel));
@@ -323,6 +338,7 @@ export const App: React.FC = () => {
       {/* Primary Header Navbar - Always Visible */}
       <Navbar
         onNewReel={handleNewReel}
+        onOpenIdeas={() => navigateToView('ideas')}
         onOpenLibrary={() => navigateToView('library')}
         onOpenSettings={() => setIsSettingsOpen(true)}
         savedCount={savedProjects.length}
@@ -365,8 +381,13 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* View Switching: Library View vs Creator View */}
-        {currentView === 'library' ? (
+        {/* View Switching: Ideas View vs Library View vs Creator View */}
+        {currentView === 'ideas' ? (
+          <IdeasView
+            onSelectIdea={handleSelectIdea}
+            onNavigateToCreate={() => navigateToView('creator')}
+          />
+        ) : currentView === 'library' ? (
           <LibraryView
             projects={sharedProjectsData || savedProjects}
             onSelectProject={(storyboard) => {

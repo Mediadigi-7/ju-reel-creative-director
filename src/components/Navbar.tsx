@@ -1,18 +1,20 @@
 import React from 'react';
-import { Library, Settings, Plus } from 'lucide-react';
+import { Library, Settings, Home, Lightbulb } from 'lucide-react';
 import { ApiSettings } from '../services/storage.js';
 
 interface NavbarProps {
   onNewReel: () => void;
+  onOpenIdeas?: () => void;
   onOpenLibrary: () => void;
   onOpenSettings: () => void;
   savedCount: number;
-  currentView?: 'creator' | 'library';
+  currentView?: 'creator' | 'library' | 'ideas';
   apiSettings?: ApiSettings;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   onNewReel,
+  onOpenIdeas,
   onOpenLibrary,
   onOpenSettings,
   savedCount,
@@ -45,12 +47,25 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={onNewReel}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition-colors ${
               currentView === 'creator'
-                ? 'bg-stone-100 text-stone-900'
+                ? 'bg-stone-100 text-stone-900 font-semibold'
                 : 'text-stone-500 hover:text-stone-900 hover:bg-stone-50'
             }`}
           >
-            <Plus className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">New Reel</span>
+            <Home className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Home</span>
+          </button>
+
+          <button
+            onClick={onOpenIdeas}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition-colors ${
+              currentView === 'ideas'
+                ? 'bg-stone-100 text-stone-900 font-semibold'
+                : 'text-stone-500 hover:text-stone-900 hover:bg-stone-50'
+            }`}
+            title="Browse Reel Ideas Bank"
+          >
+            <Lightbulb className="w-3.5 h-3.5" />
+            <span>Idea</span>
           </button>
 
           <button
