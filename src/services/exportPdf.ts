@@ -1,6 +1,15 @@
 import { jsPDF } from 'jspdf';
 import { ReelStoryboard } from '../../shared/types.js';
 
+function cleanPdfText(str: string): string {
+  if (!str) return '';
+  return str
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/g, '')
+    .replace(/[\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/g, ' ')
+    .replace(/[\uD800-\uDFFF]/g, '')
+    .trim();
+}
+
 export function exportStoryboardPdf(reel: ReelStoryboard): void {
   const doc = new jsPDF({
     orientation: 'portrait',
@@ -60,19 +69,19 @@ export function exportStoryboardPdf(reel: ReelStoryboard): void {
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(13);
   doc.setTextColor(28, 25, 23);
-  const titleLines = doc.splitTextToSize(reel.reelTitle, contentWidth - 10);
+  const titleLines = doc.splitTextToSize(cleanPdfText(reel.reelTitle), contentWidth - 10);
   doc.text(titleLines, margin + 5, y + 7);
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(9);
   doc.setTextColor(82, 79, 79);
-  const angleLines = doc.splitTextToSize(`Angle: ${reel.creativeAngle}`, contentWidth - 10);
+  const angleLines = doc.splitTextToSize(`Angle: ${cleanPdfText(reel.creativeAngle)}`, contentWidth - 10);
   doc.text(angleLines, margin + 5, y + 15);
 
   doc.setFontSize(8);
   doc.setTextColor(120, 113, 108);
   doc.text(
-    `Audience: ${reel.targetAudience}  |  Duration: ${reel.duration}  |  Format: ${reel.format}  |  Tone: ${reel.creativeDirection}`,
+    `Audience: ${cleanPdfText(reel.targetAudience)}  |  Duration: ${cleanPdfText(reel.duration)}  |  Format: ${cleanPdfText(reel.format)}  |  Tone: ${cleanPdfText(reel.creativeDirection)}`,
     margin + 5,
     y + 24
   );
@@ -87,11 +96,16 @@ export function exportStoryboardPdf(reel: ReelStoryboard): void {
   y += 6;
 
   reel.shots.forEach((shot) => {
+    const cleanVis = cleanPdfText(shot.visual);
+    const cleanDiag = cleanPdfText(shot.dialogue);
+    const cleanText = cleanPdfText(shot.onscreenText);
+    const cleanCam = cleanPdfText(shot.cameraPerformance);
+
     // Calculate approximate height
-    const visualLines = doc.splitTextToSize(`Visual: ${shot.visual}`, contentWidth - 8);
-    const dialogueLines = shot.dialogue ? doc.splitTextToSize(`VO / Spoken: ${shot.dialogue}`, contentWidth - 8) : [];
-    const textLines = shot.onscreenText ? doc.splitTextToSize(`On-Screen Text: [${shot.onscreenText}]`, contentWidth - 8) : [];
-    const cameraLines = doc.splitTextToSize(`Camera / Action: ${shot.cameraPerformance}`, contentWidth - 8);
+    const visualLines = doc.splitTextToSize(`Visual: ${cleanVis}`, contentWidth - 8);
+    const dialogueLines = cleanDiag ? doc.splitTextToSize(`VO / Spoken: "${cleanDiag}"`, contentWidth - 8) : [];
+    const textLines = cleanText ? doc.splitTextToSize(`On-Screen Text: [${cleanText}]`, contentWidth - 8) : [];
+    const cameraLines = doc.splitTextToSize(`Camera / Action: ${cleanCam}`, contentWidth - 8);
 
     const cardHeight =
       12 +
@@ -116,13 +130,13 @@ export function exportStoryboardPdf(reel: ReelStoryboard): void {
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(9);
     doc.setTextColor(175, 30, 42);
-    doc.text(`SHOT 0${shot.number} — ${shot.name.toUpperCase()}`, margin + 6, y + 6);
+    doc.text(`SHOT 0${shot.number} — ${cleanPdfText(shot.name).toUpperCase()}`, margin + 6, y + 6);
 
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(8);
     doc.setTextColor(120, 113, 108);
-    const timeWidth = doc.getTextWidth(shot.timestamp);
-    doc.text(shot.timestamp, pageWidth - margin - timeWidth - 5, y + 6);
+    const timeWidth = doc.getTextWidth(cleanPdfText(shot.timestamp));
+    doc.text(cleanPdfText(shot.timestamp), pageWidth - margin - timeWidth - 5, y + 6);
 
     let cardY = y + 11;
 
@@ -175,20 +189,20 @@ export function exportStoryboardPdf(reel: ReelStoryboard): void {
   doc.setTextColor(60, 60, 60);
 
   let py = y + 6;
-  doc.text(`Visual Style: ${reel.productionNotes.visualStyle}`, margin + 5, py);
+  doc.text(`Visual Style: ${cleanPdfText(reel.productionNotes.visualStyle)}`, margin + 5, py);
   py += 5;
-  doc.text(`Locations: ${reel.productionNotes.locations.join(', ')}`, margin + 5, py);
+  doc.text(`Locations: ${reel.productionNotes.locations.map(cleanPdfText).join(', ')}`, margin + 5, py);
   py += 5;
-  doc.text(`Props: ${reel.productionNotes.props.join(', ')}`, margin + 5, py);
+  doc.text(`Props: ${reel.productionNotes.props.map(cleanPdfText).join(', ')}`, margin + 5, py);
   py += 5;
-  doc.text(`Camera & Grip: ${reel.productionNotes.camera}`, margin + 5, py);
+  doc.text(`Camera & Grip: ${cleanPdfText(reel.productionNotes.camera)}`, margin + 5, py);
   py += 5;
-  doc.text(`Sound Design: ${reel.productionNotes.sound}`, margin + 5, py);
+  doc.text(`Sound Design: ${cleanPdfText(reel.productionNotes.sound)}`, margin + 5, py);
   py += 5;
-  doc.text(`Editing Rhythm: ${reel.productionNotes.editing}`, margin + 5, py);
+  doc.text(`Editing Rhythm: ${cleanPdfText(reel.productionNotes.editing)}`, margin + 5, py);
   py += 5;
   doc.setFont('helvetica', 'bold');
-  doc.text(`Complexity: ${reel.productionNotes.complexity}  |  Casting: ${reel.productionNotes.casting}`, margin + 5, py);
+  doc.text(`Complexity: ${cleanPdfText(reel.productionNotes.complexity)}  |  Casting: ${cleanPdfText(reel.productionNotes.casting)}`, margin + 5, py);
 
   y += 48;
 
@@ -204,7 +218,7 @@ export function exportStoryboardPdf(reel: ReelStoryboard): void {
   doc.setFontSize(8);
   doc.setTextColor(40, 40, 40);
   reel.creativeSummary.shootingPriority.forEach((p, idx) => {
-    doc.text(`${idx + 1}. ${p}`, margin + 3, y);
+    doc.text(`${idx + 1}. ${cleanPdfText(p)}`, margin + 3, y);
     y += 4.5;
   });
 
@@ -224,7 +238,7 @@ export function exportStoryboardPdf(reel: ReelStoryboard): void {
   }
 
   // Trigger download
-  const safeFilename = reel.reelTitle
+  const safeFilename = cleanPdfText(reel.reelTitle)
     .replace(/[^a-zA-Z0-9]/g, '_')
     .substring(0, 30)
     .toLowerCase();

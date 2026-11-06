@@ -7,6 +7,7 @@ import { GenerationLoader } from './components/GenerationLoader.js';
 import { ShotCard } from './components/ShotCard.js';
 import { ProductionNotesCard } from './components/ProductionNotesCard.js';
 import { CreativeSummaryCard } from './components/CreativeSummaryCard.js';
+
 import { SettingsModal } from './components/SettingsModal.js';
 import { IdeasView } from './components/IdeasView.js';
 import { apiGenerateReel, apiRegenerateShot } from './services/api.js';

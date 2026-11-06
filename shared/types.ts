@@ -68,6 +68,20 @@ export interface ViralBlueprint {
   directorInstruction: string;
 }
 
+export interface FrameworkMetadata {
+  creativeType: 'Informative' | 'Funny' | 'Trendy';
+  // User-facing Reel Blueprint — the 6 actual content elements
+  hookStatement: string;       // The actual opening hook line the viewer hears/sees
+  problemStatement: string;    // What makes the viewer relate — the situation or tension shown
+  patternInterruptStatement: string; // How attention is reset — the visual/narrative disruption
+  valueStatement: string;      // What the viewer gets — the insight, framework, or payoff content
+  payoffStatement: string;     // How the story resolves — the satisfying answer or conclusion
+  ctaStatement: string;        // The single CTA the viewer is asked to do
+  // Internal (kept for AI knowledge engine fallback compatibility)
+  hookText?: string;
+  ctaText?: string;
+}
+
 export interface ReelStoryboard {
   id: string;
   reelTitle: string;
@@ -82,6 +96,7 @@ export interface ReelStoryboard {
   productionNotes: ProductionNotes;
   creativeSummary: CreativeSummary;
   viralBlueprint?: ViralBlueprint;
+  frameworkMetadata?: FrameworkMetadata;
   tags: string[];
   createdAt: string;
   updatedAt: string;

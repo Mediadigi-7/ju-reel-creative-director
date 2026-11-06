@@ -410,16 +410,63 @@ const scriptPatternsRegex: Record<string, RegExp> = {
 export function getNativeScriptTitle(cleanT: string, lang: LanguageOption): string {
   if (lang === 'English' || lang === 'Tanglish') return cleanT;
   const trimmed = cleanT.trim();
+  const lower = trimmed.toLowerCase();
+
+  // 1. Exact or normalized dictionary lookup
   const match = TITLE_NATIVE_MAP[trimmed] || TITLE_NATIVE_MAP[trimmed.replace(/[?!.]+$/, '')];
   if (match && match[lang]) return match[lang];
+
+  // 2. Pattern-based dynamic translation for B.Tech vs B.Sc & other frequent queries
+  if ((lower.includes('b.tech') || lower.includes('btech')) && (lower.includes('b.sc') || lower.includes('bsc'))) {
+    const map: Record<string, string> = {
+      Tamil: "B.Tech-ஆ இல்லை B.Sc-ஆ?",
+      Telugu: "B.Tech-ఆ లేదా B.Sc-ఆ?",
+      Malayalam: "B.Tech ആണോ B.Sc ആണോ?",
+      Hindi: "B.Tech या B.Sc?",
+    };
+    return map[lang] || cleanT;
+  }
+
+  if (lower.includes('math') && (lower.includes('engineering') || lower.includes('besides') || lower.includes('beyond'))) {
+    const map: Record<string, string> = {
+      Tamil: "மேத்ஸ் முடிச்சா இன்ஜினியரிங் மட்டும்தானா?",
+      Telugu: "మ్యాథ్స్ తర్వాత ఇంజనీరింగ్ మాత్రమేనా?",
+      Malayalam: "മാത്സ് കഴിഞ്ഞാൽ എൻജിനീയറിംഗ് മാത്രമാണോ?",
+      Hindi: "मैथ्स के बाद क्या सिर्फ इंजीनियरिंग है?",
+    };
+    return map[lang] || cleanT;
+  }
+
+  if (lower.includes('commerce') || lower.includes('b.com')) {
+    const map: Record<string, string> = {
+      Tamil: "காமர்ஸ் முடிச்சதும் என்ன படிக்கலாம்?",
+      Telugu: "కామర్స్ తర్వాత ఏం చదవాలి?",
+      Malayalam: "കോമേഴ്‌സിന് ശേഷം എന്ത് പഠിക്കണം?",
+      Hindi: "कॉमर्स के बाद क्या पढ़ें?",
+    };
+    return map[lang] || cleanT;
+  }
+
+  if (lower.includes('arts')) {
+    const map: Record<string, string> = {
+      Tamil: "ஆர்ட்ஸ் மாணவர்களுக்கான சிறந்த வேலைவாய்ப்புகள்",
+      Telugu: "ఆర్ట్స్ విద్యార్థులకు మంచి కెరీర్ మార్గాలు",
+      Malayalam: "ആർട്സ് വിദ്യാർത്ഥികൾക്ക് മികച്ച കരിയർ",
+      Hindi: "आर्ट्स छात्रों के लिए बेहतरीन करियर",
+    };
+    return map[lang] || cleanT;
+  }
+
   if (scriptPatternsRegex[lang]?.test(cleanT)) return cleanT;
-  const fallbacks: Record<string, string> = {
-    Tamil: "+2-க்கு அப்புறம் என்ன படிப்பு?",
-    Telugu: "+2 తర్వాత ఏ కోర్సు?",
-    Malayalam: "+2-ന് ശേഷം ഏത് കോഴ്സ്?",
-    Hindi: "+2 के बाद कौन सा कोर्स?",
+
+  // 3. Dynamic topic fallback preserving user's cleaned title keywords
+  const topicFallbacks: Record<string, string> = {
+    Tamil: `${cleanT} - வழிகாட்டி`,
+    Telugu: `${cleanT} - సమాచారం`,
+    Malayalam: `${cleanT} - വഴികാട്ടി`,
+    Hindi: `${cleanT} - गाइड`,
   };
-  return fallbacks[lang] || cleanT;
+  return topicFallbacks[lang] || cleanT;
 }
 
 function enforceNativeScriptForShots(
@@ -442,6 +489,80 @@ function enforceNativeScriptForShots(
 
   // Category-specific native templates
   const categoryNativeContent: Record<string, Record<string, { dialogue: string[]; onscreen: string[] }>> = {
+    engineering: {
+      Tamil: {
+        dialogue: [
+          `"B.Tech-ஆ இல்லை B.Sc-ஆ? - ரெண்டுக்கும் என்ன வித்தியாசம்னு தெரியாம அவசரப்பட்டு முடிவெடுக்காதீங்க!"`,
+          `"எல்லாரும் B.Tech தான் பெஸ்ட்னு சொல்வாங்க... ஆனா 4 வருஷ இன்ஜினியரிங் vs 3 வருஷ B.Sc - உங்க ஆர்வத்திற்கு எது சரி?"`,
+          `"கொஞ்சம் நில்லுங்க! பிராக்டிகல் இன்ஜினியரிங் பிடிக்குமா இல்ல ஆழமான சயின்ஸ் & ரிசர்ச் பிடிக்குமா? இந்த 3 வித்தியாசத்தை பாருங்க."`,
+          `"1. B.Tech-ல ஹேண்ட்ஸ்-ஆன் இன்ஜினியரிங், கோடிங் & AI லேப்ஸ். 2. B.Sc-ல ஆழமான தியரி & ரிசர்ச். 3. ஜாப் மார்க்கெட்ல ரெண்டுக்குமே தனித்தனி ரோல்கள் இருக்கு!"`,
+          `"Joy University-ல B.Tech CSE மற்றும் B.Sc (Hons) AI & Data Science ரெண்டுமே நேரடி லேப் வசதியுடன் இருக்கு."`,
+          `"உங்களுக்கு B.Tech பிடிக்குமா இல்ல B.Sc பிடிக்குமா? கீழே கமெண்ட் பண்ணுங்க, முழு வழிகாட்டல் அனுப்புறோம்!"`,
+        ],
+        onscreen: [
+          `B.Tech vs B.Sc 🎯`,
+          `4 வருஷ Engg vs 3 வருஷ B.Sc`,
+          `நில்லுங்க 🛑 3 முக்கிய வித்தியாசங்கள்`,
+          `1. B.Tech (ஹேண்ட்ஸ்-ஆன் லேப்)  2. B.Sc (ரிசர்ச்)  3. தனித்தனி ஜாப்ஸ்`,
+          `உங்க ஆர்வத்திற்கு ஏற்ற தேர்வு`,
+          `கீழே கமெண்ட் பண்ணுங்க 📩`,
+        ],
+      },
+      Telugu: {
+        dialogue: [
+          `"B.Tech-ఆ లేదా B.Sc-ఆ? - రెండింటి తేడా తెలియకుండా తొందరపడి కోర్సు ఎంచుకోవద్దు!"`,
+          `"అందరూ B.Tech బెస్ట్ అంటారు... కానీ 4 ఏళ్ల ఇంజనీరింగ్ vs 3 ఏళ్ల B.Sc - మీ ఆసక్తికి ఏది సరిపోతుంది?"`,
+          `"ఒక్క నిమిషం ఆగండి! హ్యాండ్స్-ఆన్ ప్రాక్టికల్స్ ఇష్టమా లేక సైన్స్ & రీసెర్చ్ ఇష్టమా? ఈ 3 విషయాలు చూడండి."`,
+          `"1. B.Tech లో ప్రాక్టికల్ ఇంజనీరింగ్ & AI ల్యాబ్స్. 2. B.Sc లో రీసెర్చ్ & కోర్ సైన్స్. 3. జాబ్ మార్కెట్‌లో రెండింటికీ విడివిడిగా మంచి అవకాశాలు ఉన్నాయి!"`,
+          `"Joy University లో B.Tech CSE మరియు B.Sc (Hons) AI & Data Science రెండూ అందుబాటులో ఉన్నాయి."`,
+          `"మీకు B.Tech ఇష్టమా లేదా B.Sc ఇష్టమా? కింద కామెంట్ చేయండి, పూర్తి వివరాలు పంపుతాం!"`,
+        ],
+        onscreen: [
+          `B.Tech vs B.Sc 🎯`,
+          `4 ఏళ్ల Engg vs 3 ఏళ్ల B.Sc`,
+          `ఆగండి 🛑 3 ముఖ్యమైన తేడాలు`,
+          `1. B.Tech (ల్యాబ్స్)  2. B.Sc (రీసెర్చ్)  3. కెరీర్ మార్గాలు`,
+          `సరైన కోర్సును ఎంచుకోండి`,
+          `కింద కామెంట్ చేయండి 📩`,
+        ],
+      },
+      Malayalam: {
+        dialogue: [
+          `"B.Tech ആണോ B.Sc ആണോ? - രണ്ടുമ തമ്മിലുള്ള വ്യത്യാസം അറിയാതെ ധൃതിപിടിച്ച് തീരുമാനം എടുക്കരുത്!"`,
+          `"എല്ലാവരും B.Tech ആണ് നല്ലത് എന്ന് പറയും... എന്നാൽ 4 വർഷത്തെ എൻജിനീയറിംഗ് vs 3 വർഷത്തെ B.Sc - നിങ്ങൾക്ക് ഏതാണ് അനുയോജ്യം?"`,
+          `"ഒരു നിമിഷം നിൽക്കൂ! പ്രാക്ടിക്കൽ എൻജിനീയറിംഗ് ആണോ അതോ കോർ സയൻസ് & റിസർച്ച് ആണോ താല്പര്യം? ഈ 3 വ്യത്യാസങ്ങൾ കാണൂ."`,
+          `"1. B.Tech-ൽ ഹാൻഡ്സ്-ഓൺ ലാബുകളും AI പ്രൊജക്ടുകളും. 2. B.Sc-ൽ ആഴത്തിലുള്ള സയൻസും റിസർച്ച് അവസരങ്ങളും. 3. കരിയറിൽ രണ്ടിനും മികച്ച അവസരങ്ങളുണ്ട്!"`,
+          `"Joy University-ൽ B.Tech CSE-യും B.Sc (Hons) AI & Data Science-ഉം ലഭ്യമാണ്."`,
+          `"നിങ്ങൾക്ക് B.Tech ആണോ B.Sc ആണോ താല്പര്യം? താഴെ കമന്റ് ചെയ്യൂ, ഗൈഡ് അയച്ചുതരാം!"`,
+        ],
+        onscreen: [
+          `B.Tech vs B.Sc 🎯`,
+          `4 വർഷ Engg vs 3 വർഷ B.Sc`,
+          `നിൽക്കൂ 🛑 3 പ്രധാന വ്യത്യാസങ്ങൾ`,
+          `1. B.Tech (ലാബുകൾ)  2. B.Sc (റിസർച്ച്)  3. കരിയറുകൾ`,
+          `ശരിയായ കോഴ്സ് തിരഞ്ഞെടുക്കൂ`,
+          `താഴെ കമന്റ് ചെയ്യൂ 📩`,
+        ],
+      },
+      Hindi: {
+        dialogue: [
+          `"B.Tech या B.Sc? - दोनों के बीच का फर्क समझे बिना जल्दबाजी में कोर्स मत चुनिए!"`,
+          `"सब कहते हैं B.Tech बेस्ट है... लेकिन 4 साल की इंजीनियरिंग vs 3 साल की B.Sc - आपकी रुचि के लिए कौन सा सही है?"`,
+          `"एक सेकंड रुकिए! आपको प्रैक्टिकल इंजीनियरिंग पसंद है या कोर साइंस और रिसर्च? ये 3 अंतर देखिए।"`,
+          `"1. B.Tech में हैंड-ऑन इंजीनियरिंग और AI लैब्स। 2. B.Sc में रिसर्च और थ्योरी गहराई। 3. जॉब मार्केट में दोनों के लिए अलग-अलग हाई-पेइंग रोल हैं!"`,
+          `"Joy University में B.Tech CSE और B.Sc (Hons) AI & Data Science दोनों प्रैक्टिकल लैब्स के साथ उपलब्ध हैं।"`,
+          `"आपको B.Tech पसंद है या B.Sc? नीचे कमेंट करें, हम पूरा गाइड भेजेंगे!"`,
+        ],
+        onscreen: [
+          `B.Tech vs B.Sc 🎯`,
+          `4 साल Engg vs 3 साल B.Sc`,
+          `रुको 🛑 3 मुख्य अंतर`,
+          `1. B.Tech (प्रैक्टिकल)  2. B.Sc (रिसर्च)  3. अलग-अलग रोल्स`,
+          `अपनी पसंद का कोर्स चुनें`,
+          `नीचे कमेंट करें 📩`,
+        ],
+      },
+    },
     mistakes: {
       Tamil: {
         dialogue: [
@@ -1985,6 +2106,18 @@ export function generateKnowledgeEngineStoryboard(
       commentTrigger: `"Are you choosing this course because you genuinely want it or because family suggested it? Comment your stream below."`,
       joyUniversityConnection: `Joy University's hands-on project labs, future-ready multidisciplinary majors, and 104-acre research ecosystem serve as real proof points.`,
       directorInstruction: `Start with high empathy in the first 2 seconds, shatter the standard assumption by second 8, and deliver actionable clarity before introducing any university solutions.`,
+    },
+    frameworkMetadata: {
+      creativeType: direction as 'Informative' | 'Funny' | 'Trendy',
+      hookStatement: shots[0]?.dialogue || shots[0]?.onscreenText || shots[0]?.visual || '',
+      problemStatement: shots[1]?.visual || shots[1]?.dialogue || '',
+      patternInterruptStatement: shots[2]?.visual || shots[2]?.dialogue || '',
+      valueStatement: shots[3]?.dialogue || shots[3]?.onscreenText || '',
+      payoffStatement: shots[4]?.dialogue || shots[4]?.onscreenText || '',
+      ctaStatement: shots[5]?.dialogue || shots[5]?.onscreenText || '',
+      // Legacy compat
+      hookText: shots[0]?.dialogue || shots[0]?.onscreenText || '',
+      ctaText: shots[5]?.onscreenText || shots[5]?.dialogue || '',
     },
     tags: ['+2', 'careers', 'admissions', 'joy-university', analysis.category],
     createdAt: now,
