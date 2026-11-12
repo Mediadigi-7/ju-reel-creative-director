@@ -1,0 +1,169 @@
+{
+  "hlni": [
+    {
+      "insight": "Degree titles do not define the specific daily work or feedback loops; an audit of coursework components does.",
+      "audienceGap": "Students assume degree names imply a specific, uniform experience.",
+      "viewerChange": "Moves from passive comparison of labels to active, precise questioning of curriculum delivery.",
+      "supportType": "method",
+      "support": "The method relies on separating production, evaluation criteria, and feedback, which are independent of the degree name.",
+      "references": [],
+      "shotNumbers": [
+        2
+      ],
+      "payoffShotNumbers": [
+        3
+      ],
+      "payoff": "The audit reveals missing information, forcing the student to ask a concrete, actionable question."
+    }
+  ],
+  "id": "reel_1794220754917_x413rn8s",
+  "reelTitle": "B.Com vs BBA: The Coursework Audit",
+  "creativeAngle": "Trust-based methodology for evaluating academic requirements",
+  "objective": "Replace degree-name anxiety with a structured, data-driven comparison method.",
+  "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "SCENE",
+      "functions": [
+        "HOOK",
+        "PROBLEM"
+      ],
+      "name": "The Blank Audit",
+      "timestamp": "00:00 – 00:08",
+      "visual": "A student looks at two folders labeled B.Com and BBA. They pull out a blank grid titled 'Coursework Audit'.",
+      "dialogue": "Stuck between B.Com and BBA? Stop guessing based on titles.",
+      "onscreenText": "Coursework Audit",
+      "cameraPerformance": "Close-up on the student's face, then pan to the grid.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "SCENE",
+      "functions": [
+        "VALUE"
+      ],
+      "name": "Filling the Grid",
+      "timestamp": "00:08 – 00:20",
+      "visual": "The student writes in three columns: Work Product, Assessment Criterion, Feedback Type. Many boxes remain empty.",
+      "dialogue": "Use this audit. Map out the work product, assessment criteria, and available feedback. If the boxes are empty, you lack data.",
+      "onscreenText": "1. Work Product\n2. Criterion\n3. Feedback Type",
+      "cameraPerformance": "Top-down view of pen filling the table.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "SCENE",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Precise Question",
+      "timestamp": "00:20 – 00:28",
+      "visual": "The student points to a blank cell and writes a specific question in the margin.",
+      "dialogue": "Ask: What specific type of feedback is provided on the practical assignments in this module?",
+      "onscreenText": "What specific type of feedback is provided on the practical assignments in this module?",
+      "cameraPerformance": "Macro shot of the question being written.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, academic, minimalist desk aesthetic.",
+    "performance": "Calm, focused, and deliberate.",
+    "camera": "Stable, tripod-mounted shots.",
+    "editing": "Rhythmic cuts matched to writing actions.",
+    "sound": "Minimal ambient room tone, clear voiceover.",
+    "props": [
+      "Folders",
+      "Grid worksheet",
+      "Pen"
+    ],
+    "locations": [
+      "Study desk"
+    ],
+    "casting": "A student in a neutral, studious environment.",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Shifting from vague degree comparison to evaluating specific academic deliverables using a structured audit.",
+    "shootingPriority": [
+      "The grid fill action",
+      "The final specific question"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-09T10:39:14.917Z",
+  "updatedAt": "2026-11-09T10:39:14.917Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Trust",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "id": "trust_01",
+      "title": "The Coursework Audit",
+      "audienceGap": "Belief that degree titles define the exact daily workload and assessment methods.",
+      "basisId": "assessment_questions",
+      "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+      "viewerChange": "Replaces vague degree-choice anxiety with a structured method to evaluate specific course requirements.",
+      "concept": "A student compares two blank 'Coursework Audit' worksheets to realize they need more data than just the degree name.",
+      "mechanismKey": "assessment_questions",
+      "device": "Split-screen view of two worksheets where the student fills in columns for 'Work Product,' 'Criterion,' and 'Available Feedback.'",
+      "supportType": "method",
+      "support": "The method separates three different pieces of information; it does not assume particular course content.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Write the expected work product.",
+        "Ask what criterion is used to assess it.",
+        "Ask what feedback is available; mark unknown answers as questions."
+      ],
+      "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+      "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+      "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+      "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+      "demonstration": {
+        "input": "A three-column grid: Work Product, Assessment Criterion, Feedback Type.",
+        "observation": "Several cells remain blank because generic course descriptions don't provide this specific detail.",
+        "nextQuestion": "What specific type of feedback is provided on the practical assignments in this module?"
+      },
+      "treatment": "Informative"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_01",
+        "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+        "mechanismKey": "assessment_questions",
+        "device": "Split-screen view of two worksheets where the student fills in columns for 'Work Product,' 'Criterion,' and 'Available Feedback.'"
+      },
+      {
+        "channel": "Connection",
+        "id": "conn_01",
+        "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+        "mechanismKey": "task_question_journal",
+        "device": "A physical journal entry shown on camera capturing a specific hurdle during a sample exercise."
+      },
+      {
+        "channel": "Discovery",
+        "id": "disc_01",
+        "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+        "mechanismKey": "aggregate_counterexample",
+        "device": "Animated bar charts that 'deconstruct' into different sub-components."
+      }
+    ],
+    "contrast": "The selected mechanisms provide distinct ways to handle uncertainty: 'Trust' focuses on auditing workload (Assessment Audit), 'Connection' focuses on identifying personal research gaps (Task Journaling), and 'Discovery' focuses on mathematically demonstrating why labels are often misleading (Aggregate Counterexample)."
+  },
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-09T10:39:14.918Z"
+  }
+}

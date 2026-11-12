@@ -36,30 +36,30 @@ const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: 3,
-    title: 'Engineer the scroll-stopping hook',
+    title: 'Choose the strongest story concept',
     category: 'RETENTION HOOK',
-    subtitle: 'Formulating 00:00–00:04 curiosity gap & opening tension...',
+    subtitle: 'Finding a relevant opening for this idea and audience...',
     targetProgress: 42,
   },
   {
     id: 4,
-    title: 'Build problem and pattern interrupt',
+    title: 'Develop the narrative',
     category: 'STORY ARCHITECTURE',
-    subtitle: 'Confronting real campus choices & disrupting passive scroll...',
+    subtitle: 'Choosing scenes and turning points that serve the story...',
     targetProgress: 56,
   },
   {
     id: 5,
     title: 'Form the retention structure',
     category: 'PROGRESSIVE REVEAL',
-    subtitle: 'Assembling 4 escalating reveals without premature spoilers...',
+    subtitle: 'Balancing insight, pacing and a satisfying outcome...',
     targetProgress: 70,
   },
   {
     id: 6,
-    title: 'Develop value, payoff and CTA',
+    title: 'Develop useful insight and resolution',
     category: 'CONVERSION BEAT',
-    subtitle: 'Synthesizing actionable takeaway & single high-intent next step...',
+    subtitle: 'Resolving the story; adding a next action only when useful...',
     targetProgress: 82,
   },
   {
@@ -165,13 +165,13 @@ export const GenerationLoader: React.FC<GenerationLoaderProps> = ({
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8B1721]/5 border border-[#8B1721]/15 text-[#8B1721]">
               <span className="w-2 h-2 rounded-full bg-[#8B1721] animate-pulse" />
               <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.16em]">
-                AI Creative-Production Pipeline
+                Creating your reel
               </span>
             </div>
 
             {/* Bounded Progress Metric */}
             <div className="flex items-center gap-1.5 font-mono text-xs text-stone-500 font-semibold">
-              <span className="text-stone-400 text-[10px] tracking-wider uppercase font-sans">Progress</span>
+              <span className="text-stone-400 text-[10px] tracking-wider uppercase font-sans">Estimated progress</span>
               <span className={`text-sm font-bold transition-colors duration-300 ${isFinishing ? 'text-emerald-700 font-extrabold' : 'text-stone-900'}`}>
                 {Math.round(progress)}%
               </span>

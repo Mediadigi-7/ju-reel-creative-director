@@ -1,7 +1,6 @@
 import React from 'react';
 import { Target, ShieldCheck } from 'lucide-react';
 import { CreativeSummary } from '../../shared/types.js';
-import { JOY_UNIVERSITY_VERIFIED_FACTS } from '../../shared/knowledgeBase.js';
 
 interface CreativeSummaryCardProps {
   summary: CreativeSummary;
@@ -43,30 +42,21 @@ export const CreativeSummaryCard: React.FC<CreativeSummaryCardProps> = ({ summar
           <div>
             <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-400 mb-2">
               <ShieldCheck className="w-3 h-3 text-stone-400 flex-shrink-0" />
-              <span>Institutional Baseline Verification</span>
+              <span>Factual Review</span>
             </span>
             <p className="text-xs text-stone-600 leading-relaxed">
-              All narrative elements comply strictly with verified institutional facts:
+              Before filming, check the factual claims used in this storyboard against their official sources.
             </p>
             <ul className="mt-2 space-y-1.5 text-xs text-stone-600 font-medium">
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 bg-stone-400 rounded-full" />
-                <span>{JOY_UNIVERSITY_VERIFIED_FACTS.institution} — {JOY_UNIVERSITY_VERIFIED_FACTS.location}</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 bg-stone-400 rounded-full" />
-                <span>{JOY_UNIVERSITY_VERIFIED_FACTS.campusSize} · {JOY_UNIVERSITY_VERIFIED_FACTS.legacyYears}</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 bg-stone-400 rounded-full" />
-                <span>{JOY_UNIVERSITY_VERIFIED_FACTS.recognition} · AISHE: {JOY_UNIVERSITY_VERIFIED_FACTS.aisheCode}</span>
-              </li>
+              <li>Confirm the institution, programme and academic year for each claim.</li>
+              <li>Keep proposed programmes clearly marked as proposed.</li>
+              <li>Record the official page or document supporting the exact claim.</li>
             </ul>
           </div>
 
           <div className="mt-4 pt-3 border-t border-stone-100">
             <span className="text-[11px] text-stone-400 font-normal">
-              Confidence standard: Zero fabricated placement statistics or salary claims.
+              AI output and offline samples require editorial verification before publication.
             </span>
           </div>
         </div>

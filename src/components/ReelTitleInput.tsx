@@ -1,23 +1,18 @@
+import { CHANNEL_NAMES, CHANNEL_STRATEGIES, type ContentChannel } from '../../shared/channels.js';
+import { OFFLINE_IDEAS, OFFLINE_SAMPLE_CHANNELS, matchOfflineIdea, supportsOffline, OFFLINE_CHANNEL_UNSUPPORTED } from '../../shared/offline/index.js';
 import React, { useState, useRef, useEffect } from 'react';
 import { ArrowRight, ChevronDown, Check, Sparkles, AlertCircle, Key } from 'lucide-react';
 import { CREATIVE_DIRECTIONS } from '../../shared/knowledgeBase.js';
-import { CreativeDirection, LanguageOption } from '../../shared/types.js';
+import { CreativeTreatment, LanguageOption } from '../../shared/types.js';
 
 interface ReelTitleInputProps {
-  onGenerate: (title: string, direction: CreativeDirection, language: LanguageOption) => void;
+  onGenerate: (title: string, direction: CreativeTreatment, language: LanguageOption, channel?: ContentChannel) => void;
   isLoading: boolean;
   hasApiKey?: boolean;
   onOpenSettings?: () => void;
 }
 
-const TESTED_IDEAS: string[] = [
-  'I finished +2... now what?',
-  '3 mistakes students make after +2',
-  'Engineering is not for everyone',
-  'What should I study after Commerce?',
-  'AI will change these careers',
-  'How do I choose the right college?',
-];
+const TESTED_IDEAS = OFFLINE_IDEAS.map(idea => idea.title);
 
 interface LanguageSelectOption {
   id: LanguageOption;
@@ -40,7 +35,8 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
   onOpenSettings,
 }) => {
   const [title, setTitle] = useState('');
-  const [direction, setDirection] = useState<CreativeDirection>('Informative');
+  const [channel, setChannel] = useState<ContentChannel>('Connection');
+  const [direction, setDirection] = useState<CreativeTreatment>('Auto');
   const [language, setLanguage] = useState<LanguageOption>('English');
   const [error, setError] = useState<string | null>(null);
 
@@ -66,13 +62,6 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const isTestedIdea = (userTitle: string): boolean => {
-    const clean = userTitle.trim().toLowerCase().replace(/[?.,!']/g, '');
-    return TESTED_IDEAS.some(
-      (idea) => idea.toLowerCase().replace(/[?.,!']/g, '') === clean
-    );
-  };
-
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     if (isLoading) return; // Prevent duplicate generation requests
@@ -84,9 +73,9 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
     }
 
     // If user enters a custom topic (not one of the 6 tested sample ideas) and has no API key:
-    if (!hasApiKey && !isTestedIdea(cleanTitle)) {
+    if (!hasApiKey && !supportsOffline(cleanTitle, language)) {
       setError(
-        'API Key Required: To generate custom topics outside the 6 sample ideas, please configure your free Google Gemini or OpenAI API key.'
+        'Connect an AI provider to create a reel from your own idea, or choose a sample below to try an offline template.'
       );
       if (onOpenSettings) {
         onOpenSettings();
@@ -94,10 +83,15 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
       return;
     }
 
+    const offlineIdea = matchOfflineIdea(cleanTitle);
+    if (!hasApiKey && offlineIdea && OFFLINE_SAMPLE_CHANNELS[offlineIdea.id] !== channel) {
+      setError(OFFLINE_CHANNEL_UNSUPPORTED);
+      return;
+    }
     setError(null);
     setToneMenuOpen(false);
     setLangMenuOpen(false);
-    onGenerate(cleanTitle, direction, language);
+    onGenerate(cleanTitle, direction, language, channel);
   };
 
   const handleKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -111,6 +105,8 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
   const handleChipClick = (idea: string) => {
     if (isLoading) return;
     setTitle(idea);
+    const sample = matchOfflineIdea(idea);
+    if (sample) setChannel(OFFLINE_SAMPLE_CHANNELS[sample.id]);
     setError(null);
     inputRef.current?.focus();
   };
@@ -134,12 +130,24 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
 
         {/* Subtitle */}
         <p className="mt-3 text-sm sm:text-base text-[#5F6368] max-w-md font-normal">
-          One title → one complete 6-shot production storyboard.
+          Turn an idea into a story-led shooting plan with dialogue, visuals, and camera directions. Edit the draft, save it, then export your shooting plan.
         </p>
       </div>
 
+      <p className="mb-4 text-sm text-stone-600">
+        {hasApiKey ? 'AI configured. Enter your idea below.' : 'Try a sample without an API key, or connect AI for your own ideas.'}
+        {!hasApiKey && onOpenSettings && <button type="button" onClick={onOpenSettings} className="ml-2 font-semibold text-[#8c1618] underline underline-offset-4">Connect AI</button>}
+      </p>
+      <fieldset className="w-full mb-5 text-left">
+        <legend className="mb-2 text-sm font-semibold text-stone-700">Channel goal</legend>
+        <div className="flex flex-wrap gap-2">
+          {CHANNEL_NAMES.map(name => <button key={name} type="button" aria-pressed={channel === name} disabled={isLoading} onClick={() => setChannel(name)} className={`px-4 py-2 rounded-lg text-sm border ${channel === name ? 'bg-stone-900 text-white border-stone-900' : 'bg-white text-stone-700 border-stone-200'}`}>{name}</button>)}
+        </div>
+        <p className="mt-2 text-xs text-stone-500">{CHANNEL_STRATEGIES[channel].goal}</p>
+      </fieldset>
       {/* 2. Central Search Input Bar */}
       <form onSubmit={handleSubmit} className="w-full flex flex-col items-center">
+        <label htmlFor="reel-title-input" className="self-start mb-2 text-sm font-semibold text-stone-700">What is your reel about?</label>
         <div className="w-full relative group">
           <div
             className={`w-full flex items-center bg-white rounded-full border transition-all duration-200 shadow-[0_1px_6px_rgba(32,33,36,0.08)] hover:shadow-[0_2px_12px_rgba(32,33,36,0.12)] ${
@@ -161,19 +169,10 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
               disabled={isLoading}
               placeholder='e.g., "What should I study after +2?"'
               autoFocus
-              className="w-full py-4 pl-6 pr-14 sm:py-4.5 sm:pl-7 sm:pr-16 text-base sm:text-lg text-[#1F1F1F] placeholder-[#9AA0A6] bg-transparent outline-none rounded-full font-medium"
+              className="w-full py-4 pl-6 pr-6 sm:py-4.5 sm:pl-7 sm:pr-7 text-base sm:text-lg text-[#1F1F1F] placeholder-[#9AA0A6] bg-transparent outline-none rounded-full font-medium"
             />
 
-            {/* Right-aligned Circular Action Button with Brand Color #8c1618 */}
-            <button
-              type="submit"
-              disabled={isLoading || !title.trim()}
-              className="absolute right-2 sm:right-2.5 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#8c1618] hover:bg-[#731214] active:scale-95 text-white flex items-center justify-center transition-all duration-150 shadow-sm hover:shadow disabled:opacity-40 disabled:hover:bg-[#8c1618] disabled:cursor-not-allowed flex-shrink-0"
-              title="Generate Storyboard"
-              aria-label="Generate Storyboard"
-            >
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
-            </button>
+
           </div>
 
           {error && (
@@ -189,12 +188,17 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs flex-shrink-0 transition-colors shadow-xs cursor-pointer"
                 >
                   <Key className="w-3.5 h-3.5" />
-                  <span>Configure API Key</span>
+                  <span>Connect AI</span>
                 </button>
               )}
             </div>
           )}
         </div>
+
+        <button type="submit" disabled={isLoading || !title.trim()} className="mt-4 w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-xl bg-[#8c1618] text-white font-semibold hover:bg-[#731214] disabled:opacity-40 disabled:cursor-not-allowed">
+          {isLoading ? 'Creating your reel…' : hasApiKey ? 'Create reel' : 'Try sample reel'}
+          <ArrowRight className="w-4 h-4" />
+        </button>
 
         {/* 3. Secondary Options (Tone & Language Low-Profile Pill Dropdowns) */}
         <div className="mt-4 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 w-full">
@@ -213,7 +217,7 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
                   : 'border-[#E0E0E0] bg-white text-[#3C4043] hover:border-[#DADCE0] hover:bg-[#F8F9FA] shadow-xs'
               }`}
             >
-              <span className="text-[#70757A] font-normal">Creative Tone:</span>
+              <span className="text-[#70757A] font-normal">Style:</span>
               <span className="font-semibold text-[#1F1F1F]">{direction}</span>
               <ChevronDown
                 className={`w-3.5 h-3.5 text-[#70757A] transition-transform duration-200 ${
@@ -227,7 +231,7 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
                 <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#70757A] border-b border-stone-100">
                   Select Creative Tone
                 </div>
-                {CREATIVE_DIRECTIONS.map((tone) => {
+                {(['Auto', ...CREATIVE_DIRECTIONS] as const).map((tone) => {
                   const isSelected = tone === direction;
                   return (
                     <button
@@ -243,7 +247,7 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
                           : 'text-[#3C4043] hover:bg-[#F1F3F4] font-medium'
                       }`}
                     >
-                      <span>{tone}</span>
+                      <span>{tone === 'Auto' ? 'Let AI choose' : tone}</span>
                       {isSelected && <Check className="w-4 h-4 text-[#8c1618]" />}
                     </button>
                   );
@@ -267,7 +271,7 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
                   : 'border-[#E0E0E0] bg-white text-[#3C4043] hover:border-[#DADCE0] hover:bg-[#F8F9FA] shadow-xs'
               }`}
             >
-              <span className="text-[#70757A] font-normal">Spoken Language:</span>
+              <span className="text-[#70757A] font-normal">Language:</span>
               <span className="font-semibold text-[#1F1F1F]">
                 {LANGUAGE_OPTIONS.find((l) => l.id === language)?.nativeLabel || language}
               </span>
@@ -313,20 +317,21 @@ export const ReelTitleInput: React.FC<ReelTitleInputProps> = ({
         </div>
       </form>
 
-      {/* 4. Prompt Suggestion Chips ("Try a tested idea") */}
+      {/* 4. Prompt Suggestion Chips ("Choose an offline sample") */}
       <div className="mt-12 sm:mt-14 w-full flex flex-col items-center">
         <div className="flex items-center gap-2 mb-4">
           <Sparkles className="w-3.5 h-3.5 text-[#8c1618]" />
           <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#70757A]">
-            Try a tested idea
+            Choose an offline sample
           </span>
           {!hasApiKey && (
             <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
-              6 Ideas Work Offline
+              Offline templates
             </span>
           )}
         </div>
 
+        <p className="mb-3 text-xs text-stone-500">Each fixed sample selects its matching channel goal.</p>
         {/* Balanced Grid of Chips without truncation */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 w-full max-w-xl">
           {TESTED_IDEAS.map((idea) => {

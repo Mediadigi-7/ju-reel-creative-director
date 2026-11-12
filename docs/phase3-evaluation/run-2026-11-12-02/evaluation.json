@@ -1,0 +1,17 @@
+{
+  "evaluatedAt": "2026-11-12T04:19:52.583Z",
+  "assessor": "Assistant independent editorial reading of actual Gemini outputs; not generator self-scoring or application approval",
+  "ratingScale": "0 missing, 1 poor, 2 weak, 3 partial, 4 strong, 5 exceptional",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": false,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

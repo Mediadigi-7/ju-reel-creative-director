@@ -104,7 +104,7 @@ export const FrameworkMetadataCard: React.FC<FrameworkMetadataCardProps> = ({
           </span>
           <span className="text-stone-300 text-xs">—</span>
           <span className="text-xs text-stone-500 font-medium">
-            6 elements the viewer experiences
+            Narrative notes — functions may combine or move
           </span>
         </div>
         <span
@@ -116,7 +116,7 @@ export const FrameworkMetadataCard: React.FC<FrameworkMetadataCardProps> = ({
 
       {/* Blueprint Grid */}
       <div className="bg-white border border-stone-200/80 rounded-2xl overflow-hidden shadow-2xs divide-y divide-stone-100">
-        {STAGES.map((stage) => {
+        {STAGES.filter(stage => typeof metadata?.[stage.field] === 'string' && String(metadata[stage.field]).trim()).map((stage) => {
           const content = metadata?.[stage.field];
           const displayContent = (typeof content === 'string' && content.trim())
             ? content.trim()

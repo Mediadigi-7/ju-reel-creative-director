@@ -9,9 +9,11 @@
     "server:dev": "tsx watch server/index.ts",
     "build": "tsc && vite build",
     "server:start": "tsx server/index.ts",
-    "test": "tsx server/testSuite.ts",
+    "test": "tsx server/testSuite.ts && tsx server/offlineCatalogueTestSuite.ts && tsx server/ideaLibraryTestSuite.ts && tsx server/channelStrategyTestSuite.ts && tsx server/providerGenerationTestSuite.ts && node scripts/verifyStagingTarget.test.mjs && tsx server/outputRepairTestSuite.ts && tsx server/flexibleFrameworkTestSuite.ts && tsx server/creativeRulesTestSuite.ts && tsx src/services/interactionTestSuite.ts && tsx server/hlniTestSuite.ts && tsx server/creativeEvaluationTestSuite.ts && tsx server/conceptPlannerTestSuite.ts && tsx server/editorialReviewTestSuite.ts && tsx server/requestBudgetTestSuite.ts && tsx src/services/apiTestSuite.ts && tsx server/httpReliabilityTestSuite.ts",
     "start": "node dist-server/index.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:offline": "tsx server/offlineCatalogueTestSuite.ts",
+    "validate:live": "tsx scripts/liveChannelValidation.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",

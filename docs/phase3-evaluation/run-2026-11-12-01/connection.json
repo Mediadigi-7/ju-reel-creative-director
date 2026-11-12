@@ -1,0 +1,170 @@
+{
+  "hlni": [
+    {
+      "insight": "An appealing option and an available option are different questions.",
+      "audienceGap": "Students assume that because they like a subject, it is a core feature of the degree program they are considering.",
+      "viewerChange": "Encourages students to move from passive preference to active verification of curriculum documents.",
+      "supportType": "method",
+      "support": "The method uses verification as a logical barrier to prevent assumption-based decision making.",
+      "references": [],
+      "shotNumbers": [
+        1,
+        2,
+        3
+      ],
+      "payoffShotNumbers": [
+        3
+      ],
+      "payoff": "The student transitions from a vague preference to a concrete, actionable question."
+    }
+  ],
+  "id": "reel_1794456889327_yi0l655i",
+  "reelTitle": "B.Com vs BBA Preference Reality Check",
+  "creativeAngle": "Preference-Constraint-Verification method",
+  "objective": "Teach students to distinguish between personal topic preferences and verified program availability.",
+  "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "PROBLEM",
+      "functions": [
+        "PROBLEM"
+      ],
+      "name": "Student Writing Preference",
+      "timestamp": "00:00 – 00:08",
+      "visual": "A student sits at a desk with a notepad, writing 'Startup Law' under a 'Preference' header.",
+      "dialogue": "Trying to pick between B.Com and BBA? It is easy to confuse what you want with what is actually offered.",
+      "onscreenText": "Example: Preference: Startup Law. Confirmed: [ ]",
+      "cameraPerformance": "Close-up on the notepad, steady hand.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "VALUE",
+      "functions": [
+        "VALUE"
+      ],
+      "name": "Method Reveal",
+      "timestamp": "00:08 – 00:20",
+      "visual": "The student draws a box next to 'Confirmed' and leaves it empty. They look at the camera.",
+      "dialogue": "Just because you love a topic doesn't mean the program includes it. Treat your preference as unverified until you check the official list.",
+      "onscreenText": "Preference != Availability",
+      "cameraPerformance": "Mid-shot, natural and direct.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "PAYOFF",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "Practical Next Step",
+      "timestamp": "00:20 – 00:28",
+      "visual": "Student circles the empty box on their notepad, then looks up thoughtfully.",
+      "dialogue": "Ask yourself: Where is this module listed in the current curriculum? That is your next verification step.",
+      "onscreenText": "Where is this module listed in the current curriculum?",
+      "cameraPerformance": "Close-up on the final question written on the notepad.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, educational, student-desk aesthetic.",
+    "performance": "Calm, relatable, and authentic.",
+    "camera": "Stable, hand-held feel, tight framing on the notepad.",
+    "editing": "Simple cuts, focus on the writing action.",
+    "sound": "Minimal ambient sound, clear voiceover.",
+    "props": [
+      "Notepad",
+      "Pen"
+    ],
+    "locations": [
+      "Study desk"
+    ],
+    "casting": "A student looking at a potential degree choice.",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Students often conflate their interests with program curriculum; the video teaches a verification method to check availability.",
+    "shootingPriority": [
+      "Close-up of the notepad",
+      "Student interaction with the checklist"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-12T04:14:49.327Z",
+  "updatedAt": "2026-11-12T04:14:49.327Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Connection",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "id": "conn_constraint_02",
+      "title": "The Preference Reality Check",
+      "audienceGap": "Students confuse their personal preference for a topic with the actual availability of that topic in a program.",
+      "basisId": "constraint_check",
+      "hlni": "An appealing option and an available option are different questions. Unknown requirements should be recorded as checks rather than assumed to be satisfied.",
+      "viewerChange": "Helps students distinguish between what they like and what they have confirmed is available.",
+      "concept": "A student lists 'Entrepreneurship' as a preference but marks it as 'Unverified' in their checklist.",
+      "mechanismKey": "Preference-Constraint-Verification",
+      "device": "A checklist overlay on the screen as the student speaks.",
+      "supportType": "method",
+      "support": "The method distinguishes a desire from confirmation; it asserts no particular institutional rule.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Name the option you prefer.",
+        "List the actual requirements you need to check and mark unknowns.",
+        "Verify an unknown before treating the option as available."
+      ],
+      "interpretationRule": "Use an unknown requirement as the next verification task; preference alone is not confirmation.",
+      "visibleProof": "A preference card moves to a provisional list until one concrete requirement is checked.",
+      "payoff": "Use an unknown requirement as the next verification task; preference alone is not confirmation.",
+      "limitations": "Never invent eligibility rules, admission availability or prerequisites.",
+      "demonstration": {
+        "input": "Student writes 'Entrepreneurship' on a notepad.",
+        "visibleInput": "Example: Preference: Startup Law. Confirmed: [ ]",
+        "observation": "Realizing the 'preference' remains unchecked in the official course list.",
+        "nextQuestion": "Where is this module listed in the current curriculum?"
+      },
+      "treatment": "Informative"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_assessment_01",
+        "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+        "mechanismKey": "Assessment-Question-Audit",
+        "device": "A split-screen showing a student filling out a physical worksheet to identify missing information."
+      },
+      {
+        "channel": "Connection",
+        "id": "conn_constraint_02",
+        "hlni": "An appealing option and an available option are different questions. Unknown requirements should be recorded as checks rather than assumed to be satisfied.",
+        "mechanismKey": "Preference-Constraint-Verification",
+        "device": "A checklist overlay on the screen as the student speaks."
+      },
+      {
+        "channel": "Discovery",
+        "id": "disc_journal_02",
+        "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+        "mechanismKey": "Task-Sticking-Point-Journal",
+        "device": "A fast-paced 'mind map' reveal of a student's research process."
+      }
+    ],
+    "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Assessment-Question-Audit; Connection = constraint_check / Preference-Constraint-Verification; Discovery = task_question_journal / Task-Sticking-Point-Journal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+  },
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-12T04:14:49.327Z"
+  }
+}

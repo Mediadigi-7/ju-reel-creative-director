@@ -1,3 +1,4 @@
+import { editorialLabel } from '../../shared/hlni.js';
 import React, { useState } from 'react';
 import {
   Search,
@@ -110,11 +111,12 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-stone-100">
           <div>
             <span className="text-[10px] font-bold uppercase tracking-widest text-stone-400 block mb-0.5">
-              Archive & History
+              Your collection
             </span>
             <h1 className="text-xl font-bold text-stone-900 tracking-tight">
-              Reel Production Library
+              Saved reels
             </h1>
+            <p className="mt-1 text-xs text-stone-500">Saved in this browser. Export a PDF or share a link to keep a copy elsewhere.</p>
           </div>
           <span className="text-xs font-mono text-stone-500 bg-stone-100 px-2.5 py-1 rounded w-fit">
             {projects.length} {projects.length === 1 ? 'project' : 'projects'}
@@ -160,7 +162,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
             <p className="text-xs text-stone-500 mt-1">
               {searchQuery
                 ? `No saved reels match "${searchQuery}".`
-                : 'Your library is currently empty. Generate a reel to get started.'}
+                : 'Create your first reel, then choose Save reel to keep it here.'}
             </p>
           </div>
         ) : (
@@ -190,10 +192,14 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                   </div>
 
                   <p className="text-xs text-stone-600 line-clamp-1">
-                    {latestVersion?.creativeAngle || 'Production ready 6-shot storyboard'}
+                    {latestVersion?.creativeAngle || 'Storyboard draft'}
                   </p>
 
+                  {latestVersion && <p className="mt-1 text-xs text-stone-500">{editorialLabel(latestVersion)}</p>}
+
                   <div className="flex flex-wrap items-center gap-2 mt-2.5 text-[11px] font-mono text-stone-400">
+                    <span>{latestVersion?.channel || 'Channel not set'}</span>
+                    <span>·</span>
                     <span>{new Date(project.updatedAt).toLocaleDateString()}</span>
                     <span>·</span>
                     <span>v{latestVersion?.version || 1}.0</span>

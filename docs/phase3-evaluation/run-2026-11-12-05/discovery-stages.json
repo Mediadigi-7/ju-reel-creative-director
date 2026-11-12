@@ -1,0 +1,58 @@
+[
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 3704,
+    "remainingMs": 46296,
+    "at": "2026-11-12T04:35:26.106Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Concept delivery",
+    "elapsedMs": 1,
+    "remainingMs": 46295,
+    "at": "2026-11-12T04:35:26.107Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 3019,
+    "remainingMs": 43276,
+    "at": "2026-11-12T04:35:29.126Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 2,
+    "remainingMs": 43274,
+    "at": "2026-11-12T04:35:29.128Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "attempted",
+    "elapsedMs": 0,
+    "remainingMs": 43274,
+    "at": "2026-11-12T04:35:29.128Z"
+  },
+  {
+    "stage": "critique",
+    "outcome": "complete",
+    "elapsedMs": 1340,
+    "remainingMs": 41934,
+    "at": "2026-11-12T04:35:30.468Z"
+  },
+  {
+    "stage": "advisory_rewrite",
+    "outcome": "complete",
+    "elapsedMs": 3170,
+    "remainingMs": 38763,
+    "at": "2026-11-12T04:35:33.639Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 1,
+    "remainingMs": 38762,
+    "at": "2026-11-12T04:35:33.640Z"
+  }
+]

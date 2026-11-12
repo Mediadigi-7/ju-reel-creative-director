@@ -1,0 +1,66 @@
+{
+  "assessor": "Assistant editorial assessment of complete real outputs; not generator self-scoring or authenticated human approval",
+  "ratingScale": "0 missing, 1 poor, 2 weak, 3 partial, 4 strong, 5 exceptional; audience-relative editorial judgement",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {"hlni": 2, "differentiation": 1, "coherence": 3, "payoff": 2, "production": 3, "originality": 1},
+      "triggers": {"materialFactualError": false, "missingMeaningfulInsight": true, "unworkableProduction": false},
+      "evidence": {
+        "hlni": "Shots 2–3 say to compare modules, skills and tasks, but show no concrete assessment comparison or decision rule. Shot 2 presents Financial Analysis in both documents without supplied source documents; metadata calls module comparison the only accurate way to assess fit. This is not a verified, sufficiently specific new insight.",
+        "differentiation": "Desk + printed lists + highlighted overlap + confident student is the same core execution used by Connection and Discovery. Trust has no additional verified evidence layer.",
+        "coherence": "The stereotype → comparison → advice sequence stays on topic. However, the highlighted example does not lead to a demonstrated decision, so progression remains largely verbal repetition.",
+        "payoff": "Shot 3 repeats map out the tasks and see which fits your interests; the smile does not show what the comparison changed or why a particular criterion matters.",
+        "production": "All production fields are present, timecodes cover 28 seconds, and 68 words are plausible but leave limited pause room. The overlay requires legible, genuine documents which have not been supplied. Treat it as a pending evidence asset, not impossible filming.",
+        "originality": "Everyone says... plus paper highlighting and a reassuring close repeats the current run and earlier generic executions. It does not transfer the reference's evidence-led investigation into a fresh concept."
+      },
+      "automaticTriggerExplanation": "Missing meaningful insight: the actual scenes do not go beyond a familiar check-the-syllabus instruction and an unsupported apparent overlap example. No material factual falsehood is asserted as proven; lack of support is not proof of falsity.",
+      "revisions": [
+        "Shots 1–2: turn the assumption into a testable question and use a real, named, versioned course/assessment extract before displaying a subject in both programmes. If evidence is unavailable, use a clearly labelled question worksheet instead of fake syllabus proof.",
+        "Shot 2: demonstrate an operational comparison such as task → expected output → grading/feedback criteria. Show one concrete difference or implication the viewer can apply; merely listing compare modules does not do this.",
+        "Shot 3: make the result change a student's next question or choice on screen. Remove the metadata claim that this is the only accurate method; qualify the method's scope.",
+        "Choose a distinct fresh evidence concept rather than retaining the shared desk/highlighter setup. Any shot count, function order or treatment is acceptable if it delivers the required quality."
+      ]
+    },
+    {
+      "channel": "Connection",
+      "ratings": {"hlni": 3, "differentiation": 1, "coherence": 3, "payoff": 2, "production": 3, "originality": 1},
+      "triggers": {"materialFactualError": false, "missingMeaningfulInsight": false, "unworkableProduction": false},
+      "evidence": {
+        "hlni": "Shot 2 improves on generic advice by naming assessment tasks and asking financial statements or business pitches. That is a useful partial comparison question, but no exercise, record of responses or way to interpret the result is shown. It remains below 4/5.",
+        "differentiation": "Two students are present in Shot 1, but all dialogue is an undifferentiated explanatory voice; they never interact or test anything. The same lists/highlighter/advice device could be relabelled Trust or Discovery.",
+        "coherence": "The script consistently moves from stereotypes to curriculum content, but the second student's role and the transition from task question to confident selection are undeveloped.",
+        "payoff": "Shot 3 says focus on what you will do every day while the student smiles and holds a syllabus. Nothing demonstrates what they discovered about themselves or how their decision changed.",
+        "production": "Two actors, notebooks and an over-the-shoulder view are straightforward. All fields and 28 seconds of timecodes are present; 65 words fit provisionally. Speakers and meaningful reactions need definition, and real module/assignment assets must be sourced.",
+        "originality": "The same Everyone says opening and curriculum-comparison ending recur across the run. Adding a second actor alone is not a fresh relational concept."
+      },
+      "automaticTriggerExplanation": "No hard trigger is asserted: there is a partial useful task-comparison idea, no proven material factual error, and no impossible production instruction. It still fails the total, HLNI floor and differentiation floor. Support language about learning style should be qualified rather than presented as a validated fit test.",
+      "revisions": [
+        "Shots 1–2: give the students distinct goals or a real interpersonal dilemma, then let the interaction reveal a practical tool. A conversation or experiment is one option, not a compulsory channel format.",
+        "Shot 2: make the task comparison usable: try or inspect representative work, record what engaged/confused each student and what they would practise again, then compare the notes. Do not label accounting exclusively B.Com or marketing exclusively BBA.",
+        "Shot 3: show the result changing a student's next action, such as a concrete question for the course team or an evidence-informed shortlist. Keep the friendship/recognition payoff connected to that useful result.",
+        "Replace the cloned opening and visual device. Treat a brief task trial as exploration, not a validated aptitude or learning-style test, and retain the full-curriculum qualification."
+      ]
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {"hlni": 2, "differentiation": 1, "coherence": 2, "payoff": 2, "production": 3, "originality": 1},
+      "triggers": {"materialFactualError": false, "missingMeaningfulInsight": true, "unworkableProduction": false},
+      "evidence": {
+        "hlni": "Shots 2–3 instruct the viewer to compare modules and choose by task without revealing a specific unexpected fact or demonstrating a usable new method. The claimed visible overlap has no actual lists or references behind it.",
+        "differentiation": "The two students, papers, highlighted overlap and confident final look repeat the other channels. No discovery-specific curiosity mechanism, prediction or educational surprise is developed; a quiz itself is optional, but a distinct discovery experience is missing.",
+        "coherence": "Shot 2 jumps from core topics overlap to That's where your real interest lies. Overlap does not establish a particular student's interest, so the central inference is unsupported.",
+        "payoff": "The final advice repeats the premise rather than resolving an opening question with a revealing answer and explaining what the viewer should understand differently.",
+        "production": "All production fields are present, three consecutive timecodes total 28 seconds, and 56 words leave useful pause room. The macro evidence view needs actual legible source content. Practical filming is possible once the assets and a meaningful reveal are defined.",
+        "originality": "Everyone says... and compare modules, not stereotypes reproduce the same concept. The PATTERN_INTERRUPT tag on Shot 2 does not itself create a surprising interruption or reveal."
+      },
+      "automaticTriggerExplanation": "Missing meaningful insight: no identifiable surprising educational information or operational method is delivered. No academic claim is declared proven false; the document-overlap claim is unsupported. The inference about interest is a reasoning flaw, not a verified material factual error.",
+      "revisions": [
+        "Shot 1: pose an answerable curiosity gap, prediction, contrast or other discovery opportunity. The approved quiz is a quality example, not a required device.",
+        "Shot 2: reveal something specific and supported, then explain it. A subject-overlap reveal needs real curriculum references; alternatively demonstrate a concrete method that changes what the viewer notices.",
+        "Shots 2–3: remove the claim that overlap reveals personal interest. Explain the narrower valid implication, then show how that changes the viewer's comparison or next question.",
+        "Make the ending answer the opening and connect the reveal to a useful decision. Keep any next action purposeful and optional; do not add a CTA merely to fill a narrative stage."
+      ]
+    }
+  ]
+}

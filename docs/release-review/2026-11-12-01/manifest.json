@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-11-12T04:43:17.528Z",
+  "sourceSha256": {
+    "shared/offline/catalogue.ts": "a594f7b30524e5d9975b500af6f87d1dd16d0bbe3e5407d1205c6d811fabfa32",
+    "shared/offline/index.ts": "938be91fbacdd6d0174eeacf00bb354425a70ebbb51a072fa8b1314d23948cba",
+    "shared/offline/validate.ts": "c5b2b06dcdeb193c239bacdf06cb26aa047a28565ea7b30c404a78bc5de35e90",
+    "shared/offline/ta.ts": "66109c7985137b9875577cd25c48afa7fa3b4a58e9348115e7907ba5307659f9",
+    "shared/offline/te.ts": "81718d98860109fd8a32e4fe02650152bcc67e1a97e36eea340f95573d8bdf59",
+    "shared/offline/ml.ts": "8a4c8d0baf2a8f84cf533065f547bbe1a4266a209c80783d97e5ab1604e8acbe",
+    "shared/offline/hi.ts": "bf01e08b9466c0225f1539b31a0e14284e237fc1132e77a15f05e95ff558895b",
+    "shared/knowledgeBase.ts": "55e4926c4d4d31105d6a3519d05091bc1f239e914131aae17fecb6519ef8252e",
+    "shared/proposedProgrammes.ts": "3fd6fc7410615d4eb3ca78dfd66d744e988c1f352c0d8b7cd8ad66f170c7c444",
+    "src/components/CreativeSummaryCard.tsx": "e0a2cec3b6e5d248be2ca5612e60e5e2a84dd38ed6a42220ad0d338951a7b5b1",
+    "src/App.tsx": "db812215d61c21d260ebc3fae4b04902210a11e86b136c1e6b08bf841435dbf3"
+  },
+  "totalVersions": 90,
+  "technicalPassed": 90,
+  "editoriallyApproved": 0,
+  "sourceWebsite": "https://joyuniversity.edu.in/",
+  "sourceAccess": "Blocked: managed proxy CONNECT 403; no website claims certified",
+  "productionChanged": false,
+  "stagingChanged": false
+}

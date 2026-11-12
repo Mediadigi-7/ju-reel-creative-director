@@ -1,0 +1,536 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A degree title is not an assessment method; task-level evaluation criteria define the actual learning experience.",
+          "audienceGap": "Students assume that degree names like B.Com or BBA inherently define the type of work or feedback they will receive.",
+          "viewerChange": "Learns to isolate assessment criteria from titles, enabling precise questions during course selection.",
+          "supportType": "method",
+          "support": "The three-column audit method forces the student to look for objective assessment standards rather than relying on program branding.",
+          "references": [
+            "Shot 2",
+            "Shot 3"
+          ],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The method turns abstract comparisons into a concrete inquiry about rubrics and feedback, which is the actual differentiator for a student's day-to-day academic experience."
+        }
+      ],
+      "id": "reel_1794456965399_wze6v5",
+      "reelTitle": "The Assessment Audit",
+      "creativeAngle": "Auditing task sheets to separate degree titles from evaluation methods",
+      "objective": "Help students move past degree labels by focusing on actual assessment criteria",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "Initial Confusion",
+          "timestamp": "00:00 – 00:08",
+          "visual": "A student looking at a course booklet, looking torn between B.Com and BBA labels.",
+          "dialogue": "Choosing between B.Com and BBA based on titles alone is a trap. The degree name doesn't tell you how you will actually be graded.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close up on the student, shifting focus to the booklet.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Audit Method",
+          "timestamp": "00:08 – 00:20",
+          "visual": "Student holds a three-column worksheet. They fill in a row for a sample task.",
+          "dialogue": "Try this audit. Write the task, then identify the assessment criteria and feedback. If you can't fill those in, you have your question.",
+          "onscreenText": "Example: Task: Calculate break-even. Graded on: ? Feedback: ?",
+          "cameraPerformance": "Handheld shot focusing on the pen writing on the paper.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF",
+            "CTA"
+          ],
+          "name": "The Concrete Question",
+          "timestamp": "00:20 – 00:28",
+          "visual": "Student points to the question marks on the sheet, looking empowered.",
+          "dialogue": "Now ask: What specific rubric is used to evaluate this calculation? That's how you compare.",
+          "onscreenText": "What specific rubric is used to evaluate this calculation?",
+          "cameraPerformance": "Medium shot, student looks directly at the camera.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, minimalist",
+        "performance": "Natural, thoughtful, and direct",
+        "camera": "Stable, hand-held for organic feel",
+        "editing": "Rhythmic cuts matching the audit steps",
+        "sound": "Ambient room tone, clear voiceover",
+        "props": [
+          "Course booklet",
+          "Three-column audit sheet",
+          "Pen"
+        ],
+        "locations": [
+          "Study table"
+        ],
+        "casting": "Relatable +2 student",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming vague degree comparison into a concrete audit of assessment criteria.",
+        "shootingPriority": [
+          "The audit worksheet detail",
+          "The specific question reveal"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:16:05.399Z",
+      "updatedAt": "2026-11-12T04:16:05.399Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_assessment_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Students assume a degree title defines the assessment type.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Learns to isolate assessment criteria from degree titles.",
+          "concept": "A student auditing a sample task sheet to separate output from evaluation.",
+          "mechanismKey": "Three-column question worksheet",
+          "device": "Split-screen view of a course module with a blank audit worksheet.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "A sample task asking to calculate a break-even point for a coffee shop.",
+            "visibleInput": "Example: Task: Calculate break-even. Graded on: ? Feedback: ?",
+            "observation": "The student realizes they know the output but not how it is assessed.",
+            "nextQuestion": "What specific rubric is used to evaluate this calculation?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question worksheet",
+            "device": "Split-screen view of a course module with a blank audit worksheet."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_journal_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Sticking-point journal",
+            "device": "Casual conversation over a shared notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_insufficient_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence-link challenge",
+            "device": "Animated cards labeled B.Com and BBA with a floating task card."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question worksheet; Connection = task_question_journal / Sticking-point journal; Discovery = insufficient_information / Evidence-link challenge. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: Shot 1 introduces the topic as comparing degree titles (B.Com vs BBA), but the rest of the video ignores the degree comparison entirely to focus on a single task calculation. Revision: Remove the B.Com vs BBA premise in the opening and replace it with a specific task-focused hook, such as 'Don't choose your courses based on the syllabus title alone.' payoff: The payoff in Shot 3 is a verbal assertion ('That's how you compare') rather than showing the outcome of the audit changing a decision or resolving the confusion established in the hook. Revision: Show the student crossing out a vague option or selecting a course path specifically because the audit revealed the rubric, demonstrating the requested decision change.",
+      "repairInstruction": "integrity: Shot 1 introduces the topic as comparing degree titles (B.Com vs BBA), but the rest of the video ignores the degree comparison entirely to focus on a single task calculation. Revision: Remove the B.Com vs BBA premise in the opening and replace it with a specific task-focused hook, such as 'Don't choose your courses based on the syllabus title alone.'\npayoff: The payoff in Shot 3 is a verbal assertion ('That's how you compare') rather than showing the outcome of the audit changing a decision or resolving the confusion established in the hook. Revision: Show the student crossing out a vague option or selecting a course path specifically because the audit revealed the rubric, demonstrating the requested decision change."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "Degree titles are not assessment methods; task-level evaluation criteria define the actual learning experience.",
+          "audienceGap": "Students assume that degree names like B.Com or BBA inherently define the type of work or feedback they will receive.",
+          "viewerChange": "Learns to isolate assessment criteria from titles, enabling precise questions during course selection.",
+          "supportType": "method",
+          "support": "The three-column audit method separates the work product from evaluation standards, helping students clarify expectations independently of degree labels.",
+          "references": [
+            "Shot 2",
+            "Shot 3"
+          ],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The method turns abstract comparisons into a concrete inquiry about rubrics, allowing students to move beyond labels to identify which program matches their need for feedback."
+        }
+      ],
+      "id": "reel_1794456969939_hyixye",
+      "reelTitle": "The Assessment Audit",
+      "creativeAngle": "Auditing task sheets to separate degree labels from actual evaluation methods.",
+      "objective": "Empower students to look past degree titles by focusing on actual assessment criteria.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Title Trap",
+          "timestamp": "00:00 – 00:07",
+          "visual": "A student looking at a notebook with B.Com and BBA written on opposite sides, looking confused.",
+          "dialogue": "Don't choose your degree based on titles alone. B.Com or BBA labels won't tell you how you'll actually be evaluated.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close up on the student, then panning to the notebook.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Audit Method",
+          "timestamp": "00:07 – 00:20",
+          "visual": "Student holds a three-column worksheet. They write down a specific sample task.",
+          "dialogue": "Try this audit. Write down a sample task from each. If you can't fill in how it's graded, that's where you ask questions.",
+          "onscreenText": "Example: Task: Calculate break-even. Graded on: ? Feedback: ?",
+          "cameraPerformance": "Top-down view of hand writing: Task: Calculate break-even. Graded on: ? Feedback: ?",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Concrete Outcome",
+          "timestamp": "00:20 – 00:28",
+          "visual": "Student circles the question mark on the sheet and writes a specific question below it.",
+          "dialogue": "Now ask: What specific rubric is used to evaluate this calculation? That gives you a real basis for comparison.",
+          "onscreenText": "What specific rubric is used to evaluate this calculation?",
+          "cameraPerformance": "Close up on the paper as the student writes the question.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, and minimalist.",
+        "performance": "Natural, thoughtful, and direct.",
+        "camera": "Stable, clear close-ups.",
+        "editing": "Rhythmic cuts matching the audit steps.",
+        "sound": "Ambient room tone, clear voiceover.",
+        "props": [
+          "Notebook",
+          "Three-column audit sheet",
+          "Pen"
+        ],
+        "locations": [
+          "Study table"
+        ],
+        "casting": "Relatable +2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming vague degree comparisons into a concrete audit of assessment criteria to reveal actual academic expectations.",
+        "shootingPriority": [
+          "The audit worksheet detail",
+          "The specific question reveal"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:16:09.940Z",
+      "updatedAt": "2026-11-12T04:16:09.940Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_assessment_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Students assume a degree title defines the assessment type.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Learns to isolate assessment criteria from degree titles.",
+          "concept": "A student auditing a sample task sheet to separate output from evaluation.",
+          "mechanismKey": "Three-column question worksheet",
+          "device": "Split-screen view of a course module with a blank audit worksheet.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "A sample task asking to calculate a break-even point for a coffee shop.",
+            "visibleInput": "Example: Task: Calculate break-even. Graded on: ? Feedback: ?",
+            "observation": "The student realizes they know the output but not how it is assessed.",
+            "nextQuestion": "What specific rubric is used to evaluate this calculation?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question worksheet",
+            "device": "Split-screen view of a course module with a blank audit worksheet."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_journal_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Sticking-point journal",
+            "device": "Casual conversation over a shared notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_insufficient_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence-link challenge",
+            "device": "Animated cards labeled B.Com and BBA with a floating task card."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question worksheet; Connection = task_question_journal / Sticking-point journal; Discovery = insufficient_information / Evidence-link challenge. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: Shot 1 introduces a comparison between degree titles (B.Com vs BBA) as the core problem, but Shots 2 and 3 abandon the degree comparison to focus solely on a task audit. Revision: Align the opening hook to focus on 'Task Auditing' rather than 'Degree Selection' to ensure the initial problem matches the demonstrated solution. fidelity: The script claims 'If you can't fill in how it's graded, that's where you ask questions,' but the worksheet example already shows 'Graded on: ?' as a static input rather than a dynamic discovery process. Revision: Show the student actively attempting to find the grading criteria in a course module before writing the question mark, demonstrating the audit process rather than just the result.",
+      "repairInstruction": "integrity: Shot 1 introduces a comparison between degree titles (B.Com vs BBA) as the core problem, but Shots 2 and 3 abandon the degree comparison to focus solely on a task audit. Revision: Align the opening hook to focus on 'Task Auditing' rather than 'Degree Selection' to ensure the initial problem matches the demonstrated solution.\nfidelity: The script claims 'If you can't fill in how it's graded, that's where you ask questions,' but the worksheet example already shows 'Graded on: ?' as a static input rather than a dynamic discovery process. Revision: Show the student actively attempting to find the grading criteria in a course module before writing the question mark, demonstrating the audit process rather than just the result."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "Degree titles are not assessment methods; task-level evaluation criteria define the actual learning experience.",
+          "audienceGap": "Students assume that degree names like B.Com or BBA inherently define the type of work or feedback they will receive.",
+          "viewerChange": "Learns to isolate assessment criteria from titles, enabling precise questions during course selection.",
+          "supportType": "method",
+          "support": "The three-column audit method separates the work product from evaluation standards, helping students clarify expectations independently of degree labels.",
+          "references": [
+            "Shot 2",
+            "Shot 3"
+          ],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The method turns abstract comparisons into a concrete inquiry about rubrics, allowing students to move beyond labels to identify which program matches their need for feedback."
+        }
+      ],
+      "id": "reel_1794456974309_p34vrp",
+      "reelTitle": "The Assessment Audit",
+      "creativeAngle": "Auditing task sheets to separate degree labels from actual evaluation methods.",
+      "objective": "Empower students to look past degree titles by focusing on actual assessment criteria.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Title Trap",
+          "timestamp": "00:00 – 00:08",
+          "visual": "A student stares at a desk with two folders labeled B.Com and BBA, clearly struggling to differentiate them.",
+          "dialogue": "Stuck between B.Com and BBA? Titles are vague. They don't show how you're actually graded.",
+          "onscreenText": "B.Com vs BBA?",
+          "cameraPerformance": "Static shot, eye-level, focusing on the student's frustrated expression.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Audit Method",
+          "timestamp": "00:08 – 00:20",
+          "visual": "Close-up of a worksheet. The student flips through a module, then writes 'Calculate break-even' and looks for a grading rubric, eventually writing '?' in the box.",
+          "dialogue": "Try this audit. For any task, isolate the assessment. Example: Task: Calculate break-even. Graded on: ? Feedback: ?",
+          "onscreenText": "Example: Task: Calculate break-even. Graded on: ? Feedback: ?",
+          "cameraPerformance": "Top-down view of hand writing on a three-column sheet.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF",
+            "CTA"
+          ],
+          "name": "The Concrete Outcome",
+          "timestamp": "00:20 – 00:28",
+          "visual": "The student circles the '?' and writes a clear question below the sheet.",
+          "dialogue": "If it's blank, ask: What specific rubric is used to evaluate this calculation? That's your real comparison.",
+          "onscreenText": "What specific rubric is used to evaluate this calculation?",
+          "cameraPerformance": "Tight zoom on the paper as the pen completes the question.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, minimalist.",
+        "performance": "Natural, thoughtful, direct.",
+        "camera": "Stable, clear close-ups.",
+        "editing": "Rhythmic, matching the writing pace.",
+        "sound": "Ambient room tone, crisp pencil-on-paper sound.",
+        "props": [
+          "Notebook",
+          "Three-column audit sheet",
+          "Pen",
+          "Two folders"
+        ],
+        "locations": [
+          "Study table"
+        ],
+        "casting": "Relatable student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use a three-column task audit to turn vague degree comparisons into specific, actionable inquiries about assessment rubrics.",
+        "shootingPriority": [
+          "The audit worksheet detail",
+          "The specific question reveal"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:16:14.309Z",
+      "updatedAt": "2026-11-12T04:16:14.309Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_assessment_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Students assume a degree title defines the assessment type.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Learns to isolate assessment criteria from degree titles.",
+          "concept": "A student auditing a sample task sheet to separate output from evaluation.",
+          "mechanismKey": "Three-column question worksheet",
+          "device": "Split-screen view of a course module with a blank audit worksheet.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "A sample task asking to calculate a break-even point for a coffee shop.",
+            "visibleInput": "Example: Task: Calculate break-even. Graded on: ? Feedback: ?",
+            "observation": "The student realizes they know the output but not how it is assessed.",
+            "nextQuestion": "What specific rubric is used to evaluate this calculation?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question worksheet",
+            "device": "Split-screen view of a course module with a blank audit worksheet."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_journal_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Sticking-point journal",
+            "device": "Casual conversation over a shared notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_insufficient_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence-link challenge",
+            "device": "Animated cards labeled B.Com and BBA with a floating task card."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question worksheet; Connection = task_question_journal / Sticking-point journal; Discovery = insufficient_information / Evidence-link challenge. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: Shot 1 sets up a comparison between B.Com and BBA degrees, but the remainder of the reel ignores the degree distinction entirely to focus on a general task audit. Revision: Either establish the hook as a generic 'Task vs. Degree' problem or maintain the B.Com vs BBA comparison throughout by auditing tasks from each specific degree to show how the degrees differ. fidelity: The demonstration in Shot 2 and 3 uses a single task (break-even point), failing to show the 'three-column' structure promised in the concept. Revision: Ensure the visual worksheet clearly displays three distinct columns labeled 'Output', 'Assessment Criteria', and 'Feedback' to reinforce the audit method.",
+      "repairInstruction": "integrity: Shot 1 sets up a comparison between B.Com and BBA degrees, but the remainder of the reel ignores the degree distinction entirely to focus on a general task audit. Revision: Either establish the hook as a generic 'Task vs. Degree' problem or maintain the B.Com vs BBA comparison throughout by auditing tasks from each specific degree to show how the degrees differ.\nfidelity: The demonstration in Shot 2 and 3 uses a single task (break-even point), failing to show the 'three-column' structure promised in the concept. Revision: Ensure the visual worksheet clearly displays three distinct columns labeled 'Output', 'Assessment Criteria', and 'Feedback' to reinforce the audit method."
+    }
+  }
+]

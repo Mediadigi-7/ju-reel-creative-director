@@ -1,0 +1,100 @@
+{
+  "assessor": "Assistant independent editorial reading of actual Gemini outputs; not generator self-scoring or application approval",
+  "ratingScale": "0 missing, 1 poor, 2 weak, 3 partial, 4 strong, 5 exceptional",
+  "methodology": "Read complete production fields and HLNI, then apply the unchanged weighted rubric. Metadata and AI critique are not proof of delivered quality. No generated scripts were manually edited. Academic source verification and recorded read-aloud remain pending.",
+  "nextStep": "Continue Phase 3A. Improve the demonstrated example, consistency and payoff; preserve failed attempts. Do not advance to staging or production.",
+  "runSummary": "All three initial prompt-only outputs were generated and archived. They remain weak despite passing structural checks. All use lone-student desk scenes and checklists; Discovery retains both comparison subjects but lacks a surprising educational reveal.",
+  "crossChannelFinding": "Different reasoning-tool IDs did not produce distinct viewer experiences. Trust ends by asking for a task already named in its example; Connection has a consistent availability check but no real human dilemma; Discovery barely changes the wording of Trust\u2019s assessment question.",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 2,
+        "coherence": 3,
+        "payoff": 2,
+        "production": 4,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 2 distinguishes task, assessment and feedback. Shot 3 asks what task is evaluated even though Analyze Sales Data is already supplied; the practical question does not address the missing criterion.",
+        "differentiation": "The same solo desk/table/direct-address structure appears in all three outputs. Distinct planning labels do not demonstrate channel differentiation.",
+        "coherence": "Degree-title uncertainty leads to a table, but the resolution does not follow the unknown recorded in that table.",
+        "payoff": "That question guides your actual decision asserts usefulness without demonstrating why asking about an already-known task helps.",
+        "production": "Complete fields and feasible notebook setup; 28 seconds leaves room for short lines, subject to a natural read-aloud and phone graphic check.",
+        "originality": "The desk audit and generic intro repeat earlier attempts rather than presenting a fresh explanatory device."
+      },
+      "automaticTriggerExplanation": "No material falsehood or impossible production is established. Partial useful information is present, but this does not establish strong HLNI. Unsupported claims still require removal or verification. Numerical thresholds independently require revision.",
+      "revisions": [
+        "Use a simple known school-level work product and one clearly missing marking criterion.",
+        "Make the final question address that missing criterion and show the change from the initial vague degree question.",
+        "Remove or source the unsupported subject-overlap statement in Shot 1; no syllabi were provided."
+      ]
+    },
+    {
+      "channel": "Connection",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 2,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 4,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Preference versus confirmed availability is coherent and the exact resulting question is usable, but checking a list is familiar advice without a stronger demonstrated insight.",
+        "differentiation": "A solo student circling a checkbox has the same experience as Trust and Discovery. No specific interpersonal or personal stakes develop.",
+        "coherence": "Startup Law remains the same example across actual scenes, avoiding the previous prerequisite/elective confusion.",
+        "payoff": "The empty box results in a relevant curriculum-location question; the change is modest and not a resolution to a concrete dilemma.",
+        "production": "Brief lines, three complete timecoded scenes, notepad and pen are feasible. No impossible instructions.",
+        "originality": "A generic preference checklist adds little beyond familiar verify-before-choosing advice."
+      },
+      "automaticTriggerExplanation": "No material falsehood or impossible production is established. Partial useful information is present, but this does not establish strong HLNI. Unsupported claims still require removal or verification. Numerical thresholds independently require revision.",
+      "revisions": [
+        "Give the student one believable reason for making this assumption, then show its practical consequence.",
+        "Keep the availability check consistent and make its result change a specific next action.",
+        "Differentiate the lived situation and production device from the other two scripts."
+      ]
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {
+        "hlni": 2,
+        "differentiation": 1,
+        "coherence": 2,
+        "payoff": 2,
+        "production": 4,
+        "originality": 1
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The actual scenes do not inspect a task or record a sticking point; they list Data Analysis as an interest and ask about evaluation. The claimed task-journal HLNI is not demonstrated.",
+        "differentiation": "Changing the treatment label to Trendy and adding music does not distinguish another solo desk/notepad sequence.",
+        "coherence": "The opening names the comparison, but the selected journal becomes an assessment-question tool similar to Trust.",
+        "payoff": "Tapping the notepad and advising better questions does not deliver a surprising reveal or resolve the degree uncertainty.",
+        "production": "Complete feasible production fields and concise dialogue. Trendy is an editorial description, not evidence of an actual current trend.",
+        "originality": "The confused-student-to-question pattern repeats Trust closely."
+      },
+      "automaticTriggerExplanation": "No material falsehood or impossible production is established. Partial useful information is present, but this does not establish strong HLNI. Unsupported claims still require removal or verification. Numerical thresholds independently require revision.",
+      "revisions": [
+        "Show a real illustrative input and a specific observed difficulty before producing a question.",
+        "Build curiosity and a supported reveal relevant to B.Com vs BBA, with no invented curriculum claims.",
+        "Make the payoff explain the limitation of the original guess rather than merely telling viewers to ask questions."
+      ]
+    }
+  ]
+}

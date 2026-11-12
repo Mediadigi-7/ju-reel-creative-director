@@ -1,3 +1,4 @@
+import { CHANNEL_NAMES, type ContentChannel } from '../../shared/channels.js';
 import React, { useState, useRef, useEffect } from 'react';
 import { Settings, Check, ChevronDown } from 'lucide-react';
 import { CreativeDirection, LanguageOption } from '../../shared/types.js';
@@ -5,6 +6,8 @@ import { CREATIVE_DIRECTIONS } from '../../shared/knowledgeBase.js';
 
 interface HeroContextBarProps {
   objective: string;
+  channel?: ContentChannel;
+  onShiftChannel?: (channel: ContentChannel) => void;
   currentTone: CreativeDirection;
   currentLanguage: LanguageOption;
   currentDuration: string;
@@ -26,10 +29,12 @@ const LANGUAGES: LanguageItem[] = [
   { value: 'Malayalam', label: 'മലയാളം (Malayalam)' },
   { value: 'Hindi', label: 'हिन्दी (Hindi)' },
 ];
-const DURATIONS = ['20s (Fast)', '28s (Standard)', '45s (Deep Dive)'];
+const DURATIONS = [20, 28, 45];
 
 export const HeroContextBar: React.FC<HeroContextBarProps> = ({
   objective,
+  channel,
+  onShiftChannel,
   currentTone,
   currentLanguage,
   currentDuration,
@@ -56,7 +61,7 @@ export const HeroContextBar: React.FC<HeroContextBarProps> = ({
       <div className="bg-stone-100/80 border border-stone-200/80 rounded-lg px-4 py-2.5 flex items-center justify-between gap-3 text-xs">
         {/* Left: Objective text */}
         <div className="flex items-center gap-2 min-w-0">
-          <span className="font-semibold text-stone-900 flex-shrink-0">Objective:</span>
+          <span className="font-semibold text-stone-900 flex-shrink-0">Creative angle:</span>
           <span className="text-stone-600 truncate font-normal">
             {objective || '6-step decision breakdown — no fluff, just what matters.'}
           </span>
@@ -75,7 +80,7 @@ export const HeroContextBar: React.FC<HeroContextBarProps> = ({
             aria-label="Adjust Tone & Language"
           >
             <Settings className="w-3.5 h-3.5" />
-            <span className="text-[11px] font-medium text-stone-500 hidden sm:inline">Settings</span>
+            <span className="text-[11px] font-medium text-stone-500 hidden sm:inline">Reel options</span>
           </button>
 
           {/* Popover Settings Menu */}
@@ -83,11 +88,18 @@ export const HeroContextBar: React.FC<HeroContextBarProps> = ({
             <div className="absolute right-0 mt-2 w-72 bg-white rounded-xl border border-stone-200 shadow-xl p-4 z-50 animate-in fade-in zoom-in-95 duration-100 space-y-3.5">
               <div className="flex items-center justify-between pb-2 border-b border-stone-100">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-stone-400">
-                  Storyboard Parameters
+                  Reel options
                 </span>
-                <span className="text-[10px] text-stone-400">Click outside to close</span>
+                <span className="text-[10px] text-stone-400">Style or language rewrites the reel</span>
               </div>
 
+              {onShiftChannel && <div>
+                <label className="text-[11px] font-semibold text-stone-700 block mb-1" htmlFor="reel-channel">Channel goal</label>
+                <select id="reel-channel" value={channel || ''} disabled={isLoading} onChange={e => { if (e.target.value) onShiftChannel(e.target.value as ContentChannel); }} className="w-full px-2.5 py-1.5 text-xs rounded-md border border-stone-200 bg-white">
+                  <option value="" disabled>Choose a channel goal</option>
+                  {CHANNEL_NAMES.map(name => <option key={name} value={name}>{name}</option>)}
+                </select>
+              </div>}
               {/* Tone */}
               <div>
                 <label className="text-[11px] font-semibold text-stone-700 block mb-1">
@@ -122,19 +134,20 @@ export const HeroContextBar: React.FC<HeroContextBarProps> = ({
                 </select>
               </div>
 
-              {/* Target Duration */}
+              {/* Timing estimate */}
               <div>
                 <label className="text-[11px] font-semibold text-stone-700 block mb-1">
-                  Target Duration
+                  Timing estimate
                 </label>
                 <select
-                  value={currentDuration}
+                  value={parseInt(currentDuration, 10)}
                   onChange={(e) => onShiftDuration(e.target.value)}
                   disabled={isLoading}
                   className="w-full px-2.5 py-1.5 text-xs rounded-md border border-stone-200 bg-stone-50/50 text-stone-800 font-medium focus:outline-none focus:border-[#8B1721]"
                 >
+                  {!DURATIONS.includes(parseInt(currentDuration, 10)) && <option value={parseInt(currentDuration, 10)}>{currentDuration}</option>}
                   {DURATIONS.map((dur) => (
-                    <option key={dur} value={dur}>{dur}</option>
+                    <option key={dur} value={dur}>{dur} seconds</option>
                   ))}
                 </select>
               </div>

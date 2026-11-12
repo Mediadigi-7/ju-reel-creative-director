@@ -29,9 +29,13 @@ export const GENERIC_AI_PHRASES = [
   "most people don't know"
 ];
 
+export function normalizeScriptText(text: string): string {
+  return text.normalize('NFKC').toLowerCase().replace(/[’‘]/g, "'").replace(/[‐‑–—]/g, '-').replace(/\s+/g, ' ');
+}
+
 export function detectGenericLanguage(storyboard: ReelStoryboard): LanguageAuditResult {
   const flaggedPhrases: string[] = [];
-  const fullScript = storyboard.shots.map(s => s.dialogue + ' ' + s.onscreenText).join(' ').toLowerCase();
+  const fullScript = normalizeScriptText(storyboard.shots.map(s => s.dialogue + ' ' + s.onscreenText).join(' '));
 
   for (const phrase of GENERIC_AI_PHRASES) {
     if (fullScript.includes(phrase)) {

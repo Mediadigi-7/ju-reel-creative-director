@@ -1,3 +1,4 @@
+import { enforceEditorialStatus } from '../../shared/hlni.js';
 import { ReelStoryboard, ReelProject } from '../../shared/types.js';
 import { validateAndRepairStoryboard } from '../../shared/schema.js';
 
@@ -10,10 +11,12 @@ export function encodeStoryboardForUrl(storyboard: ReelStoryboard): string {
       aud: storyboard.targetAudience,
       d: storyboard.duration,
       cd: storyboard.creativeDirection,
+      channel: storyboard.channel,
       lang: storyboard.language,
       s: storyboard.shots.map((shot) => ({
         n: shot.number,
         ty: shot.type,
+        fn: shot.functions,
         nm: shot.name,
         tm: shot.timestamp,
         v: shot.visual,
@@ -24,6 +27,9 @@ export function encodeStoryboardForUrl(storyboard: ReelStoryboard): string {
       pn: storyboard.productionNotes,
       cs: storyboard.creativeSummary,
       vnum: storyboard.version,
+      generation: storyboard.generation,
+      hlni: storyboard.hlni,
+      conceptSelection: storyboard.conceptSelection,
     };
 
     const json = JSON.stringify(minified);
@@ -46,16 +52,21 @@ export function decodeStoryboardFromUrl(shareParam: string): ReelStoryboard | nu
       const full: any = {
         id: `shared_${Date.now()}`,
         reelTitle: parsed.t,
+        generation: parsed.generation,
+        hlni: parsed.hlni,
+        conceptSelection: parsed.conceptSelection,
         creativeAngle: parsed.a,
         objective: parsed.o,
         targetAudience: parsed.aud,
         duration: parsed.d || '28 sec',
         format: '9:16 Vertical Reel',
+        channel: parsed.channel,
         creativeDirection: parsed.cd || 'Informative',
         language: parsed.lang || 'English',
         shots: parsed.s.map((shot: any) => ({
           number: shot.n,
           type: shot.ty,
+          functions: shot.fn,
           name: shot.nm,
           timestamp: shot.tm,
           visual: shot.v,
@@ -65,18 +76,18 @@ export function decodeStoryboardFromUrl(shareParam: string): ReelStoryboard | nu
         })),
         productionNotes: parsed.pn,
         creativeSummary: parsed.cs,
-        status: 'Ready for Production',
+        status: 'Draft',
         version: parsed.vnum || 1,
         tags: ['+2', 'shared', 'joy-university'],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       };
       const result = validateAndRepairStoryboard(full, parsed.t);
-      return result.data;
+      return result.valid ? result.data : null;
     }
 
-    const result = validateAndRepairStoryboard(parsed, parsed.reelTitle || 'Shared Reel');
-    return result.data;
+    const result = validateAndRepairStoryboard({...parsed,editorialReview:undefined,status:'Draft'}, parsed.reelTitle || 'Shared Reel');
+    return result.valid ? result.data : null;
   } catch (err) {
     console.error('Failed to decode shared storyboard from URL:', err);
     return null;
@@ -114,7 +125,7 @@ export function decodeLibraryFromUrl(libraryParam: string): ReelProject[] | null
     const jsonStr = decodeURIComponent(escape(atob(rawBase64)));
     const parsed = JSON.parse(jsonStr);
     if (Array.isArray(parsed)) {
-      return parsed;
+      return parsed.map((p:ReelProject)=>{const versions=p.versions.map(v=>enforceEditorialStatus({...v,editorialReview:undefined}));return {...p,versions,status:(versions.find(v=>v.id===p.currentVersionId)||versions.at(-1))?.status||'Draft'};});
     }
     return null;
   } catch (err) {

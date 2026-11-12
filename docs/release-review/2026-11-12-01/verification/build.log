@@ -1,0 +1,24 @@
+
+> joy-university-reel-creator@1.0.0 build
+> tsc && vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2115 modules transformed.
+rendering chunks...
+[plugin vite:reporter] 
+(!) /workspace/ju-reel-creative-director/shared/providers.ts is dynamically imported by /workspace/ju-reel-creative-director/src/services/api.ts but also statically imported by /workspace/ju-reel-creative-director/src/services/api.ts, dynamic import will not move module into another chunk.
+
+computing gzip size...
+dist/index.html                            0.87 kB │ gzip:   0.51 kB
+dist/assets/index-CZQUzbSq.css            45.37 kB │ gzip:   8.11 kB
+dist/assets/purify.es-BwoZCkIS.js         22.03 kB │ gzip:   8.77 kB
+dist/assets/index.es-DCFRhris.js         159.72 kB │ gzip:  53.54 kB
+dist/assets/html2canvas.esm-QH1iLAAe.js  202.38 kB │ gzip:  48.04 kB
+dist/assets/index-Cc9nv8p0.js            727.38 kB │ gzip: 224.63 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.77s

@@ -1,3 +1,6 @@
+import { HlniReviewCard } from './components/HlniReviewCard.js';
+import { enforceEditorialStatus } from '../shared/hlni.js';
+import type { ContentChannel } from '../shared/channels.js';
 import React, { useState, useEffect, useRef } from 'react';
 import { Navbar } from './components/Navbar.js';
 import { CompactTopBar } from './components/CompactTopBar.js';
@@ -24,12 +27,14 @@ import {
   saveApiSettings,
   ApiSettings,
 } from './services/storage.js';
-import { ReelStoryboard, Shot, CreativeDirection, LanguageOption, ReelProject } from '../shared/types.js';
+import { ReelStoryboard, Shot, CreativeDirection, CreativeTreatment, LanguageOption, ReelProject } from '../shared/types.js';
+import { retimeStoryboard } from '../shared/timing.js';
 import { AlertCircle } from 'lucide-react';
 import { LibraryView } from './components/LibraryView.js';
 
 export const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<'creator' | 'library' | 'ideas'>('creator');
+  const [openedFrom, setOpenedFrom] = useState<'new' | 'library' | 'restored' | 'shared'>('new');
   const [currentReel, setCurrentReel] = useState<ReelStoryboard | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [regeneratingShotNumber, setRegeneratingShotNumber] = useState<number | null>(null);
@@ -50,14 +55,16 @@ export const App: React.FC = () => {
   const [pendingReel, setPendingReel] = useState<ReelStoryboard | null>(null);
   const [generationMeta, setGenerationMeta] = useState<{
     title: string;
-    direction: CreativeDirection;
+    direction: CreativeTreatment;
     language: LanguageOption;
+    channel?: ContentChannel;
   }>({
     title: '',
     direction: 'Informative',
     language: 'English',
   });
   const isGeneratingRef = useRef(false);
+  const retryAction = useRef<(() => void) | null>(null);
 
   // Load state on mount (including checking for ?share= or /library or ?data= parameter)
   useEffect(() => {
@@ -82,12 +89,13 @@ export const App: React.FC = () => {
       const decoded = decodeStoryboardFromUrl(shareParam);
       if (decoded) {
         setCurrentReel(decoded);
+        setOpenedFrom('shared');
         setIsSharedView(true);
         setCurrentView('creator');
       }
     } else {
       const saved = loadCurrentStoryboard();
-      if (saved) setCurrentReel(saved);
+      if (saved) { setCurrentReel(saved); setOpenedFrom('restored'); }
     }
 
     const projects = loadSavedProjects();
@@ -145,6 +153,7 @@ export const App: React.FC = () => {
   const handleGenerationAnimationComplete = () => {
     if (pendingReel) {
       setCurrentReel(pendingReel);
+      setOpenedFrom('new');
       setPendingReel(null);
       setIsSaved(false);
     }
@@ -155,21 +164,24 @@ export const App: React.FC = () => {
 
   const handleGenerate = async (
     title: string,
-    direction: CreativeDirection = 'Informative',
-    language: LanguageOption = 'English'
+    direction: CreativeTreatment = 'Auto',
+    language: LanguageOption = 'English',
+    channel?: ContentChannel
   ) => {
     if (isGeneratingRef.current || isLoading) return;
+    retryAction.current = () => handleGenerate(title, direction, language, channel);
     isGeneratingRef.current = true;
     setIsLoading(true);
     setIsGenerationComplete(false);
     setPendingReel(null);
     setError(null);
-    setGenerationMeta({ title, direction, language });
+    setGenerationMeta({ title, direction, language, channel });
 
     try {
       const generated = await apiGenerateReel({
         reelTitle: title,
         creativeDirection: direction,
+        channel,
         language: language,
         apiKey: apiSettings.apiKey,
         apiProvider: apiSettings.apiProvider,
@@ -178,13 +190,15 @@ export const App: React.FC = () => {
       setIsGenerationComplete(true);
     } catch (err: any) {
       console.error(err);
-      setError("We couldn't generate the storyboard. Please verify your connection or API key and try again.");
+      setError(err.message || 'Generation failed. Please retry.');
+      setIsLoading(false);
       isGeneratingRef.current = false;
     }
   };
 
   const handleRegenerateEntire = async () => {
     if (!currentReel || isGeneratingRef.current || isLoading) return;
+    retryAction.current = () => handleRegenerateEntire();
     isGeneratingRef.current = true;
     setIsLoading(true);
     setIsGenerationComplete(false);
@@ -195,6 +209,7 @@ export const App: React.FC = () => {
       title: currentReel.reelTitle,
       direction: currentReel.creativeDirection as CreativeDirection,
       language: currentReel.language,
+      channel: currentReel.channel,
     });
 
     try {
@@ -203,6 +218,7 @@ export const App: React.FC = () => {
         creativeDirection: currentReel.creativeDirection as CreativeDirection,
         language: currentReel.language,
         duration: currentReel.duration,
+        channel: currentReel.channel,
         apiKey: apiSettings.apiKey,
         apiProvider: apiSettings.apiProvider,
       });
@@ -211,7 +227,8 @@ export const App: React.FC = () => {
       setIsGenerationComplete(true);
     } catch (err: any) {
       console.error(err);
-      setError("We couldn't regenerate the storyboard. Please try again.");
+      setError(err.message || 'Regeneration failed. Please retry.');
+      setIsLoading(false);
       isGeneratingRef.current = false;
     } finally {
       setIsRegeneratingEntire(false);
@@ -220,7 +237,9 @@ export const App: React.FC = () => {
 
   const handleRegenerateShot = async (shotNumber: number) => {
     if (!currentReel) return;
+    retryAction.current = () => handleRegenerateShot(shotNumber);
     setRegeneratingShotNumber(shotNumber);
+    setError(null);
     try {
       const targetShot = currentReel.shots.find((s) => s.number === shotNumber);
       if (!targetShot) return;
@@ -237,13 +256,13 @@ export const App: React.FC = () => {
       });
 
       const newShots = currentReel.shots.map((s) => (s.number === shotNumber ? updatedShot : s));
-      setCurrentReel({
+      setCurrentReel(enforceEditorialStatus({
         ...currentReel,
         shots: newShots,
         updatedAt: new Date().toISOString(),
-      });
-    } catch (err) {
-      console.error('Failed to regenerate shot:', err);
+      }));
+    } catch (err: any) {
+      setError(err.message || 'Shot regeneration failed. Your existing shot was preserved.');
     } finally {
       setRegeneratingShotNumber(null);
     }
@@ -251,39 +270,39 @@ export const App: React.FC = () => {
 
   const handleUpdateShot = (updatedShot: Shot) => {
     if (!currentReel) return;
+    setIsSaved(false);
     const newShots = currentReel.shots.map((s) =>
       s.number === updatedShot.number ? updatedShot : s
     );
-    setCurrentReel({
+    setCurrentReel(enforceEditorialStatus({
       ...currentReel,
       shots: newShots,
       updatedAt: new Date().toISOString(),
-    });
+    }));
   };
 
   const handleUpdateMetadata = (fields: Partial<ReelStoryboard>) => {
     if (!currentReel) return;
-    setCurrentReel({
+    setIsSaved(false);
+    setCurrentReel(enforceEditorialStatus({
       ...currentReel,
       ...fields,
       updatedAt: new Date().toISOString(),
-    });
+    }));
   };
 
   const handleShiftTone = async (newDirection: CreativeDirection) => {
     if (!currentReel) return;
-    handleUpdateMetadata({ creativeDirection: newDirection });
-    handleGenerate(currentReel.reelTitle, newDirection, currentReel.language);
+    handleGenerate(currentReel.reelTitle, newDirection, currentReel.language, currentReel.channel);
   };
 
   const handleShiftLanguage = async (newLanguage: LanguageOption) => {
     if (!currentReel) return;
-    handleUpdateMetadata({ language: newLanguage });
-    handleGenerate(currentReel.reelTitle, currentReel.creativeDirection as CreativeDirection, newLanguage);
+    handleGenerate(currentReel.reelTitle, currentReel.creativeDirection as CreativeDirection, newLanguage, currentReel.channel);
   };
 
   const handleShiftDuration = (newDuration: string) => {
-    handleUpdateMetadata({ duration: newDuration });
+    if (currentReel) handleUpdateMetadata(retimeStoryboard(currentReel, parseInt(newDuration, 10)));
   };
 
   const handleSaveToLibrary = () => {
@@ -311,12 +330,12 @@ export const App: React.FC = () => {
     navigateToView('creator');
   };
 
-  const handleSelectIdea = (ideaTitle: string, direction: CreativeDirection = 'Informative') => {
+  const handleSelectIdea = (ideaTitle: string, direction: CreativeDirection = 'Informative', channel?: ContentChannel) => {
     setCurrentReel(null);
     setPendingReel(null);
     saveCurrentStoryboard(null);
     navigateToView('creator');
-    handleGenerate(ideaTitle, direction);
+    handleGenerate(ideaTitle, direction, 'English', channel);
   };
 
   const handleShareLink = () => {
@@ -351,6 +370,7 @@ export const App: React.FC = () => {
       {currentView === 'creator' && currentReel && (
         <CompactTopBar
           reel={currentReel}
+          openedFrom={openedFrom}
           onBack={handleNewReel}
           onRegenerateAll={handleRegenerateEntire}
           onExportPdf={() => exportStoryboardPdf(currentReel)}
@@ -368,13 +388,13 @@ export const App: React.FC = () => {
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Error Notification */}
         {error && (
-          <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 flex items-center justify-between gap-4">
+          <div role="alert" className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 flex items-center justify-between gap-4">
             <div className="flex items-center gap-2.5 text-red-800 text-sm font-semibold">
               <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
               <span>{error}</span>
             </div>
             <button
-              onClick={() => handleRegenerateEntire()}
+              onClick={() => { setError(null); retryAction.current?.(); }}
               className="px-3 py-1.5 rounded bg-red-600 hover:bg-red-700 text-white text-xs font-bold transition-colors"
             >
               Try Again
@@ -386,17 +406,18 @@ export const App: React.FC = () => {
         {currentView === 'ideas' ? (
           <IdeasView
             onSelectIdea={handleSelectIdea}
-            onNavigateToCreate={() => navigateToView('creator')}
+            onNavigateToCreate={handleNewReel}
           />
         ) : currentView === 'library' ? (
           <LibraryView
             projects={sharedProjectsData || savedProjects}
             onSelectProject={(storyboard) => {
               setCurrentReel(storyboard);
+              setOpenedFrom('library');
               navigateToView('creator');
             }}
             onDeleteProject={handleDeleteProject}
-            onNavigateToCreate={() => navigateToView('creator')}
+            onNavigateToCreate={handleNewReel}
             isSharedLibrary={isSharedLibrary}
             onImportSharedLibrary={handleImportSharedLibrary}
           />
@@ -411,7 +432,7 @@ export const App: React.FC = () => {
             onRetry={() => {
               setError(null);
               isGeneratingRef.current = false;
-              handleGenerate(generationMeta.title, generationMeta.direction, generationMeta.language);
+              handleGenerate(generationMeta.title, generationMeta.direction, generationMeta.language, generationMeta.channel);
             }}
           />
         ) : !currentReel ? (
@@ -439,9 +460,12 @@ export const App: React.FC = () => {
               </div>
             )}
 
+            <p className="mb-4 text-sm text-stone-600">{currentReel.generation?.source === 'offline' ? (currentReel.generation.templateId ? 'Offline sample: an authored script you can edit. Connect AI for a new story or custom idea.' : 'This saved template predates the authored catalogue. Choose a new sample for the updated scripts.') : 'Your reel draft is ready. Review the scenes, edit any details, then save your reel or export a PDF.'}</p>
             {/* 2. Clean Hero Context (Single Minimal Bar with hidden settings gear) */}
             <HeroContextBar
-              objective={currentReel.creativeAngle || currentReel.objective || '6-step decision breakdown — no fluff, just what matters.'}
+              objective={currentReel.creativeAngle || currentReel.objective || 'A useful insight and a clear outcome for the viewer.'}
+              channel={currentReel.channel}
+              onShiftChannel={(channel) => handleGenerate(currentReel.reelTitle, currentReel.creativeDirection as CreativeDirection, currentReel.language, channel)}
               currentTone={currentReel.creativeDirection as CreativeDirection}
               currentLanguage={currentReel.language}
               currentDuration={currentReel.duration}
@@ -450,6 +474,8 @@ export const App: React.FC = () => {
               onShiftDuration={handleShiftDuration}
               isLoading={isLoading}
             />
+
+            <HlniReviewCard reel={currentReel} onUpdate={handleUpdateMetadata} />
 
             {/* 3. Main Storyboard Canvas (The Hero Content) */}
             <div className="space-y-4 sm:space-y-5">
@@ -461,6 +487,7 @@ export const App: React.FC = () => {
                   onUpdateShot={handleUpdateShot}
                   onRegenerateShot={handleRegenerateShot}
                   isRegenerating={regeneratingShotNumber === shot.number}
+                  canRegenerate={Boolean(apiSettings.apiKey?.trim()) || currentReel.generation?.source === 'openai' || currentReel.generation?.source === 'gemini'}
                 />
               ))}
             </div>
@@ -468,7 +495,7 @@ export const App: React.FC = () => {
             {/* Collapsible Reference: Production Notes Call Sheet */}
             <details className="mt-10 pt-6 border-t border-stone-200 group/details">
               <summary className="cursor-pointer text-xs font-semibold text-stone-500 hover:text-stone-900 flex items-center justify-between select-none py-2.5 px-3.5 rounded-lg hover:bg-stone-100/70 transition-colors bg-white border border-stone-200/80">
-                <span>Production Notes & Shooting Priorities (Optional Reference)</span>
+                <span>Shoot preparation: locations, props, and priorities</span>
                 <span className="text-[10px] text-stone-400 group-open/details:rotate-180 transition-transform">▼</span>
               </summary>
               <div className="mt-4 space-y-6">
@@ -496,7 +523,7 @@ export const App: React.FC = () => {
             <span>•</span>
             <span>Reel Storyboard Generator</span>
           </div>
-          <div>Vadakkankulam, Tirunelveli • 104-Acre Campus • UGC 2(f)</div>
+          <div>Trust • Connection • Discovery</div>
         </div>
       </footer>
     </div>

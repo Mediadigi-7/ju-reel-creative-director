@@ -1,0 +1,97 @@
+{
+  "startedAt": "2026-11-09T10:53:36.211Z",
+  "request": {
+    "topic": "B.Com vs BBA",
+    "treatment": "Auto",
+    "language": "English",
+    "duration": "28 sec",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "diagnosticFunctionTags": true
+  },
+  "planning": "Separate joint concept selection precedes production shots; distinct selections are compared across all channels.",
+  "referenceApproval": "User-approved non-mandatory creative benchmarks; academic claims are not independently verified by this approval.",
+  "sourceSha256": {
+    "server/aiService.ts": "91b4fede1603971dcac7e9127aa01045352749bf0c317ed20502cabb8a7abf38",
+    "server/conceptPlanner.ts": "8749bb4daf9f8e18ec8bfd286f8c813e62a4f1649aa21689f9bffd936ba4c3ae",
+    "server/providerClient.ts": "638a9956a06ad6d9d700c406948660dd583f172b3598902f9ca5e85f3d47a96d",
+    "shared/concepts.ts": "ef1dc34468af617d7e177fd098c99544a7f00059512a05b3cd9ee3bfce902904",
+    "shared/reasoningTools.ts": "165f1deeb4f8aac49d8a2fd2f123d43e64ed0c88d794ad78a9b492980c9b877c",
+    "server/freshnessEngine.ts": "9bb80afd1f839a071f7e18ff7cd32e61334cfea5728a712d777899aae1310d67",
+    "server/realityTrigger.ts": "e21a51d8cd46d753d0d1423e10156db5e6f29fd392a9e0cdf3e4c7fb560f7dc8",
+    "shared/creativeFramework.ts": "24c4c4b8c3655f9dba75e77a8f381f2ee40a5ad74c8b48913d4f605cb3aa9461",
+    "shared/hlni.ts": "8b5c44a14482eb6301229774019d8d07444e82fc58f9624fcce8a84f26e5c5cb",
+    "shared/editorialBenchmarks.ts": "b9b0d88244453420a8f7a142f821f677bf7a1653d02e873a426b5bd73bf3c8b7",
+    "shared/channels.ts": "e2352e71208bda7c9f525de1ba48a2d479b0efab6aa26284516dce2e729c8b95",
+    "shared/knowledgeBase.ts": "eee71bc44e3d253d596a7829517a05237630dd994f109ca1b017aa869923e7bc",
+    "shared/schema.ts": "315d8a6c049db3999d9cdfd7a384f9b476de307bcad575a227dd52e29db6f7bd",
+    "docs/creative-references/BCOM_VS_BBA_APPROVED.md": "f0516cb75a6bfe2800d8573945ef847907ba5ec39b9befb9c983933ca128d7e6"
+  },
+  "rubric": [
+    {
+      "key": "hlni",
+      "label": "High-Leverage New Information",
+      "weight": 25
+    },
+    {
+      "key": "differentiation",
+      "label": "Channel differentiation",
+      "weight": 20
+    },
+    {
+      "key": "coherence",
+      "label": "Narrative coherence",
+      "weight": 20
+    },
+    {
+      "key": "payoff",
+      "label": "Payoff",
+      "weight": 15
+    },
+    {
+      "key": "production",
+      "label": "Production readiness",
+      "weight": 15
+    },
+    {
+      "key": "originality",
+      "label": "Originality",
+      "weight": 5
+    }
+  ],
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "results": [
+    {
+      "channel": "Trust",
+      "status": "FAILED",
+      "category": "output_validation",
+      "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+      "elapsedMs": 11232
+    },
+    {
+      "channel": "Connection",
+      "status": "FAILED",
+      "category": "output_validation",
+      "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+      "elapsedMs": 11047
+    },
+    {
+      "channel": "Discovery",
+      "status": "GENERATED",
+      "file": "discovery.json",
+      "readableFile": "discovery.md",
+      "shotCount": 3,
+      "elapsedMs": 11259,
+      "qualityRepairCount": 0
+    }
+  ],
+  "editorialDecision": "PENDING",
+  "productionChanged": false,
+  "completedAt": "2026-11-09T10:54:09.775Z",
+  "complete": false
+}
