@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-14",
+  "sourceSha256": {
+    "src/App.tsx": "1fa489c98641261571396d04a48502dec81a0c337fce336fe0bbad2041ce14ab",
+    "src/components/Navbar.tsx": "d5861782944c6b04ec91aa6e9ca1c3f657d62de1171bdd16cb1b38d2947a340d",
+    "src/components/ReelTitleInput.tsx": "1b7ca392d67acf3b483513a637e6ea1a4b3ae8180d8904de2e3b7984ea57a84d",
+    "src/components/IdeasView.tsx": "bd561c4779fd29836e68f2c7a68243d866fba906b5e053f0734fc586daaf6c5c",
+    "src/components/LibraryView.tsx": "7106aa1c70e3dfb336e7a54638f27f7613a1af0a24f8ddfa82fab3b5f0c128b3",
+    "src/components/GenerationLoader.tsx": "b3b410149c65861e140fa950132b037aa90131ae0a07315f98888f6e9c794361",
+    "src/components/SettingsModal.tsx": "03d4475cf0ad9041d33f58f1e1711d599623f5ab42df72f4102e83e98ef22fd1",
+    "src/components/CompactTopBar.tsx": "2f39b32e679d942e69a333ce173b30231a02be8b0b801cb8a394f6facb9585fc",
+    "src/components/HlniReviewCard.tsx": "7401e0ce5f3f40f4bc2398cd0fd946fcb9988579daa5663a6ac388990be7ca83",
+    "src/components/ShotCard.tsx": "96d0b253a9b37057e1b4abca50232cae81b334a690b78cdbb394cc885d3f46e6",
+    "src/index.css": "69d87b9fb329fca99b030123e4d2b88c4a5441e26f68e034ab4d8b45d10f48f9"
+  },
+  "browser": "Isolated headless Chromium",
+  "widths": [
+    1440,
+    720,
+    390,
+    320
+  ],
+  "liveModelRequests": 0,
+  "productionDeployed": false
+}

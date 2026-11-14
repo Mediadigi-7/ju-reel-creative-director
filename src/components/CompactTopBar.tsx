@@ -93,7 +93,7 @@ export const CompactTopBar: React.FC<CompactTopBarProps> = ({
           </span>
         </div>
 
-        <button onClick={onSave} className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold">
+        <button onClick={onSave} disabled={isSaved} className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold">
           <Bookmark className="w-3.5 h-3.5" />{isSaved ? 'Saved' : 'Save reel'}
         </button>
 

@@ -54,11 +54,22 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   };
 
   const dialogRef = useRef<HTMLDivElement>(null);
+  const focusBeforeDialog=useRef<HTMLElement|null>(null);
+  useEffect(()=>{
+    if(!isOpen)return;
+    focusBeforeDialog.current=document.activeElement as HTMLElement | null;
+    const previousOverflow=document.body.style.overflow;
+    const background=Array.from(document.querySelectorAll<HTMLElement>('header, main, footer, .skip-link')).filter(element=>!element.contains(dialogRef.current)&&!dialogRef.current?.contains(element));
+    const previous=background.map(element=>({element,inert:element.inert}));
+    document.body.style.overflow='hidden';
+    background.forEach(element=>element.inert=true);
+    return()=>{document.body.style.overflow=previousOverflow;previous.forEach(({element,inert})=>element.inert=inert);};
+  },[isOpen]);
   useEffect(() => {
     if (!isOpen) return;
-    const previous = document.activeElement as HTMLElement | null;
+    const previous = focusBeforeDialog.current || document.activeElement as HTMLElement | null;
     const dialog = dialogRef.current;
-    const focusable = () => Array.from(dialog?.querySelectorAll<HTMLElement>('button:not(:disabled), input:not(:disabled), a[href], select, [tabindex="0"]') || []);
+    const focusable = () => Array.from(dialog?.querySelectorAll<HTMLElement>('button:not(:disabled), input:not(:disabled), a[href], select, [tabindex="0"]') || []).filter(element=>element.getClientRects().length>0);
     focusable()[0]?.focus();
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') { event.preventDefault(); onClose(); }
@@ -154,19 +165,19 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-900/50 backdrop-blur-sm">
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="Connect AI" className="bg-white rounded-2xl border border-stone-200 shadow-xl w-full max-w-lg overflow-hidden flex flex-col max-h-[90vh]">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="AI settings" className="bg-white rounded-2xl border border-stone-200 shadow-xl w-full max-w-lg overflow-hidden flex flex-col max-h-[90vh]">
         {/* Modal Header */}
         <div className="px-6 py-4 border-b border-stone-200 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Key className="w-5 h-5 text-[#AF1E2A]" />
             <h2 className="font-extrabold text-stone-900 text-base sm:text-lg tracking-tight">
-              Connect AI
+              AI settings
             </h2>
           </div>
           <button
             onClick={onClose}
             aria-label="Close AI settings"
-            className="p-1 rounded-md text-stone-400 hover:text-stone-700 hover:bg-stone-100"
+            className="p-1 rounded-md text-stone-600 hover:text-stone-900 hover:bg-stone-100"
           >
             <X className="w-5 h-5" />
           </button>
@@ -174,6 +185,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
         {/* Modal Body */}
         <div className="flex-1 overflow-y-auto p-6 space-y-5">
+          <p className="text-sm leading-relaxed text-stone-600">Connect AI to create storyboards from your own ideas. You can try the sample topics without an API key.</p>
           <form id="api-form" onSubmit={handleSave} className="space-y-4">
             <fieldset disabled={testingGeneration || testingKey} className="space-y-4">
             {/* Provider Selection */}
@@ -184,6 +196,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <div className="grid grid-cols-2 gap-2">
                 <button
                   type="button"
+                  aria-pressed={provider==='gemini'}
                   onClick={() => {
                     setProvider('gemini');
                     setTestResult(null);
@@ -215,6 +228,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 </button>
                 <button
                   type="button"
+                  aria-pressed={provider==='openai'}
                   onClick={() => {
                     setProvider('openai');
                     setTestResult(null);
@@ -257,6 +271,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               </label>
               <input
                 id="api-key-input"
+                aria-describedby="api-key-help"
+                aria-invalid={Boolean(testResult?.status==='error'||isMismatchGeminiOnOpenAi||isMismatchOpenAiOnGemini)}
                 type="password"
                 value={apiKey}
                 onChange={(e) => {
@@ -367,7 +383,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 )}
               </div>
 
-              <p className="text-[11px] text-stone-500 mt-2">Verify key checks API access. Test AI generation plans a concept, then asks the app server to create a sample storyboard. {provider === 'gemini' ? 'For free-only use, choose an AI Studio project with billing disabled. Requests use its free quota; availability and limits depend on your account and region.' : 'OpenAI requires API credits. Choose Gemini for the free-tier workflow.'}</p>
+              <p id="api-key-help" className="text-xs text-stone-600 mt-2">Verify key checks your connection. Test AI generation also checks whether your provider can create a storyboard. {provider === 'gemini' ? 'For free-only use, choose an AI Studio project with billing disabled. Requests use its free quota; availability and limits depend on your account and region.' : 'OpenAI requires API credits. Choose Gemini for the free-tier workflow.'}</p>
               {generationResult && <div role="status" className={`mt-3 p-3 rounded-lg border text-xs ${generationResult.success ? 'bg-emerald-50 border-emerald-200 text-emerald-900' : 'bg-red-50 border-red-200 text-red-900'}`}>
                 <p className="font-semibold">{generationResult.success ? 'Live generation passed' : 'Live generation failed'}</p>
                 <p className="mt-1">{generationResult.message}</p>
@@ -376,7 +392,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <p className="mt-1">This tests access and output checks. Review generated content separately for creative quality.</p>
               </div>}
               {testResult && (
-                <div
+                <div role={testResult.status==='error'?'alert':'status'}
                   className={`mt-2.5 p-2.5 rounded-lg text-xs flex items-start gap-2 ${
                     testResult.status === 'success'
                       ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'

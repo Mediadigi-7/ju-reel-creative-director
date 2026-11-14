@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Navbar } from './components/Navbar.js';
 import { CompactTopBar } from './components/CompactTopBar.js';
 import { HeroContextBar } from './components/HeroContextBar.js';
-import { ReelTitleInput } from './components/ReelTitleInput.js';
+import { ReelTitleInput, type IdeaSelection } from './components/ReelTitleInput.js';
 import { GenerationLoader } from './components/GenerationLoader.js';
 import { ShotCard } from './components/ShotCard.js';
 import { ProductionNotesCard } from './components/ProductionNotesCard.js';
@@ -33,6 +33,8 @@ import { AlertCircle } from 'lucide-react';
 import { LibraryView } from './components/LibraryView.js';
 
 export const App: React.FC = () => {
+  const [creationSession,setCreationSession]=useState(0);
+  const [selectedIdea,setSelectedIdea]=useState<IdeaSelection|undefined>();
   const [currentView, setCurrentView] = useState<'creator' | 'library' | 'ideas'>('creator');
   const [openedFrom, setOpenedFrom] = useState<'new' | 'library' | 'restored' | 'shared'>('new');
   const [currentReel, setCurrentReel] = useState<ReelStoryboard | null>(null);
@@ -117,6 +119,13 @@ export const App: React.FC = () => {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  const navigationReady=useRef(false);
+  useEffect(()=>{
+    document.title=`${currentView==='ideas'?'Find ideas':currentView==='library'?'Saved reels':currentReel?.reelTitle || 'Create a storyboard'} · JOY Reel Creative Director`;
+    if(navigationReady.current){document.getElementById('main-content')?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'auto'});}
+    navigationReady.current=true;
+  },[currentView,currentReel?.id]);
 
   const navigateToView = (view: 'creator' | 'library' | 'ideas') => {
     setCurrentView(view);
@@ -310,7 +319,7 @@ export const App: React.FC = () => {
     const updated = saveProjectToLibrary(currentReel);
     setSavedProjects(updated);
     setIsSaved(true);
-    setTimeout(() => setIsSaved(false), 3000);
+
   };
 
   const handleDeleteProject = (projectId: string) => {
@@ -323,7 +332,14 @@ export const App: React.FC = () => {
   };
 
   const handleNewReel = () => {
-    if (isLoading) return; // Prevent aborting active generation
+    if (isLoading) return; // Keep the active generation intact.
+    setCreationSession(value=>value+1);
+    setSelectedIdea(undefined);
+    setIsSharedView(false);
+    setIsSharedLibrary(false);
+    setSharedProjectsData(null);
+    setIsSaved(false);
+    setError(null);
     setCurrentReel(null);
     setPendingReel(null);
     saveCurrentStoryboard(null);
@@ -335,7 +351,10 @@ export const App: React.FC = () => {
     setPendingReel(null);
     saveCurrentStoryboard(null);
     navigateToView('creator');
-    handleGenerate(ideaTitle, direction, 'English', channel);
+    setError(null);
+    setIsSharedView(false);
+    setIsSaved(false);
+    setSelectedIdea({title:ideaTitle,direction,channel});
   };
 
   const handleShareLink = () => {
@@ -355,11 +374,12 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F8F9FA]">
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       {/* Primary Header Navbar - Always Visible */}
       <Navbar
         onNewReel={handleNewReel}
         onOpenIdeas={() => navigateToView('ideas')}
-        onOpenLibrary={() => navigateToView('library')}
+        onOpenLibrary={() => {setIsSharedLibrary(false);setSharedProjectsData(null);navigateToView('library');}}
         onOpenSettings={() => setIsSettingsOpen(true)}
         savedCount={savedProjects.length}
         currentView={currentView}
@@ -385,7 +405,7 @@ export const App: React.FC = () => {
         />
       )}
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <main id="main-content" tabIndex={-1} className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Error Notification */}
         {error && (
           <div role="alert" className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 flex items-center justify-between gap-4">
@@ -414,6 +434,8 @@ export const App: React.FC = () => {
             onSelectProject={(storyboard) => {
               setCurrentReel(storyboard);
               setOpenedFrom('library');
+              setIsSharedView(false);
+              setIsSaved(true);
               navigateToView('creator');
             }}
             onDeleteProject={handleDeleteProject}
@@ -437,9 +459,12 @@ export const App: React.FC = () => {
           />
         ) : !currentReel ? (
           <ReelTitleInput
+            key={creationSession}
+            onDraftChange={setSelectedIdea}
+            initialIdea={selectedIdea}
             onGenerate={handleGenerate}
             isLoading={isLoading}
-            hasApiKey={Boolean(apiSettings.apiKey && apiSettings.isVerified)}
+            hasApiKey={Boolean(apiSettings.apiKey?.trim())}
             onOpenSettings={() => setIsSettingsOpen(true)}
           />
         ) : (

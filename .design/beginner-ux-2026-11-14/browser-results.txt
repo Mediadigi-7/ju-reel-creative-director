@@ -1,0 +1,3 @@
+PASS: skip link, focus after navigation, native choices, validation, custom-topic recovery and deliberate idea selection
+PASS: real sample loading, six scenes, last-scene editing, persistent save feedback, labelled filtering, safe delete cancellation and truthful clipboard errors
+PASS: shared deep link, settings focus trap/Escape/restore, 320/390/720px reflow, 16px mobile inputs, reduced-motion preference and accessibility-tree capture

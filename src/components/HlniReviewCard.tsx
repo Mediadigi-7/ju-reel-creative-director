@@ -24,8 +24,8 @@ export function HlniReviewCard({reel,onUpdate}:{reel:ReelStoryboard;onUpdate:(fi
   const inputClass='mt-1 w-full rounded-lg border border-stone-300 bg-white p-2 text-sm text-stone-800';
   function approve(){try{onUpdate(approveEditorialReview(changed,checks));}catch(e){setError(e instanceof Error?e.message:'Complete the editorial review.');}}
   return <details className="mb-5 rounded-xl border border-stone-200 bg-white p-4" data-testid="hlni-review">
-    <summary className="cursor-pointer text-sm font-semibold text-stone-800">{approved&&!dirty?'HLNI editorial review approved':'HLNI editorial review required'}
-      <span className="ml-2 font-normal text-stone-500">What will the viewer learn or do differently?</span>
+    <summary className="cursor-pointer text-sm font-semibold text-stone-800">{approved&&!dirty?'Creative review approved':'Review before filming'}
+      <span className="ml-2 font-normal text-stone-500">Check the takeaway, accuracy and payoff.</span>
     </summary>
     <div className="mt-4 space-y-4">
       <p className="text-sm text-stone-600">Approve at least one credible, non-obvious insight delivered by the actual story. Generic advice or reassurance alone does not qualify. These are editorial notes, not another scene.</p>
