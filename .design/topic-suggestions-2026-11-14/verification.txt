@@ -1,0 +1,2 @@
+PASS: hidden initially; opens on input click/focus; typing filters; pointer and arrow/Enter selection preserve matching channel; Escape/Tab/outside dismiss; no auto-submit; real sample still opens
+PASS: 320/390px popup and closed form fit without horizontal overflow
