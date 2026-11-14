@@ -66,3 +66,22 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* One quiet sweep across the decorative storyboard preview; no progress claim. */
+.storyboard-loading-preview { position: relative; overflow: hidden; isolation: isolate; }
+.storyboard-loading-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 25%, rgba(255,255,255,.75) 48%, transparent 72%);
+  transform: translateX(-100%);
+  animation: storyboard-loading-sweep 3s ease-in-out infinite;
+}
+@keyframes storyboard-loading-sweep {
+  0%, 12% { transform: translateX(-100%); }
+  82%, 100% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .storyboard-loading-preview::after { display: none; animation: none; }
+}

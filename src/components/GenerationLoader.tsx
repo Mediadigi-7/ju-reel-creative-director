@@ -11,6 +11,13 @@ export const GenerationLoader:React.FC<GenerationLoaderProps>=({title,language,i
     <p className="mt-3 text-base leading-relaxed text-stone-600">{error||'We’re preparing a connected story with dialogue, visuals and camera directions. You can review and edit it before filming.'}</p>
    </div>
   </div>
+  {!isComplete&&!error&&<div aria-hidden="true" className="storyboard-loading-preview mt-7 grid grid-cols-3 gap-3">
+   {[0,1,2].map(frame=><div key={frame} className="rounded-lg border border-stone-200 bg-white p-3 sm:p-4">
+    <div className="h-6 sm:h-8 rounded bg-stone-100"/>
+    <div className="mt-3 h-1 rounded-full bg-stone-200/70"/>
+    <div className="mt-2 h-1 w-2/3 rounded-full bg-stone-200/70"/>
+   </div>)}
+  </div>}
   <p className="mt-7 border-t border-stone-200 pt-5 text-sm text-stone-700 break-words">{title}{language?` · ${language}`:''}</p>
   {error&&onRetry&&<button onClick={onRetry} className="mt-6 px-5 py-3 rounded-lg bg-[#AF1E2A] text-white font-semibold">Try again</button>}
  </section>;

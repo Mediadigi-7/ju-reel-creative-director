@@ -1,0 +1,1 @@
+PASS: three-second sweep visibly advances; decorative preview stays out of accessibility tree; 320px reflow; reduced motion removes sweep; real API completion still opens six-scene sample without extra delay
