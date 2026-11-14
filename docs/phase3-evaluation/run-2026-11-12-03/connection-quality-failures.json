@@ -1,0 +1,569 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A short illustrative task reveals specific knowledge gaps rather than degree aptitude.",
+          "audienceGap": "Students assume degree choice is based on labels rather than identifying what specific topics they find confusing or interesting.",
+          "viewerChange": "Moves from abstract anxiety about degree labels to a specific, actionable question about curriculum content.",
+          "supportType": "method",
+          "support": "The method uses a concrete task as a diagnostic tool; it is limited to identifying current questions, not predicting future career success.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            4
+          ],
+          "payoff": "The student shifts from 'Which degree?' to 'Where can I find support for basic cost calculations?', demonstrating a practical way to investigate course requirements."
+        }
+      ],
+      "id": "reel_1794457049856_gdc4bu",
+      "reelTitle": "The Sticking Point Journal",
+      "creativeAngle": "Using a micro-task to shift from vague comparison to specific questions",
+      "objective": "Help students move past the B.Com vs BBA confusion by identifying personal knowledge gaps",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Confusion",
+          "timestamp": "00:00 – 00:06",
+          "visual": "A student looking at two separate folders labeled 'B.Com' and 'BBA' on a desk, looking overwhelmed.",
+          "dialogue": "Choosing between B.Com and BBA feels impossible. You don't need a degree-guessing quiz; you need to see what you actually want to learn.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close-up on the student's expression, then pan to the folders.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Micro-Task",
+          "timestamp": "00:06 – 00:15",
+          "visual": "The student writes on a sticky note while looking at a sample task card: 'Draft a one-page marketing budget for a food stall'.",
+          "dialogue": "Try this: draft a simple food stall budget. Record where you get stuck. I found mine.",
+          "onscreenText": "Task: Draft a food stall budget.",
+          "cameraPerformance": "Over-the-shoulder shot showing the student writing on a sticky note.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Reveal",
+          "timestamp": "00:15 – 00:23",
+          "visual": "Close-up on the sticky note reading: 'Example: My hurdle: How to calculate fixed costs?'",
+          "dialogue": "See? My hurdle: How to calculate fixed costs? Now I have a real question.",
+          "onscreenText": "Example: My hurdle: How to calculate fixed costs?",
+          "cameraPerformance": "Focus pull onto the sticky note text.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "SCENE",
+          "functions": [
+            "CTA"
+          ],
+          "name": "The Better Question",
+          "timestamp": "00:23 – 00:28",
+          "visual": "The student turns to the camera, looking relieved.",
+          "dialogue": "Stop guessing. Ask: Where can I find support for basic cost calculations?",
+          "onscreenText": "Where can I find support for basic cost calculations?",
+          "cameraPerformance": "Direct address, warm and encouraging.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Minimalist, desk-based, clean aesthetic.",
+        "performance": "Natural, thoughtful, not performative.",
+        "camera": "Handheld for a grounded, intimate feel.",
+        "editing": "Steady, allowing time to read the notes.",
+        "sound": "Ambient room noise, soft lo-fi background track.",
+        "props": [
+          "Folders",
+          "Sticky notes",
+          "Pen",
+          "Task card"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "A student in their late teens.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming degree comparison into a personal diagnostic exercise using a micro-task.",
+        "shootingPriority": [
+          "Close-up of the sticky note",
+          "Student writing task",
+          "Opening dilemma"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:17:29.856Z",
+      "updatedAt": "2026-11-12T04:17:29.856Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Connection",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_01",
+          "title": "The Sticking Point Journal",
+          "audienceGap": "Students feel overwhelmed by the breadth of the degree choice and lack a way to identify what they actually need to ask.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Moves from feeling lost to having a specific, actionable question based on a micro-task.",
+          "concept": "Two students try the same small task and record different points of confusion.",
+          "mechanismKey": "sticking_point_log",
+          "device": "Side-by-side sticky notes",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A short task: 'Draft a one-page marketing budget for a food stall'",
+            "visibleInput": "Example: My hurdle: How to calculate fixed costs?",
+            "observation": "The student identifies a specific gap in their knowledge of the task.",
+            "nextQuestion": "Where can I find support for basic cost calculations?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment_audit",
+            "device": "Split-screen worksheet"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "sticking_point_log",
+            "device": "Side-by-side sticky notes"
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_link_reveal",
+            "device": "Decision puzzle"
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / assessment_audit; Connection = task_question_journal / sticking_point_log; Discovery = insufficient_information / missing_link_reveal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Delivery (Scene pacing)",
+      "failureReason": "Shot #1 has too much dialogue for its timestamp.",
+      "repairInstruction": "Shorten shot #1 to at most 18 spoken words while preserving story coherence, useful insight and resolution; do not add a CTA."
+    }
+  },
+  {
+    "candidate": {
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_01",
+          "title": "The Sticking Point Journal",
+          "audienceGap": "Students feel overwhelmed by the breadth of the degree choice and lack a way to identify what they actually need to ask.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Moves from feeling lost to having a specific, actionable question based on a micro-task.",
+          "concept": "Two students try the same small task and record different points of confusion.",
+          "mechanismKey": "sticking_point_log",
+          "device": "Side-by-side sticky notes",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A short task: 'Draft a one-page marketing budget for a food stall'",
+            "visibleInput": "Example: My hurdle: How to calculate fixed costs?",
+            "observation": "The student identifies a specific gap in their knowledge of the task.",
+            "nextQuestion": "Where can I find support for basic cost calculations?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment_audit",
+            "device": "Split-screen worksheet"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "sticking_point_log",
+            "device": "Side-by-side sticky notes"
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_link_reveal",
+            "device": "Decision puzzle"
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / assessment_audit; Connection = task_question_journal / sticking_point_log; Discovery = insufficient_information / missing_link_reveal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      },
+      "hlni": [
+        {
+          "insight": "A short illustrative task reveals specific knowledge gaps rather than degree aptitude.",
+          "audienceGap": "Students assume degree choice is based on labels rather than identifying what specific topics they find confusing or interesting.",
+          "viewerChange": "Moves from abstract anxiety about degree labels to a specific, actionable question about curriculum content.",
+          "supportType": "method",
+          "support": "The method uses a concrete task as a diagnostic tool; it is limited to identifying current questions, not predicting future career success.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            4
+          ],
+          "payoff": "The student shifts from 'Which degree?' to 'Where can I find support for basic cost calculations?', demonstrating a practical way to investigate course requirements."
+        }
+      ],
+      "channel": "Connection",
+      "id": "reel_1794457049856_gdc4bu",
+      "reelTitle": "The Sticking Point Journal",
+      "creativeAngle": "Using a micro-task to shift from vague comparison to specific questions",
+      "objective": "Help students move past the B.Com vs BBA confusion by identifying personal knowledge gaps",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Confusion",
+          "timestamp": "00:00 – 00:06",
+          "visual": "A student looking at two separate folders labeled 'B.Com' and 'BBA' on a desk, looking overwhelmed.",
+          "dialogue": "Choosing between B.Com and BBA feels impossible. Try identifying what you actually want to learn.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close-up on the student's expression, then pan to the folders.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Micro-Task",
+          "timestamp": "00:06 – 00:15",
+          "visual": "The student writes on a sticky note while looking at a sample task card: 'Draft a one-page marketing budget for a food stall'.",
+          "dialogue": "Try this: draft a simple food stall budget. Record where you get stuck. I found mine.",
+          "onscreenText": "Task: Draft a food stall budget.",
+          "cameraPerformance": "Over-the-shoulder shot showing the student writing on a sticky note.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Reveal",
+          "timestamp": "00:15 – 00:23",
+          "visual": "Close-up on the sticky note reading: 'Example: My hurdle: How to calculate fixed costs?'",
+          "dialogue": "See? My hurdle: How to calculate fixed costs? Now I have a real question.",
+          "onscreenText": "Example: My hurdle: How to calculate fixed costs?",
+          "cameraPerformance": "Focus pull onto the sticky note text.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "SCENE",
+          "functions": [
+            "CTA"
+          ],
+          "name": "The Better Question",
+          "timestamp": "00:23 – 00:28",
+          "visual": "The student turns to the camera, looking relieved.",
+          "dialogue": "Stop guessing. Ask: Where can I find support for basic cost calculations?",
+          "onscreenText": "Where can I find support for basic cost calculations?",
+          "cameraPerformance": "Direct address, warm and encouraging.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Minimalist, desk-based, clean aesthetic.",
+        "performance": "Natural, thoughtful, not performative.",
+        "camera": "Handheld for a grounded, intimate feel.",
+        "editing": "Steady, allowing time to read the notes.",
+        "sound": "Ambient room noise, soft lo-fi background track.",
+        "props": [
+          "Folders",
+          "Sticky notes",
+          "Pen",
+          "Task card"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "A student in their late teens.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming degree comparison into a personal diagnostic exercise using a micro-task.",
+        "shootingPriority": [
+          "Close-up of the sticky note",
+          "Student writing task",
+          "Opening dilemma"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:17:29.856Z",
+      "updatedAt": "2026-11-12T04:17:30.952Z",
+      "status": "Draft",
+      "version": 1
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: Shot 1 introduces a comparison between B.Com and BBA, but these subjects are never mentioned or integrated into the decision-making process for the remainder of the reel. Revision: Keep the comparison subjects relevant by having the student record a sticking point specifically related to a module unique to either B.Com or BBA. insight: The transition from the student's personal hurdle to the final question lacks the demonstration of the 'Journal' concept as a method for distinguishing between degrees. Revision: Show the student comparing their specific cost-calculation question against a course brief to illustrate how the journal helps them evaluate the curriculum.",
+      "repairInstruction": "integrity: Shot 1 introduces a comparison between B.Com and BBA, but these subjects are never mentioned or integrated into the decision-making process for the remainder of the reel. Revision: Keep the comparison subjects relevant by having the student record a sticking point specifically related to a module unique to either B.Com or BBA.\ninsight: The transition from the student's personal hurdle to the final question lacks the demonstration of the 'Journal' concept as a method for distinguishing between degrees. Revision: Show the student comparing their specific cost-calculation question against a course brief to illustrate how the journal helps them evaluate the curriculum."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A short task reveals specific learning gaps that turn vague degree comparisons into actionable questions.",
+          "audienceGap": "Students assume degree choice requires choosing a full path based on labels rather than investigating actual learning needs.",
+          "viewerChange": "Moves from feeling lost to having a specific question that helps evaluate which degree fits their interest in a specific skill.",
+          "supportType": "method",
+          "support": "Testing an illustrative task identifies specific knowledge gaps that correlate with how a student wants to spend their time learning.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            4
+          ],
+          "payoff": "The student identifies a specific cost-calculation gap, leading to a concrete question for the course team."
+        }
+      ],
+      "id": "reel_1794457055324_xkvluu",
+      "reelTitle": "The Sticking Point Journal",
+      "creativeAngle": "Using a micro-task to surface specific learning questions",
+      "objective": "Help students move from vague degree anxiety to actionable investigation",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Comparison Dilemma",
+          "timestamp": "00:00 – 00:05",
+          "visual": "Student sits at a desk looking at two printed course overviews, one labeled B.Com and one BBA.",
+          "dialogue": "Choosing between B.Com and BBA feels overwhelming. Instead of guessing, try a micro-task.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close-up on student, then quick pan to the papers.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Task",
+          "timestamp": "00:05 – 00:12",
+          "visual": "Student writes 'Draft a one-page marketing budget for a food stall' on a notepad.",
+          "dialogue": "Try drafting a simple food stall budget. Record exactly where you feel stuck while doing it.",
+          "onscreenText": "Task: Draft a food stall budget.",
+          "cameraPerformance": "Over-the-shoulder shot of the writing process.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Journal Entry",
+          "timestamp": "00:12 – 00:20",
+          "visual": "Student sticks a post-it note on the B.Com overview.",
+          "dialogue": "My hurdle: How to calculate fixed costs? Now, compare that gap against the course modules.",
+          "onscreenText": "Example: My hurdle: How to calculate fixed costs?",
+          "cameraPerformance": "Macro shot of the student sticking the note.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF",
+            "CTA"
+          ],
+          "name": "The Better Question",
+          "timestamp": "00:20 – 00:28",
+          "visual": "Student looks at the camera, holding the B.Com sheet with the note.",
+          "dialogue": "Don't guess. Ask: Where can I find support for basic cost calculations? That's your next step.",
+          "onscreenText": "Where can I find support for basic cost calculations?",
+          "cameraPerformance": "Direct address, warm and encouraging.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, bright, academic environment",
+        "performance": "Relatable, focused student",
+        "camera": "Handheld for authenticity",
+        "editing": "Steady, clear cuts",
+        "sound": "Ambient room noise",
+        "props": [
+          "B.Com/BBA brochures",
+          "Notepad",
+          "Sticky notes"
+        ],
+        "locations": [
+          "Study table"
+        ],
+        "casting": "Authentic +2 student",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use a brief, practical task to generate a specific question that makes degree comparison concrete.",
+        "shootingPriority": [
+          "Close-up of the sticky note",
+          "Student interaction with course sheets"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:17:35.324Z",
+      "updatedAt": "2026-11-12T04:17:35.324Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Connection",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_01",
+          "title": "The Sticking Point Journal",
+          "audienceGap": "Students feel overwhelmed by the breadth of the degree choice and lack a way to identify what they actually need to ask.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Moves from feeling lost to having a specific, actionable question based on a micro-task.",
+          "concept": "Two students try the same small task and record different points of confusion.",
+          "mechanismKey": "sticking_point_log",
+          "device": "Side-by-side sticky notes",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A short task: 'Draft a one-page marketing budget for a food stall'",
+            "visibleInput": "Example: My hurdle: How to calculate fixed costs?",
+            "observation": "The student identifies a specific gap in their knowledge of the task.",
+            "nextQuestion": "Where can I find support for basic cost calculations?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment_audit",
+            "device": "Split-screen worksheet"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "sticking_point_log",
+            "device": "Side-by-side sticky notes"
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_link_reveal",
+            "device": "Decision puzzle"
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / assessment_audit; Connection = task_question_journal / sticking_point_log; Discovery = insufficient_information / missing_link_reveal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: Shot 3 shows the student sticking a post-it note onto the B.Com overview only, ignoring the BBA overview introduced in the hook. Revision: Show the student using the post-it note to compare the specific 'fixed cost' hurdle against the modules of both B.Com and BBA to maintain the relevance of both subjects. payoff: Shot 4 presents the final question as a general solution while holding only the B.Com sheet, implying a bias toward one degree. Revision: The student should hold both course overviews or gesture between them while asking the refined question to reinforce that the method helps investigate both options equally.",
+      "repairInstruction": "integrity: Shot 3 shows the student sticking a post-it note onto the B.Com overview only, ignoring the BBA overview introduced in the hook. Revision: Show the student using the post-it note to compare the specific 'fixed cost' hurdle against the modules of both B.Com and BBA to maintain the relevance of both subjects.\npayoff: Shot 4 presents the final question as a general solution while holding only the B.Com sheet, implying a bias toward one degree. Revision: The student should hold both course overviews or gesture between them while asking the refined question to reinforce that the method helps investigate both options equally."
+    }
+  }
+]

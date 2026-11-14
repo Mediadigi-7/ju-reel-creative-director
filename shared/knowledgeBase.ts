@@ -1,8 +1,13 @@
+import { PROPOSED_UG_PROGRAMMES_2027_28 } from './proposedProgrammes.js';
+export { PROPOSED_UG_PROGRAMMES_2027_28, proposedProgrammeContext } from './proposedProgrammes.js';
+
 /**
  * JOY UNIVERSITY REEL CREATIVE INTELLIGENCE KNOWLEDGE BASE
- * Authoritative facts, creative frameworks, hook structures, and student psychology guidelines.
+ * Legacy institutional assertions, creative frameworks and editorial guidelines.
+ * Institutional assertions require current official sources before publication.
  */
 
+// Historical export name retained for compatibility; the name is not source verification.
 export const JOY_UNIVERSITY_VERIFIED_FACTS = {
   institution: "Joy University",
   formerName: "The Indian Engineering College",
@@ -38,9 +43,15 @@ export const JOY_UNIVERSITY_VERIFIED_FACTS = {
 };
 
 /**
- * Official Joy University Course Catalogue.
+ * Combined repository course catalogue. Proposed additions retain their status in each label.
  * Students enroll in these specific courses, not internal faculty/school divisions.
  */
+function proposedCourseLabels(school: string): string[] {
+  return PROPOSED_UG_PROGRAMMES_2027_28.schools
+    .filter(entry => entry.name === school)
+    .flatMap(entry => entry.programmes.map(name => `${name} — Proposed for ${PROPOSED_UG_PROGRAMMES_2027_28.academicYear}`));
+}
+
 export const JOY_UNIVERSITY_COURSES = {
   roboticsAndAI: [
     { name: "B.Tech CSE (AI & Robotics)", focus: "Software, Intelligent Systems, Computer Vision & Algorithms" },
@@ -56,6 +67,7 @@ export const JOY_UNIVERSITY_COURSES = {
     "B.Tech Information & Communication Technology",
     "BCA (Full Stack Development / AI / Cyber Security)",
     "B.Sc. (Hons) CSE (AI & Data Science)",
+    ...proposedCourseLabels("School of Computational Intelligence"),
   ],
   engineeringAndTechnology: [
     "B.Tech Mech (Robotics & Automation)",
@@ -69,6 +81,7 @@ export const JOY_UNIVERSITY_COURSES = {
     "B.Tech Aeronautical Engineering",
     "B.Tech Civil Engineering",
     "B.Design (Fashion Design)",
+    ...proposedCourseLabels("School of Engineering & Technology"),
   ],
   managementAndCommerce: [
     "B.Com (FinTech & AI)",
@@ -78,6 +91,7 @@ export const JOY_UNIVERSITY_COURSES = {
     "BBA (Digital Marketing)",
     "BBA (Logistics & Supply Chain Management)",
     "MBA (Business Analytics / Digital Marketing)",
+    ...proposedCourseLabels("School of Entrepreneurship & Management"),
   ],
   agriculture: [
     "B.Sc. (Hons.) Agriculture",
@@ -102,11 +116,12 @@ export const JOY_UNIVERSITY_COURSES = {
     "B.Sc. Forensic Science",
     "B.Sc. Psychology",
     "B.Sc. Film & TV Production",
+    ...proposedCourseLabels("School of Arts & Natural Sciences"),
   ],
 };
 
 /**
- * Verified Joy University institutional highlights.
+ * Legacy institutional highlights awaiting source verification.
  * Use selectively in Reel content — only when directly relevant to the title.
  * Never force-insert facts into student-first storytelling.
  */

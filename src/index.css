@@ -43,3 +43,26 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #A8A29E;
 }
+
+/* Shared interaction defaults for keyboard, touch and reduced-motion access. */
+@layer base {
+  :focus-visible { outline: 3px solid #8c1618; outline-offset: 3px; }
+  main:focus { outline: none; }
+  #main-content { scroll-margin-top: 6rem; }
+  button, a, summary, select { -webkit-tap-highlight-color: transparent; }
+  button:disabled { cursor: not-allowed; }
+  input, textarea { caret-color: #AF1E2A; }
+  input::placeholder, textarea::placeholder { color: #64615d; opacity: 1; }
+  ::selection { background: #f8dce0; color: #4d0d15; }
+  a { text-underline-offset: 3px; }
+  [id^="shot-"] { scroll-margin-top: 12rem; }
+}
+.skip-link { position: fixed; top: 8px; left: 16px; transform: translateY(-180%); z-index: 100; padding: 12px 18px; border-radius: 8px; background: #fff; color: #8c1618; font-weight: 600; }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 640px) {
+  input:not([type="radio"]):not([type="checkbox"]), textarea, select { font-size: 16px !important; }
+  button, summary { min-height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

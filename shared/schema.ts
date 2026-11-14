@@ -1,82 +1,35 @@
+import { ConceptSelectionSchema } from './concepts.js';
 
-export function generateDynamicProductionNotes(title: string, direction: string = 'Informative') {
-  const lower = (title || '').toLowerCase();
-
-  let locations = ['Joy University Central Boulevard', 'Campus Amphitheatre'];
-  let props = ['Notebook', 'Smartphone with course portal', 'Course Booklet'];
-  let visualStyle = 'Warm, naturalistic, authentic South Indian student-first aesthetic. Avoid corporate promotional stiffness.';
-  let camera = 'Lightweight mirrorless camera or smartphone with f/1.8 prime lens for crisp subject isolation.';
-  let sound = 'Warm acoustic lofi guitar or subtle upbeat percussion beat with music ducked during dialogue.';
-  let priorities = [
-    'Nail the opening Hook facial expression within the first 1.5 seconds.',
-    'Execute the Pattern Interrupt cut with perfect audio-video synchronization.',
-    'Ensure the Value shot clearly highlights the 3-point framework in readable typography.',
-    'Keep branding subtle until the final payoff and CTA.'
-  ];
-
-  if (lower.includes('b.com') || lower.includes('commerce') || lower.includes('fintech') || lower.includes('account') || lower.includes('finance')) {
-    locations = ['Joy University FinTech Analytics Hub', 'Entrepreneurship Suite', 'Central Boulevard'];
-    props = ['Tablet displaying real-time FinTech analytics', 'Corporate Finance Case Study', 'Smartphone with trading app'];
-    visualStyle = 'Sharp, high-clarity corporate-creative aesthetic with vibrant screen data overlays.';
-    sound = 'Upbeat modern electronic rhythm with subtle trading floor ambience in background.';
-    priorities = [
-      'Focus camera on the FinTech tablet screen contrast in Shot 3 Pattern Interrupt.',
-      'Highlight the 3 corporate career pathways in kinetic typography during Shot 4 Value.',
-      'Capture student collaboration in the Entrepreneurship Hub for Shot 5 Payoff.',
-      'End with clear single CTA pointing to B.Com FinTech course exploration.'
-    ];
-  } else if (lower.includes('design') || lower.includes('b.design') || lower.includes('ui') || lower.includes('ux') || lower.includes('creative')) {
-    locations = ['Joy University Design & Prototyping Studio', 'Media & Animation Suite', 'Outdoor Study Pod'];
-    props = ['Wacom drawing tablet', 'Figma wireframe sketchpad', 'Color palette swatches', 'Smartphone'];
-    visualStyle = 'Vibrant, stylized creative-first aesthetic with dynamic lighting and clean color grading.';
-    sound = 'Lofi chillhop beats with subtle stylus tap foley on pattern interrupt.';
-    priorities = [
-      'Establish direct eye contact and candid expression in the opening Hook shot.',
-      'Make the camera transition to the outdoor studio instant and energetic for Pattern Interrupt.',
-      'Display the 3 design evaluation filters clearly in Shot 4 Value.',
-      'Show authentic student teamwork around the outdoor study pod in Shot 5 Payoff.'
-    ];
-  } else if (lower.includes('robot') || lower.includes('mech') || lower.includes('automation') || lower.includes('hardware')) {
-    locations = ['Joy University Robotics & Automation Bay', 'Mechatronics Prototyping Lab', 'Central Quadrangle'];
-    props = ['3D-printed robotic arm component', 'Circuit board', 'Microcontroller', 'Safety glasses'];
-    visualStyle = 'High-tech, dynamic engineering focus with shallow depth of field on hardware details.';
-    sound = 'Energetic synth beats with crisp mechanical servo foley sound effects.';
-    priorities = [
-      'Emphasize the hardware vs software contrast in the opening Hook.',
-      'Ensure the robotic arm movement syncs with the Pattern Interrupt cut.',
-      'Detail the 2 distinct B.Tech pathways clearly in Shot 4 typography.',
-      'Frame the lab environment to highlight Joy University advanced equipment.'
-    ];
-  } else if (lower.includes('ai') || lower.includes('tech') || lower.includes('code') || lower.includes('cse') || lower.includes('comput')) {
-    locations = ['Joy University Computational Intelligence Lab', 'High-Performance GPU Cluster Suite', 'Student Innovation Pod'];
-    props = ['IDE code editor terminal', 'GitHub commit history screen', 'Laptop with AI model logs'];
-    visualStyle = 'Modern tech aesthetic with high-contrast ambient lighting and screen glows.';
-    sound = 'Pulsing ambient electronic soundtrack with keyboard click sound design.';
-    priorities = [
-      'Hook the viewer with the prompt-user vs builder contrast immediately.',
-      'Show clean screen recording overlay during Pattern Interrupt.',
-      'Highlight neural network lab access during the Value beat.',
-      'Keep the CTA focused on actionable course exploration.'
-    ];
-  }
-
+// Neutral metadata for older/incomplete records. Never invent a stage plan,
+// fixed camera style, institutional facility or cast to fill missing fields.
+export function generateDynamicProductionNotes(_title: string, _direction: string = 'Informative') {
   return {
     productionNotes: {
-      visualStyle,
-      performance: 'Relatable, energetic, conversational acting without forced presentation.',
-      camera,
-      editing: 'Snappy rhythmic cuts (1.5–3.5s per shot), match cuts on action, kinetic typography for key takeaway phrases.',
-      sound,
-      props,
-      locations,
-      casting: '1 protagonist (18–19 yrs old, approachable look) + 2 background student collaborators',
-      complexity: 'LOW' as const
+      visualStyle: 'Choose an approach that serves the actual story and audience.',
+      performance: 'Natural delivery with room for pauses and visual storytelling.',
+      camera: 'Frame the actions and details specified in the production shots.',
+      editing: 'Follow the story-led shot sequence and pacing.',
+      sound: 'Use sound or silence when it supports the story.',
+      props: [] as string[], locations: [] as string[],
+      casting: 'Use the cast required by the chosen concept.', complexity: 'LOW' as const,
     },
-    shootingPriority: priorities
+    shootingPriority: ['Check factual references, practical shot needs and natural delivery timing.'],
   };
 }
 
 import { z } from 'zod';
+import { NARRATIVE_FUNCTIONS } from './creativeFramework.js';
+import { enforceEditorialStatus } from './hlni.js';
+
+export const HlniSchema = z.object({
+  insight:z.string(),audienceGap:z.string(),viewerChange:z.string(),
+  supportType:z.enum(['fact','method','perspective']),support:z.string(),references:z.array(z.string()).optional(),
+  shotNumbers:z.array(z.number().int().positive()),payoffShotNumbers:z.array(z.number().int().positive()),payoff:z.string(),
+});
+export const EditorialReviewSchema=z.object({
+  standard:z.literal('HLNI-v1'),approvedAt:z.string(),contentSnapshot:z.string(),
+  checks:z.object({newInformation:z.boolean(),highLeverage:z.boolean(),supported:z.boolean(),integrated:z.boolean(),paysOff:z.boolean()}),
+});
 
 export const ShotTypeEnum = z.enum([
   'HOOK',
@@ -85,11 +38,13 @@ export const ShotTypeEnum = z.enum([
   'VALUE',
   'PAYOFF',
   'CTA',
+  'SCENE',
 ]);
 
 export const ShotSchema = z.object({
-  number: z.number().int().min(1).max(6),
+  number: z.number().int().min(1),
   type: ShotTypeEnum,
+  functions: z.array(z.enum(NARRATIVE_FUNCTIONS)).optional(),
   name: z.string().min(1),
   timestamp: z.string().min(1),
   visual: z.string().min(3),
@@ -136,14 +91,17 @@ export const ViralBlueprintSchema = z.object({
 
 export const FrameworkMetadataSchema = z.object({
   creativeType: z.enum(['Informative', 'Funny', 'Trendy']).default('Informative'),
-  hookMechanism: z.string().default('Curiosity & Bold Claim'),
+  hookStatement: z.string().optional(), problemStatement: z.string().optional(),
+  patternInterruptStatement: z.string().optional(), valueStatement: z.string().optional(),
+  payoffStatement: z.string().optional(), ctaStatement: z.string().optional(),
+  hookMechanism: z.string().default(''),
   hookText: z.string().default(''),
   hookVisual: z.string().default(''),
-  problemType: z.string().default('Knowledge Gap & Decision Tension'),
-  patternInterrupt: z.string().default('Hard Cut & Visual Reframer'),
-  valueMechanism: z.string().default('3-Point Decision Checklist'),
-  payoffType: z.string().default('Clear Answer & Strategic Framework'),
-  ctaType: z.string().default('Discovery & Consideration'),
+  problemType: z.string().default(''),
+  patternInterrupt: z.string().default(''),
+  valueMechanism: z.string().default(''),
+  payoffType: z.string().default(''),
+  ctaType: z.string().default(''),
   ctaText: z.string().default(''),
   secondaryTechniques: z.array(z.string()).default(['Storytelling', 'Student Relatable']),
   evidenceRequired: z.boolean().default(false),
@@ -151,6 +109,16 @@ export const FrameworkMetadataSchema = z.object({
 });
 
 export const ReelStoryboardSchema = z.object({
+  conceptSelection:ConceptSelectionSchema.optional(),
+  hlni:z.array(HlniSchema).optional(),
+  editorialReview:EditorialReviewSchema.optional(),
+  channel: z.enum(['Trust','Connection','Discovery']).optional(),
+  generation: z.object({
+    source: z.enum(['openai', 'gemini', 'offline']),
+    warnings:z.array(z.string()).optional(),
+    model: z.string().optional(), generatedAt: z.string(),
+    templateId: z.string().optional(), catalogueVersion: z.string().optional(),
+  }).optional(),
   id: z.string(),
   reelTitle: z.string().min(1),
   creativeAngle: z.string().min(1),
@@ -160,7 +128,7 @@ export const ReelStoryboardSchema = z.object({
   format: z.string().default('9:16 Vertical Reel'),
   creativeDirection: z.enum(['Informative', 'Funny', 'Trendy']).default('Informative'),
   language: z.enum(['English', 'Tamil', 'Telugu', 'Malayalam', 'Hindi', 'Tanglish']).default('English'),
-  shots: z.array(ShotSchema).length(6),
+  shots: z.array(ShotSchema).min(1),
   productionNotes: ProductionNotesSchema,
   creativeSummary: CreativeSummarySchema,
   viralBlueprint: ViralBlueprintSchema.optional(),
@@ -227,109 +195,33 @@ export function validateAndRepairStoryboard(raw: any, fallbackTitle: string): { 
     };
   }
 
-  // Validate or convert shots
-  const shotSequence: Array<{ type: z.infer<typeof ShotTypeEnum>; name: string; time: string }> = [
-    { type: 'HOOK', name: 'Hook', time: '00:00 – 00:04' },
-    { type: 'PROBLEM', name: 'Problem', time: '00:04 – 00:08' },
-    { type: 'PATTERN_INTERRUPT', name: 'Pattern Interrupt', time: '00:08 – 00:12' },
-    { type: 'VALUE', name: 'Value', time: '00:12 – 00:22' },
-    { type: 'PAYOFF', name: 'Payoff', time: '00:22 – 00:26' },
-    { type: 'CTA', name: 'Call to Action', time: '00:26 – 00:30' },
-  ];
-
+  // Preserve the actual production sequence; never pad, truncate, or impose narrative beats.
   let rawShots = repaired.shots;
-  // Support storyboard object format: { hook: {...}, problem: {...}, ... }
   if (!Array.isArray(rawShots) && repaired.storyboard && typeof repaired.storyboard === 'object') {
     const sb = repaired.storyboard;
-    rawShots = [
-      sb.hook,
-      sb.problem,
-      sb.patternInterrupt || sb.pattern_interrupt,
-      sb.value,
-      sb.payoff,
-      sb.cta,
-    ];
+    rawShots = [sb.hook,sb.problem,sb.patternInterrupt || sb.pattern_interrupt,sb.value,sb.payoff,sb.cta].filter(Boolean);
   }
-
-  if (!Array.isArray(rawShots)) {
-    rawShots = [];
-  }
-
-  const normalizedShots = shotSequence.map((req, index) => {
-    const rawShot = rawShots[index] || {};
+  if (!Array.isArray(rawShots)) rawShots = [];
+  repaired.shots = rawShots.map((rawShot: any, index: number) => {
+    const shot = rawShot || {};
+    const type = ShotTypeEnum.options.includes(shot.type) ? shot.type : 'SCENE';
     return {
-      number: index + 1,
-      type: req.type,
-      name: req.name,
-      timestamp: rawShot.timestamp || rawShot.time || req.time,
-      visual: rawShot.visual || `Close-up shot demonstrating the ${req.name.toLowerCase()} moment.`,
-      dialogue: rawShot.dialogue || rawShot.dialogueVO || rawShot.vo || '',
-      onscreenText: rawShot.onscreenText || rawShot.text || '',
-      cameraPerformance: rawShot.cameraPerformance || rawShot.camera || 'Eye-level medium shot with natural student performance.',
-      userEdited: Boolean(rawShot.userEdited),
+      number: index + 1, type,
+      ...(shot.functions !== undefined ? {functions:shot.functions} : {}),
+      name: shot.name || (type === 'SCENE' ? `Scene ${index + 1}` : type.replaceAll('_',' ')),
+      timestamp: shot.timestamp || shot.time || '',
+      visual: shot.visual || '',
+      dialogue: shot.dialogue ?? shot.dialogueVO ?? shot.vo ?? '',
+      onscreenText: shot.onscreenText ?? shot.text ?? '',
+      cameraPerformance: shot.cameraPerformance || shot.camera || '',
+      userEdited: Boolean(shot.userEdited),
     };
   });
 
-  repaired.shots = normalizedShots;
-
-  // Ensure Framework Metadata
-  const rawFm = repaired.frameworkMetadata || raw.framework_metadata || raw.frameworkMetadata || {};
-  const cType: 'Informative' | 'Funny' | 'Trendy' = (['Informative', 'Funny', 'Trendy'].includes(rawFm.creativeType || repaired.creativeDirection))
-    ? (rawFm.creativeType || repaired.creativeDirection)
-    : 'Informative';
-
-  const defaultHooks: Record<string, string> = {
-    Informative: 'Curiosity & Bold Claim',
-    Funny: 'POV & Relatable Social Situation',
-    Trendy: 'Visual Reveal & Interactive Challenge',
-  };
-  const defaultProblems: Record<string, string> = {
-    Informative: 'Knowledge Gap & Decision Tension',
-    Funny: 'Relatable Social Pressure & Relatives Reaction',
-    Trendy: 'Timed Campus Task & Curiosity Gap',
-  };
-  const defaultValues: Record<string, string> = {
-    Informative: '3-Point Decision Checklist & Industry Framework',
-    Funny: 'Comedic Escalation & Relatable Recognition',
-    Trendy: 'Interactive Demonstration & Campus Discovery',
-  };
-  const defaultPayoffs: Record<string, string> = {
-    Informative: 'Strategic Career Insight & Answer Clarity',
-    Funny: 'Comedic Reversal & Satisfying Punchline',
-    Trendy: 'Challenge Result & Visual Transformation',
-  };
-  const defaultCtas: Record<string, string> = {
-    Informative: 'Save & Share Guidance',
-    Funny: 'Tag Friends & Comment Real Reaction',
-    Trendy: 'Answer Challenge & Participate',
-  };
-
-  repaired.frameworkMetadata = {
-    creativeType: cType,
-    hookMechanism: rawFm.hookMechanism || rawFm.hook_mechanism || defaultHooks[cType],
-    hookText: rawFm.hookText || rawFm.hook_text || (repaired.shots[0]?.dialogue || repaired.shots[0]?.onscreenText || ''),
-    hookVisual: rawFm.hookVisual || rawFm.hook_visual || (repaired.shots[0]?.visual || ''),
-    problemType: rawFm.problemType || rawFm.problem_type || defaultProblems[cType],
-    patternInterrupt: rawFm.patternInterrupt || rawFm.pattern_interrupt || 'Narrative Attention Reset & Visual Cut',
-    valueMechanism: rawFm.valueMechanism || rawFm.value_mechanism || defaultValues[cType],
-    payoffType: rawFm.payoffType || rawFm.payoff_type || defaultPayoffs[cType],
-    ctaType: rawFm.ctaType || rawFm.cta_type || defaultCtas[cType],
-    ctaText: rawFm.ctaText || rawFm.cta_text || (repaired.shots[5]?.onscreenText || repaired.shots[5]?.dialogue || ''),
-    secondaryTechniques: Array.isArray(rawFm.secondaryTechniques) && rawFm.secondaryTechniques.length > 0
-      ? rawFm.secondaryTechniques
-      : ['Storytelling', 'Student Relatable', 'Cinematic Visuals'],
-    evidenceRequired: typeof rawFm.evidenceRequired === 'boolean' ? rawFm.evidenceRequired : false,
-    audience: rawFm.audience || repaired.targetAudience || '+2 Completed Students',
-  };
-
-  // Single CTA check: Clean up CTA text if it packs multiple actions
-  const ctaShot = repaired.shots[5];
-  if (ctaShot) {
-    let text = ctaShot.onscreenText || ctaShot.dialogue || '';
-    if (text.includes('and') && (text.includes('follow') || text.includes('comment') || text.includes('apply'))) {
-      ctaShot.onscreenText = ctaShot.onscreenText.split(/and|\&/i)[0].trim() || 'Save this for later.';
-    }
-  }
+  // Metadata is optional diagnostic context, never a fabricated six-beat checklist.
+  const rawFm = repaired.frameworkMetadata || raw.framework_metadata;
+  if (rawFm && typeof rawFm === 'object') repaired.frameworkMetadata = rawFm;
+  else delete repaired.frameworkMetadata;
 
   // Dynamic Production Notes & Shooting Priorities
   const dynamicProd = generateDynamicProductionNotes(repaired.reelTitle, repaired.creativeDirection);
@@ -349,7 +241,7 @@ export function validateAndRepairStoryboard(raw: any, fallbackTitle: string): { 
   // Ensure Creative Summary
   const rawSum = repaired.creativeSummary || {};
   repaired.creativeSummary = {
-    keyCreativeIdea: rawSum.keyCreativeIdea || repaired.keyCreativeIdea || 'Shift from anxiety to strategic curiosity about future courses.',
+    keyCreativeIdea: rawSum.keyCreativeIdea || repaired.keyCreativeIdea || 'Review the story-specific useful insight and resolution.',
     shootingPriority: Array.isArray(rawSum.shootingPriority) && rawSum.shootingPriority.length > 0
       ? rawSum.shootingPriority
       : dynamicProd.shootingPriority,
@@ -362,5 +254,5 @@ export function validateAndRepairStoryboard(raw: any, fallbackTitle: string): { 
     return { valid: false, data: repaired, errors: zodIssues };
   }
 
-  return { valid: true, data: parseResult.data, errors: [] };
+  return { valid: true, data: enforceEditorialStatus(parseResult.data), errors: [] };
 }

@@ -1,0 +1,334 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "Core subjects in business degrees are often standardized; the elective bank is the primary variable for personalization.",
+          "audienceGap": "Students often assume B.Com and BBA have fundamentally different curricula without checking elective depth.",
+          "viewerChange": "Viewer shifts from comparing degree titles to auditing specific elective modules against their own interests.",
+          "supportType": "method",
+          "support": "The method encourages mapping personal curiosity to course offerings, acknowledging that elective availability dictates specialization potential.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            4
+          ],
+          "payoff": "The viewer gains a tangible tool to evaluate their own academic path, moving beyond stereotypes."
+        }
+      ],
+      "id": "reel_1794220110877_t7t7y7",
+      "reelTitle": "The Curriculum Puzzle: B.Com vs BBA",
+      "creativeAngle": "An interactive 'Curriculum Puzzle' that challenges the viewer to look past core modules to elective variety.",
+      "objective": "Empower students to compare degrees by evaluating elective flexibility rather than just broad labels.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Trendy",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "name": "The Hook",
+          "timestamp": "00:00 – 00:05",
+          "visual": "A split screen shows two identical lists labeled 'Core Curriculum'. A cursor hovers, confused.",
+          "dialogue": "Think B.Com and BBA are totally different? Look closer.",
+          "onscreenText": "B.Com vs BBA: Spot the difference?",
+          "cameraPerformance": "Static, close-up on the screen.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "name": "The Pattern Interrupt",
+          "timestamp": "00:05 – 00:15",
+          "visual": "An animation shows 'Interest Blocks' like 'Data' and 'Strategy' being dragged into a grid. They fit into both.",
+          "dialogue": "Core subjects often overlap. The real difference isn't the name, it's the elective bank.",
+          "onscreenText": "It's about the Electives.",
+          "cameraPerformance": "Smooth motion graphics.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "name": "The Method",
+          "timestamp": "00:15 – 00:23",
+          "visual": "A hand checklist appears: '1. List interests. 2. Check elective bank. 3. Count the matches.'",
+          "dialogue": "List your top three interests, then check the elective bank. See which degree lets you build your own path.",
+          "onscreenText": "1. List Interests \n2. Check Electives \n3. Count Matches",
+          "cameraPerformance": "Direct, clean overlay.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "SCENE",
+          "name": "The Payoff",
+          "timestamp": "00:23 – 00:28",
+          "visual": "The student smiles, looking at a customized list of subjects.",
+          "dialogue": "A degree is only as good as the electives that match your curiosity.",
+          "onscreenText": "Choose by curiosity, not just the title.",
+          "cameraPerformance": "Confident, bright lighting.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Fast-paced, clean, motion-graphic heavy.",
+        "performance": "Natural, quick-witted.",
+        "camera": "Stable, focused on UI elements.",
+        "editing": "Rhythmic cuts synced to drag-and-drop sounds.",
+        "sound": "Subtle UI 'click' and 'snap' sound effects.",
+        "props": [
+          "Smartphone or Tablet display"
+        ],
+        "locations": [
+          "Minimalist studio"
+        ],
+        "casting": "Relatable student",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Shifting the student's focus from degree labels (B.Com/BBA) to elective availability to ensure academic agency.",
+        "shootingPriority": [
+          "The interactive drag-and-drop animation",
+          "The clear 3-step checklist"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T10:28:30.877Z",
+      "updatedAt": "2026-11-09T10:28:30.877Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "D2",
+          "title": "The 'Curriculum Puzzle'",
+          "audienceGap": "Ignoring the 'Elective' portion of a degree which often holds the real difference.",
+          "hlni": "The 'core' subjects are often identical; the flexibility of electives is where the degree's true character is found.",
+          "viewerChange": "Changes the search criteria from 'Core subjects' to 'Elective variety'.",
+          "concept": "A visual puzzle where the viewer tries to 'fit' their interests into a degree structure.",
+          "mechanismKey": "Curriculum-Puzzle",
+          "device": "Interactive visual where the viewer drags 'Interest Blocks' (e.g., Data, Strategy, Finance) into a degree grid.",
+          "supportType": "method",
+          "support": "Encourages matching personal interest to elective availability; limited by general availability of choices.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "List your top 3 interests",
+            "Check the elective bank for the degree you're considering",
+            "See how many 'slots' align with your interests"
+          ],
+          "interpretationRule": "A degree is only as good as the electives that match your curiosities.",
+          "visibleProof": "Animated drag-and-drop interface showing blocks moving into a grid.",
+          "payoff": "The viewer realizes they have agency in customizing their education.",
+          "limitations": "Elective availability is subject to university scheduling and capacity.",
+          "treatment": "Trendy"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "T1",
+            "hlni": "Degrees are distinguished by the 'Assessment Outcome'—what the student is specifically asked to demonstrate (e.g., technical accuracy vs. process-based application).",
+            "mechanismKey": "Assessment-Prompt-Analysis",
+            "device": "Split-screen comparison of two anonymous task descriptions, highlighting the specific verbs used (e.g., 'Calculate/Report' vs 'Propose/Defend')."
+          },
+          {
+            "channel": "Connection",
+            "id": "C2",
+            "hlni": "The difference isn't the subject, it's the 'lens' applied (e.g., a B.Com student looks at the *cost* of a campaign, a BBA student looks at the *execution* of the campaign).",
+            "mechanismKey": "Lens-Perspective-Method",
+            "device": "A single business case study presented from two distinct analytical viewpoints."
+          },
+          {
+            "channel": "Discovery",
+            "id": "D2",
+            "hlni": "The 'core' subjects are often identical; the flexibility of electives is where the degree's true character is found.",
+            "mechanismKey": "Curriculum-Puzzle",
+            "device": "Interactive visual where the viewer drags 'Interest Blocks' (e.g., Data, Strategy, Finance) into a degree grid."
+          }
+        ],
+        "contrast": "Trust uses a formal audit method to provide objective clarity. Connection uses a subjective 'lens' method to help the viewer identify their internal preferences. Discovery uses an interactive 'puzzle' method to highlight the overlooked role of electives in curriculum design."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Diagnostic function tags",
+      "failureReason": "The requested evaluation artifact omits diagnostic function arrays.",
+      "repairInstruction": "Include functions on each existing shot, using accurate optional narrative-function tags (or [] if none applies). Preserve the story-led shot count, order and treatment; no stage coverage checklist."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "Core subjects in business degrees are often standardized; the elective bank is the primary variable for personalization.",
+          "audienceGap": "Students often assume B.Com and BBA have fundamentally different curricula without checking elective depth.",
+          "viewerChange": "Viewer shifts from comparing degree titles to auditing specific elective modules against their own interests.",
+          "supportType": "method",
+          "support": "The method encourages mapping personal curiosity to course offerings, acknowledging that elective availability dictates specialization potential.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            4
+          ],
+          "payoff": "The viewer gains a tangible tool to evaluate their own academic path, moving beyond stereotypes."
+        }
+      ],
+      "id": "reel_1794220113913_n7znmo",
+      "reelTitle": "The Curriculum Puzzle: B.Com vs BBA",
+      "creativeAngle": "An interactive 'Curriculum Puzzle' that challenges the viewer to look past core modules to elective variety.",
+      "objective": "Empower students to compare degrees by evaluating elective flexibility rather than just broad labels.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Trendy",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "name": "The Hook",
+          "timestamp": "00:00 – 00:05",
+          "visual": "Split screen shows two identical lists labeled 'Core Curriculum'. A cursor hovers, confused.",
+          "dialogue": "Think B.Com and BBA are totally different? Look closer.",
+          "onscreenText": "B.Com vs BBA: Spot the difference?",
+          "cameraPerformance": "Static, close-up on screen.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "name": "The Pattern Interrupt",
+          "timestamp": "00:05 – 00:13",
+          "visual": "An animation shows 'Data' and 'Strategy' blocks being dragged into a grid. They fit both.",
+          "dialogue": "Core subjects often overlap. The real difference isn't the name, it's the elective bank.",
+          "onscreenText": "It's about the Electives",
+          "cameraPerformance": "Smooth motion graphics.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "name": "The Method",
+          "timestamp": "00:13 – 00:22",
+          "visual": "Checklist appears: 1. List interests. 2. Check elective bank. 3. Count matches.",
+          "dialogue": "List your top three interests. Check the elective bank. See which degree fits your path.",
+          "onscreenText": "1. List Interests\n2. Check Electives\n3. Count Matches",
+          "cameraPerformance": "Direct, clean graphic overlay.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "SCENE",
+          "name": "The Payoff",
+          "timestamp": "00:22 – 00:28",
+          "visual": "Student smiles, looking at a customized list of subjects.",
+          "dialogue": "A degree is only as good as the electives matching your curiosity.",
+          "onscreenText": "Choose by curiosity, not just title.",
+          "cameraPerformance": "Confident, bright lighting.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Fast-paced, clean, motion-graphic heavy.",
+        "performance": "Natural, quick-witted.",
+        "camera": "Stable, focused on UI elements.",
+        "editing": "Rhythmic cuts synced to UI sound effects.",
+        "sound": "Subtle UI 'click' and 'snap' effects.",
+        "props": [
+          "Smartphone or tablet display"
+        ],
+        "locations": [
+          "Minimalist studio"
+        ],
+        "casting": "Relatable student",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Shifting the student's focus from degree labels to elective availability to ensure academic agency.",
+        "shootingPriority": [
+          "The interactive drag-and-drop animation",
+          "The clear 3-step checklist"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T10:28:33.913Z",
+      "updatedAt": "2026-11-09T10:28:33.913Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "D2",
+          "title": "The 'Curriculum Puzzle'",
+          "audienceGap": "Ignoring the 'Elective' portion of a degree which often holds the real difference.",
+          "hlni": "The 'core' subjects are often identical; the flexibility of electives is where the degree's true character is found.",
+          "viewerChange": "Changes the search criteria from 'Core subjects' to 'Elective variety'.",
+          "concept": "A visual puzzle where the viewer tries to 'fit' their interests into a degree structure.",
+          "mechanismKey": "Curriculum-Puzzle",
+          "device": "Interactive visual where the viewer drags 'Interest Blocks' (e.g., Data, Strategy, Finance) into a degree grid.",
+          "supportType": "method",
+          "support": "Encourages matching personal interest to elective availability; limited by general availability of choices.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "List your top 3 interests",
+            "Check the elective bank for the degree you're considering",
+            "See how many 'slots' align with your interests"
+          ],
+          "interpretationRule": "A degree is only as good as the electives that match your curiosities.",
+          "visibleProof": "Animated drag-and-drop interface showing blocks moving into a grid.",
+          "payoff": "The viewer realizes they have agency in customizing their education.",
+          "limitations": "Elective availability is subject to university scheduling and capacity.",
+          "treatment": "Trendy"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "T1",
+            "hlni": "Degrees are distinguished by the 'Assessment Outcome'—what the student is specifically asked to demonstrate (e.g., technical accuracy vs. process-based application).",
+            "mechanismKey": "Assessment-Prompt-Analysis",
+            "device": "Split-screen comparison of two anonymous task descriptions, highlighting the specific verbs used (e.g., 'Calculate/Report' vs 'Propose/Defend')."
+          },
+          {
+            "channel": "Connection",
+            "id": "C2",
+            "hlni": "The difference isn't the subject, it's the 'lens' applied (e.g., a B.Com student looks at the *cost* of a campaign, a BBA student looks at the *execution* of the campaign).",
+            "mechanismKey": "Lens-Perspective-Method",
+            "device": "A single business case study presented from two distinct analytical viewpoints."
+          },
+          {
+            "channel": "Discovery",
+            "id": "D2",
+            "hlni": "The 'core' subjects are often identical; the flexibility of electives is where the degree's true character is found.",
+            "mechanismKey": "Curriculum-Puzzle",
+            "device": "Interactive visual where the viewer drags 'Interest Blocks' (e.g., Data, Strategy, Finance) into a degree grid."
+          }
+        ],
+        "contrast": "Trust uses a formal audit method to provide objective clarity. Connection uses a subjective 'lens' method to help the viewer identify their internal preferences. Discovery uses an interactive 'puzzle' method to highlight the overlooked role of electives in curriculum design."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Diagnostic function tags",
+      "failureReason": "The requested evaluation artifact omits diagnostic function arrays.",
+      "repairInstruction": "Include functions on each existing shot, using accurate optional narrative-function tags (or [] if none applies). Preserve the story-led shot count, order and treatment; no stage coverage checklist."
+    }
+  }
+]

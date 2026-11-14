@@ -9,6 +9,7 @@ interface ShotCardProps {
   onUpdateShot: (updated: Shot) => void;
   onRegenerateShot: (shotNumber: number) => void;
   isRegenerating: boolean;
+  canRegenerate?: boolean;
 }
 
 const SHOT_TYPE_LABELS: Record<string, string> = {
@@ -26,6 +27,7 @@ export const ShotCard: React.FC<ShotCardProps> = ({
   onUpdateShot,
   onRegenerateShot,
   isRegenerating,
+  canRegenerate = true,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -64,14 +66,14 @@ export const ShotCard: React.FC<ShotCardProps> = ({
       onKeyDown={handleKeyDown}
     >
       {/* ─── Shot Header: "SHOT 01 • HOOK" with duration tag & subdued hover controls ─── */}
-      <div className="flex items-center justify-between px-5 py-3 border-b border-stone-100 bg-stone-50/40">
+      <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 border-b border-stone-100 bg-stone-50/40">
         <div className="flex items-center gap-2.5">
           <span className="text-xs font-bold text-stone-900 tracking-wider">
-            SHOT 0{shot.number} • {(SHOT_TYPE_LABELS[shot.type] ?? shot.name).toUpperCase()}
+            SHOT {String(shot.number).padStart(2,'0')} • {(shot.name || SHOT_TYPE_LABELS[shot.type] || 'Scene').toUpperCase()}
           </span>
           <span className="text-stone-300">·</span>
           <span className="inline-flex items-center gap-1 text-[11px] font-mono text-stone-500 font-medium bg-stone-100/90 px-2 py-0.5 rounded border border-stone-200/60">
-            <Clock className="w-3 h-3 text-stone-400" />
+            <Clock className="w-3 h-3 text-stone-600" />
             <span>{shot.timestamp}</span>
           </span>
           {shot.userEdited && (
@@ -82,16 +84,21 @@ export const ShotCard: React.FC<ShotCardProps> = ({
         </div>
 
         {/* Subdued Hover Controls: Edit, Copy, Regenerate appear ONLY on card hover */}
-        <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+        <div className="flex items-center gap-1 opacity-100 transition-opacity duration-150">
           <button
             onClick={handleCopy}
-            className="p-1.5 rounded text-stone-400 hover:text-stone-800 hover:bg-stone-100 transition-colors"
+            className="p-1.5 rounded text-stone-600 hover:text-stone-800 hover:bg-stone-100 transition-colors"
             title="Copy shot text"
           >
             {copied ? <Check className="w-3.5 h-3.5 text-stone-900" /> : <Copy className="w-3.5 h-3.5" />}
           </button>
           <button
-            onClick={() => setIsEditing(!isEditing)}
+            onClick={() => {
+              if (isEditing) { handleCancel(); return; }
+              setVisualDraft(shot.visual); setDialogueDraft(shot.dialogue);
+              setTextDraft(shot.onscreenText); setCameraDraft(shot.cameraPerformance);
+              setIsEditing(true);
+            }}
             className={`inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
               isEditing
                 ? 'bg-stone-200 text-stone-900'
@@ -104,12 +111,12 @@ export const ShotCard: React.FC<ShotCardProps> = ({
           </button>
           <button
             onClick={() => onRegenerateShot(shot.number)}
-            disabled={isRegenerating}
+            disabled={isRegenerating || !canRegenerate}
             className="inline-flex items-center gap-1 px-2 py-1 rounded text-xs font-medium text-[#8B1721] hover:bg-[#FDF2F3] transition-colors disabled:opacity-40"
-            title="Regenerate this shot"
+            title={canRegenerate ? "Regenerate this scene with AI" : "Offline scripts are fixed. Edit directly or connect AI to regenerate."}
           >
             <RotateCw className={`w-3.5 h-3.5 ${isRegenerating ? 'animate-spin' : ''}`} />
-            <span>{isRegenerating ? 'Regenerating...' : 'Regenerate'}</span>
+            <span>{isRegenerating ? 'Regenerating...' : canRegenerate ? 'Regenerate' : 'AI required'}</span>
           </button>
         </div>
       </div>
@@ -119,8 +126,8 @@ export const ShotCard: React.FC<ShotCardProps> = ({
         <div className="p-5 space-y-4 bg-stone-50/50">
           {/* Edit: Visual */}
           <div>
-            <label className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-1">
-              <Eye className="w-3 h-3 text-stone-400" />
+            <label className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">
+              <Eye className="w-3 h-3 text-stone-600" />
               <span>Visual Action</span>
             </label>
             <textarea
@@ -132,7 +139,7 @@ export const ShotCard: React.FC<ShotCardProps> = ({
           </div>
           {/* Edit: Dialogue */}
           <div>
-            <label className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-1">
+            <label className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">
               <Mic className="w-3 h-3 text-[#8B1721]" />
               <span>Dialogue / Voiceover</span>
             </label>
@@ -146,7 +153,7 @@ export const ShotCard: React.FC<ShotCardProps> = ({
           {/* Edit: Graphic + Camera */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-1">
+              <label className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">
                 <Type className="w-3 h-3 text-[#8B1721]" />
                 <span>On-Screen Graphic</span>
               </label>
@@ -158,8 +165,8 @@ export const ShotCard: React.FC<ShotCardProps> = ({
               />
             </div>
             <div>
-              <label className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-1">
-                <Camera className="w-3 h-3 text-stone-400" />
+              <label className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">
+                <Camera className="w-3 h-3 text-stone-600" />
                 <span>Camera Direction</span>
               </label>
               <input
@@ -185,8 +192,8 @@ export const ShotCard: React.FC<ShotCardProps> = ({
           {/* Column 1 (Visuals): Visual Action description + Camera Direction note */}
           <div className="space-y-3.5">
             <div>
-              <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-400 mb-1">
-                <Eye className="w-3 h-3 text-stone-400 flex-shrink-0" />
+              <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-600 mb-1">
+                <Eye className="w-3 h-3 text-stone-600 flex-shrink-0" />
                 <span>Visual Action</span>
               </div>
               <p className="text-sm text-stone-800 leading-relaxed font-normal">
@@ -196,8 +203,8 @@ export const ShotCard: React.FC<ShotCardProps> = ({
 
             {shot.cameraPerformance && (
               <div className="pt-2 border-t border-stone-100">
-                <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-400 mb-1">
-                  <Camera className="w-3 h-3 text-stone-400 flex-shrink-0" />
+                <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-600 mb-1">
+                  <Camera className="w-3 h-3 text-stone-600 flex-shrink-0" />
                   <span>Camera Direction</span>
                 </div>
                 <p className="text-xs text-stone-600 leading-relaxed font-normal bg-stone-50/70 p-2.5 rounded-lg border border-stone-100/90">
@@ -211,7 +218,7 @@ export const ShotCard: React.FC<ShotCardProps> = ({
           <div className="space-y-3.5">
             {shot.dialogue && (
               <div>
-                <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-400 mb-1">
+                <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-600 mb-1">
                   <Mic className="w-3 h-3 text-[#8B1721] flex-shrink-0" />
                   <span>Dialogue / Voiceover</span>
                 </div>
@@ -223,7 +230,7 @@ export const ShotCard: React.FC<ShotCardProps> = ({
 
             {shot.onscreenText && (
               <div className="pt-2 border-t border-stone-100">
-                <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-stone-400 mb-1">
+                <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-600 mb-1">
                   <Type className="w-3 h-3 text-[#8B1721] flex-shrink-0" />
                   <span>On-Screen Graphic</span>
                 </div>

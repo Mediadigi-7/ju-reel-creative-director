@@ -1,0 +1,52 @@
+[
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 3653,
+    "remainingMs": 46346,
+    "at": "2026-11-12T04:35:18.076Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 0,
+    "remainingMs": 46346,
+    "at": "2026-11-12T04:35:18.076Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "attempted",
+    "elapsedMs": 0,
+    "remainingMs": 46345,
+    "at": "2026-11-12T04:35:18.077Z"
+  },
+  {
+    "stage": "critique",
+    "outcome": "complete",
+    "elapsedMs": 1476,
+    "remainingMs": 44869,
+    "at": "2026-11-12T04:35:19.553Z"
+  },
+  {
+    "stage": "advisory_rewrite",
+    "outcome": "complete",
+    "elapsedMs": 2844,
+    "remainingMs": 42025,
+    "at": "2026-11-12T04:35:22.397Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 1,
+    "remainingMs": 42024,
+    "at": "2026-11-12T04:35:22.398Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "retained_valid_draft",
+    "category": "output_validation",
+    "elapsedMs": 0,
+    "remainingMs": 42024,
+    "at": "2026-11-12T04:35:22.398Z"
+  }
+]

@@ -1,0 +1,3 @@
+# Preserve the CSV export's standard CRLF and raw command-output evidence.
+docs/CHANNEL_TOPIC_CLASSIFICATION.csv whitespace=cr-at-eol
+docs/**/verification/*.log -whitespace

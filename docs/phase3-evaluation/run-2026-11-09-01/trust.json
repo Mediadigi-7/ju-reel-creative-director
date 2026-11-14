@@ -1,0 +1,115 @@
+{
+  "hlni": [
+    {
+      "insight": "The specific content of a degree (B.Com vs BBA) is institution-dependent and frequently overlaps; module comparison is the only accurate way to assess academic fit.",
+      "audienceGap": "Students assume the titles B.Com and BBA represent mutually exclusive career paths or skill sets.",
+      "viewerChange": "The student shifts from relying on general stereotypes to performing a practical audit of actual course modules before applying.",
+      "supportType": "method",
+      "support": "Educational curricula are not standardized by degree title; institutional autonomy means module lists vary. Comparing specific assignment tasks provides verifiable evidence of course focus.",
+      "references": [],
+      "shotNumbers": [
+        2
+      ],
+      "payoffShotNumbers": [
+        2,
+        3
+      ],
+      "payoff": "Demonstrates that the 'correct' choice is found in the content details, not the degree name, empowering the student to make an informed decision."
+    }
+  ],
+  "id": "reel_1794217959256_nv24p10i",
+  "reelTitle": "B.Com vs BBA: Beyond the Stereotypes",
+  "creativeAngle": "Informative comparison using a physical syllabus audit method",
+  "objective": "Teach students to compare actual module content rather than relying on degree labels",
+  "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "SCENE",
+      "functions": [
+        "HOOK",
+        "PROBLEM"
+      ],
+      "name": "The Desk Audit",
+      "timestamp": "00:00 – 00:07",
+      "visual": "Student sits at a desk with two printed course outlines, highlighting lines with a pen.",
+      "dialogue": "Everyone says B.Com is for accounting and BBA is just management. But the labels are hiding the real story.",
+      "onscreenText": "B.Com vs BBA",
+      "cameraPerformance": "Close-up on the documents, tracking the highlighter.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "SCENE",
+      "functions": [
+        "VALUE",
+        "PATTERN_INTERRUPT"
+      ],
+      "name": "The Module Compare",
+      "timestamp": "00:07 – 00:20",
+      "visual": "Student overlays the two sheets, pointing to specific module titles like 'Financial Analysis' in both.",
+      "dialogue": "Look at the actual modules. You might find core accounting in a BBA, or strategy in a B.Com. Don't pick the title; pick the specific skills you need to practice.",
+      "onscreenText": "Compare Module Lists",
+      "cameraPerformance": "Side-by-side view of the documents.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "SCENE",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Final Takeaway",
+      "timestamp": "00:20 – 00:28",
+      "visual": "Student looks up from the desk, smiling confidently at the camera.",
+      "dialogue": "Syllabuses vary by university. Map out the tasks, compare the core subjects, and see which actually fits your interests.",
+      "onscreenText": "Check the syllabus, not just the name.",
+      "cameraPerformance": "Medium shot, eye-level.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, educational, bright",
+    "performance": "Natural, thoughtful, student-to-student",
+    "camera": "Handheld for authenticity",
+    "editing": "Steady cuts between paper and student",
+    "sound": "Ambient room noise, clear voiceover",
+    "props": [
+      "Two printed syllabus documents",
+      "Highlighter",
+      "Pen"
+    ],
+    "locations": [
+      "Student study room or library"
+    ],
+    "casting": "One student actor",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Shifting the student's perspective from choosing a degree title to auditing actual modules to find a personal fit.",
+    "shootingPriority": [
+      "Close-up of module lists",
+      "Student expression of discovery"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-09T09:52:39.256Z",
+  "updatedAt": "2026-11-09T09:52:39.256Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Trust",
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-09T09:52:39.257Z"
+  }
+}

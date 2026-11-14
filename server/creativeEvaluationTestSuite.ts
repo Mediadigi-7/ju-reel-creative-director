@@ -1,0 +1,46 @@
+import { installConceptPlanningMocks } from './conceptPlannerTestFixtures.js';
+import assert from 'node:assert/strict';
+import { CREATIVE_RUBRIC, evaluateCreativeRatings } from '../shared/creativeEvaluation.js';
+import { approvedBenchmarkPrompt } from '../shared/editorialBenchmarks.js';
+import { generateStoryboard } from './aiService.js';
+import { generateOfflineStoryboard } from '../shared/offline/index.js';
+import { withHlniTestProposal } from './hlniTestFixture.js';
+const clear={materialFactualError:false,missingMeaningfulInsight:false,unworkableProduction:false};
+const strong={hlni:5,differentiation:4,coherence:4,payoff:4,production:4,originality:4};
+assert.equal(CREATIVE_RUBRIC.reduce((n,c)=>n+c.weight,0),100);
+assert.equal(evaluateCreativeRatings(strong,clear).total,85);
+assert.equal(evaluateCreativeRatings(strong,clear).decision,'PASS');
+assert.equal(evaluateCreativeRatings({...strong,hlni:4},clear).decision,'REVISE');
+assert.equal(evaluateCreativeRatings({...strong,hlni:3,coherence:5,payoff:5,production:5,originality:5},clear).decision,'REVISE','HLNI floor applies independently of total');
+assert.equal(evaluateCreativeRatings({...strong,differentiation:3,coherence:5,payoff:5,production:5,originality:5},clear).decision,'REVISE');
+const perfect={hlni:5,differentiation:5,coherence:5,payoff:5,production:5,originality:5};
+for(const key of Object.keys(clear))assert.equal(evaluateCreativeRatings(perfect,{...clear,[key]:true}).decision,'REVISE','Critical triggers override a perfect total');
+assert.throws(()=>evaluateCreativeRatings({...strong,hlni:NaN},clear));
+assert.throws(()=>evaluateCreativeRatings({...strong,originality:6},clear));
+const brief=approvedBenchmarkPrompt();
+for(const name of ['The Syllabus Surprise','Try My Course for Five Minutes','The Impossible Quiz'])assert.ok(brief.includes(name));
+assert.ok(brief.includes('Do not copy the scripts, titles, shot counts, function order, duration or preferred treatment'));
+assert.ok(brief.includes('not verification of academic claims'));
+assert.ok(!approvedBenchmarkPrompt('Connection').includes('The Impossible Quiz'),'The writer receives only the selected channel benchmark; the planner sees all three');
+console.log('PASS: exact weighted rubric, 85 boundary, independent HLNI/differentiation floors, critical overrides and non-mandatory references');
+const base=generateOfflineStoryboard('AI will change these careers');
+base.shots=base.shots.slice(0,3);
+const fixture=withHlniTestProposal(base);
+const original=globalThis.fetch;
+const restorePlanningMocks=installConceptPlanningMocks();
+try {
+ let calls=0;
+ globalThis.fetch=async(_url,init)=>{
+  calls++;const prompt=JSON.parse(init!.body as string).contents[0].parts[0].text;
+  assert.ok(prompt.includes('These tags describe the chosen story'));
+  if(calls===2)assert.ok(prompt.includes('Diagnostic function tags'));
+  const candidate=structuredClone(fixture);
+  if(calls===2)candidate.shots=candidate.shots.map(s=>({...s,functions:[]}));
+  return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(candidate)}]}}]}));
+ };
+ const reel=await generateStoryboard({reelTitle:base.reelTitle,apiKey:'test-only',apiProvider:'gemini',creativeDirection:'Auto'},{includeDiagnosticTags:true});
+ assert.equal(calls,2);assert.equal(reel.shots.length,3);
+ assert.ok(reel.shots.every(s=>Array.isArray(s.functions)));
+ assert.equal(reel.editorialReview,undefined);
+ console.log('PASS: requested diagnostic tags trigger bounded repair without forcing any function, shot count or editorial approval');
+}finally{globalThis.fetch=original;restorePlanningMocks();}

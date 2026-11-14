@@ -1,0 +1,162 @@
+{
+  "hlni": [
+    {
+      "insight": "Academic difficulty is a function of subject-interest alignment rather than degree title.",
+      "audienceGap": "Students often assume one degree is inherently harder or superior to the other.",
+      "viewerChange": "Shifts focus from degree hierarchy to personal curiosity and analytical lens.",
+      "supportType": "perspective",
+      "support": "Foundational business concepts are universal; degrees are just different frameworks for application.",
+      "references": [],
+      "shotNumbers": [
+        1,
+        2
+      ],
+      "payoffShotNumbers": [
+        3
+      ],
+      "payoff": "The hierarchy myth is dismantled, encouraging the student to choose based on their specific analytical preference."
+    }
+  ],
+  "id": "reel_1794219869585_ramephdn",
+  "reelTitle": "The Syllabus Guessing Game",
+  "creativeAngle": "An interactive puzzle dismantling the hierarchy myth between B.Com and BBA.",
+  "objective": "Help students realize that degree difficulty is about interest alignment, not inherent hierarchy.",
+  "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Trendy",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "SCENE",
+      "functions": [
+        "HOOK",
+        "PROBLEM"
+      ],
+      "name": "The Challenge",
+      "timestamp": "00:00 – 00:07",
+      "visual": "Split screen. Left: 'B.Com'. Right: 'BBA'. A text overlay pops up: 'Analyze a market failure'.",
+      "dialogue": "Which degree solves this market failure? B.Com or BBA?",
+      "onscreenText": "B.Com vs. BBA",
+      "cameraPerformance": "Static framing, direct focus on screen labels.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "SCENE",
+      "functions": [
+        "PATTERN_INTERRUPT",
+        "VALUE"
+      ],
+      "name": "The Reveal",
+      "timestamp": "00:07 – 00:17",
+      "visual": "Both labels light up simultaneously. Icons appear: a balance sheet (B.Com) and a growth chart (BBA).",
+      "dialogue": "Both. One audits the numbers. The other pivots the strategy. Same problem, different lens.",
+      "onscreenText": "Different Lens, Same Problem",
+      "cameraPerformance": "Fast-paced graphic transition between icons.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "SCENE",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Insight",
+      "timestamp": "00:17 – 00:28",
+      "visual": "Host leans into the frame, speaking directly to the viewer.",
+      "dialogue": "Difficulty isn't in the title; it's in the alignment. Follow your curiosity, not the labels.",
+      "onscreenText": "Choose by Curiosity",
+      "cameraPerformance": "Close-up, engaging and steady.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Fast-paced, high-contrast, minimalist graphics.",
+    "performance": "Natural, conversational tone.",
+    "camera": "Direct to camera, dynamic cuts.",
+    "editing": "Rhythmic, punchy transitions.",
+    "sound": "Subtle, upbeat electronic beat.",
+    "props": [
+      "Graphic overlays"
+    ],
+    "locations": [
+      "Studio setting"
+    ],
+    "casting": "Relatable student age.",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Use a shared business problem to show that both degrees cover common ground but through different lenses.",
+    "shootingPriority": [
+      "The puzzle reveal",
+      "The host closing insight"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-09T10:24:29.585Z",
+  "updatedAt": "2026-11-09T10:24:29.585Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Discovery",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "id": "disc_01",
+      "title": "The Syllabus Guessing Game",
+      "audienceGap": "Belief that one degree is inherently 'harder' than the other.",
+      "hlni": "Academic difficulty is often a function of 'subject-interest alignment' rather than degree title.",
+      "viewerChange": "Challenges the perception of degree hierarchy.",
+      "concept": "An interactive puzzle asking the viewer to guess which degree a specific learning outcome belongs to.",
+      "mechanismKey": "alignment_puzzle",
+      "device": "Rapid-fire visual reveal that both degrees cover similar 'foundational' ground.",
+      "supportType": "perspective",
+      "support": "Foundational business topics are universal; the differentiation is in the application context.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Present 3 common business problems.",
+        "Ask the audience: 'Which degree solves this?'",
+        "Reveal: 'Both do, but differently.'"
+      ],
+      "interpretationRule": "If both solve the problem, the difference is the lens (e.g., efficiency vs. growth).",
+      "visibleProof": "The viewer sees the same business problem solved through two different, equally valid lenses.",
+      "payoff": "The hierarchy myth is dismantled, encouraging deeper research.",
+      "treatment": "Trendy"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_01",
+        "hlni": "Degrees aren't defined by subject names, but by the 'Evaluation Focus' (e.g., individual knowledge recall vs. group-applied strategy).",
+        "mechanismKey": "evaluation_matrix",
+        "device": "Contrast between a solitary exam paper and a collaborative project brief."
+      },
+      {
+        "channel": "Connection",
+        "id": "conn_01",
+        "hlni": "Energy mapping: Tracking which tasks (calculating vs. presenting) drain or fuel your focus.",
+        "mechanismKey": "energy_audit",
+        "device": "A 'thought bubble' comparison of the student doing a spreadsheet vs. leading a debate."
+      },
+      {
+        "channel": "Discovery",
+        "id": "disc_01",
+        "hlni": "Academic difficulty is often a function of 'subject-interest alignment' rather than degree title.",
+        "mechanismKey": "alignment_puzzle",
+        "device": "Rapid-fire visual reveal that both degrees cover similar 'foundational' ground."
+      }
+    ],
+    "contrast": "Trust uses a structural evaluation matrix to define degree difference; Connection uses a personal energy audit to solve the 'what fits me' dilemma; Discovery uses an interactive puzzle to dismantle the false hierarchy of degree difficulty."
+  },
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-09T10:24:29.585Z"
+  }
+}

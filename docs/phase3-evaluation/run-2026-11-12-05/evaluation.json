@@ -1,0 +1,238 @@
+{
+  "evaluatedAt": "2026-11-12T04:37:13.432Z",
+  "assessor": "Assistant independent editorial review of complete actual Gemini outputs; not generator self-scoring, independent human panel review or application approval",
+  "ratingScale": "0 missing, 1 poor, 2 weak, 3 partial, 4 strong, 5 exceptional",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": true,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 3,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 4,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shots 2–3 identify a known task (Analyze costs) and two genuinely missing fields, then ask what grading rubric is used. This is now a specific usable assessment-inquiry tool rather than asking for an already-known task. No degree-specific curriculum claim is made.",
+        "differentiation": "The worksheet audit is distinct from the journal and card challenge, but the viewer still sees a lone student, desk and direct-address question. The explanation lacks enough academic depth and distinctive execution for the 4/5 differentiation floor.",
+        "coherence": "The title-choice confusion leads to missing assessment information and an appropriate rubric question. Two printed task sheets in Shot 1 are never actually compared; the story becomes a single-task audit.",
+        "payoff": "The resulting question follows from the empty criterion field. The story does not demonstrate how learning a criterion changes what the student prepares or how they compare B.Com/BBA options, so the asserted decision benefit is only partly earned.",
+        "production": "Complete consecutive 6/12/10-second scenes with feasible paper props and concise speech. Graphic and dialogue repeat the sample; a natural read-aloud and phone legibility test remain pending.",
+        "originality": "The audit is more operational than familiar course-title advice but keeps the repeated desk/paper/question execution."
+      },
+      "automaticTriggerExplanation": "No material falsehood or impossible production established. A meaningful bounded method is present. Revision is required by total and differentiation thresholds; academic sources and recorded production checks are still pending.",
+      "revisions": [
+        "Use the unknown grading criterion to show a concrete preparation difference within a clearly labelled hypothetical example, or show two precise questions changing the original comparison method. Do not attribute invented criteria to either degree.",
+        "Connect the two initial task sheets to the actual investigation or remove unused props; retain the named degree decision at the consequence.",
+        "Make the value (what assessment information is missing) and payoff (what changes when checking it) distinct even if delivered in one exchange."
+      ],
+      "total": 72,
+      "decision": "REVISE",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "Channel differentiation is below 4/5."
+      ],
+      "sourceFile": "trust.json",
+      "sourceSha256": "b4530d1cef5d74e72e65fdfb8583b38aae164b17457dd1722faef8ed02a68609",
+      "productionMetrics": {
+        "shotCount": 3,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 42,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK",
+              "PROBLEM"
+            ],
+            "timecode": "00:00 – 00:06",
+            "seconds": 6,
+            "spokenWords": 13
+          },
+          {
+            "number": 2,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:06 – 00:18",
+            "seconds": 12,
+            "spokenWords": 12
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:18 – 00:28",
+            "seconds": 10,
+            "spokenWords": 17
+          }
+        ]
+      }
+    },
+    {
+      "channel": "Connection",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 3,
+        "coherence": 3,
+        "payoff": 3,
+        "production": 4,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 2 now inspects a sample balance sheet and records a specific sticking point: reading the Liabilities row. That supports a targeted teaching-support question, but Shot 3 instead asks how this calculation is taught. Reading a row and a calculation are not established as the same unknown.",
+        "differentiation": "A first-person task journal provides a different tool from Trust and Discovery, but the solitary narrator remains a generic presenter. No particular friend/family pressure, confidence problem or concrete student decision develops.",
+        "coherence": "The confusion-to-mini-task progression is connected, then the final question changes the academic problem from interpreting a label/row to a calculation that has not been shown.",
+        "payoff": "The student becomes relieved and asks a question; no visible next action resolves a specific personal dilemma. The journal identifies a useful partial inquiry but does not fully earn its emotional resolution.",
+        "production": "The delivered initial draft has complete feasible 6/9/13-second scenes. The attempted advisory rewrite was rejected for scene pacing; these scores concern the preserved initial draft only. The final 13-word on-screen question needs phone-size testing.",
+        "originality": "The journal is specific enough to be less generic than motivational reassurance, but the blank-expression-to-relieved-presenter progression remains familiar."
+      },
+      "automaticTriggerExplanation": "No degree-specific factual assertion or impossible shot established. A partial meaningful inquiry method exists. The inconsistent final question and weak personal consequence fail HLNI, differentiation and total thresholds. The rejected rewrite is not being scored as the delivered output.",
+      "revisions": [
+        "Keep the actual sticking point and resulting question identical in meaning: ask how students are taught to interpret that row, or visibly demonstrate the particular calculation first.",
+        "Build one believable personal choice that makes this method necessary and show what the student does differently afterward. A second actor is optional; human specificity is not.",
+        "Keep the bounded limit visible: one mini-task identifies a question; it does not predict aptitude or determine a degree choice."
+      ],
+      "total": 63,
+      "decision": "REVISE",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5.",
+        "Channel differentiation is below 4/5."
+      ],
+      "sourceFile": "connection.json",
+      "sourceSha256": "8c3ee4723ca8469785fc5dd24f774effcbd6879deacf1876fcd04aa0d9e45741",
+      "productionMetrics": {
+        "shotCount": 3,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 57,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:00 – 00:06",
+            "seconds": 6,
+            "spokenWords": 12
+          },
+          {
+            "number": 2,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:06 – 00:15",
+            "seconds": 9,
+            "spokenWords": 17
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PAYOFF",
+              "CTA"
+            ],
+            "timecode": "00:15 – 00:28",
+            "seconds": 13,
+            "spokenWords": 28
+          }
+        ]
+      }
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The Strategy card has no source linking it to B.Com or BBA. Shot 2 correctly states insufficient information, teaching why an unlabeled business task cannot establish an exclusive degree classification. It avoids the unsupported both/neither answer.",
+        "differentiation": "The card placement challenge, blank-card flip and missing-source reveal create a recognisably different curiosity experience from the worksheet and personal journal. Trendy is a chosen treatment, not a claim about a verified current trend.",
+        "coherence": "B.Com/BBA remain the actual challenge subjects, and the missing source explains why the attempted classification fails. The ending narrows to required-task status, which is not identical to the opening question about belonging to a degree.",
+        "payoff": "The third answer resolves the guessing game, but The only real question overstates the final handbook check. A task being required in one programme does not establish exclusivity or eliminate other relevant comparison questions.",
+        "production": "Complete feasible 8/10/10-second scenes; the tablet Course Handbook interface is underspecified. It must be visibly a generic illustrative placeholder, not unverified official evidence. A phone legibility/read-aloud check is pending.",
+        "originality": "The missing-evidence reversal is a useful small surprise, while detective props and stop-guessing advice remain familiar."
+      },
+      "automaticTriggerExplanation": "No supported basis to assert a proven material factual falsehood; the bounded insufficient-information insight is useful. No unfilmable instruction is established. Overbroad sole-question reasoning, incomplete evidence scope and the ambiguous handbook prop require revision. Total remains below 85.",
+      "revisions": [
+        "Replace the sole-question claim with a precise source request scoped to the named programme and current curriculum version; do not infer exclusivity from a single handbook.",
+        "Maintain the same investigation from the task-card challenge to the final question: establish whether, where and under what status the task is documented, rather than equating belongs with required.",
+        "Specify a visibly labelled illustrative source-request card or placeholder instead of an ambiguous official-looking handbook interface. No fabricated academic content is needed."
+      ],
+      "total": 73,
+      "decision": "REVISE",
+      "reasons": [
+        "Overall score is below 85/100."
+      ],
+      "sourceFile": "discovery.json",
+      "sourceSha256": "faf4b20bf91a5cf61012d8012651a7695b1624cc2ac2f4eb1ab0383af0910090",
+      "productionMetrics": {
+        "shotCount": 3,
+        "chosenTreatment": "Trendy",
+        "totalSpokenWords": 52,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK",
+              "PROBLEM"
+            ],
+            "timecode": "00:00 – 00:08",
+            "seconds": 8,
+            "spokenWords": 14
+          },
+          {
+            "number": 2,
+            "functions": [
+              "VALUE",
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:18",
+            "seconds": 10,
+            "spokenWords": 16
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:18 – 00:28",
+            "seconds": 10,
+            "spokenWords": 22
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

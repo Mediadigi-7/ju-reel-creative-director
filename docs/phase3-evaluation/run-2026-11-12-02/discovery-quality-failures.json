@@ -1,0 +1,528 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "One unlabeled example does not prove which category or programme contains it.",
+          "audienceGap": "Students assume specific tasks belong exclusively to one degree based on stereotypes.",
+          "viewerChange": "From guessing to demanding evidence before classifying a degree.",
+          "supportType": "method",
+          "support": "Logical reasoning: absent information cannot establish an exclusive classification; a link to a verified curriculum is required.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The viewer stops making assumptions and learns to ask for specific evidence to differentiate the degrees."
+        }
+      ],
+      "id": "reel_1794456990170_yxu8wa",
+      "reelTitle": "The B.Com vs BBA Label Mystery",
+      "creativeAngle": "A visual logic puzzle that challenges common assumptions about degree-specific tasks.",
+      "objective": "To help students realize that task examples are not proof of degree content without verified context.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Funny",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Setup",
+          "timestamp": "00:00 – 00:08",
+          "visual": "A person holds two cards, one labeled B.Com and one BBA. A third card flips onto the screen between them.",
+          "dialogue": "Everyone says B.Com is for accounting and BBA is for management. But look at this.",
+          "onscreenText": "Example: Task: Financial Report. Degree: ?",
+          "cameraPerformance": "Close-up on the person's hands and the cards.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Method",
+          "timestamp": "00:08 – 00:18",
+          "visual": "The person points to the task card, looking puzzled as they try to place it under either label.",
+          "dialogue": "Is a financial report exclusive to one? Without a source, we are just guessing labels. That is not proof.",
+          "onscreenText": "No source = No proof",
+          "cameraPerformance": "Medium shot, expressive and questioning look.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF",
+            "CTA"
+          ],
+          "name": "The Resolution",
+          "timestamp": "00:18 – 00:28",
+          "visual": "The person clears the cards and looks directly at the camera.",
+          "dialogue": "Stop guessing. Ask: what specific evidence links this task to one degree? Find the curriculum link before you decide.",
+          "onscreenText": "What specific evidence links this task to one degree?",
+          "cameraPerformance": "Direct, helpful, and firm.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, studio-lit, focused on hands and cards.",
+        "performance": "Conversational, inquisitive tone.",
+        "camera": "Stable, clear focus on props.",
+        "editing": "Snappy transitions between card reveals.",
+        "sound": "Light background jazz, crisp audio.",
+        "props": [
+          "Two degree cards",
+          "One task card"
+        ],
+        "locations": [
+          "Simple studio setting"
+        ],
+        "casting": "Relatable student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use a forced-choice puzzle to show that tasks cannot be assigned to degrees without verified evidence.",
+        "shootingPriority": [
+          "The reveal of the task card",
+          "The delivery of the central question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:16:30.170Z",
+      "updatedAt": "2026-11-12T04:16:30.170Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_insufficient_01",
+          "title": "The Label Mystery",
+          "audienceGap": "Assuming a single task belongs exclusively to one degree.",
+          "basisId": "insufficient_information",
+          "requiredConclusion": "Not enough information",
+          "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+          "viewerChange": "Recognizing when a conclusion is unsupported by evidence.",
+          "concept": "A visual puzzle where a task is shown and the viewer must guess the degree.",
+          "mechanismKey": "Evidence-link challenge",
+          "device": "Animated cards labeled B.Com and BBA with a floating task card.",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Present one example without a source linking it to a category.",
+            "Separate a plausible guess from what the available information proves.",
+            "Identify the exact missing source or information needed to decide."
+          ],
+          "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "visibleProof": "A forced-choice guess is replaced by a justified third answer and a precise request for missing evidence.",
+          "payoff": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+          "demonstration": {
+            "input": "A task titled 'Financial Report Analysis'.",
+            "visibleInput": "Example: Task: Financial Report. Degree: ?",
+            "observation": "No supplied source connects this example to either category; the supported result is insufficient information.",
+            "nextQuestion": "What specific evidence links this task to one degree?"
+          },
+          "treatment": "Funny"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question worksheet",
+            "device": "Split-screen view of a course module with a blank audit worksheet."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_journal_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Sticking-point journal",
+            "device": "Casual conversation over a shared notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_insufficient_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence-link challenge",
+            "device": "Animated cards labeled B.Com and BBA with a floating task card."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question worksheet; Connection = task_question_journal / Sticking-point journal; Discovery = insufficient_information / Evidence-link challenge. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Concept delivery",
+      "failureReason": "The actual story must state the supported conclusion: Not enough information",
+      "repairInstruction": "The actual story must state the supported conclusion: Not enough information. Preserve the selected concrete example, recorded observation and limitations. These can appear in any shot or combined exchange; do not add a compulsory scene or CTA."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "One unlabeled example does not prove which category or programme contains it.",
+          "audienceGap": "Students assume specific tasks belong exclusively to one degree based on stereotypes.",
+          "viewerChange": "From guessing to demanding evidence before classifying a degree.",
+          "supportType": "method",
+          "support": "Logical reasoning: absent information cannot establish an exclusive classification; a link to a verified curriculum is required.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The viewer stops making assumptions and learns to ask for specific evidence to differentiate the degrees."
+        }
+      ],
+      "id": "reel_1794456992677_re1ft4",
+      "reelTitle": "The B.Com vs BBA Label Mystery",
+      "creativeAngle": "A visual logic puzzle that challenges common assumptions about degree-specific tasks.",
+      "objective": "To help students realize that task examples are not proof of degree content without verified context.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Funny",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Setup",
+          "timestamp": "00:00 – 00:07",
+          "visual": "A person holds two cards, B.Com and BBA. A third card flips between them.",
+          "dialogue": "Is B.Com for accounting and BBA for management? Watch this.",
+          "onscreenText": "Example: Task: Financial Report. Degree: ?",
+          "cameraPerformance": "Close-up on hands and cards.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE",
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "The Method",
+          "timestamp": "00:07 – 00:18",
+          "visual": "The person attempts to slide the task under each card, then pulls them back in frustration.",
+          "dialogue": "Without a source, we are just guessing. Guessing isn't proof. The actual answer? Not enough information.",
+          "onscreenText": "No source = No proof",
+          "cameraPerformance": "Playful, questioning look.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Resolution",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Person looks directly at the camera, holding the task card up to the lens.",
+          "dialogue": "Next time, ask: what specific evidence links this task to one degree?",
+          "onscreenText": "What specific evidence links this task to one degree?",
+          "cameraPerformance": "Direct, helpful, and firm.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, studio-lit, focused on hands and cards.",
+        "performance": "Conversational, inquisitive tone.",
+        "camera": "Stable, clear focus on props.",
+        "editing": "Snappy transitions between card reveals.",
+        "sound": "Light background jazz, crisp audio.",
+        "props": [
+          "Two cards labeled B.Com and BBA",
+          "One task card"
+        ],
+        "locations": [
+          "Simple studio setting"
+        ],
+        "casting": "Relatable student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use a forced-choice puzzle to show that tasks cannot be assigned to degrees without verified evidence.",
+        "shootingPriority": [
+          "The reveal of the task card",
+          "The delivery of the central question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:16:32.677Z",
+      "updatedAt": "2026-11-12T04:16:32.677Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_insufficient_01",
+          "title": "The Label Mystery",
+          "audienceGap": "Assuming a single task belongs exclusively to one degree.",
+          "basisId": "insufficient_information",
+          "requiredConclusion": "Not enough information",
+          "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+          "viewerChange": "Recognizing when a conclusion is unsupported by evidence.",
+          "concept": "A visual puzzle where a task is shown and the viewer must guess the degree.",
+          "mechanismKey": "Evidence-link challenge",
+          "device": "Animated cards labeled B.Com and BBA with a floating task card.",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Present one example without a source linking it to a category.",
+            "Separate a plausible guess from what the available information proves.",
+            "Identify the exact missing source or information needed to decide."
+          ],
+          "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "visibleProof": "A forced-choice guess is replaced by a justified third answer and a precise request for missing evidence.",
+          "payoff": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+          "demonstration": {
+            "input": "A task titled 'Financial Report Analysis'.",
+            "visibleInput": "Example: Task: Financial Report. Degree: ?",
+            "observation": "No supplied source connects this example to either category; the supported result is insufficient information.",
+            "nextQuestion": "What specific evidence links this task to one degree?"
+          },
+          "treatment": "Funny"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question worksheet",
+            "device": "Split-screen view of a course module with a blank audit worksheet."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_journal_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Sticking-point journal",
+            "device": "Casual conversation over a shared notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_insufficient_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence-link challenge",
+            "device": "Animated cards labeled B.Com and BBA with a floating task card."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question worksheet; Connection = task_question_journal / Sticking-point journal; Discovery = insufficient_information / Evidence-link challenge. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: In the hook, the narrator asks if B.Com is for accounting and BBA for management, but the reel never addresses or debunks this specific premise, leaving the viewer with the initial stereotype. Revision: Include a brief visual or verbal acknowledgment that while these stereotypes exist, they are unsupported without specific syllabus evidence. payoff: The resolution is a verbal prompt to ask for evidence, but it does not demonstrate the 'visible change' required by the concept where a forced-choice guess is replaced by a third, justified answer. Revision: Show the narrator placing the task card into a separate 'Needs Evidence' pile rather than just holding it to the lens, illustrating the 'Not enough information' conclusion as a distinct action.",
+      "repairInstruction": "integrity: In the hook, the narrator asks if B.Com is for accounting and BBA for management, but the reel never addresses or debunks this specific premise, leaving the viewer with the initial stereotype. Revision: Include a brief visual or verbal acknowledgment that while these stereotypes exist, they are unsupported without specific syllabus evidence.\npayoff: The resolution is a verbal prompt to ask for evidence, but it does not demonstrate the 'visible change' required by the concept where a forced-choice guess is replaced by a third, justified answer. Revision: Show the narrator placing the task card into a separate 'Needs Evidence' pile rather than just holding it to the lens, illustrating the 'Not enough information' conclusion as a distinct action."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "One unlabeled example does not prove which category or programme contains it.",
+          "audienceGap": "Students assume specific tasks belong exclusively to one degree based on stereotypes.",
+          "viewerChange": "From guessing to demanding evidence before classifying a degree.",
+          "supportType": "method",
+          "support": "Logical reasoning: absent information cannot establish an exclusive classification; a link to a verified curriculum is required.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The viewer stops making assumptions and learns to ask for specific evidence to differentiate the degrees."
+        }
+      ],
+      "id": "reel_1794456996891_43nenl",
+      "reelTitle": "The B.Com vs BBA Label Mystery",
+      "creativeAngle": "A visual logic puzzle that challenges common assumptions about degree-specific tasks.",
+      "objective": "To help students realize that task examples are not proof of degree content without verified context.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Funny",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Setup",
+          "timestamp": "00:00 – 00:08",
+          "visual": "Person holds two cards, 'B.Com' and 'BBA'. A third card appears: 'Task: Financial Report'.",
+          "dialogue": "Think B.Com is only accounting and BBA is management? Let's test that.",
+          "onscreenText": "Example: Task: Financial Report. Degree: ?",
+          "cameraPerformance": "Close-up on hands and cards, skeptical expression.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE",
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "The Method",
+          "timestamp": "00:08 – 00:18",
+          "visual": "Person tries placing the task card under B.Com, then BBA, then sighs and places it in a new 'Needs Evidence' pile.",
+          "dialogue": "Stereotypes exist, but without a syllabus, this is just guessing. Not enough information.",
+          "onscreenText": "No source = No proof",
+          "cameraPerformance": "Playful, decisive action of moving the card.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Resolution",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Person looks directly at the camera, tapping the 'Needs Evidence' pile.",
+          "dialogue": "Stop guessing. Ask: what specific evidence links this task to one degree?",
+          "onscreenText": "What specific evidence links this task to one degree?",
+          "cameraPerformance": "Direct, helpful, and firm.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, studio-lit, focused on hands and cards.",
+        "performance": "Conversational, inquisitive tone.",
+        "camera": "Stable, clear focus on props.",
+        "editing": "Snappy transitions between card reveals.",
+        "sound": "Light background jazz, crisp audio.",
+        "props": [
+          "Two cards labeled B.Com and BBA",
+          "One task card",
+          "A sign labeled Needs Evidence"
+        ],
+        "locations": [
+          "Simple studio setting"
+        ],
+        "casting": "Relatable student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use a forced-choice puzzle to show that tasks cannot be assigned to degrees without verified evidence.",
+        "shootingPriority": [
+          "The reveal of the task card",
+          "The delivery of the central question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:16:36.892Z",
+      "updatedAt": "2026-11-12T04:16:36.892Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_insufficient_01",
+          "title": "The Label Mystery",
+          "audienceGap": "Assuming a single task belongs exclusively to one degree.",
+          "basisId": "insufficient_information",
+          "requiredConclusion": "Not enough information",
+          "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+          "viewerChange": "Recognizing when a conclusion is unsupported by evidence.",
+          "concept": "A visual puzzle where a task is shown and the viewer must guess the degree.",
+          "mechanismKey": "Evidence-link challenge",
+          "device": "Animated cards labeled B.Com and BBA with a floating task card.",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Present one example without a source linking it to a category.",
+            "Separate a plausible guess from what the available information proves.",
+            "Identify the exact missing source or information needed to decide."
+          ],
+          "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "visibleProof": "A forced-choice guess is replaced by a justified third answer and a precise request for missing evidence.",
+          "payoff": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+          "demonstration": {
+            "input": "A task titled 'Financial Report Analysis'.",
+            "visibleInput": "Example: Task: Financial Report. Degree: ?",
+            "observation": "No supplied source connects this example to either category; the supported result is insufficient information.",
+            "nextQuestion": "What specific evidence links this task to one degree?"
+          },
+          "treatment": "Funny"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question worksheet",
+            "device": "Split-screen view of a course module with a blank audit worksheet."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_journal_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Sticking-point journal",
+            "device": "Casual conversation over a shared notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_insufficient_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence-link challenge",
+            "device": "Animated cards labeled B.Com and BBA with a floating task card."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question worksheet; Connection = task_question_journal / Sticking-point journal; Discovery = insufficient_information / Evidence-link challenge. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: In the hook, the narrator asks if the viewer thinks B.Com is only accounting and BBA is management, but the reel never explores or disrupts these degree stereotypes. Revision: The dialogue should acknowledge that the task 'Financial Report' is commonly associated with both degrees, making the 'labeling' attempt inherently flawed rather than just a guessing game. insight: The reel presents the 'Needs Evidence' pile as a conclusion, but fails to demonstrate how an actual syllabus document would resolve the ambiguity. Revision: Include a brief visual of a mock syllabus excerpt where the task appears, showing the viewer exactly what 'evidence' looks like versus the current empty 'Needs Evidence' pile.",
+      "repairInstruction": "integrity: In the hook, the narrator asks if the viewer thinks B.Com is only accounting and BBA is management, but the reel never explores or disrupts these degree stereotypes. Revision: The dialogue should acknowledge that the task 'Financial Report' is commonly associated with both degrees, making the 'labeling' attempt inherently flawed rather than just a guessing game.\ninsight: The reel presents the 'Needs Evidence' pile as a conclusion, but fails to demonstrate how an actual syllabus document would resolve the ambiguity. Revision: Include a brief visual of a mock syllabus excerpt where the task appears, showing the viewer exactly what 'evidence' looks like versus the current empty 'Needs Evidence' pile."
+    }
+  }
+]

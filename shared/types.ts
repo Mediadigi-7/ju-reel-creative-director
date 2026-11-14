@@ -1,14 +1,19 @@
-export type ShotType =
+import type { ConceptSelection } from './concepts.js';
+import type { ContentChannel } from './channels.js';
+import type { HlniCandidate, EditorialReview } from './hlni.js';
+export type NarrativeFunction =
   | 'HOOK'
   | 'PROBLEM'
   | 'PATTERN_INTERRUPT'
   | 'VALUE'
   | 'PAYOFF'
   | 'CTA';
+export type ShotType = NarrativeFunction | 'SCENE';
 
 export interface Shot {
-  number: number; // 1 to 6
+  number: number; // Sequential production shot number
   type: ShotType;
+  functions?: NarrativeFunction[]; // Optional diagnostic tags; a scene can combine functions
   name: string;
   timestamp: string; // e.g. "00:00 – 00:04"
   visual: string;
@@ -39,6 +44,8 @@ export type CreativeDirection =
   | 'Informative'
   | 'Funny'
   | 'Trendy';
+
+export type CreativeTreatment = CreativeDirection | 'Auto';
 
 export type LanguageOption = 'English' | 'Tamil' | 'Telugu' | 'Malayalam' | 'Hindi' | 'Tanglish';
 
@@ -71,18 +78,32 @@ export interface ViralBlueprint {
 export interface FrameworkMetadata {
   creativeType: 'Informative' | 'Funny' | 'Trendy';
   // User-facing Reel Blueprint — the 6 actual content elements
-  hookStatement: string;       // The actual opening hook line the viewer hears/sees
-  problemStatement: string;    // What makes the viewer relate — the situation or tension shown
-  patternInterruptStatement: string; // How attention is reset — the visual/narrative disruption
-  valueStatement: string;      // What the viewer gets — the insight, framework, or payoff content
-  payoffStatement: string;     // How the story resolves — the satisfying answer or conclusion
-  ctaStatement: string;        // The single CTA the viewer is asked to do
+  hookStatement?: string;       // Optional diagnostic notes; functions may combine or be omitted
+  problemStatement?: string;
+  patternInterruptStatement?: string;
+  valueStatement?: string;
+  payoffStatement?: string;
+  ctaStatement?: string;
   // Internal (kept for AI knowledge engine fallback compatibility)
   hookText?: string;
   ctaText?: string;
 }
 
+export interface GenerationSource {
+  source: 'openai' | 'gemini' | 'offline';
+  warnings?:string[];
+  templateId?: string;
+  catalogueVersion?: string;
+  model?: string;
+  generatedAt: string;
+}
+
 export interface ReelStoryboard {
+  conceptSelection?:ConceptSelection;
+  hlni?:HlniCandidate[];
+  editorialReview?:EditorialReview;
+  channel?: ContentChannel;
+  generation?: GenerationSource;
   id: string;
   reelTitle: string;
   creativeAngle: string;
@@ -92,7 +113,7 @@ export interface ReelStoryboard {
   format: string; // "9:16 Vertical Reel"
   creativeDirection: string;
   language: LanguageOption;
-  shots: Shot[]; // Exactly 6 shots
+  shots: Shot[]; // Story-led shot count and pacing
   productionNotes: ProductionNotes;
   creativeSummary: CreativeSummary;
   viralBlueprint?: ViralBlueprint;
@@ -116,8 +137,9 @@ export interface ReelProject {
 }
 
 export interface GenerateReelRequest {
+  channel?: ContentChannel;
   reelTitle: string;
-  creativeDirection?: CreativeDirection;
+  creativeDirection?: CreativeTreatment;
   language?: LanguageOption;
   duration?: string;
   toneShift?: string;

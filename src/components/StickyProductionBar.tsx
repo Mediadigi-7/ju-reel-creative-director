@@ -12,15 +12,6 @@ interface StickyProductionBarProps {
   isSaved: boolean;
 }
 
-const SHOT_ANCHORS = [
-  { num: 1, label: 'Hook' },
-  { num: 2, label: 'Problem' },
-  { num: 3, label: 'Interrupt' },
-  { num: 4, label: 'Value' },
-  { num: 5, label: 'Payoff' },
-  { num: 6, label: 'CTA' },
-];
-
 export const StickyProductionBar: React.FC<StickyProductionBarProps> = ({
   reel,
   onRegenerateEntire,
@@ -59,16 +50,16 @@ export const StickyProductionBar: React.FC<StickyProductionBarProps> = ({
         </div>
 
         {/* Center: Shot Navigation Index Anchors (01-06) */}
-        <nav aria-label="Shot navigation index" className="hidden md:flex items-center gap-1 text-xs">
-          {SHOT_ANCHORS.map((anchor) => (
+        <nav aria-label="Shot navigation index" className="hidden md:flex items-center gap-1 text-xs overflow-x-auto max-w-[45vw]">
+          {reel.shots.map((shot) => (
             <button
-              key={anchor.num}
-              onClick={() => scrollToShot(anchor.num)}
+              key={shot.number}
+              onClick={() => scrollToShot(shot.number)}
               className="px-2 py-1 rounded text-stone-500 hover:text-stone-900 hover:bg-stone-100 transition-colors flex items-center gap-1 font-mono text-[11px]"
-              title={`Jump to Shot 0${anchor.num}: ${anchor.label}`}
+              title={`Jump to Shot 0${shot.number}: ${shot.name}`}
             >
-              <span className="font-bold text-stone-700">0{anchor.num}</span>
-              <span className="font-sans text-stone-500">{anchor.label}</span>
+              <span className="font-bold text-stone-700">{String(shot.number).padStart(2,'0')}</span>
+              <span className="font-sans text-stone-500">{shot.name}</span>
             </button>
           ))}
         </nav>

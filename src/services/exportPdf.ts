@@ -1,3 +1,4 @@
+import { editorialLabel } from '../../shared/hlni.js';
 import { jsPDF } from 'jspdf';
 import { ReelStoryboard } from '../../shared/types.js';
 
@@ -61,34 +62,25 @@ export function exportStoryboardPdf(reel: ReelStoryboard): void {
   // PAGE 1 HEADER
   drawPageHeader();
 
-  // PROJECT TITLE BOX
-  doc.setFillColor(250, 250, 249);
-  doc.setDrawColor(231, 229, 228);
-  doc.roundedRect(margin, y, contentWidth, 28, 2, 2, 'FD');
-
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(13);
-  doc.setTextColor(28, 25, 23);
+  // Wrap metadata so channel and audience remain readable in the exported copy.
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(13);
   const titleLines = doc.splitTextToSize(cleanPdfText(reel.reelTitle), contentWidth - 10);
-  doc.text(titleLines, margin + 5, y + 7);
-
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(9);
-  doc.setTextColor(82, 79, 79);
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(9);
   const angleLines = doc.splitTextToSize(`Angle: ${cleanPdfText(reel.creativeAngle)}`, contentWidth - 10);
-  doc.text(angleLines, margin + 5, y + 15);
-
   doc.setFontSize(8);
-  doc.setTextColor(120, 113, 108);
-  doc.text(
-    `Audience: ${cleanPdfText(reel.targetAudience)}  |  Duration: ${cleanPdfText(reel.duration)}  |  Format: ${cleanPdfText(reel.format)}  |  Tone: ${cleanPdfText(reel.creativeDirection)}`,
-    margin + 5,
-    y + 24
-  );
+  const metadataLines = doc.splitTextToSize(`Editorial: ${editorialLabel(reel)} | Channel: ${reel.channel || 'Not set'} | Audience: ${cleanPdfText(reel.targetAudience)} | Duration: ${cleanPdfText(reel.duration)} | Format: ${cleanPdfText(reel.format)} | Treatment: ${cleanPdfText(reel.creativeDirection)}`, contentWidth - 10);
+  const boxHeight = titleLines.length * 6 + angleLines.length * 4 + metadataLines.length * 3.5 + 12;
+  doc.setFillColor(250, 250, 249); doc.setDrawColor(231, 229, 228);
+  doc.roundedRect(margin, y, contentWidth, boxHeight, 2, 2, 'FD');
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(13); doc.setTextColor(28, 25, 23);
+  doc.text(titleLines, margin + 5, y + 7);
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(82, 79, 79);
+  doc.text(angleLines, margin + 5, y + 7 + titleLines.length * 6);
+  doc.setFontSize(8);
+  doc.text(metadataLines, margin + 5, y + 7 + titleLines.length * 6 + angleLines.length * 4);
+  y += boxHeight + 6;
 
-  y += 34;
-
-  // 6 SHOTS
+  // Production shots in story order
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(11);
   doc.setTextColor(28, 25, 23);
@@ -130,7 +122,7 @@ export function exportStoryboardPdf(reel: ReelStoryboard): void {
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(9);
     doc.setTextColor(175, 30, 42);
-    doc.text(`SHOT 0${shot.number} — ${cleanPdfText(shot.name).toUpperCase()}`, margin + 6, y + 6);
+    doc.text(`SHOT ${String(shot.number).padStart(2,'0')} — ${cleanPdfText(shot.name).toUpperCase()}`, margin + 6, y + 6);
 
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(8);

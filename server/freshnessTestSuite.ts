@@ -3,7 +3,7 @@ import { extractRealityTrigger } from './realityTrigger.js';
 import { recordCreativeDNA, clearCreativeMemory } from './creativeMemory.js';
 import { detectAngleCollision } from './angleCollision.js';
 import { detectGenericLanguage } from './genericLanguageDetector.js';
-import { extractContentCore, runMultiGateQA } from './aiService.js';
+import { checkLanguageCompliance, extractContentCore, runMultiGateQA } from './aiService.js';
 import { ReelStoryboard } from '../shared/types.js';
 
 function assert(condition: boolean, testName: string, detail?: any) {
@@ -140,10 +140,23 @@ export async function runFreshnessTestSuite() {
     ]
   };
 
+  // This narrative is longer than a 30-second script; give the positive fixture realistic delivery time.
+  freshMockStoryboard.duration = '45 sec';
+  const boundaries = [0,8,16,22,33,40,45];
+  freshMockStoryboard.shots.forEach((shot,i) => { shot.timestamp = `00:${String(boundaries[i]).padStart(2,'0')} – 00:${String(boundaries[i+1]).padStart(2,'0')}`; });
   const coreF = extractContentCore('Why learn AI');
   const qaF = runMultiGateQA(freshMockStoryboard, coreF, 'English', 'Informative');
   if (!qaF.pass) console.log('DEBUG Case F qaF failure:', qaF);
   assert(qaF.pass, 'Case F: Fresh Reel preserving original idea PASSES all QA gates');
+
+  const romanized = { ...freshMockStoryboard, shots: freshMockStoryboard.shots.map(s => ({ ...s, dialogue: 'B.Com illa BBA, enna padikkalam?', onscreenText: 'படிப்பைத் தேர்ந்தெடு' })) };
+  assert(!checkLanguageCompliance(romanized, 'Tamil').pass, 'Tamil captions cannot conceal romanized dialogue');
+  const native = { ...romanized, shots: romanized.shots.map(s => ({ ...s, dialogue: 'B.Com அல்லது BBA: பாடத்திட்டத்தை ஒப்பிடுங்கள்.' })) };
+  assert(checkLanguageCompliance(native, 'Tamil').pass, 'Native Tamil may retain canonical degree identifiers');
+  const overlong = { ...freshMockStoryboard, duration: '15 sec' };
+  assert(runMultiGateQA(overlong, coreF, 'English', 'Informative').failedGate === 'Delivery (Spoken pacing)', 'Reject dialogue that exceeds the total delivery time');
+  const rushedShot = { ...freshMockStoryboard, shots: freshMockStoryboard.shots.map((s,i) => i === 0 ? { ...s, timestamp:'00:00 – 00:01' } : s) };
+  assert(runMultiGateQA(rushedShot, coreF, 'English', 'Informative').failedGate === 'Delivery (Scene pacing)', 'Reject a spoken line that cannot fit its scene');
 
   // CASE G: A Reel that is highly creative but NO LONGER matches the user's original idea (MUST FAIL)
   console.log('\n--- TEST CASE G: Highly Creative but Drifted Idea (MUST FAIL) ---');

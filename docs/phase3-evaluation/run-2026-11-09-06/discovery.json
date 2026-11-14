@@ -1,0 +1,169 @@
+{
+  "hlni": [
+    {
+      "insight": "Course titles are insufficient to categorize a degree's scope as they are often shared across programs.",
+      "audienceGap": "Students assume a module title like 'Business Law' is exclusive to a specific degree.",
+      "viewerChange": "Students shift from guessing based on labels to looking for actual curriculum depth.",
+      "supportType": "method",
+      "support": "Logical limitation: a label cannot be used to distinguish categories if it exists in both.",
+      "references": [],
+      "shotNumbers": [
+        2
+      ],
+      "payoffShotNumbers": [
+        3
+      ],
+      "payoff": "The viewer realizes labels are common, shifting the focus to comparing actual curriculum depth."
+    }
+  ],
+  "id": "reel_1794220995821_0i47ghis",
+  "reelTitle": "The Missing Link Challenge",
+  "creativeAngle": "A logical challenge debunking the myth that course titles define degrees.",
+  "objective": "Guide students to look beyond labels when comparing B.Com and BBA.",
+  "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Funny",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "SCENE",
+      "functions": [
+        "HOOK",
+        "PROBLEM"
+      ],
+      "name": "The Quiz Setup",
+      "timestamp": "00:00 – 00:07",
+      "visual": "Host holds a card labelled 'Business Law' with a questioning expression.",
+      "dialogue": "B.Com or BBA? Identify which degree owns 'Business Law'. Go.",
+      "onscreenText": "B.Com vs BBA: Guess the Degree",
+      "cameraPerformance": "Static medium shot, high energy.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "SCENE",
+      "functions": [
+        "PATTERN_INTERRUPT",
+        "VALUE"
+      ],
+      "name": "The Reveal",
+      "timestamp": "00:07 – 00:19",
+      "visual": "A large red stamp 'NOT ENOUGH INFO' slams onto the screen over the card.",
+      "dialogue": "Subject: Business Law. Degree: B.Com or BBA? Answer: Not enough info.",
+      "onscreenText": "Subject: Business Law. Degree: B.Com or BBA? Answer: Not enough info.",
+      "cameraPerformance": "Dramatic zoom on the stamp.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "SCENE",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Insight",
+      "timestamp": "00:19 – 00:28",
+      "visual": "Host leans in close to the lens, speaking calmly.",
+      "dialogue": "Titles overlap. What differentiates the law curriculum between these two? Always check module depth.",
+      "onscreenText": "What differentiates the law curriculum between these two?",
+      "cameraPerformance": "Tight framing.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Game show aesthetic.",
+    "performance": "Fast, punchy.",
+    "camera": "Direct to camera.",
+    "editing": "Rhythmic cuts.",
+    "sound": "Buzzer and a final chime.",
+    "props": [
+      "Flash cards"
+    ],
+    "locations": [
+      "Studio set"
+    ],
+    "casting": "Student-aged host.",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "A game show challenge proves that single course titles are common and cannot distinguish between B.Com and BBA.",
+    "shootingPriority": [
+      "The reveal stamp",
+      "The final question"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-09T10:43:15.821Z",
+  "updatedAt": "2026-11-09T10:43:15.821Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Discovery",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "id": "disc_01",
+      "title": "The Missing Link Challenge",
+      "audienceGap": "Assuming a single module name (e.g., 'Business Law') belongs exclusively to one degree.",
+      "basisId": "insufficient_information",
+      "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+      "viewerChange": "Recognizes that course titles are insufficient to categorize a degree's entire scope.",
+      "concept": "A rapid-fire game where the viewer tries to guess the degree based on one subject, only to be shown the 'Not Enough Info' reveal.",
+      "mechanismKey": "missing-evidence",
+      "device": "A game show-style reveal with a 'Not Enough Info' stamp.",
+      "supportType": "method",
+      "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Present one example without a source linking it to a category.",
+        "Separate a plausible guess from what the available information proves.",
+        "Identify the exact missing source or information needed to decide."
+      ],
+      "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+      "visibleProof": "A forced-choice guess is replaced by a justified third answer and a precise request for missing evidence.",
+      "payoff": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+      "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+      "demonstration": {
+        "input": "A subject card 'Business Law'.",
+        "visibleInput": "Subject: Business Law. Degree: B.Com or BBA? Answer: Not enough info.",
+        "observation": "The viewer realizes the label is shared/common.",
+        "nextQuestion": "What differentiates the law curriculum between these two?"
+      },
+      "treatment": "Funny"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_01",
+        "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+        "mechanismKey": "assessment-matrix",
+        "device": "A split-screen showing a task title vs. a three-column tracker for product, criteria, and feedback."
+      },
+      {
+        "channel": "Connection",
+        "id": "conn_01",
+        "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+        "mechanismKey": "journal-method",
+        "device": "A conversation between two friends over a notebook."
+      },
+      {
+        "channel": "Discovery",
+        "id": "disc_01",
+        "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+        "mechanismKey": "missing-evidence",
+        "device": "A game show-style reveal with a 'Not Enough Info' stamp."
+      }
+    ],
+    "contrast": "Trust uses a structural audit to clarify assessment expectations; Connection uses a peer journal to turn personal confusion into actionable inquiry; Discovery uses a logical challenge to debunk the myth that course titles alone define academic programs."
+  },
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-09T10:43:15.822Z"
+  }
+}

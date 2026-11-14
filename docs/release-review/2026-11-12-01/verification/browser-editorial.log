@@ -1,0 +1,6 @@
+PASS: legacy Ready status without HLNI is a review-required draft; empty insight cannot be approved
+PASS: all five checks required; combined/multiple shot references; approval persists after reload
+PASS: withdrawing the credibility check immediately revokes approval
+PASS: factual proposal needs a reference as well as five confirmations
+PASS: scene edit makes approval stale and returns the reel to Draft
+PASS: HLNI review fields and checklist fit the mobile layout

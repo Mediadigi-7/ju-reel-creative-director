@@ -1,0 +1,86 @@
+{
+  "startedAt": "2026-11-12T04:18:56.216Z",
+  "request": {
+    "topic": "B.Com vs BBA",
+    "treatment": "Auto",
+    "language": "English",
+    "duration": "28 sec",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "diagnosticFunctionTags": true
+  },
+  "planning": "Separate joint concept selection precedes production shots; distinct selections are compared across all channels.",
+  "referenceApproval": "User-approved non-mandatory creative benchmarks; academic claims are not independently verified by this approval.",
+  "sourceSha256": {
+    "server/aiService.ts": "55e1bce1ab5b6d00d73c42423e10317666e7ba989629fdb50aafc217d8fb5de6",
+    "server/conceptPlanner.ts": "3c4f43f64aaff917828094fde19d6e7777aba829f539d146dc6aef8512a32f9f",
+    "server/providerClient.ts": "386441447566bdeace2b2f0117b11c2ddfa70a14dbbb02b9061427aea266f9be",
+    "server/generationSchemas.ts": "a48ec92610f3bc2e9a7131b490ef23e12822450bfc0fec6ec59d14af125fd3e7",
+    "server/editorialReview.ts": "a30be567f8a3b41b47da65ff2f7a59261507008b7595689cf12d6b3a6b2a5fab",
+    "shared/concepts.ts": "5222d6a3b7c9331534c67dd7a156fd5550df325db34f6beda3fb872593c40edf",
+    "shared/reasoningTools.ts": "165f1deeb4f8aac49d8a2fd2f123d43e64ed0c88d794ad78a9b492980c9b877c",
+    "server/freshnessEngine.ts": "9bb80afd1f839a071f7e18ff7cd32e61334cfea5728a712d777899aae1310d67",
+    "server/realityTrigger.ts": "e21a51d8cd46d753d0d1423e10156db5e6f29fd392a9e0cdf3e4c7fb560f7dc8",
+    "shared/creativeFramework.ts": "24c4c4b8c3655f9dba75e77a8f381f2ee40a5ad74c8b48913d4f605cb3aa9461",
+    "shared/hlni.ts": "8b5c44a14482eb6301229774019d8d07444e82fc58f9624fcce8a84f26e5c5cb",
+    "shared/editorialBenchmarks.ts": "33a721a958ebb3e92ee4183565c3c0fbf017a4c23d65ee8684ddafc53ab6f42c",
+    "shared/channels.ts": "e2352e71208bda7c9f525de1ba48a2d479b0efab6aa26284516dce2e729c8b95",
+    "shared/knowledgeBase.ts": "eee71bc44e3d253d596a7829517a05237630dd994f109ca1b017aa869923e7bc",
+    "shared/schema.ts": "315d8a6c049db3999d9cdfd7a384f9b476de307bcad575a227dd52e29db6f7bd",
+    "docs/creative-references/BCOM_VS_BBA_APPROVED.md": "f0516cb75a6bfe2800d8573945ef847907ba5ec39b9befb9c983933ca128d7e6"
+  },
+  "rubric": [
+    {
+      "key": "hlni",
+      "label": "High-Leverage New Information",
+      "weight": 25
+    },
+    {
+      "key": "differentiation",
+      "label": "Channel differentiation",
+      "weight": 20
+    },
+    {
+      "key": "coherence",
+      "label": "Narrative coherence",
+      "weight": 20
+    },
+    {
+      "key": "payoff",
+      "label": "Payoff",
+      "weight": 15
+    },
+    {
+      "key": "production",
+      "label": "Production readiness",
+      "weight": 15
+    },
+    {
+      "key": "originality",
+      "label": "Originality",
+      "weight": 5
+    }
+  ],
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "results": [
+    {
+      "channel": "Trust",
+      "status": "FAILED",
+      "category": "timeout",
+      "message": "The provider did not finish within the test time limit. Try again.",
+      "elapsedMs": 50005
+    }
+  ],
+  "editorialDecision": "REVISE",
+  "productionChanged": false,
+  "completedAt": "2026-11-12T04:19:46.234Z",
+  "complete": false,
+  "evaluatedAt": "2026-11-12T04:21:12.104Z",
+  "evaluationFile": "evaluation.json",
+  "evaluationSha256": "939f12cc619006071676e38af9d29b8b91f6a8037297f91b421d87ef1c3f4f18"
+}
