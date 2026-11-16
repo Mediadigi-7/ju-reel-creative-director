@@ -62,8 +62,8 @@ export async function selectChannelConcept(input:{topic:string;channel:ContentCh
   if(selected&&!issues.length){const reviewed=await input.review(selected);if(Array.isArray(reviewed))issues=reviewed;else{issues=reviewed.blocking;if(reviewed.advice.length)selected={...selected,reviewNotes:reviewed.advice.slice(0,6)};}}
   if(selected&&!issues.length)return {...(input.channel==='Trust'&&input.language==='English'&&selected.basisId==='verified_curriculum_example'?{deliveryPolicy:'evidence-and-action-v1' as const}:{}),stage:'concept-before-story',selected,comparedWith:[],contrast:`Only ${input.channel} was planned and reviewed. Finished-story channel comparison is separate; this is not editorial approval.`};
   input.onRejected?.(plan||{invalidJson:true},issues);
-  if(attempt===Math.min(1,input.maxRepairs))throw new AiProviderError('output_validation');
+  if(attempt===Math.min(1,input.maxRepairs))throw new AiProviderError('output_validation',undefined,issues.some(i=>i.includes('| integrity:'))?'evidence':'concept');
   instruction=prompt+'\nREQUESTED-CHANNEL CONCEPT REPAIR REQUIRED:\n'+issues.join('\n')+'\nPREVIOUS REQUESTED PLAN:\n'+JSON.stringify(plan||{});
  }
- throw new AiProviderError('output_validation');
+ throw new AiProviderError('output_validation',undefined,'concept');
 }

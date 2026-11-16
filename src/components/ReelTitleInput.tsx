@@ -1,12 +1,13 @@
 import React,{useEffect,useRef,useState} from 'react';
 import {ArrowRight,Check,AlertCircle} from 'lucide-react';
+import type {GenerationMode} from '../../shared/types.js';
 import {CHANNEL_NAMES,type ContentChannel} from '../../shared/channels.js';
 import {OFFLINE_IDEAS,OFFLINE_SAMPLE_CHANNELS,matchOfflineIdea,supportsOffline,OFFLINE_CHANNEL_UNSUPPORTED} from '../../shared/offline/index.js';
 import {CREATIVE_DIRECTIONS} from '../../shared/knowledgeBase.js';
 import type {CreativeTreatment,LanguageOption} from '../../shared/types.js';
 export interface IdeaSelection {title:string;direction:CreativeTreatment;channel?:ContentChannel;language?:LanguageOption;}
 interface Props {
- onGenerate:(title:string,direction:CreativeTreatment,language:LanguageOption,channel?:ContentChannel)=>void;
+ onGenerate:(title:string,direction:CreativeTreatment,language:LanguageOption,channel?:ContentChannel,mode?:GenerationMode)=>void;
  isLoading:boolean;hasApiKey?:boolean;onOpenSettings?:()=>void;initialIdea?:IdeaSelection;onDraftChange?:(draft:IdeaSelection)=>void;
 }
 const goals:Record<ContentChannel,string>={Trust:'Explain clearly and build confidence',Connection:'Make students feel understood',Discovery:'Spark curiosity and share an insight'};
@@ -29,7 +30,7 @@ export const ReelTitleInput:React.FC<Props>=({onGenerate,isLoading,hasApiKey=fal
  },[]);
  useEffect(()=>{if(showSuggestions&&activeSuggestion>=0)document.getElementById(`reel-topic-option-${activeSuggestion}`)?.scrollIntoView({block:'nearest'});},[showSuggestions,activeSuggestion]);
  const updateDraft=(fields:Partial<IdeaSelection>)=>onDraftChange?.({title,direction,language,channel,...fields});
- const sample=matchOfflineIdea(title),canOpenSample=!hasApiKey&&supportsOffline(title,language);
+ const sample=matchOfflineIdea(title),canOpenSample=supportsOffline(title,language);
  const chooseSuggestion=(idea:typeof OFFLINE_IDEAS[number])=>{
   setTitle(idea.title);setChannel(OFFLINE_SAMPLE_CHANNELS[idea.id]);
   updateDraft({title:idea.title,channel:OFFLINE_SAMPLE_CHANNELS[idea.id]});setError(null);
@@ -42,18 +43,18 @@ export const ReelTitleInput:React.FC<Props>=({onGenerate,isLoading,hasApiKey=fal
   }else if(event.key==='Escape'&&suggestionsOpen){event.preventDefault();setSuggestionsOpen(false);setActiveSuggestion(-1);}
   else if(event.key==='Enter'&&showSuggestions&&activeSuggestion>=0&&activeSuggestion<suggestions.length){event.preventDefault();chooseSuggestion(suggestions[activeSuggestion]);}
  };
- const submit=(e:React.FormEvent)=>{
-  e.preventDefault();if(isLoading)return;setSuggestionsOpen(false);
+ const submitMode=(mode:GenerationMode)=>{if(isLoading)return;setSuggestionsOpen(false);
   if(!title.trim()){setError('Enter a topic or focus the topic field to choose a suggestion.');input.current?.focus();return;}
-  if(!hasApiKey&&!supportsOffline(title,language)){setError('Your own topic needs an AI connection. Connect AI, or choose a sample topic to try the editor first.');return;}
-  if(!hasApiKey&&sample&&OFFLINE_SAMPLE_CHANNELS[sample.id]!==channel){setError(OFFLINE_CHANNEL_UNSUPPORTED);return;}
-  setError(null);onGenerate(title.trim(),direction,language,channel);
+  if(mode==='ai'&&!hasApiKey){setError('A new AI version needs a connection. Connect AI, or choose a ready-made template to open without a key.');return;}
+  if(mode==='template'&&sample&&OFFLINE_SAMPLE_CHANNELS[sample.id]!==channel){setError(OFFLINE_CHANNEL_UNSUPPORTED);return;}
+  setError(null);onGenerate(title.trim(),direction,language,channel,mode);
  };
+ const submit=(e:React.FormEvent)=>{e.preventDefault();submitMode(canOpenSample?'template':'ai');};
  return <div className="max-w-3xl mx-auto py-6 sm:py-10">
   <div className="mb-7">
    <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-950">Create a reel storyboard</h1>
    <p className="mt-3 text-base leading-relaxed text-stone-600 max-w-xl">Turn a student-focused idea into a shooting plan with scenes, dialogue and camera directions.</p>
-   <p className="mt-2 text-sm text-stone-600">{hasApiKey?'A provider key is saved. Review your choices, then create your draft.':'New here? Try a sample first. No API key is needed.'}</p>
+   <p className="mt-2 text-sm text-stone-600">{hasApiKey?'Templates open without using your saved key. Choose AI for a new version.':'New here? Try a sample first. No API key is needed.'}</p>
   </div>
   <form onSubmit={submit} noValidate className="space-y-6 bg-white border border-stone-200 rounded-2xl p-5 sm:p-7">
    <div>
@@ -61,13 +62,13 @@ export const ReelTitleInput:React.FC<Props>=({onGenerate,isLoading,hasApiKey=fal
     <div ref={topicField} className="relative" onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))setSuggestionsOpen(false);}}>
      <input id="reel-title-input" ref={input} role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded={showSuggestions} aria-controls={showSuggestions?'reel-topic-suggestions':undefined} aria-activedescendant={showSuggestions&&activeSuggestion>=0?`reel-topic-option-${activeSuggestion}`:undefined} autoComplete="off" value={title} onFocus={()=>{setSuggestionsOpen(true);setActiveSuggestion(-1);}} onClick={()=>setSuggestionsOpen(true)} onKeyDown={handleSuggestionKey} onChange={e=>{setTitle(e.target.value);updateDraft({title:e.target.value});setError(null);setSuggestionsOpen(true);setActiveSuggestion(-1);}} disabled={isLoading} aria-invalid={Boolean(error&&!title.trim())} aria-describedby={`topic-help${error?' topic-error':''}`} placeholder="For example: How do I choose the right college?" className="w-full rounded-lg border border-[#8b8680] px-4 py-3 text-base placeholder:text-stone-500"/>
      {showSuggestions&&<div className="absolute top-full left-0 right-0 z-20 mt-2 rounded-xl border border-stone-300 bg-white shadow-lg overflow-hidden">
-      <p id="topic-suggestion-label" className="px-4 py-3 text-xs font-semibold text-stone-600 border-b border-stone-100">Suggested topics</p>
-      <div id="reel-topic-suggestions" role="listbox" aria-labelledby="topic-suggestion-label" className="max-h-64 overflow-y-auto overscroll-contain p-1">
+      <p id="topic-suggestion-label" className="px-4 py-3 text-xs font-semibold text-stone-600 border-b border-stone-100">Six ready-made templates · no API key</p>
+      <div id="reel-topic-suggestions" role="listbox" aria-labelledby="topic-suggestion-label" className="max-h-80 overflow-y-auto overscroll-contain p-1">
        {suggestions.map((idea,index)=><button key={idea.id} id={`reel-topic-option-${index}`} role="option" aria-selected={activeSuggestion===index} tabIndex={-1} type="button" onMouseDown={event=>event.preventDefault()} onClick={()=>chooseSuggestion(idea)} className={`w-full min-h-11 flex items-center justify-between gap-3 px-3 py-3 text-left text-sm rounded-lg ${activeSuggestion===index?'bg-stone-100 text-stone-950':'text-stone-700 hover:bg-stone-50'}`}><span>{idea.title}</span>{sample?.id===idea.id&&<Check aria-hidden="true" className="w-4 h-4 shrink-0"/>}</button>)}
       </div>
      </div>}
     </div>
-    <p id="topic-help" className="mt-2 text-sm text-stone-600">{hasApiKey?'Enter your own idea or choose a suggested topic.':'Click the field to choose a sample, or connect AI to use your own topic.'}</p>
+    <p id="topic-help" className="mt-2 text-sm text-stone-600">{hasApiKey?'Open a template, or enter your own topic to create with AI.':'Click the field to choose one of six templates. No API key is needed.'}</p>
    </div>
    <fieldset disabled={isLoading}>
     <legend className="text-base font-semibold text-stone-900 mb-3">What should this reel do?</legend>
@@ -79,8 +80,11 @@ export const ReelTitleInput:React.FC<Props>=({onGenerate,isLoading,hasApiKey=fal
    </div>
    {error&&<div id="topic-error" role="alert" className="rounded-lg p-4 bg-amber-50 border border-amber-300 text-amber-950 text-sm"><div className="flex gap-2"><AlertCircle aria-hidden="true" className="h-5 w-5 shrink-0"/><p>{error}</p></div>{!hasApiKey&&onOpenSettings&&<button type="button" onClick={onOpenSettings} className="mt-3 font-semibold underline underline-offset-4 min-h-8">Connect AI in settings</button>}</div>}
    <div className="border-t border-stone-200 pt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-    <p className="text-sm text-stone-600 max-w-sm">{canOpenSample?'You can edit this example storyboard after it opens. Auto uses the informative style for offline samples.':'You can edit every scene before saving or exporting.'}</p>
-    <button type="submit" disabled={isLoading} className="min-h-12 shrink-0 px-5 py-3 bg-[#AF1E2A] hover:bg-[#8c1823] text-white rounded-lg font-semibold flex items-center justify-center gap-2">{isLoading?'Creating your storyboard…':canOpenSample?'Open sample storyboard':'Create storyboard'}<ArrowRight aria-hidden="true" className="w-4 h-4"/></button>
+    <p className="text-sm text-stone-600 max-w-sm">{canOpenSample?'This ready-made template opens without an API key. You can edit every scene. Auto uses the informative version.':'You can edit every scene before saving or exporting.'}</p>
+    <div className="flex flex-col sm:flex-row gap-2">
+    {canOpenSample&&hasApiKey&&<button type="button" onClick={()=>submitMode('ai')} disabled={isLoading} className="min-h-12 px-4 py-3 rounded-lg border border-stone-400 text-stone-800 font-medium hover:bg-stone-50">Create a fresh AI version</button>}
+    <button type="submit" disabled={isLoading} className="min-h-12 shrink-0 px-5 py-3 bg-[#AF1E2A] hover:bg-[#8c1823] text-white rounded-lg font-semibold flex items-center justify-center gap-2">{isLoading?'Creating your storyboard…':canOpenSample?'Open template':'Create storyboard'}<ArrowRight aria-hidden="true" className="w-4 h-4"/></button>
+    </div>
    </div>
   </form>
   {!hasApiKey&&onOpenSettings&&<p className="mt-5 text-sm text-stone-600">Ready to use your own ideas? <button onClick={onOpenSettings} className="font-semibold text-[#8c1618] underline underline-offset-4 min-h-9">Connect an AI provider</button></p>}

@@ -51,7 +51,7 @@ try {
     requests++;
     return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify(cliche) } }] }));
   };
-  await assert.rejects(generateStoryboard({ reelTitle: 'AI will change these careers', apiProvider: 'openai', apiKey: 'test-only-key' }), /did not pass the output checks/);
+  await assert.rejects(generateStoryboard({ reelTitle: 'AI will change these careers', apiProvider: 'openai', apiKey: 'test-only-key' }), /AI draft/);
   assert.equal(requests, 3, 'initial generation plus at most two repairs');
   console.log('PASS: persistent QA failure rejects without template substitution');
 } finally {

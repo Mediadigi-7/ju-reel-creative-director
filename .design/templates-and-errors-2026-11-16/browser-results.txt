@@ -1,0 +1,1 @@
+PASS: all six templates open with and without a saved key, zero generation requests, saved key retained, local template language/style/reset, explicit AI request, actionable timing message, keyboard focus recovery and 320/390/720px reflow. Isolated profile and simulated AI error; no real provider calls.

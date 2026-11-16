@@ -60,7 +60,7 @@ const original=globalThis.fetch;
 const restorePlanningMocks=installConceptPlanningMocks();
 try {
  globalThis.fetch=async()=>new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(makeReel(3))}]}}]}));
- await assert.rejects(generateStoryboard({reelTitle:seed.reelTitle,apiProvider:'gemini',apiKey:'test-only'},{maxRepairs:0}),/storyboard|quality|generate|output/i,'New generation cannot opt out of six stages with legacy-shaped data');
+ await assert.rejects(generateStoryboard({reelTitle:seed.reelTitle,apiProvider:'gemini',apiKey:'test-only'},{maxRepairs:0}),(error:any)=>error.category==='output_validation','New generation cannot opt out of six stages with legacy-shaped data');
  for(const provider of ['gemini','openai'] as const) for(const count of [6,8]) {
   const reel={...makeReel(count),creativeDirection:'Funny'};
   const types=['HOOK','PROBLEM','PATTERN_INTERRUPT',...Array(count-5).fill('VALUE'),'PAYOFF','CTA'] as const;

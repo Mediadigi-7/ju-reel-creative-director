@@ -15,7 +15,7 @@ clearConceptPlanningCache();let plans=0,reviews=0;
 const accepted=await selectReelConcept({...request,request:async()=>{plans++;return JSON.stringify(batch);},review:async()=>{reviews++;return reviews===1?['Connection: Categorising expenses does not support a question about auditing budgets.']:[];}});
 assert.equal(plans,2);assert.equal(reviews,2);assert.ok(accepted.selected.storySpine);
 clearConceptPlanningCache();
-await assert.rejects(selectReelConcept({...request,maxRepairs:0,request:async()=>JSON.stringify(batch),review:async()=>['Payoff: A confident nod has no demonstrated consequence.']}),/output checks/);
+await assert.rejects(selectReelConcept({...request,maxRepairs:0,request:async()=>JSON.stringify(batch),review:async()=>['Payoff: A confident nod has no demonstrated consequence.']}),/AI draft/);
 const issues=await reviewConceptBatch(batch,async prompt=>{assert.ok(prompt.includes('rather than adding a sentence claiming they connect'));return JSON.stringify({issues:[{candidateId:'connection-a',quote:'A concrete question needs to be investigated.',category:'fidelity',evidence:'Connection observes classification but asks about auditing.',revision:'Ask about classifying the observed expense.'}]});});
 assert.match(issues[0],/classification/);
 const reel=generateOfflineStoryboard('AI will change these careers');reel.channel='Trust';

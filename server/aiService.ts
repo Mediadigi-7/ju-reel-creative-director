@@ -8,7 +8,7 @@ import { FLEXIBLE_CREATIVE_FRAMEWORK, findCtaShot, hasFunction, ctaActionGroups 
 import { hlniIssues, HLNI_CREATIVE_CONTRACT } from '../shared/hlni.js';
 import { conceptDeliveryIssues } from '../shared/concepts.js';
 import { approvedBenchmarkPrompt } from '../shared/editorialBenchmarks.js';
-import { PROVIDER_MODELS } from '../shared/providers.js';
+import { PROVIDER_MODELS,outputIssueForGate } from '../shared/providers.js';
 import { applyDialogueRepair, buildDialogueRepair, normalizeComparisonCaptions, speechUnits, sceneSeconds } from './outputRepair.js';
 import { AiProviderError, providerResponseError, transportError } from './aiErrors.js';
 import { channelPrompt, validateChannel, CHANNEL_STRATEGIES } from '../shared/channels.js';
@@ -281,7 +281,11 @@ export async function generateStoryboard(req: GenerateReelRequest, options: { ma
   const direction = req.creativeDirection || 'Auto';
   const language = req.language || 'English';
   const duration = req.duration || '28 sec';
+  if(req.generationMode!==undefined&&!['template','ai'].includes(req.generationMode))throw new AiProviderError('invalid_request');
+  // Explicit template access never reaches a provider, including server-side keys.
+  if(req.generationMode==='template')return generateKnowledgeEngineStoryboard(title,direction,language,duration,1,channel);
   const apiKey = req.apiKey || process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY;
+  if(req.generationMode==='ai'&&!apiKey)throw new AiProviderError('missing_key');
 
   if (!apiKey) {
     console.log('[AI Service] No API Key provided, returning Knowledge Engine storyboard.');
@@ -492,7 +496,7 @@ Return ONLY valid JSON.
       if (qa.pass) break;
       options.onQualityFailure?.(candidate,qa);
       console.warn('[AI Service] Storyboard check failed:', qa.failedGate, qa.failureReason || '', `(attempt ${attempt + 1})`);
-      if (!optionalRewrite && technicalRepairs >= maxRepairs) throw new AiProviderError('output_validation');
+      if (!optionalRewrite && technicalRepairs >= maxRepairs) throw new AiProviderError('output_validation',undefined,outputIssueForGate(qa.failedGate));
       if(!optionalRewrite)technicalRepairs++;
       if(deadline-Date.now()<MIN_WRITER_MS+FINALISATION_MS) {
         if(validCandidate){candidate=validCandidate;warnings.push('Optional advisory rewrite was skipped because insufficient request budget remained.');advisoryEvent('retained_valid_draft','timeout');break;}

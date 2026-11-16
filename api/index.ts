@@ -46,7 +46,7 @@ app.post('/api/generate', async (req, res) => {
     if (error.message === 'INVALID_CHANNEL') return res.status(400).json({ success: false, code: 'INVALID_CHANNEL', error: 'Choose Trust, Connection, or Discovery.' });
     if (error.message === OFFLINE_CHANNEL_UNSUPPORTED) return res.status(422).json({ success: false, code: 'OFFLINE_CHANNEL_UNSUPPORTED', error: OFFLINE_CHANNEL_UNSUPPORTED });
     if (error.message === OFFLINE_UNSUPPORTED) return res.status(422).json({ success: false, code: 'OFFLINE_UNSUPPORTED', error: OFFLINE_UNSUPPORTED });
-    if(error instanceof AiProviderError)return res.status(error.category==='cancelled'?499:error.category==='timeout'?504:502).json({success:false,code:error.category,error:error.message});
+    if(error instanceof AiProviderError)return res.status(error.category==='cancelled'?499:error.category==='timeout'?504:502).json({success:false,code:error.category,error:error.message,...(error.validationIssue?{validationIssue:error.validationIssue}:{})});
     console.error('[API /api/generate Error]:', error);
     return res.status(500).json({
       error: "We couldn't generate the storyboard. Please try again.",
@@ -68,7 +68,7 @@ app.post('/api/regenerate-shot', async (req, res) => {
   } catch (error: any) {
     if (error.message === 'INVALID_CHANNEL') return res.status(400).json({ success: false, code: 'INVALID_CHANNEL', error: 'Choose Trust, Connection, or Discovery.' });
     if (error.message?.startsWith('Offline samples are fixed')) return res.status(422).json({ success: false, code: 'AI_REQUIRED', error: 'Offline samples are fixed. Edit directly or connect AI to regenerate.' });
-    if(error instanceof AiProviderError)return res.status(error.category==='cancelled'?499:error.category==='timeout'?504:502).json({success:false,code:error.category,error:error.message});
+    if(error instanceof AiProviderError)return res.status(error.category==='cancelled'?499:error.category==='timeout'?504:502).json({success:false,code:error.category,error:error.message,...(error.validationIssue?{validationIssue:error.validationIssue}:{})});
     console.error('[API /api/regenerate-shot Error]:', error);
     return res.status(500).json({
       error: "We couldn't regenerate this shot. Please try again.",

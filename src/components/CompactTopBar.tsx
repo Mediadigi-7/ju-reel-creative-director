@@ -190,7 +190,7 @@ export const CompactTopBar: React.FC<CompactTopBarProps> = ({
             title={reel.generation?.source === "offline" && !apiSettings?.apiKey?.trim() ? "Reload this fixed sample; current draft edits will be replaced." : "Regenerate the storyboard with AI"}
           >
             <RotateCw className={`w-3.5 h-3.5 ${isRegenerating ? 'animate-spin' : ''}`} />
-            <span>{isRegenerating ? 'Loading…' : reel.generation?.source === 'offline' && !apiSettings?.apiKey?.trim() ? 'Reset sample' : 'Rewrite reel'}</span>
+            <span>{isRegenerating ? 'Loading…' : reel.generation?.source === 'offline' ? 'Reset sample' : 'Rewrite reel'}</span>
           </button>
         </div>
       </div>

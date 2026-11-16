@@ -28,7 +28,7 @@ import {
   saveApiSettings,
   ApiSettings,
 } from './services/storage.js';
-import { ReelStoryboard, Shot, CreativeDirection, CreativeTreatment, LanguageOption, ReelProject } from '../shared/types.js';
+import { ReelStoryboard, Shot, CreativeDirection, CreativeTreatment, LanguageOption, ReelProject, GenerationMode } from '../shared/types.js';
 import { retimeStoryboard } from '../shared/timing.js';
 import { AlertCircle } from 'lucide-react';
 import { LibraryView } from './components/LibraryView.js';
@@ -176,10 +176,11 @@ export const App: React.FC = () => {
     title: string,
     direction: CreativeTreatment = 'Auto',
     language: LanguageOption = 'English',
-    channel?: ContentChannel
+    channel?: ContentChannel,
+    generationMode?:GenerationMode
   ) => {
     if (isGeneratingRef.current || isLoading) return;
-    retryAction.current = () => handleGenerate(title, direction, language, channel);
+    retryAction.current = () => handleGenerate(title, direction, language, channel, generationMode);
     isGeneratingRef.current = true;
     setIsLoading(true);
     setIsGenerationComplete(false);
@@ -189,12 +190,13 @@ export const App: React.FC = () => {
 
     try {
       const generated = await apiGenerateReel({
+        generationMode,
         reelTitle: title,
         creativeDirection: direction,
         channel,
         language: language,
-        apiKey: apiSettings.apiKey,
-        apiProvider: apiSettings.apiProvider,
+        apiKey: generationMode==='template'?undefined:apiSettings.apiKey,
+        apiProvider: generationMode==='template'?undefined:apiSettings.apiProvider,
       });
       setPendingReel(generated);
       setIsGenerationComplete(true);
@@ -224,6 +226,7 @@ export const App: React.FC = () => {
 
     try {
       const regenerated = await apiGenerateReel({
+        generationMode:currentReel.generation?.source==='offline'?'template':'ai',
         reelTitle: currentReel.reelTitle,
         creativeDirection: currentReel.creativeDirection as CreativeDirection,
         language: currentReel.language,
@@ -303,12 +306,12 @@ export const App: React.FC = () => {
 
   const handleShiftTone = async (newDirection: CreativeDirection) => {
     if (!currentReel) return;
-    handleGenerate(currentReel.reelTitle, newDirection, currentReel.language, currentReel.channel);
+    handleGenerate(currentReel.reelTitle, newDirection, currentReel.language, currentReel.channel,currentReel.generation?.source==='offline'?'template':'ai');
   };
 
   const handleShiftLanguage = async (newLanguage: LanguageOption) => {
     if (!currentReel) return;
-    handleGenerate(currentReel.reelTitle, currentReel.creativeDirection as CreativeDirection, newLanguage, currentReel.channel);
+    handleGenerate(currentReel.reelTitle, currentReel.creativeDirection as CreativeDirection, newLanguage, currentReel.channel,currentReel.generation?.source==='offline'?'template':'ai');
   };
 
   const handleShiftDuration = (newDuration: string) => {
@@ -409,17 +412,20 @@ export const App: React.FC = () => {
       <main id="main-content" tabIndex={-1} className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Error Notification */}
         {error && (
-          <div role="alert" className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 flex items-center justify-between gap-4">
+          <div role="alert" className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2.5 text-red-800 text-sm font-semibold">
               <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
               <span>{error}</span>
             </div>
+            <div className="flex flex-wrap shrink-0 gap-2">
+            {!currentReel&&currentView==='creator'&&<button onClick={()=>{setError(null);setSelectedIdea({title:'',direction:generationMeta.direction,language:generationMeta.language,channel:generationMeta.channel});setCreationSession(n=>n+1);requestAnimationFrame(()=>{const input=document.getElementById('reel-title-input');input?.focus();input?.click();});}} className="min-h-10 px-3 py-2 rounded border border-red-300 bg-white text-red-800 text-sm font-semibold">Open a template</button>}
             <button
               onClick={() => { setError(null); retryAction.current?.(); }}
               className="px-3 py-1.5 rounded bg-red-600 hover:bg-red-700 text-white text-xs font-bold transition-colors"
             >
               Try Again
             </button>
+            </div>
           </div>
         )}
 
@@ -455,7 +461,7 @@ export const App: React.FC = () => {
             onRetry={() => {
               setError(null);
               isGeneratingRef.current = false;
-              handleGenerate(generationMeta.title, generationMeta.direction, generationMeta.language, generationMeta.channel);
+              retryAction.current?.();
             }}
           />
         ) : !currentReel ? (

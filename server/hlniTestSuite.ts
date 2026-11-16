@@ -65,6 +65,6 @@ try {
  const selfApproved=await generateStoryboard({reelTitle:old.reelTitle,apiProvider:'gemini',apiKey:'test-only'});
  assert.equal(isEditoriallyApproved(selfApproved),false,'Provider-generated approval is discarded');
  globalThis.fetch=async()=>new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(old)}]}}]}));
- await assert.rejects(generateStoryboard({reelTitle:old.reelTitle,apiProvider:'gemini',apiKey:'test-only'},{maxRepairs:1}),/output checks/);
+ await assert.rejects(generateStoryboard({reelTitle:old.reelTitle,apiProvider:'gemini',apiKey:'test-only'},{maxRepairs:1}),/AI draft/);
 }finally{globalThis.fetch=original;restorePlanningMocks();}
 console.log('PASS: mandatory HLNI proposal; all five editorial checks; facts/references and scene links; no self-approval; content-bound review invalidation; optional/combined narrative functions; legacy drafts and sharing');
