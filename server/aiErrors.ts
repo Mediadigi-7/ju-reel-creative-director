@@ -1,6 +1,6 @@
-import { AI_FAILURE_MESSAGES, aiFailureMessage, type AiProvider, type AiFailureCategory } from '../shared/providers.js';
+import { AI_FAILURE_MESSAGES, aiFailureMessage,outputValidationMessage,type OutputValidationIssue, type AiProvider, type AiFailureCategory } from '../shared/providers.js';
 export class AiProviderError extends Error {
-  constructor(public category:AiFailureCategory, provider?:AiProvider){super(provider?aiFailureMessage(category,provider):AI_FAILURE_MESSAGES[category]);this.name='AiProviderError';}
+  constructor(public category:AiFailureCategory, provider?:AiProvider,public validationIssue?:OutputValidationIssue){super(category==='output_validation'?outputValidationMessage(validationIssue):provider?aiFailureMessage(category,provider):AI_FAILURE_MESSAGES[category]);this.name='AiProviderError';}
 }
 export async function providerResponseError(response: Response, provider?:AiProvider): Promise<AiProviderError> {
   const data = await response.json().catch(()=>({}));

@@ -16,6 +16,6 @@ export async function testAiGeneration(input:{provider?:unknown;apiKey?:unknown}
     return {...base(),success:true,shotCount:reel.shots.length,message:'Live generation and storyboard checks passed. No offline template was used.'};
   } catch(error) {
     const category = error instanceof AiProviderError ? error.category : 'invalid_response';
-    return {...base(),success:false,category,message:aiFailureMessage(category,provider)};
+    return {...base(),success:false,category,...(error instanceof AiProviderError&&error.validationIssue?{validationIssue:error.validationIssue}:{}),message:error instanceof AiProviderError&&category==='output_validation'?error.message:aiFailureMessage(category,provider)};
   }
 }

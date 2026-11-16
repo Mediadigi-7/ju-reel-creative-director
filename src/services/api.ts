@@ -1,6 +1,6 @@
-import { OFFLINE_UNSUPPORTED, OFFLINE_CHANNEL_UNSUPPORTED } from '../../shared/offline/index.js';
+import { OFFLINE_UNSUPPORTED, OFFLINE_CHANNEL_UNSUPPORTED,generateOfflineStoryboard } from '../../shared/offline/index.js';
 import { GenerateReelRequest, RegenerateShotRequest, ReelStoryboard, Shot } from '../../shared/types.js';
-import { AI_FAILURE_MESSAGES, type AiFailureCategory } from '../../shared/providers.js';
+import { AI_FAILURE_MESSAGES,outputValidationMessage, type AiFailureCategory } from '../../shared/providers.js';
 
 async function post<T>(path: string, body: unknown, signal?:AbortSignal): Promise<T> {
   let res: Response;
@@ -18,6 +18,7 @@ async function post<T>(path: string, body: unknown, signal?:AbortSignal): Promis
   if (json.code === 'OFFLINE_CHANNEL_UNSUPPORTED') throw new Error(OFFLINE_CHANNEL_UNSUPPORTED);
   if (json.code === 'OFFLINE_UNSUPPORTED') throw new Error(OFFLINE_UNSUPPORTED);
   if (json.code === 'AI_REQUIRED') throw new Error('Offline samples are fixed. Edit directly or connect AI to regenerate.');
+  if(json.code==='output_validation')throw new Error(outputValidationMessage(json.validationIssue));
   if(typeof json.code==='string' && Object.prototype.hasOwnProperty.call(AI_FAILURE_MESSAGES,json.code))throw new Error(AI_FAILURE_MESSAGES[json.code as AiFailureCategory]);
   if (!res.ok || !json.success || !json.data) {
     throw new Error('Generation failed. Check provider access, billing or quota, and retry. Your existing reel was preserved.');
@@ -26,10 +27,14 @@ async function post<T>(path: string, body: unknown, signal?:AbortSignal): Promis
 }
 
 export async function apiGenerateReel(req: GenerateReelRequest, signal?:AbortSignal): Promise<ReelStoryboard> {
-  // Without a browser key the server may still have a provider credential.
+  // Templates are available locally, independent of saved keys, server keys and network.
+  if(req.generationMode==='template'){
+    if(signal?.aborted)throw new Error(AI_FAILURE_MESSAGES.cancelled);
+    return generateOfflineStoryboard(req.reelTitle,req.creativeDirection==='Auto'||!req.creativeDirection?'Informative':req.creativeDirection,req.language||'English',req.duration||'28 sec',req.channel);
+  }
   try {
     const reel = await post<ReelStoryboard>('/api/generate', req, signal);
-    if (req.apiKey?.trim() && (!reel.generation || reel.generation.source === 'offline')) {
+    if ((req.generationMode==='ai'||req.apiKey?.trim()) && (!reel.generation || reel.generation.source === 'offline')) {
       throw new Error('Live generation was requested but the server did not confirm an AI source. Check the server deployment and retry.');
     }
     return reel;
@@ -55,7 +60,7 @@ export async function apiTestAiGeneration(provider: import('../../shared/provide
     if (json.provider !== provider || json.model !== PROVIDER_MODELS[provider] || typeof json.checkedAt !== 'string' || !Number.isFinite(json.elapsedMs)) throw new Error('Invalid generation-test response');
     if (res.ok && json.success === true && Number.isInteger(json.shotCount) && json.shotCount > 0) return {...base,success:true,shotCount:json.shotCount,checkedAt:json.checkedAt,elapsedMs:json.elapsedMs,message:'Live generation and storyboard checks passed. No offline template was used.'};
     const category = typeof json.category === 'string' && Object.prototype.hasOwnProperty.call(AI_FAILURE_MESSAGES,json.category) ? json.category as import('../../shared/providers.js').AiFailureCategory : 'invalid_response';
-    return {...base,success:false,category,message:aiFailureMessage(category,provider),checkedAt:json.checkedAt,elapsedMs:json.elapsedMs};
+    return {...base,success:false,category,message:category==='output_validation'?outputValidationMessage(json.validationIssue):aiFailureMessage(category,provider),checkedAt:json.checkedAt,elapsedMs:json.elapsedMs};
   } catch(error) {
     const category = error instanceof SyntaxError ? 'invalid_response' : error instanceof Error && ['AbortError','TimeoutError'].includes(error.name) ? 'timeout' : error instanceof TypeError ? 'network' : 'invalid_response';
     return {...base,success:false,category,message:aiFailureMessage(category,provider)};

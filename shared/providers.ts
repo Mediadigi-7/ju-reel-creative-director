@@ -15,7 +15,7 @@ export const AI_FAILURE_MESSAGES: Record<AiFailureCategory,string> = {
   timeout:'The provider did not finish within the test time limit. Try again.',
   provider_unavailable:'The provider is temporarily unavailable. Try again later.',
   invalid_response:'The provider returned an unexpected response rather than usable generation data.',
-  output_validation:'The provider responded, but its storyboard did not pass the output checks. No template was substituted.',
+  output_validation:'The AI draft could not be completed safely. Try again, or open a ready-made template. Your saved reels are unchanged.',
 };
 export interface AiGenerationTestResult {
   success:boolean;
@@ -26,10 +26,34 @@ export interface AiGenerationTestResult {
   category?:AiFailureCategory;
   message:string;
   shotCount?:number;
+  validationIssue?:OutputValidationIssue;
 }
 
 export function aiFailureMessage(category:AiFailureCategory, provider:AiProvider):string {
   if(provider==='gemini'&&category==='billing_quota') return 'Gemini free-tier quota is unavailable or exhausted. Check AI Studio limits or wait for quota reset. No paid provider was used.';
   if(provider==='gemini'&&category==='model_access') return 'The configured Gemini model is unavailable to this key or project. Check free-tier model availability in AI Studio.';
   return AI_FAILURE_MESSAGES[category];
+}
+
+export const OUTPUT_VALIDATION_MESSAGES={
+ concept:'The AI draft could not form a complete story for this idea. Try a more specific topic, or open a ready-made template.',
+ evidence:'The AI draft included a claim that could not be supported. Try again, or open a ready-made template.',
+ structure:'The AI draft was missing required scenes or production details. Try again, or open a ready-made template.',
+ topic:'The AI draft drifted away from your topic. Try again with a more specific idea, or open a ready-made template.',
+ language:'The AI draft did not follow the selected language. Try again, or open a ready-made template.',
+ timing:'The AI draft had dialogue that did not fit the scene timings. Try again, or open a ready-made template.',
+ insight:'The AI draft did not deliver the planned insight clearly. Try again, or open a ready-made template.',
+} as const;
+export type OutputValidationIssue=keyof typeof OUTPUT_VALIDATION_MESSAGES;
+export function outputValidationMessage(issue:unknown):string {
+ return typeof issue==='string'&&Object.prototype.hasOwnProperty.call(OUTPUT_VALIDATION_MESSAGES,issue)?OUTPUT_VALIDATION_MESSAGES[issue as OutputValidationIssue]:AI_FAILURE_MESSAGES.output_validation;
+}
+export function outputIssueForGate(gate=''):OutputValidationIssue {
+ if(/integrity|credibility/i.test(gate))return 'evidence';
+ if(/pacing|timing/i.test(gate))return 'timing';
+ if(/language/i.test(gate))return 'language';
+ if(/fidelity|topic drift|entity persistence/i.test(gate))return 'topic';
+ if(/insight|HLNI|concept delivery/i.test(gate))return 'insight';
+ if(/production|structure|six.stage|schema|diagnostic/i.test(gate))return 'structure';
+ return 'concept';
 }

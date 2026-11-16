@@ -56,7 +56,7 @@ try {
  assert.deepEqual(result.shots.map(s=>s.dialogue),fixture.shots.map(s=>s.dialogue));
  requests=0;
  globalThis.fetch=async()=>{requests++;return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(requests===1?overlong:{shots:patch.shots.map(s=>({...s,dialogue:'college '.repeat(100)}))})}]}}]}));};
- await assert.rejects(generateStoryboard({reelTitle:fixture.reelTitle,apiKey:'test-only',apiProvider:'gemini'},{maxRepairs:1}),/output checks/);
+ await assert.rejects(generateStoryboard({reelTitle:fixture.reelTitle,apiKey:'test-only',apiProvider:'gemini'},{maxRepairs:1}),/AI draft/);
  assert.equal(requests,2,'Invalid repaired speech must be rejected, never returned as success');
  globalThis.fetch=async()=>new Response(JSON.stringify({candidates:[{content:{parts:[{text:'{}'}]}}]}));
  await assert.rejects(regenerateShot({reelTitle:fixture.reelTitle,creativeAngle:fixture.creativeAngle,

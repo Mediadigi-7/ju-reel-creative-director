@@ -137,7 +137,9 @@ export interface ReelProject {
   versions: ReelStoryboard[];
 }
 
+export type GenerationMode='template'|'ai';
 export interface GenerateReelRequest {
+  generationMode?:GenerationMode;
   channel?: ContentChannel;
   reelTitle: string;
   creativeDirection?: CreativeTreatment;

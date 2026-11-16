@@ -15,6 +15,7 @@ try {
   await assert.rejects(apiRegenerateShot({ ...request, creativeAngle: offline.creativeAngle, targetAudience: offline.targetAudience, shotNumber: 1, shotType: 'HOOK', currentStoryboard: offline }), /Cannot reach/);
   globalThis.fetch = async () => new Response(JSON.stringify({ success: true, data: offline }));
   await assert.rejects(apiGenerateReel(request), /did not confirm an AI source/);
+  await assert.rejects(apiGenerateReel({generationMode:'ai',reelTitle:'What should I study after Commerce?'}),/did not confirm an AI source/,'Explicit AI mode must never accept an offline response, even without a browser key');
   globalThis.fetch = async () => new Response(JSON.stringify({ error: 'failed' }), { status: 500 });
   await assert.rejects(apiGenerateReel(request), /Generation failed/);
   globalThis.fetch = async () => new Response('<html>no API</html>');
