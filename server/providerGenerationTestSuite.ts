@@ -17,11 +17,12 @@ try {
  assert.equal((await testAiGeneration({provider:'openai'})).category,'missing_key');
  assert.equal((await testAiGeneration({provider:'other',apiKey:key})).category,'invalid_request');
  assert.equal(requests,0,'missing key must never use an environment key or offline sample');
- for(const provider of ['openai','gemini'] as const){
+ for(const provider of ['openai','gemini','groq'] as const){
   requests=0;
   globalThis.fetch=async(_url,init)=>{requests++;const body=JSON.parse(init!.body as string);assert.ok(init!.signal);
+   if(provider==='groq'){assert.equal(String(_url),'https://api.groq.com/openai/v1/chat/completions');assert.equal(body.model,PROVIDER_MODELS.groq);assert.equal((init!.headers as Record<string,string>).Authorization,'Bearer '+key);}
    if(provider==='gemini'){assert.equal((init!.headers as Record<string,string>)['x-goog-api-key'],key);assert.ok(!String(_url).includes(key));}
-   assert.equal(provider==='openai'?body.max_tokens:body.generationConfig.maxOutputTokens,2048);return response(provider);};
+   assert.equal(provider==='gemini'?body.generationConfig.maxOutputTokens:provider==='groq'?body.max_completion_tokens:body.max_tokens,2048);return response(provider);};
   const result=await testAiGeneration({provider,apiKey:key});
   assert.equal(result.success,true);assert.equal(result.shotCount,6);assert.equal(result.model,PROVIDER_MODELS[provider]);assert.equal(requests,1);
   assert.ok(!JSON.stringify(result).includes(key));
@@ -39,7 +40,9 @@ try {
   const result=await testAiGeneration({provider:'openai',apiKey:key});
   assert.equal(result.success,false);assert.equal(result.category,category);assert.ok(!JSON.stringify(result).includes(key));
  }
- globalThis.fetch=async()=>new Response(JSON.stringify({error:{status:'RESOURCE_EXHAUSTED',message:'quota exhausted'}}),{status:429});
+ globalThis.fetch=async()=>new Response(JSON.stringify({error:{code:'rate_limit_exceeded',message:'Tokens per minute exceeded. See https://console.groq.com/settings/billing'}}),{status:429});
+ const groqLimit=await testAiGeneration({provider:'groq',apiKey:key});assert.equal(groqLimit.category,'rate_limit');assert.ok(groqLimit.message.includes('Wait for the limit'));
+ globalThis.fetch=async()=>new Response(JSON.stringify({error:{code:'resource_exhausted',message:'quota'}}),{status:429});
  const freeQuota=await testAiGeneration({provider:'gemini',apiKey:key});assert.equal(freeQuota.category,'billing_quota');assert.ok(freeQuota.message.includes('No paid provider'));assert.ok(!freeQuota.message.includes('credits'));
  globalThis.fetch=async()=>{throw new TypeError(key);};assert.equal((await testAiGeneration({provider:'openai',apiKey:key})).category,'network');
  globalThis.fetch=async()=>{throw Object.assign(new Error(key),{name:'TimeoutError'});};assert.equal((await testAiGeneration({provider:'openai',apiKey:key})).category,'timeout');

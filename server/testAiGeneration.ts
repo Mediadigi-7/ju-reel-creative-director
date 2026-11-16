@@ -3,9 +3,9 @@ import { AiProviderError } from './aiErrors.js';
 import { AI_FAILURE_MESSAGES, aiFailureMessage, PROVIDER_MODELS, type AiProvider, type AiGenerationTestResult } from '../shared/providers.js';
 export async function testAiGeneration(input:{provider?:unknown;apiKey?:unknown}, options:{signal?:AbortSignal}={}):Promise<AiGenerationTestResult> {
   const start=Date.now();
-  const provider:AiProvider = input.provider==='gemini'?'gemini':'openai';
+  const provider:AiProvider = input.provider==='groq'?'groq':input.provider==='gemini'?'gemini':'openai';
   const base = () => ({ provider,model:PROVIDER_MODELS[provider],checkedAt:new Date().toISOString(),elapsedMs:Date.now()-start });
-  if(input.provider!=='openai'&&input.provider!=='gemini')return {...base(),success:false,category:'invalid_request',message:AI_FAILURE_MESSAGES.invalid_request};
+  if(input.provider!=='openai'&&input.provider!=='gemini'&&input.provider!=='groq')return {...base(),success:false,category:'invalid_request',message:AI_FAILURE_MESSAGES.invalid_request};
   if(typeof input.apiKey!=='string'||!input.apiKey.trim())return {...base(),success:false,category:'missing_key',message:AI_FAILURE_MESSAGES.missing_key};
   try {
     const reel=await generateStoryboard({

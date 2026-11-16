@@ -1,6 +1,6 @@
-export type AiProvider = 'openai' | 'gemini';
+export type AiProvider = 'openai' | 'gemini' | 'groq';
 // Stable Flash-Lite selected from the authenticated model list and verified with a successful low-latency generation request. Free-tier quota remains account-specific.
-export const PROVIDER_MODELS: Record<AiProvider,string> = { openai:'gpt-4o-mini', gemini:'gemini-3.1-flash-lite' };
+export const PROVIDER_MODELS: Record<AiProvider,string> = { openai:'gpt-4o-mini', gemini:'gemini-3.1-flash-lite', groq:'openai/gpt-oss-120b' };
 export type AiFailureCategory = 'cancelled' | 'missing_key' | 'invalid_request' | 'authentication' | 'billing_quota' | 'rate_limit' | 'model_access' | 'permission' | 'network' | 'timeout' | 'provider_unavailable' | 'invalid_response' | 'output_validation';
 export const AI_FAILURE_MESSAGES: Record<AiFailureCategory,string> = {
   cancelled:'Generation was cancelled. Your existing reel was preserved.',
@@ -30,6 +30,7 @@ export interface AiGenerationTestResult {
 }
 
 export function aiFailureMessage(category:AiFailureCategory, provider:AiProvider):string {
+  if(provider==='groq'&&(category==='rate_limit'||category==='billing_quota'))return 'Groq reports a free-tier rate or quota limit. Wait for the limit to reset and try again. Check Groq Console limits; no other provider was used.';
   if(provider==='gemini'&&category==='billing_quota') return 'Gemini free-tier quota is unavailable or exhausted. Check AI Studio limits or wait for quota reset. No paid provider was used.';
   if(provider==='gemini'&&category==='model_access') return 'The configured Gemini model is unavailable to this key or project. Check free-tier model availability in AI Studio.';
   return AI_FAILURE_MESSAGES[category];
@@ -56,4 +57,9 @@ export function outputIssueForGate(gate=''):OutputValidationIssue {
  if(/insight|HLNI|concept delivery/i.test(gate))return 'insight';
  if(/production|structure|six.stage|schema|diagnostic/i.test(gate))return 'structure';
  return 'concept';
+}
+
+export const PROVIDER_NAMES: Record<AiProvider,string> = {gemini:'Google Gemini',openai:'OpenAI',groq:'Groq'};
+export function inferProvider(key:string):AiProvider {
+ return key.startsWith('gsk_')?'groq':key.startsWith('AIza')||key.startsWith('AQ.')?'gemini':'openai';
 }

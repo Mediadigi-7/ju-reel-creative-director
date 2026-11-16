@@ -7,9 +7,9 @@ const STORAGE_KEY_API_SETTINGS = 'joy_reel_api_settings';
 
 export interface ApiSettings {
   apiKey?: string;
-  apiProvider?: 'gemini' | 'openai';
+  apiProvider?: 'gemini' | 'openai' | 'groq';
   isVerified?: boolean;
-  lastTestedProvider?: 'gemini' | 'openai';
+  lastTestedProvider?: 'gemini' | 'openai' | 'groq';
 }
 
 // Autosave current storyboard

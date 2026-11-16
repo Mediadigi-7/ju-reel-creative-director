@@ -1,5 +1,5 @@
 import { apiTestAiGeneration } from '../services/api.js';
-import type { AiGenerationTestResult } from '../../shared/providers.js';
+import { PROVIDER_NAMES,inferProvider,type AiProvider,type AiGenerationTestResult } from '../../shared/providers.js';
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Key, ShieldCheck, Check, ExternalLink, HelpCircle, Info, Loader2, AlertCircle, ArrowRight } from 'lucide-react';
 import { ApiSettings, saveApiSettings } from '../services/storage.js';
@@ -18,7 +18,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   onSaveSettings,
 }) => {
   const [apiKey, setApiKey] = useState(settings.apiKey || '');
-  const [provider, setProvider] = useState<'gemini' | 'openai'>(settings.apiProvider || 'gemini');
+  const [provider, setProvider] = useState<AiProvider>(settings.apiProvider || 'gemini');
   const [savedSuccess, setSavedSuccess] = useState(false);
   const [testingGeneration, setTestingGeneration] = useState(false);
   const [generationResult, setGenerationResult] = useState<AiGenerationTestResult | null>(null);
@@ -88,8 +88,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const trimmedKey = apiKey.trim();
   const isGeminiFormat = trimmedKey.startsWith('AIza') || trimmedKey.startsWith('AQ.');
   const isOpenAiFormat = trimmedKey.startsWith('sk-');
-  const isMismatchGeminiOnOpenAi = provider === 'openai' && isGeminiFormat;
-  const isMismatchOpenAiOnGemini = provider === 'gemini' && isOpenAiFormat;
+  const keyMismatch=Boolean(trimmedKey&&(isGeminiFormat||isOpenAiFormat||trimmedKey.startsWith('gsk_'))&&inferProvider(trimmedKey)!==provider);
 
   const handleTestKey = async () => {
     const key = apiKey.trim();
@@ -111,31 +110,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
           ? {status:'success',message:'Key verified. Test AI generation to check the model and free-tier quota.'}
           : {status:'error',message:`Gemini key verification failed (HTTP ${res.status}). Check your AI Studio key and account access.`});
       } else {
-        // OpenAI testing
-        const endpoint = 'https://api.openai.com/v1/models';
-        const res = await fetch(endpoint, {
-          method: 'GET',
-          signal: AbortSignal.timeout(20000),
-          headers: { Authorization: `Bearer ${key}` },
-        });
-
-        if (res.ok) {
-          setIsVerified(true);
-          setTestResult({ status: 'success', message: 'Key verified. Create a reel to check generation access.' });
-        } else {
-          setIsVerified(false);
-          const errData = await res.json().catch(() => ({}));
-          const rawMsg = errData.error?.message || `OpenAI API returned status ${res.status}`;
-          let displayMsg = `OpenAI Error: ${rawMsg}`;
-          if (res.status === 401 && (key.startsWith('AQ.') || key.startsWith('AIza'))) {
-            displayMsg = `OpenAI Error: Key mismatch. This is a Google Gemini key (starts with "${key.slice(0, 3)}..."). OpenAI keys start with "sk-". Click "Switch to Google Gemini" above.`;
-          } else if (res.status === 401) {
-            displayMsg = `OpenAI Error: Incorrect API key. OpenAI keys start with "sk-" and require active billing credits on platform.openai.com.`;
-          } else if (res.status === 429) {
-            displayMsg = `OpenAI Error: Insufficient quota or rate limited. Please ensure your OpenAI account has paid credits.`;
-          }
-          setTestResult({ status: 'error', message: displayMsg });
-        }
+        const endpoint = provider==='groq'?'https://api.groq.com/openai/v1/models':'https://api.openai.com/v1/models';
+        const res = await fetch(endpoint, {signal:AbortSignal.timeout(20000),headers:{Authorization:`Bearer ${key}`}});
+        setIsVerified(res.ok);
+        setTestResult(res.ok?{status:'success',message:'Key verified. Test AI generation to check storyboard access.'}:{status:'error',message:`${PROVIDER_NAMES[provider]} key verification failed (HTTP ${res.status}). Check the selected provider, key and account limits.`});
       }
     } catch (err: any) {
       setIsVerified(false);
@@ -147,6 +125,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
   const handleSave = (e: React.FormEvent) => {
     e.preventDefault();
+    if(keyMismatch)return;
     const cleanKey = apiKey.trim();
     const updated: ApiSettings = {
       apiKey: cleanKey,
@@ -193,71 +172,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1.5">
                 Select AI Provider
               </label>
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  aria-pressed={provider==='gemini'}
-                  onClick={() => {
-                    setProvider('gemini');
-                    setTestResult(null);
-                    if (settings.apiProvider !== 'gemini' || settings.apiKey !== apiKey) {
-                      setIsVerified(false);
-                    }
-                  }}
-                  className={`px-3.5 py-2.5 rounded-lg text-xs font-bold border transition-all text-left flex items-center justify-between ${
-                    provider === 'gemini'
-                      ? isVerified
-                        ? 'border-emerald-600 bg-emerald-50/80 text-emerald-800 ring-2 ring-emerald-500/60 shadow-xs'
-                        : 'border-stone-400 bg-stone-100 text-stone-900 ring-1 ring-stone-400'
-                      : 'border-stone-200 text-stone-700 hover:bg-stone-50'
-                  }`}
-                >
-                  <span className="flex items-center gap-1.5">
-                    {provider === 'gemini' && isVerified && (
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    )}
-                    <span>Google Gemini (free tier)</span>
-                  </span>
-                  {provider === 'gemini' && (
-                    <Check
-                      className={`w-3.5 h-3.5 ${
-                        isVerified ? 'text-emerald-600' : 'text-stone-700'
-                      }`}
-                    />
-                  )}
-                </button>
-                <button
-                  type="button"
-                  aria-pressed={provider==='openai'}
-                  onClick={() => {
-                    setProvider('openai');
-                    setTestResult(null);
-                    if (settings.apiProvider !== 'openai' || settings.apiKey !== apiKey) {
-                      setIsVerified(false);
-                    }
-                  }}
-                  className={`px-3.5 py-2.5 rounded-lg text-xs font-bold border transition-all text-left flex items-center justify-between ${
-                    provider === 'openai'
-                      ? isVerified
-                        ? 'border-emerald-600 bg-emerald-50/80 text-emerald-800 ring-2 ring-emerald-500/60 shadow-xs'
-                        : 'border-stone-400 bg-stone-100 text-stone-900 ring-1 ring-stone-400'
-                      : 'border-stone-200 text-stone-700 hover:bg-stone-50'
-                  }`}
-                >
-                  <span className="flex items-center gap-1.5">
-                    {provider === 'openai' && isVerified && (
-                      <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    )}
-                    <span>OpenAI (API credits)</span>
-                  </span>
-                  {provider === 'openai' && (
-                    <Check
-                      className={`w-3.5 h-3.5 ${
-                        isVerified ? 'text-emerald-600' : 'text-stone-700'
-                      }`}
-                    />
-                  )}
-                </button>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                {(['gemini','groq','openai'] as const).map(name=><button key={name} type="button" aria-pressed={provider===name} onClick={()=>{setProvider(name);setTestResult(null);setGenerationResult(null);setIsVerified(false);}} className={`min-h-11 px-3 py-2.5 rounded-lg text-xs font-bold border text-left flex items-center justify-between gap-2 ${provider===name?'border-emerald-600 bg-emerald-50 text-emerald-800':'border-stone-300 text-stone-700 hover:bg-stone-50'}`}><span>{PROVIDER_NAMES[name]} {name==='openai'?'(API credits)':'(free tier)'}</span>{provider===name&&<Check aria-hidden="true" className="w-4 h-4 shrink-0"/>}</button>)}
               </div>
             </div>
 
@@ -267,12 +183,12 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 htmlFor="api-key-input"
                 className="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1.5"
               >
-                {provider === 'gemini' ? 'Google Gemini API Key' : 'OpenAI API Key'}
+                {PROVIDER_NAMES[provider]} API Key
               </label>
               <input
                 id="api-key-input"
                 aria-describedby="api-key-help"
-                aria-invalid={Boolean(testResult?.status==='error'||isMismatchGeminiOnOpenAi||isMismatchOpenAiOnGemini)}
+                aria-invalid={Boolean(testResult?.status==='error'||keyMismatch)}
                 type="password"
                 value={apiKey}
                 onChange={(e) => {
@@ -283,74 +199,26 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 placeholder={
                   provider === 'gemini'
                     ? 'AIzaSy... or AQ... (Paste your key from Google AI Studio)'
-                    : 'sk-... (Paste your OpenAI API key)'
+                    : provider==='groq'?'gsk_... (Paste your Groq API key)':'sk-... (Paste your OpenAI API key)'
                 }
                 className={`w-full px-3.5 py-2.5 text-xs rounded-lg border font-mono text-stone-900 focus:outline-none bg-white font-medium transition-all ${
                   isVerified
                     ? 'border-emerald-500 ring-2 ring-emerald-500/30 bg-emerald-50/10'
-                    : isMismatchGeminiOnOpenAi || isMismatchOpenAiOnGemini
+                    : keyMismatch
                     ? 'border-amber-500 ring-2 ring-amber-500/30 bg-amber-50/10'
                     : 'border-stone-300 focus:ring-1 focus:ring-[#AF1E2A]'
                 }`}
               />
 
               {/* Mismatch Warning Callouts */}
-              {isMismatchGeminiOnOpenAi && (
-                <div className="mt-2.5 p-3 rounded-xl bg-amber-50 border border-amber-300 text-amber-950 text-xs flex flex-col gap-2">
-                  <div className="flex items-start gap-2">
-                    <AlertCircle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                    <div className="space-y-0.5">
-                      <p className="font-bold text-amber-900">Google Gemini Key Detected for OpenAI!</p>
-                      <p className="text-amber-800 text-[11px] leading-relaxed">
-                        Your key starts with <code className="bg-amber-100 px-1 py-0.5 rounded font-mono font-bold">{trimmedKey.slice(0, 3)}...</code>, which is a <strong>Google Gemini</strong> key. OpenAI requires keys starting with <code className="bg-amber-100 px-1 py-0.5 rounded font-mono font-bold">sk-</code>.
-                      </p>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setProvider('gemini');
-                      setTestResult(null);
-                    }}
-                    className="self-start ml-6 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs shadow-xs transition-colors cursor-pointer"
-                  >
-                    <span>Switch to Google Gemini</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              )}
-
-              {isMismatchOpenAiOnGemini && (
-                <div className="mt-2.5 p-3 rounded-xl bg-blue-50 border border-blue-300 text-blue-950 text-xs flex flex-col gap-2">
-                  <div className="flex items-start gap-2">
-                    <AlertCircle className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
-                    <div className="space-y-0.5">
-                      <p className="font-bold text-blue-900">OpenAI Key Detected for Gemini!</p>
-                      <p className="text-blue-800 text-[11px] leading-relaxed">
-                        Your key starts with <code className="bg-blue-100 px-1 py-0.5 rounded font-mono font-bold">sk-</code>, which is an <strong>OpenAI</strong> API key. Google Gemini keys start with <code className="bg-blue-100 px-1 py-0.5 rounded font-mono font-bold">AIza...</code> or <code className="bg-blue-100 px-1 py-0.5 rounded font-mono font-bold">AQ...</code>.
-                      </p>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setProvider('openai');
-                      setTestResult(null);
-                    }}
-                    className="self-start ml-6 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-xs transition-colors cursor-pointer"
-                  >
-                    <span>Switch to OpenAI</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              )}
+              {keyMismatch&&<div role="alert" className="mt-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-950">This key belongs to {PROVIDER_NAMES[inferProvider(trimmedKey)]}. Select that provider before testing or saving.</div>}
 
               {/* Test Button & Status */}
               <div className="flex items-center gap-2 mt-2">
                 <button
                   type="button"
                   onClick={handleTestKey}
-                  disabled={testingKey || !apiKey.trim()}
+                  disabled={testingKey || !apiKey.trim() || keyMismatch}
                   className="px-3 py-1.5 rounded-lg border border-stone-300 hover:border-stone-400 bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-semibold flex items-center gap-1.5 transition-colors disabled:opacity-50 cursor-pointer"
                 >
                   {testingKey ? (
@@ -365,7 +233,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     </>
                   )}
                 </button>
-                <button type="button" onClick={handleTestGeneration} disabled={testingGeneration || testingKey || !apiKey.trim() || isMismatchGeminiOnOpenAi || isMismatchOpenAiOnGemini} className="px-3 py-1.5 rounded-lg border border-stone-300 text-xs font-semibold text-stone-800 bg-white hover:bg-stone-50 disabled:opacity-50">
+                <button type="button" onClick={handleTestGeneration} disabled={testingGeneration || testingKey || !apiKey.trim() || keyMismatch} className="px-3 py-1.5 rounded-lg border border-stone-300 text-xs font-semibold text-stone-800 bg-white hover:bg-stone-50 disabled:opacity-50">
                   {testingGeneration ? 'Testing generation…' : 'Test AI generation'}
                 </button>
                 {apiKey && (
@@ -383,11 +251,11 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 )}
               </div>
 
-              <p id="api-key-help" className="text-xs text-stone-600 mt-2">Verify key checks your connection. Test AI generation also checks whether your provider can create a storyboard. {provider === 'gemini' ? 'For free-only use, choose an AI Studio project with billing disabled. Requests use its free quota; availability and limits depend on your account and region.' : 'OpenAI requires API credits. Choose Gemini for the free-tier workflow.'}</p>
+              <p id="api-key-help" className="text-xs text-stone-600 mt-2">Verify key checks your connection. Test AI generation also checks whether your provider can create a storyboard. {provider === 'gemini' ? 'For free-only use, choose an AI Studio project with billing disabled. Requests use its free quota; availability and limits depend on your account and region.' : provider==='groq'?'Groq offers free-tier limits. Keep your account on the free plan; requests may be rate limited. No other provider is used automatically.':'OpenAI requires API credits. Choose Gemini or Groq for a free-tier workflow.'}</p>
               {generationResult && <div role="status" className={`mt-3 p-3 rounded-lg border text-xs ${generationResult.success ? 'bg-emerald-50 border-emerald-200 text-emerald-900' : 'bg-red-50 border-red-200 text-red-900'}`}>
                 <p className="font-semibold">{generationResult.success ? 'Live generation passed' : 'Live generation failed'}</p>
                 <p className="mt-1">{generationResult.message}</p>
-                <p className="mt-2">{generationResult.provider === 'openai' ? 'OpenAI' : 'Google Gemini'} · {generationResult.model}</p>
+                <p className="mt-2">{PROVIDER_NAMES[generationResult.provider]} · {generationResult.model}</p>
                 <p>{new Date(generationResult.checkedAt).toLocaleString()} · {(generationResult.elapsedMs / 1000).toFixed(1)}s</p>
                 <p className="mt-1">This tests access and output checks. Review generated content separately for creative quality.</p>
               </div>}
@@ -422,7 +290,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <span>Need an API key? Setup guide</span>
             </summary>
 
-            {provider === 'gemini' ? (
+            {provider === 'groq' ? <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 text-sm space-y-2"><p>Create a key in Groq Console, select Groq above, verify the key, then test AI generation. Free-tier availability depends on account limits.</p><a href="https://console.groq.com/keys" target="_blank" rel="noopener noreferrer" className="underline">Get a Groq key</a></div> : provider === 'gemini' ? (
               <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 text-xs space-y-2.5">
                 <div className="flex items-center justify-between font-bold text-stone-900">
                   <span className="text-[#AF1E2A]">Google Gemini setup</span>

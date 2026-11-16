@@ -90,7 +90,7 @@ export interface FrameworkMetadata {
 }
 
 export interface GenerationSource {
-  source: 'openai' | 'gemini' | 'offline';
+  source: 'openai' | 'gemini' | 'groq' | 'offline';
   warnings?:string[];
   templateId?: string;
   catalogueVersion?: string;
@@ -147,7 +147,7 @@ export interface GenerateReelRequest {
   duration?: string;
   toneShift?: string;
   apiKey?: string;
-  apiProvider?: 'gemini' | 'openai';
+  apiProvider?: 'gemini' | 'openai' | 'groq';
 }
 
 export interface RegenerateShotRequest {
@@ -159,7 +159,7 @@ export interface RegenerateShotRequest {
   currentStoryboard: ReelStoryboard;
   instruction?: string;
   apiKey?: string;
-  apiProvider?: 'gemini' | 'openai';
+  apiProvider?: 'gemini' | 'openai' | 'groq';
 }
 
 // ─── QUALITY TEST ENGINE & EVIDENCE AUDIT TYPES ───

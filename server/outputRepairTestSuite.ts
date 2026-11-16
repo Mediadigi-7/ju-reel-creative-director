@@ -73,6 +73,13 @@ try {
  globalThis.fetch=async()=>{requests++;return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(requests===1?overlong:{shots:patch.shots.map(s=>({...s,dialogue:'college '.repeat(100)}))})}]}}]}));};
  await assert.rejects(generateStoryboard({reelTitle:fixture.reelTitle,apiKey:'test-only',apiProvider:'gemini'},{maxRepairs:1}),/AI draft/);
  assert.equal(requests,2,'Invalid repaired speech must be rejected, never returned as success');
+ globalThis.fetch=async(url,init)=>{
+  assert.equal(String(url),'https://api.groq.com/openai/v1/chat/completions');
+  const body=JSON.parse(String(init?.body));assert.equal(body.model,'openai/gpt-oss-120b');
+  const shot=fixture.shots[0];return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({visual:shot.visual,dialogue:shot.dialogue,onscreenText:shot.onscreenText,cameraPerformance:shot.cameraPerformance})}}]}));
+ };
+ const groqShot=await regenerateShot({reelTitle:fixture.reelTitle,creativeAngle:fixture.creativeAngle,targetAudience:fixture.targetAudience,currentStoryboard:fixture,shotNumber:1,shotType:fixture.shots[0].type,apiKey:'gsk_test-only',apiProvider:'groq'});
+ assert.equal(groqShot.dialogue,fixture.shots[0].dialogue,'Groq scene edits preserve the same validation contract');
  globalThis.fetch=async()=>new Response(JSON.stringify({candidates:[{content:{parts:[{text:'{}'}]}}]}));
  await assert.rejects(regenerateShot({reelTitle:fixture.reelTitle,creativeAngle:fixture.creativeAngle,
   targetAudience:fixture.targetAudience,currentStoryboard:fixture,shotNumber:1,shotType:'HOOK',apiKey:'test-only',apiProvider:'gemini'}),/existing shot was preserved/);
