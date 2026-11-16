@@ -1,0 +1,174 @@
+{
+  "hlni": [
+    {
+      "insight": "A task label alone does not define the assessment; grading criteria determine the actual learning focus.",
+      "audienceGap": "Students assume degree titles imply a universal learning experience.",
+      "viewerChange": "Learns to ask for specific grading criteria to distinguish between academic paths.",
+      "supportType": "method",
+      "support": "The method separates task definition from evaluation criteria, allowing for objective comparison.",
+      "references": [],
+      "shotNumbers": [
+        2,
+        3
+      ],
+      "payoffShotNumbers": [
+        3
+      ],
+      "payoff": "The viewer gains a concrete, repeatable method to probe course content without relying on stereotypes."
+    }
+  ],
+  "id": "reel_1794221209301_ruwzd75m",
+  "reelTitle": "B.Com vs BBA: The Assessment Audit",
+  "creativeAngle": "The Assessment Audit",
+  "objective": "Teach students to audit assessment criteria for informed academic decisions.",
+  "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "SCENE",
+      "functions": [
+        "HOOK",
+        "PROBLEM"
+      ],
+      "name": "Hook and Setup",
+      "timestamp": "00:00 – 00:08",
+      "visual": "A student looks at two identical project prompts on a tablet.",
+      "dialogue": "Choosing between B.Com and BBA? Don't just read the titles. Look at the tasks.",
+      "onscreenText": "Task: Create a marketing strategy.",
+      "cameraPerformance": "Close-up on tablet screen.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "SCENE",
+      "functions": [
+        "PATTERN_INTERRUPT",
+        "VALUE"
+      ],
+      "name": "The Pattern Interrupt",
+      "timestamp": "00:08 – 00:18",
+      "visual": "Split screen showing two different grading rubrics for the same task.",
+      "dialogue": "Criteria: Graded on (A) Creativity or (B) ROI calculation? The 'how' changes the focus entirely.",
+      "onscreenText": "Criteria: (A) Creativity vs (B) ROI",
+      "cameraPerformance": "Graphic overlay appears on screen.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "SCENE",
+      "functions": [
+        "VALUE",
+        "PAYOFF"
+      ],
+      "name": "Value and Payoff",
+      "timestamp": "00:18 – 00:28",
+      "visual": "Student holds a pen, circling an empty space on a worksheet.",
+      "dialogue": "To decide, ask: What are the specific grading criteria for this assignment? That question reveals the true academic path.",
+      "onscreenText": "What are the specific grading criteria for this assignment?",
+      "cameraPerformance": "Macro shot of writing on paper.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, academic, minimalist.",
+    "performance": "Direct, calm, and objective.",
+    "camera": "Stable, tripod-mounted shots.",
+    "editing": "Rhythmic cuts synchronized with text appearance.",
+    "sound": "Natural room tone.",
+    "props": [
+      "Tablet",
+      "Paper worksheet",
+      "Pen"
+    ],
+    "locations": [
+      "Library study table"
+    ],
+    "casting": "Student in casual, professional attire.",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Shifting the comparison from degree titles to the actual assessment criteria used in coursework.",
+    "shootingPriority": [
+      "Tablet screen close-up",
+      "Rubric comparison graphic",
+      "Question worksheet"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-09T10:46:49.301Z",
+  "updatedAt": "2026-11-09T10:46:49.301Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Trust",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "id": "trust_audit",
+      "title": "The Assessment Audit",
+      "audienceGap": "Students assume a subject title (e.g., 'Business Law') implies a fixed, universal learning experience for both degrees.",
+      "basisId": "assessment_questions",
+      "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+      "viewerChange": "Learns to look past labels to identify how a task is actually graded.",
+      "concept": "A student compares two identical-sounding project prompts and learns to audit the assessment criteria.",
+      "mechanismKey": "audit_worksheet",
+      "device": "Split-screen comparison of two project prompts showing how different grading criteria change the focus of the task.",
+      "supportType": "method",
+      "support": "The method separates three different pieces of information; it does not assume particular course content.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Write the expected work product.",
+        "Ask what criterion is used to assess it.",
+        "Ask what feedback is available; mark unknown answers as questions."
+      ],
+      "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+      "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+      "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+      "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+      "demonstration": {
+        "input": "Two project prompts for a common business topic with different assessment rubrics.",
+        "visibleInput": "Task: Create a marketing strategy. Criteria: Graded on (A) Creativity or (B) ROI calculation?",
+        "observation": "Viewer identifies that the 'How' (criteria) is missing from the task prompt.",
+        "nextQuestion": "What are the specific grading criteria for this assignment?"
+      },
+      "treatment": "Informative"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_audit",
+        "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+        "mechanismKey": "audit_worksheet",
+        "device": "Split-screen comparison of two project prompts showing how different grading criteria change the focus of the task."
+      },
+      {
+        "channel": "Connection",
+        "id": "conn_journal",
+        "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+        "mechanismKey": "task_journaling",
+        "device": "A handwritten log where a student tracks a moment of confusion and turns it into a targeted question."
+      },
+      {
+        "channel": "Discovery",
+        "id": "disc_missing",
+        "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+        "mechanismKey": "missing_data_reveal",
+        "device": "A riddle-style presentation showing one element and asking the viewer to 'guess' the degree, followed by the reveal that it's impossible."
+      }
+    ],
+    "contrast": "Trust uses a structural audit of criteria to build verification habits; Connection uses a personal journal to manage anxiety via specific questioning; Discovery uses a logical reveal to expose the fallacy of jumping to conclusions based on partial data."
+  },
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-09T10:46:49.302Z"
+  }
+}

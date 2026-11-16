@@ -1,14 +1,18 @@
+import { editorialLabel } from '../../shared/hlni.js';
+import { findCtaShot } from '../../shared/creativeFramework.js';
 import { ReelStoryboard, Shot } from '../../shared/types.js';
 
 export function formatStoryboardForWhatsApp(reel: ReelStoryboard): string {
   let text = `🎬 *JOY UNIVERSITY REEL STORYBOARD*\n`;
   text += `📌 *Title:* ${reel.reelTitle}\n`;
   text += `🎯 *Angle:* ${reel.creativeAngle}\n`;
+  text += `Channel: ${reel.channel || 'Not set'}\n`;
   text += `⏱️ *Duration:* ${reel.duration} | 👥 *Audience:* ${reel.targetAudience}\n\n`;
   text += `────────────────────\n`;
-  text += `*6-SHOT BREAKDOWN*\n`;
+  text += `*${reel.shots.length}-SHOT BREAKDOWN*\n`;
   text += `────────────────────\n\n`;
 
+  text += `Editorial status: ${editorialLabel(reel)}\n\n`;
   reel.shots.forEach((shot) => {
     text += `*Shot ${shot.number}: ${shot.name.toUpperCase()}* (${shot.timestamp})\n`;
     text += `👁️ *Visual:* ${shot.visual}\n`;
@@ -23,7 +27,8 @@ export function formatStoryboardForWhatsApp(reel: ReelStoryboard): string {
   text += `• *Locations:* ${reel.productionNotes.locations.join(', ')}\n`;
   text += `• *Props:* ${reel.productionNotes.props.join(', ')}\n`;
   text += `• *Complexity:* ${reel.productionNotes.complexity}\n`;
-  text += `• *CTA:* ${reel.shots[5]?.onscreenText || reel.shots[5]?.dialogue}\n`;
+  const cta = findCtaShot(reel);
+  if (cta) text += `• *Next action:* ${cta.onscreenText || cta.dialogue}\n`;
 
   return text;
 }
@@ -32,6 +37,7 @@ export function formatProductionBriefing(reel: ReelStoryboard): string {
   let text = `====================================================\n`;
   text += `JOY UNIVERSITY — PRODUCTION CALL SHEET & STORYBOARD\n`;
   text += `====================================================\n\n`;
+  text += `CHANNEL GOAL:    ${reel.channel || 'Not set'}\n`;
   text += `PROJECT TITLE:   ${reel.reelTitle}\n`;
   text += `CREATIVE ANGLE:  ${reel.creativeAngle}\n`;
   text += `OBJECTIVE:       ${reel.objective}\n`;
@@ -41,11 +47,12 @@ export function formatProductionBriefing(reel: ReelStoryboard): string {
   text += `DATE:            ${new Date(reel.updatedAt).toLocaleDateString()}\n\n`;
 
   text += `----------------------------------------------------\n`;
-  text += `SHOT LIST (6 SEQUENTIAL SHOTS)\n`;
+  text += `SHOT LIST (${reel.shots.length} PRODUCTION SHOTS)\n`;
   text += `----------------------------------------------------\n\n`;
 
+  text += `Editorial status: ${editorialLabel(reel)}\n\n`;
   reel.shots.forEach((shot) => {
-    text += `[SHOT 0${shot.number} - ${shot.name.toUpperCase()}]  TIME: ${shot.timestamp}\n`;
+    text += `[SHOT ${String(shot.number).padStart(2,'0')} - ${shot.name.toUpperCase()}]  TIME: ${shot.timestamp}\n`;
     text += `VISUAL:              ${shot.visual}\n`;
     text += `DIALOGUE / VO:       ${shot.dialogue}\n`;
     text += `ON-SCREEN TEXT:      ${shot.onscreenText}\n`;
@@ -76,7 +83,7 @@ export function formatProductionBriefing(reel: ReelStoryboard): string {
 }
 
 export function formatSingleShot(shot: Shot, reelTitle: string): string {
-  let text = `🎬 [${reelTitle}] Shot 0${shot.number} - ${shot.name} (${shot.timestamp})\n\n`;
+  let text = `🎬 [${reelTitle}] Shot ${String(shot.number).padStart(2,'0')} - ${shot.name} (${shot.timestamp})\n\n`;
   text += `Visual: ${shot.visual}\n`;
   text += `Dialogue: ${shot.dialogue}\n`;
   text += `On-Screen Text: ${shot.onscreenText}\n`;

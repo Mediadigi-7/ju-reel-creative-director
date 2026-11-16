@@ -1,0 +1,154 @@
+# Connection — B.Com or BBA? The Sticking Point Journal
+
+Fresh real Gemini output. Generated: 2026-11-09T11:02:49.725Z. Model: gemini-3.1-flash-lite. Requested treatment: Auto; chosen treatment: Informative. Target duration: 28 sec. Status: Draft; editorial evaluation pending.
+
+**Creative angle:** Using a personal reflection journal to clarify confusion
+
+**Objective:** Help students move from vague anxiety to a specific, actionable question.
+
+**Audience:** +2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging
+
+## Shot 01 — Stuck in the choice
+
+- **Timecode:** 00:00 - 00:07
+- **Narrative-function tags (AI-supplied):** PROBLEM
+- **Visual action:** Two students looking at brochures, looking confused at the table.
+- **Dialogue / voiceover:** Choosing between B.Com and BBA feels impossible. You don't need a guess, you need clarity.
+- **Camera direction:** Close-up on concerned faces, handheld movement.
+- **On-screen graphic:** B.Com vs BBA?
+
+## Shot 02 — The logbook method
+
+- **Timecode:** 00:07 - 00:18
+- **Narrative-function tags (AI-supplied):** VALUE
+- **Visual action:** A hand writes in a journal with two columns: Task and Help Needed.
+- **Dialogue / voiceover:** Try a Sticking Point log. Record a task and where you actually get stuck. Example: Task: Analyze annual report. Help needed: Financial formulas.
+- **Camera direction:** Top-down view of the journal.
+- **On-screen graphic:** Example: Task: Analyze annual report. Help needed: Financial formulas.
+
+## Shot 03 — Reframing the question
+
+- **Timecode:** 00:18 - 00:28
+- **Narrative-function tags (AI-supplied):** PAYOFF
+- **Visual action:** Student smiles, pointing at the written question.
+- **Dialogue / voiceover:** Now you have a real path. Ask: Where can I find support for advanced financial formula application?
+- **Camera direction:** Medium shot, encouraging tone.
+- **On-screen graphic:** Where can I find support for advanced financial formula application?
+
+## Selected concept — planned before shots
+
+```json
+{
+  "stage": "concept-before-story",
+  "selected": {
+    "id": "conn_01",
+    "title": "The Sticking Point Journal",
+    "audienceGap": "Students feel overwhelmed by the choice and don't know where to start investigating.",
+    "basisId": "task_question_journal",
+    "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+    "viewerChange": "Encourages students to journal their confusion to form precise questions for advisors.",
+    "concept": "A student sits with a friend, both looking at different course brochures and noting where they feel stuck.",
+    "mechanismKey": "personal_reflection_journaling",
+    "device": "Direct-to-camera conversation followed by a quick close-up of a 'Sticking Point' logbook.",
+    "supportType": "method",
+    "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+    "evidenceNeeded": [],
+    "methodSteps": [
+      "Try or inspect a clearly illustrative task.",
+      "Record one point where you needed help and one question you want to investigate.",
+      "Turn the observation into a question for a real course brief or course team."
+    ],
+    "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+    "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+    "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+    "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+    "demonstration": {
+      "input": "A logbook showing one column for 'Task' and one for 'Help Needed'.",
+      "visibleInput": "Example: Task: Analyze annual report. Help needed: Financial formulas.",
+      "observation": "The student realizes they need help with the tool, not a change in degree path.",
+      "nextQuestion": "Where can I find support for advanced financial formula application?"
+    },
+    "treatment": "Funny"
+  },
+  "comparedWith": [
+    {
+      "channel": "Trust",
+      "id": "trust_02",
+      "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+      "mechanismKey": "missing_evidence_identification",
+      "device": "A graphic overlay displays a 'Decision Tree' that dead-ends at 'Insufficient Evidence'."
+    },
+    {
+      "channel": "Connection",
+      "id": "conn_01",
+      "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+      "mechanismKey": "personal_reflection_journaling",
+      "device": "Direct-to-camera conversation followed by a quick close-up of a 'Sticking Point' logbook."
+    },
+    {
+      "channel": "Discovery",
+      "id": "disc_02",
+      "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+      "mechanismKey": "tripartite_assessment_audit",
+      "device": "A digital cursor highlighting specific missing grading tags on a screen."
+    }
+  ],
+  "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = insufficient_information / missing_evidence_identification; Connection = task_question_journal / personal_reflection_journaling; Discovery = assessment_questions / tripartite_assessment_audit. Each has an illustrative input, observable result and next question. This is not editorial approval."
+}
+```
+
+## Proposed HLNI — unverified editorial notes
+
+```json
+[
+  {
+    "insight": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+    "audienceGap": "Students feel overwhelmed by the choice and don't know where to start investigating.",
+    "viewerChange": "Encourages students to journal their confusion to form precise questions for advisors.",
+    "supportType": "method",
+    "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+    "references": [],
+    "shotNumbers": [
+      2
+    ],
+    "payoffShotNumbers": [
+      3
+    ],
+    "payoff": "The student realizes they need help with the tool, not a change in degree path, leading to a constructive next question."
+  }
+]
+```
+
+## Production notes
+
+```json
+{
+  "visualStyle": "Clean, academic, relatable.",
+  "performance": "Casual, empathetic, and direct.",
+  "camera": "Stable handheld for intimacy.",
+  "editing": "Fluid transitions between shots.",
+  "sound": "Soft acoustic background.",
+  "props": [
+    "Course brochures",
+    "Logbook",
+    "Pen"
+  ],
+  "locations": [
+    "University library table"
+  ],
+  "casting": "Two relatable students.",
+  "complexity": "LOW"
+}
+```
+
+## Creative summary
+
+```json
+{
+  "keyCreativeIdea": "Transforming the abstract choice between degrees into a concrete investigation of specific learning needs.",
+  "shootingPriority": [
+    "The logbook close-up",
+    "The student looking at the question"
+  ]
+}
+```

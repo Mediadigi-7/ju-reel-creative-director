@@ -1,0 +1,156 @@
+# Connection — B.Com vs BBA: A Practical Approach
+
+Fresh real Gemini output. Generated: 2026-11-12T04:35:22.398Z. Model: gemini-3.1-flash-lite. Requested treatment: Auto; chosen treatment: Informative. Target duration: 28 sec. Status: Draft; editorial evaluation pending.
+
+**Creative angle:** Using a specific task-based reflection to move from confusion to inquiry
+
+**Objective:** Help students move past vague degree comparisons by using a concrete task to identify their actual information needs.
+
+**Audience:** +2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging
+
+## Shot 01 — The Uncertainty
+
+- **Timecode:** 00:00 – 00:06
+- **Narrative-function tags (AI-supplied):** PROBLEM
+- **Visual action:** Student sitting at a desk looking at a laptop with a blank expression, surrounded by notebooks.
+- **Dialogue / voiceover:** Choosing between B.Com and BBA feels like guessing. Everyone says something different.
+- **Camera direction:** Close-up, candid, empathetic tone.
+- **On-screen graphic:** B.Com vs BBA: The confusion
+
+## Shot 02 — The Task
+
+- **Timecode:** 00:06 – 00:15
+- **Narrative-function tags (AI-supplied):** VALUE
+- **Visual action:** Hand writes on a sticky note while looking at a sample balance sheet on screen.
+- **Dialogue / voiceover:** Instead of guessing, try a mini-task. I tried reading this balance sheet and realized this specific issue.
+- **Camera direction:** Over-the-shoulder shot showing the writing process.
+- **On-screen graphic:** Example: Where I got stuck: How to read the 'Liabilities' row.
+
+## Shot 03 — The Informed Question
+
+- **Timecode:** 00:15 – 00:28
+- **Narrative-function tags (AI-supplied):** PAYOFF, CTA
+- **Visual action:** Student turns to the camera, looking relieved and focused.
+- **Dialogue / voiceover:** Now I have a real question. Can you explain how this calculation is taught in the first semester? Use tasks to find your own questions, not just labels.
+- **Camera direction:** Direct, conversational, natural.
+- **On-screen graphic:** Can you explain how this calculation is taught in the first semester?
+
+## Selected concept — planned before shots
+
+```json
+{
+  "stage": "concept-before-story",
+  "selected": {
+    "id": "conn_task_journal_01",
+    "title": "The Student Sticking Point",
+    "audienceGap": "Students feel overwhelmed and look for a degree that 'fits' without knowing what they actually need to do.",
+    "basisId": "task_question_journal",
+    "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+    "viewerChange": "Moves from feeling lost to identifying one specific area of interest.",
+    "concept": "A student writes down where they felt stuck during a short activity.",
+    "mechanismKey": "student_journal_reflection",
+    "device": "Personal vlog-style reflection",
+    "supportType": "method",
+    "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+    "evidenceNeeded": [],
+    "methodSteps": [
+      "Try or inspect a clearly illustrative task.",
+      "Record one point where you needed help and one question you want to investigate.",
+      "Turn the observation into a question for a real course brief or course team."
+    ],
+    "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+    "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+    "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+    "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+    "demonstration": {
+      "input": "A short 5-minute task on interpreting a basic balance sheet.",
+      "visibleInput": "Example: Where I got stuck: How to read the 'Liabilities' row.",
+      "observation": "Student identifies the specific step needing explanation.",
+      "nextQuestion": "Can you explain how this calculation is taught in the first semester?"
+    },
+    "treatment": "Informative"
+  },
+  "comparedWith": [
+    {
+      "channel": "Trust",
+      "id": "trust_assessment_audit_01",
+      "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+      "mechanismKey": "three_column_audit",
+      "device": "Split-screen worksheet analysis"
+    },
+    {
+      "channel": "Connection",
+      "id": "conn_task_journal_01",
+      "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+      "mechanismKey": "student_journal_reflection",
+      "device": "Personal vlog-style reflection"
+    },
+    {
+      "channel": "Discovery",
+      "id": "disc_insufficient_info_02",
+      "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+      "mechanismKey": "missing_source_check",
+      "device": "Detective-style evidence hunt"
+    }
+  ],
+  "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / three_column_audit; Connection = task_question_journal / student_journal_reflection; Discovery = insufficient_information / missing_source_check. Each has an illustrative input, observable result and next question. This is not editorial approval."
+}
+```
+
+## Proposed HLNI — unverified editorial notes
+
+```json
+[
+  {
+    "insight": "A short illustrative task reveals exactly where you need help, which is more useful than choosing based on general degree labels.",
+    "audienceGap": "Students assume degree choice is an abstract preference rather than an investigation of specific academic processes.",
+    "viewerChange": "Moves from asking 'which is better' to asking 'how is this specific topic taught'.",
+    "supportType": "method",
+    "support": "Reflecting on a concrete technical roadblock is an observable method to define information needs, rather than relying on external stereotypes.",
+    "references": [],
+    "shotNumbers": [
+      2,
+      3
+    ],
+    "payoffShotNumbers": [
+      3
+    ],
+    "payoff": "The student identifies a specific, actionable question that moves their investigation forward."
+  }
+]
+```
+
+## Production notes
+
+```json
+{
+  "visualStyle": "Vlog-style, authentic, clean workspace",
+  "performance": "Natural, thoughtful, not overly polished",
+  "camera": "Handheld feel to enhance connection",
+  "editing": "Tight transitions between the problem and the task",
+  "sound": "Natural room tone, clear voiceover",
+  "props": [
+    "Laptop",
+    "Notebook",
+    "Sticky note",
+    "Pen"
+  ],
+  "locations": [
+    "Study desk"
+  ],
+  "casting": "Relatable +2 student",
+  "complexity": "LOW"
+}
+```
+
+## Creative summary
+
+```json
+{
+  "keyCreativeIdea": "Transform degree comparison from a theoretical choice to a practical inquiry by identifying specific points of interest through a mini-task.",
+  "shootingPriority": [
+    "The specific sticky note detail",
+    "The student asking the refined question"
+  ]
+}
+```

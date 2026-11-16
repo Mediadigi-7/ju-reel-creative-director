@@ -1,0 +1,175 @@
+[
+  {
+    "plan": {
+      "candidates": [
+        {
+          "storySpine": {
+            "startingBelief": "B.Com is exclusively for accounting while BBA is the only path for management.",
+            "studentSituation": "Student is preparing a shortlist for higher education and has deleted B.Com from their options.",
+            "observation": "The student spots 'Business Organization & Management' in the Semester I syllabus for both JOY University's B.Com Accounting & Finance (2025-26) and BBA Entrepreneurship Management (2025-26).",
+            "focus": "The assumption that degree titles act as rigid barriers to course content.",
+            "whyQuestionFollows": "The presence of the same module in both degrees invalidates the premise that management subjects are exclusive to BBA.",
+            "changedAction": "The student moves B.Com back to their provisional shortlist to conduct a module-by-module comparison.",
+            "visibleConsequence": "The student re-labels their shortlist from 'Management-only' to 'Comparison-Required' and adds a column for verifying future course modules.",
+            "channelExperience": "The audience sees the immediate collapse of a rigid binary choice through a direct document comparison."
+          },
+          "id": "trust-bcom-bba-comparison",
+          "basisId": "verified_curriculum_example",
+          "title": "B.Com vs BBA: Breaking the Title Bias",
+          "audienceGap": "Students assume degree titles dictate the entire curriculum content.",
+          "viewerChange": "Viewers will check module lists rather than relying on degree title stereotypes.",
+          "concept": "Using shared syllabus titles to prove that degree titles do not inherently exclude specific subject areas.",
+          "mechanismKey": "Bounded Evidence Verification",
+          "device": "Document side-by-side comparison",
+          "payoff": "A more open, evidence-based approach to course selection.",
+          "hlni": "Business Organization & Management appears in Semester I of both JOY University B.Com Accounting & Finance (p.5) and BBA Entrepreneurship Management (p.9), cohorts 2025-26 onwards (https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf; https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf).",
+          "support": "Official JOY University course PDFs, Semester I, 2025-26 entry requirements.",
+          "methodSteps": [
+            "Compare the specific Semester I module lists from the official university PDFs.",
+            "Identify the shared course title.",
+            "Mark the degrees as needing deeper module-by-module investigation instead of immediate exclusion."
+          ],
+          "interpretationRule": "The shared title establishes content presence; it does not guarantee pedagogical approach or degree parity.",
+          "visibleProof": "The two PDF pages showing the same module row side-by-side.",
+          "limitations": "Does not prove identical teaching, depth, or career outcomes; BBA data is limited to the inspected Semester I row.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "List of modules for B.Com vs BBA.",
+            "visibleInput": "Semester I: Business Organization & Management (JOY University B.Com p.5 | BBA p.9)",
+            "observation": "The module exists in both programmes.",
+            "nextQuestion": "Which other modules define the actual difference between these two paths?"
+          }
+        },
+        {
+          "storySpine": {
+            "startingBelief": "Degree choice is a permanent identity-defining decision that must be made based on title alone.",
+            "studentSituation": "Student is stressed about choosing between B.Com and BBA without knowing what will actually be assessed.",
+            "observation": "The student writes down a preferred degree but realizes they cannot describe the actual work products they will be expected to complete.",
+            "focus": "The lack of specific information about assessment tasks versus the broad degree label.",
+            "whyQuestionFollows": "Knowing the task is necessary to evaluate if the programme fits the student's learning style.",
+            "changedAction": "The student creates a three-column tracker: 'Course Name', 'Sample Task', and 'Assessment Criterion'.",
+            "visibleConsequence": "The student fills in 'Unknown' for criteria and marks it as a priority question for the course team, shifting from passive label-choosing to active investigation.",
+            "channelExperience": "The audience experiences the transition from anxiety over labels to the relief of a concrete research method."
+          },
+          "id": "trust-assessment-method",
+          "basisId": "assessment_questions",
+          "title": "Choosing a Degree: The Assessment Gap",
+          "audienceGap": "Students confuse degree titles with specific learning outcomes.",
+          "viewerChange": "Viewers will prioritize asking for assessment rubrics over comparing degree names.",
+          "concept": "A structured inquiry method that forces students to ask for specific assessment criteria rather than guessing based on names.",
+          "mechanismKey": "Task-Criteria Separation",
+          "device": "Three-column research journal",
+          "payoff": "Equipping the student with an actionable research plan.",
+          "hlni": "Assessment criteria are distinct from course titles; without them, educational depth is unknown.",
+          "support": "Academic inquiry logic: learning requires specific criteria to measure progress, not just programme names.",
+          "methodSteps": [
+            "Write down the target course name.",
+            "List a hypothetical core task.",
+            "Ask specifically for the assessment criteria and record 'Unknown' if unavailable."
+          ],
+          "interpretationRule": "An assessment rubric is the only way to compare the depth of two different programmes.",
+          "visibleProof": "A three-column table showing 'Unknown' in the criteria column.",
+          "limitations": "This method does not provide the criteria itself; it only helps in asking the right questions to obtain them.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Student's initial degree shortlist.",
+            "visibleInput": "Target: B.Com | Task: Financial Analysis | Assessment Criterion: [?] (Unknown)",
+            "observation": "The criterion is missing from the brochure.",
+            "nextQuestion": "What is the specific rubric used to grade this analysis?"
+          }
+        }
+      ],
+      "selected": "trust-bcom-bba-comparison"
+    },
+    "issues": [
+      "trust-bcom-bba-comparison | payoff: The visible consequence describes an administrative task (re-labeling a list) rather than a direct connection to the academic insight or the student's actual understanding of the curriculum difference. Correction: The student updates their shortlist to prioritize comparing the remaining modules, visibly noting which courses differ after the shared Business Organization & Management entry."
+    ]
+  },
+  {
+    "plan": {
+      "candidates": [
+        {
+          "storySpine": {
+            "startingBelief": "B.Com is exclusively for accounting while BBA is the only path for management.",
+            "studentSituation": "Student is preparing a shortlist for higher education and has deleted B.Com from their options.",
+            "observation": "The student spots 'Business Organization & Management' in the Semester I syllabus for both JOY University's B.Com Accounting & Finance (2025-26) and BBA Entrepreneurship Management (2025-26).",
+            "focus": "The assumption that degree titles act as rigid barriers to course content.",
+            "whyQuestionFollows": "The presence of the same module in both degrees invalidates the premise that management subjects are exclusive to BBA.",
+            "changedAction": "The student moves B.Com back to their provisional shortlist to conduct a module-by-module comparison.",
+            "visibleConsequence": "The student updates their shortlist to prioritize comparing the remaining modules, noting which specific courses differ after the shared Business Organization & Management entry.",
+            "channelExperience": "The audience sees the immediate collapse of a rigid binary choice through a direct document comparison."
+          },
+          "id": "trust-bcom-bba-comparison",
+          "basisId": "verified_curriculum_example",
+          "title": "B.Com vs BBA: Breaking the Title Bias",
+          "audienceGap": "Students assume degree titles dictate the entire curriculum content.",
+          "viewerChange": "Viewers will check module lists rather than relying on degree title stereotypes.",
+          "concept": "Using shared syllabus titles to prove that degree titles do not inherently exclude specific subject areas.",
+          "mechanismKey": "Bounded Evidence Verification",
+          "device": "Document side-by-side comparison",
+          "payoff": "A more open, evidence-based approach to course selection.",
+          "hlni": "Business Organization & Management appears in Semester I of both JOY University B.Com Accounting & Finance (p.5) and BBA Entrepreneurship Management (p.9), cohorts 2025-26 onwards (https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf; https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf).",
+          "support": "Official JOY University course PDFs, Semester I, 2025-26 entry requirements.",
+          "methodSteps": [
+            "Compare the specific Semester I module lists from the official university PDFs.",
+            "Identify the shared course title.",
+            "Mark the degrees as needing deeper module-by-module investigation instead of immediate exclusion."
+          ],
+          "interpretationRule": "The shared title establishes content presence; it does not guarantee pedagogical approach or degree parity.",
+          "visibleProof": "The two PDF pages showing the same module row side-by-side.",
+          "limitations": "Does not prove identical teaching, depth, or career outcomes; BBA data is limited to the inspected Semester I row.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "List of modules for B.Com vs BBA.",
+            "visibleInput": "Semester I: Business Organization & Management (JOY University B.Com p.5 | BBA p.9)",
+            "observation": "The module exists in both programmes.",
+            "nextQuestion": "Which other modules define the actual difference between these two paths?"
+          }
+        },
+        {
+          "storySpine": {
+            "startingBelief": "I must choose between B.Com and BBA based on which title sounds more 'professional' for my future career.",
+            "studentSituation": "Student is struggling to pick a degree and feels their whole career path depends on this one decision.",
+            "observation": "The student realizes they have no idea what actual tasks are involved in either degree.",
+            "focus": "Replacing career-title anxiety with a concrete investigative task.",
+            "whyQuestionFollows": "Without knowing the actual course tasks, the student is guessing based on stereotypes rather than curriculum.",
+            "changedAction": "The student creates a checklist to research core modules and identify three 'unknown' requirements for each degree.",
+            "visibleConsequence": "The student stops debating titles and begins drafting a list of specific questions about course tasks to ask admissions teams.",
+            "channelExperience": "The audience sees the student move from emotional paralysis to a manageable, evidence-seeking research process."
+          },
+          "id": "trust-constraint-check",
+          "basisId": "constraint_check",
+          "title": "Choosing a Degree: The Requirement Check",
+          "audienceGap": "Students use degree titles to guess career paths instead of checking degree requirements.",
+          "viewerChange": "Viewers will verify specific unknowns before finalizing a degree choice.",
+          "concept": "Using a constraint-check method to distinguish between preferred labels and actual available course information.",
+          "mechanismKey": "Preference-Requirement Separation",
+          "device": "Requirement Checklist",
+          "payoff": "Replacing stress with a clear, actionable research plan.",
+          "hlni": "Degree titles are often broader than the specific skills they teach; verified requirements are necessary to evaluate suitability.",
+          "support": "Logical distinction between preference (what I want) and constraint (what I have verified).",
+          "methodSteps": [
+            "Select preferred degree titles.",
+            "List requirements that are actually important to your learning.",
+            "Mark unknowns clearly; do not assume they are satisfied.",
+            "Use the unknowns to guide your research."
+          ],
+          "interpretationRule": "A preference is not evidence of course suitability; unknowns must be cleared through research.",
+          "visibleProof": "A table showing 'Preferred: BBA' vs 'Verified: [?]'.",
+          "limitations": "Does not predict success or aptitude; it only structures the search for information.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Student's initial preference list.",
+            "visibleInput": "BBA (Preferred) vs. B.Com (Unknown Requirement: Case Analysis Skills)",
+            "observation": "The student cannot confirm the requirement.",
+            "nextQuestion": "How do I verify the practical component of these modules?"
+          }
+        }
+      ],
+      "selected": "trust-bcom-bba-comparison"
+    },
+    "issues": [
+      "trust-bcom-bba-comparison | payoff: The payoff is described as an abstract mindset rather than a concrete, observable result or a specific improvement to the student's decision-making process. Correction: The student produces a finalized shortlist that includes B.Com, having identified the specific elective modules that differentiate the two programmes."
+    ]
+  }
+]

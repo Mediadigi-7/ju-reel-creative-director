@@ -1,0 +1,90 @@
+[
+  {
+    "plan": {
+      "candidates": [
+        {
+          "storySpine": {
+            "startingBelief": "B.Com is only for accounting and lacks management subjects.",
+            "studentSituation": "Student is narrowing their college list to BBA only, ignoring B.Com entirely.",
+            "observation": "Scanning the Semester I lists for JOY University B.Com (Accounting & Finance) and BBA (Entrepreneurship Management) reveals 'Business Organization & Management' in both.",
+            "focus": "The assumption that degree titles act as strict silos for subject content.",
+            "whyQuestionFollows": "If a core management module exists in a B.Com program, the initial exclusion based on a label is factually incomplete.",
+            "changedAction": "Student moves B.Com back to their provisional shortlist for further investigation.",
+            "visibleConsequence": "The B.Com option is moved from the 'trash' pile to a 'verify' folder alongside BBA.",
+            "channelExperience": "Viewer observes the direct side-by-side comparison of specific course documents that dissolves a common, incorrect academic stereotype."
+          },
+          "id": "c1-joy-curriculum-check",
+          "basisId": "verified_curriculum_example",
+          "title": "Unpacking Degree Labels",
+          "audienceGap": "Students assume degree titles perfectly reflect the entirety of the syllabus.",
+          "viewerChange": "Moves from rejecting B.Com based on a title to investigating actual curriculum modules.",
+          "concept": "Bounded subject overlap between two specific programme documents.",
+          "mechanismKey": "Document-based evidence correction.",
+          "device": "Split-screen document comparison.",
+          "payoff": "A more accurate, evidence-based approach to shortlisting degrees.",
+          "hlni": "Shared modules exist; title-based exclusion is unreliable. Source: JOY University B.Com Accounting & Finance (2025-26, p.5) and BBA Entrepreneurship Management (2025-26, p.9).",
+          "support": "Official JOY University PDF course-title rows for Semester I.",
+          "methodSteps": [
+            "Select the target B.Com and BBA programme documents.",
+            "Locate Semester I module lists in each.",
+            "Identify the shared course title.",
+            "Provisionalize the rejected degree for further research."
+          ],
+          "interpretationRule": "A shared module title does not imply identical teaching or course quality; it only invalidates the 'exclusive accounting' stereotype.",
+          "visibleProof": "The shared row 'Business Organization & Management' highlighted across both documents.",
+          "limitations": "Does not prove identical course depth, pedagogy, or career outcomes.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Student's initial 'B.Com = No Management' note vs official course document.",
+            "visibleInput": "Business Organization & Management (Semester I)",
+            "observation": "The same module appears in both B.Com and BBA documents.",
+            "nextQuestion": "What else is common in these syllabi?"
+          }
+        },
+        {
+          "storySpine": {
+            "startingBelief": "Degree choice can be decided solely by looking at the course name on a website.",
+            "studentSituation": "Student is stuck between B.Com and BBA, guessing which one offers 'more' management.",
+            "observation": "A three-column grid shows 'Course Name', 'Assessment Type', and 'Feedback Mechanism' as empty for both degrees.",
+            "focus": "The lack of information regarding how learning is actually measured.",
+            "whyQuestionFollows": "Without knowing assessment criteria, a choice based purely on the program title is guessing without metrics.",
+            "changedAction": "Student replaces a guess with three specific questions to email the admissions office.",
+            "visibleConsequence": "A concrete list of questions replaces the indecisive 'B.Com vs BBA' note.",
+            "channelExperience": "Viewer learns to stop comparing static names and start seeking process-based evidence."
+          },
+          "id": "c2-assessment-inquiry-method",
+          "basisId": "assessment_questions",
+          "title": "Beyond the Degree Label",
+          "audienceGap": "Students don't know how to differentiate degrees beyond the official marketing names.",
+          "viewerChange": "From guessing based on titles to asking for specific assessment-related information.",
+          "concept": "Question-forming method to request actionable programme information.",
+          "mechanismKey": "Criteria-based inquiry.",
+          "device": "The 'Three-Column Inquiry' grid.",
+          "payoff": "Transitioning from superficial comparison to meaningful academic due diligence.",
+          "hlni": "Degree choice is informed by assessment structure, not just program branding.",
+          "support": "The logic of evaluating the 'how' of assessment rather than the 'what' of the title.",
+          "methodSteps": [
+            "List the target course names.",
+            "Create columns for assessment methods and feedback types.",
+            "Mark missing data as 'Unknown'.",
+            "Draft specific inquiries to the program office for each unknown."
+          ],
+          "interpretationRule": "An unanswered cell is not a failure of the degree; it is a signal to ask a specific question.",
+          "visibleProof": "A completed inquiry grid with 'Unknown' marked clearly for assessment types.",
+          "limitations": "This method relies on the responsiveness of the institution to student queries.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Student comparing B.Com vs BBA titles.",
+            "visibleInput": "Unknown assessment criteria for B.Com and BBA",
+            "observation": "The title doesn't state how students are marked or tested.",
+            "nextQuestion": "What specific assessment methods are used in Semester I?"
+          }
+        }
+      ],
+      "selected": "c1-joy-curriculum-check"
+    },
+    "issues": [
+      "c1-joy-curriculum-check | payoff: The concept aims to correct the student's assumption that degree titles act as strict silos. The resulting question 'What else is common in these syllabi?' is overly broad and encourages the student to make further assumptions about curriculum overlap, which contradicts the interpretation rule that the documents do not establish identical teaching or content beyond the single shared module. Correction: How can I compare the specific module requirements for the remaining semesters in these two documents?"
+    ]
+  }
+]

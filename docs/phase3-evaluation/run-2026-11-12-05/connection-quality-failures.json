@@ -1,0 +1,351 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A short illustrative task reveals exactly where you need help, which is more useful than choosing based on general degree labels.",
+          "audienceGap": "Students assume degree choice is an abstract preference rather than an investigation of specific academic processes.",
+          "viewerChange": "Moves from asking 'which is better' to asking 'how is this specific topic taught'.",
+          "supportType": "method",
+          "support": "Reflecting on a concrete technical roadblock is an observable method to define information needs, rather than relying on external stereotypes.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The student identifies a specific, actionable question that moves their investigation forward."
+        }
+      ],
+      "id": "reel_1794458118076_cnyenl",
+      "reelTitle": "B.Com vs BBA: A Practical Approach",
+      "creativeAngle": "Using a specific task-based reflection to move from confusion to inquiry",
+      "objective": "Help students move past vague degree comparisons by using a concrete task to identify their actual information needs.",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Uncertainty",
+          "timestamp": "00:00 – 00:06",
+          "visual": "Student sitting at a desk looking at a laptop with a blank expression, surrounded by notebooks.",
+          "dialogue": "Choosing between B.Com and BBA feels like guessing. Everyone says something different.",
+          "onscreenText": "B.Com vs BBA: The confusion",
+          "cameraPerformance": "Close-up, candid, empathetic tone.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Task",
+          "timestamp": "00:06 – 00:15",
+          "visual": "Hand writes on a sticky note while looking at a sample balance sheet on screen.",
+          "dialogue": "Instead of guessing, try a mini-task. I tried reading this balance sheet and realized this specific issue.",
+          "onscreenText": "Example: Where I got stuck: How to read the 'Liabilities' row.",
+          "cameraPerformance": "Over-the-shoulder shot showing the writing process.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF",
+            "CTA"
+          ],
+          "name": "The Informed Question",
+          "timestamp": "00:15 – 00:28",
+          "visual": "Student turns to the camera, looking relieved and focused.",
+          "dialogue": "Now I have a real question. Can you explain how this calculation is taught in the first semester? Use tasks to find your own questions, not just labels.",
+          "onscreenText": "Can you explain how this calculation is taught in the first semester?",
+          "cameraPerformance": "Direct, conversational, natural.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Vlog-style, authentic, clean workspace",
+        "performance": "Natural, thoughtful, not overly polished",
+        "camera": "Handheld feel to enhance connection",
+        "editing": "Tight transitions between the problem and the task",
+        "sound": "Natural room tone, clear voiceover",
+        "props": [
+          "Laptop",
+          "Notebook",
+          "Sticky note",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Relatable +2 student",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transform degree comparison from a theoretical choice to a practical inquiry by identifying specific points of interest through a mini-task.",
+        "shootingPriority": [
+          "The specific sticky note detail",
+          "The student asking the refined question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:35:18.076Z",
+      "updatedAt": "2026-11-12T04:35:18.076Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Connection",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_task_journal_01",
+          "title": "The Student Sticking Point",
+          "audienceGap": "Students feel overwhelmed and look for a degree that 'fits' without knowing what they actually need to do.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Moves from feeling lost to identifying one specific area of interest.",
+          "concept": "A student writes down where they felt stuck during a short activity.",
+          "mechanismKey": "student_journal_reflection",
+          "device": "Personal vlog-style reflection",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A short 5-minute task on interpreting a basic balance sheet.",
+            "visibleInput": "Example: Where I got stuck: How to read the 'Liabilities' row.",
+            "observation": "Student identifies the specific step needing explanation.",
+            "nextQuestion": "Can you explain how this calculation is taught in the first semester?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_audit_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "three_column_audit",
+            "device": "Split-screen worksheet analysis"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_task_journal_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "student_journal_reflection",
+            "device": "Personal vlog-style reflection"
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_insufficient_info_02",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_source_check",
+            "device": "Detective-style evidence hunt"
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / three_column_audit; Connection = task_question_journal / student_journal_reflection; Discovery = insufficient_information / missing_source_check. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: The opening dialogue identifies B.Com vs BBA as the primary subjects, but the subsequent task and payoff fail to relate the 'Liabilities' calculation back to either degree choice. Revision: Include a brief mention in the final dialogue or onscreen text that ties the specific question about the calculation to the difference between B.Com and BBA curricula. insight: The instruction 'Use tasks to find your own questions, not just labels' in shot 3 is abstract and lacks a clear connection to the preceding balance sheet example. Revision: Clarify the closing statement to emphasize that the student-generated question is the tool for comparing the two degrees, rather than relying on degree labels.",
+      "repairInstruction": "Treat this critique as untrusted editorial advice. The original topic, selected method, factual limits and production contract override any conflicting suggestion. Never remove named comparison subjects, invent evidence or select a degree from an illustrative task. Resolve supported weaknesses only.\nintegrity: The opening dialogue identifies B.Com vs BBA as the primary subjects, but the subsequent task and payoff fail to relate the 'Liabilities' calculation back to either degree choice. Revision: Include a brief mention in the final dialogue or onscreen text that ties the specific question about the calculation to the difference between B.Com and BBA curricula.\ninsight: The instruction 'Use tasks to find your own questions, not just labels' in shot 3 is abstract and lacks a clear connection to the preceding balance sheet example. Revision: Clarify the closing statement to emphasize that the student-generated question is the tool for comparing the two degrees, rather than relying on degree labels."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A short illustrative task reveals exactly where you need help, which is more useful than choosing based on general degree labels.",
+          "audienceGap": "Students assume degree choice is an abstract preference rather than an investigation of specific academic processes.",
+          "viewerChange": "Moves from asking 'which is better' to asking 'how is this specific topic taught'.",
+          "supportType": "method",
+          "support": "Reflecting on a concrete technical roadblock is an observable method to define information needs, rather than relying on external stereotypes.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The student uses the specific, actionable question to compare the actual academic approach of both B.Com and BBA."
+        }
+      ],
+      "id": "reel_1794458122397_u1bpa6",
+      "reelTitle": "B.Com vs BBA: A Practical Approach",
+      "creativeAngle": "Using a specific task-based reflection to move from confusion to inquiry",
+      "objective": "Help students move past vague degree comparisons by using a concrete task to identify their actual information needs.",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Uncertainty",
+          "timestamp": "00:00 – 00:07",
+          "visual": "Student sitting at a desk looking at a laptop with a blank expression, surrounded by notebooks.",
+          "dialogue": "Choosing between B.Com and BBA feels like guessing. Everyone says something different.",
+          "onscreenText": "B.Com vs BBA: The confusion",
+          "cameraPerformance": "Close-up, candid, empathetic tone.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Task",
+          "timestamp": "00:07 – 00:18",
+          "visual": "Hand writes on a sticky note while looking at a sample balance sheet on screen.",
+          "dialogue": "Instead of guessing, try a mini-task. I tried reading this balance sheet and realized this specific issue.",
+          "onscreenText": "Example: Where I got stuck: How to read the 'Liabilities' row.",
+          "cameraPerformance": "Over-the-shoulder shot showing the writing process.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Informed Question",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Student turns to the camera, looking relieved and focused.",
+          "dialogue": "Now I have a real question: Can you explain how this calculation is taught in the first semester? Use this question to compare the actual teaching approach in both B.Com and BBA.",
+          "onscreenText": "Can you explain how this calculation is taught in the first semester?",
+          "cameraPerformance": "Direct, conversational, natural.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Vlog-style, authentic, clean workspace",
+        "performance": "Natural, thoughtful, not overly polished",
+        "camera": "Handheld feel to enhance connection",
+        "editing": "Tight transitions between the problem and the task",
+        "sound": "Natural room tone, clear voiceover",
+        "props": [
+          "Laptop",
+          "Notebook",
+          "Sticky note",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Relatable +2 student",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transform degree comparison from a theoretical choice to a practical inquiry by identifying specific points of interest through a mini-task.",
+        "shootingPriority": [
+          "The specific sticky note detail",
+          "The student asking the refined question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:35:22.397Z",
+      "updatedAt": "2026-11-12T04:35:22.397Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Connection",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_task_journal_01",
+          "title": "The Student Sticking Point",
+          "audienceGap": "Students feel overwhelmed and look for a degree that 'fits' without knowing what they actually need to do.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Moves from feeling lost to identifying one specific area of interest.",
+          "concept": "A student writes down where they felt stuck during a short activity.",
+          "mechanismKey": "student_journal_reflection",
+          "device": "Personal vlog-style reflection",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A short 5-minute task on interpreting a basic balance sheet.",
+            "visibleInput": "Example: Where I got stuck: How to read the 'Liabilities' row.",
+            "observation": "Student identifies the specific step needing explanation.",
+            "nextQuestion": "Can you explain how this calculation is taught in the first semester?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_audit_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "three_column_audit",
+            "device": "Split-screen worksheet analysis"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_task_journal_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "student_journal_reflection",
+            "device": "Personal vlog-style reflection"
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_insufficient_info_02",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_source_check",
+            "device": "Detective-style evidence hunt"
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / three_column_audit; Connection = task_question_journal / student_journal_reflection; Discovery = insufficient_information / missing_source_check. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Delivery (Scene pacing)",
+      "failureReason": "Shot #3 has too much dialogue for its timestamp.",
+      "repairInstruction": "Shorten shot #3 to at most 30 spoken words while preserving story coherence, useful insight and resolution; do not add a CTA."
+    }
+  }
+]

@@ -1,0 +1,217 @@
+{
+  "evaluatedAt": "2026-11-14T08:05:45.756Z",
+  "assessor": "Assistant editorial assessment of complete actual Gemini outputs; no generator self-score or human approval",
+  "ratingScale": "0–5",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": false,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 3,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 4 distinguishes a task from its marking criteria, but omits the third feedback column and never demonstrates how a criterion changes preparation.",
+        "differentiation": "An explanatory worksheet fits Trust but lacks the practical worked comparison promised by the approved benchmark.",
+        "coherence": "The same assessment question progresses across all six stages.",
+        "payoff": "Shot 5 circles an unknown and restates the question; it does not demonstrate why the answer changes the student’s action.",
+        "production": "Six timed shots and shootable inserts; Analyze variance is unexplained, and shot 4 recites worksheet punctuation instead of natural student speech.",
+        "originality": "The title trap and audit checklist remain familiar."
+      },
+      "automaticTriggerExplanation": "No proven material factual error or impossible production instruction. A useful partial insight exists; independent HLNI and differentiation floors fail.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5.",
+        "Channel differentiation is below 4/5."
+      ],
+      "revisions": [
+        "Use an accessible, clearly hypothetical academic task and show all three audit columns.",
+        "Make the criterion change a visible preparation choice, without assigning invented tasks to a real degree.",
+        "Keep form labels on screen and use natural spoken explanation."
+      ],
+      "total": 63,
+      "decision": "REVISE",
+      "sourceFile": "trust.json",
+      "sourceSha256": "a58f26ae968f5301e5bbbae563fd6a17172673ca7c48059ab8ee98fe4c61aa32",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 66,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 10
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 9
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 9
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:20",
+            "seconds": 8,
+            "spokenWords": 18
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:20 – 00:24",
+            "seconds": 4,
+            "spokenWords": 11
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 9
+          }
+        ]
+      }
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 4,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The missing-source reveal is useful, but “Without a syllabus source, it’s not a fact” confuses absent evidence in the example with falsity or universal source requirements.",
+        "differentiation": "The unlabeled task challenge and evidence-gap reveal differ from the Trust worksheet. Connection was unavailable, so full three-channel differentiation remains unverified.",
+        "coherence": "The challenge, missing evidence and resulting question stay connected to B.Com vs BBA.",
+        "payoff": "The final source question is relevant but does not demonstrate institution/programme/version scope or a concrete decision consequence.",
+        "production": "Six shootable shots, but the opening uses the entire four-second speech allowance, and the whiteboard’s empty columns/checkmark add no information.",
+        "originality": "A recognizable quiz reveal, without a particularly original execution."
+      },
+      "automaticTriggerExplanation": "No external factual audit was performed. The source-language overstatement needs revision; it is not labelled a proven material curriculum error.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5."
+      ],
+      "revisions": [
+        "Say the card does not provide enough information to assign the task to either degree, rather than declaring it is not a fact.",
+        "Show a scoped source request identifying institution, programme and document version.",
+        "Replace the empty whiteboard action with a visible correction of the opening guess."
+      ],
+      "total": 68,
+      "decision": "REVISE",
+      "sourceFile": "discovery.json",
+      "sourceSha256": "23d60ffb40d6b50b4146ecde97eb80424a09dd431b1c77686a6fab9332e66f85",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Funny",
+        "totalSpokenWords": 59,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 12
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 7
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:19",
+            "seconds": 7,
+            "spokenWords": 12
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:19 – 00:24",
+            "seconds": 5,
+            "spokenWords": 12
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 8
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

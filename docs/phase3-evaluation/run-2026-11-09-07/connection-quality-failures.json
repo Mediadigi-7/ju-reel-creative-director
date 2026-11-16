@@ -1,0 +1,165 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A specific illustrative activity can reveal where you need help; it does not determine which degree suits you.",
+          "audienceGap": "Students think difficulty with a task indicates they are in the wrong program.",
+          "viewerChange": "Replaces 'I'm not good at this' with 'I need to ask about this specific part'.",
+          "supportType": "method",
+          "support": "Task journaling shifts the student's focus from global anxiety to granular, actionable inquiry.",
+          "references": [],
+          "shotNumbers": [
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The student learns to articulate a specific technical question, moving from confusion to clarity."
+        }
+      ],
+      "id": "reel_1794221212631_n649d2",
+      "reelTitle": "B.Com vs BBA: Navigating the Choice",
+      "creativeAngle": "The Sticking Point Journal",
+      "objective": "Help students shift from anxiety to productive inquiry.",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "name": "The Confusion",
+          "timestamp": "00:00 – 00:08",
+          "visual": "Close-up of a student looking frustrated while reading a study case on a laptop.",
+          "dialogue": "Stuck between B.Com and BBA? It’s easy to feel like you’re choosing the wrong path just because a task feels hard.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Tight, handheld, intimate.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "name": "The Method",
+          "timestamp": "00:08 – 00:18",
+          "visual": "Handwriting in a journal: 'Task: Read case, identify risks. Sticking point: How to quantify 'brand risk'?'",
+          "dialogue": "Try this: note exactly where you get stuck. It’s not a failure; it’s a data point for your next conversation.",
+          "onscreenText": "Task: Read case, identify risks. Sticking point: How to quantify 'brand risk'?",
+          "cameraPerformance": "Top-down view of the journal.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "name": "The Outcome",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Student closing the journal, looking focused and calm.",
+          "dialogue": "Now, ask: 'What tools do you use to measure qualitative brand risk?' Use that question to learn, not to judge yourself.",
+          "onscreenText": "What tools do you use to measure qualitative brand risk?",
+          "cameraPerformance": "Medium shot, encouraging tone.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, authentic.",
+        "performance": "Conversational and supportive.",
+        "camera": "Handheld style to feel grounded.",
+        "editing": "Steady pacing.",
+        "sound": "Ambient room noise, no music.",
+        "props": [
+          "Laptop",
+          "Journal",
+          "Pen"
+        ],
+        "locations": [
+          "Library or study desk"
+        ],
+        "casting": "Relatable student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming the anxiety of a difficult task into a targeted question for inquiry.",
+        "shootingPriority": [
+          "The journal entry close-up",
+          "The final direct question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T10:46:52.632Z",
+      "updatedAt": "2026-11-09T10:46:52.632Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Connection",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_journal",
+          "title": "The Sticking Point Journal",
+          "audienceGap": "Students feel anxious because they struggle with a random task and assume this means they chose the wrong degree.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Replaces 'I'm not good at this' with 'I need to ask about this specific part'.",
+          "concept": "A student records exactly where they get stuck on a sample task to formulate a better question for a senior.",
+          "mechanismKey": "task_journaling",
+          "device": "A handwritten log where a student tracks a moment of confusion and turns it into a targeted question.",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A sample business case study task.",
+            "visibleInput": "Task: Read case, identify risks. Sticking point: How to quantify 'brand risk'?",
+            "observation": "The student identifies a specific gap in their knowledge of risk metrics.",
+            "nextQuestion": "What tools do you use to measure qualitative brand risk?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_audit",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "audit_worksheet",
+            "device": "Split-screen comparison of two project prompts showing how different grading criteria change the focus of the task."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_journal",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "task_journaling",
+            "device": "A handwritten log where a student tracks a moment of confusion and turns it into a targeted question."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_missing",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_data_reveal",
+            "device": "A riddle-style presentation showing one element and asking the viewer to 'guess' the degree, followed by the reveal that it's impossible."
+          }
+        ],
+        "contrast": "Trust uses a structural audit of criteria to build verification habits; Connection uses a personal journal to manage anxiety via specific questioning; Discovery uses a logical reveal to expose the fallacy of jumping to conclusions based on partial data."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Diagnostic function tags",
+      "failureReason": "The requested evaluation artifact omits diagnostic function arrays.",
+      "repairInstruction": "Include functions on each existing shot, using accurate optional narrative-function tags (or [] if none applies). Preserve the story-led shot count, order and treatment; no stage coverage checklist."
+    }
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "assessor": "Assistant editorial assessment of actual complete Gemini output; not generator self-score or independent blinded human review",
+  "ratingScale": "0\u20135",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 4,
+        "coherence": 3,
+        "payoff": 3,
+        "production": 3,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The source-backed shared row is useful, but the script extends it into an unsupported assertion about four unique course titles.",
+        "differentiation": "The source comparison serves Trust; other fresh channels are not assessed.",
+        "coherence": "The title assumption connects to real evidence, then the unsupported count breaks the supported reasoning chain.",
+        "payoff": "The student starts a comparison, but its decisive fields are unverified and the script does not demonstrate a safe concrete consequence.",
+        "production": "Continuous six-scene timing and practical assets, but do not film invented comparison entries or imply equal course content.",
+        "originality": "The divider-line/brochure reveal remains a familiar device."
+      },
+      "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+      "reasons": [
+        "This is a Trust-only pilot assessment; it does not establish three-channel differentiation or production approval."
+      ],
+      "revisions": [
+        "Remove the unsupported four-unique-subject claim and the implication of identical foundations.",
+        "Use only the inspected row; mark other course details unknown rather than inventing a full comparison."
+      ]
+    }
+  ],
+  "methodology": "The full returned storyboard, HLNI, concept spine, production notes and warnings were read. The same assistant implemented and assessed the change. Scores use the unchanged rubric. Channel differentiation here assesses the recognisable Trust experience against the approved channel objectives and archived references; a fresh three-channel group comparison was not performed. No recorded read-aloud or deployed-app test was performed.",
+  "runSummary": "Second isolated run returned a draft, but unsupported counts appeared in the selected question and advisory rewrite. This is a factual-support failure requiring revision, not a proven external falsehood or a successful verification.",
+  "crossChannelFinding": "Only Trust was generated in this run. Other channels were deliberately held back pending repeatable Trust acceptance. Output remains Draft and no model review grants application approval.",
+  "nextStep": "Check repeatability on identical source and preserve every failure. Keep the 85 overall/4 HLNI/4 differentiation floors and above-90 target unchanged. Do not expand or deploy based on one passing example."
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bcom",
+    "url": "https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf",
+    "linkedFrom": "https://joyuniversity.edu.in/University/School-of%20-Entrepreneurship-and-Management",
+    "httpStatus": 200,
+    "retrievedAt": "2026-11-14T09:22:29.858965+00:00",
+    "pdfSha256": "6dbf1f782c56a188235b61b4cbfcc46419385281356b57476b1b078f1f48b646",
+    "pdfPagesReviewed": [
+      1,
+      5
+    ],
+    "cohortScope": "Students admitted from 2025\u201326 onwards, as printed on the cover",
+    "verifiedClaim": "Semester I includes Business Organization & Management.",
+    "limitations": "Only the named published document and row are supported. No current admissions, equivalence, exclusivity, assessment or career claim."
+  },
+  {
+    "id": "bba-entrepreneur",
+    "url": "https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf",
+    "linkedFrom": "https://joyuniversity.edu.in/University/School-of%20-Entrepreneurship-and-Management",
+    "httpStatus": 200,
+    "retrievedAt": "2026-11-14T09:22:29.860902+00:00",
+    "pdfSha256": "fe37faab115ac001d89182cc18982a69d03ca2e408aae86dd1490737aee9de7a",
+    "pdfPagesReviewed": [
+      1,
+      9
+    ],
+    "cohortScope": "Students admitted from 2025\u201326 onwards, as printed on the cover",
+    "verifiedClaim": "Semester I includes Business Organization & Management.",
+    "limitations": "Only the named published document and row are supported. No current admissions, equivalence, exclusivity, assessment or career claim. BBA document has inconsistent later-section terminology/course codes; do not generalise its full contents."
+  }
+]

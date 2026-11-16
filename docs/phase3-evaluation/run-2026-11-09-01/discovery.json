@@ -1,0 +1,113 @@
+{
+  "hlni": [
+    {
+      "insight": "Actual program content is defined by specific modules, not the degree title.",
+      "audienceGap": "Students often assume B.Com and BBA represent fixed, mutually exclusive career paths.",
+      "viewerChange": "The student stops relying on hearsay and starts looking for specific module lists to evaluate their personal fit.",
+      "supportType": "method",
+      "support": "Degree titles are broad categories; curricula vary significantly between institutions. Comparing task-oriented modules provides a more accurate assessment of individual student interest.",
+      "references": [],
+      "shotNumbers": [
+        2
+      ],
+      "payoffShotNumbers": [
+        3
+      ],
+      "payoff": "The student realizes that checking the actual module list is a practical method to make an informed choice."
+    }
+  ],
+  "id": "reel_1794217966752_3pxjoo4x",
+  "reelTitle": "B.Com vs BBA: The Module Comparison Method",
+  "creativeAngle": "The Module Comparison Method",
+  "objective": "Teach students to compare B.Com and BBA by inspecting specific module lists rather than relying on stereotypes.",
+  "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "SCENE",
+      "functions": [
+        "HOOK",
+        "PROBLEM"
+      ],
+      "name": "The Dorm Room Dilemma",
+      "timestamp": "00:00 – 00:07",
+      "visual": "Two students sitting at a table with two physical paper lists labelled 'B.Com' and 'BBA'.",
+      "dialogue": "Everyone says B.Com is for accounting and BBA is for strategy. But look at these module lists.",
+      "onscreenText": "B.Com vs BBA: Which one?",
+      "cameraPerformance": "Close-up on the papers, panning slowly between them.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "SCENE",
+      "functions": [
+        "PATTERN_INTERRUPT",
+        "VALUE"
+      ],
+      "name": "The Module Hunt",
+      "timestamp": "00:07 – 00:18",
+      "visual": "A finger pointing to specific line items on the B.Com paper and then the BBA paper, highlighting overlaps.",
+      "dialogue": "Ignore the labels. Find the actual modules. See how much these core topics overlap? That’s where your real interest lies.",
+      "onscreenText": "Compare modules, not stereotypes.",
+      "cameraPerformance": "Tight macro shot focusing on the text, shifting focus between the two papers.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "SCENE",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Informed Decision",
+      "timestamp": "00:18 – 00:28",
+      "visual": "The student circles one specific module on each, looking at their friend with a confident realization.",
+      "dialogue": "Compare the tasks, not the degree name. Choose the syllabus that actually fits what you want to practice daily.",
+      "onscreenText": "Choose by task, not title.",
+      "cameraPerformance": "Medium shot, hand-held, natural movement.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, authentic hostel/study environment",
+    "performance": "Natural, conversational tone",
+    "camera": "Hand-held, intimate, documentary style",
+    "editing": "Rhythmic cuts on module highlights",
+    "sound": "Natural ambient room noise, crisp voiceover",
+    "props": [
+      "Printed module lists, pens, desk"
+    ],
+    "locations": [
+      "Study desk"
+    ],
+    "casting": "Two students, casual dress",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Shifting the student's focus from degree labels to the tangible reality of specific module content.",
+    "shootingPriority": [
+      "Module lists",
+      "Close-up of comparison",
+      "Student reaction"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-09T09:52:46.752Z",
+  "updatedAt": "2026-11-09T09:52:46.752Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Discovery",
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-09T09:52:46.752Z"
+  }
+}

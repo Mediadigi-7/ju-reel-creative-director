@@ -1,0 +1,113 @@
+{
+  "hlni": [
+    {
+      "insight": "The most effective way to compare B.Com and BBA is to map actual course modules and assessment tasks rather than relying on assumed departmental labels.",
+      "audienceGap": "Students often rely on social stereotypes (e.g., B.Com = finance, BBA = strategy) which don't reflect actual institutional curricula.",
+      "viewerChange": "The student moves from passive guessing to active, evidence-based research using a comparative method.",
+      "supportType": "method",
+      "support": "Syllabuses vary significantly by institution; comparing specific module tasks helps identify personal fit based on learning style and interest.",
+      "references": [],
+      "shotNumbers": [
+        2
+      ],
+      "payoffShotNumbers": [
+        3
+      ],
+      "payoff": "The student gains confidence by recognizing that the 'best' degree is determined by individual curriculum alignment, not a fixed industry hierarchy."
+    }
+  ],
+  "id": "reel_1794217963685_959nxdlv",
+  "reelTitle": "B.Com vs BBA: Beyond the Stereotypes",
+  "creativeAngle": "Informative",
+  "objective": "Empower students to perform a practical syllabus comparison",
+  "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "SCENE",
+      "functions": [
+        "HOOK",
+        "PROBLEM"
+      ],
+      "name": "The Comparison Dilemma",
+      "timestamp": "00:00 – 00:07",
+      "visual": "Two students sitting in a library, looking at two different notebooks labeled 'B.Com' and 'BBA'.",
+      "dialogue": "Everyone says B.Com is for accounting and BBA is for strategy. But is it really that simple?",
+      "onscreenText": "B.Com vs BBA",
+      "cameraPerformance": "Close-up on the notebooks, then shifting to the student's confused expression.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "SCENE",
+      "functions": [
+        "VALUE"
+      ],
+      "name": "The Method Reveal",
+      "timestamp": "00:07 – 00:20",
+      "visual": "The student lays out two printed lists of modules side-by-side, drawing lines between similar topics with a pen.",
+      "dialogue": "Stop guessing. Compare the actual course modules. Check the core subjects, but also look at the specific assessment tasks for each. Do you prefer solving financial statements or designing business pitches?",
+      "onscreenText": "Compare Module Tasks",
+      "cameraPerformance": "Over-the-shoulder shot focusing on the act of mapping the modules.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "SCENE",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Payoff",
+      "timestamp": "00:20 – 00:28",
+      "visual": "Student smiles, holding one syllabus sheet clearly, feeling confident.",
+      "dialogue": "Curricula vary by school. Focus on what you’ll actually be doing every day, not just the labels.",
+      "onscreenText": "Choose by Content",
+      "cameraPerformance": "Medium shot, natural lighting, warm tone.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, authentic student environment",
+    "performance": "Natural, conversational",
+    "camera": "Handheld feel",
+    "editing": "Direct and clear",
+    "sound": "Ambient library noise",
+    "props": [
+      "Notebooks",
+      "Pens",
+      "Printed module lists"
+    ],
+    "locations": [
+      "University library"
+    ],
+    "casting": "Two students",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Shifting the focus from career assumptions to a practical, evidence-based method of comparing module content.",
+    "shootingPriority": [
+      "Module mapping demonstration",
+      "Student reaction"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-09T09:52:43.685Z",
+  "updatedAt": "2026-11-09T09:52:43.685Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Connection",
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-09T09:52:43.685Z"
+  }
+}

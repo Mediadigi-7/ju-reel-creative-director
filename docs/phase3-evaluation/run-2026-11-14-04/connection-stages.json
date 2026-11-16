@@ -1,0 +1,66 @@
+[
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 12330,
+    "remainingMs": 37669,
+    "at": "2026-11-14T08:48:58.635Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 1,
+    "remainingMs": 37668,
+    "at": "2026-11-14T08:48:58.636Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 1515,
+    "remainingMs": 36153,
+    "at": "2026-11-14T08:49:00.151Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 2,
+    "remainingMs": 36151,
+    "at": "2026-11-14T08:49:00.153Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "attempted",
+    "elapsedMs": 0,
+    "remainingMs": 36151,
+    "at": "2026-11-14T08:49:00.153Z"
+  },
+  {
+    "stage": "critique",
+    "outcome": "complete",
+    "elapsedMs": 3408,
+    "remainingMs": 32743,
+    "at": "2026-11-14T08:49:03.561Z"
+  },
+  {
+    "stage": "advisory_rewrite",
+    "outcome": "complete",
+    "elapsedMs": 4361,
+    "remainingMs": 28382,
+    "at": "2026-11-14T08:49:07.922Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Spoken pacing)",
+    "elapsedMs": 0,
+    "remainingMs": 28382,
+    "at": "2026-11-14T08:49:07.922Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "retained_valid_draft",
+    "category": "output_validation",
+    "elapsedMs": 0,
+    "remainingMs": 28382,
+    "at": "2026-11-14T08:49:07.922Z"
+  }
+]

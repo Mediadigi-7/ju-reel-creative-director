@@ -1,0 +1,155 @@
+# Connection — B.Com vs BBA: Finding Your Focus
+
+Fresh real Gemini output. Generated: 2026-11-09T10:57:21.078Z. Model: gemini-3.1-flash-lite. Requested treatment: Auto; chosen treatment: Informative. Target duration: 28 sec. Status: Draft; editorial evaluation pending.
+
+**Creative angle:** Using a personal sticking point to frame a meaningful question
+
+**Objective:** To help students move past the B.Com vs BBA label by identifying their specific area of curiosity
+
+**Audience:** +2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging
+
+## Shot 01 — The Overwhelmed Student
+
+- **Timecode:** 00:00 – 00:07
+- **Narrative-function tags (AI-supplied):** HOOK, PROBLEM
+- **Visual action:** Student sitting at a desk with two notebooks labeled B.Com and BBA, looking confused at a prompt.
+- **Dialogue / voiceover:** Stuck between B.Com and BBA? Don't let the labels stop you.
+- **Camera direction:** Close-up on the student's frustrated expression.
+- **On-screen graphic:** B.Com vs BBA?
+
+## Shot 02 — The Logic Puzzle
+
+- **Timecode:** 00:07 – 00:16
+- **Narrative-function tags (AI-supplied):** VALUE, PATTERN_INTERRUPT
+- **Visual action:** A notepad displays a simple logic puzzle. Student points to a specific step.
+- **Dialogue / voiceover:** Try this: Task: Allocate 5 units across 3 departments. Why does that rule exist?
+- **Camera direction:** Camera zooms in on the notepad task.
+- **On-screen graphic:** Task: Allocate 5 units across 3 departments.
+
+## Shot 03 — The Meaningful Question
+
+- **Timecode:** 00:16 – 00:28
+- **Narrative-function tags (AI-supplied):** PAYOFF, CTA
+- **Visual action:** Student writes a question in their journal and looks at the camera with clarity.
+- **Dialogue / voiceover:** Instead of choosing a degree, ask: Can you explain the logic behind these allocation rules? That's your next step.
+- **Camera direction:** Medium shot, student smiling confidently.
+- **On-screen graphic:** Can you explain the logic behind these allocation rules?
+
+## Selected concept — planned before shots
+
+```json
+{
+  "stage": "concept-before-story",
+  "selected": {
+    "id": "conn_journal_01",
+    "title": "The Sticking Point Journal",
+    "audienceGap": "Students feel overwhelmed by degree choices without knowing what they actually want to practice.",
+    "basisId": "task_question_journal",
+    "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+    "viewerChange": "Use a momentary sticking point to generate a productive inquiry.",
+    "concept": "A student working through a sample problem identifies a specific point where they need clarification.",
+    "mechanismKey": "sticking_point_log",
+    "device": "A handheld notepad capturing a student's live reaction to a task.",
+    "supportType": "method",
+    "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+    "evidenceNeeded": [],
+    "methodSteps": [
+      "Try or inspect a clearly illustrative task.",
+      "Record one point where you needed help and one question you want to investigate.",
+      "Turn the observation into a question for a real course brief or course team."
+    ],
+    "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+    "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+    "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+    "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+    "demonstration": {
+      "input": "A short logic puzzle regarding resource allocation.",
+      "visibleInput": "Task: Allocate 5 units across 3 departments.",
+      "observation": "The student records they are stuck on the 'why' behind the allocation rule.",
+      "nextQuestion": "Can you explain the logic behind these allocation rules?"
+    },
+    "treatment": "Funny"
+  },
+  "comparedWith": [
+    {
+      "channel": "Trust",
+      "id": "trust_assessment_01",
+      "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+      "mechanismKey": "decomposition_worksheet",
+      "device": "A split-screen view: one side shows a vague task, the other shows the three-column audit grid."
+    },
+    {
+      "channel": "Connection",
+      "id": "conn_journal_01",
+      "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+      "mechanismKey": "sticking_point_log",
+      "device": "A handheld notepad capturing a student's live reaction to a task."
+    },
+    {
+      "channel": "Discovery",
+      "id": "disc_insufficient_01",
+      "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+      "mechanismKey": "evidence_gap_check",
+      "device": "A 'Guess the Degree' game that forces a 'Not enough info' conclusion."
+    }
+  ],
+  "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / decomposition_worksheet; Connection = task_question_journal / sticking_point_log; Discovery = insufficient_information / evidence_gap_check. Each has an illustrative input, observable result and next question. This is not editorial approval."
+}
+```
+
+## Proposed HLNI — unverified editorial notes
+
+```json
+[
+  {
+    "insight": "A short illustrative activity reveals where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+    "audienceGap": "Students feel overwhelmed by degree choices without knowing what they actually want to practice.",
+    "viewerChange": "Use a momentary sticking point to generate a productive inquiry.",
+    "supportType": "method",
+    "support": "The observation belongs to this activity; it supports a specific inquiry rather than a general degree choice.",
+    "references": [],
+    "shotNumbers": [
+      2
+    ],
+    "payoffShotNumbers": [
+      3
+    ],
+    "payoff": "The student uses the sticking point to formulate a concrete question for academic guidance."
+  }
+]
+```
+
+## Production notes
+
+```json
+{
+  "visualStyle": "Clean, academic, relatable",
+  "performance": "Natural, calm, and thoughtful",
+  "camera": "Handheld feel to emphasize the student's personal process",
+  "editing": "Rhythmic cuts on the task discovery",
+  "sound": "Minimal ambient room sound",
+  "props": [
+    "Two notebooks",
+    "Pen",
+    "Notepad"
+  ],
+  "locations": [
+    "Study table"
+  ],
+  "casting": "A relatable student",
+  "complexity": "LOW"
+}
+```
+
+## Creative summary
+
+```json
+{
+  "keyCreativeIdea": "Shifting the student from comparing degree titles to identifying the actual logic they find interesting through a practical task.",
+  "shootingPriority": [
+    "The notepad close-up",
+    "The student's reaction",
+    "The final question reveal"
+  ]
+}
+```

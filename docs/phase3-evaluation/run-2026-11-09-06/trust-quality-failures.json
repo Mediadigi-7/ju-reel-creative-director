@@ -1,0 +1,521 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A degree title does not define daily assessment; an assessment audit reveals what is actually required.",
+          "audienceGap": "Students often choose between B.Com and BBA based on reputation or perceived stereotypes.",
+          "viewerChange": "The viewer stops guessing 'vibe' and learns to ask specific questions about evaluation criteria.",
+          "supportType": "method",
+          "support": "The method separates task definition from grading criteria, allowing for objective comparison of any program.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The student realizes the empty cell is an opportunity to ask for specific evaluation criteria, moving from passive decision-making to active inquiry."
+        }
+      ],
+      "id": "reel_1794220976128_cgyghr",
+      "reelTitle": "B.Com vs BBA: The Assessment Audit",
+      "creativeAngle": "Informative structural audit to bypass degree title stereotypes.",
+      "objective": "Equip students with a method to compare degree programs through assessment expectations rather than vague labels.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Blank Audit",
+          "timestamp": "00:00 – 00:08",
+          "visual": "A student looks at a three-column worksheet labeled 'Assessment Audit'. They write 'Task: Create a marketing budget' at the top.",
+          "dialogue": "Don't pick a degree by its name. Audit the actual work.",
+          "onscreenText": "Task: Create a marketing budget",
+          "cameraPerformance": "Close-up on hand writing on paper.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Column Mapping",
+          "timestamp": "00:08 – 00:18",
+          "visual": "The student fills the columns: 'Output?', 'What is graded?', 'Where is the feedback?'. They stare at the empty 'What is graded?' box.",
+          "dialogue": "Ask: What is the output? What is graded? And where is the feedback?",
+          "onscreenText": "What is the output? | What is graded? | Where is the feedback?",
+          "cameraPerformance": "Top-down view of the worksheet.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Precise Question",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Student circles the empty cell and looks directly at the camera.",
+          "dialogue": "If you don't know the answer, ask: What specific criteria do you use to grade this project?",
+          "onscreenText": "What specific criteria do you use to grade this project?",
+          "cameraPerformance": "Medium shot of student with the worksheet.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, educational, minimalist.",
+        "performance": "Natural, direct, and serious.",
+        "camera": "Stable, clear close-ups on the worksheet.",
+        "editing": "Steady pacing to allow for reading the on-screen text.",
+        "sound": "Ambient room noise, no music.",
+        "props": [
+          "Worksheet",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Student aged 17-18.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming the degree comparison from a label-matching exercise to an evidence-seeking inquiry using a standard assessment audit.",
+        "shootingPriority": [
+          "Close-up of the worksheet",
+          "Student reaction to the blank cell"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T10:42:56.128Z",
+      "updatedAt": "2026-11-09T10:42:56.129Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Belief that a degree name tells you exactly what you do daily.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Replaces guessing degree 'vibes' with identifying specific unknowns in assessment expectations.",
+          "concept": "A student reviews a generic 'Business Case' task and maps it against three assessment criteria.",
+          "mechanismKey": "assessment-matrix",
+          "device": "A split-screen showing a task title vs. a three-column tracker for product, criteria, and feedback.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "A worksheet comparing a generic business task across three columns.",
+            "visibleInput": "Task: Create a marketing budget. What is the output? What is graded? Where is the feedback?",
+            "observation": "Student identifies the 'what is graded' column is empty for their interest.",
+            "nextQuestion": "What specific criteria do you use to grade this project?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment-matrix",
+            "device": "A split-screen showing a task title vs. a three-column tracker for product, criteria, and feedback."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "journal-method",
+            "device": "A conversation between two friends over a notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing-evidence",
+            "device": "A game show-style reveal with a 'Not Enough Info' stamp."
+          }
+        ],
+        "contrast": "Trust uses a structural audit to clarify assessment expectations; Connection uses a peer journal to turn personal confusion into actionable inquiry; Discovery uses a logical challenge to debunk the myth that course titles alone define academic programs."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Gate 3 (Idea Fidelity & Entity Persistence)",
+      "failureReason": "Required core entity/topic \"B.Com\" disappeared from the generated script.",
+      "repairInstruction": "Preserve the core topic \"B.Com\" throughout the script. Do NOT replace the user's idea with an unrelated topic."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive.",
+          "audienceGap": "Students often choose between B.Com and BBA based on reputation or perceived stereotypes rather than actual academic requirements.",
+          "viewerChange": "The viewer stops guessing based on degree 'vibe' and learns to ask specific questions about evaluation criteria.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information: product, criteria, and feedback, enabling objective comparison regardless of degree name.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The student realizes that an empty cell is not a failure, but an opportunity to ask a precise, high-leverage question about the program's actual expectations."
+        }
+      ],
+      "id": "reel_1794220978881_0c81b4",
+      "reelTitle": "B.Com vs BBA: The Assessment Audit",
+      "creativeAngle": "Informative structural audit to bypass degree title stereotypes.",
+      "objective": "Equip students with a method to compare degree programs through assessment expectations rather than vague labels.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Blank Audit",
+          "timestamp": "00:00 – 00:08",
+          "visual": "A student looks at a worksheet. They write 'Task: Create a marketing budget' at the top.",
+          "dialogue": "Don't pick a degree by its label. Audit the actual work.",
+          "onscreenText": "Task: Create a marketing budget",
+          "cameraPerformance": "Close-up on hand writing on paper.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Column Mapping",
+          "timestamp": "00:08 – 00:18",
+          "visual": "Student fills columns: 'What is the output?', 'What is graded?', 'Where is the feedback?'. They look confused at the empty middle box.",
+          "dialogue": "Ask: What is the output? What is graded? Where is the feedback?",
+          "onscreenText": "What is the output? | What is graded? | Where is the feedback?",
+          "cameraPerformance": "Top-down view of the worksheet.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Precise Question",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Student circles the empty cell and looks at the camera.",
+          "dialogue": "If unsure, ask: What specific criteria do you use to grade this project?",
+          "onscreenText": "What specific criteria do you use to grade this project?",
+          "cameraPerformance": "Medium shot of student.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, educational, minimalist.",
+        "performance": "Natural, direct, and focused.",
+        "camera": "Stable, clear close-ups on the worksheet.",
+        "editing": "Steady pacing to allow for reading the text.",
+        "sound": "Ambient room noise, no music.",
+        "props": [
+          "Worksheet",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Student aged 17-18.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming the degree comparison from a label-matching exercise to an evidence-seeking inquiry.",
+        "shootingPriority": [
+          "Close-up of the worksheet",
+          "Student reaction to the blank cell"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T10:42:58.881Z",
+      "updatedAt": "2026-11-09T10:42:58.881Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Belief that a degree name tells you exactly what you do daily.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Replaces guessing degree 'vibes' with identifying specific unknowns in assessment expectations.",
+          "concept": "A student reviews a generic 'Business Case' task and maps it against three assessment criteria.",
+          "mechanismKey": "assessment-matrix",
+          "device": "A split-screen showing a task title vs. a three-column tracker for product, criteria, and feedback.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "A worksheet comparing a generic business task across three columns.",
+            "visibleInput": "Task: Create a marketing budget. What is the output? What is graded? Where is the feedback?",
+            "observation": "Student identifies the 'what is graded' column is empty for their interest.",
+            "nextQuestion": "What specific criteria do you use to grade this project?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment-matrix",
+            "device": "A split-screen showing a task title vs. a three-column tracker for product, criteria, and feedback."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "journal-method",
+            "device": "A conversation between two friends over a notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing-evidence",
+            "device": "A game show-style reveal with a 'Not Enough Info' stamp."
+          }
+        ],
+        "contrast": "Trust uses a structural audit to clarify assessment expectations; Connection uses a peer journal to turn personal confusion into actionable inquiry; Discovery uses a logical challenge to debunk the myth that course titles alone define academic programs."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Gate 3 (Idea Fidelity & Entity Persistence)",
+      "failureReason": "Required core entity/topic \"B.Com\" disappeared from the generated script.",
+      "repairInstruction": "Preserve the core topic \"B.Com\" throughout the script. Do NOT replace the user's idea with an unrelated topic."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A task label alone does not reveal what is assessed or how students receive feedback.",
+          "audienceGap": "Students often choose between B.Com and BBA based on reputation rather than academic reality.",
+          "viewerChange": "The viewer shifts from guessing based on degree 'vibe' to asking specific questions about evaluation criteria.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information: product, criteria, and feedback, enabling objective comparison regardless of degree name.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The student realizes that an empty cell is not a failure, but an opportunity to ask a precise, high-leverage question about the program's actual expectations."
+        }
+      ],
+      "id": "reel_1794220981524_pibapn",
+      "reelTitle": "B.Com vs BBA: The Assessment Audit",
+      "creativeAngle": "Informative structural audit to bypass degree title stereotypes.",
+      "objective": "Equip students with a method to compare B.Com and BBA degree programs through assessment expectations.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Blank Audit",
+          "timestamp": "00:00 – 00:07",
+          "visual": "Student sits at a desk, writing 'Task: Create a marketing budget' at the top of a sheet.",
+          "dialogue": "Don't pick B.Com or BBA by their labels. Audit the actual work.",
+          "onscreenText": "Task: Create a marketing budget",
+          "cameraPerformance": "Close-up on hand writing.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Column Mapping",
+          "timestamp": "00:07 – 00:19",
+          "visual": "Student fills columns: 'What is the output?', 'What is graded?', 'Where is the feedback?'. They pause, looking at the empty middle box.",
+          "dialogue": "Ask: What is the output? What is graded? Where is the feedback?",
+          "onscreenText": "What is the output? | What is graded? | Where is the feedback?",
+          "cameraPerformance": "Top-down view of the worksheet.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Precise Question",
+          "timestamp": "00:19 – 00:28",
+          "visual": "Student circles the empty cell and speaks directly to the camera.",
+          "dialogue": "If unsure, ask: What specific criteria do you use to grade this project?",
+          "onscreenText": "What specific criteria do you use to grade this project?",
+          "cameraPerformance": "Medium shot of student.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, educational, minimalist.",
+        "performance": "Natural, direct, and focused.",
+        "camera": "Stable, clear close-ups on the worksheet.",
+        "editing": "Steady pacing to allow for reading the text.",
+        "sound": "Ambient room noise, no music.",
+        "props": [
+          "Worksheet",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Student aged 17-18.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming the B.Com vs BBA comparison from a label-matching exercise to an evidence-seeking inquiry.",
+        "shootingPriority": [
+          "Close-up of the worksheet",
+          "Student reaction to the empty grading cell"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T10:43:01.524Z",
+      "updatedAt": "2026-11-09T10:43:01.524Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Belief that a degree name tells you exactly what you do daily.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Replaces guessing degree 'vibes' with identifying specific unknowns in assessment expectations.",
+          "concept": "A student reviews a generic 'Business Case' task and maps it against three assessment criteria.",
+          "mechanismKey": "assessment-matrix",
+          "device": "A split-screen showing a task title vs. a three-column tracker for product, criteria, and feedback.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "A worksheet comparing a generic business task across three columns.",
+            "visibleInput": "Task: Create a marketing budget. What is the output? What is graded? Where is the feedback?",
+            "observation": "Student identifies the 'what is graded' column is empty for their interest.",
+            "nextQuestion": "What specific criteria do you use to grade this project?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment-matrix",
+            "device": "A split-screen showing a task title vs. a three-column tracker for product, criteria, and feedback."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "journal-method",
+            "device": "A conversation between two friends over a notebook."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing-evidence",
+            "device": "A game show-style reveal with a 'Not Enough Info' stamp."
+          }
+        ],
+        "contrast": "Trust uses a structural audit to clarify assessment expectations; Connection uses a peer journal to turn personal confusion into actionable inquiry; Discovery uses a logical challenge to debunk the myth that course titles alone define academic programs."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Concept delivery",
+      "failureReason": "The actual sample input is missing from the story.",
+      "repairInstruction": "Show or speak this exact illustrative task/card text: Task: Create a marketing budget. What is the output? What is graded? Where is the feedback?. Preserve the recorded observation and resulting question; do not add a compulsory shot or engagement request."
+    }
+  }
+]

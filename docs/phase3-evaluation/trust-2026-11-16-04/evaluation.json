@@ -1,0 +1,115 @@
+{
+  "evaluatedAt": "2026-11-16T06:40:58.811Z",
+  "assessor": "Assistant editorial assessment of actual complete Gemini output; not generator self-score or independent blinded human review",
+  "ratingScale": "0–5",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": true,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 2,
+        "payoff": 2,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The official shared course row and document cohort remain useful and supported.",
+        "differentiation": "The explanatory evidence sequence serves Trust, with no fresh group comparison claimed.",
+        "coherence": "The student wants management but crosses out BBA for being about management; the shown evidence does not repair that inconsistent motive.",
+        "payoff": "The final verification checkbox does not visibly restore the excluded option as promised by the concept.",
+        "production": "Timecodes and source assets are workable, but the human action and programme scope need correction.",
+        "originality": "The red-cross-out motif gives some visual closure opportunity, which the actual ending does not complete."
+      },
+      "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+      "reasons": [
+        "Overall score is below 85/100."
+      ],
+      "revisions": [
+        "Align the student’s interest, excluded programme and evidence-supported reversal.",
+        "Show the specific option returning to a provisional shortlist, without claiming suitability or identical teaching."
+      ],
+      "total": 62,
+      "decision": "REVISE",
+      "sourceFile": "trust.json",
+      "sourceSha256": "3ac22f62f2f0278f39920131c6abc438baae35cf4395636a531d403011040123",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 60,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 11
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 10
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 10
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:18",
+            "seconds": 6,
+            "spokenWords": 10
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:18 – 00:24",
+            "seconds": 6,
+            "spokenWords": 11
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 8
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

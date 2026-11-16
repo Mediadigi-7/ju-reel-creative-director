@@ -1,0 +1,9 @@
+{
+  "assessor": "Assistant independent editorial reading of actual Gemini outputs; not generator self-scoring or application approval",
+  "ratingScale": "0 missing, 1 poor, 2 weak, 3 partial, 4 strong, 5 exceptional",
+  "methodology": "Read complete production fields and HLNI, then apply the unchanged weighted rubric. Metadata and AI critique are not proof of delivered quality. No generated scripts were manually edited. Academic source verification and recorded read-aloud remain pending.",
+  "nextStep": "Continue Phase 3A: bring planning, writing and the single advisory rewrite within the shared request budget, then obtain a fresh complete three-channel run and evaluate it unchanged. Do not retry unchanged provider failures, relax the 85 threshold, or advance to staging.",
+  "runSummary": "The final calibrated one-pass advisory review run timed out on Trust during the rewrite within the shared 50-second deadline. The runner stopped immediately; Connection and Discovery were not attempted. No complete storyboard or score is available for the current final implementation. The initial prompt-only run has all three complete actual scripts and independent scores, but cannot certify this later engine revision.",
+  "crossChannelFinding": "Cross-channel creative quality is unverified for the final implementation. The one-pass advisory review is not a model approval gate. Earlier repeated-review failures exposed misleading suggestions, which are now explicitly subordinate to the original topic and factual constraints. Timeout remains a material delivery reliability blocker.",
+  "assessments": []
+}

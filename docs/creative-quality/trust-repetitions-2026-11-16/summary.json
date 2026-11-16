@@ -1,0 +1,473 @@
+{
+  "sourceSha256": {
+    "server/channelConceptPlanner.ts": "fb5b2345ea69aebd05d5399f68540c8db05c8b0c5074fc74cca41144d0ddc7ef",
+    "shared/conceptQuality.ts": "9a4c1bbc8ddb3253fdb2aa62ef89de9ec1d97b47b23daee2fefdb7310f9a8a8f",
+    "shared/verifiedCreativeEvidence.ts": "1682e5d7bdd22d34f7480c562d8c60edb3b9f782e33163884217044f4bfe7bee",
+    "server/conceptQualityReview.ts": "5ce3ecdde345853576b9f6f2ba2a190df0796ab4c9f0175712e19d40fab9d176",
+    "server/channelComparison.ts": "93a19da11c2272480b5e4c6b7312b66a736e3fa04107e9e78097772c6c39875e",
+    "server/finishedStoryMemory.ts": "f91671912ab912d7ad8c571d5d2b99967e10b9fe534bc1364dff6e752374cd56",
+    "shared/narrativeStages.ts": "3787f2c6c4b514a9f6dedebce23c741cc07771c47e633ddca4b40bdf8addb6d4",
+    "server/informationIntegrity.ts": "9056fa864a9dc387f66d8974d3538a9ce6d272e5a055097b393e3283c1be1398",
+    "server/outputRepair.ts": "36b9a6c292f11363fef77061d262840c73d82eac051ec6f14896a42582de4969",
+    "server/aiService.ts": "329424e3986968f896225881d7e590032839748a18c2814f1d769855a31d0572",
+    "server/conceptPlanner.ts": "f49b6235851419f60222108714030111c0bf7d0a67d77201dae954559a396d02",
+    "server/providerClient.ts": "241d95c794e457bdea6bae5a47e194437f6f7fe6857ab930abd3051e9cb6f207",
+    "server/generationSchemas.ts": "ce9440280a3bbd3a451dd6ed47d2202a0f89ad2af513922f6ae437bea7025592",
+    "server/editorialReview.ts": "97a4d6e02298b45d318b1054a96745d15a1b7224cdd20012a5b06331f484d398",
+    "server/requestBudget.ts": "1e9d0d2c71c8df99310ad7a162e4399d6f5d0e6087d0a6e421c31e91c47da69c",
+    "server/requestCancellation.ts": "572d35f3f32dc88557ba63d3aceb5239de05ec96dae0006519c7273cd1e547d2",
+    "server/aiErrors.ts": "2c1401b385d1dfa1f37570a10f725b618f9bf6aca4ac9af5c238f79c76cb980d",
+    "server/index.ts": "3c30fef29c3783ff415e16c04c97b040637eb4e4e9cd8b584355864a4da48b17",
+    "api/index.ts": "5bc11a077a4accce6e2c8f312f5c9bba36c51e099f84ee1ce50f5eb7b6b36508",
+    "src/services/api.ts": "3855ccb0cca2ed470c1d6076ebb4f6fbfef7ff6050d764bfdb0724cf00c5de9a",
+    "shared/providers.ts": "47747c0b93159ab54a0f407a495570d4db60bddbb62214615dda6d2a1cecb92f",
+    "shared/concepts.ts": "e16ecda2523aa582a07db91c585858c13347d554197be4f73a27bf65241cd5bd",
+    "shared/reasoningTools.ts": "ee03ba1be92558e0a85b3c4db0f641920884ba7e67fc0d3186aa7c2d5899b1d1",
+    "server/freshnessEngine.ts": "9bb80afd1f839a071f7e18ff7cd32e61334cfea5728a712d777899aae1310d67",
+    "server/realityTrigger.ts": "e21a51d8cd46d753d0d1423e10156db5e6f29fd392a9e0cdf3e4c7fb560f7dc8",
+    "shared/creativeFramework.ts": "90c50bdb93d3287ccd45f7da0a1a06c80692a4b5a300cc9d9a2c08d96427c909",
+    "shared/hlni.ts": "7e0d7339e20ca4532f619e89a71d5173e28d14049388eb9b504a38bfb3271b99",
+    "shared/editorialBenchmarks.ts": "026a0b8c28ad2ed40e3d6663f2439b2183872ad7d33a13ee8ef199123c65bef1",
+    "shared/channels.ts": "4297dc7e6d16d6d36bf1552d7c03241dcd32dffc350607efbbac91d4d2afe3ca",
+    "shared/knowledgeBase.ts": "55e4926c4d4d31105d6a3519d05091bc1f239e914131aae17fecb6519ef8252e",
+    "shared/schema.ts": "2deaab7e54478eb16907745ea871e6350e40d1ce069f62f02dd9c8b4a8e7f46f",
+    "docs/creative-references/BCOM_VS_BBA_APPROVED.md": "f0516cb75a6bfe2800d8573945ef847907ba5ec39b9befb9c983933ca128d7e6"
+  },
+  "request": {
+    "channels": [
+      "Trust"
+    ],
+    "topic": "B.Com vs BBA",
+    "treatment": "Auto",
+    "language": "English",
+    "duration": "28 sec",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "diagnosticFunctionTags": true,
+    "narrativeContract": "six-stage-v2",
+    "qualityTarget": 90,
+    "conceptQualityContract": "story-spine-v1",
+    "totalTimeoutMs": 50000
+  },
+  "runs": [
+    "docs/phase3-evaluation/trust-2026-11-16-08",
+    "docs/phase3-evaluation/trust-2026-11-16-09",
+    "docs/phase3-evaluation/trust-2026-11-16-10"
+  ],
+  "stats": [
+    {
+      "channel": "Trust",
+      "planned": 3,
+      "generated": 2,
+      "scored": 2,
+      "editorialPass": 2,
+      "above90": 0,
+      "mean": 86,
+      "min": 86,
+      "max": 86,
+      "cases": [
+        {
+          "run": "docs/phase3-evaluation/trust-2026-11-16-08",
+          "generation": {
+            "channel": "Trust",
+            "status": "GENERATED",
+            "file": "trust.json",
+            "readableFile": "trust.md",
+            "shotCount": 6,
+            "elapsedMs": 20375,
+            "qualityRepairCount": 1,
+            "finalStatus": "Draft",
+            "warnings": [
+              "Optional advisory review did not complete (timeout). The validated Draft was retained; human editorial review is required."
+            ],
+            "stages": [
+              {
+                "stage": "channel_concept",
+                "outcome": "complete",
+                "elapsedMs": 5193,
+                "remainingMs": 44805,
+                "at": "2026-11-16T06:47:21.818Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 759,
+                "remainingMs": 44041,
+                "at": "2026-11-16T06:47:22.582Z"
+              },
+              {
+                "stage": "story",
+                "outcome": "complete",
+                "elapsedMs": 5056,
+                "remainingMs": 38984,
+                "at": "2026-11-16T06:47:27.639Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "Delivery (Scene pacing)",
+                "elapsedMs": 6,
+                "remainingMs": 38978,
+                "at": "2026-11-16T06:47:27.645Z"
+              },
+              {
+                "stage": "repair",
+                "outcome": "complete",
+                "elapsedMs": 1334,
+                "remainingMs": 37644,
+                "at": "2026-11-16T06:47:28.979Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "passed",
+                "elapsedMs": 2,
+                "remainingMs": 37642,
+                "at": "2026-11-16T06:47:28.981Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "attempted",
+                "elapsedMs": 0,
+                "remainingMs": 37642,
+                "at": "2026-11-16T06:47:28.981Z"
+              },
+              {
+                "stage": "critique",
+                "outcome": "error",
+                "category": "timeout",
+                "elapsedMs": 8009,
+                "remainingMs": 29633,
+                "at": "2026-11-16T06:47:36.990Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "retained_valid_draft",
+                "category": "timeout",
+                "elapsedMs": 0,
+                "remainingMs": 29633,
+                "at": "2026-11-16T06:47:36.990Z"
+              }
+            ]
+          },
+          "assessment": {
+            "channel": "Trust",
+            "ratings": {
+              "hlni": 4,
+              "differentiation": 4,
+              "coherence": 5,
+              "payoff": 5,
+              "production": 4,
+              "originality": 3
+            },
+            "triggers": {
+              "materialFactualError": false,
+              "missingMeaningfulInsight": false,
+              "unworkableProduction": false
+            },
+            "evidence": {
+              "hlni": "The inspected shared management-course title corrects the accounting-only belief. Exact programme/cohort scope is supported by the cited sources; make the specialisation labels readable in source footage.",
+              "differentiation": "The evidence-led correction is recognisably Trust. No fresh three-channel comparison or broader topic generalisation is claimed.",
+              "coherence": "The student excludes B.Com, sees the supplied management-course row, and restores that same option. The original motive and action remain connected throughout.",
+              "payoff": "The rejected option visibly returns to an investigation/pending/provisional list. This corrects the particular exclusion without treating shared titles as equivalent teaching or selecting a final degree.",
+              "production": "Six practical timed scenes, source-document inserts and concise speech. Hold exact programme/version labels and clarify source cropping before filming. Estimated pacing is not a recorded read-aloud.",
+              "originality": "The folder/post-it shortlist reversal is clear but familiar rather than highly novel."
+            },
+            "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+            "reasons": [],
+            "revisions": [
+              "Hold exact programme names and the cohort visibly on the source inserts.",
+              "Show the restored option as provisional and leave unsupplied assessment/depth fields unknown.",
+              "Any comparison cells beyond the one inspected row need verification rather than invented module names."
+            ],
+            "total": 86,
+            "decision": "PASS",
+            "sourceFile": "trust.json",
+            "sourceSha256": "24fad76ed9e353fb2986e67dfb1a39fe14753f29cfe1ced6bfce3cfe2f1c01d2",
+            "productionMetrics": {
+              "shotCount": 6,
+              "chosenTreatment": "Informative",
+              "totalSpokenWords": 43,
+              "shots": [
+                {
+                  "number": 1,
+                  "functions": [
+                    "HOOK"
+                  ],
+                  "timecode": "00:00 – 00:04",
+                  "seconds": 4,
+                  "spokenWords": 7
+                },
+                {
+                  "number": 2,
+                  "functions": [
+                    "PROBLEM"
+                  ],
+                  "timecode": "00:04 – 00:08",
+                  "seconds": 4,
+                  "spokenWords": 7
+                },
+                {
+                  "number": 3,
+                  "functions": [
+                    "PATTERN_INTERRUPT"
+                  ],
+                  "timecode": "00:08 – 00:13",
+                  "seconds": 5,
+                  "spokenWords": 7
+                },
+                {
+                  "number": 4,
+                  "functions": [
+                    "VALUE"
+                  ],
+                  "timecode": "00:13 – 00:19",
+                  "seconds": 6,
+                  "spokenWords": 7
+                },
+                {
+                  "number": 5,
+                  "functions": [
+                    "PAYOFF"
+                  ],
+                  "timecode": "00:19 – 00:24",
+                  "seconds": 5,
+                  "spokenWords": 8
+                },
+                {
+                  "number": 6,
+                  "functions": [
+                    "CTA"
+                  ],
+                  "timecode": "00:24 – 00:28",
+                  "seconds": 4,
+                  "spokenWords": 7
+                }
+              ]
+            }
+          }
+        },
+        {
+          "run": "docs/phase3-evaluation/trust-2026-11-16-09",
+          "generation": {
+            "channel": "Trust",
+            "status": "FAILED",
+            "category": "output_validation",
+            "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+            "elapsedMs": 13781,
+            "finalStatus": "error",
+            "stages": [
+              {
+                "stage": "channel_concept",
+                "outcome": "complete",
+                "elapsedMs": 5760,
+                "remainingMs": 44236,
+                "at": "2026-11-16T06:47:43.335Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 2210,
+                "remainingMs": 42020,
+                "at": "2026-11-16T06:47:45.551Z"
+              },
+              {
+                "stage": "channel_concept",
+                "outcome": "complete",
+                "elapsedMs": 4701,
+                "remainingMs": 37318,
+                "at": "2026-11-16T06:47:50.253Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 1096,
+                "remainingMs": 36221,
+                "at": "2026-11-16T06:47:51.351Z"
+              }
+            ]
+          }
+        },
+        {
+          "run": "docs/phase3-evaluation/trust-2026-11-16-10",
+          "generation": {
+            "channel": "Trust",
+            "status": "GENERATED",
+            "file": "trust.json",
+            "readableFile": "trust.md",
+            "shotCount": 6,
+            "elapsedMs": 15605,
+            "qualityRepairCount": 2,
+            "finalStatus": "Draft",
+            "warnings": [
+              "The optional advisory rewrite failed output checks. The validated initial Draft was retained; human editorial review is required."
+            ],
+            "stages": [
+              {
+                "stage": "channel_concept",
+                "outcome": "complete",
+                "elapsedMs": 4575,
+                "remainingMs": 45423,
+                "at": "2026-11-16T06:47:56.114Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 704,
+                "remainingMs": 44715,
+                "at": "2026-11-16T06:47:56.822Z"
+              },
+              {
+                "stage": "story",
+                "outcome": "complete",
+                "elapsedMs": 4280,
+                "remainingMs": 40435,
+                "at": "2026-11-16T06:48:01.102Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "passed",
+                "elapsedMs": 4,
+                "remainingMs": 40431,
+                "at": "2026-11-16T06:48:01.106Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "attempted",
+                "elapsedMs": 0,
+                "remainingMs": 40431,
+                "at": "2026-11-16T06:48:01.106Z"
+              },
+              {
+                "stage": "critique",
+                "outcome": "complete",
+                "elapsedMs": 1527,
+                "remainingMs": 38904,
+                "at": "2026-11-16T06:48:02.633Z"
+              },
+              {
+                "stage": "advisory_rewrite",
+                "outcome": "complete",
+                "elapsedMs": 4505,
+                "remainingMs": 34399,
+                "at": "2026-11-16T06:48:07.138Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "Delivery (Scene pacing)",
+                "elapsedMs": 1,
+                "remainingMs": 34398,
+                "at": "2026-11-16T06:48:07.139Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "retained_valid_draft",
+                "category": "output_validation",
+                "elapsedMs": 0,
+                "remainingMs": 34398,
+                "at": "2026-11-16T06:48:07.139Z"
+              }
+            ]
+          },
+          "assessment": {
+            "channel": "Trust",
+            "ratings": {
+              "hlni": 4,
+              "differentiation": 4,
+              "coherence": 5,
+              "payoff": 5,
+              "production": 4,
+              "originality": 3
+            },
+            "triggers": {
+              "materialFactualError": false,
+              "missingMeaningfulInsight": false,
+              "unworkableProduction": false
+            },
+            "evidence": {
+              "hlni": "The inspected shared management-course title corrects the accounting-only belief. Exact programme/cohort scope is supported by the cited sources; make the specialisation labels readable in source footage.",
+              "differentiation": "The evidence-led correction is recognisably Trust. No fresh three-channel comparison or broader topic generalisation is claimed.",
+              "coherence": "The student excludes B.Com, sees the supplied management-course row, and restores that same option. The original motive and action remain connected throughout.",
+              "payoff": "The rejected option visibly returns to an investigation/pending/provisional list. This corrects the particular exclusion without treating shared titles as equivalent teaching or selecting a final degree.",
+              "production": "Six practical timed scenes, source-document inserts and concise speech. Hold exact programme/version labels and clarify source cropping before filming. Estimated pacing is not a recorded read-aloud.",
+              "originality": "The folder/post-it shortlist reversal is clear but familiar rather than highly novel."
+            },
+            "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+            "reasons": [],
+            "revisions": [
+              "Hold exact programme names and the cohort visibly on the source inserts.",
+              "Show the restored option as provisional and leave unsupplied assessment/depth fields unknown.",
+              "Any comparison cells beyond the one inspected row need verification rather than invented module names."
+            ],
+            "total": 86,
+            "decision": "PASS",
+            "sourceFile": "trust.json",
+            "sourceSha256": "d141ee5d8b043541e3ff19cb7c2591623667d1a0297cd88df3db1d84517ff0b2",
+            "productionMetrics": {
+              "shotCount": 6,
+              "chosenTreatment": "Informative",
+              "totalSpokenWords": 57,
+              "shots": [
+                {
+                  "number": 1,
+                  "functions": [
+                    "HOOK"
+                  ],
+                  "timecode": "00:00 – 00:04",
+                  "seconds": 4,
+                  "spokenWords": 12
+                },
+                {
+                  "number": 2,
+                  "functions": [
+                    "PROBLEM"
+                  ],
+                  "timecode": "00:04 – 00:08",
+                  "seconds": 4,
+                  "spokenWords": 10
+                },
+                {
+                  "number": 3,
+                  "functions": [
+                    "PATTERN_INTERRUPT"
+                  ],
+                  "timecode": "00:08 – 00:12",
+                  "seconds": 4,
+                  "spokenWords": 7
+                },
+                {
+                  "number": 4,
+                  "functions": [
+                    "VALUE"
+                  ],
+                  "timecode": "00:12 – 00:19",
+                  "seconds": 7,
+                  "spokenWords": 12
+                },
+                {
+                  "number": 5,
+                  "functions": [
+                    "PAYOFF"
+                  ],
+                  "timecode": "00:19 – 00:24",
+                  "seconds": 5,
+                  "spokenWords": 10
+                },
+                {
+                  "number": 6,
+                  "functions": [
+                    "CTA"
+                  ],
+                  "timecode": "00:24 – 00:28",
+                  "seconds": 4,
+                  "spokenWords": 6
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "note": "Scores are assistant editorial judgements. Unavailable outputs are unscored, not assigned zero. Means cover scored outputs only and can be biased by generation failures. Repetitions test the combined implementation, not causal contribution of each change. No independent blinded human panel or audience test.",
+  "stagingDeployed": false,
+  "productionChanged": false
+}

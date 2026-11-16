@@ -1,0 +1,24 @@
+[
+  {
+    "stage": "channel_concept",
+    "outcome": "complete",
+    "elapsedMs": 4711,
+    "remainingMs": 45287,
+    "at": "2026-11-16T07:02:11.319Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 762,
+    "remainingMs": 44516,
+    "at": "2026-11-16T07:02:12.089Z"
+  },
+  {
+    "stage": "story",
+    "outcome": "error",
+    "category": "provider_unavailable",
+    "elapsedMs": 4602,
+    "remainingMs": 39913,
+    "at": "2026-11-16T07:02:16.692Z"
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "assessor": "Assistant editorial assessment of complete actual Gemini outputs; no generator self-score or human approval",
+  "ratingScale": "0\u20135",
+  "methodology": "The complete generated production fields and approved benchmark distinctions were inspected. This is a partial run: only Trust and Discovery returned validated storyboards. Rejected Connection candidates are retained but are not scored. No recorded read-aloud or external source audit was performed.",
+  "runSummary": "Trust and Discovery returned six ordered primary stages and one final CTA. Connection exhausted bounded output repairs on pacing. This run predates the subsequent drafting-headroom and conflicting-advice fixes; see run-2026-11-14-03 for final-source validation.",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 3,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 4 distinguishes a task from its marking criteria, but omits the third feedback column and never demonstrates how a criterion changes preparation.",
+        "differentiation": "An explanatory worksheet fits Trust but lacks the practical worked comparison promised by the approved benchmark.",
+        "coherence": "The same assessment question progresses across all six stages.",
+        "payoff": "Shot 5 circles an unknown and restates the question; it does not demonstrate why the answer changes the student\u2019s action.",
+        "production": "Six timed shots and shootable inserts; Analyze variance is unexplained, and shot 4 recites worksheet punctuation instead of natural student speech.",
+        "originality": "The title trap and audit checklist remain familiar."
+      },
+      "automaticTriggerExplanation": "No proven material factual error or impossible production instruction. A useful partial insight exists; independent HLNI and differentiation floors fail.",
+      "reasons": [
+        "The six-stage structure passes but does not establish 90+ creative quality.",
+        "The full assessment method and meaningful decision consequence remain incomplete."
+      ],
+      "revisions": [
+        "Use an accessible, clearly hypothetical academic task and show all three audit columns.",
+        "Make the criterion change a visible preparation choice, without assigning invented tasks to a real degree.",
+        "Keep form labels on screen and use natural spoken explanation."
+      ]
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 4,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The missing-source reveal is useful, but \u201cWithout a syllabus source, it\u2019s not a fact\u201d confuses absent evidence in the example with falsity or universal source requirements.",
+        "differentiation": "The unlabeled task challenge and evidence-gap reveal differ from the Trust worksheet. Connection was unavailable, so full three-channel differentiation remains unverified.",
+        "coherence": "The challenge, missing evidence and resulting question stay connected to B.Com vs BBA.",
+        "payoff": "The final source question is relevant but does not demonstrate institution/programme/version scope or a concrete decision consequence.",
+        "production": "Six shootable shots, but the opening uses the entire four-second speech allowance, and the whiteboard\u2019s empty columns/checkmark add no information.",
+        "originality": "A recognizable quiz reveal, without a particularly original execution."
+      },
+      "automaticTriggerExplanation": "No external factual audit was performed. The source-language overstatement needs revision; it is not labelled a proven material curriculum error.",
+      "reasons": [
+        "The insight is partially useful but needs epistemic precision and a stronger consequence.",
+        "Six ordered stage labels do not satisfy the HLNI floor or the 90+ target."
+      ],
+      "revisions": [
+        "Say the card does not provide enough information to assign the task to either degree, rather than declaring it is not a fact.",
+        "Show a scoped source request identifying institution, programme and document version.",
+        "Replace the empty whiteboard action with a visible correction of the opening guess."
+      ]
+    }
+  ],
+  "crossChannelFinding": "Both complete outputs cover the six required stages. Trust remains worksheet-led; Discovery uses a task challenge. Full three-channel comparison cannot pass without Connection. The accepted drafts retain weak demonstrated consequences and production-language problems.",
+  "nextStep": "Keep the 85/100 acceptance floor and HLNI/differentiation floors unchanged, with >90 as the improvement target. Do not deploy based on structure alone. Preserve these attempts and validate final-source generation separately."
+}

@@ -1,0 +1,48 @@
+{
+  "assessor": "Assistant editorial review of actual delivered outputs; not generator self-scoring or application approval",
+  "ratingScale": "0 missing, 1 poor, 2 weak, 3 partial, 4 strong, 5 exceptional",
+  "methodology": "This run uses the repaired concept-first engine: candidates are proposed and grounded in bounded reasoning tools; compatible selections are compared before one chosen concept is sent to the writer. The writer receives only its selected channel benchmark. Gemini uses structured response schemas. Scores below are editorial judgements on delivered stories, not scores for the planner's metadata. Source/output files are unchanged.",
+  "runSummary": "Trust and Connection produced complete three-shot Informative storyboards with real example inputs and resulting questions. Discovery was rejected after bounded topic-fidelity repairs because B.Com disappeared from the actual production content; it has no delivered storyboard or creative score. Concept selection is no longer locked to the same module-comparison method, but this run does not meet Phase 3 acceptance.",
+  "crossChannelFinding": "The selected insights now differ: assessment-question auditing, preference-versus-requirement checking, and an aggregate counterexample. The available stories are more operational than baseline run 01: each shows an example and asks a specific resulting question. However, Trust and Connection still lean on similar lone-student/checklist execution, Connection confuses prerequisites with core/elective status, and Discovery failed topic retention. Distinct planning metadata is not sufficient evidence of distinct, strong finished stories.",
+  "nextStep": "Keep the concept-first architecture. Next improve writer delivery: retain the named comparison while keeping illustrative data neutral; simplify examples and terminology for +2 viewers; make the Connection experience arise through a specific human situation and a usable tool. Re-evaluate complete outputs using the same thresholds. No score is assigned to the rejected Discovery drafts, and no staging deployment is authorized.",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {"hlni": 4, "differentiation": 3, "coherence": 4, "payoff": 4, "production": 3, "originality": 3},
+      "triggers": {"materialFactualError": false, "missingMeaningfulInsight": false, "unworkableProduction": false},
+      "evidence": {
+        "hlni": "Shots 2–3 now separate task, grading and feedback, then use unknown cells to ask a precise assessment question. The example is labelled Example and makes no verified degree-content claim. This is a usable question-forming method, stronger than the baseline's check-the-module advice.",
+        "differentiation": "The assessment audit is a different reasoning basis from Connection's preference check, but both finished stories still show an uncertain student at a desk, a checklist and a direct question. Three-way differentiation is unverified because Discovery was not delivered.",
+        "coherence": "The title-based choice problem leads to an audit and a question about grading. The sequence is connected; it could better show why grading and feedback are distinct rather than reciting fields.",
+        "payoff": "Shot 3 supplies the concrete question What specific criteria do you use to grade this submission? It follows from an unanswered criterion cell and gives a relevant next action without diagnosing degree fit.",
+        "production": "Fields/timecodes are complete and consecutive. Worksheet assets are feasible, but Analyze Q3 financial variance is specialist language for a broad +2 audience, and the graphic/voiceover load in Shot 2 needs a natural read-aloud and phone-size legibility check.",
+        "originality": "The selected audit is more specific than the old module-matching idea, but desk/brochure/confused-student staging and a three-column worksheet remain familiar and close to the reference device."
+      },
+      "automaticTriggerExplanation": "No hard trigger asserted: a meaningful bounded method is present, no material factual falsehood was established, and filming is feasible. Revision is required because the total and differentiation floor are not met.",
+      "revisions": [
+        "Shot 2: use a +2-friendly illustrative task, such as making a short shop poster or explaining a simple chart; show one known work product and one clearly missing assessment criterion.",
+        "Connect the empty criterion to the final question on screen, so the viewer sees what the audit changes rather than only hearing the three headings.",
+        "Choose a fresh evidence/question-testing execution that is more distinct from Connection's checklist. Do not force a new shot count, function order or treatment."
+      ]
+    },
+    {
+      "channel": "Connection",
+      "ratings": {"hlni": 3, "differentiation": 3, "coherence": 3, "payoff": 3, "production": 4, "originality": 3},
+      "triggers": {"materialFactualError": false, "missingMeaningfulInsight": false, "unworkableProduction": false},
+      "evidence": {
+        "hlni": "The script makes a useful partial distinction between liking a topic and verifying its role in a programme. However, its graphic asks for a Required prerequisite while the dialogue asks core subject versus elective. Those are different checks, so the practical method is not clear enough for 4/5.",
+        "differentiation": "The planned constraint-check basis differs from Trust's assessment audit, but the finished device is again a lone student, labelled degree cards, a checklist and a direct question. A specific personal situation or human exchange is not developed; a second actor itself is not required.",
+        "coherence": "Preference versus availability is a coherent starting tension, but the switch between prerequisites, required subjects and elective choice blurs the progression.",
+        "payoff": "The exact resulting question is delivered, but it does not resolve which unknown was recorded in the prerequisite cell. The viewer needs one consistent investigation to carry through.",
+        "production": "The cards and checklist are simple, the source is visibly labelled Example, and the production fields/timecodes are complete. A timed read-aloud remains necessary, but there is no impossible production instruction.",
+        "originality": "The interest-versus-confirmation angle is more specific than generic reassurance, while the worried-student-to-confident-nod execution remains familiar."
+      },
+      "automaticTriggerExplanation": "No hard trigger asserted: the interest-checking idea is partially useful, no actual institution's rules are asserted, and production is feasible. It fails total, HLNI and differentiation thresholds. The confusing terminology requires revision rather than being labelled a proven material factual error.",
+      "revisions": [
+        "Choose one unknown: whether the desired subject is compulsory/elective/available, or whether an actual entry requirement is satisfied. Do not mix those questions.",
+        "Make a concrete student's preference create an observable question or interaction, then show how checking the answer changes the next action. A personal exchange, experiment or another genuine human device can work; none is a mandatory template.",
+        "Replace the generic confident nod with the consistent result of the chosen check. Preserve the limited claim: preference alone does not confirm availability or suitability."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "One unlabeled example does not prove which category or programme contains it.",
+          "audienceGap": "Students assume that a specific business task (like accounting or marketing) identifies the degree program.",
+          "viewerChange": "Realizes that tasks exist in both degrees and cannot be used to classify a program without an official source.",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The story demonstrates that by identifying the missing link, the student stops guessing and starts asking for evidence."
+        }
+      ],
+      "id": "reel_1794457059649_0rhi3o",
+      "reelTitle": "The Unlabeled Task Challenge",
+      "creativeAngle": "A rapid-fire game exposing the absurdity of guessing degree programs based on single tasks.",
+      "objective": "Teach students to demand institutional evidence rather than relying on stereotypes when comparing B.Com and BBA.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Funny",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Guessing Game",
+          "timestamp": "00:00 – 00:08",
+          "visual": "A student holds a card with 'Profit Calc' on it, looking confused between two signs labeled 'B.Com' and 'BBA'.",
+          "dialogue": "Think B.Com or BBA? Let’s play a guessing game.",
+          "onscreenText": "Example: Task: Profit Calc. | Source: ? | Degree: ?",
+          "cameraPerformance": "Close-up, fast cuts.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Reveal",
+          "timestamp": "00:08 – 00:20",
+          "visual": "The student taps the question mark on the card, revealing it as an empty space.",
+          "dialogue": "Stop. There is no official source here linking this task to either degree. You cannot classify a program without one.",
+          "onscreenText": "Insufficient Information",
+          "cameraPerformance": "Slow zoom in on the card.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "CTA",
+          "functions": [
+            "PAYOFF",
+            "CTA"
+          ],
+          "name": "The Better Question",
+          "timestamp": "00:20 – 00:28",
+          "visual": "Student looks directly at the camera, holding the card up.",
+          "dialogue": "Don’t guess. Ask: What official source links this task to this specific degree?",
+          "onscreenText": "What official source links this task to this specific degree?",
+          "cameraPerformance": "Eye-level, stable shot.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Fast-paced, minimalist aesthetic with clear typography.",
+        "performance": "Energetic but grounded and analytical.",
+        "camera": "Handheld for the hook, static for the reveal.",
+        "editing": "Sharp, rhythm-based cuts.",
+        "sound": "Subtle game-show sound effects.",
+        "props": [
+          "Two signs labeled B.Com and BBA",
+          "Flashcard with the task written on it"
+        ],
+        "locations": [
+          "A clean, bright study desk"
+        ],
+        "casting": "One relatable +2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Demonstrate that single tasks are insufficient for program classification, shifting the student's focus from stereotypes to seeking verifiable evidence.",
+        "shootingPriority": [
+          "The reveal of the missing source",
+          "The final question delivery"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:17:39.649Z",
+      "updatedAt": "2026-11-12T04:17:39.649Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_01",
+          "title": "The Unlabeled Task Challenge",
+          "audienceGap": "Students assume that a specific business task (like accounting or marketing) identifies the degree program.",
+          "basisId": "insufficient_information",
+          "requiredConclusion": "Not enough information",
+          "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+          "viewerChange": "Realizes that tasks exist in both degrees and cannot be used to classify a program without an official source.",
+          "concept": "A rapid-fire game where the student tries to guess the degree for a task and fails due to missing evidence.",
+          "mechanismKey": "missing_link_reveal",
+          "device": "Decision puzzle",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Present one example without a source linking it to a category.",
+            "Separate a plausible guess from what the available information proves.",
+            "Identify the exact missing source or information needed to decide."
+          ],
+          "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "visibleProof": "A forced-choice guess is replaced by a justified third answer and a precise request for missing evidence.",
+          "payoff": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+          "demonstration": {
+            "input": "A task: 'Calculate the profit margin for a small business'",
+            "visibleInput": "Example: Task: Profit Calc. | Source: ? | Degree: ?",
+            "observation": "No supplied source connects this example to either category; the supported result is insufficient information.",
+            "nextQuestion": "What official source links this task to this specific degree?"
+          },
+          "treatment": "Funny"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment_audit",
+            "device": "Split-screen worksheet"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "sticking_point_log",
+            "device": "Side-by-side sticky notes"
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_link_reveal",
+            "device": "Decision puzzle"
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / assessment_audit; Connection = task_question_journal / sticking_point_log; Discovery = insufficient_information / missing_link_reveal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "fidelity: In shot 1, the signs are labeled 'B.Com' and 'BBA' which are specific degree titles, contradicting the instruction not to invent institutional facts or aptitude predictions. Revision: Replace 'B.Com' and 'BBA' with generic placeholder labels like 'Program A' and 'Program B' to avoid implying specific institutional knowledge. payoff: The CTA in shot 3 functions primarily as a checklist instruction rather than illustrating the method in action. Revision: Show the student writing 'Source?' on a notepad or sticky note to demonstrate the method of identifying the missing link rather than just stating the question.",
+      "repairInstruction": "fidelity: In shot 1, the signs are labeled 'B.Com' and 'BBA' which are specific degree titles, contradicting the instruction not to invent institutional facts or aptitude predictions. Revision: Replace 'B.Com' and 'BBA' with generic placeholder labels like 'Program A' and 'Program B' to avoid implying specific institutional knowledge.\npayoff: The CTA in shot 3 functions primarily as a checklist instruction rather than illustrating the method in action. Revision: Show the student writing 'Source?' on a notepad or sticky note to demonstrate the method of identifying the missing link rather than just stating the question."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "One unlabeled example does not prove which category or programme contains it.",
+          "audienceGap": "Students assume that a specific business task (like accounting or marketing) identifies the degree program.",
+          "viewerChange": "Realizes that tasks exist in both degrees and cannot be used to classify a program without an official source.",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The story demonstrates that by identifying the missing link, the student stops guessing and starts asking for evidence."
+        }
+      ],
+      "id": "reel_1794457063883_452sax",
+      "reelTitle": "The Unlabeled Task Challenge",
+      "creativeAngle": "A rapid-fire game exposing the absurdity of guessing degree programs based on single tasks.",
+      "objective": "Teach students to demand institutional evidence rather than relying on stereotypes when comparing B.Com and BBA.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Funny",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Guessing Game",
+          "timestamp": "00:00 – 00:08",
+          "visual": "A student holds a card with 'Profit Calc' on it, looking confused between two signs labeled 'Program A' and 'Program B'.",
+          "dialogue": "Trying to pick between B.Com or BBA? Let's play a guessing game.",
+          "onscreenText": "Example: Task: Profit Calc. | Source: ? | Degree: ?",
+          "cameraPerformance": "Close-up, energetic movement.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Reveal",
+          "timestamp": "00:08 – 00:20",
+          "visual": "The student taps the question mark on the card, then writes 'Source?' on a sticky note and pastes it over the card.",
+          "dialogue": "Stop. There is no official source here linking this task to either degree. You cannot classify a program without one.",
+          "onscreenText": "Insufficient Information",
+          "cameraPerformance": "Slow zoom in on the student's hand writing.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Better Question",
+          "timestamp": "00:20 – 00:28",
+          "visual": "Student looks directly at the camera, holding the card with the sticky note.",
+          "dialogue": "Don’t guess. Ask: What official source links this task to this specific degree?",
+          "onscreenText": "What official source links this task to this specific degree?",
+          "cameraPerformance": "Eye-level, stable shot.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Fast-paced, minimalist aesthetic with clear typography.",
+        "performance": "Energetic but grounded and analytical.",
+        "camera": "Handheld for the hook, static for the reveal.",
+        "editing": "Sharp, rhythm-based cuts.",
+        "sound": "Subtle game-show sound effects.",
+        "props": [
+          "Two signs labeled Program A and Program B",
+          "Flashcard with the task written on it",
+          "Sticky notes and marker"
+        ],
+        "locations": [
+          "A clean, bright study desk"
+        ],
+        "casting": "One relatable +2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Demonstrate that single tasks are insufficient for program classification, shifting the student's focus from stereotypes to seeking verifiable evidence.",
+        "shootingPriority": [
+          "The writing of the Source? sticky note",
+          "The final question delivery"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:17:43.883Z",
+      "updatedAt": "2026-11-12T04:17:43.883Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_01",
+          "title": "The Unlabeled Task Challenge",
+          "audienceGap": "Students assume that a specific business task (like accounting or marketing) identifies the degree program.",
+          "basisId": "insufficient_information",
+          "requiredConclusion": "Not enough information",
+          "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+          "viewerChange": "Realizes that tasks exist in both degrees and cannot be used to classify a program without an official source.",
+          "concept": "A rapid-fire game where the student tries to guess the degree for a task and fails due to missing evidence.",
+          "mechanismKey": "missing_link_reveal",
+          "device": "Decision puzzle",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Present one example without a source linking it to a category.",
+            "Separate a plausible guess from what the available information proves.",
+            "Identify the exact missing source or information needed to decide."
+          ],
+          "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "visibleProof": "A forced-choice guess is replaced by a justified third answer and a precise request for missing evidence.",
+          "payoff": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+          "demonstration": {
+            "input": "A task: 'Calculate the profit margin for a small business'",
+            "visibleInput": "Example: Task: Profit Calc. | Source: ? | Degree: ?",
+            "observation": "No supplied source connects this example to either category; the supported result is insufficient information.",
+            "nextQuestion": "What official source links this task to this specific degree?"
+          },
+          "treatment": "Funny"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment_audit",
+            "device": "Split-screen worksheet"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "sticking_point_log",
+            "device": "Side-by-side sticky notes"
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_link_reveal",
+            "device": "Decision puzzle"
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / assessment_audit; Connection = task_question_journal / sticking_point_log; Discovery = insufficient_information / missing_link_reveal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: Shot 1 introduces the comparison as 'B.Com or BBA' but the remaining shots do not maintain these specific subjects as the focus of the reveal. Revision: Include the labels 'B.Com' and 'BBA' in the onscreen text or visual assets throughout the sequence to keep the comparison subjects relevant. insight: The transition from the 'guessing game' to the 'insufficient information' conclusion lacks a specific demonstration of why the task is ambiguous beyond the narrator stating it. Revision: Add a quick visual insert in Shot 2 showing a side-by-side comparison of a B.Com and BBA course catalog snippet that both contain similar profit calculation tasks to visually prove the ambiguity.",
+      "repairInstruction": "integrity: Shot 1 introduces the comparison as 'B.Com or BBA' but the remaining shots do not maintain these specific subjects as the focus of the reveal. Revision: Include the labels 'B.Com' and 'BBA' in the onscreen text or visual assets throughout the sequence to keep the comparison subjects relevant.\ninsight: The transition from the 'guessing game' to the 'insufficient information' conclusion lacks a specific demonstration of why the task is ambiguous beyond the narrator stating it. Revision: Add a quick visual insert in Shot 2 showing a side-by-side comparison of a B.Com and BBA course catalog snippet that both contain similar profit calculation tasks to visually prove the ambiguity."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "One unlabeled example does not prove which category or programme contains it.",
+          "audienceGap": "Students assume that a specific business task (like accounting or marketing) identifies the degree program.",
+          "viewerChange": "Realizes that tasks exist in both degrees and cannot be used to classify a program without an official source.",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The story demonstrates that by identifying the missing link, the student stops guessing and starts asking for evidence."
+        }
+      ],
+      "id": "reel_1794457077940_mejl1x",
+      "reelTitle": "The Unlabeled Task Challenge",
+      "creativeAngle": "A rapid-fire game exposing the absurdity of guessing degree programs based on single tasks.",
+      "objective": "Teach students to demand institutional evidence rather than relying on stereotypes when comparing B.Com and BBA.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Funny",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Guessing Game",
+          "timestamp": "00:00 – 00:07",
+          "visual": "A student holds a card with 'Profit Calc' on it, looking confused between two signs labeled 'B.Com' and 'BBA'.",
+          "dialogue": "Trying to pick between B.Com or BBA? Let's play a guessing game.",
+          "onscreenText": "Example: Task: Profit Calc. | Source: ? | Degree: ?",
+          "cameraPerformance": "Close-up, energetic movement.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Ambiguity Reveal",
+          "timestamp": "00:07 – 00:19",
+          "visual": "Split screen showing two mock course snippets. Both list 'Profit Calculation'. Student points to both.",
+          "dialogue": "Both programs list this. Without an official source linking the task to one degree, you are just guessing.",
+          "onscreenText": "Insufficient Information",
+          "cameraPerformance": "Mid-shot, pointing at the screen.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Better Question",
+          "timestamp": "00:19 – 00:28",
+          "visual": "Student looks directly at the camera, holding the card.",
+          "dialogue": "Don’t guess. Ask: What official source links this task to this specific degree?",
+          "onscreenText": "What official source links this task to this specific degree?",
+          "cameraPerformance": "Eye-level, stable shot.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Fast-paced, minimalist aesthetic with clear typography.",
+        "performance": "Energetic but grounded and analytical.",
+        "camera": "Handheld for the hook, static for the reveal.",
+        "editing": "Sharp, rhythm-based cuts.",
+        "sound": "Subtle game-show sound effects.",
+        "props": [
+          "Two signs labeled B.Com and BBA",
+          "Flashcard with the task written on it",
+          "Mock course snippet visuals"
+        ],
+        "locations": [
+          "A clean, bright study desk"
+        ],
+        "casting": "One relatable +2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Demonstrate that single tasks are insufficient for program classification, shifting the student's focus from stereotypes to seeking verifiable evidence.",
+        "shootingPriority": [
+          "The split-screen comparison of course snippets",
+          "The final question delivery"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:17:57.940Z",
+      "updatedAt": "2026-11-12T04:17:57.940Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_01",
+          "title": "The Unlabeled Task Challenge",
+          "audienceGap": "Students assume that a specific business task (like accounting or marketing) identifies the degree program.",
+          "basisId": "insufficient_information",
+          "requiredConclusion": "Not enough information",
+          "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+          "viewerChange": "Realizes that tasks exist in both degrees and cannot be used to classify a program without an official source.",
+          "concept": "A rapid-fire game where the student tries to guess the degree for a task and fails due to missing evidence.",
+          "mechanismKey": "missing_link_reveal",
+          "device": "Decision puzzle",
+          "supportType": "method",
+          "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Present one example without a source linking it to a category.",
+            "Separate a plausible guess from what the available information proves.",
+            "Identify the exact missing source or information needed to decide."
+          ],
+          "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "visibleProof": "A forced-choice guess is replaced by a justified third answer and a precise request for missing evidence.",
+          "payoff": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+          "demonstration": {
+            "input": "A task: 'Calculate the profit margin for a small business'",
+            "visibleInput": "Example: Task: Profit Calc. | Source: ? | Degree: ?",
+            "observation": "No supplied source connects this example to either category; the supported result is insufficient information.",
+            "nextQuestion": "What official source links this task to this specific degree?"
+          },
+          "treatment": "Funny"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment_audit",
+            "device": "Split-screen worksheet"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "sticking_point_log",
+            "device": "Side-by-side sticky notes"
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_link_reveal",
+            "device": "Decision puzzle"
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / assessment_audit; Connection = task_question_journal / sticking_point_log; Discovery = insufficient_information / missing_link_reveal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: In shot 2, the visual displays 'mock course snippets' that show the same task in both programs. Revision: Remove the mock snippets to avoid implying the tasks definitively exist in both; replace with a graphic showing the missing link or a question mark over both programs to maintain the 'insufficient information' premise. insight: The prompt requires demonstrating an unlabeled task challenge, but the dialogue in shot 2 asserts 'Both programs list this' as a fact. Revision: Change the dialogue to 'You cannot confirm which program lists this' to align with the required 'not enough information' conclusion rather than asserting overlapping curriculum.",
+      "repairInstruction": "integrity: In shot 2, the visual displays 'mock course snippets' that show the same task in both programs. Revision: Remove the mock snippets to avoid implying the tasks definitively exist in both; replace with a graphic showing the missing link or a question mark over both programs to maintain the 'insufficient information' premise.\ninsight: The prompt requires demonstrating an unlabeled task challenge, but the dialogue in shot 2 asserts 'Both programs list this' as a fact. Revision: Change the dialogue to 'You cannot confirm which program lists this' to align with the required 'not enough information' conclusion rather than asserting overlapping curriculum."
+    }
+  }
+]

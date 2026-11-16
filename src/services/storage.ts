@@ -1,3 +1,4 @@
+import { enforceEditorialStatus } from '../../shared/hlni.js';
 import { ReelProject, ReelStoryboard } from '../../shared/types.js';
 
 const STORAGE_KEY_CURRENT = 'joy_reel_current_storyboard';
@@ -18,7 +19,7 @@ export function saveCurrentStoryboard(storyboard: ReelStoryboard | null): void {
     return;
   }
   try {
-    localStorage.setItem(STORAGE_KEY_CURRENT, JSON.stringify(storyboard));
+    localStorage.setItem(STORAGE_KEY_CURRENT, JSON.stringify(enforceEditorialStatus(storyboard)));
   } catch (err) {
     console.error('Failed to autosave storyboard:', err);
   }
@@ -28,7 +29,7 @@ export function loadCurrentStoryboard(): ReelStoryboard | null {
   try {
     const raw = localStorage.getItem(STORAGE_KEY_CURRENT);
     if (!raw) return null;
-    return JSON.parse(raw);
+    return enforceEditorialStatus(JSON.parse(raw));
   } catch (err) {
     console.error('Failed to load current storyboard:', err);
     return null;
@@ -40,7 +41,7 @@ export function loadSavedProjects(): ReelProject[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY_PROJECTS);
     if (!raw) return [];
-    return JSON.parse(raw);
+    return JSON.parse(raw).map((p:ReelProject)=>{const versions=p.versions.map(enforceEditorialStatus);const current=versions.find(v=>v.id===p.currentVersionId)||versions.at(-1);return {...p,versions,status:current?.status||p.status};});
   } catch (err) {
     console.error('Failed to load saved projects:', err);
     return [];
@@ -48,9 +49,11 @@ export function loadSavedProjects(): ReelProject[] {
 }
 
 export function saveProjectToLibrary(storyboard: ReelStoryboard): ReelProject[] {
+  storyboard = enforceEditorialStatus(storyboard);
   const projects = loadSavedProjects();
   const existingProjectIndex = projects.findIndex(
-    (p) => p.title.toLowerCase() === storyboard.reelTitle.toLowerCase() || p.id === storyboard.id
+    (p) => p.id === storyboard.id || (p.title.toLowerCase() === storyboard.reelTitle.toLowerCase() &&
+      (p.versions.find(v => v.id === p.currentVersionId) || p.versions[p.versions.length - 1])?.channel === storyboard.channel)
   );
 
   const now = new Date().toISOString();
@@ -58,7 +61,7 @@ export function saveProjectToLibrary(storyboard: ReelStoryboard): ReelProject[] 
   if (existingProjectIndex >= 0) {
     const project = projects[existingProjectIndex];
     // Check if this version already exists
-    const versionIdx = project.versions.findIndex((v) => v.version === storyboard.version);
+    const versionIdx = project.versions.findIndex((v) => v.id === storyboard.id);
     if (versionIdx >= 0) {
       project.versions[versionIdx] = storyboard;
     } else {

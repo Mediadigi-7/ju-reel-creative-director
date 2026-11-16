@@ -1,0 +1,191 @@
+{
+  "rawReviews": [
+    {
+      "id": "K4",
+      "review": {
+        "issues": [
+          {
+            "candidateId": "K4",
+            "quote": "The student feels confident about choosing a degree.",
+            "category": "payoff",
+            "evidence": "The Concept Quality Contract mandates that a visible consequence must show why the insight matters to the starting belief and improve the student's next step; feeling confident about a degree is a subjective emotional state that does not demonstrate the concrete use of the insight.",
+            "revision": "The student updates their preparation list to include a specific design justification for the hypothetical poster."
+          },
+          {
+            "candidateId": "K4",
+            "quote": "The student smiles, closes the notebook, and feels calm.",
+            "category": "payoff",
+            "evidence": "The Concept Quality Contract explicitly states that a smile, a closed notebook, or feeling calm is not a valid visible consequence.",
+            "revision": "The student crosses out the decorative plan and writes a written rationale for their design choice on the assignment draft."
+          }
+        ]
+      }
+    },
+    {
+      "id": "K1",
+      "review": {
+        "issues": [
+          {
+            "candidateId": "K1",
+            "quote": "The student stops copying a degree choice and asks a teacher about the deposit.",
+            "category": "payoff",
+            "evidence": "The visible consequence is described merely as an action ('stops copying', 'asks a teacher') rather than a concrete result that demonstrates why the insight matters to the starting belief of degree selection.",
+            "revision": "The student uses the clarified classification to re-evaluate their interest in the specific degree curriculum, noting that their difficulty was task-based rather than degree-incompatible."
+          }
+        ]
+      }
+    },
+    {
+      "id": "K6",
+      "review": {
+        "issues": [
+          {
+            "candidateId": "K6",
+            "quote": "Business Simulation appears in both of the supplied Semester I programme lists.",
+            "category": "integrity",
+            "evidence": "The HLNI and supporting evidence cite 'Business Organization & Management' as the shared title, but the concept text incorrectly claims 'Business Simulation' is the shared title.",
+            "revision": "Replace 'Business Simulation' with 'Business Organization & Management' to align with the provided official documents."
+          },
+          {
+            "candidateId": "K6",
+            "quote": "Both inspected rows list Business Simulation.",
+            "category": "integrity",
+            "evidence": "This observation repeats the error regarding the course title, which contradicts the source data provided in the official evidence.",
+            "revision": "Replace 'Business Simulation' with 'Business Organization & Management'."
+          }
+        ]
+      }
+    },
+    {
+      "id": "K3",
+      "review": {
+        "issues": [
+          {
+            "candidateId": "K3",
+            "quote": "A student plans work after assuming degree labels identify assessment demands.",
+            "category": "fidelity",
+            "evidence": "The concept uses a student's assumption about 'degree labels' as their starting situation, but the actual task revolves around a hypothetical poster assignment. This introduces an unnecessary and distracting backstory about degree labels that is not supported by the provided evidence or the task itself.",
+            "revision": "The student plans work after assuming visual decoration will satisfy the hypothetical poster assignment."
+          }
+        ]
+      }
+    },
+    {
+      "id": "K2",
+      "review": {
+        "issues": [
+          {
+            "candidateId": "K2",
+            "quote": "Both questions involve budgets, so auditing answers the classification problem.",
+            "category": "integrity",
+            "evidence": "The logic is flawed. The observation concerns a specific missing classification category for a single item, whereas the question asks about global budget auditing. Auditing is a separate process and does not answer or solve the specific classification problem of where to place a refundable deposit.",
+            "revision": "The student should ask a question directly related to the classification, such as 'Where does a refundable deposit fit in this specific expense category list?'"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K5",
+      "review": {
+        "issues": []
+      }
+    },
+    {
+      "id": "K7",
+      "review": {
+        "issues": [
+          {
+            "candidateId": "K7",
+            "quote": "The student moves B.Com back to their provisional shortlist to conduct a module-by-module comparison.",
+            "category": "payoff",
+            "evidence": "The Concept Quality Contract requires that the visible consequence show why the insight matters to the starting belief. While the student moves the item back to the shortlist, the story spine lists the visible consequence as re-labeling the shortlist, which is an administrative action. The contract requires that a question be the changed action when it improves the original decision, but the student's next step here is a manual task rather than asking the question specified in the demonstration.",
+            "revision": "The student asks the question 'What teaching and assessment does each actual programme specify?' to evaluate the module, which then results in the student re-labeling the shortlist to reflect that the degrees require further comparison."
+          }
+        ]
+      }
+    },
+    {
+      "id": "K8",
+      "review": {
+        "issues": [
+          {
+            "candidateId": "K8",
+            "quote": "The student chooses B.Com as equivalent to BBA without any further checks.",
+            "category": "payoff",
+            "evidence": "The concept proposes a changed action that replaces one error with a new, unfounded assumption of equivalence, violating the requirement that the action must visibly improve the decision.",
+            "revision": "The student re-categorizes the B.Com programme as a viable candidate for further investigation instead of dismissing it based on the previous assumption of title separation."
+          },
+          {
+            "candidateId": "K8",
+            "quote": "The student finalises B.Com because the shared title guarantees identical teaching.",
+            "category": "payoff",
+            "evidence": "The visible consequence claims the shared title guarantees identical teaching, which contradicts the provided interpretation rules and the evidence that the titles do not establish identical content or assessment.",
+            "revision": "The student requests specific syllabus documents to compare the depth and assessment of the shared course title, moving beyond the initial label-based exclusion."
+          }
+        ]
+      }
+    }
+  ],
+  "groundedIssues": [
+    "K4 | payoff: The Concept Quality Contract mandates that a visible consequence must show why the insight matters to the starting belief and improve the student's next step; feeling confident about a degree is a subjective emotional state that does not demonstrate the concrete use of the insight. Correction: The student updates their preparation list to include a specific design justification for the hypothetical poster.",
+    "K4 | payoff: The Concept Quality Contract explicitly states that a smile, a closed notebook, or feeling calm is not a valid visible consequence. Correction: The student crosses out the decorative plan and writes a written rationale for their design choice on the assignment draft.",
+    "K1 | payoff: The visible consequence is described merely as an action ('stops copying', 'asks a teacher') rather than a concrete result that demonstrates why the insight matters to the starting belief of degree selection. Correction: The student uses the clarified classification to re-evaluate their interest in the specific degree curriculum, noting that their difficulty was task-based rather than degree-incompatible.",
+    "K6 | integrity: The HLNI and supporting evidence cite 'Business Organization & Management' as the shared title, but the concept text incorrectly claims 'Business Simulation' is the shared title. Correction: Replace 'Business Simulation' with 'Business Organization & Management' to align with the provided official documents.",
+    "K6 | integrity: This observation repeats the error regarding the course title, which contradicts the source data provided in the official evidence. Correction: Replace 'Business Simulation' with 'Business Organization & Management'.",
+    "K3 | fidelity: The concept uses a student's assumption about 'degree labels' as their starting situation, but the actual task revolves around a hypothetical poster assignment. This introduces an unnecessary and distracting backstory about degree labels that is not supported by the provided evidence or the task itself. Correction: The student plans work after assuming visual decoration will satisfy the hypothetical poster assignment.",
+    "K2 | integrity: The logic is flawed. The observation concerns a specific missing classification category for a single item, whereas the question asks about global budget auditing. Auditing is a separate process and does not answer or solve the specific classification problem of where to place a refundable deposit. Correction: The student should ask a question directly related to the classification, such as 'Where does a refundable deposit fit in this specific expense category list?'",
+    "K7 | payoff: The Concept Quality Contract requires that the visible consequence show why the insight matters to the starting belief. While the student moves the item back to the shortlist, the story spine lists the visible consequence as re-labeling the shortlist, which is an administrative action. The contract requires that a question be the changed action when it improves the original decision, but the student's next step here is a manual task rather than asking the question specified in the demonstration. Correction: The student asks the question 'What teaching and assessment does each actual programme specify?' to evaluate the module, which then results in the student re-labeling the shortlist to reflect that the degrees require further comparison.",
+    "K8 | payoff: The concept proposes a changed action that replaces one error with a new, unfounded assumption of equivalence, violating the requirement that the action must visibly improve the decision. Correction: The student re-categorizes the B.Com programme as a viable candidate for further investigation instead of dismissing it based on the previous assumption of title separation.",
+    "K8 | payoff: The visible consequence claims the shared title guarantees identical teaching, which contradicts the provided interpretation rules and the evidence that the titles do not establish identical content or assessment. Correction: The student requests specific syllabus documents to compare the depth and assessment of the shared course title, moving beyond the initial label-based exclusion."
+  ],
+  "traces": [
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 1384,
+      "remainingMs": 20615
+    },
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 1073,
+      "remainingMs": 20927
+    },
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 1207,
+      "remainingMs": 20793
+    },
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 1166,
+      "remainingMs": 20834
+    },
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 1643,
+      "remainingMs": 20357
+    },
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 734,
+      "remainingMs": 21266
+    },
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 1383,
+      "remainingMs": 20617
+    },
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 12989,
+      "remainingMs": 9011
+    }
+  ]
+}

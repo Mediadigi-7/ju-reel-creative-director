@@ -1,0 +1,48 @@
+{
+  "verifiedAt": "2026-11-14T08:50:49.103Z",
+  "sourceHashesMatch": true,
+  "evaluationHashesMatch": true,
+  "credentialScanPassed": true,
+  "scope": "Local engine live generation and artifact checks; no deployed-app or browser end-to-end claim",
+  "results": [
+    {
+      "channel": "Trust",
+      "source": "gemini",
+      "generatedAt": "2026-11-14T08:48:46.301Z",
+      "shots": 6,
+      "orderedStages": true,
+      "singleFinalCta": true,
+      "continuousTimecodes": true,
+      "seconds": 28,
+      "spokenWords": 47,
+      "estimatedPacingPass": true,
+      "editorialApproved": false
+    },
+    {
+      "channel": "Connection",
+      "source": "gemini",
+      "generatedAt": "2026-11-14T08:49:07.922Z",
+      "shots": 6,
+      "orderedStages": true,
+      "singleFinalCta": true,
+      "continuousTimecodes": true,
+      "seconds": 28,
+      "spokenWords": 51,
+      "estimatedPacingPass": true,
+      "editorialApproved": false
+    },
+    {
+      "channel": "Discovery",
+      "source": "gemini",
+      "generatedAt": "2026-11-14T08:49:14.467Z",
+      "shots": 6,
+      "orderedStages": true,
+      "singleFinalCta": true,
+      "continuousTimecodes": true,
+      "seconds": 28,
+      "spokenWords": 50,
+      "estimatedPacingPass": true,
+      "editorialApproved": false
+    }
+  ]
+}

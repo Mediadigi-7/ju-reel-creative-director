@@ -1,0 +1,683 @@
+
+> joy-university-reel-creator@1.0.0 test
+> tsx server/testSuite.ts && tsx server/offlineCatalogueTestSuite.ts && tsx server/ideaLibraryTestSuite.ts && tsx server/channelStrategyTestSuite.ts && tsx server/providerGenerationTestSuite.ts && node scripts/verifyStagingTarget.test.mjs && tsx server/outputRepairTestSuite.ts && tsx server/flexibleFrameworkTestSuite.ts && tsx server/creativeRulesTestSuite.ts && tsx src/services/interactionTestSuite.ts && tsx server/hlniTestSuite.ts && tsx server/creativeEvaluationTestSuite.ts && tsx server/conceptPlannerTestSuite.ts && tsx server/editorialReviewTestSuite.ts && tsx server/requestBudgetTestSuite.ts && tsx src/services/apiTestSuite.ts && tsx server/httpReliabilityTestSuite.ts
+
+
+========================================
+🧪 JOY UNIVERSITY REEL TEST SUITE START
+========================================
+
+
+--- 1. SCHEMA VALIDATION & REPAIR TESTS ---
+  ✅ PASS: Incomplete production fields fail validation instead of inventing content
+  ✅ PASS: Normalization preserves the supplied shot count
+  ✅ PASS: Shot 1 is HOOK
+  ✅ PASS: Normalization does not invent a CTA
+  ✅ PASS: Valid complexity assigned
+
+--- 2. SINGLE CTA VALIDATION TEST ---
+  ✅ PASS: Schema never silently rewrites creative content
+
+--- 3. SHORT TITLE TEST ---
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Unsupported short title requires live AI rather than a category template
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Supported offline AI example generates 6 shots
+  ✅ PASS: Short seed generates meaningful creative angle
+
+--- 4. INDIVIDUAL SHOT REGENERATION TEST ---
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Offline scripts require AI for creative shot regeneration
+  ✅ PASS: Rejected offline regeneration preserves the Hook
+  ✅ PASS: Rejected regeneration preserves other scenes
+
+--- 5. 20-TITLE CREATIVE TEST SET ---
+Testing 20 required evaluation titles...
+
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [1/20] ✅ "I finished +2... now what?" (1ms)
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [2/20] ✅ "3 mistakes students make after +2" (1ms)
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [3/20] ✅ "Engineering is not for everyone." (0ms)
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [4/20] ✅ "What should I study after Commerce?" (0ms)
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [5/20] ✅ "AI will change these careers." (0ms)
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [6/20] ✅ "How do I choose the right college?" (0ms)
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [7/20] PASS: unsupported idea explicitly requires live AI: Everyone says choose a course with scope.
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [8/20] PASS: unsupported idea explicitly requires live AI: My friends already know what they're studying.
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [9/20] PASS: unsupported idea explicitly requires live AI: Marks don't define your career.
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [10/20] PASS: unsupported idea explicitly requires live AI: B.Tech or B.Sc?
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [11/20] PASS: unsupported idea explicitly requires live AI: What if I choose the wrong course?
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [12/20] PASS: unsupported idea explicitly requires live AI: Is college really about marks?
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [13/20] PASS: unsupported idea explicitly requires live AI: What should I compare before choosing a college?
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [14/20] PASS: unsupported idea explicitly requires live AI: I don't know what I'm good at.
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [15/20] PASS: unsupported idea explicitly requires live AI: Should I follow my passion?
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [16/20] PASS: unsupported idea explicitly requires live AI: Parents want one course. I want another.
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [17/20] PASS: unsupported idea explicitly requires live AI: What careers will AI create?
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [18/20] PASS: unsupported idea explicitly requires live AI: Is a degree enough anymore?
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [19/20] PASS: unsupported idea explicitly requires live AI: The biggest mistake after +2.
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  [20/20] PASS: unsupported idea explicitly requires live AI: Don't choose a college because of this.
+  ✅ PASS: Supported output or explicit unsupported rejection for the 20-title set (20/20)
+
+--- 6. STRICT LANGUAGE CONTROL & NATIVE SCRIPT TESTS ---
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "Tamil" passes strict native script compliance
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "Telugu" passes strict native script compliance
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "Malayalam" passes strict native script compliance
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "Hindi" passes strict native script compliance
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "English" passes strict native script compliance
+
+--- 7. ZERO LANGUAGE MIXING TEST ---
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "Tamil" output has ZERO raw English title mixing
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "Telugu" output has ZERO raw English title mixing
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "Malayalam" output has ZERO raw English title mixing
+[AI Service] No API Key provided, returning Knowledge Engine storyboard.
+  ✅ PASS: Language "Hindi" output has ZERO raw English title mixing
+
+========================================
+📊 FINAL RESULT: 22/22 TESTS PASSED
+========================================
+
+PASS: 90 authored offline scripts, 3 distinct treatments per idea/language, 180 duration variants, exact scope, stable narratives and runtime quality guards
+Planning duration range: 28 34
+PASS: 180 original entries, full classification, stable unique IDs, preserved treatments, cross-style editorial decisions, and duplicate preservation
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: 'A broad +2 student audience discovering ideas, courses, or student experiences',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: 'A broad +2 student audience discovering ideas, courses, or student experiences',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: 'A broad +2 student audience discovering ideas, courses, or student experiences',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+PASS: all three channels × three treatments; repair and regeneration prompts; metadata, audience, storage, sharing, exports, legacy compatibility and honest offline scope
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] Storyboard check failed: JSON & schema  (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "stop scrolling" (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+PASS: single live-generation path for both providers, no missing-key fallback, safe failure categories, no credential echoes, browser helper, and real HTTP route success/failure
+PASS: staging target requires the exact existing project, owner, and production domain; wrong or inaccessible targets are blocked
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] Storyboard check failed: Delivery (Spoken pacing) Dialogue has 147 words; maximum 70 for 28 seconds. (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+[AI Service] Storyboard check failed: Delivery (Spoken pacing) Dialogue has 147 words; maximum 70 for 28 seconds. (attempt 1)
+[AI Service] Storyboard check failed: Delivery (Spoken pacing) Dialogue has 600 words; maximum 70 for 28 seconds. (attempt 2)
+PASS: bounded targeted repair, preserved scenes, rejected incomplete patches, all four native scripts, and complete QA after repair
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'How do I choose the right college',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "How do I choose the right college"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'How do I choose the right college' ]
+}
+PASS: variable shot counts, combined/reordered functions, optional interrupt/CTA, silent shots, Auto treatment, repairs, sharing, timing, exports, legacy samples, generation tests and shot 7 regeneration
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "here's the secret" (attempt 1)
+PASS: openai repairs and rechecks rejected output
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "here's the secret" (attempt 1)
+PASS: gemini repairs and rechecks rejected output
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "here's the secret" (attempt 1)
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "here's the secret" (attempt 2)
+[AI Service] Storyboard check failed: Gate 6 (Authenticity Engine — AI Cliché Ban) Banned AI cliché detected: "here's the secret" (attempt 3)
+PASS: persistent QA failure rejects without template substitution
+PASS: flexible narrative functions, production fields, comparison entities, typographic cliché detection
+PASS: shared links preserve generation source; duration changes retime all six scenes without changing the script
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: HLNI proposal No complete HLNI proposal identifies the audience gap, practical change, support, insight shots and payoff shots. (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: HLNI proposal No complete HLNI proposal identifies the audience gap, practical change, support, insight shots and payoff shots. (attempt 1)
+[AI Service] Storyboard check failed: HLNI proposal No complete HLNI proposal identifies the audience gap, practical change, support, insight shots and payoff shots. (attempt 2)
+PASS: mandatory HLNI proposal; all five editorial checks; facts/references and scene links; no self-approval; content-bound review invalidation; optional/combined narrative functions; legacy drafts and sharing
+PASS: exact weighted rubric, 85 boundary, independent HLNI/differentiation floors, critical overrides and non-mandatory references
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 completed student evaluating higher education choices (ages 17–19)',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Diagnostic function tags The requested evaluation artifact omits diagnostic function arrays. (attempt 1)
+PASS: requested diagnostic tags trigger bounded repair without forcing any function, shot count or editorial approval
+[Concept Planner] Rejected plan: Trust/Connection: concepts collide in insight or core storytelling mechanism; renaming props, actors or the CTA is insufficient. No feasible, distinct candidate combination; revise the alternatives rather than relabel the same tool.
+[Concept Planner] Rejected plan: Trust/Connection: concepts collide in insight or core storytelling mechanism; renaming props, actors or the CTA is insufficient. No feasible, distinct candidate combination; revise the alternatives rather than relabel the same tool.
+[Concept Planner] Rejected plan: Trust/Connection: concepts collide in insight or core storytelling mechanism; renaming props, actors or the CTA is insufficient. No feasible, distinct candidate combination; revise the alternatives rather than relabel the same tool.
+[Concept Planner] Rejected plan: Trust: write the question and visible sample in native Tamil. Connection: write the question and visible sample in native Tamil. Discovery: write the question and visible sample in native Tamil. No feasible, distinct candidate combination; revise the alternatives rather than relabel the same tool.
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Concept delivery The actual dialogue, graphics or visible action must include the selected sample input: Test example The actual dialogue, graphics or visible action must include the selected resulting question: What will I practise? (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+PASS: concept-before-story ordering, neutral topic lock, joint comparison, collisions, unsupported evidence, operational steps, bounded repair, scoped plan reuse and actual creative memory
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Editorial self-review payoff: Shot 3 asks about the task although the unknown cell is the marking criterion. Revision: Ask about the missing criterion and show which empty cell prompted that question. (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Editorial self-review payoff: Shot 3 asks about the task although the unknown cell is the marking criterion. Revision: Ask about the missing criterion and show which empty cell prompted that question. (attempt 1)
+PASS: editorial critique repairs actual drafts, stays bounded, rejects malformed critique and never grants application approval
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Editorial self-review payoff: Shot 3 has no demonstrated consequence. Revision: Show the concrete next question changing the action. (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Editorial self-review payoff: Shot 3 has no demonstrated consequence. Revision: Show the concrete next question changing the action. (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Concept delivery The actual dialogue, graphics or visible action must include the selected sample input: Test example The actual dialogue, graphics or visible action must include the selected resulting question: What will I practise? (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Concept delivery The actual dialogue, graphics or visible action must include the selected sample input: Test example The actual dialogue, graphics or visible action must include the selected resulting question: What will I practise? (attempt 1)
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI will change these careers',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI will change these careers"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] Storyboard check failed: Editorial self-review payoff: Shot 3 has no demonstrated consequence. Revision: Show the concrete next question changing the action. (attempt 1)
+PASS: budget skip, optional critique errors, malformed critique, rewrite timeout, initial errors, single critique, repair reservation, cancellation, Draft preservation, scenes/sharing and no fallback
+PASS: source survives validation; library, model, and legacy labels render
+PASS: live network, HTTP, invalid JSON, and fallback responses rejected; no-key offline labelled; confirmed live source preserved
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI tasks',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI tasks"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+[AI Service] 🔒 Content Core Locked: {
+  topic: 'AI tasks',
+  viewer: '+2 students seeking academic depth and well-supported course and career decisions',
+  question: 'What useful information or understanding should the target viewer gain about "AI tasks"?',
+  problem: 'The viewer needs a specific, credible answer to the original idea, not a generic category script.',
+  intent: 'Help the student make a clear, empowered choice without superficial marketing fluff.',
+  takeaway: 'Not predetermined. Select a useful insight and satisfying outcome for this specific idea before storyboarding.',
+  entities: [ 'AI' ]
+}
+PASS: actual HTTP quota errors remain visible and client disconnect aborts the in-flight provider with no further model calls

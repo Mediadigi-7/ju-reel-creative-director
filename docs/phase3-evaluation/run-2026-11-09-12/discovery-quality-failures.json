@@ -1,0 +1,519 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "audienceGap": "Students assume that if two degrees share a total credit count, the content mix is identical.",
+          "viewerChange": "Viewers see that the same total can hide very different component structures.",
+          "supportType": "method",
+          "support": "The claim follows from the displayed arithmetic of component segments within a total.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The viewer is equipped with a specific question to ask when evaluating any degree."
+        }
+      ],
+      "id": "reel_1794222409520_fmtsvo",
+      "reelTitle": "The Hidden Breakdown: B.Com vs BBA",
+      "creativeAngle": "Visual puzzle revealing how identical totals hide different compositions.",
+      "objective": "Teach students to look past degree titles and analyze module breakdowns.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Trendy",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "The Total Trap",
+          "timestamp": "00:00 – 00:06",
+          "visual": "Split screen showing two 100% bar charts labeled A and B.",
+          "dialogue": "Think two degrees with equal credit totals are the same? Think again.",
+          "onscreenText": "Are they really the same?",
+          "cameraPerformance": "Static, clean composition focusing on the graphic.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Counterexample",
+          "timestamp": "00:06 – 00:18",
+          "visual": "Animation segments each bar. Bar A: 40% math, 60% theory. Bar B: 60% math, 40% theory.",
+          "dialogue": "Example: Total 100%. A: 40% math, 60% theory. B: 60% math, 40% theory. Same total, different internal mix.",
+          "onscreenText": "Illustrative Example: Total 100%. A: 40% Math, 60% Theory. B: 60% Math, 40% Theory.",
+          "cameraPerformance": "Close up on the shifting bar segments.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "The Next Action",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Host looking directly into the camera, holding a blank worksheet.",
+          "dialogue": "Don't guess based on titles. What is the specific percentage breakdown of these course modules? Check the syllabus.",
+          "onscreenText": "What is the specific percentage breakdown of these course modules?",
+          "cameraPerformance": "Direct, professional, encouraging.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Minimalist, infographic-heavy",
+        "performance": "Casual, clear, and direct",
+        "camera": "Stable tripod shots",
+        "editing": "Rhythmic, matching cuts to the data reveals",
+        "sound": "Clean voiceover, subtle UI sound effects",
+        "props": [
+          "Graphic tablet",
+          "Worksheet"
+        ],
+        "locations": [
+          "Clean studio desk"
+        ],
+        "casting": "Relatable student influencer",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use an aggregate counterexample to demonstrate that equal credit totals do not imply identical content.",
+        "shootingPriority": [
+          "Graphic animation",
+          "Host dialogue"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T11:06:49.520Z",
+      "updatedAt": "2026-11-09T11:06:49.520Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_aggregate_01",
+          "title": "The Hidden Breakdown",
+          "audienceGap": "Students assume that if two degrees share a total credit count, the content mix is identical.",
+          "basisId": "aggregate_counterexample",
+          "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "viewerChange": "Viewers see that the same total can hide very different component structures.",
+          "concept": "A visual puzzle showing two stacks of blocks representing 100% of a course.",
+          "mechanismKey": "Aggregate counterexample",
+          "device": "A digital block-stacking animation that reveals different segments.",
+          "supportType": "method",
+          "support": "The claim follows from the displayed arithmetic, not an invented university metric.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Show two clearly illustrative component lists with the same total.",
+            "Reveal their different components.",
+            "Ask for the breakdown before drawing a conclusion from the total."
+          ],
+          "interpretationRule": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "visibleProof": "An explicitly illustrative arithmetic counterexample makes the hidden difference visible.",
+          "payoff": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "limitations": "Keep figures clearly illustrative and do not assign them to actual programmes, credits or outcomes.",
+          "demonstration": {
+            "input": "Two 100% total charts with different underlying component segments.",
+            "visibleInput": "Example: Total: 100%. A: 40% math, 60% theory. B: 60% math, 40% theory.",
+            "observation": "The total is the same, but the internal composition is different.",
+            "nextQuestion": "What is the specific percentage breakdown of these course modules?"
+          },
+          "treatment": "Trendy"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Assessment question audit",
+            "device": "Split-screen comparison of two task briefs with a shared audit worksheet overlay."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_constraint_02",
+            "hlni": "An appealing option and an available option are different questions. Unknown requirements should be recorded as checks rather than assumed to be satisfied.",
+            "mechanismKey": "Constraint check",
+            "device": "A checklist app interface where 'wishlist' items are marked as 'need to verify'."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_aggregate_01",
+            "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+            "mechanismKey": "Aggregate counterexample",
+            "device": "A digital block-stacking animation that reveals different segments."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Assessment question audit; Connection = constraint_check / Constraint check; Discovery = aggregate_counterexample / Aggregate counterexample. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Gate 3 (Idea Fidelity & Entity Persistence)",
+      "failureReason": "Required core entity/topic \"B.Com\" disappeared from the generated script.",
+      "repairInstruction": "Preserve the core topic \"B.Com\" throughout the script. Do NOT replace the user's idea with an unrelated topic."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "audienceGap": "Students assume that if two degrees share a total credit count, the content mix is identical.",
+          "viewerChange": "Viewers see that the same total can hide very different component structures.",
+          "supportType": "method",
+          "support": "The claim follows from the displayed arithmetic of component segments within a total.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The viewer is equipped with a specific question to ask when evaluating any degree."
+        }
+      ],
+      "id": "reel_1794222412737_tyswu2",
+      "reelTitle": "The Hidden Breakdown: B.Com vs BBA",
+      "creativeAngle": "Visual puzzle revealing how identical totals hide different compositions.",
+      "objective": "Teach students to look past degree titles and analyze module breakdowns.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Total Trap",
+          "timestamp": "00:00 – 00:07",
+          "visual": "Split screen with two identical 100% bars labeled A and B.",
+          "dialogue": "Think two degrees with equal credit totals are the same? Look closely.",
+          "onscreenText": "Are they really the same?",
+          "cameraPerformance": "Static shot focusing on the graphic.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Counterexample",
+          "timestamp": "00:07 – 00:19",
+          "visual": "Bars fill with colors. A: 40% math, 60% theory. B: 60% math, 40% theory.",
+          "dialogue": "Illustrative Example: Total 100%. A: 40% math, 60% theory. B: 60% math, 40% theory. Same total, different internal mix.",
+          "onscreenText": "Example: Total 100%. A: 40% math, 60% theory. B: 60% math, 40% theory.",
+          "cameraPerformance": "Close up on shifting segments.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF",
+            "CTA"
+          ],
+          "name": "The Next Question",
+          "timestamp": "00:19 – 00:28",
+          "visual": "Host points to a text box on screen.",
+          "dialogue": "Titles hide the truth. Always ask: What is the specific percentage breakdown of these course modules?",
+          "onscreenText": "What is the specific percentage breakdown of these course modules?",
+          "cameraPerformance": "Direct, professional, encouraging.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Minimalist, infographic-heavy",
+        "performance": "Casual, clear, and direct",
+        "camera": "Stable tripod shots",
+        "editing": "Rhythmic, matching cuts to the data reveals",
+        "sound": "Clean voiceover, subtle UI sound effects",
+        "props": [
+          "Graphic tablet"
+        ],
+        "locations": [
+          "Clean studio"
+        ],
+        "casting": "Relatable student influencer",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use an aggregate counterexample to demonstrate that equal credit totals do not imply identical content.",
+        "shootingPriority": [
+          "Graphic animation",
+          "Host dialogue"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T11:06:52.737Z",
+      "updatedAt": "2026-11-09T11:06:52.740Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_aggregate_01",
+          "title": "The Hidden Breakdown",
+          "audienceGap": "Students assume that if two degrees share a total credit count, the content mix is identical.",
+          "basisId": "aggregate_counterexample",
+          "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "viewerChange": "Viewers see that the same total can hide very different component structures.",
+          "concept": "A visual puzzle showing two stacks of blocks representing 100% of a course.",
+          "mechanismKey": "Aggregate counterexample",
+          "device": "A digital block-stacking animation that reveals different segments.",
+          "supportType": "method",
+          "support": "The claim follows from the displayed arithmetic, not an invented university metric.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Show two clearly illustrative component lists with the same total.",
+            "Reveal their different components.",
+            "Ask for the breakdown before drawing a conclusion from the total."
+          ],
+          "interpretationRule": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "visibleProof": "An explicitly illustrative arithmetic counterexample makes the hidden difference visible.",
+          "payoff": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "limitations": "Keep figures clearly illustrative and do not assign them to actual programmes, credits or outcomes.",
+          "demonstration": {
+            "input": "Two 100% total charts with different underlying component segments.",
+            "visibleInput": "Example: Total: 100%. A: 40% math, 60% theory. B: 60% math, 40% theory.",
+            "observation": "The total is the same, but the internal composition is different.",
+            "nextQuestion": "What is the specific percentage breakdown of these course modules?"
+          },
+          "treatment": "Trendy"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Assessment question audit",
+            "device": "Split-screen comparison of two task briefs with a shared audit worksheet overlay."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_constraint_02",
+            "hlni": "An appealing option and an available option are different questions. Unknown requirements should be recorded as checks rather than assumed to be satisfied.",
+            "mechanismKey": "Constraint check",
+            "device": "A checklist app interface where 'wishlist' items are marked as 'need to verify'."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_aggregate_01",
+            "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+            "mechanismKey": "Aggregate counterexample",
+            "device": "A digital block-stacking animation that reveals different segments."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Assessment question audit; Connection = constraint_check / Constraint check; Discovery = aggregate_counterexample / Aggregate counterexample. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Gate 3 (Idea Fidelity & Entity Persistence)",
+      "failureReason": "Required core entity/topic \"B.Com\" disappeared from the generated script.",
+      "repairInstruction": "Preserve the core topic \"B.Com\" throughout the script. Do NOT replace the user's idea with an unrelated topic."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "audienceGap": "Students assume that if two degrees share a total credit count, the content mix is identical.",
+          "viewerChange": "Viewers see that the same total can hide very different component structures.",
+          "supportType": "method",
+          "support": "The claim follows from the displayed arithmetic of component segments within a total.",
+          "references": [],
+          "shotNumbers": [
+            1,
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The viewer is equipped with a specific question to ask when evaluating any degree."
+        }
+      ],
+      "id": "reel_1794222417473_bsbq8c",
+      "reelTitle": "The Hidden Breakdown: B.Com vs BBA",
+      "creativeAngle": "Visual puzzle revealing how identical totals hide different compositions.",
+      "objective": "Teach students to look past degree titles and analyze module breakdowns.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Total Trap",
+          "timestamp": "00:00 – 00:06",
+          "visual": "Split screen with two identical 100% bars labeled A and B.",
+          "dialogue": "Think two degrees with equal credit totals are the same? Look closer.",
+          "onscreenText": "Are they the same?",
+          "cameraPerformance": "Static shot focusing on the graphic.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Counterexample",
+          "timestamp": "00:06 – 00:19",
+          "visual": "Bars fill with colors. A: 40% math, 60% theory. B: 60% math, 40% theory.",
+          "dialogue": "Illustrative Example: Total 100%. A: 40% math, 60% theory. B: 60% math, 40% theory. Same total, different internal mix.",
+          "onscreenText": "Example: Total 100%. A: 40% math, 60% theory. B: 60% math, 40% theory.",
+          "cameraPerformance": "Close up on shifting segments.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Next Question",
+          "timestamp": "00:19 – 00:28",
+          "visual": "Host points to a text box on screen.",
+          "dialogue": "Titles hide the truth. Always ask: What is the specific percentage breakdown of these course modules?",
+          "onscreenText": "What is the specific percentage breakdown of these course modules?",
+          "cameraPerformance": "Direct, professional, encouraging.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Minimalist, infographic-heavy",
+        "performance": "Casual, clear, and direct",
+        "camera": "Stable tripod shots",
+        "editing": "Rhythmic, matching cuts to the data reveals",
+        "sound": "Clean voiceover, subtle UI sound effects",
+        "props": [
+          "Graphic tablet"
+        ],
+        "locations": [
+          "Clean studio"
+        ],
+        "casting": "Relatable student influencer",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use an aggregate counterexample to demonstrate that equal credit totals do not imply identical content.",
+        "shootingPriority": [
+          "Graphic animation",
+          "Host dialogue"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T11:06:57.473Z",
+      "updatedAt": "2026-11-09T11:06:57.473Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "disc_aggregate_01",
+          "title": "The Hidden Breakdown",
+          "audienceGap": "Students assume that if two degrees share a total credit count, the content mix is identical.",
+          "basisId": "aggregate_counterexample",
+          "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "viewerChange": "Viewers see that the same total can hide very different component structures.",
+          "concept": "A visual puzzle showing two stacks of blocks representing 100% of a course.",
+          "mechanismKey": "Aggregate counterexample",
+          "device": "A digital block-stacking animation that reveals different segments.",
+          "supportType": "method",
+          "support": "The claim follows from the displayed arithmetic, not an invented university metric.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Show two clearly illustrative component lists with the same total.",
+            "Reveal their different components.",
+            "Ask for the breakdown before drawing a conclusion from the total."
+          ],
+          "interpretationRule": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "visibleProof": "An explicitly illustrative arithmetic counterexample makes the hidden difference visible.",
+          "payoff": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "limitations": "Keep figures clearly illustrative and do not assign them to actual programmes, credits or outcomes.",
+          "demonstration": {
+            "input": "Two 100% total charts with different underlying component segments.",
+            "visibleInput": "Example: Total: 100%. A: 40% math, 60% theory. B: 60% math, 40% theory.",
+            "observation": "The total is the same, but the internal composition is different.",
+            "nextQuestion": "What is the specific percentage breakdown of these course modules?"
+          },
+          "treatment": "Trendy"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Assessment question audit",
+            "device": "Split-screen comparison of two task briefs with a shared audit worksheet overlay."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_constraint_02",
+            "hlni": "An appealing option and an available option are different questions. Unknown requirements should be recorded as checks rather than assumed to be satisfied.",
+            "mechanismKey": "Constraint check",
+            "device": "A checklist app interface where 'wishlist' items are marked as 'need to verify'."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_aggregate_01",
+            "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+            "mechanismKey": "Aggregate counterexample",
+            "device": "A digital block-stacking animation that reveals different segments."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Assessment question audit; Connection = constraint_check / Constraint check; Discovery = aggregate_counterexample / Aggregate counterexample. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Gate 3 (Idea Fidelity & Entity Persistence)",
+      "failureReason": "Required core entity/topic \"B.Com\" disappeared from the generated script.",
+      "repairInstruction": "Preserve the core topic \"B.Com\" throughout the script. Do NOT replace the user's idea with an unrelated topic."
+    }
+  }
+]

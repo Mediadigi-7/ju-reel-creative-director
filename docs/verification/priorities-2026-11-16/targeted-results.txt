@@ -1,0 +1,7 @@
+[Concept Planner] Rejected plan: Connection: Categorising expenses does not support a question about auditing budgets.
+[Concept Planner] Rejected plan: Payoff: A confident nod has no demonstrated consequence.
+PASS: required concept spine, bounded pre-writing semantic rejection, observable payoff, actual-story comparison and account isolation
+PASS: original supported methods survive grounding; verified curriculum examples retain exact source scope
+PASS: compact Gemini wire format retains local candidate cardinality checks
+PASS: finished-story comparison uses the requested topic even when the model changes the title
+PASS: concept-rejection evidence is bound to an actual selected candidate and verbatim quotation

@@ -1,0 +1,44 @@
+[
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 3940,
+    "remainingMs": 46059,
+    "at": "2026-11-14T08:49:11.866Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Spoken pacing)",
+    "elapsedMs": 0,
+    "remainingMs": 46058,
+    "at": "2026-11-14T08:49:11.867Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 1332,
+    "remainingMs": 44726,
+    "at": "2026-11-14T08:49:13.199Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 1,
+    "remainingMs": 44725,
+    "at": "2026-11-14T08:49:13.200Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 1266,
+    "remainingMs": 43459,
+    "at": "2026-11-14T08:49:14.466Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 1,
+    "remainingMs": 43458,
+    "at": "2026-11-14T08:49:14.467Z"
+  }
+]

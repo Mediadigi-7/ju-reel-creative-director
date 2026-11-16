@@ -1,0 +1,42 @@
+{
+  "assessor": "Assistant editorial assessment of actual complete Gemini output; not generator self-score or independent blinded human review",
+  "ratingScale": "0\u20135",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 2,
+        "payoff": 2,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The official shared course row and document cohort remain useful and supported.",
+        "differentiation": "The explanatory evidence sequence serves Trust, with no fresh group comparison claimed.",
+        "coherence": "The student wants management but crosses out BBA for being about management; the shown evidence does not repair that inconsistent motive.",
+        "payoff": "The final verification checkbox does not visibly restore the excluded option as promised by the concept.",
+        "production": "Timecodes and source assets are workable, but the human action and programme scope need correction.",
+        "originality": "The red-cross-out motif gives some visual closure opportunity, which the actual ending does not complete."
+      },
+      "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+      "reasons": [
+        "This is a Trust-only pilot assessment; it does not establish three-channel differentiation or production approval."
+      ],
+      "revisions": [
+        "Align the student\u2019s interest, excluded programme and evidence-supported reversal.",
+        "Show the specific option returning to a provisional shortlist, without claiming suitability or identical teaching."
+      ]
+    }
+  ],
+  "methodology": "The full returned storyboard, HLNI, concept spine, production notes and warnings were read. The same assistant implemented and assessed the change. Scores use the unchanged rubric. Channel differentiation here assesses the recognisable Trust experience against the approved channel objectives and archived references; a fresh three-channel group comparison was not performed. No recorded read-aloud or deployed-app test was performed.",
+  "runSummary": "Action-based pilot revision returned six shots, but the motive and excluded programme were inconsistent. This source predates the final explicit human-premise brief.",
+  "crossChannelFinding": "Only Trust was generated in this run. Other channels were deliberately held back pending repeatable Trust acceptance. Output remains Draft and no model review grants application approval.",
+  "nextStep": "Check repeatability on identical source and preserve every failure. Keep the 85 overall/4 HLNI/4 differentiation floors and above-90 target unchanged. Do not expand or deploy based on one passing example."
+}

@@ -1,0 +1,44 @@
+{
+  "assessor": "Assistant editorial assessment of actual complete Gemini output; not generator self-score or independent blinded human review",
+  "ratingScale": "0\u20135",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 5,
+        "payoff": 5,
+        "production": 4,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The inspected shared management-course title corrects the accounting-only belief. Exact programme/cohort scope is supported by the cited sources; make the specialisation labels readable in source footage.",
+        "differentiation": "The evidence-led correction is recognisably Trust. No fresh three-channel comparison or broader topic generalisation is claimed.",
+        "coherence": "The student excludes B.Com as accounting-only, sees the real management-course title in both specific programme documents, then changes Discard to Provisional on the same research card.",
+        "payoff": "The research card visibly changes status after the evidence. Unknown skill coverage remains a question; no final degree choice or identical-teaching inference is made.",
+        "production": "Exact programme names are spoken, the 2025\u201326 source scope is visible, and the six timed scenes have shootable actions and source inserts. Clarify cropping/legibility before filming; no recorded read-aloud was performed.",
+        "originality": "The folder/post-it shortlist reversal is clear but familiar rather than highly novel."
+      },
+      "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+      "reasons": [
+        "This Trust-only pilot passes the 85 editorial floor, not the above-90 improvement target.",
+        "The score does not grant application approval, prove reviewer accuracy or establish three-channel differentiation."
+      ],
+      "revisions": [
+        "Hold exact programme names and the cohort visibly on the source inserts.",
+        "Show the restored option as provisional and leave unsupplied assessment/depth fields unknown.",
+        "Any comparison cells beyond the one inspected row need verification rather than invented module names."
+      ]
+    }
+  ],
+  "methodology": "The full returned storyboard, HLNI, concept spine, production notes and warnings were read. The same assistant implemented and assessed the change. Scores use the unchanged rubric. Channel differentiation here assesses the recognisable Trust experience against the approved channel objectives and archived references; a fresh three-channel group comparison was not performed. No recorded read-aloud or deployed-app test was performed.",
+  "runSummary": "Final-policy repetition 1 returned a six-scene Trust draft in 29.424 seconds. Its editorial score is 86: above the 85 floor, below the above-90 target. Repetition 2 then encountered Gemini provider unavailability; repetition 3 was not attempted. This is one passing example, not repeatability evidence.",
+  "crossChannelFinding": "Only Trust was generated in this run. Other channels were deliberately held back pending repeatable Trust acceptance. Output remains Draft and no model review grants application approval.",
+  "nextStep": "Keep Connection and Discovery expansion and all deployments on hold. Repeat the incomplete Trust reliability set when Gemini is available. The reviewer\u2019s creative feedback is advisory because broader calibration failed; integrity concerns, deterministic checks and human approval remain in place."
+}

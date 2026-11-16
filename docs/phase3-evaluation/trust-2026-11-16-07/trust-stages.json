@@ -1,0 +1,94 @@
+[
+  {
+    "stage": "channel_concept",
+    "outcome": "complete",
+    "elapsedMs": 4488,
+    "remainingMs": 45509,
+    "at": "2026-11-16T06:44:31.266Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 1752,
+    "remainingMs": 43754,
+    "at": "2026-11-16T06:44:33.021Z"
+  },
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 4365,
+    "remainingMs": 39389,
+    "at": "2026-11-16T06:44:37.386Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Concept delivery",
+    "elapsedMs": 9,
+    "remainingMs": 39380,
+    "at": "2026-11-16T06:44:37.395Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 4546,
+    "remainingMs": 34834,
+    "at": "2026-11-16T06:44:41.941Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Concept delivery",
+    "elapsedMs": 1,
+    "remainingMs": 34833,
+    "at": "2026-11-16T06:44:41.942Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 3487,
+    "remainingMs": 31346,
+    "at": "2026-11-16T06:44:45.429Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 1,
+    "remainingMs": 31345,
+    "at": "2026-11-16T06:44:45.430Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "attempted",
+    "elapsedMs": 0,
+    "remainingMs": 31345,
+    "at": "2026-11-16T06:44:45.430Z"
+  },
+  {
+    "stage": "critique",
+    "outcome": "complete",
+    "elapsedMs": 953,
+    "remainingMs": 30392,
+    "at": "2026-11-16T06:44:46.383Z"
+  },
+  {
+    "stage": "advisory_rewrite",
+    "outcome": "complete",
+    "elapsedMs": 3666,
+    "remainingMs": 26725,
+    "at": "2026-11-16T06:44:50.050Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 0,
+    "remainingMs": 26724,
+    "at": "2026-11-16T06:44:50.051Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "retained_valid_draft",
+    "category": "output_validation",
+    "elapsedMs": 0,
+    "remainingMs": 26724,
+    "at": "2026-11-16T06:44:50.051Z"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 4083,
+    "remainingMs": 45916,
+    "at": "2026-11-16T05:27:07.892Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Spoken pacing)",
+    "elapsedMs": 1,
+    "remainingMs": 45915,
+    "at": "2026-11-16T05:27:07.893Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 1378,
+    "remainingMs": 44537,
+    "at": "2026-11-16T05:27:09.271Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Gate 3 (Idea Fidelity & Entity Persistence)",
+    "elapsedMs": 2,
+    "remainingMs": 44535,
+    "at": "2026-11-16T05:27:09.273Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 4846,
+    "remainingMs": 39689,
+    "at": "2026-11-16T05:27:14.119Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Spoken pacing)",
+    "elapsedMs": 1,
+    "remainingMs": 39688,
+    "at": "2026-11-16T05:27:14.120Z"
+  }
+]

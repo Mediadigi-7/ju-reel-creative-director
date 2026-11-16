@@ -1,0 +1,362 @@
+[
+  {
+    "channel": "Trust",
+    "concept": {
+      "id": "K4",
+      "title": "A bounded academic decision",
+      "basisId": "original_reasoned_method",
+      "audienceGap": "The student assumes more visual decoration will satisfy a task marked on reasoning.",
+      "hlni": "The requested output and its marking criterion are different; the criterion can change preparation.",
+      "viewerChange": "Replace a broad degree-fit worry with a question about the observed difficulty.",
+      "concept": "A hypothetical poster criterion requires explaining one design choice; the student changes their preparation.",
+      "mechanismKey": "recorded_observation",
+      "device": "A crossed-out decoration plan is replaced with a reason.",
+      "supportType": "method",
+      "support": "The observation identifies one missing answer; it does not predict aptitude or success.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Inspect the clearly hypothetical task.",
+        "Mark the precise uncertainty and ask about that uncertainty."
+      ],
+      "interpretationRule": "A task-specific question is justified; a degree-fit conclusion is not.",
+      "visibleProof": "The student writes the uncertainty next to the actual item and uses it to ask for help.",
+      "payoff": "The student feels better after hearing the advice.",
+      "limitations": "One activity does not establish degree suitability, curriculum membership or aptitude.",
+      "treatment": "Informative",
+      "demonstration": {
+        "input": "A hypothetical poster assignment supplies the marking criterion: explain one design choice.",
+        "visibleInput": "Example criterion: explain one design choice.",
+        "observation": "Decorating another slide would not supply the required explanation.",
+        "nextQuestion": "Which reason supports my design choice?"
+      },
+      "storySpine": {
+        "startingBelief": "Adding decoration will satisfy the hypothetical assignment.",
+        "studentSituation": "A student plans work after assuming degree labels identify assessment demands.",
+        "observation": "The supplied illustrative criterion rewards explaining a design choice.",
+        "focus": "Preparing an explanation rather than additional decoration",
+        "whyQuestionFollows": "Choosing a reason directly addresses the known explanatory criterion.",
+        "changedAction": "The student feels confident about choosing a degree.",
+        "visibleConsequence": "The student smiles, closes the notebook, and feels calm.",
+        "channelExperience": "An explanatory demonstration reveals how a criterion changes preparation."
+      }
+    },
+    "expectedReject": true
+  },
+  {
+    "channel": "Connection",
+    "concept": {
+      "id": "K1",
+      "title": "A bounded academic decision",
+      "basisId": "original_reasoned_method",
+      "audienceGap": "Students make broad degree judgements from a single difficulty.",
+      "hlni": "A precise observation can support a specific help request without diagnosing degree fit.",
+      "viewerChange": "Replace a broad degree-fit worry with a question about the observed difficulty.",
+      "concept": "A student records a particular uncertainty during a clearly hypothetical task.",
+      "mechanismKey": "recorded_observation",
+      "device": "A task note changes the student’s next interaction.",
+      "supportType": "method",
+      "support": "The observation identifies one missing answer; it does not predict aptitude or success.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Inspect the clearly hypothetical task.",
+        "Mark the precise uncertainty and ask about that uncertainty."
+      ],
+      "interpretationRule": "A task-specific question is justified; a degree-fit conclusion is not.",
+      "visibleProof": "The student writes the uncertainty next to the actual item and uses it to ask for help.",
+      "payoff": "A global worry is replaced by a specific request that can be answered.",
+      "limitations": "One activity does not establish degree suitability, curriculum membership or aptitude.",
+      "treatment": "Informative",
+      "demonstration": {
+        "input": "A hypothetical school-event expense list has a refundable deposit with no category supplied.",
+        "visibleInput": "Example: Refundable deposit. Category: ?",
+        "observation": "The student cannot classify the refundable deposit.",
+        "nextQuestion": "How should I classify this refundable deposit, and why?"
+      },
+      "storySpine": {
+        "startingBelief": "My difficulty means I should copy my friend’s degree choice.",
+        "studentSituation": "Two friends considering B.Com and BBA inspect a hypothetical event expense list.",
+        "observation": "The refundable deposit has no category stated in the sample.",
+        "focus": "Classification of the refundable deposit",
+        "whyQuestionFollows": "The missing category is exactly what the student asks to understand.",
+        "changedAction": "The student stops copying a degree choice and asks a teacher about the deposit.",
+        "visibleConsequence": "The student circles the deposit and writes the matching question beside it for the teacher.",
+        "channelExperience": "A friend helps turn an anxious self-judgement into a precise help request."
+      }
+    },
+    "expectedReject": false
+  },
+  {
+    "channel": "Discovery",
+    "concept": {
+      "id": "K6",
+      "title": "A bounded academic decision",
+      "basisId": "verified_curriculum_example",
+      "audienceGap": "Students make broad degree judgements from a single difficulty.",
+      "hlni": "Business Simulation appears in both of the supplied Semester I programme lists.",
+      "viewerChange": "Replace a broad degree-fit worry with a question about the observed difficulty.",
+      "concept": "A student tests the claim that these two title lists are completely separate by comparing the inspected official rows.",
+      "mechanismKey": "recorded_observation",
+      "device": "One highlighted row in each scoped official document changes the comparison shortlist.",
+      "supportType": "fact",
+      "support": "The supplied official B.Com PDF p.5 and BBA Entrepreneurship Management PDF p.9 list this title; the claim is limited to these inspected rows.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Inspect the clearly hypothetical task.",
+        "Mark the precise uncertainty and ask about that uncertainty."
+      ],
+      "interpretationRule": "A task-specific question is justified; a degree-fit conclusion is not.",
+      "visibleProof": "The student writes the uncertainty next to the actual item and uses it to ask for help.",
+      "payoff": "A global worry is replaced by a specific request that can be answered.",
+      "limitations": "This establishes the shared title in these two published documents only, not identical content, current admissions or degree suitability.",
+      "treatment": "Informative",
+      "demonstration": {
+        "input": "The two supplied official Semester I rows, with exact programme names and document cohort visible.",
+        "visibleInput": "Business Organization & Management — both scoped Semester I lists",
+        "observation": "Both inspected rows list Business Simulation.",
+        "nextQuestion": "What teaching and assessment does each actual programme specify?"
+      },
+      "storySpine": {
+        "startingBelief": "These two programmes cannot share a course title.",
+        "studentSituation": "A student has rejected one programme because of the degree label.",
+        "observation": "Business Simulation is shared in the supplied documents.",
+        "focus": "Title overlap versus the separate question of course depth",
+        "whyQuestionFollows": "Shared titles refute complete title separation but do not establish identical teaching.",
+        "changedAction": "The student restores the rejected programme to the shortlist and requests the actual course briefs.",
+        "visibleConsequence": "Both exact programme names and the 2025–26 scope remain visible as the student adds an assessment-brief-needed column.",
+        "channelExperience": "A curiosity-led assumption is corrected by scoped official evidence."
+      },
+      "sourceIds": [
+        "ju-bcom-af-2025-sem1",
+        "ju-bba-em-2025-sem1"
+      ]
+    },
+    "expectedReject": true
+  },
+  {
+    "channel": "Trust",
+    "concept": {
+      "id": "K3",
+      "title": "A bounded academic decision",
+      "basisId": "original_reasoned_method",
+      "audienceGap": "The student assumes more visual decoration will satisfy a task marked on reasoning.",
+      "hlni": "The requested output and its marking criterion are different; the criterion can change preparation.",
+      "viewerChange": "Replace a broad degree-fit worry with a question about the observed difficulty.",
+      "concept": "A hypothetical poster criterion requires explaining one design choice; the student changes their preparation.",
+      "mechanismKey": "recorded_observation",
+      "device": "A crossed-out decoration plan is replaced with a reason.",
+      "supportType": "method",
+      "support": "The observation identifies one missing answer; it does not predict aptitude or success.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Inspect the clearly hypothetical task.",
+        "Mark the precise uncertainty and ask about that uncertainty."
+      ],
+      "interpretationRule": "A task-specific question is justified; a degree-fit conclusion is not.",
+      "visibleProof": "The student writes the uncertainty next to the actual item and uses it to ask for help.",
+      "payoff": "A global worry is replaced by a specific request that can be answered.",
+      "limitations": "One activity does not establish degree suitability, curriculum membership or aptitude.",
+      "treatment": "Informative",
+      "demonstration": {
+        "input": "A hypothetical poster assignment supplies the marking criterion: explain one design choice.",
+        "visibleInput": "Example criterion: explain one design choice.",
+        "observation": "Decorating another slide would not supply the required explanation.",
+        "nextQuestion": "Which reason supports my design choice?"
+      },
+      "storySpine": {
+        "startingBelief": "Adding decoration will satisfy the hypothetical assignment.",
+        "studentSituation": "A student plans work after assuming degree labels identify assessment demands.",
+        "observation": "The supplied illustrative criterion rewards explaining a design choice.",
+        "focus": "Preparing an explanation rather than additional decoration",
+        "whyQuestionFollows": "Choosing a reason directly addresses the known explanatory criterion.",
+        "changedAction": "The student replaces a plan for another decorative slide with writing one reason.",
+        "visibleConsequence": "The student crosses out add decoration and writes a reason beside the design choice.",
+        "channelExperience": "An explanatory demonstration reveals how a criterion changes preparation."
+      }
+    },
+    "expectedReject": false
+  },
+  {
+    "channel": "Connection",
+    "concept": {
+      "id": "K2",
+      "title": "A bounded academic decision",
+      "basisId": "original_reasoned_method",
+      "audienceGap": "Students make broad degree judgements from a single difficulty.",
+      "hlni": "A precise observation can support a specific help request without diagnosing degree fit.",
+      "viewerChange": "Replace a broad degree-fit worry with a question about the observed difficulty.",
+      "concept": "A student records a particular uncertainty during a clearly hypothetical task.",
+      "mechanismKey": "recorded_observation",
+      "device": "A task note changes the student’s next interaction.",
+      "supportType": "method",
+      "support": "The observation identifies one missing answer; it does not predict aptitude or success.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Inspect the clearly hypothetical task.",
+        "Mark the precise uncertainty and ask about that uncertainty."
+      ],
+      "interpretationRule": "A task-specific question is justified; a degree-fit conclusion is not.",
+      "visibleProof": "The student writes the uncertainty next to the actual item and uses it to ask for help.",
+      "payoff": "A global worry is replaced by a specific request that can be answered.",
+      "limitations": "One activity does not establish degree suitability, curriculum membership or aptitude.",
+      "treatment": "Informative",
+      "demonstration": {
+        "input": "A hypothetical school-event expense list has a refundable deposit with no category supplied.",
+        "visibleInput": "Example: Refundable deposit. Category: ?",
+        "observation": "The student cannot classify the refundable deposit.",
+        "nextQuestion": "How are complete budgets audited?"
+      },
+      "storySpine": {
+        "startingBelief": "My difficulty means I should copy my friend’s degree choice.",
+        "studentSituation": "Two friends considering B.Com and BBA inspect a hypothetical event expense list.",
+        "observation": "The refundable deposit has no category stated in the sample.",
+        "focus": "Classification of the refundable deposit",
+        "whyQuestionFollows": "Both questions involve budgets, so auditing answers the classification problem.",
+        "changedAction": "The student stops copying a degree choice and asks a teacher about the deposit.",
+        "visibleConsequence": "The student circles the deposit and writes the matching question beside it for the teacher.",
+        "channelExperience": "A friend helps turn an anxious self-judgement into a precise help request."
+      }
+    },
+    "expectedReject": true
+  },
+  {
+    "channel": "Discovery",
+    "concept": {
+      "id": "K5",
+      "title": "A bounded academic decision",
+      "basisId": "verified_curriculum_example",
+      "audienceGap": "Students make broad degree judgements from a single difficulty.",
+      "hlni": "Business Organization & Management appears in Semester I of JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management PDFs whose covers identify 2025–26-onwards students.",
+      "viewerChange": "Replace a broad degree-fit worry with a question about the observed difficulty.",
+      "concept": "A student tests the claim that these two title lists are completely separate by comparing the inspected official rows.",
+      "mechanismKey": "recorded_observation",
+      "device": "One highlighted row in each scoped official document changes the comparison shortlist.",
+      "supportType": "fact",
+      "support": "The supplied official B.Com PDF p.5 and BBA Entrepreneurship Management PDF p.9 list this title; the claim is limited to these inspected rows.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Inspect the clearly hypothetical task.",
+        "Mark the precise uncertainty and ask about that uncertainty."
+      ],
+      "interpretationRule": "A task-specific question is justified; a degree-fit conclusion is not.",
+      "visibleProof": "The student writes the uncertainty next to the actual item and uses it to ask for help.",
+      "payoff": "A global worry is replaced by a specific request that can be answered.",
+      "limitations": "This establishes the shared title in these two published documents only, not identical content, current admissions or degree suitability.",
+      "treatment": "Informative",
+      "demonstration": {
+        "input": "The two supplied official Semester I rows, with exact programme names and document cohort visible.",
+        "visibleInput": "Business Organization & Management — both scoped Semester I lists",
+        "observation": "The exact title is present in both inspected rows.",
+        "nextQuestion": "What teaching and assessment does each actual programme specify?"
+      },
+      "storySpine": {
+        "startingBelief": "These two programmes cannot share a course title.",
+        "studentSituation": "A student has rejected one programme because of the degree label.",
+        "observation": "The actual source rows share Business Organization & Management.",
+        "focus": "Title overlap versus the separate question of course depth",
+        "whyQuestionFollows": "Shared titles refute complete title separation but do not establish identical teaching.",
+        "changedAction": "The student restores the rejected programme to the shortlist and requests the actual course briefs.",
+        "visibleConsequence": "Both exact programme names and the 2025–26 scope remain visible as the student adds an assessment-brief-needed column.",
+        "channelExperience": "A curiosity-led assumption is corrected by scoped official evidence."
+      },
+      "sourceIds": [
+        "ju-bcom-af-2025-sem1",
+        "ju-bba-em-2025-sem1"
+      ]
+    },
+    "expectedReject": false
+  },
+  {
+    "channel": "Trust",
+    "concept": {
+      "id": "K7",
+      "title": "A bounded academic decision",
+      "basisId": "verified_curriculum_example",
+      "audienceGap": "Students make broad degree judgements from a single difficulty.",
+      "hlni": "Business Organization & Management appears in Semester I of JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management PDFs whose covers identify 2025–26-onwards students.",
+      "viewerChange": "Replace a broad degree-fit worry with a question about the observed difficulty.",
+      "concept": "A student tests the claim that these two title lists are completely separate by comparing the inspected official rows.",
+      "mechanismKey": "recorded_observation",
+      "device": "One highlighted row in each scoped official document changes the comparison shortlist.",
+      "supportType": "fact",
+      "support": "The supplied official B.Com PDF p.5 and BBA Entrepreneurship Management PDF p.9 list this title; the claim is limited to these inspected rows.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Inspect the clearly hypothetical task.",
+        "Mark the precise uncertainty and ask about that uncertainty."
+      ],
+      "interpretationRule": "A task-specific question is justified; a degree-fit conclusion is not.",
+      "visibleProof": "The student writes the uncertainty next to the actual item and uses it to ask for help.",
+      "payoff": "A global worry is replaced by a specific request that can be answered.",
+      "limitations": "This establishes the shared title in these two published documents only, not identical content, current admissions or degree suitability.",
+      "treatment": "Informative",
+      "demonstration": {
+        "input": "The two supplied official Semester I rows, with exact programme names and document cohort visible.",
+        "visibleInput": "Business Organization & Management — both scoped Semester I lists",
+        "observation": "The exact title is present in both inspected rows.",
+        "nextQuestion": "What teaching and assessment does each actual programme specify?"
+      },
+      "storySpine": {
+        "startingBelief": "B.Com is exclusively for accounting while BBA is the only path for management.",
+        "studentSituation": "Student is preparing a shortlist for higher education and has deleted B.Com from their options.",
+        "observation": "The student spots 'Business Organization & Management' in the Semester I syllabus for both JOY University's B.Com Accounting & Finance (2025-26) and BBA Entrepreneurship Management (2025-26).",
+        "focus": "The assumption that degree titles act as rigid barriers to course content.",
+        "whyQuestionFollows": "The presence of the same module in both degrees invalidates the premise that management subjects are exclusive to BBA.",
+        "changedAction": "The student moves B.Com back to their provisional shortlist to conduct a module-by-module comparison.",
+        "visibleConsequence": "The student re-labels their shortlist from 'Management-only' to 'Comparison-Required' and adds a column for verifying future course modules.",
+        "channelExperience": "The audience sees the immediate collapse of a rigid binary choice through a direct document comparison."
+      },
+      "sourceIds": [
+        "ju-bcom-af-2025-sem1",
+        "ju-bba-em-2025-sem1"
+      ]
+    },
+    "expectedReject": false
+  },
+  {
+    "channel": "Trust",
+    "concept": {
+      "id": "K8",
+      "title": "A bounded academic decision",
+      "basisId": "verified_curriculum_example",
+      "audienceGap": "Students make broad degree judgements from a single difficulty.",
+      "hlni": "The two programmes have identical teaching and assessment because one title is shared.",
+      "viewerChange": "Replace a broad degree-fit worry with a question about the observed difficulty.",
+      "concept": "A student tests the claim that these two title lists are completely separate by comparing the inspected official rows.",
+      "mechanismKey": "recorded_observation",
+      "device": "One highlighted row in each scoped official document changes the comparison shortlist.",
+      "supportType": "fact",
+      "support": "The supplied official B.Com PDF p.5 and BBA Entrepreneurship Management PDF p.9 list this title; the claim is limited to these inspected rows.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Inspect the clearly hypothetical task.",
+        "Mark the precise uncertainty and ask about that uncertainty."
+      ],
+      "interpretationRule": "A task-specific question is justified; a degree-fit conclusion is not.",
+      "visibleProof": "The student writes the uncertainty next to the actual item and uses it to ask for help.",
+      "payoff": "A global worry is replaced by a specific request that can be answered.",
+      "limitations": "This establishes the shared title in these two published documents only, not identical content, current admissions or degree suitability.",
+      "treatment": "Informative",
+      "demonstration": {
+        "input": "The two supplied official Semester I rows, with exact programme names and document cohort visible.",
+        "visibleInput": "Business Organization & Management — both scoped Semester I lists",
+        "observation": "The exact title is present in both inspected rows.",
+        "nextQuestion": "What teaching and assessment does each actual programme specify?"
+      },
+      "storySpine": {
+        "startingBelief": "These two programmes cannot share a course title.",
+        "studentSituation": "A student has rejected one programme because of the degree label.",
+        "observation": "The actual source rows share Business Organization & Management.",
+        "focus": "Title overlap versus the separate question of course depth",
+        "whyQuestionFollows": "Shared titles refute complete title separation but do not establish identical teaching.",
+        "changedAction": "The student chooses B.Com as equivalent to BBA without any further checks.",
+        "visibleConsequence": "The student finalises B.Com because the shared title guarantees identical teaching.",
+        "channelExperience": "A curiosity-led assumption is corrected by scoped official evidence."
+      },
+      "sourceIds": [
+        "ju-bcom-af-2025-sem1",
+        "ju-bba-em-2025-sem1"
+      ]
+    },
+    "expectedReject": true
+  }
+]

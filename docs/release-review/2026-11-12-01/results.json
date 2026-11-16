@@ -1,0 +1,4587 @@
+{
+  "generatedAt": "2026-11-12T04:43:17.523Z",
+  "rows": [
+    {
+      "id": "next-Informative",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 7
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 6
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "next-Funny",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 6
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 11
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 6
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 11
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "next-Trendy",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 11
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 4
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 10
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 4
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Informative",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 9
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 10
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 4
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 11
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Funny",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 5
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 9
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 9
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Trendy",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 3
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 11
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 4
+        }
+      ]
+    },
+    {
+      "id": "engineering-Informative",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 29,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 7
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 7
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 13
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 13
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 5
+        }
+      ]
+    },
+    {
+      "id": "engineering-Funny",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 9
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 6
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 5
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 13
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "engineering-Trendy",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 8
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 9
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 5
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 11
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 5
+        }
+      ]
+    },
+    {
+      "id": "commerce-Informative",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 8
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 11
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 4
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 11
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 11
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 5
+        }
+      ]
+    },
+    {
+      "id": "commerce-Funny",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 6
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 10
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 6
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 9
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 10
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "commerce-Trendy",
+      "language": "English",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 9
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 9
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 4
+        },
+        {
+          "number": 4,
+          "seconds": 4,
+          "speechUnits": 8
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 13
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 4
+        }
+      ]
+    },
+    {
+      "id": "ai-Informative",
+      "language": "English",
+      "channel": "Discovery",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 10
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 8
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 6
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 14
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 11
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 5
+        }
+      ]
+    },
+    {
+      "id": "ai-Funny",
+      "language": "English",
+      "channel": "Discovery",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 8
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 2
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 12
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 8
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "ai-Trendy",
+      "language": "English",
+      "channel": "Discovery",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 8
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 8
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 5
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 14
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 10
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 7
+        }
+      ]
+    },
+    {
+      "id": "college-Informative",
+      "language": "English",
+      "channel": "Trust",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 6
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 7
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 4
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 11
+        },
+        {
+          "number": 5,
+          "seconds": 7,
+          "speechUnits": 14
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 5
+        }
+      ]
+    },
+    {
+      "id": "college-Funny",
+      "language": "English",
+      "channel": "Trust",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 6
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 5
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 4
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 12
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 10
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "college-Trendy",
+      "language": "English",
+      "channel": "Trust",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 9
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 9
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 4
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 12
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 13
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 6
+        }
+      ]
+    },
+    {
+      "id": "next-Informative",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 34,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 41
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 47
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 28
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 58
+        },
+        {
+          "number": 5,
+          "seconds": 7,
+          "speechUnits": 54
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 27
+        }
+      ]
+    },
+    {
+      "id": "next-Funny",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 38
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 47
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 25
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 49
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 36
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 27
+        }
+      ]
+    },
+    {
+      "id": "next-Trendy",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 44
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 29
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 27
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 51
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 40
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 25
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Informative",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 31,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 31
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 30
+        },
+        {
+          "number": 4,
+          "seconds": 8,
+          "speechUnits": 60
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 42
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 28
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Funny",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 26
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 32
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 29
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 36
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 27
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Trendy",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 35
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 37
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 18
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 48
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 37
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 22
+        }
+      ]
+    },
+    {
+      "id": "engineering-Informative",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 30
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 37
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 21
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 58
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 46
+        },
+        {
+          "number": 6,
+          "seconds": 5,
+          "speechUnits": 32
+        }
+      ]
+    },
+    {
+      "id": "engineering-Funny",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 42
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 28
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 28
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 44
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 46
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 27
+        }
+      ]
+    },
+    {
+      "id": "engineering-Trendy",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 32,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 43
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 25
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 50
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 48
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 29
+        }
+      ]
+    },
+    {
+      "id": "commerce-Informative",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 33,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 45
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 17
+        },
+        {
+          "number": 4,
+          "seconds": 9,
+          "speechUnits": 71
+        },
+        {
+          "number": 5,
+          "seconds": 7,
+          "speechUnits": 50
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 30
+        }
+      ]
+    },
+    {
+      "id": "commerce-Funny",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 29,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 7,
+          "speechUnits": 54
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 20
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 41
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 25
+        }
+      ]
+    },
+    {
+      "id": "commerce-Trendy",
+      "language": "Tamil",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 31,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 44
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 20
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 52
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 49
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 24
+        }
+      ]
+    },
+    {
+      "id": "ai-Informative",
+      "language": "Tamil",
+      "channel": "Discovery",
+      "treatment": "Informative",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 35
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 30
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 22
+        },
+        {
+          "number": 4,
+          "seconds": 8,
+          "speechUnits": 59
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 46
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 31
+        }
+      ]
+    },
+    {
+      "id": "ai-Funny",
+      "language": "Tamil",
+      "channel": "Discovery",
+      "treatment": "Funny",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 38
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 33
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 15
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 50
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 36
+        },
+        {
+          "number": 6,
+          "seconds": 5,
+          "speechUnits": 32
+        }
+      ]
+    },
+    {
+      "id": "ai-Trendy",
+      "language": "Tamil",
+      "channel": "Discovery",
+      "treatment": "Trendy",
+      "actualDurationSec": 33,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 33
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 24
+        },
+        {
+          "number": 4,
+          "seconds": 8,
+          "speechUnits": 67
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 44
+        },
+        {
+          "number": 6,
+          "seconds": 5,
+          "speechUnits": 33
+        }
+      ]
+    },
+    {
+      "id": "college-Informative",
+      "language": "Tamil",
+      "channel": "Trust",
+      "treatment": "Informative",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 36
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 17
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 52
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 6,
+          "seconds": 5,
+          "speechUnits": 32
+        }
+      ]
+    },
+    {
+      "id": "college-Funny",
+      "language": "Tamil",
+      "channel": "Trust",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 29
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 23
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 19
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 57
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 37
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 29
+        }
+      ]
+    },
+    {
+      "id": "college-Trendy",
+      "language": "Tamil",
+      "channel": "Trust",
+      "treatment": "Trendy",
+      "actualDurationSec": 33,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 42
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 41
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 26
+        },
+        {
+          "number": 4,
+          "seconds": 8,
+          "speechUnits": 63
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 35
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 27
+        }
+      ]
+    },
+    {
+      "id": "next-Informative",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 38
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 17
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "next-Funny",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 39
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 18
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 35
+        },
+        {
+          "number": 5,
+          "seconds": 4,
+          "speechUnits": 29
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 22
+        }
+      ]
+    },
+    {
+      "id": "next-Trendy",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 34
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 18
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 16
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 36
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 33
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 21
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Informative",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 3,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 40
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 21
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Funny",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 20
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 20
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 32
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 27
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Trendy",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 11
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 34
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 31
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 18
+        }
+      ]
+    },
+    {
+      "id": "engineering-Informative",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 21
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 18
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 44
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 37
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 24
+        }
+      ]
+    },
+    {
+      "id": "engineering-Funny",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 20
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 15
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 37
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "engineering-Trendy",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 26
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 28
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 19
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 24
+        }
+      ]
+    },
+    {
+      "id": "commerce-Informative",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 20
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 34
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 13
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 41
+        },
+        {
+          "number": 5,
+          "seconds": 4,
+          "speechUnits": 29
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 23
+        }
+      ]
+    },
+    {
+      "id": "commerce-Funny",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 7,
+          "speechUnits": 41
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 15
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 45
+        },
+        {
+          "number": 5,
+          "seconds": 4,
+          "speechUnits": 25
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 19
+        }
+      ]
+    },
+    {
+      "id": "commerce-Trendy",
+      "language": "Telugu",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 34
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 29
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 16
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 41
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 18
+        }
+      ]
+    },
+    {
+      "id": "ai-Informative",
+      "language": "Telugu",
+      "channel": "Discovery",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 16
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 48
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 25
+        }
+      ]
+    },
+    {
+      "id": "ai-Funny",
+      "language": "Telugu",
+      "channel": "Discovery",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 9
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 36
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 28
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "ai-Trendy",
+      "language": "Telugu",
+      "channel": "Discovery",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 25
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 14
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 57
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 33
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 24
+        }
+      ]
+    },
+    {
+      "id": "college-Informative",
+      "language": "Telugu",
+      "channel": "Trust",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 28
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 13
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 48
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 22
+        }
+      ]
+    },
+    {
+      "id": "college-Funny",
+      "language": "Telugu",
+      "channel": "Trust",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 21
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 14
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 17
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 43
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 26
+        }
+      ]
+    },
+    {
+      "id": "college-Trendy",
+      "language": "Telugu",
+      "channel": "Trust",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 31
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 17
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 45
+        },
+        {
+          "number": 5,
+          "seconds": 4,
+          "speechUnits": 27
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "next-Informative",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 38
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 18
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 45
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 42
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "next-Funny",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 37
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 12
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 36
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "next-Trendy",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 36
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 19
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 35
+        },
+        {
+          "number": 5,
+          "seconds": 4,
+          "speechUnits": 30
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 19
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Informative",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 29
+        },
+        {
+          "number": 3,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 40
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Funny",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 20
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 32
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 29
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 22
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Trendy",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 29
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 13
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 39
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 19
+        }
+      ]
+    },
+    {
+      "id": "engineering-Informative",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 25
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 32
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 14
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 51
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 35
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 27
+        }
+      ]
+    },
+    {
+      "id": "engineering-Funny",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 33
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 15
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 32
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 38
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 19
+        }
+      ]
+    },
+    {
+      "id": "engineering-Trendy",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 22
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 17
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 45
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 40
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 25
+        }
+      ]
+    },
+    {
+      "id": "commerce-Informative",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 20
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 11
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 48
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 32
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "commerce-Funny",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 39
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 15
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 44
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 33
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 17
+        }
+      ]
+    },
+    {
+      "id": "commerce-Trendy",
+      "language": "Malayalam",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 7,
+          "speechUnits": 41
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 26
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 15
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 47
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 36
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 19
+        }
+      ]
+    },
+    {
+      "id": "ai-Informative",
+      "language": "Malayalam",
+      "channel": "Discovery",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 21
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 15
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 43
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 35
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 29
+        }
+      ]
+    },
+    {
+      "id": "ai-Funny",
+      "language": "Malayalam",
+      "channel": "Discovery",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 11
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 38
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 24
+        }
+      ]
+    },
+    {
+      "id": "ai-Trendy",
+      "language": "Malayalam",
+      "channel": "Discovery",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 26
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 16
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 54
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 37
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "college-Informative",
+      "language": "Malayalam",
+      "channel": "Trust",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 26
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 16
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 50
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 38
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "college-Funny",
+      "language": "Malayalam",
+      "channel": "Trust",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 15
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 15
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 46
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 33
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 27
+        }
+      ]
+    },
+    {
+      "id": "college-Trendy",
+      "language": "Malayalam",
+      "channel": "Trust",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 34
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 19
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 53
+        },
+        {
+          "number": 5,
+          "seconds": 4,
+          "speechUnits": 26
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 19
+        }
+      ]
+    },
+    {
+      "id": "next-Informative",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 34,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 2,
+          "seconds": 7,
+          "speechUnits": 48
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 21
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 47
+        },
+        {
+          "number": 5,
+          "seconds": 7,
+          "speechUnits": 46
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 25
+        }
+      ]
+    },
+    {
+      "id": "next-Funny",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 47
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 22
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 39
+        },
+        {
+          "number": 5,
+          "seconds": 4,
+          "speechUnits": 28
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 23
+        }
+      ]
+    },
+    {
+      "id": "next-Trendy",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 29,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 33
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 18
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 40
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 38
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 20
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Informative",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 28
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 31
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 18
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 37
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 37
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 22
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Funny",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 21
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 24
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 32
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 31
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 22
+        }
+      ]
+    },
+    {
+      "id": "mistakes-Trendy",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 24
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 10
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 42
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 31
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 14
+        }
+      ]
+    },
+    {
+      "id": "engineering-Informative",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 38
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 19
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 51
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 38
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 23
+        }
+      ]
+    },
+    {
+      "id": "engineering-Funny",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 29,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 23
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 20
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 43
+        },
+        {
+          "number": 5,
+          "seconds": 7,
+          "speechUnits": 45
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 22
+        }
+      ]
+    },
+    {
+      "id": "engineering-Trendy",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 28
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 28
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 17
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 45
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 43
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 26
+        }
+      ]
+    },
+    {
+      "id": "commerce-Informative",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Informative",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 40
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 16
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 42
+        },
+        {
+          "number": 5,
+          "seconds": 7,
+          "speechUnits": 45
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 22
+        }
+      ]
+    },
+    {
+      "id": "commerce-Funny",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 25
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 38
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 18
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 42
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 34
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 18
+        }
+      ]
+    },
+    {
+      "id": "commerce-Trendy",
+      "language": "Hindi",
+      "channel": "Connection",
+      "treatment": "Trendy",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 39
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 14
+        },
+        {
+          "number": 4,
+          "seconds": 5,
+          "speechUnits": 39
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 41
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 17
+        }
+      ]
+    },
+    {
+      "id": "ai-Informative",
+      "language": "Hindi",
+      "channel": "Discovery",
+      "treatment": "Informative",
+      "actualDurationSec": 31,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 32
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 29
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 19
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 56
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 42
+        },
+        {
+          "number": 6,
+          "seconds": 5,
+          "speechUnits": 28
+        }
+      ]
+    },
+    {
+      "id": "ai-Funny",
+      "language": "Hindi",
+      "channel": "Discovery",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 31
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 3,
+          "seconds": 2,
+          "speechUnits": 13
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 47
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 36
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 26
+        }
+      ]
+    },
+    {
+      "id": "ai-Trendy",
+      "language": "Hindi",
+      "channel": "Discovery",
+      "treatment": "Trendy",
+      "actualDurationSec": 31,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 23
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 30
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 14
+        },
+        {
+          "number": 4,
+          "seconds": 8,
+          "speechUnits": 59
+        },
+        {
+          "number": 5,
+          "seconds": 6,
+          "speechUnits": 43
+        },
+        {
+          "number": 6,
+          "seconds": 5,
+          "speechUnits": 33
+        }
+      ]
+    },
+    {
+      "id": "college-Informative",
+      "language": "Hindi",
+      "channel": "Trust",
+      "treatment": "Informative",
+      "actualDurationSec": 30,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 4,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 5,
+          "speechUnits": 31
+        },
+        {
+          "number": 3,
+          "seconds": 4,
+          "speechUnits": 21
+        },
+        {
+          "number": 4,
+          "seconds": 7,
+          "speechUnits": 52
+        },
+        {
+          "number": 5,
+          "seconds": 7,
+          "speechUnits": 42
+        },
+        {
+          "number": 6,
+          "seconds": 3,
+          "speechUnits": 21
+        }
+      ]
+    },
+    {
+      "id": "college-Funny",
+      "language": "Hindi",
+      "channel": "Trust",
+      "treatment": "Funny",
+      "actualDurationSec": 28,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": false,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 6,
+          "speechUnits": 29
+        },
+        {
+          "number": 2,
+          "seconds": 4,
+          "speechUnits": 16
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 16
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 45
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 36
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 25
+        }
+      ]
+    },
+    {
+      "id": "college-Trendy",
+      "language": "Hindi",
+      "channel": "Trust",
+      "treatment": "Trendy",
+      "actualDurationSec": 29,
+      "requestedDurationSec": 28,
+      "extendedForSpeech": true,
+      "technical": "PASS",
+      "hlniMetadata": 0,
+      "editoriallyApproved": false,
+      "humanLanguageReview": "PENDING",
+      "creativeQualityReview": "PENDING",
+      "scenes": [
+        {
+          "number": 1,
+          "seconds": 5,
+          "speechUnits": 27
+        },
+        {
+          "number": 2,
+          "seconds": 6,
+          "speechUnits": 38
+        },
+        {
+          "number": 3,
+          "seconds": 3,
+          "speechUnits": 16
+        },
+        {
+          "number": 4,
+          "seconds": 6,
+          "speechUnits": 49
+        },
+        {
+          "number": 5,
+          "seconds": 5,
+          "speechUnits": 36
+        },
+        {
+          "number": 6,
+          "seconds": 4,
+          "speechUnits": 22
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "key": "institution",
+      "legacyAssertion": "Joy University",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "formerName",
+      "legacyAssertion": "The Indian Engineering College",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "established",
+      "legacyAssertion": "Established vide Tamil Nadu State Private Universities Act 2019",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "location",
+      "legacyAssertion": "Vadakkankulam, Tirunelveli district, Tamil Nadu",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "nearLocation",
+      "legacyAssertion": "Near Kanyakumari, Tourist Hub of South India",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "aisheCode",
+      "legacyAssertion": "U-1412",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "campusSize",
+      "legacyAssertion": "104+ acres of Eco-Friendly Green Campus",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "legacyYears",
+      "legacyAssertion": "43 years of academic excellence",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "alumniPlaced",
+      "legacyAssertion": "1 Lakh+ students placed worldwide by the Rajas Group",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "recognition",
+      "legacyAssertion": "UGC recognition under Section 2(f)",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "award",
+      "legacyAssertion": "Best Emerging University in South India — 2023",
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "academicSchools",
+      "legacyAssertion": [
+        "Computational Intelligence",
+        "Engineering & Technology",
+        "Agriculture",
+        "Entrepreneurship & Management",
+        "Law",
+        "Nursing",
+        "Pharmacy",
+        "Life & Health Sciences",
+        "Arts & Natural Sciences",
+        "Research"
+      ],
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    },
+    {
+      "key": "corporatePartners",
+      "legacyAssertion": [
+        "IBM",
+        "NEC",
+        "Intel",
+        "ISDC",
+        "Siemens"
+      ],
+      "status": "VERIFICATION_REQUIRED",
+      "sourceOfTruth": "https://joyuniversity.edu.in/",
+      "officialPage": null,
+      "programme": null,
+      "academicYear": null,
+      "supportedClaim": null
+    }
+  ],
+  "programmes": [
+    {
+      "group": "roboticsAndAI",
+      "entries": [
+        {
+          "label": "B.Tech CSE (AI & Robotics)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Mech (Robotics & Automation)",
+          "status": "LEGACY_UNVERIFIED"
+        }
+      ]
+    },
+    {
+      "group": "computationalIntelligence",
+      "entries": [
+        {
+          "label": "B.Tech CSE (AI & Robotics)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech CSE (AI & Data Science)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech CSE (AI & Machine Learning)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech CSE (AI & IoT)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech CSE (Cyber Security)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Computer Science & Engineering",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Information & Communication Technology",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "BCA (Full Stack Development / AI / Cyber Security)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. (Hons) CSE (AI & Data Science)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech. Artificial Intelligence & Intelligent Systems — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.Tech. Quantum Computing & Artificial Intelligence — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.Sc. Data Science, AI & Applied Statistics — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.Sc. Artificial Intelligence, Psychology & Cognitive Science — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.Tech. Robotics, AI & Autonomous Systems — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.Tech. Artificial Intelligence & Healthcare Technology — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "group": "engineeringAndTechnology",
+      "entries": [
+        {
+          "label": "B.Tech Mech (Robotics & Automation)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Mech (AI & Machine Learning)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Mechatronics",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Mechanical Engineering",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Electronics & Communication Engineering (ECE)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech ECE (VLSI Design)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Biomedical Engineering",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Biotechnology",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Aeronautical Engineering",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Civil Engineering",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Design (Fashion Design)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech. Semiconductor Technology & VLSI Engineering — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.Tech. Cybersecurity, Digital Forensics & Cyber Intelligence — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.Tech. Electric Vehicle Technology & Smart Energy Systems — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "group": "managementAndCommerce",
+      "entries": [
+        {
+          "label": "B.Com (FinTech & AI)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Com (Accounting & Finance)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Com (Computer Application)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "BBA (Business Analytics)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "BBA (Digital Marketing)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "BBA (Logistics & Supply Chain Management)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "MBA (Business Analytics / Digital Marketing)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "BBA – Artificial Intelligence, Business Analytics & Digital Transformation — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "BBA – FinTech, AI & Digital Finance — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "BBA – Healthcare Management & Digital Health — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "BBA – Entrepreneurship, Innovation & Venture Creation — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "group": "agriculture",
+      "entries": [
+        {
+          "label": "B.Sc. (Hons.) Agriculture",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. (Hons.) Horticulture",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Tech Agricultural Engineering",
+          "status": "LEGACY_UNVERIFIED"
+        }
+      ]
+    },
+    {
+      "group": "law",
+      "entries": [
+        {
+          "label": "B.A. LL.B (Hons.) — 5 Years",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.B.A. LL.B (Hons.) — 5 Years",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "LL.B (Hons.) — 3 Years",
+          "status": "LEGACY_UNVERIFIED"
+        }
+      ]
+    },
+    {
+      "group": "healthAndMedicalSciences",
+      "entries": [
+        {
+          "label": "B.Pharm (Bachelor of Pharmacy)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. Nursing",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.P.T. (Bachelor of Physiotherapy)",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. Operation Theatre & Anaesthesia Technology",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. Cardiac Perfusion Technology",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. Medical Radiology & Imaging Technology",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. Physician Assistant",
+          "status": "LEGACY_UNVERIFIED"
+        }
+      ]
+    },
+    {
+      "group": "appliedSciencesAndMedia",
+      "entries": [
+        {
+          "label": "B.Sc. Forensic Science",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. Psychology",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. Film & TV Production",
+          "status": "LEGACY_UNVERIFIED"
+        },
+        {
+          "label": "B.Sc. Environmental Science, Climate & Sustainability — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.Sc. Physics & Semiconductor Technology — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        },
+        {
+          "label": "B.A./B.Sc. Digital Media, Artificial Intelligence & Communication — Proposed for 2027–28",
+          "status": "USER_PROVIDED_PROPOSAL"
+        }
+      ]
+    }
+  ],
+  "proposal": {
+    "source": "User-provided consolidated school-wise classification",
+    "status": "proposed",
+    "academicYear": "2027–28",
+    "schools": 9,
+    "programmes": 16
+  }
+}

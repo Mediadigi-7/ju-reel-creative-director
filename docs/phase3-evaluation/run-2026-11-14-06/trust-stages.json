@@ -1,0 +1,10 @@
+[
+  {
+    "stage": "concept",
+    "outcome": "error",
+    "category": "timeout",
+    "elapsedMs": 15005,
+    "remainingMs": 34992,
+    "at": "2026-11-14T09:29:43.068Z"
+  }
+]

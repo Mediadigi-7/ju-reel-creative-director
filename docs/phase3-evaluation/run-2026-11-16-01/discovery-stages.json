@@ -1,0 +1,44 @@
+[
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 6740,
+    "remainingMs": 43259,
+    "at": "2026-11-16T05:25:19.227Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 1,
+    "remainingMs": 43258,
+    "at": "2026-11-16T05:25:19.228Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "attempted",
+    "elapsedMs": 0,
+    "remainingMs": 43258,
+    "at": "2026-11-16T05:25:19.228Z"
+  },
+  {
+    "stage": "critique",
+    "outcome": "complete",
+    "elapsedMs": 5079,
+    "remainingMs": 38179,
+    "at": "2026-11-16T05:25:24.307Z"
+  },
+  {
+    "stage": "advisory_rewrite",
+    "outcome": "complete",
+    "elapsedMs": 6217,
+    "remainingMs": 31961,
+    "at": "2026-11-16T05:25:30.525Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 2,
+    "remainingMs": 31959,
+    "at": "2026-11-16T05:25:30.527Z"
+  }
+]

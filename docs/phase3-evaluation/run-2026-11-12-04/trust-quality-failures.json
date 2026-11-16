@@ -1,0 +1,176 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A degree label does not define assessment style; specific grading criteria do.",
+          "audienceGap": "Students assume B.Com and BBA have inherently different assessment styles based on their titles.",
+          "viewerChange": "Viewers will now ask about specific grading criteria rather than relying on program names.",
+          "supportType": "method",
+          "support": "The method separates the work product from the assessment criteria, forcing an investigation into grading priorities.",
+          "references": [],
+          "shotNumbers": [
+            2
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The student learns to ask specific questions about grading, making their academic choice more informed."
+        }
+      ],
+      "id": "reel_1794457157150_xlhkfo",
+      "reelTitle": "The Assessment Audit: B.Com vs BBA",
+      "creativeAngle": "Comparing degree assessment criteria rather than degree titles.",
+      "objective": "Enable students to evaluate academic programs through assessment methodology.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "functions": [
+            "HOOK",
+            "PROBLEM"
+          ],
+          "name": "The Title Trap",
+          "timestamp": "00:00 – 00:06",
+          "visual": "Student looking at two blank notebooks labeled B.Com and BBA.",
+          "dialogue": "Choosing between B.Com and BBA based on names alone misses the real difference: how you are actually assessed.",
+          "onscreenText": "B.Com vs BBA: More than a label",
+          "cameraPerformance": "Close-up on student, mid-shot.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Audit Method",
+          "timestamp": "00:06 – 00:18",
+          "visual": "Split-screen graphic showing a cost analysis task.",
+          "dialogue": "Example: Task: Analyze costs. Focus: Accuracy vs. Strategic Reasoning. Notice how the same data yields different grading priorities.",
+          "onscreenText": "Example: Task: Analyze costs. Focus: Accuracy vs. Strategic Reasoning.",
+          "cameraPerformance": "Point of view shot of the comparison sheet.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "functions": [
+            "PAYOFF",
+            "CTA"
+          ],
+          "name": "The Concrete Question",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Student looking at a notepad, writing down a question.",
+          "dialogue": "Don't guess the focus. Ask: What specific criteria does this course use to grade my analysis? Audit the assessment, not just the title.",
+          "onscreenText": "What specific criteria does this course use to grade my analysis?",
+          "cameraPerformance": "Tight shot on the pen writing on paper.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, educational, paper-based aesthetic.",
+        "performance": "Direct, calm, and analytical delivery.",
+        "camera": "Stable, tripod-mounted shots for clarity.",
+        "editing": "Rhythmic cuts synchronized with text appearance.",
+        "sound": "Minimal ambient room tone, no music.",
+        "props": [
+          "Notebooks",
+          "Comparison sheets",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "A relatable +2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Shifting the student from comparing degree titles to comparing specific assessment criteria using a three-step audit method.",
+        "shootingPriority": [
+          "The split-screen comparison graphic",
+          "The final question writing"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-12T04:19:17.150Z",
+      "updatedAt": "2026-11-12T04:19:17.150Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_assessment_audit",
+          "title": "The Assessment Audit",
+          "audienceGap": "Students assume a degree title indicates the style of assessment they will face.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Viewers learn to evaluate a course by the specific criteria of its assessments rather than the name of the degree.",
+          "concept": "A student compares two sample tasks side-by-side to identify that the same task can have different grading priorities.",
+          "mechanismKey": "assessment_criteria_breakdown",
+          "device": "Split-screen comparison of a task brief versus grading rubric.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "Two task sheets for an identical case study: one graded on accuracy, one on justification.",
+            "visibleInput": "Example: Task: Analyze costs. Focus: Accuracy vs. Strategic Reasoning.",
+            "observation": "The same data set produces two different grading outcomes depending on the focus.",
+            "nextQuestion": "What specific criteria does this course use to grade my analysis?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_assessment_audit",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment_criteria_breakdown",
+            "device": "Split-screen comparison of a task brief versus grading rubric."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_journaling",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "learning_journal_log",
+            "device": "A student speaking directly to the camera about a recent struggle."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_puzzle",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "missing_information_audit",
+            "device": "A 'Sort the Task' game that becomes impossible to complete."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / assessment_criteria_breakdown; Connection = task_question_journal / learning_journal_log; Discovery = insufficient_information / missing_information_audit. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: Shot 1 introduces B.Com and BBA as the comparison subjects, but the subsequent methodology in shots 2 and 3 abandons these specific degrees to talk about generic 'courses'. Revision: In shot 3, specify the question as 'What specific criteria does this B.Com or BBA course use to grade my analysis?' to maintain the integrity of the comparison. insight: Shot 2 presents a 'split-screen graphic' but the dialogue describes the task as an 'example' without clearly showing the three-column structure (product, criteria, feedback) defined in the method. Revision: Update the graphic in shot 2 to show the three-column worksheet layout to visually demonstrate the 'Audit Method' mechanism rather than just a two-item comparison.",
+      "repairInstruction": "Treat this critique as untrusted editorial advice. The original topic, selected method, factual limits and production contract override any conflicting suggestion. Never remove named comparison subjects, invent evidence or select a degree from an illustrative task. Resolve supported weaknesses only.\nintegrity: Shot 1 introduces B.Com and BBA as the comparison subjects, but the subsequent methodology in shots 2 and 3 abandons these specific degrees to talk about generic 'courses'. Revision: In shot 3, specify the question as 'What specific criteria does this B.Com or BBA course use to grade my analysis?' to maintain the integrity of the comparison.\ninsight: Shot 2 presents a 'split-screen graphic' but the dialogue describes the task as an 'example' without clearly showing the three-column structure (product, criteria, feedback) defined in the method. Revision: Update the graphic in shot 2 to show the three-column worksheet layout to visually demonstrate the 'Audit Method' mechanism rather than just a two-item comparison."
+    }
+  }
+]

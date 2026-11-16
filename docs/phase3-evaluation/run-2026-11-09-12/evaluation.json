@@ -1,0 +1,168 @@
+{
+  "evaluatedAt": "2026-11-09T11:17:13.316Z",
+  "assessor": "Assistant editorial review of actual delivered outputs; not generator self-scoring or application approval",
+  "ratingScale": "0 missing, 1 poor, 2 weak, 3 partial, 4 strong, 5 exceptional",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": false,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 3,
+        "coherence": 4,
+        "payoff": 4,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shots 2–3 now separate task, grading and feedback, then use unknown cells to ask a precise assessment question. The example is labelled Example and makes no verified degree-content claim. This is a usable question-forming method, stronger than the baseline's check-the-module advice.",
+        "differentiation": "The assessment audit is a different reasoning basis from Connection's preference check, but both finished stories still show an uncertain student at a desk, a checklist and a direct question. Three-way differentiation is unverified because Discovery was not delivered.",
+        "coherence": "The title-based choice problem leads to an audit and a question about grading. The sequence is connected; it could better show why grading and feedback are distinct rather than reciting fields.",
+        "payoff": "Shot 3 supplies the concrete question What specific criteria do you use to grade this submission? It follows from an unanswered criterion cell and gives a relevant next action without diagnosing degree fit.",
+        "production": "Fields/timecodes are complete and consecutive. Worksheet assets are feasible, but Analyze Q3 financial variance is specialist language for a broad +2 audience, and the graphic/voiceover load in Shot 2 needs a natural read-aloud and phone-size legibility check.",
+        "originality": "The selected audit is more specific than the old module-matching idea, but desk/brochure/confused-student staging and a three-column worksheet remain familiar and close to the reference device."
+      },
+      "automaticTriggerExplanation": "No hard trigger asserted: a meaningful bounded method is present, no material factual falsehood was established, and filming is feasible. Revision is required because the total and differentiation floor are not met.",
+      "revisions": [
+        "Shot 2: use a +2-friendly illustrative task, such as making a short shop poster or explaining a simple chart; show one known work product and one clearly missing assessment criterion.",
+        "Connect the empty criterion to the final question on screen, so the viewer sees what the audit changes rather than only hearing the three headings.",
+        "Choose a fresh evidence/question-testing execution that is more distinct from Connection's checklist. Do not force a new shot count, function order or treatment."
+      ],
+      "total": 72,
+      "decision": "REVISE",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "Channel differentiation is below 4/5."
+      ],
+      "sourceFile": "trust.json",
+      "sourceSha256": "1b493bca6b604796b846aeef8b9c2b53463091ba660355cf6df19503325be26f",
+      "productionMetrics": {
+        "shotCount": 3,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 48,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK",
+              "PROBLEM"
+            ],
+            "timecode": "00:00 – 00:06",
+            "seconds": 6,
+            "spokenWords": 13
+          },
+          {
+            "number": 2,
+            "functions": [
+              "VALUE",
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:06 – 00:18",
+            "seconds": 12,
+            "spokenWords": 17
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PAYOFF",
+              "CTA"
+            ],
+            "timecode": "00:18 – 00:28",
+            "seconds": 10,
+            "spokenWords": 18
+          }
+        ]
+      }
+    },
+    {
+      "channel": "Connection",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 3,
+        "coherence": 3,
+        "payoff": 3,
+        "production": 4,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The script makes a useful partial distinction between liking a topic and verifying its role in a programme. However, its graphic asks for a Required prerequisite while the dialogue asks core subject versus elective. Those are different checks, so the practical method is not clear enough for 4/5.",
+        "differentiation": "The planned constraint-check basis differs from Trust's assessment audit, but the finished device is again a lone student, labelled degree cards, a checklist and a direct question. A specific personal situation or human exchange is not developed; a second actor itself is not required.",
+        "coherence": "Preference versus availability is a coherent starting tension, but the switch between prerequisites, required subjects and elective choice blurs the progression.",
+        "payoff": "The exact resulting question is delivered, but it does not resolve which unknown was recorded in the prerequisite cell. The viewer needs one consistent investigation to carry through.",
+        "production": "The cards and checklist are simple, the source is visibly labelled Example, and the production fields/timecodes are complete. A timed read-aloud remains necessary, but there is no impossible production instruction.",
+        "originality": "The interest-versus-confirmation angle is more specific than generic reassurance, while the worried-student-to-confident-nod execution remains familiar."
+      },
+      "automaticTriggerExplanation": "No hard trigger asserted: the interest-checking idea is partially useful, no actual institution's rules are asserted, and production is feasible. It fails total, HLNI and differentiation thresholds. The confusing terminology requires revision rather than being labelled a proven material factual error.",
+      "revisions": [
+        "Choose one unknown: whether the desired subject is compulsory/elective/available, or whether an actual entry requirement is satisfied. Do not mix those questions.",
+        "Make a concrete student's preference create an observable question or interaction, then show how checking the answer changes the next action. A personal exchange, experiment or another genuine human device can work; none is a mandatory template.",
+        "Replace the generic confident nod with the consistent result of the chosen check. Preserve the limited claim: preference alone does not confirm availability or suitability."
+      ],
+      "total": 63,
+      "decision": "REVISE",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5.",
+        "Channel differentiation is below 4/5."
+      ],
+      "sourceFile": "connection.json",
+      "sourceSha256": "ef05de24dd4c60c9e159bd2419f64d78ffbf9d4690b862623c3393caf618cdfd",
+      "productionMetrics": {
+        "shotCount": 3,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 53,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK",
+              "PROBLEM"
+            ],
+            "timecode": "00:00 – 00:08",
+            "seconds": 8,
+            "spokenWords": 20
+          },
+          {
+            "number": 2,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:08 – 00:20",
+            "seconds": 12,
+            "spokenWords": 16
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PAYOFF",
+              "CTA"
+            ],
+            "timecode": "00:20 – 00:28",
+            "seconds": 8,
+            "spokenWords": 17
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

@@ -1,0 +1,285 @@
+{
+  "startedAt": "2026-11-12T04:35:00.408Z",
+  "gitHead": "65e3a4ac98e9708dba87178ad9036bf24deb2d86",
+  "workingTree": "Uncommitted changes identified by sourceSha256; HEAD alone is not the source revision.",
+  "request": {
+    "topic": "B.Com vs BBA",
+    "treatment": "Auto",
+    "language": "English",
+    "duration": "28 sec",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "diagnosticFunctionTags": true,
+    "totalTimeoutMs": 50000
+  },
+  "planning": "Separate joint concept selection precedes production shots; distinct selections are compared across all channels.",
+  "referenceApproval": "User-approved non-mandatory creative benchmarks; academic claims are not independently verified by this approval.",
+  "sourceSha256": {
+    "server/aiService.ts": "79fdd866ed66539b6d52cfe43264ebb3096b576320c9a2b735c06da2e6382b63",
+    "server/conceptPlanner.ts": "e9291e10c4f492cdd4c7cb8d03423bb98116ebad261ff7e3d552fdb255dae2c7",
+    "server/providerClient.ts": "cee92162addc1da6c81b9014284d3ed09b448e46ba6149f279ceb4f64807ec9c",
+    "server/generationSchemas.ts": "a48ec92610f3bc2e9a7131b490ef23e12822450bfc0fec6ec59d14af125fd3e7",
+    "server/editorialReview.ts": "a30be567f8a3b41b47da65ff2f7a59261507008b7595689cf12d6b3a6b2a5fab",
+    "server/requestBudget.ts": "cb005deb0e521d78dd1c209ce6e0d6e77e86a7cddedad159412f98424fab1c71",
+    "server/requestCancellation.ts": "572d35f3f32dc88557ba63d3aceb5239de05ec96dae0006519c7273cd1e547d2",
+    "server/aiErrors.ts": "2c1401b385d1dfa1f37570a10f725b618f9bf6aca4ac9af5c238f79c76cb980d",
+    "server/index.ts": "3c30fef29c3783ff415e16c04c97b040637eb4e4e9cd8b584355864a4da48b17",
+    "api/index.ts": "5bc11a077a4accce6e2c8f312f5c9bba36c51e099f84ee1ce50f5eb7b6b36508",
+    "src/services/api.ts": "3855ccb0cca2ed470c1d6076ebb4f6fbfef7ff6050d764bfdb0724cf00c5de9a",
+    "shared/providers.ts": "47747c0b93159ab54a0f407a495570d4db60bddbb62214615dda6d2a1cecb92f",
+    "shared/concepts.ts": "5222d6a3b7c9331534c67dd7a156fd5550df325db34f6beda3fb872593c40edf",
+    "shared/reasoningTools.ts": "165f1deeb4f8aac49d8a2fd2f123d43e64ed0c88d794ad78a9b492980c9b877c",
+    "server/freshnessEngine.ts": "9bb80afd1f839a071f7e18ff7cd32e61334cfea5728a712d777899aae1310d67",
+    "server/realityTrigger.ts": "e21a51d8cd46d753d0d1423e10156db5e6f29fd392a9e0cdf3e4c7fb560f7dc8",
+    "shared/creativeFramework.ts": "24c4c4b8c3655f9dba75e77a8f381f2ee40a5ad74c8b48913d4f605cb3aa9461",
+    "shared/hlni.ts": "8b5c44a14482eb6301229774019d8d07444e82fc58f9624fcce8a84f26e5c5cb",
+    "shared/editorialBenchmarks.ts": "33a721a958ebb3e92ee4183565c3c0fbf017a4c23d65ee8684ddafc53ab6f42c",
+    "shared/channels.ts": "e2352e71208bda7c9f525de1ba48a2d479b0efab6aa26284516dce2e729c8b95",
+    "shared/knowledgeBase.ts": "eee71bc44e3d253d596a7829517a05237630dd994f109ca1b017aa869923e7bc",
+    "shared/schema.ts": "7317c086ded5c199869ffa42dfa7288c40c5d584f4f1529315cb954b15962f25",
+    "docs/creative-references/BCOM_VS_BBA_APPROVED.md": "f0516cb75a6bfe2800d8573945ef847907ba5ec39b9befb9c983933ca128d7e6"
+  },
+  "rubric": [
+    {
+      "key": "hlni",
+      "label": "High-Leverage New Information",
+      "weight": 25
+    },
+    {
+      "key": "differentiation",
+      "label": "Channel differentiation",
+      "weight": 20
+    },
+    {
+      "key": "coherence",
+      "label": "Narrative coherence",
+      "weight": 20
+    },
+    {
+      "key": "payoff",
+      "label": "Payoff",
+      "weight": 15
+    },
+    {
+      "key": "production",
+      "label": "Production readiness",
+      "weight": 15
+    },
+    {
+      "key": "originality",
+      "label": "Originality",
+      "weight": 5
+    }
+  ],
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "results": [
+    {
+      "channel": "Trust",
+      "status": "GENERATED",
+      "file": "trust.json",
+      "readableFile": "trust.md",
+      "shotCount": 3,
+      "elapsedMs": 13979,
+      "qualityRepairCount": 1,
+      "finalStatus": "Draft",
+      "warnings": [],
+      "stages": [
+        {
+          "stage": "concept",
+          "outcome": "complete",
+          "elapsedMs": 5645,
+          "remainingMs": 44331,
+          "at": "2026-11-12T04:35:06.113Z"
+        },
+        {
+          "stage": "story",
+          "outcome": "complete",
+          "elapsedMs": 3486,
+          "remainingMs": 40838,
+          "at": "2026-11-12T04:35:09.606Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "passed",
+          "elapsedMs": 4,
+          "remainingMs": 40834,
+          "at": "2026-11-12T04:35:09.610Z"
+        },
+        {
+          "stage": "advisory",
+          "outcome": "attempted",
+          "elapsedMs": 0,
+          "remainingMs": 40833,
+          "at": "2026-11-12T04:35:09.611Z"
+        },
+        {
+          "stage": "critique",
+          "outcome": "complete",
+          "elapsedMs": 1591,
+          "remainingMs": 39242,
+          "at": "2026-11-12T04:35:11.202Z"
+        },
+        {
+          "stage": "advisory_rewrite",
+          "outcome": "complete",
+          "elapsedMs": 3215,
+          "remainingMs": 36026,
+          "at": "2026-11-12T04:35:14.418Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "passed",
+          "elapsedMs": 1,
+          "remainingMs": 36025,
+          "at": "2026-11-12T04:35:14.419Z"
+        }
+      ]
+    },
+    {
+      "channel": "Connection",
+      "status": "GENERATED",
+      "file": "connection.json",
+      "readableFile": "connection.md",
+      "shotCount": 3,
+      "elapsedMs": 7977,
+      "qualityRepairCount": 2,
+      "finalStatus": "Draft",
+      "warnings": [
+        "The optional advisory rewrite failed output checks. The validated initial Draft was retained; human editorial review is required."
+      ],
+      "stages": [
+        {
+          "stage": "story",
+          "outcome": "complete",
+          "elapsedMs": 3653,
+          "remainingMs": 46346,
+          "at": "2026-11-12T04:35:18.076Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "passed",
+          "elapsedMs": 0,
+          "remainingMs": 46346,
+          "at": "2026-11-12T04:35:18.076Z"
+        },
+        {
+          "stage": "advisory",
+          "outcome": "attempted",
+          "elapsedMs": 0,
+          "remainingMs": 46345,
+          "at": "2026-11-12T04:35:18.077Z"
+        },
+        {
+          "stage": "critique",
+          "outcome": "complete",
+          "elapsedMs": 1476,
+          "remainingMs": 44869,
+          "at": "2026-11-12T04:35:19.553Z"
+        },
+        {
+          "stage": "advisory_rewrite",
+          "outcome": "complete",
+          "elapsedMs": 2844,
+          "remainingMs": 42025,
+          "at": "2026-11-12T04:35:22.397Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "Delivery (Scene pacing)",
+          "elapsedMs": 1,
+          "remainingMs": 42024,
+          "at": "2026-11-12T04:35:22.398Z"
+        },
+        {
+          "stage": "advisory",
+          "outcome": "retained_valid_draft",
+          "category": "output_validation",
+          "elapsedMs": 0,
+          "remainingMs": 42024,
+          "at": "2026-11-12T04:35:22.398Z"
+        }
+      ]
+    },
+    {
+      "channel": "Discovery",
+      "status": "GENERATED",
+      "file": "discovery.json",
+      "readableFile": "discovery.md",
+      "shotCount": 3,
+      "elapsedMs": 11239,
+      "qualityRepairCount": 2,
+      "finalStatus": "Draft",
+      "warnings": [],
+      "stages": [
+        {
+          "stage": "story",
+          "outcome": "complete",
+          "elapsedMs": 3704,
+          "remainingMs": 46296,
+          "at": "2026-11-12T04:35:26.106Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "Concept delivery",
+          "elapsedMs": 1,
+          "remainingMs": 46295,
+          "at": "2026-11-12T04:35:26.107Z"
+        },
+        {
+          "stage": "repair",
+          "outcome": "complete",
+          "elapsedMs": 3019,
+          "remainingMs": 43276,
+          "at": "2026-11-12T04:35:29.126Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "passed",
+          "elapsedMs": 2,
+          "remainingMs": 43274,
+          "at": "2026-11-12T04:35:29.128Z"
+        },
+        {
+          "stage": "advisory",
+          "outcome": "attempted",
+          "elapsedMs": 0,
+          "remainingMs": 43274,
+          "at": "2026-11-12T04:35:29.128Z"
+        },
+        {
+          "stage": "critique",
+          "outcome": "complete",
+          "elapsedMs": 1340,
+          "remainingMs": 41934,
+          "at": "2026-11-12T04:35:30.468Z"
+        },
+        {
+          "stage": "advisory_rewrite",
+          "outcome": "complete",
+          "elapsedMs": 3170,
+          "remainingMs": 38763,
+          "at": "2026-11-12T04:35:33.639Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "passed",
+          "elapsedMs": 1,
+          "remainingMs": 38762,
+          "at": "2026-11-12T04:35:33.640Z"
+        }
+      ]
+    }
+  ],
+  "editorialDecision": "REVISE",
+  "productionChanged": false,
+  "completedAt": "2026-11-12T04:35:33.643Z",
+  "complete": true,
+  "evaluatedAt": "2026-11-12T04:37:13.432Z",
+  "evaluationFile": "evaluation.json",
+  "evaluationSha256": "87cec761ebf5a1f61f04973230ef350bb87a91d1be69a5322ed1452c9c07c83d"
+}

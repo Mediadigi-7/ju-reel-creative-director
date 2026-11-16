@@ -1,0 +1,221 @@
+{
+  "narrativeContract": "six-stage-v2",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "id": "connection_journal_01",
+      "title": "The Sticking Point Journal",
+      "audienceGap": "Students feel overwhelmed by the choice and think they are failing to 'just know' the answer.",
+      "basisId": "task_question_journal",
+      "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+      "viewerChange": "Recognizes that confusion is a data point for research, not a sign of poor fit.",
+      "concept": "Two students share their notes on a simple task and realize their confusion points are different.",
+      "mechanismKey": "peer_observation_journal",
+      "device": "Conversation and note-sharing",
+      "supportType": "method",
+      "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Try or inspect a clearly illustrative task.",
+        "Record one point where you needed help and one question you want to investigate.",
+        "Turn the observation into a question for a real course brief or course team."
+      ],
+      "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+      "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+      "payoff": "Students feel comfortable documenting specific uncertainties.",
+      "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+      "demonstration": {
+        "input": "A simple task of organizing a budget for a school event.",
+        "visibleInput": "Example: Task: Budgeting. Sticking point: Categorizing expenses.",
+        "observation": "Student finds that their specific confusion is the best place to start asking for help.",
+        "nextQuestion": "Where can I find a breakdown of how budgets are audited?"
+      },
+      "treatment": "Informative"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_assessment_01",
+        "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+        "mechanismKey": "three_column_audit",
+        "device": "Worksheet walkthrough"
+      },
+      {
+        "channel": "Connection",
+        "id": "connection_journal_01",
+        "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+        "mechanismKey": "peer_observation_journal",
+        "device": "Conversation and note-sharing"
+      },
+      {
+        "channel": "Discovery",
+        "id": "discovery_insufficient_01",
+        "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+        "mechanismKey": "missing_evidence_reveal",
+        "device": "Interactive visual puzzle"
+      }
+    ],
+    "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / three_column_audit; Connection = task_question_journal / peer_observation_journal; Discovery = insufficient_information / missing_evidence_reveal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+  },
+  "hlni": [
+    {
+      "insight": "A short illustrative task reveals specific confusion points that guide targeted research, rather than serving as an aptitude test.",
+      "audienceGap": "Students believe they must 'know' which degree fits them inherently.",
+      "viewerChange": "Students shift from guessing to asking specific, research-based questions.",
+      "supportType": "method",
+      "support": "Using a task-based observation creates data points for research that are specific to the student's current level of understanding.",
+      "references": [
+        "Shot 4",
+        "Shot 5"
+      ],
+      "shotNumbers": [
+        3,
+        4
+      ],
+      "payoffShotNumbers": [
+        5
+      ],
+      "payoff": "The student produces a concrete, investigable question that replaces general anxiety."
+    }
+  ],
+  "channel": "Connection",
+  "id": "reel_1794646147922_2ffpvzpf",
+  "reelTitle": "Navigating B.Com vs BBA",
+  "creativeAngle": "Using a task-based journal to turn confusion into actionable research questions.",
+  "objective": "Help students move from feeling stuck to identifying specific areas for further research.",
+  "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "HOOK",
+      "functions": [
+        "HOOK"
+      ],
+      "name": "The Choosing Dilemma",
+      "timestamp": "00:00 – 00:04",
+      "visual": "A student looking at brochures for B.Com and BBA with a worried expression.",
+      "dialogue": "Stuck between B.Com and BBA? Stop guessing.",
+      "onscreenText": "B.Com vs BBA",
+      "cameraPerformance": "Close-up, warm but focused.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "PROBLEM",
+      "functions": [
+        "PROBLEM"
+      ],
+      "name": "The Confusion Point",
+      "timestamp": "00:04 – 00:08",
+      "visual": "Student holds a pen, staring at a blank notebook.",
+      "dialogue": "Don't pick a degree yet. Compare the work.",
+      "onscreenText": "Where to start?",
+      "cameraPerformance": "Medium shot, student sighing.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "PATTERN_INTERRUPT",
+      "functions": [
+        "PATTERN_INTERRUPT"
+      ],
+      "name": "The Worksheet Reveal",
+      "timestamp": "00:08 – 00:12",
+      "visual": "Student writes on a piece of paper labeled 'Budgeting Task'.",
+      "dialogue": "Try a task and map your sticking points.",
+      "onscreenText": "Try a task",
+      "cameraPerformance": "Top-down view of the desk.",
+      "userEdited": false
+    },
+    {
+      "number": 4,
+      "type": "VALUE",
+      "functions": [
+        "VALUE"
+      ],
+      "name": "The Insight Delivery",
+      "timestamp": "00:12 – 00:18",
+      "visual": "Close up of the paper showing: 'Example: Task: Budgeting. Sticking point: Categorizing expenses.'",
+      "dialogue": "This isn't a test. Find your knowledge gaps.",
+      "onscreenText": "Example: Task: Budgeting. Sticking point: Categorizing expenses.",
+      "cameraPerformance": "Macro shot focusing on the handwriting.",
+      "userEdited": false
+    },
+    {
+      "number": 5,
+      "type": "PAYOFF",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Better Question",
+      "timestamp": "00:18 – 00:24",
+      "visual": "Student writes: 'Where can I find a breakdown of how budgets are audited?'",
+      "dialogue": "Now ask: 'Where can I find a breakdown of how budgets are audited?'",
+      "onscreenText": "Where can I find a breakdown of how budgets are audited?",
+      "cameraPerformance": "Over-the-shoulder shot.",
+      "userEdited": false
+    },
+    {
+      "number": 6,
+      "type": "CTA",
+      "functions": [
+        "CTA"
+      ],
+      "name": "The Final Action",
+      "timestamp": "00:24 – 00:28",
+      "visual": "Student closes the notebook and looks at the camera confidently.",
+      "dialogue": "Use this to investigate course teams directly.",
+      "onscreenText": "Investigate, don't guess.",
+      "cameraPerformance": "Close-up, friendly and direct.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, educational, desk-based workspace",
+    "performance": "Natural, calm, and relatable",
+    "camera": "Steady, shifting between medium and macro shots",
+    "editing": "Rhythmic, matching the pace of writing",
+    "sound": "Soft acoustic lo-fi beat",
+    "props": [
+      "Notebook",
+      "Pen",
+      "B.Com/BBA brochures",
+      "Task worksheet"
+    ],
+    "locations": [
+      "Study desk"
+    ],
+    "casting": "One student, 17-18 years old",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Transforming the degree-selection stress into a manageable task-observation method.",
+    "shootingPriority": [
+      "The worksheet closeup",
+      "The student's frustrated look",
+      "The student's confident resolution"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-14T08:49:07.922Z",
+  "updatedAt": "2026-11-14T08:49:07.922Z",
+  "status": "Draft",
+  "version": 1,
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-14T08:49:07.922Z",
+    "warnings": [
+      "The optional advisory rewrite failed output checks. The validated initial Draft was retained; human editorial review is required."
+    ]
+  }
+}

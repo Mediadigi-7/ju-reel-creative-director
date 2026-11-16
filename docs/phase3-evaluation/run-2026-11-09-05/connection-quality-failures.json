@@ -1,0 +1,165 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "audienceGap": "The student believes they must 'know' which degree is right before starting.",
+          "viewerChange": "Shifts from guessing based on labels to investigating based on personal learning hurdles.",
+          "supportType": "method",
+          "support": "The observation belongs to the specific task performance, helping the student identify what they actually want to learn.",
+          "references": [],
+          "shotNumbers": [
+            2,
+            3
+          ],
+          "payoffShotNumbers": [
+            3
+          ],
+          "payoff": "The student produces a specific, actionable question that helps them evaluate any programme objectively."
+        }
+      ],
+      "id": "reel_1794220758455_b6p9rp",
+      "reelTitle": "B.Com vs BBA: Finding Your Focus",
+      "creativeAngle": "The Sticking Point Journal",
+      "objective": "Help students move from degree-label anxiety to identifying specific academic research questions.",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "SCENE",
+          "name": "The Dilemma",
+          "timestamp": "00:00 – 00:06",
+          "visual": "A student sits at a desk, looking frustrated at two open books labeled B.Com and BBA. They push the books away.",
+          "dialogue": "Choosing between B.Com and BBA feels like a massive gamble, doesn't it?",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close-up on the student's face, showing genuine uncertainty.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "SCENE",
+          "name": "The Method",
+          "timestamp": "00:06 – 00:18",
+          "visual": "The student tries a short resource allocation case study on their laptop and writes in a journal. We see the text clearly.",
+          "dialogue": "Try a brief case study. I got stuck here: 'How to justify resource limits.' Now I have a real question.",
+          "onscreenText": "Sticking point: Defining constraints.",
+          "cameraPerformance": "Over-the-shoulder shot focusing on the journal entry.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "SCENE",
+          "name": "The Payoff",
+          "timestamp": "00:18 – 00:28",
+          "visual": "Student looks at the camera, then down at their specific research question written on a sticky note.",
+          "dialogue": "Instead of guessing, ask: How does the programme teach the process of defining constraints for resource models?",
+          "onscreenText": "Ask the right question.",
+          "cameraPerformance": "Medium shot, encouraging and calm.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, relatable workspace aesthetic.",
+        "performance": "Conversational, empathetic, not promotional.",
+        "camera": "Handheld style to create intimacy.",
+        "editing": "Steady, focused on the transition from frustration to clarity.",
+        "sound": "Soft lo-fi background track.",
+        "props": [
+          "Journal",
+          "Laptop",
+          "Notebooks"
+        ],
+        "locations": [
+          "Quiet home study area"
+        ],
+        "casting": "Relatable student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming the abstract anxiety of choosing a degree into a concrete research activity using a task journal.",
+        "shootingPriority": [
+          "The journal entry close-up",
+          "The student's direct address to camera"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-09T10:39:18.455Z",
+      "updatedAt": "2026-11-09T10:39:18.455Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Connection",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_01",
+          "title": "The Sticking Point Journal",
+          "audienceGap": "Feeling overwhelmed by the pressure to choose the 'correct' degree path.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Moves from feeling pressured to choosing to feeling empowered to investigate specific task challenges.",
+          "concept": "Two students discussing a task; one records a moment where they felt stuck, turning a moment of frustration into a productive research question.",
+          "mechanismKey": "task_question_journal",
+          "device": "A physical journal entry shown on camera capturing a specific hurdle during a sample exercise.",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A brief, clearly illustrative case study task involving resource allocation.",
+            "observation": "Student writes down: 'I struggled to justify the allocation of resources without a clear limit'.",
+            "nextQuestion": "How does the programme teach the process of defining constraints for resource models?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "assessment_questions",
+            "device": "Split-screen view of two worksheets where the student fills in columns for 'Work Product,' 'Criterion,' and 'Available Feedback.'"
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "task_question_journal",
+            "device": "A physical journal entry shown on camera capturing a specific hurdle during a sample exercise."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+            "mechanismKey": "aggregate_counterexample",
+            "device": "Animated bar charts that 'deconstruct' into different sub-components."
+          }
+        ],
+        "contrast": "The selected mechanisms provide distinct ways to handle uncertainty: 'Trust' focuses on auditing workload (Assessment Audit), 'Connection' focuses on identifying personal research gaps (Task Journaling), and 'Discovery' focuses on mathematically demonstrating why labels are often misleading (Aggregate Counterexample)."
+      }
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Diagnostic function tags",
+      "failureReason": "The requested evaluation artifact omits diagnostic function arrays.",
+      "repairInstruction": "Include functions on each existing shot, using accurate optional narrative-function tags (or [] if none applies). Preserve the story-led shot count, order and treatment; no stage coverage checklist."
+    }
+  }
+]

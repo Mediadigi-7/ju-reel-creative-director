@@ -1,0 +1,112 @@
+{
+  "assessor": "Assistant editorial assessment of complete actual Gemini outputs; no generator self-score, human sign-off or factual certification",
+  "ratingScale": "0\u20135",
+  "methodology": "Fresh local-engine requests used the managed Gemini binding and current workspace source. The complete production fields, selected concepts and approved reference scripts were inspected. No manual revisions were inserted into generated storyboards. This verifies the engine path, not a deployed website, browser end-to-end generation, other topics, other languages or repeatability across multiple runs. No external syllabus audit or recorded read-aloud was performed.",
+  "runSummary": "All three requests returned complete six-stage storyboards. Trust completed in 14.49 seconds, Connection in 21.62 seconds and Discovery in 6.54 seconds. Connection retained a validated Draft after its optional advisory rewrite failed pacing checks. Discovery required two pacing repairs. These are results from one run, not a measured long-run success rate. All are fresh Gemini outputs, not offline samples or saved-library retrievals.",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 3,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 4,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 4 distinguishes expected work, marking criteria and feedback, but its proposal example has only question marks; the viewer never sees why a different criterion changes preparation.",
+        "differentiation": "The explanatory audit fits Trust, but its worried student, brochures, desk and notebook closely resemble Connection.",
+        "coherence": "The degree dilemma becomes an assessment question through a continuous six-stage audit. The named comparison remains contextual rather than a worked comparison.",
+        "payoff": "Shot 5 produces a precise question; shot 6 prepares an inquiry, but no concrete preparation or comparison consequence is demonstrated.",
+        "production": "Six clear timed scenes, readable example card, natural short dialogue and practical desk setup. No recorded read-aloud was performed.",
+        "originality": "The title trap, brochure uncertainty and audit checklist are familiar devices."
+      },
+      "automaticTriggerExplanation": "No verified material factual error, wholly missing meaningful insight or impossible production instruction was established. Partial HLNI and differentiation still fail their independent floors.",
+      "reasons": [
+        "The audit is useful but under-demonstrated.",
+        "All six stages pass structural checks; that is insufficient for editorial approval."
+      ],
+      "revisions": [
+        "Use a simple hypothetical proposal with a concrete criterion and show how that criterion changes the student\u2019s preparation.",
+        "Keep the unknown feedback field as a precise inquiry, while demonstrating one known criterion\u2019s consequence.",
+        "Make the resulting comparison/action explicit without assigning invented content to B.Com or BBA."
+      ]
+    },
+    {
+      "channel": "Connection",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 2,
+        "coherence": 2,
+        "payoff": 2,
+        "production": 4,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shots 3\u20134 turn a task into a recorded knowledge gap and explicitly say it is not a test. The usefulness is weakened when categorising expenses leads to a different auditing question.",
+        "differentiation": "The selected concept specifies two students sharing notes, but the actual storyboard and casting contain one student narrating at a desk, closely resembling Trust.",
+        "coherence": "Shot 4 identifies Categorizing expenses; shot 5 asks how budgets are audited. The result does not address the demonstrated sticking point.",
+        "payoff": "The new question changes academic concepts rather than resolving the same uncertainty; closing the notebook confidently does not demonstrate a useful change.",
+        "production": "Six timed scenes, short speech and readily available props. The CTA \u201cinvestigate course teams directly\u201d is awkward but filmable.",
+        "originality": "Brochures, a worried expression, a worksheet and a confident close repeat the other output\u2019s approach."
+      },
+      "automaticTriggerExplanation": "A partial practical insight exists, and no proven external factual error or impossible production instruction is asserted. The method mismatch and channel failure independently require revision.",
+      "reasons": [
+        "The finished story abandons the selected peer interaction.",
+        "Its final research question does not follow from the actual observation."
+      ],
+      "revisions": [
+        "Keep one believable student dilemma and show an actual interaction or consequential human moment.",
+        "Make the resulting question address categorising the specific event expense, not auditing a budget.",
+        "Show the student using the observation to request appropriate help; retain the limit that this activity cannot diagnose degree fit."
+      ]
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 3,
+        "coherence": 3,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 4 correctly limits the conclusion: without a supplied link, the task card cannot establish degree membership. This is specific, supported reasoning rather than an invented subject-overlap claim.",
+        "differentiation": "The missing-evidence task challenge differs conceptually, but it still begins with a worried student and degree cards at a desk; Trendy is a treatment label without a recognisable format in the actual execution.",
+        "coherence": "The forced choice and insufficient-information reveal connect, but shot 6 shifts from curriculum membership evidence to assessment criteria.",
+        "payoff": "The evidence question follows the reveal, but \u201cdefinitively link ... to one degree\u201d needs scope and cannot establish exclusivity from one positive example. The last action does not demonstrate correction of the initial guess.",
+        "production": "The source-box graphic is practical. Shot 6 requires an unsupplied real curriculum document, and dynamic camera movement is vague; obtain and verify the asset before filming.",
+        "originality": "The third-answer reveal is coherent but remains a familiar evidence-gap exercise."
+      },
+      "automaticTriggerExplanation": "No curriculum membership assertion is presented as verified, and no material falsehood is established. The real-document asset needs sourcing; this is a production dependency, not evidence that filming is impossible.",
+      "reasons": [
+        "The HLNI floor passes, but channel differentiation, payoff and the overall score do not.",
+        "The closing action drifts from source identification into a generic criteria comparison."
+      ],
+      "revisions": [
+        "Invite a clear viewer guess and replace it visibly with the justified third answer.",
+        "Ask for a source scoped to an institution, programme and document version; distinguish membership from exclusivity.",
+        "End with the same evidence investigation rather than introducing assessment criteria; use a real verified asset or a clearly labelled source-request graphic."
+      ]
+    }
+  ],
+  "crossChannelFinding": "The plans select different reasoning tools, but the finished stories repeatedly use a student, brochures/cards, a desk and a notebook. Trust delivers a partial audit, Connection loses its planned peer exchange and mismatches the observation with its question, and Discovery ends with the Trust-like instruction to compare assessment criteria. Concept metadata and six-stage coverage do not prove that the intended distinctions survived into the screenplay.",
+  "nextStep": "Prioritise semantic fidelity between the selected concept and the actual story: observation \u2192 matching question \u2192 demonstrated consequence. Review the finished scripts for distinct channel experiences, then generate and score a separate run with the unchanged rubric. Do not advance to staging based on this run. No new code or deployment changes were made during verification."
+}

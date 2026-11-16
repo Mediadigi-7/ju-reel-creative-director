@@ -1,0 +1,317 @@
+{
+  "evaluatedAt": "2026-11-14T08:50:27.448Z",
+  "assessor": "Assistant editorial assessment of complete actual Gemini outputs; no generator self-score, human sign-off or factual certification",
+  "ratingScale": "0–5",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": true,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 3,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 4,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 4 distinguishes expected work, marking criteria and feedback, but its proposal example has only question marks; the viewer never sees why a different criterion changes preparation.",
+        "differentiation": "The explanatory audit fits Trust, but its worried student, brochures, desk and notebook closely resemble Connection.",
+        "coherence": "The degree dilemma becomes an assessment question through a continuous six-stage audit. The named comparison remains contextual rather than a worked comparison.",
+        "payoff": "Shot 5 produces a precise question; shot 6 prepares an inquiry, but no concrete preparation or comparison consequence is demonstrated.",
+        "production": "Six clear timed scenes, readable example card, natural short dialogue and practical desk setup. No recorded read-aloud was performed.",
+        "originality": "The title trap, brochure uncertainty and audit checklist are familiar devices."
+      },
+      "automaticTriggerExplanation": "No verified material factual error, wholly missing meaningful insight or impossible production instruction was established. Partial HLNI and differentiation still fail their independent floors.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5.",
+        "Channel differentiation is below 4/5."
+      ],
+      "revisions": [
+        "Use a simple hypothetical proposal with a concrete criterion and show how that criterion changes the student’s preparation.",
+        "Keep the unknown feedback field as a precise inquiry, while demonstrating one known criterion’s consequence.",
+        "Make the resulting comparison/action explicit without assigning invented content to B.Com or BBA."
+      ],
+      "total": 66,
+      "decision": "REVISE",
+      "sourceFile": "trust.json",
+      "sourceSha256": "db668cdc7f4e64a4360d7df1a51a48e80f63580e3fdd51aae23827dd6c5bd81d",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 47,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 10
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 5
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:19",
+            "seconds": 7,
+            "spokenWords": 7
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:19 – 00:24",
+            "seconds": 5,
+            "spokenWords": 9
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 8
+          }
+        ]
+      }
+    },
+    {
+      "channel": "Connection",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 2,
+        "coherence": 2,
+        "payoff": 2,
+        "production": 4,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shots 3–4 turn a task into a recorded knowledge gap and explicitly say it is not a test. The usefulness is weakened when categorising expenses leads to a different auditing question.",
+        "differentiation": "The selected concept specifies two students sharing notes, but the actual storyboard and casting contain one student narrating at a desk, closely resembling Trust.",
+        "coherence": "Shot 4 identifies Categorizing expenses; shot 5 asks how budgets are audited. The result does not address the demonstrated sticking point.",
+        "payoff": "The new question changes academic concepts rather than resolving the same uncertainty; closing the notebook confidently does not demonstrate a useful change.",
+        "production": "Six timed scenes, short speech and readily available props. The CTA “investigate course teams directly” is awkward but filmable.",
+        "originality": "Brochures, a worried expression, a worksheet and a confident close repeat the other output’s approach."
+      },
+      "automaticTriggerExplanation": "A partial practical insight exists, and no proven external factual error or impossible production instruction is asserted. The method mismatch and channel failure independently require revision.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5.",
+        "Channel differentiation is below 4/5."
+      ],
+      "revisions": [
+        "Keep one believable student dilemma and show an actual interaction or consequential human moment.",
+        "Make the resulting question address categorising the specific event expense, not auditing a budget.",
+        "Show the student using the observation to request appropriate help; retain the limit that this activity cannot diagnose degree fit."
+      ],
+      "total": 51,
+      "decision": "REVISE",
+      "sourceFile": "connection.json",
+      "sourceSha256": "ecbe4fbfee69cfe586a94a408ea7998cbe0d18225a2adf9c359f762b9e395155",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 51,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 7
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:18",
+            "seconds": 6,
+            "spokenWords": 8
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:18 – 00:24",
+            "seconds": 6,
+            "spokenWords": 13
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 7
+          }
+        ]
+      }
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 3,
+        "coherence": 3,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 4 correctly limits the conclusion: without a supplied link, the task card cannot establish degree membership. This is specific, supported reasoning rather than an invented subject-overlap claim.",
+        "differentiation": "The missing-evidence task challenge differs conceptually, but it still begins with a worried student and degree cards at a desk; Trendy is a treatment label without a recognisable format in the actual execution.",
+        "coherence": "The forced choice and insufficient-information reveal connect, but shot 6 shifts from curriculum membership evidence to assessment criteria.",
+        "payoff": "The evidence question follows the reveal, but “definitively link ... to one degree” needs scope and cannot establish exclusivity from one positive example. The last action does not demonstrate correction of the initial guess.",
+        "production": "The source-box graphic is practical. Shot 6 requires an unsupplied real curriculum document, and dynamic camera movement is vague; obtain and verify the asset before filming.",
+        "originality": "The third-answer reveal is coherent but remains a familiar evidence-gap exercise."
+      },
+      "automaticTriggerExplanation": "No curriculum membership assertion is presented as verified, and no material falsehood is established. The real-document asset needs sourcing; this is a production dependency, not evidence that filming is impossible.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "Channel differentiation is below 4/5."
+      ],
+      "revisions": [
+        "Invite a clear viewer guess and replace it visibly with the justified third answer.",
+        "Ask for a source scoped to an institution, programme and document version; distinguish membership from exclusivity.",
+        "End with the same evidence investigation rather than introducing assessment criteria; use a real verified asset or a clearly labelled source-request graphic."
+      ],
+      "total": 65,
+      "decision": "REVISE",
+      "sourceFile": "discovery.json",
+      "sourceSha256": "1378448c459adbf48be766f75fd6473eb0235bab80d5031137ae9b009b731853",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Trendy",
+        "totalSpokenWords": 50,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 7
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:20",
+            "seconds": 8,
+            "spokenWords": 13
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:20 – 00:24",
+            "seconds": 4,
+            "spokenWords": 7
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 7
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

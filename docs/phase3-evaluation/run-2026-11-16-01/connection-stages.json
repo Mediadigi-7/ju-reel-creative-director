@@ -1,0 +1,51 @@
+[
+  {
+    "stage": "concept",
+    "outcome": "complete",
+    "elapsedMs": 10619,
+    "remainingMs": 39381,
+    "at": "2026-11-16T05:25:00.469Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 2079,
+    "remainingMs": 37300,
+    "at": "2026-11-16T05:25:02.550Z"
+  },
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 6375,
+    "remainingMs": 30924,
+    "at": "2026-11-16T05:25:08.926Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 5,
+    "remainingMs": 30919,
+    "at": "2026-11-16T05:25:08.931Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 3547,
+    "remainingMs": 27371,
+    "at": "2026-11-16T05:25:12.479Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 3,
+    "remainingMs": 27368,
+    "at": "2026-11-16T05:25:12.482Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "skipped_insufficient_budget",
+    "elapsedMs": 0,
+    "remainingMs": 27368,
+    "at": "2026-11-16T05:25:12.482Z"
+  }
+]

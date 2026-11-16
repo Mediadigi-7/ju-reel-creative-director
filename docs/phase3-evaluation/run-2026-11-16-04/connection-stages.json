@@ -1,0 +1,30 @@
+[
+  {
+    "stage": "concept",
+    "outcome": "complete",
+    "elapsedMs": 9524,
+    "remainingMs": 40475,
+    "at": "2026-11-16T05:31:01.383Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 5939,
+    "remainingMs": 34533,
+    "at": "2026-11-16T05:31:07.325Z"
+  },
+  {
+    "stage": "concept",
+    "outcome": "complete",
+    "elapsedMs": 8325,
+    "remainingMs": 26208,
+    "at": "2026-11-16T05:31:15.650Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 3395,
+    "remainingMs": 22811,
+    "at": "2026-11-16T05:31:19.047Z"
+  }
+]

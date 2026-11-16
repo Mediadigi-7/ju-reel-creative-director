@@ -1,0 +1,286 @@
+import type { CreativeDirection } from './types.js';
+import type { ContentChannel } from './channels.js';
+export type { ContentChannel } from './channels.js';
+interface SourceGroup { id: CreativeDirection; subcategories: { name: string; ideas: { title: string; channel: ContentChannel }[] }[] }
+export const CONTENT_CHANNELS = [
+  { id: 'Trust', description: 'Course knowledge, academic depth, and evidence for informed choices.' },
+  { id: 'Connection', description: 'Relatable experiences, supportive guidance, and student belonging.' },
+  { id: 'Discovery', description: 'Curiosity, interactive challenges, and visual discovery for a broad audience.' },
+] as const;
+export interface LibraryIdea {
+  id: string;
+  title: string;
+  channel: ContentChannel;
+  direction: CreativeDirection;
+  topicGroup: string;
+  reason: string;
+}
+
+const SOURCE_IDEA_GROUPS: SourceGroup[] = [
+  {
+    id: 'Informative',
+    subcategories: [
+      {
+        name: 'A. Career & Course Discovery',
+        ideas: [
+          { title: "What can I do after Maths besides engineering?", channel: 'Connection' },
+          { title: "B.Tech vs B.Sc — which fits me?", channel: 'Trust' },
+          { title: "Is B.Com enough for a good career?", channel: 'Connection' },
+          { title: "What careers can Arts students build?", channel: 'Connection' },
+          { title: "How do I choose a course?", channel: 'Connection' },
+          { title: "I finished +2… now what?", channel: 'Connection' },
+          { title: "Maths students: engineering is not your only option.", channel: 'Connection' },
+          { title: "3 careers Commerce students rarely hear about.", channel: 'Discovery' },
+          { title: "Arts students: your career options are bigger than you think.", channel: 'Connection' },
+          { title: "What can Maths students do beyond engineering?", channel: 'Connection' },
+          { title: "B.Tech vs B.Sc — choose using these 3 questions.", channel: 'Trust' },
+          { title: "If every course sounds confusing, do this first.", channel: 'Connection' },
+          { title: "Answer 3 questions and narrow your course choice.", channel: 'Connection' },
+          { title: "Find your course: start here.", channel: 'Connection' },
+          { title: "Not interested in engineering? Explore these career pathways.", channel: 'Connection' },
+          { title: "What can you study after choosing Commerce in +2?", channel: 'Connection' },
+          { title: "Science students: 5 career directions beyond medicine.", channel: 'Discovery' },
+          { title: "Can Arts students enter the technology industry?", channel: 'Discovery' },
+          { title: "Which degree matches your interests, not just your marks?", channel: 'Connection' },
+          { title: "What is the difference between a degree and a career?", channel: 'Trust' },
+          { title: "3 questions to ask before choosing a professional course.", channel: 'Trust' },
+          { title: "What if you choose the wrong course after +2?", channel: 'Connection' },
+          { title: "Can you change your career path after graduation?", channel: 'Connection' },
+          { title: "What do students misunderstand about career opportunities?", channel: 'Trust' },
+          { title: "Diploma, degree, or skill-based learning: what is the difference?", channel: 'Trust' },
+          { title: "What should you learn alongside your college degree?", channel: 'Trust' },
+        ],
+      },
+      {
+        name: 'B. AI, Technology & Future Careers',
+        ideas: [
+          { title: "AI is not just coding — here are 4 roles.", channel: 'Discovery' },
+          { title: "AI careers beyond becoming a software developer.", channel: 'Discovery' },
+          { title: "What is VLSI, and why does it matter in modern technology?", channel: 'Trust' },
+          { title: "Do you need to study Computer Science to work with AI?", channel: 'Trust' },
+          { title: "How do chips power the technology we use every day?", channel: 'Discovery' },
+          { title: "4 emerging technology roles students should explore.", channel: 'Discovery' },
+          { title: "What is the difference between AI, ML, and data science?", channel: 'Trust' },
+          { title: "Can electronics students build careers in semiconductor technology?", channel: 'Trust' },
+          { title: "What skills will help you prepare for an AI-driven workplace?", channel: 'Trust' },
+          { title: "Engineering branches explained: which problems do they solve?", channel: 'Trust' },
+          { title: "What is high-performance computing, and where is it used?", channel: 'Trust' },
+          { title: "Is coding the only skill needed for a technology career?", channel: 'Trust' },
+          { title: "How can students start exploring AI before college?", channel: 'Discovery' },
+        ],
+      },
+      {
+        name: 'C. College Selection & Admissions',
+        ideas: [
+          { title: "How do I know this college is worth it?", channel: 'Trust' },
+          { title: "What should I compare before choosing a college?", channel: 'Trust' },
+          { title: "Before choosing a college, parents should check these 5 things.", channel: 'Trust' },
+          { title: "Don't compare colleges using only these 3 things.", channel: 'Trust' },
+          { title: "What makes a campus feel safe and student-ready?", channel: 'Trust' },
+          { title: "A faculty member answers a parent’s biggest question.", channel: 'Trust' },
+          { title: "What should real proof from a university look like?", channel: 'Trust' },
+          { title: "What should you look for during a campus visit?", channel: 'Trust' },
+          { title: "College fees: what should students and parents understand?", channel: 'Trust' },
+          { title: "How do you check whether a university offers the course you need?", channel: 'Trust' },
+          { title: "Placement statistics: what questions should you ask?", channel: 'Trust' },
+          { title: "How can you compare two colleges fairly?", channel: 'Trust' },
+          { title: "What is the difference between accreditation and affiliation?", channel: 'Trust' },
+          { title: "Why should students explore the curriculum before joining?", channel: 'Trust' },
+          { title: "Hostel or day scholar: what factors should you consider?", channel: 'Trust' },
+          { title: "How do internships help you explore a career?", channel: 'Trust' },
+          { title: "What questions should you ask during an admission enquiry?", channel: 'Trust' },
+          { title: "How do you identify misleading college promises?", channel: 'Trust' },
+          { title: "Before paying college fees, what should you verify?", channel: 'Trust' },
+        ],
+      },
+      {
+        name: 'D. Parents & Student Guidance',
+        ideas: [
+          { title: "5 questions parents should ask before applying.", channel: 'Trust' },
+          { title: "How to take the next step without overthinking it.", channel: 'Connection' },
+          { title: "What an alumnus wishes they knew at +2.", channel: 'Connection' },
+          { title: "How do you support your child's course decision?", channel: 'Connection' },
+          { title: "What if your interests differ from your parents' expectations?", channel: 'Connection' },
+          { title: "Marks are not the only factor in choosing a career.", channel: 'Connection' },
+          { title: "How do you discuss college expenses with your family?", channel: 'Connection' },
+          { title: "What should first-generation college students know?", channel: 'Connection' },
+          { title: "How can parents help students handle college anxiety?", channel: 'Connection' },
+          { title: "What should students prepare before their first college day?", channel: 'Connection' },
+          { title: "How do you ask for help when you are confused about your future?", channel: 'Connection' },
+          { title: "What does a supportive college environment look like?", channel: 'Connection' },
+          { title: "How can students make the most of their first semester?", channel: 'Connection' },
+          { title: "What should you do if your friends choose a different course?", channel: 'Connection' },
+          { title: "How do you build confidence before entering college?", channel: 'Connection' },
+        ],
+      },
+      {
+        name: 'E. District-Focused Guidance',
+        ideas: [
+          { title: "Students from Kanyakumari: what should you check?", channel: 'Trust' },
+          { title: "From Tirunelveli / Kanyakumari to college: what students actually want to know.", channel: 'Connection' },
+          { title: "Students from Tirunelveli: why campus choice matters.", channel: 'Trust' },
+          { title: "Kanyakumari students: what should you explore before choosing a university?", channel: 'Trust' },
+          { title: "Tirunelveli students: 5 questions to ask during a campus visit.", channel: 'Trust' },
+          { title: "Nagercoil students: what should you know before joining college?", channel: 'Connection' },
+          { title: "Thoothukudi students: how do you compare courses and campuses?", channel: 'Trust' },
+          { title: "From your hometown to university: what changes after +2?", channel: 'Connection' },
+          { title: "Students from South Tamil Nadu: what are your biggest college questions?", channel: 'Connection' },
+          { title: "What do students in South Tamil Nadu look for in a university?", channel: 'Connection' },
+          { title: "Parents from South Tamil Nadu: what should you verify before admission?", channel: 'Trust' },
+          { title: "Can students explore new career paths without leaving South Tamil Nadu?", channel: 'Discovery' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'Funny',
+    subcategories: [
+      {
+        name: 'A. +2 & Career Confusion',
+        ideas: [
+          { title: "POV: Your first day after +2.", channel: 'Connection' },
+          { title: "The night before joining college: what you actually worry about.", channel: 'Connection' },
+          { title: "POV: Everyone asks what you are going to study after +2.", channel: 'Connection' },
+          { title: "When you say you are still thinking about your course choice.", channel: 'Connection' },
+          { title: "Parents: Choose a course. Me: Let me search one more time.", channel: 'Connection' },
+          { title: "POV: Your friend has already decided their career.", channel: 'Connection' },
+          { title: "When your relatives ask about your college plans.", channel: 'Connection' },
+          { title: "The difference between what you imagined college would be and reality.", channel: 'Connection' },
+          { title: "When your parents compare your college plans with your cousin's.", channel: 'Connection' },
+          { title: "POV: You open the course list and see 100 options.", channel: 'Connection' },
+          { title: "When you tell your friend you are joining college and they ask which branch.", channel: 'Connection' },
+          { title: "The first time someone asks you to introduce yourself in college.", channel: 'Connection' },
+          { title: "When everyone thinks engineering means only coding.", channel: 'Connection' },
+          { title: "POV: You chose a course and everyone has an opinion.", channel: 'Connection' },
+          { title: "When your friend says every degree has the same career path.", channel: 'Connection' },
+          { title: "The difference between a course brochure and your first class.", channel: 'Connection' },
+          { title: "When you say you want to explore your options and get 10 career suggestions.", channel: 'Connection' },
+          { title: "POV: Your family discovers a new career on social media.", channel: 'Connection' },
+          { title: "When your friend chooses a course because the name sounds cool.", channel: 'Connection' },
+          { title: "Trying to explain your course to a relative who has never heard of it.", channel: 'Connection' },
+          { title: "When someone asks about your future salary before you start college.", channel: 'Connection' },
+          { title: "POV: You select a course after watching one five-minute video.", channel: 'Connection' },
+        ],
+      },
+      {
+        name: 'B. Campus & Student Situations',
+        ideas: [
+          { title: "POV: The professor says, \"This is very easy.\"", channel: 'Connection' },
+          { title: "When your attendance is safe until you check the percentage.", channel: 'Connection' },
+          { title: "First day of college: Expectations vs reality.", channel: 'Connection' },
+          { title: "When your group assignment has one person doing all the work.", channel: 'Connection' },
+          { title: "POV: You arrive early and the classroom is empty.", channel: 'Connection' },
+          { title: "When your friend says, \"Let's study tomorrow.\"", channel: 'Connection' },
+          { title: "The different types of students during an internal exam.", channel: 'Connection' },
+          { title: "When your parents ask how college was and you say \"Fine.\"", channel: 'Connection' },
+          { title: "POV: You have an assignment due tomorrow.", channel: 'Connection' },
+          { title: "When the timetable changes and nobody tells you.", channel: 'Connection' },
+          { title: "The student who knows every shortcut around campus.", channel: 'Connection' },
+          { title: "When the exam question looks completely unfamiliar.", channel: 'Connection' },
+          { title: "When your friend says, \"I'll explain it later.\"", channel: 'Connection' },
+          { title: "The student who asks, \"Is this important for the exam?\"", channel: 'Connection' },
+          { title: "When your alarm rings on the first day of college.", channel: 'Connection' },
+          { title: "POV: You enter the wrong classroom with full confidence.", channel: 'Connection' },
+          { title: "When the lecturer asks a question right after you stop paying attention.", channel: 'Connection' },
+          { title: "The group project meeting that becomes a food break.", channel: 'Connection' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'Trendy',
+    subcategories: [
+      {
+        name: 'A. Campus Experience',
+        ideas: [
+          { title: "24 hours of college life in 30 seconds.", channel: 'Discovery' },
+          { title: "Campus speed run: 5 stops in 15 seconds.", channel: 'Discovery' },
+          { title: "A campus tour, but every stop has a surprise.", channel: 'Discovery' },
+          { title: "Follow a student through one complete college day.", channel: 'Connection' },
+          { title: "The fastest tour of our campus: ready?", channel: 'Discovery' },
+          { title: "What can you discover in 60 seconds around campus?", channel: 'Discovery' },
+          { title: "Student vs faculty: who knows the campus better?", channel: 'Discovery' },
+          { title: "Campus scavenger hunt: can you find all 5 locations?", channel: 'Discovery' },
+          { title: "A day in the life of a first-year student.", channel: 'Connection' },
+          { title: "One question, five students, five different answers.", channel: 'Discovery' },
+          { title: "Campus sounds: identify the location.", channel: 'Discovery' },
+          { title: "POV: You just entered Joy University.", channel: 'Connection' },
+          { title: "A complete campus experience using only transitions.", channel: 'Discovery' },
+          { title: "From classroom to lab: follow the learning journey.", channel: 'Trust' },
+          { title: "The 30-second university challenge.", channel: 'Discovery' },
+        ],
+      },
+      {
+        name: 'B. Challenges & Interactive Reels',
+        ideas: [
+          { title: "Lab challenge: can you guess the result?", channel: 'Discovery' },
+          { title: "Can you guess the course from these 3 clues?", channel: 'Discovery' },
+          { title: "Identify the lab equipment before the timer ends.", channel: 'Discovery' },
+          { title: "Guess the career from the skill.", channel: 'Discovery' },
+          { title: "Students answer: this or that?", channel: 'Discovery' },
+          { title: "Can you solve this problem before the reveal?", channel: 'Discovery' },
+          { title: "Faculty vs student: who answers faster?", channel: 'Discovery' },
+          { title: "Guess the department from a close-up shot.", channel: 'Discovery' },
+          { title: "Choose your course based on these 3 situations.", channel: 'Trust' },
+          { title: "Finish the sentence: After +2, I want to…", channel: 'Discovery' },
+          { title: "Can you identify this technology in 10 seconds?", channel: 'Discovery' },
+          { title: "One question. Three students. What would you choose?", channel: 'Discovery' },
+          { title: "Comment your answer before watching the explanation.", channel: 'Discovery' },
+          { title: "The 15-second challenge: show your department.", channel: 'Discovery' },
+          { title: "One object, five courses: how is it used?", channel: 'Discovery' },
+          { title: "Match the skill to the career in rapid-fire mode.", channel: 'Discovery' },
+          { title: "What happens inside this lab? Watch the process.", channel: 'Trust' },
+        ],
+      },
+      {
+        name: 'C. Student Voices & Stories',
+        ideas: [
+          { title: "One student, one honest reason they chose Joy.", channel: 'Trust' },
+          { title: "Why did you choose this course? One student, one answer.", channel: 'Trust' },
+          { title: "Ask a final-year student: what should freshers know?", channel: 'Connection' },
+          { title: "Students describe their department in 3 words.", channel: 'Discovery' },
+          { title: "The one thing I wish I knew before joining college.", channel: 'Connection' },
+          { title: "What does your first month at university actually look like?", channel: 'Connection' },
+          { title: "Ask an alumnus: what skill helped you after graduation?", channel: 'Trust' },
+          { title: "Students share their biggest first-year learning.", channel: 'Connection' },
+          { title: "From +2 to university: one student's transition.", channel: 'Connection' },
+          { title: "What is one thing you would tell your younger self?", channel: 'Connection' },
+          { title: "A faculty member answers a parent’s biggest question.", channel: 'Trust' },
+          { title: "Rapid-fire: admissions questions answered.", channel: 'Trust' },
+          { title: "Ask a Joy faculty member anything about this course.", channel: 'Trust' },
+        ],
+      },
+      {
+        name: 'D. Visual & Fast-Paced Concepts',
+        ideas: [
+          { title: "A course explained through 5 cinematic shots.", channel: 'Discovery' },
+          { title: "One question, five departments: how do they answer?", channel: 'Discovery' },
+          { title: "A visual guide to a day of practical learning.", channel: 'Trust' },
+          { title: "Before and after: a student's first day on campus.", channel: 'Connection' },
+          { title: "A complete department tour in 30 seconds.", channel: 'Discovery' },
+          { title: "What can you learn from one day in the laboratory?", channel: 'Trust' },
+          { title: "Three students, three career goals.", channel: 'Connection' },
+          { title: "The campus transition challenge.", channel: 'Discovery' },
+          { title: "Show your department using only five shots.", channel: 'Discovery' },
+          { title: "One skill, three careers, one fast-paced reel.", channel: 'Discovery' },
+        ],
+      },
+    ],
+  },
+];
+
+// Primary goals are explicit on each topic, independent of the original treatment.
+const reasons: Record<ContentChannel, string> = {
+  Trust: 'Build credibility through course understanding, verifiable evidence, or informed academic decisions.',
+  Connection: 'Recognise a student experience or offer supportive, practical guidance.',
+  Discovery: 'Invite broad curiosity through a reveal, visual exploration, or participation.',
+};
+let section = 0;
+export const LIBRARY_IDEAS: LibraryIdea[] = SOURCE_IDEA_GROUPS.flatMap(group => group.subcategories.flatMap(sub => {
+  const sectionId = ++section;
+  return sub.ideas.map((entry, i) => ({
+    id: `${group.id}-${sectionId}-${i+1}`, title: entry.title, channel: entry.channel, direction: group.id,
+    topicGroup: sub.name.replace(/^[A-Z]\. /, ''), reason: reasons[entry.channel],
+  }));
+}));
+export const CHANNEL_IDEA_COUNTS = Object.fromEntries(CONTENT_CHANNELS.map(channel => [channel.id, LIBRARY_IDEAS.filter(idea => idea.channel === channel.id).length])) as Record<ContentChannel, number>;
