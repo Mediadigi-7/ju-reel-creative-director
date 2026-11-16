@@ -5,7 +5,7 @@ export const FINALISATION_MS=1500;
 export const MIN_WRITER_MS=12000;
 export const ADVISORY_CRITIQUE_MS=8000;
 export const ADVISORY_REWRITE_MS=20000;
-export type GenerationStage='concept'|'story'|'repair'|'critique'|'advisory_rewrite';
+export type GenerationStage='concept'|'channel_concept'|'concept_review'|'story'|'repair'|'critique'|'advisory_rewrite';
 export interface GenerationTrace {
  stage:GenerationStage|'advisory'|'validation';
  outcome:string; elapsedMs:number; remainingMs:number; category?:string;

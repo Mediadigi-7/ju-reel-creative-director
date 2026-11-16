@@ -1,0 +1,84 @@
+{
+  "evaluatedAt": "2026-11-16T06:21:10.106Z",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "sourceSha256": {
+    "server/conceptQualityReview.ts": "dfc114f172caa6d65571d1123bfcad05bdc4b55d1f7046a55129c9fbee299817",
+    "shared/conceptQuality.ts": "9a4c1bbc8ddb3253fdb2aa62ef89de9ec1d97b47b23daee2fefdb7310f9a8a8f",
+    "shared/verifiedCreativeEvidence.ts": "1682e5d7bdd22d34f7480c562d8c60edb3b9f782e33163884217044f4bfe7bee",
+    "server/generationSchemas.ts": "ce9440280a3bbd3a451dd6ed47d2202a0f89ad2af513922f6ae437bea7025592",
+    "scripts/calibrateConceptReviewer.ts": "bbbd94d7b398a64d7fed02979c89f27dcadeb52dd6e376c67a4f530fda92616e"
+  },
+  "rawReview": {
+    "issues": [
+      {
+        "candidateId": "K2",
+        "quote": "How are complete budgets audited?",
+        "category": "integrity",
+        "evidence": "The student's question about auditing budgets does not investigate the same specific uncertainty (the classification of a refundable deposit) identified by the observation.",
+        "revision": "How should I classify this refundable deposit, and why?"
+      },
+      {
+        "candidateId": "K6",
+        "quote": "Both inspected rows list Business Simulation.",
+        "category": "fidelity",
+        "evidence": "The evidence cited (ju-bcom-af-2025-sem1 and ju-bba-em-2025-sem1) states the shared title is 'Business Organization & Management', not 'Business Simulation'.",
+        "revision": "Both inspected rows list Business Organization & Management."
+      }
+    ]
+  },
+  "groundedIssues": [
+    "K2 | integrity: The student's question about auditing budgets does not investigate the same specific uncertainty (the classification of a refundable deposit) identified by the observation. Correction: How should I classify this refundable deposit, and why?",
+    "K6 | fidelity: The evidence cited (ju-bcom-af-2025-sem1 and ju-bba-em-2025-sem1) states the shared title is 'Business Organization & Management', not 'Business Simulation'. Correction: Both inspected rows list Business Organization & Management."
+  ],
+  "results": [
+    {
+      "id": "K4",
+      "expectedReject": true,
+      "rejected": false,
+      "correct": false
+    },
+    {
+      "id": "K1",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    },
+    {
+      "id": "K6",
+      "expectedReject": true,
+      "rejected": true,
+      "correct": true
+    },
+    {
+      "id": "K3",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    },
+    {
+      "id": "K2",
+      "expectedReject": true,
+      "rejected": true,
+      "correct": true
+    },
+    {
+      "id": "K5",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    }
+  ],
+  "correct": 5,
+  "total": 6,
+  "passed": false,
+  "traces": [
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 1395,
+      "remainingMs": 20604
+    }
+  ],
+  "note": "Small explicit calibration set. Expected labels were not sent to the model. This is not proof of general reviewer accuracy or publication approval."
+}

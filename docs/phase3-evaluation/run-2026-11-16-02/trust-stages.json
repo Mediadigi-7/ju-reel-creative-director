@@ -1,0 +1,37 @@
+[
+  {
+    "stage": "concept",
+    "outcome": "complete",
+    "elapsedMs": 11381,
+    "remainingMs": 38616,
+    "at": "2026-11-16T05:26:41.194Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 2825,
+    "remainingMs": 35783,
+    "at": "2026-11-16T05:26:44.027Z"
+  },
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 8759,
+    "remainingMs": 27024,
+    "at": "2026-11-16T05:26:52.786Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 4,
+    "remainingMs": 27020,
+    "at": "2026-11-16T05:26:52.790Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "skipped_insufficient_budget",
+    "elapsedMs": 0,
+    "remainingMs": 27019,
+    "at": "2026-11-16T05:26:52.791Z"
+  }
+]

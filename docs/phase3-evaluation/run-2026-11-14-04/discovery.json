@@ -1,0 +1,218 @@
+{
+  "narrativeContract": "six-stage-v2",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "id": "discovery_insufficient_01",
+      "title": "The Labeling Challenge",
+      "audienceGap": "Students assume any business-related task must belong to a specific degree type.",
+      "basisId": "insufficient_information",
+      "requiredConclusion": "Not enough information",
+      "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+      "viewerChange": "Realizes that tasks are often universal, not degree-exclusive.",
+      "concept": "Viewer is shown a task and challenged to assign it; discovery is that information is missing.",
+      "mechanismKey": "missing_evidence_reveal",
+      "device": "Interactive visual puzzle",
+      "supportType": "method",
+      "support": "This is a reasoning limit: absent information cannot establish an exclusive classification.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Present one example without a source linking it to a category.",
+        "Separate a plausible guess from what the available information proves.",
+        "Identify the exact missing source or information needed to decide."
+      ],
+      "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+      "visibleProof": "A forced-choice guess is replaced by a justified third answer and a precise request for missing evidence.",
+      "payoff": "Viewer pauses before making snap judgments about degree contents.",
+      "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+      "demonstration": {
+        "input": "A task description involving profit margin calculation.",
+        "visibleInput": "Example: Task: Calculate margins. Degree: B.Com or BBA?",
+        "observation": "No supplied source connects this example to either category; the supported result is insufficient information.",
+        "nextQuestion": "What evidence would definitively link this task to one degree?"
+      },
+      "treatment": "Trendy"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_assessment_01",
+        "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+        "mechanismKey": "three_column_audit",
+        "device": "Worksheet walkthrough"
+      },
+      {
+        "channel": "Connection",
+        "id": "connection_journal_01",
+        "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+        "mechanismKey": "peer_observation_journal",
+        "device": "Conversation and note-sharing"
+      },
+      {
+        "channel": "Discovery",
+        "id": "discovery_insufficient_01",
+        "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+        "mechanismKey": "missing_evidence_reveal",
+        "device": "Interactive visual puzzle"
+      }
+    ],
+    "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / three_column_audit; Connection = task_question_journal / peer_observation_journal; Discovery = insufficient_information / missing_evidence_reveal. Each has an illustrative input, observable result and next question. This is not editorial approval."
+  },
+  "hlni": [
+    {
+      "insight": "Tasks like margin calculation are not inherently exclusive to one degree without verified curriculum evidence.",
+      "audienceGap": "Students assume a degree label dictates the specific tasks within it.",
+      "viewerChange": "Shifts from guessing based on labels to looking for evidence-based comparisons.",
+      "supportType": "method",
+      "support": "Logical reasoning: a single example without institutional context cannot define an entire category.",
+      "references": [
+        "Task card graphic"
+      ],
+      "shotNumbers": [
+        2,
+        4
+      ],
+      "payoffShotNumbers": [
+        5,
+        6
+      ],
+      "payoff": "The viewer stops guessing and learns to investigate assessment criteria as the basis for comparison."
+    }
+  ],
+  "channel": "Discovery",
+  "id": "reel_1794646154467_36yfjkut",
+  "reelTitle": "The Labeling Challenge",
+  "creativeAngle": "Using a logical puzzle to expose the flaw in binary degree comparisons",
+  "objective": "Guide students to identify missing evidence before making degree assumptions",
+  "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Trendy",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "HOOK",
+      "functions": [
+        "HOOK"
+      ],
+      "name": "The Snap Judgment",
+      "timestamp": "00:00 – 00:04",
+      "visual": "Close-up of a student holding two cards labeled B.Com and BBA, looking undecided.",
+      "dialogue": "B.Com or BBA? Choosing often feels like guessing.",
+      "onscreenText": "B.Com vs BBA?",
+      "cameraPerformance": "Direct eye contact, slightly skeptical expression.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "PROBLEM",
+      "functions": [
+        "PROBLEM"
+      ],
+      "name": "The Tension",
+      "timestamp": "00:04 – 00:08",
+      "visual": "Student stares at a laptop screen displaying a single task description.",
+      "dialogue": "We assume tasks fit one. Look at this.",
+      "onscreenText": "Example: Task: Calculate margins. Degree: B.Com or BBA?",
+      "cameraPerformance": "Zoom in on the laptop screen.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "PATTERN_INTERRUPT",
+      "functions": [
+        "PATTERN_INTERRUPT"
+      ],
+      "name": "The Pause",
+      "timestamp": "00:08 – 00:12",
+      "visual": "Student pulls back, hand hovering over the keyboard, looking frustrated.",
+      "dialogue": "Is it simple? Let's check the evidence.",
+      "onscreenText": "Evidence check...",
+      "cameraPerformance": "Dynamic camera movement to show hesitation.",
+      "userEdited": false
+    },
+    {
+      "number": 4,
+      "type": "VALUE",
+      "functions": [
+        "VALUE"
+      ],
+      "name": "The Method Reveal",
+      "timestamp": "00:12 – 00:20",
+      "visual": "Split screen: The task card on one side, an empty 'Source Link' box on the other.",
+      "dialogue": "Without a source linking it to curriculum, we cannot label it. Insufficient information.",
+      "onscreenText": "Result: Insufficient Information",
+      "cameraPerformance": "Pointing at the empty source box.",
+      "userEdited": false
+    },
+    {
+      "number": 5,
+      "type": "PAYOFF",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The New Question",
+      "timestamp": "00:20 – 00:24",
+      "visual": "Student closes the laptop and writes a note in a journal.",
+      "dialogue": "Stop guessing. Ask: What evidence links this?",
+      "onscreenText": "What evidence would definitively link this task to one degree?",
+      "cameraPerformance": "Close-up on the written question.",
+      "userEdited": false
+    },
+    {
+      "number": 6,
+      "type": "CTA",
+      "functions": [
+        "CTA"
+      ],
+      "name": "The Purposeful Action",
+      "timestamp": "00:24 – 00:28",
+      "visual": "Student opens a real academic curriculum document to compare assessment criteria.",
+      "dialogue": "Compare actual assessment criteria, not just labels.",
+      "onscreenText": "Compare criteria.",
+      "cameraPerformance": "Steady, focused shot.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, minimalist desk setup with clear graphic overlays.",
+    "performance": "Conversational and inquisitive, avoiding salesy tones.",
+    "camera": "Handheld for the hook, static for the analytical value section.",
+    "editing": "Rhythmic cuts matched to the logical progression of the puzzle.",
+    "sound": "Subtle ambient classroom noise, crisp voiceover.",
+    "props": [
+      "Laptop",
+      "Journal",
+      "Degree cards"
+    ],
+    "locations": [
+      "Study desk"
+    ],
+    "casting": "Relatable student age 17-18.",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Transform a binary degree choice into a logical puzzle that forces students to seek verifiable evidence.",
+    "shootingPriority": [
+      "The task screen graphic",
+      "The student's reaction to the missing evidence",
+      "The final action of checking criteria"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-14T08:49:14.467Z",
+  "updatedAt": "2026-11-14T08:49:14.467Z",
+  "status": "Draft",
+  "version": 1,
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-14T08:49:14.467Z"
+  }
+}

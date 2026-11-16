@@ -109,6 +109,7 @@ export const FrameworkMetadataSchema = z.object({
 });
 
 export const ReelStoryboardSchema = z.object({
+  narrativeContract:z.literal('six-stage-v2').optional(),
   conceptSelection:ConceptSelectionSchema.optional(),
   hlni:z.array(HlniSchema).optional(),
   editorialReview:EditorialReviewSchema.optional(),

@@ -1,0 +1,655 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A task label alone does not tell you what you must produce or how it is evaluated.",
+          "audienceGap": "Students assume a degree is defined by the list of subjects, not by the nature of the work and grading.",
+          "viewerChange": "Learns to look for assessment rubrics to identify specific skill requirements.",
+          "supportType": "method",
+          "support": "The method separates the task from the grading criteria, preventing assumptions about course difficulty based on module names.",
+          "references": [],
+          "shotNumbers": [
+            3,
+            4
+          ],
+          "payoffShotNumbers": [
+            5
+          ],
+          "payoff": "The student identifies a specific gap in their understanding of 'Strategic impact' instead of guessing course content."
+        }
+      ],
+      "id": "reel_1794643419161_na03zd",
+      "reelTitle": "The Assessment Audit",
+      "creativeAngle": "Using a grading rubric to compare B.Com and BBA demands.",
+      "objective": "Enable students to evaluate degree requirements through assessment criteria rather than module titles.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "The Degree Dilemma",
+          "timestamp": "00:00 - 00:04",
+          "visual": "Student staring at two university brochures with confused expression.",
+          "dialogue": "Choosing between B.Com and BBA feels like guessing.",
+          "onscreenText": "B.Com vs BBA?",
+          "cameraPerformance": "Close-up, handheld.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Subject Trap",
+          "timestamp": "00:04 - 00:08",
+          "visual": "Student points to lists of modules on paper.",
+          "dialogue": "Focusing on subject lists hides what you actually have to produce.",
+          "onscreenText": "Subject lists aren't outcomes.",
+          "cameraPerformance": "Over-the-shoulder shot.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "The Audit Reveal",
+          "timestamp": "00:08 - 00:12",
+          "visual": "Student slides a new worksheet over the brochures.",
+          "dialogue": "Try an assessment audit instead. Look at the grading rubrics.",
+          "onscreenText": "Assessment Audit",
+          "cameraPerformance": "Quick top-down cut.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Method Explained",
+          "timestamp": "00:12 - 00:20",
+          "visual": "Close-up of worksheet: 'Example: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity.' Student ticks 'Accuracy'.",
+          "dialogue": "Task: Analyze costs. You know 'Accuracy', but what is 'Strategic impact'?",
+          "onscreenText": "Example: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity.",
+          "cameraPerformance": "Focus rack to paper.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Concrete Question",
+          "timestamp": "00:20 - 00:25",
+          "visual": "Student writes a question on the sheet.",
+          "dialogue": "Now you know exactly what to ask: 'What specific criteria define 'Strategic impact' in this course assessment?'",
+          "onscreenText": "What specific criteria define 'Strategic impact' in this course assessment?",
+          "cameraPerformance": "Tight shot of pen on paper.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "Action Taken",
+          "timestamp": "00:25 - 00:28",
+          "visual": "Student puts down pen and looks at the camera.",
+          "dialogue": "Use this audit to compare your actual course demands.",
+          "onscreenText": "Audit your course.",
+          "cameraPerformance": "Static medium shot.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, desk-focused.",
+        "performance": "Natural, thoughtful, not rushed.",
+        "camera": "Close-up work for readability.",
+        "editing": "Rhythmic cuts on text appearance.",
+        "sound": "Minimal ambient room tone.",
+        "props": [
+          "Brochures",
+          "Assessment worksheet",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Student +2 age.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Shifting focus from module titles to assessment rubrics creates more specific, actionable questions for prospective students.",
+        "shootingPriority": [
+          "Worksheet close-up",
+          "Student reaction",
+          "Brochure setup"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-14T08:03:39.161Z",
+      "updatedAt": "2026-11-14T08:03:39.161Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Students think degrees are defined by subjects, not by how they are evaluated.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Learns to look for assessment criteria instead of module titles to understand course demands.",
+          "concept": "A student compares two hypothetical assessment rubrics for a business task.",
+          "mechanismKey": "Three-column question sheet",
+          "device": "A split-screen comparison of a task and its grading criteria.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "The student stops guessing degree content and starts asking specific questions about grading expectations.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "Two hypothetical assessment rubrics for a business analysis task.",
+            "visibleInput": "Example: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity.",
+            "observation": "Student marks 'Accuracy' as known but 'Strategic impact' as an unknown requirement.",
+            "nextQuestion": "What specific criteria define 'Strategic impact' in this course assessment?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question sheet",
+            "device": "A split-screen comparison of a task and its grading criteria."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Task journal and inquiry",
+            "device": "A casual, shared desktop workspace where they record their specific confusion points."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence gap analysis",
+            "device": "A challenge screen where the viewer must choose between B.Com, BBA, or 'Need more info'."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question sheet; Connection = task_question_journal / Task journal and inquiry; Discovery = insufficient_information / Evidence gap analysis. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      },
+      "narrativeContract": "six-stage-v2"
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Delivery (Scene pacing)",
+      "failureReason": "Shot #5 has too much dialogue for its timestamp.",
+      "repairInstruction": "Shorten shot #5 to at most 15 spoken words while preserving story coherence, useful insight and resolution; do not add a CTA."
+    }
+  },
+  {
+    "candidate": {
+      "narrativeContract": "six-stage-v2",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Students think degrees are defined by subjects, not by how they are evaluated.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Learns to look for assessment criteria instead of module titles to understand course demands.",
+          "concept": "A student compares two hypothetical assessment rubrics for a business task.",
+          "mechanismKey": "Three-column question sheet",
+          "device": "A split-screen comparison of a task and its grading criteria.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "The student stops guessing degree content and starts asking specific questions about grading expectations.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "Two hypothetical assessment rubrics for a business analysis task.",
+            "visibleInput": "Example: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity.",
+            "observation": "Student marks 'Accuracy' as known but 'Strategic impact' as an unknown requirement.",
+            "nextQuestion": "What specific criteria define 'Strategic impact' in this course assessment?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question sheet",
+            "device": "A split-screen comparison of a task and its grading criteria."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Task journal and inquiry",
+            "device": "A casual, shared desktop workspace where they record their specific confusion points."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence gap analysis",
+            "device": "A challenge screen where the viewer must choose between B.Com, BBA, or 'Need more info'."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question sheet; Connection = task_question_journal / Task journal and inquiry; Discovery = insufficient_information / Evidence gap analysis. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      },
+      "hlni": [
+        {
+          "insight": "A task label alone does not tell you what you must produce or how it is evaluated.",
+          "audienceGap": "Students assume a degree is defined by the list of subjects, not by the nature of the work and grading.",
+          "viewerChange": "Learns to look for assessment rubrics to identify specific skill requirements.",
+          "supportType": "method",
+          "support": "The method separates the task from the grading criteria, preventing assumptions about course difficulty based on module names.",
+          "references": [],
+          "shotNumbers": [
+            3,
+            4
+          ],
+          "payoffShotNumbers": [
+            5
+          ],
+          "payoff": "The student identifies a specific gap in their understanding of 'Strategic impact' instead of guessing course content."
+        }
+      ],
+      "channel": "Trust",
+      "id": "reel_1794643419161_na03zd",
+      "reelTitle": "The Assessment Audit",
+      "creativeAngle": "Using a grading rubric to compare B.Com and BBA demands.",
+      "objective": "Enable students to evaluate degree requirements through assessment criteria rather than module titles.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "The Degree Dilemma",
+          "timestamp": "00:00 - 00:04",
+          "visual": "Student staring at two university brochures with confused expression.",
+          "dialogue": "Choosing between B.Com and BBA feels like guessing.",
+          "onscreenText": "B.Com vs BBA?",
+          "cameraPerformance": "Close-up, handheld.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Subject Trap",
+          "timestamp": "00:04 - 00:08",
+          "visual": "Student points to lists of modules on paper.",
+          "dialogue": "Subject lists hide what you actually produce.",
+          "onscreenText": "Subject lists aren't outcomes.",
+          "cameraPerformance": "Over-the-shoulder shot.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "The Audit Reveal",
+          "timestamp": "00:08 - 00:12",
+          "visual": "Student slides a new worksheet over the brochures.",
+          "dialogue": "Try an assessment audit. Use the grading rubrics.",
+          "onscreenText": "Assessment Audit",
+          "cameraPerformance": "Quick top-down cut.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The Method Explained",
+          "timestamp": "00:12 - 00:20",
+          "visual": "Close-up of worksheet: 'Example: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity.' Student ticks 'Accuracy'.",
+          "dialogue": "Task: Analyze costs. You know 'Accuracy', but what is 'Strategic impact'?",
+          "onscreenText": "Example: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity.",
+          "cameraPerformance": "Focus rack to paper.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Concrete Question",
+          "timestamp": "00:20 - 00:25",
+          "visual": "Student writes a question on the sheet.",
+          "dialogue": "Now ask: What criteria define 'Strategic impact'?",
+          "onscreenText": "What specific criteria define 'Strategic impact' in this course?",
+          "cameraPerformance": "Tight shot of pen on paper.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "Action Taken",
+          "timestamp": "00:25 - 00:28",
+          "visual": "Student puts down pen and looks at the camera.",
+          "dialogue": "Use this to compare actual course demands.",
+          "onscreenText": "Audit your course.",
+          "cameraPerformance": "Static medium shot.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, desk-focused.",
+        "performance": "Natural, thoughtful, not rushed.",
+        "camera": "Close-up work for readability.",
+        "editing": "Rhythmic cuts on text appearance.",
+        "sound": "Minimal ambient room tone.",
+        "props": [
+          "Brochures",
+          "Assessment worksheet",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Student +2 age.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Shifting focus from module titles to assessment rubrics creates more specific, actionable questions for prospective students.",
+        "shootingPriority": [
+          "Worksheet close-up",
+          "Student reaction",
+          "Brochure setup"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-14T08:03:39.161Z",
+      "updatedAt": "2026-11-14T08:03:46.142Z",
+      "status": "Draft",
+      "version": 1
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Concept delivery",
+      "failureReason": "The actual dialogue, graphics or visible action must include the selected resulting question: What specific criteria define 'Strategic impact' in this course assessment?",
+      "repairInstruction": "The actual dialogue, graphics or visible action must include the selected resulting question: What specific criteria define 'Strategic impact' in this course assessment?. Preserve the selected concrete example, recorded observation and limitations. Preserve the six required primary stages and one final CTA. The example may span scenes without adding an extra stage."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A task label alone does not tell you what you must produce or how it is assessed.",
+          "audienceGap": "Students assume degree names or subject lists define the actual academic rigor and work required.",
+          "viewerChange": "Learns to investigate grading rubrics to understand the specific demands of a course.",
+          "supportType": "method",
+          "support": "The three-column question sheet forces the student to differentiate between known tasks and unknown criteria, preventing assumptions.",
+          "references": [
+            "shot 4",
+            "shot 5"
+          ],
+          "shotNumbers": [
+            4
+          ],
+          "payoffShotNumbers": [
+            5
+          ],
+          "payoff": "The student identifies a specific gap in their understanding of 'Strategic impact' and formulates a precise question to resolve it."
+        }
+      ],
+      "id": "reel_1794643432974_ge1yjx",
+      "reelTitle": "The Assessment Audit: B.Com vs BBA",
+      "creativeAngle": "Moving from degree titles to evaluating actual assessment criteria.",
+      "objective": "To teach students a method to compare degree requirements using assessment rubrics.",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "Student debating degrees",
+          "timestamp": "00:00 – 00:04",
+          "visual": "A student looking at a laptop with 'B.Com vs BBA' written on a sticky note, looking frustrated.",
+          "dialogue": "Choosing between B.Com and BBA feels like guessing.",
+          "onscreenText": "B.Com vs BBA?",
+          "cameraPerformance": "Close up on the student's face, conveying genuine confusion.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "Ignoring the outcome",
+          "timestamp": "00:04 – 00:08",
+          "visual": "The student scrolls through a generic list of subjects on screen.",
+          "dialogue": "Reading subject lists hides what you are actually asked to produce.",
+          "onscreenText": "Subject lists aren't outcomes.",
+          "cameraPerformance": "Medium shot of the student looking at the screen, tapping the table.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "Introducing the audit",
+          "timestamp": "00:08 – 00:12",
+          "visual": "Student clears the desk and pulls out a blank three-column sheet.",
+          "dialogue": "Try an assessment audit instead. Look for the grading rubrics.",
+          "onscreenText": "Assessment Audit",
+          "cameraPerformance": "Top-down view of the desk surface.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "Rubric comparison",
+          "timestamp": "00:12 – 00:19",
+          "visual": "The sheet is filled out: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity. The student checks 'Accuracy' but circles 'Strategic impact'.",
+          "dialogue": "Example: Task: Analyze costs. Rubric: A) Accuracy, B) Strategic impact, C) Clarity. You know accuracy, but what is strategic impact?",
+          "onscreenText": "Example: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity.",
+          "cameraPerformance": "Handheld focus on the worksheet as the student writes.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "Defining the question",
+          "timestamp": "00:19 – 00:24",
+          "visual": "The student writes the specific question clearly on the worksheet.",
+          "dialogue": "Now ask: What specific criteria define 'Strategic impact' in this course assessment?",
+          "onscreenText": "What specific criteria define 'Strategic impact' in this course assessment?",
+          "cameraPerformance": "Close up on the pen moving across the paper.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "Final action",
+          "timestamp": "00:24 – 00:28",
+          "visual": "Student looking up, confident, picking up a pen to start their next audit.",
+          "dialogue": "Use this method to compare actual course demands, not just names.",
+          "onscreenText": "Audit your course.",
+          "cameraPerformance": "The student looks directly into the camera.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, educational, and focused on the worksheet.",
+        "performance": "Natural, thoughtful, and analytical.",
+        "camera": "Static and close-up shots to maintain focus on the method.",
+        "editing": "Direct cuts between the student and the worksheet.",
+        "sound": "Minimal background ambient sound.",
+        "props": [
+          "Laptop",
+          "Worksheet",
+          "Pen"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "One +2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Shifting the focus from degree labels to assessment criteria using a three-column audit.",
+        "shootingPriority": [
+          "Worksheet close-ups",
+          "Student reaction to the task",
+          "Final CTA delivery"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-14T08:03:52.974Z",
+      "updatedAt": "2026-11-14T08:03:52.974Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "trust_01",
+          "title": "The Assessment Audit",
+          "audienceGap": "Students think degrees are defined by subjects, not by how they are evaluated.",
+          "basisId": "assessment_questions",
+          "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+          "viewerChange": "Learns to look for assessment criteria instead of module titles to understand course demands.",
+          "concept": "A student compares two hypothetical assessment rubrics for a business task.",
+          "mechanismKey": "Three-column question sheet",
+          "device": "A split-screen comparison of a task and its grading criteria.",
+          "supportType": "method",
+          "support": "The method separates three different pieces of information; it does not assume particular course content.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+          "payoff": "The student stops guessing degree content and starts asking specific questions about grading expectations.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "demonstration": {
+            "input": "Two hypothetical assessment rubrics for a business analysis task.",
+            "visibleInput": "Example: Task: Analyze costs. Rubric: A) Accuracy B) Strategic impact C) Clarity.",
+            "observation": "Student marks 'Accuracy' as known but 'Strategic impact' as an unknown requirement.",
+            "nextQuestion": "What specific criteria define 'Strategic impact' in this course assessment?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "Three-column question sheet",
+            "device": "A split-screen comparison of a task and its grading criteria."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Task journal and inquiry",
+            "device": "A casual, shared desktop workspace where they record their specific confusion points."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "Evidence gap analysis",
+            "device": "A challenge screen where the viewer must choose between B.Com, BBA, or 'Need more info'."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / Three-column question sheet; Connection = task_question_journal / Task journal and inquiry; Discovery = insufficient_information / Evidence gap analysis. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      },
+      "narrativeContract": "six-stage-v2"
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Delivery (Spoken pacing)",
+      "failureReason": "Dialogue has 72 words; maximum 70 for 28 seconds.",
+      "repairInstruction": "Rewrite the scenes as one concise story. Use at most 70 English words of dialogue in total. Preserve the applicable narrative contract and match each spoken line to its scene duration."
+    }
+  }
+]

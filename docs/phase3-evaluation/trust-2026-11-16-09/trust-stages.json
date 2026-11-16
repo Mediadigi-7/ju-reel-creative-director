@@ -1,0 +1,30 @@
+[
+  {
+    "stage": "channel_concept",
+    "outcome": "complete",
+    "elapsedMs": 5760,
+    "remainingMs": 44236,
+    "at": "2026-11-16T06:47:43.335Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 2210,
+    "remainingMs": 42020,
+    "at": "2026-11-16T06:47:45.551Z"
+  },
+  {
+    "stage": "channel_concept",
+    "outcome": "complete",
+    "elapsedMs": 4701,
+    "remainingMs": 37318,
+    "at": "2026-11-16T06:47:50.253Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 1096,
+    "remainingMs": 36221,
+    "at": "2026-11-16T06:47:51.351Z"
+  }
+]

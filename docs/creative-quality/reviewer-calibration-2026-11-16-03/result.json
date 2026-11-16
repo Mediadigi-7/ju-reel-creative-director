@@ -1,0 +1,104 @@
+{
+  "evaluatedAt": "2026-11-16T06:51:26.697Z",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "sourceSha256": {
+    "server/conceptQualityReview.ts": "338dcf321c6fc646debbc94aab1e32d8782d3df9e2665f7b9d600e77c555c150",
+    "shared/conceptQuality.ts": "9a4c1bbc8ddb3253fdb2aa62ef89de9ec1d97b47b23daee2fefdb7310f9a8a8f",
+    "shared/verifiedCreativeEvidence.ts": "1682e5d7bdd22d34f7480c562d8c60edb3b9f782e33163884217044f4bfe7bee",
+    "server/generationSchemas.ts": "ce9440280a3bbd3a451dd6ed47d2202a0f89ad2af513922f6ae437bea7025592",
+    "scripts/calibrateConceptReviewer.ts": "9ad419e0369a974a0f10085b54d2c7b65a1fc3850482dc113c36844bea2789f3"
+  },
+  "rawReview": {
+    "issues": [
+      {
+        "candidateId": "K4",
+        "quote": "The student smiles, closes the notebook, and feels calm.",
+        "category": "payoff",
+        "evidence": "The Concept Quality Contract explicitly states that 'A smile, a closed notebook... or a restatement of the method is not a consequence.' The payoff must show the insight's concrete use in improving the next step.",
+        "revision": "The student uses the criterion to rewrite their preparation plan, replacing the decoration step with a specific explanation draft."
+      },
+      {
+        "candidateId": "K2",
+        "quote": "How are complete budgets audited?",
+        "category": "insight",
+        "evidence": "The observation is about a missing category for a specific line item (refundable deposit). Asking about auditing a complete budget is a non-sequitur and does not address the specific uncertainty of the classification task.",
+        "revision": "How should I classify this refundable deposit, and why?"
+      },
+      {
+        "candidateId": "K8",
+        "quote": "The student chooses B.Com as equivalent to BBA without any further checks.",
+        "category": "integrity",
+        "evidence": "The story spine contradicts the concept's own HINI/Limitations which state that a shared title does not establish identical content or degree suitability. The student's conclusion is factually unsupported by the evidence.",
+        "revision": "The student restores the rejected programme to the shortlist and requests the actual course briefs to compare depth."
+      }
+    ]
+  },
+  "groundedIssues": [
+    "K4 | payoff: The Concept Quality Contract explicitly states that 'A smile, a closed notebook... or a restatement of the method is not a consequence.' The payoff must show the insight's concrete use in improving the next step. Correction: The student uses the criterion to rewrite their preparation plan, replacing the decoration step with a specific explanation draft.",
+    "K2 | insight: The observation is about a missing category for a specific line item (refundable deposit). Asking about auditing a complete budget is a non-sequitur and does not address the specific uncertainty of the classification task. Correction: How should I classify this refundable deposit, and why?",
+    "K8 | integrity: The story spine contradicts the concept's own HINI/Limitations which state that a shared title does not establish identical content or degree suitability. The student's conclusion is factually unsupported by the evidence. Correction: The student restores the rejected programme to the shortlist and requests the actual course briefs to compare depth."
+  ],
+  "results": [
+    {
+      "id": "K4",
+      "expectedReject": true,
+      "rejected": true,
+      "correct": true
+    },
+    {
+      "id": "K1",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    },
+    {
+      "id": "K6",
+      "expectedReject": true,
+      "rejected": false,
+      "correct": false
+    },
+    {
+      "id": "K3",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    },
+    {
+      "id": "K2",
+      "expectedReject": true,
+      "rejected": true,
+      "correct": true
+    },
+    {
+      "id": "K5",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    },
+    {
+      "id": "K7",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    },
+    {
+      "id": "K8",
+      "expectedReject": true,
+      "rejected": true,
+      "correct": true
+    }
+  ],
+  "correct": 7,
+  "total": 8,
+  "passed": false,
+  "traces": [
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 2334,
+      "remainingMs": 19665
+    }
+  ],
+  "note": "Small explicit calibration set. Expected labels were not sent to the model. This is not proof of general reviewer accuracy or publication approval."
+}

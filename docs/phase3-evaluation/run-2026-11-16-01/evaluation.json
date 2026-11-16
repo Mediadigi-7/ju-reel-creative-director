@@ -1,0 +1,217 @@
+{
+  "evaluatedAt": "2026-11-16T05:31:45.339Z",
+  "assessor": "Assistant editorial assessment of complete actual Gemini outputs; not generator self-score, blinded human panel or audience testing",
+  "ratingScale": "0–5",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": false,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Connection",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 3,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The task-question method is useful, but the break-even task provides no actual inputs or demonstrated calculation from which the sticking point emerges.",
+        "differentiation": "Two students and a peer-choice dilemma support Connection, but most speech is a general instruction; their different observations and supportive exchange are not actually developed.",
+        "coherence": "The bakery task, cost-component difficulty and resulting breakdown question remain within one academic investigation.",
+        "payoff": "A specific question improves on copying a friend, but the ending returns to a smile and generic instruction without showing a consequential interaction.",
+        "production": "Six timed scenes and practical props; technical fixed/variable costs are unexplained, and the promised task has no visible data.",
+        "originality": "The desk, brochures, worksheet and confident close remain familiar."
+      },
+      "automaticTriggerExplanation": "No proven material factual error or impossible production instruction was established. Partial meaningful insight exists, but the rubric floors still apply. No external institutional assertions beyond the inspected source rows were certified.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5.",
+        "Channel differentiation is below 4/5."
+      ],
+      "revisions": [
+        "Supply a tiny understandable example with enough inputs to expose the exact sticking point.",
+        "Show each student articulating their different uncertainty and asking for the corresponding help.",
+        "Use the question in a visible interaction rather than ending with generic confidence."
+      ],
+      "total": 63,
+      "decision": "REVISE",
+      "sourceFile": "connection.json",
+      "sourceSha256": "4fecae7c10ae1bc4dcbe72cf6d6bb16dbed6d27849c3dadf80a2c1937aa2a728",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 51,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00-00:04",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04-00:09",
+            "seconds": 5,
+            "spokenWords": 8
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:09-00:13",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:13-00:20",
+            "seconds": 7,
+            "spokenWords": 8
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:20-00:25",
+            "seconds": 5,
+            "spokenWords": 12
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:25-00:28",
+            "seconds": 3,
+            "spokenWords": 7
+          }
+        ]
+      }
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 4,
+        "coherence": 3,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The arithmetic counterexample is valid, but equal totals hiding components is familiar and the actual relevance of 100 to this degree comparison is unspecified.",
+        "differentiation": "The physical arithmetic reveal offers a distinct mechanism from the peer task journal; shared setting alone is not a failure.",
+        "coherence": "The arithmetic sequence connects internally, but the opening degree analogy has no defined comparable total and the CTA shifts to task components.",
+        "payoff": "Writing a breakdown question restates the method rather than showing a meaningful change in the original comparison.",
+        "production": "Filmable illustrative A/B sums and clear timecodes; Business Path/Management Path folders make the neutral illustration’s scope ambiguous.",
+        "originality": "A recognisable reveal with modest execution novelty."
+      },
+      "automaticTriggerExplanation": "No proven material factual error or impossible production instruction was established. Partial meaningful insight exists, but the rubric floors still apply. No external institutional assertions beyond the inspected source rows were certified.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5."
+      ],
+      "revisions": [
+        "Explain the narrowly bounded relevance of the arithmetic example without assigning invented totals to either degree.",
+        "Show what a previously hidden component changes about the viewer’s next investigation.",
+        "End on the same comparison rather than changing the CTA to generic tasks."
+      ],
+      "total": 64,
+      "decision": "REVISE",
+      "sourceFile": "discovery.json",
+      "sourceSha256": "4d20112d123cd7749e74f738de6efdc1caeafe53c1788f8a711cde176bfb77f8",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 51,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 11
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 9
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:13",
+            "seconds": 5,
+            "spokenWords": 5
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:13 – 00:19",
+            "seconds": 6,
+            "spokenWords": 9
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:19 – 00:24",
+            "seconds": 5,
+            "spokenWords": 8
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 9
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

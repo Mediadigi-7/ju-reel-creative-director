@@ -24,7 +24,7 @@ assert.ok(brief.includes('not verification of academic claims'));
 assert.ok(!approvedBenchmarkPrompt('Connection').includes('The Impossible Quiz'),'The writer receives only the selected channel benchmark; the planner sees all three');
 console.log('PASS: exact weighted rubric, 85 boundary, independent HLNI/differentiation floors, critical overrides and non-mandatory references');
 const base=generateOfflineStoryboard('AI will change these careers');
-base.shots=base.shots.slice(0,3);
+
 const fixture=withHlniTestProposal(base);
 const original=globalThis.fetch;
 const restorePlanningMocks=installConceptPlanningMocks();
@@ -35,11 +35,11 @@ try {
   assert.ok(prompt.includes('These tags describe the chosen story'));
   if(calls===2)assert.ok(prompt.includes('Diagnostic function tags'));
   const candidate=structuredClone(fixture);
-  if(calls===2)candidate.shots=candidate.shots.map(s=>({...s,functions:[]}));
+  if(calls===2)candidate.shots=candidate.shots.map(s=>({...s,functions:s.type==='SCENE'?[]:[s.type]}));
   return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(candidate)}]}}]}));
  };
  const reel=await generateStoryboard({reelTitle:base.reelTitle,apiKey:'test-only',apiProvider:'gemini',creativeDirection:'Auto'},{includeDiagnosticTags:true});
- assert.equal(calls,2);assert.equal(reel.shots.length,3);
+ assert.equal(calls,2);assert.equal(reel.shots.length,6);
  assert.ok(reel.shots.every(s=>Array.isArray(s.functions)));
  assert.equal(reel.editorialReview,undefined);
  console.log('PASS: requested diagnostic tags trigger bounded repair without forcing any function, shot count or editorial approval');

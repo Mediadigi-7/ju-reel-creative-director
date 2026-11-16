@@ -1,0 +1,215 @@
+{
+  "evaluatedAt": "2026-11-16T05:31:45.525Z",
+  "assessor": "Assistant editorial assessment of complete actual Gemini outputs; not generator self-score, blinded human panel or audience testing",
+  "ratingScale": "0–5",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": false,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 4,
+        "payoff": 4,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The shared Business Organization & Management title is supported by the two inspected official source rows and corrects a concrete misconception. Scope must remain those programmes/documents.",
+        "differentiation": "The actual evidence comparison differs from Connection’s peer task exercise.",
+        "coherence": "The initial assumption of completely different subjects is tested against real rows and replaced by a deeper comparison question.",
+        "payoff": "The question changes from degree labels to assessment criteria and syllabus depth, demonstrating a useful bounded research shift; it still stops short of a worked decision.",
+        "production": "Six timed scenes and available official source assets. Specific programme names and the 2025–26 document scope are not explicitly held in the graphic/voiceover; source-identifying footage needs production instructions.",
+        "originality": "The document reveal is familiar but specific evidence strengthens its usefulness."
+      },
+      "automaticTriggerExplanation": "No proven material factual error or impossible production instruction was established. Partial meaningful insight exists, but the rubric floors still apply. No external institutional assertions beyond the inspected source rows were certified.",
+      "reasons": [
+        "Overall score is below 85/100."
+      ],
+      "revisions": [
+        "Hold the exact programme names and document cohort visibly with the two highlighted rows.",
+        "State that shared titles do not establish identical depth or assessment.",
+        "Demonstrate how one known comparison criterion changes the student’s next investigation without inventing a university assessment fact."
+      ],
+      "total": 76,
+      "decision": "REVISE",
+      "sourceFile": "trust.json",
+      "sourceSha256": "6eff7a81a9950175d671e0f233684d8d8cc9342f314970fbd2adc3076579b6a7",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 51,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 9
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 7
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:19",
+            "seconds": 7,
+            "spokenWords": 8
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:19 – 00:24",
+            "seconds": 5,
+            "spokenWords": 13
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 6
+          }
+        ]
+      }
+    },
+    {
+      "channel": "Connection",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 4,
+        "coherence": 3,
+        "payoff": 3,
+        "production": 3,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "It shows a specific question about fixed overheads, but the source task has no actual cost items or values; the observation is asserted rather than demonstrated.",
+        "differentiation": "The friend supplies the task and the student voices a difficulty, creating a more recognisable human exchange than a lone narrator.",
+        "coherence": "Fixed overheads relate to the break-even exercise, but the task trial does not visibly establish where the confusion occurred. The opening stereotypes are not explicitly resolved.",
+        "payoff": "The student records a more specific question, then receives a generic course-team CTA; the intended relief is not tied to a demonstrated reasoning change.",
+        "production": "Filmable library setup and pacing within estimated limits, but cost-volume-profit vocabulary is dense for a beginner. Method references list curriculum PDFs that do not support the task-journal reasoning.",
+        "originality": "The stressed student, worksheet and relieved reaction repeat common executions."
+      },
+      "automaticTriggerExplanation": "No proven material factual error or impossible production instruction was established. Partial meaningful insight exists, but the rubric floors still apply. No external institutional assertions beyond the inspected source rows were certified.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5."
+      ],
+      "revisions": [
+        "Show one simple expense and the exact classification ambiguity before naming technical terms.",
+        "Explicitly bound the exercise as a way to ask for help, not to diagnose degree fit.",
+        "Remove irrelevant curriculum citations from the method’s support; cite only claims those rows actually establish."
+      ],
+      "total": 63,
+      "decision": "REVISE",
+      "sourceFile": "connection.json",
+      "sourceSha256": "20dcd6194dced459ce2b3fc90d23176c5261968f83433bb4348cb2e582a122a1",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 58,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 - 00:04",
+            "seconds": 4,
+            "spokenWords": 11
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 - 00:08",
+            "seconds": 4,
+            "spokenWords": 10
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 - 00:12",
+            "seconds": 4,
+            "spokenWords": 7
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 - 00:18",
+            "seconds": 6,
+            "spokenWords": 7
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:18 - 00:24",
+            "seconds": 6,
+            "spokenWords": 14
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 - 00:28",
+            "seconds": 4,
+            "spokenWords": 9
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

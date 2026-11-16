@@ -1,0 +1,67 @@
+[
+  {
+    "stage": "channel_concept",
+    "outcome": "complete",
+    "elapsedMs": 5193,
+    "remainingMs": 44805,
+    "at": "2026-11-16T06:47:21.818Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 759,
+    "remainingMs": 44041,
+    "at": "2026-11-16T06:47:22.582Z"
+  },
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 5056,
+    "remainingMs": 38984,
+    "at": "2026-11-16T06:47:27.639Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 6,
+    "remainingMs": 38978,
+    "at": "2026-11-16T06:47:27.645Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 1334,
+    "remainingMs": 37644,
+    "at": "2026-11-16T06:47:28.979Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 2,
+    "remainingMs": 37642,
+    "at": "2026-11-16T06:47:28.981Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "attempted",
+    "elapsedMs": 0,
+    "remainingMs": 37642,
+    "at": "2026-11-16T06:47:28.981Z"
+  },
+  {
+    "stage": "critique",
+    "outcome": "error",
+    "category": "timeout",
+    "elapsedMs": 8009,
+    "remainingMs": 29633,
+    "at": "2026-11-16T06:47:36.990Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "retained_valid_draft",
+    "category": "timeout",
+    "elapsedMs": 0,
+    "remainingMs": 29633,
+    "at": "2026-11-16T06:47:36.990Z"
+  }
+]

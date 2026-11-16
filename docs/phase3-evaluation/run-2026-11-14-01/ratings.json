@@ -1,0 +1,100 @@
+{
+  "assessor": "Assistant editorial reading of the actual newly generated storyboards; not model self-scoring, human-panel approval or application approval",
+  "ratingScale": "0 missing, 1 poor, 2 weak, 3 partial, 4 strong, 5 exceptional",
+  "methodology": "Fresh requests used the updated managed REEL_GEMINI_API_KEY binding through the existing provider client. Credential values were not read into evaluation notes. B.Com vs BBA, Auto, English, 28 seconds, Gemini 3.1 Flash-Lite only, 50 seconds per request. Complete actual shots, HLNI proposals and production fields were read before assigning the unchanged weighted ratings. Scores are reasoned assistant editorial judgements, not objective creativity measurements. No output was manually rewritten, no model self-score was accepted and no application approval was granted. No official curriculum documents were supplied for independent factual verification.",
+  "runSummary": "All three requests produced complete three-shot Drafts: Trust and Connection chose Informative, Discovery chose Trendy. Their counts, treatments and optional function tags are valid. API delivery succeeded; this does not establish editorial quality. No OpenAI request, offline substitution, app change or deployment was made. All three remain below the 85/100 acceptance threshold.",
+  "crossChannelFinding": "The selected reasoning methods differ\u2014assessment audit, task journal and insufficient-information challenge\u2014but the finished execution is still mostly direct explanation around a prop. Connection adds a second student without developing a real exchange, then contradicts the bounded method with unsupported degree-fit advice. Trust shows an appropriate question without its decision consequence. Discovery retains the comparison and a valid third-answer reveal, but the advisory rewrite makes the language less accessible.",
+  "nextStep": "CONTINUE CREATIVE REVISION. First remove unsupported degree-fit inference from Connection and show one actual recorded observation leading to a relevant course-investigation question. Trust must show what checking a criterion changes; Discovery must use natural +2-level speech and scope the requested evidence. Retain the present failures and thresholds; obtain a separately archived fresh run after any future writing changes. Do not treat a new key or successful API response as creative approval.",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 3,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shots 2\u20133 provide a useful three-column audit and ask about a genuinely missing grading criterion. However, Shot 2 writes Floor Plan under BBA without course evidence, while the metadata overstates that tasks are defined by their criteria. The useful method needs narrower presentation before earning 4/5 for accurate HLNI.",
+        "differentiation": "The worksheet audit differs from the journal and quiz mechanisms, but the familiar confused-student, paper and direct-address staging remains close to earlier attempts. The comparison is named mainly in the opening rather than carried through an academic example with an earned consequence.",
+        "coherence": "The unknown grading/feedback cells lead to an appropriate specific criterion question. The progression is connected, even though the unused B.Com folder and unsupported BBA task attribution weaken the original comparison.",
+        "payoff": "The ending tells the viewer what to ask but does not demonstrate how checking the criterion changes preparation or a course-comparison decision. Circling question marks is only a partial outcome.",
+        "production": "All timecodes and production fields are present. Shot 2 recites the graphic string, including pipes and question marks, instead of clean speakable dialogue. Its 12-second window needs a natural read-aloud and reduced graphic/voiceover duplication.",
+        "originality": "The title The Assessment Audit and the same desk/worksheet device repeat the earlier run. The named floor-plan example is not enough to create an original execution."
+      },
+      "automaticTriggerExplanation": "No proven institutional falsehood or impossible camera instruction is asserted. A useful partial method is present. The unsupported task-to-degree visual attribution is a factual-scope concern requiring removal or source evidence; the overbroad metadata and weak consequence keep HLNI below 4 and total below 85.",
+      "revisions": [
+        "Keep the hypothetical task neutral. Do not write it under BBA as if it represents that programme; label the entire illustrative sheet clearly and keep the real degree folders only as the initial question.",
+        "Let the graphic carry Task / Criteria / Feedback. Write natural speech that explains the unknown instead of reading punctuation and field labels aloud.",
+        "Show what a clearly bounded illustrative criterion would change about preparation, or demonstrate a better comparison action resulting from the unanswered criterion. Do not invent real university answers."
+      ]
+    },
+    {
+      "channel": "Connection",
+      "ratings": {
+        "hlni": 2,
+        "differentiation": 3,
+        "coherence": 2,
+        "payoff": 2,
+        "production": 3,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "Shot 2 says enjoying logic over business context might lean towards BBA. A three-person scheduling task supplies no basis for that degree-fit recommendation. It contradicts the selected method and the HLNI note saying the activity cannot determine a suitable degree.",
+        "differentiation": "The cafe and two students differ visually from the audit and quiz, but the second student has no clear speaking role, decision or meaningful exchange. The method/device distinction is only partially realised in the finished story.",
+        "coherence": "The reel moves from degree anxiety to enjoying a task as a BBA signal, then to struggling with logic and asking for practice. Those are different interpretations, so one consistent method does not drive the story.",
+        "payoff": "The final request for more logic practice is concrete, but it does not resolve the original degree dilemma or demonstrate how a better question changes the student\u2019s investigation. The earlier unsupported course-fit inference remains uncorrected.",
+        "production": "Complete feasible fields and consecutive timings are present. The actual task specifies only Assign 3 shifts to 3 staff; it supplies no constraints or worked sticking point for the viewer to follow. Production must make the claimed observation visible and assign the conversational roles.",
+        "originality": "Choosing between degrees feels like guessing your future is generic. Cafe ambience and a notebook do not by themselves create a fresh, believable student dilemma."
+      },
+      "automaticTriggerExplanation": "Critical editorial credibility blocker: unsupported degree-fit advice from one illustrative task contradicts the selected bounded method. It must be revised regardless of API success. No independent evidence audit establishes a proven material factual falsehood, so that narrow trigger is not asserted; HLNI, coherence, payoff and total already fail decisively.",
+      "revisions": [
+        "Remove the might lean towards BBA line. A preference or difficulty in one tiny activity cannot classify a student or assign a degree.",
+        "Provide one clearly illustrative scheduling constraint, show the exact point where a student needs help, and record that observation. Keep the resulting question aligned with that same point.",
+        "Create a specific human situation and a real exchange that changes the next investigation step. The outcome can be a better question; it cannot be an invented aptitude verdict or degree recommendation."
+      ]
+    },
+    {
+      "channel": "Discovery",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The unlabeled Audit Budget card does not establish a link to B.Com or BBA, and the story correctly answers insufficient information instead of inventing both or neither. This is a useful, bounded reasoning distinction.",
+        "differentiation": "A viewer-facing classification challenge and missing-source reveal create a distinct curiosity experience from an audit worksheet and personal task journal. The shared three-shot count is not penalised.",
+        "coherence": "The same budget card connects the opening B.Com/BBA question to the missing-information reveal and the source request. The ending remains relevant, although a learning-objectives document alone may not establish an exclusive degree classification.",
+        "payoff": "The reveal resolves the forced guess. The final document question is actionable but underspecified: it omits the institution, exact programme and curriculum version, and does not explain how the obtained evidence changes the original claim.",
+        "production": "The provided information is insufficient to establish a disciplinary link is stiff, abstract language for +2 viewers. The blank document template is filmable but should be visibly illustrative. The long on-screen question needs phone-size testing and a recorded natural read.",
+        "originality": "The evidence challenge is clearer than generic advice, but the missing-link quiz device and stop-guessing ending repeat earlier runs. A Trendy label is not evidence of a new trend or original format."
+      },
+      "automaticTriggerExplanation": "The supported insufficient-information insight is present and no real curriculum is claimed. No proven material falsehood or unfilmable instruction is established. Accessible speech, evidence scope and an earned consequence still require revision; the total remains below 85.",
+      "revisions": [
+        "Replace the bureaucratic disciplinary-link sentence with natural speech that preserves the exact reasoning limit, without making a new academic assertion.",
+        "Ask for the named programme\u2019s current official course/task documentation, recording institution and curriculum version where available. Do not infer exclusivity from a task appearing in one programme.",
+        "Label the blank document graphic as an illustrative source request, reduce the text load, and make the final comparison consequence visible."
+      ]
+    }
+  ]
+}

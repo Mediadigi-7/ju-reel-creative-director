@@ -60,7 +60,8 @@ try {
  const stages:string[]=[];
  globalThis.fetch=async(_url,init)=>{
   const body=JSON.parse(init!.body as string),prompt=body.contents[0].parts[0].text;
-  if(prompt.startsWith('TASK: EDITORIAL_REVIEW'))return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify({issues:[]})}]}}]}));
+  if(prompt.startsWith('TASK: EDITORIAL_REVIEW')||prompt.startsWith('TASK: CONCEPT_REVIEW'))return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify({issues:[]})}]}}]}));
+  if(prompt.startsWith('TASK: CONCEPT_REVIEW'))return new Response(JSON.stringify({candidates:[{content:{parts:[{text:'{"issues":[]}'}]}}]}));
   const stage=prompt.startsWith('TASK: CONCEPT_SELECTION')?'concept':'story';stages.push(stage);
   if(stage==='concept')assert.ok(body.generationConfig.responseSchema.properties.candidates);
   else {const shape=body.generationConfig.responseSchema.properties.shots;assert.ok(shape.items.required.includes('functions'));assert.equal(shape.maxItems,undefined,'Production schemas must not fix shot count');}
@@ -68,7 +69,7 @@ try {
   return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(stage==='concept'?batch:fixture)}]}}]}));
  };
  const reel=await generateStoryboard({reelTitle:fixture.reelTitle,channel:'Trust',apiProvider:'gemini',apiKey:'test-only'});
- assert.deepEqual(stages,['concept','story']);assert.equal(reel.conceptSelection?.selected.id,'trust-a');
+ assert.deepEqual(stages,['concept','story']);assert.equal(reel.conceptSelection?.comparedWith.length,0,'Production reviews only the requested channel');assert.equal(reel.conceptSelection?.selected.id,'trust-a');
  assert.deepEqual(decodeStoryboardFromUrl(encodeStoryboardForUrl(reel))?.conceptSelection,reel.conceptSelection,'Share links retain selected concept provenance');
  assert.deepEqual(conceptDeliveryIssues(reel,reel.conceptSelection!.selected),[]);
  const missing=structuredClone(reel);missing.shots.at(-1)!.onscreenText='No selected consequence here';
@@ -83,7 +84,7 @@ try {
  assert.deepEqual(getRecentCreativeMemory().at(-1)?.keyClaims,reel.hlni!.map(h=>h.insight));
  clearConceptPlanningCache();let drafting=0;
  globalThis.fetch=async(_url,init)=>{const prompt=JSON.parse(init!.body as string).contents[0].parts[0].text;
-  if(prompt.startsWith('TASK: EDITORIAL_REVIEW'))return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify({issues:[]})}]}}]}));
+  if(prompt.startsWith('TASK: EDITORIAL_REVIEW')||prompt.startsWith('TASK: CONCEPT_REVIEW'))return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify({issues:[]})}]}}]}));
   const planning=prompt.startsWith('TASK: CONCEPT_SELECTION');if(!planning)drafting++;
   const content=planning?batch:drafting===1?missing:fixture;
   return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(content)}]}}]}));};

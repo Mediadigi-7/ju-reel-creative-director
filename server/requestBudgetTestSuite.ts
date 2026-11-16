@@ -18,6 +18,7 @@ function setup(handler:(stage:string,init:RequestInit)=>unknown|Promise<unknown>
  globalThis.fetch=async(url,init)=>{
   assert.match(String(url),/generativelanguage.googleapis.com/,'No paid-provider fallback');assert.ok(init?.signal);
   const prompt=JSON.parse(String(init?.body)).contents[0].parts[0].text;
+  if(prompt.startsWith('TASK: CONCEPT_REVIEW'))return new Response(JSON.stringify({candidates:[{content:{parts:[{text:'{"issues":[]}'}]}}]}));
   const stage=prompt.startsWith('TASK: CONCEPT_SELECTION')?'concept':prompt.startsWith('TASK: EDITORIAL_REVIEW')?'critique':++writes===1?'story':'rewrite';
   calls.push(stage);const value=await handler(stage,init!);
   return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(value)}]}}]}));
@@ -55,5 +56,11 @@ try {
  assert.equal(validateAndRepairStoryboard(result,result.reelTitle).data.shots.length,fixture.shots.length);
  assert.equal(decodeStoryboardFromUrl(encodeStoryboardForUrl(result))!.shots.length,fixture.shots.length);
  assert.equal(JSON.stringify(fixture),before,'Input stories and saved edits are never mutated');
+ // A successful final technical repair must still get one editorial opportunity.
+ const long=structuredClone(fixture);long.shots[0].dialogue+=' AI '.repeat(90);
+ setup(stage=>{clock+=100;return stage==='concept'?batch:stage==='critique'?{issues:[]}:stage==='story'?long:fixture;});
+ result=await generateStoryboard(request,{...options(),maxRepairs:1});
+ assert.equal(calls.filter(s=>s==='critique').length,1,'Technical repair exhaustion must not suppress editorial review');
+ assert.equal(result.status,'Draft');
  console.log('PASS: budget skip, optional critique errors, malformed critique, rewrite timeout, initial errors, single critique, repair reservation, cancellation, Draft preservation, scenes/sharing and no fallback');
 }finally{Date.now=originalNow;globalThis.fetch=originalFetch;clearConceptPlanningCache();}

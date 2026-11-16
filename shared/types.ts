@@ -99,6 +99,7 @@ export interface GenerationSource {
 }
 
 export interface ReelStoryboard {
+  narrativeContract?:'six-stage-v2';
   conceptSelection?:ConceptSelection;
   hlni?:HlniCandidate[];
   editorialReview?:EditorialReview;

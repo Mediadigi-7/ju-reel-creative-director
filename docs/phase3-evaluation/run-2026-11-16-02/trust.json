@@ -1,0 +1,234 @@
+{
+  "hlni": [
+    {
+      "insight": "Business Organization & Management appears in both the B.Com Accounting & Finance and BBA Entrepreneurship Management Semester I lists.",
+      "audienceGap": "Belief that degree titles automatically define unique subject matter.",
+      "viewerChange": "Understands that shared subjects exist, prompting deeper syllabus investigation.",
+      "supportType": "fact",
+      "support": "Official JOY University PDFs: B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9 (2025–26 cohort).",
+      "references": [
+        "https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf",
+        "https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf"
+      ],
+      "shotNumbers": [
+        3,
+        4
+      ],
+      "payoffShotNumbers": [
+        5
+      ],
+      "payoff": "The viewer moves from surface-level assumptions to asking about specific assessment criteria."
+    }
+  ],
+  "id": "reel_1794806812791_0tub3wo2",
+  "reelTitle": "The Shared Subject Reality Check",
+  "creativeAngle": "Comparing official programme documents to challenge title-based assumptions.",
+  "objective": "Guide students to research specific syllabus depth instead of relying on degree labels.",
+  "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "HOOK",
+      "functions": [
+        "HOOK"
+      ],
+      "name": "Student holding brochures",
+      "timestamp": "00:00 – 00:04",
+      "visual": "A student looks confused at two separate degree brochures.",
+      "dialogue": "Choosing between B.Com and BBA feels like picking sides.",
+      "onscreenText": "B.Com vs BBA",
+      "cameraPerformance": "Close-up on the student's doubtful expression.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "PROBLEM",
+      "functions": [
+        "PROBLEM"
+      ],
+      "name": "Pointing at degree labels",
+      "timestamp": "00:04 – 00:08",
+      "visual": "Student taps the titles on the brochures.",
+      "dialogue": "I assumed their core subjects were completely different.",
+      "onscreenText": "Are they really that different?",
+      "cameraPerformance": "Tight shot on the degree titles.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "PATTERN_INTERRUPT",
+      "functions": [
+        "PATTERN_INTERRUPT"
+      ],
+      "name": "Opening PDFs",
+      "timestamp": "00:08 – 00:12",
+      "visual": "Split-screen view of two official JOY University PDF documents side-by-side.",
+      "dialogue": "But look at the official course lists.",
+      "onscreenText": "Official Programme Docs",
+      "cameraPerformance": "Quick pan to the screen showing both documents.",
+      "userEdited": false
+    },
+    {
+      "number": 4,
+      "type": "VALUE",
+      "functions": [
+        "VALUE"
+      ],
+      "name": "Highlighting the shared course",
+      "timestamp": "00:12 – 00:19",
+      "visual": "Cursor highlights the same row in both documents.",
+      "dialogue": "Both list Semester I: Business Organization & Management.",
+      "onscreenText": "Semester I: Business Organization & Management",
+      "cameraPerformance": "Zoom in on the highlighted text.",
+      "userEdited": false
+    },
+    {
+      "number": 5,
+      "type": "PAYOFF",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "Reflecting on the discovery",
+      "timestamp": "00:19 – 00:24",
+      "visual": "Student scribbles a new question on a notepad.",
+      "dialogue": "Now I ask: What specific assessment criteria define this course in each programme?",
+      "onscreenText": "What specific assessment criteria define this course in each programme?",
+      "cameraPerformance": "Focus on the notepad.",
+      "userEdited": false
+    },
+    {
+      "number": 6,
+      "type": "CTA",
+      "functions": [
+        "CTA"
+      ],
+      "name": "Researching further",
+      "timestamp": "00:24 – 00:28",
+      "visual": "Student opens the full documents to investigate.",
+      "dialogue": "Research the syllabus depth before deciding.",
+      "onscreenText": "Research Syllabus Depth",
+      "cameraPerformance": "Wide shot of student working.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, academic, and document-focused.",
+    "performance": "Natural, thoughtful, and analytical.",
+    "camera": "Stable, clear close-ups on documents.",
+    "editing": "Rhythmic cuts between the student and screen content.",
+    "sound": "Minimal background, clear voiceover.",
+    "props": [
+      "Two printed brochures",
+      "Laptop displaying PDFs",
+      "Notepad and pen"
+    ],
+    "locations": [
+      "Study desk"
+    ],
+    "casting": "Authentic +2 student.",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Use official programme documents to show that shared course titles exist, shifting the research from labels to specific syllabus depth.",
+    "shootingPriority": [
+      "Split-screen document comparison",
+      "Close-up of shared course row",
+      "Student reaction"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-16T05:26:52.791Z",
+  "updatedAt": "2026-11-16T05:26:52.791Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Trust",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "storySpine": {
+        "startingBelief": "B.Com and BBA are fundamentally distinct in their core subjects.",
+        "studentSituation": "Student is comparing course lists for Joy University.",
+        "observation": "Both programmes list 'Business Organization & Management' in Semester I.",
+        "focus": "The specific shared course title vs. the broader programme scope.",
+        "whyQuestionFollows": "Shared titles do not imply identical teaching or depth.",
+        "changedAction": "Shifted from assuming degree partitioning to researching specific syllabus depth.",
+        "visibleConsequence": "Replaced 'which degree is better' with 'what depth does each offer' in research notes.",
+        "channelExperience": "A systematic look at official programme documents to challenge surface-level assumptions."
+      },
+      "id": "trust_curriculum_01",
+      "title": "The Shared Subject Reality Check",
+      "audienceGap": "Belief that degree titles automatically define unique subject matter.",
+      "basisId": "verified_curriculum_example",
+      "sourceIds": [
+        "ju-bcom-af-2025-sem1",
+        "ju-bba-em-2025-sem1"
+      ],
+      "hlni": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents whose covers say students admitted from 2025–26 onwards.",
+      "viewerChange": "Understands that shared subjects exist and require deeper syllabus investigation.",
+      "concept": "Comparing official programme documents for shared course titles.",
+      "mechanismKey": "curriculum_verification",
+      "device": "Split-screen document viewer comparing specific rows.",
+      "supportType": "fact",
+      "support": "Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Identify the specific programme and document cohort.",
+        "Show the inspected course-title row in each source.",
+        "Use this bounded overlap to investigate the full course, rather than assume degree titles partition subjects."
+      ],
+      "interpretationRule": "The supplied rows establish this shared title in these two documents only; they do not establish identical teaching, depth, assessment or availability.",
+      "visibleProof": "Two real cited rows correct a title-based assumption while retaining programme/version scope.",
+      "payoff": "Viewer stops relying on degree labels for subject differentiation.",
+      "limitations": "No universal overlap, identical content, exclusivity, current-admissions or career inference. BBA later sections are inconsistent; use only the inspected row.",
+      "demonstration": {
+        "input": "Two official JOY University PDF documents.",
+        "visibleInput": "Semester I: Business Organization & Management",
+        "observation": "Both programmes contain the same course title in Semester I.",
+        "nextQuestion": "What specific assessment criteria define this course in each programme?"
+      },
+      "treatment": "Informative"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_curriculum_01",
+        "hlni": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents whose covers say students admitted from 2025–26 onwards.",
+        "mechanismKey": "curriculum_verification",
+        "device": "Split-screen document viewer comparing specific rows."
+      },
+      {
+        "channel": "Connection",
+        "id": "connection_journal_01",
+        "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+        "mechanismKey": "task_question_journal",
+        "device": "A shared notebook for task-sticking points."
+      },
+      {
+        "channel": "Discovery",
+        "id": "discovery_aggregate_01",
+        "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+        "mechanismKey": "aggregate_counterexample",
+        "device": "A visual arithmetic breakdown display."
+      }
+    ],
+    "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = verified_curriculum_example / curriculum_verification; Connection = task_question_journal / task_question_journal; Discovery = aggregate_counterexample / aggregate_counterexample. Each has an illustrative input, observable result and next question. This is not editorial approval."
+  },
+  "narrativeContract": "six-stage-v2",
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-16T05:26:52.791Z",
+    "warnings": [
+      "Optional advisory review was skipped to preserve the validated Draft within the request budget. Human editorial review is required."
+    ]
+  }
+}

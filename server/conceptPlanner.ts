@@ -1,3 +1,5 @@
+import { creativeEvidenceContext,CREATIVE_EVIDENCE } from '../shared/verifiedCreativeEvidence.js';
+import { CONCEPT_QUALITY_CONTRACT,storySpineIssues } from '../shared/conceptQuality.js';
 import { ensureActive } from './requestBudget.js';
 import { createHash } from 'node:crypto';
 import { CHANNEL_NAMES, channelPrompt, type ContentChannel } from '../shared/channels.js';
@@ -13,14 +15,11 @@ const words=(s:string)=>new Set(normalize(s).split(/\s+/).filter(w=>w.length>2&&
 export function conceptSimilarity(a:string,b:string):number {
  const x=words(a),y=words(b);const union=new Set([...x,...y]);return union.size?[...x].filter(w=>y.has(w)).length/union.size:1;
 }
-export function conceptBatchIssues(batch:ConceptBatch):string[] {
+export function selectedConceptIssues(c:import('../shared/concepts.js').CreativeConcept,channel:ContentChannel):string[]{
  const issues:string[]=[];
- const chosen=CHANNEL_NAMES.map(channel=>({channel,concept:batch.candidates[channel].find(c=>c.id===batch.selected[channel])}));
- for(const {channel,concept:c} of chosen) {
-  if(!c){issues.push(`${channel}: selected id must name a candidate.`);continue;}
+  issues.push(...storySpineIssues(c.storySpine).map(issue=>`${channel}: ${issue}`));
   if(!c.basisId||!(c.basisId in REASONING_TOOLS))issues.push(`${channel}: choose a supplied reasoning basis instead of inventing evidence.`);
-  if(new Set(batch.candidates[channel].map(c=>c.id)).size!==batch.candidates[channel].length)issues.push(`${channel}: candidate ids must be unique.`);
-  if(c.supportType==='fact'||c.evidenceNeeded.length)issues.push(`${channel}: selected concept depends on evidence not supplied. Choose a reasoned method/perspective; do not fabricate factual proof.`);
+  if((c.supportType==='fact'&&c.basisId!=='verified_curriculum_example')||c.evidenceNeeded.length)issues.push(`${channel}: selected concept depends on evidence not supplied. Choose a reasoned method/perspective; do not fabricate factual proof.`);
   if(c.supportType==='method'&&(c.methodSteps.length<2||c.methodSteps.some(s=>s.trim().length<6)||c.interpretationRule.trim().length<12))issues.push(`${channel}: provide usable method steps and how their result changes a decision.`);
   if(!c.limitations?.trim())issues.push(`${channel}: state what this method/perspective does NOT establish.`);
   if(!c.demonstration)issues.push(`${channel}: choose a concrete illustrative input, recorded observation and specific next question before writing scenes.`);
@@ -33,10 +32,19 @@ export function conceptBatchIssues(batch:ConceptBatch):string[] {
   if(/is a reliable indicator|(?:will|directly|reliably) predict|guarantees? (?:success|employment|admission)|based on (?:a |their |your )?learning[- ]style|concepts are universal|topics are universal|degrees are defined by|higher group.work density.*indicates|success depends/i.test(claimText))
    issues.push(`${channel}: unsupported diagnostic, universal or degree-classification claim hidden inside a method/perspective. Reframe as a bounded reasoning tool, not an evidence-free predictor.`);
   if(/^(?:read|check|compare) (?:the )?(?:syllabus|syllabi|modules|module lists)[.!]?$/i.test(c.hlni.trim()))issues.push(`${channel}: generic curriculum advice is not an HLNI.`);
+ return issues;
+}
+export function conceptBatchIssues(batch:ConceptBatch):string[] {
+ const issues:string[]=[];
+ const chosen=CHANNEL_NAMES.map(channel=>({channel,concept:batch.candidates[channel].find(c=>c.id===batch.selected[channel])}));
+ for(const {channel,concept:c} of chosen) {
+  if(!c){issues.push(`${channel}: selected id must name a candidate.`);continue;}
+  issues.push(...selectedConceptIssues(c,channel));
+  if(new Set(batch.candidates[channel].map(c=>c.id)).size!==batch.candidates[channel].length)issues.push(`${channel}: candidate ids must be unique.`);
  }
  for(let i=0;i<chosen.length;i++)for(let j=i+1;j<chosen.length;j++) {
   const a=chosen[i].concept,b=chosen[j].concept;if(!a||!b)continue;
-  if(a.basisId===b.basisId||normalize(a.mechanismKey)===normalize(b.mechanismKey)||conceptSimilarity(a.hlni,b.hlni)>.6||conceptSimilarity(a.concept+' '+a.device,b.concept+' '+b.device)>.68)
+  if(normalize(a.mechanismKey)===normalize(b.mechanismKey)||conceptSimilarity(a.hlni,b.hlni)>.6||conceptSimilarity(a.concept+' '+a.device,b.concept+' '+b.device)>.68)
    issues.push(`${chosen[i].channel}/${chosen[j].channel}: concepts collide in insight or core storytelling mechanism; renaming props, actors or the CTA is insufficient.`);
  }
  return issues;
@@ -53,7 +61,7 @@ function languageIssues(batch:ConceptBatch,language:string):string[] {
 }
 // Examine all candidate combinations rather than trusting the model's selected
 // IDs. A valid alternative can replace a colliding nomination without another call.
-// This is feasibility/clarity selection, never a creative-quality approval score.
+// The planner nominates creative merit; application checks feasibility and an independent pre-writing review checks the selected chain. This is never publication approval.
 export function chooseCompatibleConcepts(batch:ConceptBatch,language='English'):ConceptBatch|undefined {
  let best:ConceptBatch|undefined,bestScore=-Infinity;
  for(const trust of batch.candidates.Trust)for(const connection of batch.candidates.Connection)for(const discovery of batch.candidates.Discovery){
@@ -66,7 +74,7 @@ export function chooseCompatibleConcepts(batch:ConceptBatch,language='English'):
    if(d.visibleInput!.split(/\s+/).length<=14)score+=2;
    if(d.nextQuestion.split(/\s+/).length<=12)score+=2;
    if(!/quantif|resource allocation|resource model|psychometric|peak productivity/i.test(d.visibleInput+' '+d.nextQuestion))score++;
-   if(c.id===batch.selected[CHANNEL_NAMES[i]])score+=.25;
+   if(c.id===batch.selected[CHANNEL_NAMES[i]])score+=10;
   }
   if(score>bestScore){bestScore=score;best=candidate;}
  }
@@ -76,6 +84,7 @@ export function chooseCompatibleConcepts(batch:ConceptBatch,language='English'):
 }
 export function conceptPlanningPrompt(input:{topic:string;language:string;treatment:string;duration:string;recent:string[]}):string {
  return `TASK: CONCEPT_SELECTION
+${CONCEPT_QUALITY_CONTRACT}
 Plan ideas and HLNI BEFORE writing any production shots. Return JSON only. Do not generate a storyboard, timestamps, shot counts, stage order or scores.
 LOCKED TOPIC/QUESTION: ${input.topic}
 Audience: +2 students. Language: ${input.language}. Treatment preference: ${input.treatment}. Time budget: ${input.duration}.
@@ -83,7 +92,12 @@ Write demonstration.visibleInput and demonstration.nextQuestion in ${input.langu
 ${CHANNEL_NAMES.map(channelPrompt).join('\n')}
 ${HLNI_CREATIVE_CONTRACT}
 ${approvedBenchmarkPrompt()}
-Create exactly two genuinely different candidate concepts for EACH channel. Select one candidate per channel only after comparing all three selected insights, mechanisms and decision consequences. Channel identities guide purpose, not mandatory devices. Auto chooses the treatment that serves the concept.
+Keep visibleInput and nextQuestion concise (about 12 English words each) and understandable to a +2 student without specialist vocabulary. Prefer a familiar, simple academic action over unexplained terms such as variance analysis.
+Write payoff as a concrete, observable story consequence distinct from the useful information. Do not merely write ask a better question, a smile or a confident nod. The consequence can remain bounded: show the precise preparation change or research action that follows from the example. Keep any invented task and criterion visibly hypothetical and neutral, never attributed to B.Com or BBA.
+For Trust, a clearly hypothetical marking criterion can reveal why a student must explain a choice rather than merely decorate an answer; show the resulting preparation change, without inventing a real syllabus. For Connection, a specific person must do something differently after one consistent observation; a tiny task must never diagnose degree fit. For Discovery, the source request should identify the missing institution/programme/version scope rather than claiming a task belongs exclusively to a degree.
+The writer will render six ordered stages, but planning still establishes the concept before shots. Use the stages to serve one connected story rather than inventing six unrelated moments.
+Keep each planning field to one concise clause (usually 6–12 words); never repeat the full instructions or source text. The whole six-candidate response should fit roughly 2,000–3,000 output tokens.
+Create exactly two genuinely different candidate concepts for EACH channel. Nominate the strongest candidates by useful specificity, logical causality, demonstrated consequence and audience experience, not by shortest wording. Select one candidate per channel only after comparing all three selected insights, mechanisms and decision consequences. Channel identities guide purpose, not mandatory devices. Auto chooses the treatment that serves the concept.
 Select a concrete demonstration for each candidate: an illustrative input, what is actually observed/recorded, and the specific resulting question. Do not say merely 'the student records a question'. Write the actual question, short enough to appear in the finished story. It must follow from the recorded observation, not diagnose a degree preference.
 Use plain language for a +2 student. A vague 'resource allocation case study' or 'resource-model constraints' is not a concrete accessible example. visibleInput must be the actual short sample instruction, card or arithmetic the viewer sees (aim under 14 English words), not a description of paperwork. nextQuestion should be a short natural question (aim under 12 English words) about a precise unknown. For example, a clearly illustrative shop-poster task can expose an unknown about how explanations are assessed; it says nothing about which degree owns the task.
 Compare candidate concepts for human specificity too. Connection can be educational, but recognition should emerge through a credible human exchange or specific personal situation, not a generic worried student who becomes confident. Do not force the approved reference's exact dialogue or format.
@@ -98,9 +112,9 @@ For B.Com vs BBA specifically, possible accessible illustrations include: a shop
 These are craft standards, not prescribed plots, scene counts or channel-exclusive methods.
 AVAILABLE REASONED HLNI FOUNDATIONS:
 ${JSON.stringify(REASONING_TOOLS)}
-Choose a basisId from these tools for each candidate. These are knowledge/reasoning foundations, not scripts or channel templates. Any tool can serve any channel. Selected channels must use different bases and different original concepts. The application supplies the tool's insight, steps, reasoning, interpretation, proof requirement and limitations; you cannot replace those with invented academic facts or psychological claims. Invent the audience-specific human situation, storytelling device and original execution around the selected foundation. Do not copy the approved scripts.
+Choose a basisId from these tools for each candidate. These are knowledge/reasoning foundations, not scripts or channel templates. Any tool can serve any channel. Selected channels must offer distinct insights and audience experiences; a different basis ID alone is insufficient. The application supplies the tool's insight, steps, reasoning, interpretation, proof requirement and limitations; you cannot replace those with invented academic facts or psychological claims. Invent the audience-specific human situation, storytelling device and original execution around the selected foundation. Do not copy the approved scripts.
 Do not start by deciding every channel must compare module lists. First find distinct audience gaps, useful decision tools and human situations relevant to the topic. The default student-at-desk highlighting two lists is not a concept-selection strategy. A smile is not proof that a method worked.
-No actual syllabi, institutional research or verified external documents are supplied. Select reasoned methods/perspectives that need no invented academic facts, module screens, figures, quotations or citations. Clearly illustrative exercises or question cards may explain reasoning but must not masquerade as real syllabus evidence. Claims such as marketing/accounting belonging to particular degrees require external evidence and cannot be selected here. A short activity is exploratory, not a validated aptitude or learning-style test.
+Use only the scoped official evidence supplied below for factual examples; otherwise select reasoned methods/perspectives needing no external claims. ${creativeEvidenceContext(input.topic)} Clearly illustrative exercises or question cards may explain reasoning but must not masquerade as real syllabus evidence. Claims outside the supplied evidence require external verification and cannot be selected here. A short activity is exploratory, not a validated aptitude or learning-style test.
 Do not infer that exams are B.Com and projects are BBA, that one degree audits numbers while the other pivots strategy, or that task enjoyment/energy predicts achievement or long-term engagement. Never choose a degree from a brief energy rating. Form a narrower question to investigate rather than claiming an assessment of academic fit. Every selected concept needs explicit limitations.
 ${/b\.?\s*com/i.test(input.topic)&&/\bbba\b/i.test(input.topic)?`Possible reasoning tools for this comparison, NOT mandatory channel templates:
 - Assessment-question audit: on a blank worksheet list what a task asks you to produce, what is graded, and what feedback is offered. The useful result is a precise question to ask about a real course, not a diagnosis from exams-versus-projects.
@@ -109,8 +123,8 @@ ${/b\.?\s*com/i.test(input.topic)&&/\bbba\b/i.test(input.topic)?`Possible reason
 You may choose different, stronger credible concepts. These are examples of bounded usefulness, not a script, treatment, scene count or required device.`:''}
 For an operational method specify what the viewer does, records/compares and how to interpret the result. visibleProof must explain the observable demonstration; payoff must show what changes. Preserve qualifications. Generic 'read the syllabus' alone is not enough.
 Recent actual concepts to avoid repeating: ${JSON.stringify(input.recent)}
-Return {"candidates":{"Trust":[CONCEPT,CONCEPT],"Connection":[CONCEPT,CONCEPT],"Discovery":[CONCEPT,CONCEPT]},"selected":{"Trust":"id","Connection":"id","Discovery":"id"},"contrast":"Why the selected insights and mechanisms differ meaningfully"}.
-Each CONCEPT must have exactly these fields:
+Return {"candidates":[CONCEPT,CONCEPT,CONCEPT,CONCEPT,CONCEPT,CONCEPT],"selected":{"Trust":"id","Connection":"id","Discovery":"id"},"contrast":"Why the selected insights and mechanisms differ meaningfully"}.
+For original_reasoned_method, provide your own specific hlni, support, methodSteps, interpretationRule, visibleProof and limitations; the application preserves these for independent review. Original reasoning must be self-contained and verifiable from the demonstration; no aptitude predictions or empirical/institutional assertions. For other basis IDs these fields are supplied by the application. Each CONCEPT must include channel (Trust, Connection or Discovery; exactly two candidates each), those fields, payoff plus storySpine {startingBelief,studentSituation,observation,focus,whyQuestionFollows,changedAction,visibleConsequence,channelExperience}, and these fields:
 {"id":"unique candidate id","basisId":"one supplied tool id","title":"original concept name","audienceGap":"specific belief/confusion","viewerChange":"bounded useful decision/understanding change","concept":"original connected human/visual concept","mechanismKey":"short descriptive identifier for the actual core tool/device; same tools must use the same key across channels","device":"how this particular concept unfolds","treatment":"Informative, Funny or Trendy; choose one"}.
 Also include "demonstration":{"input":"description of the clearly illustrative example, never invented institutional evidence","visibleInput":"the actual concise sample task/card text or arithmetic to display","observation":"the specific recorded result or missing information shown","nextQuestion":"the actual bounded question this result produces; not which degree suits me"}.
 Do not include shots or scores. Do not assign accounting/costs/exams to B.Com or strategy/people/projects to BBA. A financial question and a people question are not degree-specific lenses. The task journal ends in a question, never a degree choice or an energy-based diagnosis.
@@ -128,19 +142,22 @@ export function rememberConceptOutcome(accountKey:string,provider:string,topic:s
 export function clearConceptPlanningCache(){cache.clear();outcomes.clear();}
 export function groundConceptBatch(raw:any,language='English'):unknown {
  if(!raw?.candidates)return raw;
+ if(Array.isArray(raw.candidates)&&raw.candidates.length!==6)throw new Error('Expected six concept candidates.');
+ if(Array.isArray(raw.candidates))raw={...raw,candidates:Object.fromEntries(CHANNEL_NAMES.map(channel=>[channel,raw.candidates.filter((c:any)=>c.channel===channel)]))};
  return {...raw,candidates:Object.fromEntries(CHANNEL_NAMES.map(channel=>[channel,Array.isArray(raw.candidates[channel])?raw.candidates[channel].map((c:any)=>{
   const tool=REASONING_TOOLS[c?.basisId as ReasoningToolId];
   if(!tool)return c;
+  if(c.basisId==='original_reasoned_method')return {...c,supportType:'method',evidenceNeeded:[],sourceIds:[]};
   const conclusion:Record<string,string>={English:'Not enough information',Tamil:'போதுமான தகவல் இல்லை',Telugu:'తగిన సమాచారం లేదు',Malayalam:'മതിയായ വിവരമില്ല',Hindi:'पर्याप्त जानकारी नहीं है',Tanglish:'Not enough information'};
   const input=c.demonstration?.visibleInput;
   const example:Record<string,string>={English:'Example',Tamil:'எடுத்துக்காட்டு',Telugu:'ఉదాహరణ',Malayalam:'ഉദാഹരണം',Hindi:'उदाहरण',Tanglish:'Example'};
-  const visibleInput=typeof input==='string'&&!/example|sample|illustrative|எடுத்துக்காட்டு|ఉదాహరణ|ഉദാഹരണം|उदाहरण/i.test(input)?(example[language]||'Example')+': '+input:input;
-  return {...c,hlni:tool.insight,supportType:'method',support:tool.support,evidenceNeeded:[],methodSteps:[...tool.steps],interpretationRule:tool.rule,visibleProof:tool.proof,payoff:tool.rule,limitations:tool.limit,
+  const visibleInput=c.basisId!=='verified_curriculum_example'&&typeof input==='string'&&!/example|sample|illustrative|எடுத்துக்காட்டு|ఉదాహరణ|ഉദാഹരണം|उदाहरण/i.test(input)?(example[language]||'Example')+': '+input:input;
+  return {...c,hlni:tool.insight,supportType:c.basisId==='verified_curriculum_example'?'fact':'method',sourceIds:c.basisId==='verified_curriculum_example'?CREATIVE_EVIDENCE.map(e=>e.id):[],support:tool.support,evidenceNeeded:[],methodSteps:[...tool.steps],interpretationRule:tool.rule,visibleProof:tool.proof,payoff:typeof c.payoff==='string'&&c.payoff.trim().length>=12?c.payoff:tool.rule,limitations:tool.limit,
    ...(c.demonstration?{demonstration:{...c.demonstration,visibleInput,...(c.basisId==='insufficient_information'?{observation:'No supplied source connects this example to either category; the supported result is insufficient information.'}:{})}}:{}),
    ...(c.basisId==='insufficient_information'?{requiredConclusion:conclusion[language]||conclusion.English}:{}),};
  }):raw.candidates[channel]]))};
 }
-export async function selectReelConcept(input:{topic:string;language:string;treatment:string;duration:string;channel?:ContentChannel;accountKey:string;provider:string;recent:string[];maxRepairs:number;signal?:AbortSignal;request:(prompt:string)=>Promise<string>}):Promise<ConceptSelection> {
+export async function selectReelConcept(input:{topic:string;language:string;treatment:string;duration:string;channel?:ContentChannel;accountKey:string;provider:string;recent:string[];maxRepairs:number;signal?:AbortSignal;onRejected?:(plan:unknown,issues:string[])=>void;review?:(batch:ConceptBatch)=>Promise<string[]>;request:(prompt:string)=>Promise<string>}):Promise<ConceptSelection> {
  // Account identity is hashed only for an in-memory namespace; never returned or logged.
  const key=createHash('sha256').update(JSON.stringify([input.accountKey,input.provider,input.topic,input.language,input.treatment,input.duration])).digest('hex');
  ensureActive(input.signal);
@@ -152,10 +169,14 @@ export async function selectReelConcept(input:{topic:string;language:string;trea
    const raw=await input.request(instruction);
    ensureActive(input.signal);let issues:string[]=[];let batch:ConceptBatch|undefined;
    try{const parsed=ConceptBatchSchema.parse(groundConceptBatch(JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g,'').trim()),input.language));
+    if(CHANNEL_NAMES.some(channel=>parsed.candidates[channel].length!==2))throw new Error('Expected two concepts per channel.');
     batch=chooseCompatibleConcepts(parsed,input.language);
+    if(batch&&(!/b\.?\s*com/i.test(input.topic)||!/\bbba\b/i.test(input.topic))&&Object.values(batch.selected).some(id=>Object.values(batch!.candidates).flat().find(c=>c.id===id)?.basisId==='verified_curriculum_example'))batch=undefined;
     issues=batch?[]:[...conceptBatchIssues(parsed),...languageIssues(parsed,input.language),'No feasible, distinct candidate combination; revise the alternatives rather than relabel the same tool.'];
    }catch{issues=['Return a complete valid concept-batch JSON object using supplied basisIds.'];}
+   if(batch&&!issues.length&&input.review)issues=await input.review(batch);
    if(batch&&!issues.length){const entry={batch,used:new Set<ContentChannel>(),expires:Date.now()+120000};cache.set(key,entry);while(cache.size>16)cache.delete(cache.keys().next().value!);return entry;}
+   if(input.onRejected){let rejected:unknown;try{rejected=JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g,'').trim());}catch{rejected={invalidJson:true};}input.onRejected(rejected,issues);}
    console.warn('[Concept Planner] Rejected plan:',issues.join(' '));
    if(attempt===Math.min(1,input.maxRepairs))throw new AiProviderError('output_validation');
    instruction=prompt+'\nCONCEPT REPAIR REQUIRED:\n'+issues.join('\n')+'\nPREVIOUS PLAN:\n'+raw;

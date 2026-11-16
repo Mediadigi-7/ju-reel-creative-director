@@ -18,8 +18,8 @@ const cliche = structuredClone(seed);
 cliche.shots[0].dialogue = 'Here’s the secret... AI careers.';
 assert.equal(detectGenericLanguage(cliche).generic, true);
 assert.match(runMultiGateQA(cliche, core, 'English', 'Informative').failedGate!, /Gate 6/);
-assert.ok(SYSTEM_PROMPT.includes('Narrative functions are not individual shots'));
-assert.ok(SYSTEM_PROMPT.includes('CTA is not a failure'));
+assert.ok(SYSTEM_PROMPT.includes('six clearly separate primary stage groups'));
+assert.ok(SYSTEM_PROMPT.includes('one final CTA shot'));
 assert.ok(SYSTEM_PROMPT.includes('Value and payoff are conceptually distinct'));
 
 try {

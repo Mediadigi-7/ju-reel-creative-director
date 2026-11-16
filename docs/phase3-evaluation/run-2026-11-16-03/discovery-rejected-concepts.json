@@ -1,0 +1,500 @@
+[
+  {
+    "plan": {
+      "candidates": [
+        {
+          "channel": "Trust",
+          "storySpine": {
+            "startingBelief": "B.Com and BBA are fundamentally different in content.",
+            "studentSituation": "Student is comparing course lists to choose a degree.",
+            "observation": "Both programmes list Business Organization & Management in Semester I.",
+            "focus": "Degree titles do not guarantee subject exclusivity.",
+            "whyQuestionFollows": "One shared title invalidates the assumption that lists are totally distinct.",
+            "changedAction": "Shift from relying on degree titles to checking specific official documents.",
+            "visibleConsequence": "Student writes down the exact document title and page number for future verification.",
+            "channelExperience": "A systematic look at official data that corrects a common assumption."
+          },
+          "id": "trust_01",
+          "basisId": "verified_curriculum_example",
+          "title": "The Shared Title Check",
+          "audienceGap": "Belief that degree names define all internal subject matter.",
+          "viewerChange": "Understands that specific course documents, not degree titles, define overlap.",
+          "concept": "Verification of shared course content in official documents.",
+          "mechanismKey": "CurriculumSourceAudit",
+          "device": "Side-by-side display of two official PDF pages.",
+          "payoff": "Student stops guessing and references specific, verifiable course documents.",
+          "hlni": "Business Organization & Management appears in both JOY University B.Com (p.5) and BBA (p.9) documents for 2025 onwards; source: https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf and https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf.",
+          "support": "Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+          "methodSteps": [
+            "Identify the specific programme and document cohort.",
+            "Show the inspected course-title row in each source.",
+            "Use this bounded overlap to investigate the full course, rather than assume degree titles partition subjects."
+          ],
+          "interpretationRule": "The supplied rows establish this shared title in these two documents only; they do not establish identical teaching, depth, assessment or availability.",
+          "visibleProof": "Visual highlight of the same row in two separate official documents.",
+          "limitations": "No universal overlap, identical content, exclusivity, current-admissions or career inference. BBA later sections are inconsistent; use only the inspected row.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Two official course documents for B.Com and BBA.",
+            "visibleInput": "Semester I: Business Organization & Management",
+            "observation": "The same subject appears in both programme documents.",
+            "nextQuestion": "What other specific subjects actually overlap in these programmes?"
+          }
+        },
+        {
+          "channel": "Trust",
+          "storySpine": {
+            "startingBelief": "A subject list is enough to evaluate a course.",
+            "studentSituation": "Student is looking at a prospective programme brochure.",
+            "observation": "The list mentions a project, but lacks criteria for what is evaluated.",
+            "focus": "Distinguishing between the activity and the assessment method.",
+            "whyQuestionFollows": "Knowing the activity doesn't reveal the standard for success.",
+            "changedAction": "Student creates a three-column sheet to list product, criteria, and feedback.",
+            "visibleConsequence": "Student identifies missing assessment criteria as the key knowledge gap.",
+            "channelExperience": "A clear, rational method for evaluating curriculum depth."
+          },
+          "id": "trust_02",
+          "basisId": "assessment_questions",
+          "title": "The Assessment Audit",
+          "audienceGap": "Assumption that subject names equate to knowing course rigor.",
+          "viewerChange": "Learns to ask for assessment criteria rather than just titles.",
+          "concept": "Systematic audit of assessment components.",
+          "mechanismKey": "AssessmentMethodAudit",
+          "device": "A three-column worksheet demonstration.",
+          "payoff": "Student prepares to contact the department with specific, informed questions.",
+          "hlni": "A task label alone does not disclose the expected work product, assessment criteria, or feedback mechanisms.",
+          "support": "Reasoning based on assessment design principles.",
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "The transformation of a blank sheet into a structured inquiry tool.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Brochure describing a business project.",
+            "visibleInput": "Task: Conduct a market analysis for a local startup.",
+            "observation": "The criteria for evaluating the analysis are not listed.",
+            "nextQuestion": "What specific criteria are used to grade this analysis?"
+          }
+        },
+        {
+          "channel": "Connection",
+          "storySpine": {
+            "startingBelief": "I should choose the degree my friend chose to be safe.",
+            "studentSituation": "Student feels anxious about choosing the 'wrong' degree.",
+            "observation": "Both friends try a mock case study but struggle at different points.",
+            "focus": "Identifying personal needs in a task rather than following a friend.",
+            "whyQuestionFollows": "Different sticking points show they value different aspects of the process.",
+            "changedAction": "Student records their own specific question about the task instead of copying their friend's choice.",
+            "visibleConsequence": "Student initiates a conversation with an advisor about their specific struggle.",
+            "channelExperience": "A relatable, low-pressure exploration of personal academic needs."
+          },
+          "id": "conn_01",
+          "basisId": "task_question_journal",
+          "title": "The Task Journal",
+          "audienceGap": "Choosing a degree based on peer validation rather than individual curiosity.",
+          "viewerChange": "Uses task struggles as a signal for investigation rather than a reason for panic.",
+          "concept": "Personalized task journaling to uncover individual interests.",
+          "mechanismKey": "TaskJournaling",
+          "device": "Split-screen conversation about a sample task.",
+          "payoff": "Student feels confident asking questions relevant to their own learning journey.",
+          "hlni": "A short activity reveals where you need help and what to investigate, rather than determining degree fit.",
+          "support": "Methodological approach to academic self-assessment.",
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "Two friends recording different, specific questions on their respective journals.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "A sample business case study about pricing.",
+            "visibleInput": "Task: Set a price for a new product.",
+            "observation": "I don't know how to factor in fixed costs.",
+            "nextQuestion": "Can you explain the framework for calculating fixed costs?"
+          }
+        },
+        {
+          "channel": "Connection",
+          "storySpine": {
+            "startingBelief": "I must decide between B.Com and BBA right now.",
+            "studentSituation": "Student is worried about picking a degree without being 'sure'.",
+            "observation": "The student lists preferences but realizes they don't know the requirements for those choices.",
+            "focus": "Separating personal preference from verified requirement.",
+            "whyQuestionFollows": "Desire doesn't guarantee availability or fit.",
+            "changedAction": "Student moves preferences to a 'to-verify' list with concrete check-boxes.",
+            "visibleConsequence": "Student feels relieved to have a checklist instead of a final decision.",
+            "channelExperience": "Supportive validation that research is better than guessing."
+          },
+          "id": "conn_02",
+          "basisId": "constraint_check",
+          "title": "The Preference Check",
+          "audienceGap": "Confusing personal desire with confirmed degree availability/fit.",
+          "viewerChange": "Moves from passive worrying to active verification.",
+          "concept": "Constraint-based verification of academic interests.",
+          "mechanismKey": "ConstraintChecklist",
+          "device": "A 'Want vs Check' whiteboard table.",
+          "payoff": "Student successfully moves from anxiety to an actionable research plan.",
+          "hlni": "Preferences are not confirmations; unknown requirements must be checked before a degree choice is treated as valid.",
+          "support": "Reasoning based on decision-making under uncertainty.",
+          "methodSteps": [
+            "Name the option you prefer.",
+            "List the actual requirements you need to check and mark unknowns.",
+            "Verify an unknown before treating the option as available."
+          ],
+          "interpretationRule": "Use an unknown requirement as the next verification task; preference alone is not confirmation.",
+          "visibleProof": "The student ticking off 'verified' items and highlighting 'unknown' items.",
+          "limitations": "Never invent eligibility rules, admission availability or prerequisites.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "A list of preferred course features.",
+            "visibleInput": "Preference: I want an internship-focused curriculum.",
+            "observation": "I have not checked if these internships are compulsory or elective.",
+            "nextQuestion": "Where can I find the specific internship requirements for this course?"
+          }
+        },
+        {
+          "channel": "Discovery",
+          "storySpine": {
+            "startingBelief": "A sample task result is proof of a degree's identity.",
+            "studentSituation": "Student is looking at an unlabeled business assignment.",
+            "observation": "The task could plausibly exist in either B.Com or BBA.",
+            "focus": "Identifying that one example is insufficient to categorize a whole degree.",
+            "whyQuestionFollows": "Absence of link makes exclusive classification impossible.",
+            "changedAction": "Student moves from guessing to identifying the missing source.",
+            "visibleConsequence": "Student marks the task as 'unlinked' and seeks the official syllabus.",
+            "channelExperience": "A 'detective' style investigation that rewards curiosity."
+          },
+          "id": "disc_01",
+          "basisId": "insufficient_information",
+          "title": "The Unlabeled Challenge",
+          "audienceGap": "Tendency to overgeneralize from a single unverified example.",
+          "viewerChange": "Learns to question the source of information rather than assuming it proves a label.",
+          "concept": "Logical reasoning regarding evidence sufficiency.",
+          "mechanismKey": "EvidenceSufficiencyCheck",
+          "device": "Visual puzzle of a 'mystery' assignment.",
+          "payoff": "Student demonstrates critical thinking by refusing to guess without evidence.",
+          "hlni": "One unlabeled example does not prove which degree contains it; an exclusive claim requires a source linking the task to the programme.",
+          "support": "Logical reasoning regarding evidence limits.",
+          "methodSteps": [
+            "Present one example without a source linking it to a category.",
+            "Separate a plausible guess from what the available information proves.",
+            "Identify the exact missing source or information needed to decide."
+          ],
+          "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "visibleProof": "The card 'Not Enough Information' is placed over the B.Com/BBA labels.",
+          "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "An unlabeled case study about budget management.",
+            "visibleInput": "Task: Prepare a quarterly financial forecast.",
+            "observation": "There is no source document linking this task to a specific degree.",
+            "nextQuestion": "Which specific document confirms where this task is taught?"
+          }
+        },
+        {
+          "channel": "Discovery",
+          "storySpine": {
+            "startingBelief": "If the totals are the same, the content is the same.",
+            "studentSituation": "Student compares two degree structures based on total credit counts.",
+            "observation": "Two programmes have equal credits but different credit-allocation patterns.",
+            "focus": "Understanding that aggregates hide underlying variations.",
+            "whyQuestionFollows": "Total equality does not imply identical component experience.",
+            "changedAction": "Student breaks down the total into individual components before comparing.",
+            "visibleConsequence": "Student finds a difference in credit distribution that changes their perspective.",
+            "channelExperience": "A visual 'aha!' moment using simple arithmetic."
+          },
+          "id": "disc_02",
+          "basisId": "aggregate_counterexample",
+          "title": "The Aggregate Reveal",
+          "audienceGap": "Confusing aggregate totals with component-level similarity.",
+          "viewerChange": "Learns to look for breakdowns rather than relying on totals.",
+          "concept": "Counter-intuitive arithmetic breakdown.",
+          "mechanismKey": "AggregateBreakdown",
+          "device": "Visual blocks representing credit components.",
+          "payoff": "Student discovers that identical totals can conceal different learning paths.",
+          "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "support": "Logical analysis of aggregate structures.",
+          "methodSteps": [
+            "Show two clearly illustrative component lists with the same total.",
+            "Reveal their different components.",
+            "Ask for the breakdown before drawing a conclusion from the total."
+          ],
+          "interpretationRule": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "visibleProof": "Two stacks of blocks showing different colours (subjects) but identical heights (totals).",
+          "limitations": "Keep figures clearly illustrative and do not assign them to actual programmes, credits or outcomes.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Two credit-distribution summaries.",
+            "visibleInput": "Total: 120 credits. Components differ.",
+            "observation": "The distribution of core and elective credits is different.",
+            "nextQuestion": "What does this difference imply for my elective choices?"
+          }
+        }
+      ],
+      "selected": {
+        "Trust": "trust_01",
+        "Connection": "conn_01",
+        "Discovery": "disc_01"
+      },
+      "contrast": "Trust_01 uses official documents to debunk title-based assumptions. Conn_01 focuses on personal task experience to empower independent inquiry. Disc_01 uses a logic puzzle to demonstrate why guessing without a source is unreliable."
+    },
+    "issues": [
+      "insight: In trust_01, the whyQuestionFollows claim that a shared title invalidates the assumption that lists are totally distinct is logically weak; shared titles can coexist with highly distinct content. Correction: Refocus the observation on how shared titles necessitate checking full programme documents to understand the actual scope of overlap, rather than assuming overlap is comprehensive."
+    ]
+  },
+  {
+    "plan": {
+      "candidates": [
+        {
+          "channel": "Trust",
+          "storySpine": {
+            "startingBelief": "B.Com and BBA are fundamentally different in content.",
+            "studentSituation": "Student is comparing course lists to choose a degree.",
+            "observation": "Both programmes list Business Organization & Management in Semester I.",
+            "focus": "Degree titles do not guarantee subject exclusivity.",
+            "whyQuestionFollows": "Shared titles necessitate checking full programme documents to understand the actual scope of overlap, rather than assuming it is comprehensive.",
+            "changedAction": "Shift from relying on degree titles to checking specific official documents.",
+            "visibleConsequence": "Student writes down the exact document title and page number for future verification.",
+            "channelExperience": "A systematic look at official data that corrects a common assumption."
+          },
+          "id": "trust_01",
+          "basisId": "verified_curriculum_example",
+          "title": "The Shared Title Check",
+          "audienceGap": "Belief that degree names define all internal subject matter.",
+          "viewerChange": "Understands that specific course documents, not degree titles, define overlap.",
+          "concept": "Verification of shared course content in official documents.",
+          "mechanismKey": "CurriculumSourceAudit",
+          "device": "Side-by-side display of two official PDF pages.",
+          "payoff": "Student stops guessing and references specific, verifiable course documents.",
+          "hlni": "Business Organization & Management appears in both JOY University B.Com (p.5) and BBA (p.9) documents for 2025 onwards; source: https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf and https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf.",
+          "support": "Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+          "methodSteps": [
+            "Identify the specific programme and document cohort.",
+            "Show the inspected course-title row in each source.",
+            "Use this bounded overlap to investigate the full course, rather than assume degree titles partition subjects."
+          ],
+          "interpretationRule": "The supplied rows establish this shared title in these two documents only; they do not establish identical teaching, depth, assessment or availability.",
+          "visibleProof": "Visual highlight of the same row in two separate official documents.",
+          "limitations": "No universal overlap, identical content, exclusivity, current-admissions or career inference. BBA later sections are inconsistent; use only the inspected row.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Two official course documents for B.Com and BBA.",
+            "visibleInput": "Semester I: Business Organization & Management",
+            "observation": "The same subject appears in both programme documents.",
+            "nextQuestion": "What other specific subjects actually overlap in these programmes?"
+          }
+        },
+        {
+          "channel": "Trust",
+          "storySpine": {
+            "startingBelief": "A subject list is enough to evaluate a course.",
+            "studentSituation": "Student is looking at a prospective programme brochure.",
+            "observation": "The list mentions a project, but lacks criteria for what is evaluated.",
+            "focus": "Distinguishing between the activity and the assessment method.",
+            "whyQuestionFollows": "Knowing the activity doesn't reveal the standard for success.",
+            "changedAction": "Student creates a three-column sheet to list product, criteria, and feedback.",
+            "visibleConsequence": "Student identifies missing assessment criteria as the key knowledge gap.",
+            "channelExperience": "A clear, rational method for evaluating curriculum depth."
+          },
+          "id": "trust_02",
+          "basisId": "assessment_questions",
+          "title": "The Assessment Audit",
+          "audienceGap": "Assumption that subject names equate to knowing course rigor.",
+          "viewerChange": "Learns to ask for assessment criteria rather than just titles.",
+          "concept": "Systematic audit of assessment components.",
+          "mechanismKey": "AssessmentMethodAudit",
+          "device": "A three-column worksheet demonstration.",
+          "payoff": "Student prepares to contact the department with specific, informed questions.",
+          "hlni": "A task label alone does not disclose the expected work product, assessment criteria, or feedback mechanisms.",
+          "support": "Reasoning based on assessment design principles.",
+          "methodSteps": [
+            "Write the expected work product.",
+            "Ask what criterion is used to assess it.",
+            "Ask what feedback is available; mark unknown answers as questions."
+          ],
+          "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+          "visibleProof": "The transformation of a blank sheet into a structured inquiry tool.",
+          "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Brochure describing a business project.",
+            "visibleInput": "Task: Conduct a market analysis for a local startup.",
+            "observation": "The criteria for evaluating the analysis are not listed.",
+            "nextQuestion": "What specific criteria are used to grade this analysis?"
+          }
+        },
+        {
+          "channel": "Connection",
+          "storySpine": {
+            "startingBelief": "I should choose the degree my friend chose to be safe.",
+            "studentSituation": "Student feels anxious about choosing the 'wrong' degree.",
+            "observation": "Both friends try a mock case study but struggle at different points.",
+            "focus": "Identifying personal needs in a task rather than following a friend.",
+            "whyQuestionFollows": "Different sticking points show they value different aspects of the process.",
+            "changedAction": "Student records their own specific question about the task instead of copying their friend's choice.",
+            "visibleConsequence": "Student initiates a conversation with an advisor about their specific struggle.",
+            "channelExperience": "A relatable, low-pressure exploration of personal academic needs."
+          },
+          "id": "conn_01",
+          "basisId": "task_question_journal",
+          "title": "The Task Journal",
+          "audienceGap": "Choosing a degree based on peer validation rather than individual curiosity.",
+          "viewerChange": "Uses task struggles as a signal for investigation rather than a reason for panic.",
+          "concept": "Personalized task journaling to uncover individual interests.",
+          "mechanismKey": "TaskJournaling",
+          "device": "Split-screen conversation about a sample task.",
+          "payoff": "Student feels confident asking questions relevant to their own learning journey.",
+          "hlni": "A short activity reveals where you need help and what to investigate, rather than determining degree fit.",
+          "support": "Methodological approach to academic self-assessment.",
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "Two friends recording different, specific questions on their respective journals.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "A sample business case study about pricing.",
+            "visibleInput": "Task: Set a price for a new product.",
+            "observation": "I don't know how to factor in fixed costs.",
+            "nextQuestion": "Can you explain the framework for calculating fixed costs?"
+          }
+        },
+        {
+          "channel": "Connection",
+          "storySpine": {
+            "startingBelief": "I must decide between B.Com and BBA right now.",
+            "studentSituation": "Student is worried about picking a degree without being 'sure'.",
+            "observation": "The student lists preferences but realizes they don't know the requirements for those choices.",
+            "focus": "Separating personal preference from verified requirement.",
+            "whyQuestionFollows": "Desire doesn't guarantee availability or fit.",
+            "changedAction": "Student moves preferences to a 'to-verify' list with concrete check-boxes.",
+            "visibleConsequence": "Student feels relieved to have a checklist instead of a final decision.",
+            "channelExperience": "Supportive validation that research is better than guessing."
+          },
+          "id": "conn_02",
+          "basisId": "constraint_check",
+          "title": "The Preference Check",
+          "audienceGap": "Confusing personal desire with confirmed degree availability/fit.",
+          "viewerChange": "Moves from passive worrying to active verification.",
+          "concept": "Constraint-based verification of academic interests.",
+          "mechanismKey": "ConstraintChecklist",
+          "device": "A 'Want vs Check' whiteboard table.",
+          "payoff": "Student successfully moves from anxiety to an actionable research plan.",
+          "hlni": "Preferences are not confirmations; unknown requirements must be checked before a degree choice is treated as valid.",
+          "support": "Reasoning based on decision-making under uncertainty.",
+          "methodSteps": [
+            "Name the option you prefer.",
+            "List the actual requirements you need to check and mark unknowns.",
+            "Verify an unknown before treating the option as available."
+          ],
+          "interpretationRule": "Use an unknown requirement as the next verification task; preference alone is not confirmation.",
+          "visibleProof": "The student ticking off 'verified' items and highlighting 'unknown' items.",
+          "limitations": "Never invent eligibility rules, admission availability or prerequisites.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "A list of preferred course features.",
+            "visibleInput": "Preference: I want an internship-focused curriculum.",
+            "observation": "I have not checked if these internships are compulsory or elective.",
+            "nextQuestion": "Where can I find the specific internship requirements for this course?"
+          }
+        },
+        {
+          "channel": "Discovery",
+          "storySpine": {
+            "startingBelief": "A sample task result is proof of a degree's identity.",
+            "studentSituation": "Student is looking at an unlabeled business assignment.",
+            "observation": "The task could plausibly exist in either B.Com or BBA.",
+            "focus": "Identifying that one example is insufficient to categorize a whole degree.",
+            "whyQuestionFollows": "Absence of link makes exclusive classification impossible.",
+            "changedAction": "Student moves from guessing to identifying the missing source.",
+            "visibleConsequence": "Student marks the task as 'unlinked' and seeks the official syllabus.",
+            "channelExperience": "A 'detective' style investigation that rewards curiosity."
+          },
+          "id": "disc_01",
+          "basisId": "insufficient_information",
+          "title": "The Unlabeled Challenge",
+          "audienceGap": "Tendency to overgeneralize from a single unverified example.",
+          "viewerChange": "Learns to question the source of information rather than assuming it proves a label.",
+          "concept": "Logical reasoning regarding evidence sufficiency.",
+          "mechanismKey": "EvidenceSufficiencyCheck",
+          "device": "Visual puzzle of a 'mystery' assignment.",
+          "payoff": "Student demonstrates critical thinking by refusing to guess without evidence.",
+          "hlni": "One unlabeled example does not prove which degree contains it; an exclusive claim requires a source linking the task to the programme.",
+          "support": "Logical reasoning regarding evidence limits.",
+          "methodSteps": [
+            "Present one example without a source linking it to a category.",
+            "Separate a plausible guess from what the available information proves.",
+            "Identify the exact missing source or information needed to decide."
+          ],
+          "interpretationRule": "Answer not enough information when the necessary link is absent, then name the evidence that would resolve it.",
+          "visibleProof": "The card 'Not Enough Information' is placed over the B.Com/BBA labels.",
+          "limitations": "Do not assert that the example belongs to both degrees, or to either one, without actual curriculum evidence.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "An unlabeled case study about budget management.",
+            "visibleInput": "Task: Prepare a quarterly financial forecast.",
+            "observation": "There is no source document linking this task to a specific degree.",
+            "nextQuestion": "Which specific document confirms where this task is taught?"
+          }
+        },
+        {
+          "channel": "Discovery",
+          "storySpine": {
+            "startingBelief": "If the totals are the same, the content is the same.",
+            "studentSituation": "Student compares two degree structures based on total credit counts.",
+            "observation": "Two programmes have equal credits but different credit-allocation patterns.",
+            "focus": "Understanding that aggregates hide underlying variations.",
+            "whyQuestionFollows": "Total equality does not imply identical component experience.",
+            "changedAction": "Student breaks down the total into individual components before comparing.",
+            "visibleConsequence": "Student finds a difference in credit distribution that changes their perspective.",
+            "channelExperience": "A visual 'aha!' moment using simple arithmetic."
+          },
+          "id": "disc_02",
+          "basisId": "aggregate_counterexample",
+          "title": "The Aggregate Reveal",
+          "audienceGap": "Confusing aggregate totals with component-level similarity.",
+          "viewerChange": "Learns to look for breakdowns rather than relying on totals.",
+          "concept": "Counter-intuitive arithmetic breakdown.",
+          "mechanismKey": "AggregateBreakdown",
+          "device": "Visual blocks representing credit components.",
+          "payoff": "Student discovers that identical totals can conceal different learning paths.",
+          "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "support": "Logical analysis of aggregate structures.",
+          "methodSteps": [
+            "Show two clearly illustrative component lists with the same total.",
+            "Reveal their different components.",
+            "Ask for the breakdown before drawing a conclusion from the total."
+          ],
+          "interpretationRule": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "visibleProof": "Two stacks of blocks showing different colours (subjects) but identical heights (totals).",
+          "limitations": "Keep figures clearly illustrative and do not assign them to actual programmes, credits or outcomes.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Two credit-distribution summaries.",
+            "visibleInput": "Total: 120 credits. Components differ.",
+            "observation": "The distribution of core and elective credits is different.",
+            "nextQuestion": "What does this difference imply for my elective choices?"
+          }
+        }
+      ],
+      "selected": {
+        "Trust": "trust_01",
+        "Connection": "conn_01",
+        "Discovery": "disc_01"
+      },
+      "contrast": "Trust_01 uses official documents to debunk title-based assumptions. Conn_01 focuses on personal task experience to empower independent inquiry. Disc_01 uses a logic puzzle to demonstrate why guessing without a source is unreliable."
+    },
+    "issues": [
+      "insight: In the concept conn_01, the story spine describes two friends struggling with a case study as an observation, but the mechanism relies on the student identifying their own personal needs. The connection between 'different sticking points' and 'valuing different aspects of the process' is a leap that does not necessarily follow without further context. Correction: Refine the observation to focus on the student's specific internal reaction to a task element (e.g., finding a specific calculation confusing) rather than comparing their struggle to a friend's, ensuring the insight is strictly personal."
+    ]
+  }
+]

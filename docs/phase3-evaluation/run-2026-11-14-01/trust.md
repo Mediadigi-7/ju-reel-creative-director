@@ -1,0 +1,156 @@
+# Trust — The Assessment Audit
+
+Fresh real Gemini output. Generated: 2026-11-14T07:26:54.094Z. Model: gemini-3.1-flash-lite. Requested treatment: Auto; chosen treatment: Informative. Target duration: 28 sec. Status: Draft; editorial evaluation pending.
+
+**Creative angle:** Using a tripartite question method to audit academic tasks instead of relying on degree titles.
+
+**Objective:** Teach students how to evaluate B.Com and BBA by focusing on assessment criteria rather than generic labels.
+
+**Audience:** +2 students seeking academic depth and well-supported course and career decisions
+
+## Shot 01 — The Comparison Trap
+
+- **Timecode:** 00:00 – 00:07
+- **Narrative-function tags (AI-supplied):** HOOK, PROBLEM
+- **Visual action:** A student looks at two folders side-by-side, one labelled B.Com and one BBA, looking confused.
+- **Dialogue / voiceover:** Choosing between B.Com and BBA by name alone misses the reality: how you are actually assessed.
+- **Camera direction:** Close-up on student, then pans to the two folders.
+- **On-screen graphic:** B.Com vs BBA
+
+## Shot 02 — The Assessment Audit
+
+- **Timecode:** 00:07 – 00:19
+- **Narrative-function tags (AI-supplied):** VALUE
+- **Visual action:** Student holds a sheet with three columns. They write 'Task: Floor Plan' under BBA, then point to the empty columns.
+- **Dialogue / voiceover:** Try this audit. Map a task from any course. See? Example: Task: Floor Plan | Graded on: ? | Feedback: ?. I have no idea how this counts as good.
+- **Camera direction:** Over-the-shoulder view showing the student writing on the sheet.
+- **On-screen graphic:** Example: Task: Floor Plan | Graded on: ? | Feedback: ?
+
+## Shot 03 — The Concrete Question
+
+- **Timecode:** 00:19 – 00:28
+- **Narrative-function tags (AI-supplied):** PAYOFF
+- **Visual action:** Student circles the question marks on the paper and looks at the camera.
+- **Dialogue / voiceover:** The blanks are your guide. Now you know exactly what to ask: What specific criteria do you use to grade this project?
+- **Camera direction:** Direct address to camera, calm and analytical tone.
+- **On-screen graphic:** What specific criteria do you use to grade this project?
+
+## Selected concept — planned before shots
+
+```json
+{
+  "stage": "concept-before-story",
+  "selected": {
+    "id": "trust_assessment_audit",
+    "title": "The Assessment Audit",
+    "audienceGap": "Students assume a degree's name reveals the grading criteria.",
+    "basisId": "assessment_questions",
+    "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+    "viewerChange": "Learns to ask about evaluation methods instead of relying on degree labels.",
+    "concept": "A student maps out three columns for a potential task: Product, Criterion, Feedback.",
+    "mechanismKey": "tripartite_question_mapping",
+    "device": "Split-screen comparison of a blank worksheet being filled out while narrating the need for specific criteria.",
+    "supportType": "method",
+    "support": "The method separates three different pieces of information; it does not assume particular course content.",
+    "evidenceNeeded": [],
+    "methodSteps": [
+      "Write the expected work product.",
+      "Ask what criterion is used to assess it.",
+      "Ask what feedback is available; mark unknown answers as questions."
+    ],
+    "interpretationRule": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+    "visibleProof": "A three-column question sheet turns one vague preference into a concrete unanswered question.",
+    "payoff": "Use the unanswered cells to ask a precise question about the actual course or task before deciding.",
+    "limitations": "This is a question-forming aid, not a degree ranking, aptitude test or prediction of success.",
+    "demonstration": {
+      "input": "A hypothetical task: 'Develop a shop floor plan'.",
+      "visibleInput": "Example: Task: Floor Plan | Graded on: ? | Feedback: ?",
+      "observation": "The student realizes they have a task but zero information on what counts as 'good' or how they learn.",
+      "nextQuestion": "What specific criteria do you use to grade this project?"
+    },
+    "treatment": "Informative"
+  },
+  "comparedWith": [
+    {
+      "channel": "Trust",
+      "id": "trust_assessment_audit",
+      "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+      "mechanismKey": "tripartite_question_mapping",
+      "device": "Split-screen comparison of a blank worksheet being filled out while narrating the need for specific criteria."
+    },
+    {
+      "channel": "Connection",
+      "id": "conn_task_journal",
+      "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+      "mechanismKey": "recorded_sticking_point",
+      "device": "Natural, informal conversation between two peers using a shared notebook."
+    },
+    {
+      "channel": "Discovery",
+      "id": "disc_insufficient_info",
+      "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+      "mechanismKey": "forced_choice_refutation",
+      "device": "A quick-fire quiz where the 'correct' answer is that there isn't enough info."
+    }
+  ],
+  "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / tripartite_question_mapping; Connection = task_question_journal / recorded_sticking_point; Discovery = insufficient_information / forced_choice_refutation. Each has an illustrative input, observable result and next question. This is not editorial approval."
+}
+```
+
+## Proposed HLNI — unverified editorial notes
+
+```json
+[
+  {
+    "insight": "Academic tasks are defined by their assessment criteria, not the degree title.",
+    "audienceGap": "Students assume degree names imply specific, uniform teaching or grading methods.",
+    "viewerChange": "Students shift from guessing degree value to asking institutions about concrete evaluation rubrics.",
+    "supportType": "method",
+    "support": "The method isolates three variables—product, criterion, and feedback—to expose missing information before committing to a choice.",
+    "references": [],
+    "shotNumbers": [
+      2,
+      3
+    ],
+    "payoffShotNumbers": [
+      3
+    ],
+    "payoff": "The student identifies the '?' placeholders in their audit, turning abstract degree confusion into a precise, actionable question for admissions."
+  }
+]
+```
+
+## Production notes
+
+```json
+{
+  "visualStyle": "Clean, academic, minimalist.",
+  "performance": "Natural, thoughtful, and analytical.",
+  "camera": "Stable, tripod-mounted, clear focus on the worksheet.",
+  "editing": "Rhythmic cuts synchronized with the writing steps.",
+  "sound": "Ambient room tone with clear, crisp voiceover.",
+  "props": [
+    "Folders labelled B.Com and BBA",
+    "Worksheet",
+    "Pen"
+  ],
+  "locations": [
+    "Study desk"
+  ],
+  "casting": "A relatable +2 student.",
+  "complexity": "LOW"
+}
+```
+
+## Creative summary
+
+```json
+{
+  "keyCreativeIdea": "Shifting the comparison from degree prestige to specific assessment methods using a tripartite worksheet.",
+  "shootingPriority": [
+    "The worksheet closeup",
+    "The student's direct address",
+    "The folder interaction"
+  ]
+}
+```

@@ -1,0 +1,72 @@
+[
+  {
+    "stage": "channel_concept",
+    "outcome": "complete",
+    "elapsedMs": 4735,
+    "remainingMs": 45262,
+    "at": "2026-11-16T06:38:59.115Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 1155,
+    "remainingMs": 44104,
+    "at": "2026-11-16T06:39:00.273Z"
+  },
+  {
+    "stage": "channel_concept",
+    "outcome": "complete",
+    "elapsedMs": 3747,
+    "remainingMs": 40355,
+    "at": "2026-11-16T06:39:04.022Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 725,
+    "remainingMs": 39629,
+    "at": "2026-11-16T06:39:04.748Z"
+  },
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 5261,
+    "remainingMs": 34367,
+    "at": "2026-11-16T06:39:10.010Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 4,
+    "remainingMs": 34363,
+    "at": "2026-11-16T06:39:10.014Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 1177,
+    "remainingMs": 33186,
+    "at": "2026-11-16T06:39:11.191Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 2,
+    "remainingMs": 33184,
+    "at": "2026-11-16T06:39:11.193Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 1279,
+    "remainingMs": 31905,
+    "at": "2026-11-16T06:39:12.472Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Concept delivery",
+    "elapsedMs": 1,
+    "remainingMs": 31904,
+    "at": "2026-11-16T06:39:12.473Z"
+  }
+]

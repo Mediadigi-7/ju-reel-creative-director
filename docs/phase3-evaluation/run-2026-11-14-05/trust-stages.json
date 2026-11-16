@@ -1,0 +1,10 @@
+[
+  {
+    "stage": "concept",
+    "outcome": "error",
+    "category": "invalid_request",
+    "elapsedMs": 789,
+    "remainingMs": 49208,
+    "at": "2026-11-14T09:24:55.420Z"
+  }
+]

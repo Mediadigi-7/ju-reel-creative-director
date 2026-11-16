@@ -64,3 +64,15 @@ try {
  assert.equal(JSON.stringify(fixture),snapshot,'An incomplete regeneration response must preserve the existing draft');
 }finally{globalThis.fetch=originalFetch;restorePlanningMocks();}
 console.log('PASS: bounded targeted repair, preserved scenes, rejected incomplete patches, all four native scripts, and complete QA after repair');
+
+// Reproduce the live repair losing one word from the selected resulting question.
+const anchored=structuredClone(fixture);
+const demo={input:'Illustrative task',visibleInput:'Example: Compare two costs.',observation:'The criterion is unknown.',nextQuestion:"What specific criteria define strategic impact in this course assessment?"};
+anchored.conceptSelection={stage:'concept-before-story',selected:{...((await import('./conceptPlannerTestFixtures.js')).conceptBatchFixture().candidates.Trust[0]),demonstration:demo},comparedWith:[],contrast:'test only'};
+anchored.shots[4].onscreenText=demo.nextQuestion;
+const shorter={shots:anchored.shots.map(s=>({number:s.number,dialogue:'Ask about the missing criterion.',onscreenText:s.number===5?'What criteria define strategic impact in this course?':s.onscreenText}))};
+const retained=applyDialogueRepair(anchored,shorter);
+assert.equal(retained.shots[4].onscreenText,demo.nextQuestion,'Preserve the already-visible question without lengthening speech or rewriting the story');
+assert.equal(retained.shots[4].dialogue,'Ask about the missing criterion.');
+assert.equal(shorter.shots[4].onscreenText,'What criteria define strategic impact in this course?','Do not mutate the provider patch');
+console.log('PASS: speech compression preserves original visible concept anchors without adding speech or scenes');

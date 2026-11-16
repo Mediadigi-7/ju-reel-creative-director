@@ -1,0 +1,3 @@
+PASS: requested-channel isolation, malformed other channels ignored, bounded repair, valid local alternative and honest provenance
+PASS: the focused Trust pilot brief does not leak into other channels or topics
+PASS: calibrated draft policy retains creative advice and blocks grounded integrity concerns without granting approval

@@ -1,0 +1,174 @@
+{
+  "hlni": [
+    {
+      "insight": "A short illustrative task reveals where you need help or want to investigate next; it cannot determine which degree suits you.",
+      "audienceGap": "Students think B.Com and BBA are mutually exclusive paths that require a 'natural' fit.",
+      "viewerChange": "Moves from abstract anxiety to identifying a specific skill-based investigation.",
+      "supportType": "method",
+      "support": "The method uses a task to isolate logic constraints versus context, which provides a data point for future course investigation.",
+      "references": [
+        "Shot 2",
+        "Shot 3"
+      ],
+      "shotNumbers": [
+        2,
+        3
+      ],
+      "payoffShotNumbers": [
+        3
+      ],
+      "payoff": "The student identifies their specific struggle and forms a targeted question, turning a vague choice into a productive inquiry."
+    }
+  ],
+  "id": "reel_1794641226627_75uq2hnc",
+  "reelTitle": "B.Com vs BBA: A Practical Comparison",
+  "creativeAngle": "Using a task-based journal to shift from anxiety to investigation",
+  "objective": "Help students move past the B.Com vs BBA label trap by using a concrete task to identify their actual interests.",
+  "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "HOOK",
+      "functions": [
+        "HOOK",
+        "PROBLEM"
+      ],
+      "name": "The Confusion",
+      "timestamp": "00:00 – 00:06",
+      "visual": "Two students sitting at a cafe with a notebook, looking stressed.",
+      "dialogue": "Choosing between B.Com and BBA feels like guessing your future. Let's stop guessing.",
+      "onscreenText": "B.Com vs BBA?",
+      "cameraPerformance": "Close-up, intimate, authentic student setting.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "VALUE",
+      "functions": [
+        "VALUE"
+      ],
+      "name": "The Task",
+      "timestamp": "00:06 – 00:16",
+      "visual": "A notebook shows: Example: Problem: Assign 3 shifts to 3 staff. Student points at it.",
+      "dialogue": "Try this: 'Example: Problem: Assign 3 shifts to 3 staff.' If you enjoy the logic over the business context, you might lean towards BBA.",
+      "onscreenText": "Example: Problem: Assign 3 shifts to 3 staff.",
+      "cameraPerformance": "Handheld, focus on the notebook entry.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "PAYOFF",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Shift",
+      "timestamp": "00:16 – 00:28",
+      "visual": "Student scribbles in the journal, marking the logic constraint as their sticking point.",
+      "dialogue": "I struggled with the logic, not the context. Now I ask: 'Where can I find more practice on logic-based scheduling tasks?'",
+      "onscreenText": "Where can I find more practice on logic-based scheduling tasks?",
+      "cameraPerformance": "Warm lighting, natural interaction.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Cinematic student-life, handheld camera.",
+    "performance": "Natural, conversational, empathetic.",
+    "camera": "Close-ups on the notebook and expressions.",
+    "editing": "Smooth cuts, calm pace.",
+    "sound": "Subtle cafe ambience, soft acoustic background.",
+    "props": [
+      "Notebook",
+      "Pen",
+      "Coffee cups"
+    ],
+    "locations": [
+      "University cafe"
+    ],
+    "casting": "Two students, casual attire.",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Instead of guessing degree suitability, use a specific task to record a 'sticking point' that leads to a concrete question.",
+    "shootingPriority": [
+      "The notebook close-up",
+      "The reaction shots"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-14T07:27:06.627Z",
+  "updatedAt": "2026-11-14T07:27:06.627Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Connection",
+  "conceptSelection": {
+    "stage": "concept-before-story",
+    "selected": {
+      "id": "conn_task_journal",
+      "title": "The Sticking Point Journal",
+      "audienceGap": "Students feel anxious because they don't know if they are 'naturally' B.Com or BBA material.",
+      "basisId": "task_question_journal",
+      "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+      "viewerChange": "Moves from self-doubt to identifying concrete areas for investigation.",
+      "concept": "Two students talk about a sample scheduling task, identifying where they actually got stuck.",
+      "mechanismKey": "recorded_sticking_point",
+      "device": "Natural, informal conversation between two peers using a shared notebook.",
+      "supportType": "method",
+      "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Try or inspect a clearly illustrative task.",
+        "Record one point where you needed help and one question you want to investigate.",
+        "Turn the observation into a question for a real course brief or course team."
+      ],
+      "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+      "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+      "payoff": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+      "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+      "demonstration": {
+        "input": "A simple scheduling puzzle for 3 staff members.",
+        "visibleInput": "Example: Problem: Assign 3 shifts to 3 staff.",
+        "observation": "The student records that they struggled with the logic of the constraints, not the business context.",
+        "nextQuestion": "Where can I find more practice on logic-based scheduling tasks?"
+      },
+      "treatment": "Informative"
+    },
+    "comparedWith": [
+      {
+        "channel": "Trust",
+        "id": "trust_assessment_audit",
+        "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+        "mechanismKey": "tripartite_question_mapping",
+        "device": "Split-screen comparison of a blank worksheet being filled out while narrating the need for specific criteria."
+      },
+      {
+        "channel": "Connection",
+        "id": "conn_task_journal",
+        "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+        "mechanismKey": "recorded_sticking_point",
+        "device": "Natural, informal conversation between two peers using a shared notebook."
+      },
+      {
+        "channel": "Discovery",
+        "id": "disc_insufficient_info",
+        "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+        "mechanismKey": "forced_choice_refutation",
+        "device": "A quick-fire quiz where the 'correct' answer is that there isn't enough info."
+      }
+    ],
+    "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / tripartite_question_mapping; Connection = task_question_journal / recorded_sticking_point; Discovery = insufficient_information / forced_choice_refutation. Each has an illustrative input, observable result and next question. This is not editorial approval."
+  },
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-14T07:27:06.627Z"
+  }
+}

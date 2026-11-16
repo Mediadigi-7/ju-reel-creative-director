@@ -62,12 +62,13 @@ export const ShotCard: React.FC<ShotCardProps> = ({
   return (
     <div
       id={`shot-${shot.number}`}
+      tabIndex={-1}
       className="group bg-white border border-stone-200 rounded-xl overflow-hidden scroll-mt-20 shadow-xs hover:shadow-md transition-all duration-200"
       onKeyDown={handleKeyDown}
     >
       {/* ─── Shot Header: "SHOT 01 • HOOK" with duration tag & subdued hover controls ─── */}
       <div className="flex flex-wrap items-center justify-between gap-2 px-5 py-3 border-b border-stone-100 bg-stone-50/40">
-        <div className="flex items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-2.5">
           <span className="text-xs font-bold text-stone-900 tracking-wider">
             SHOT {String(shot.number).padStart(2,'0')} • {(shot.name || SHOT_TYPE_LABELS[shot.type] || 'Scene').toUpperCase()}
           </span>

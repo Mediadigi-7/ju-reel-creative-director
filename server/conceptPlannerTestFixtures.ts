@@ -5,6 +5,7 @@ import { clearConceptPlanningCache } from './conceptPlanner.js';
 // planner tests below exercise real planning requests, failure paths and caching.
 export function conceptBatchFixture():ConceptBatch {
  const make=(id:string,hlni:string,mechanismKey:string,device:string):CreativeConcept=>({
+  storySpine:{startingBelief:'A degree label tells me which question to ask.',studentSituation:'A student inspects an illustrative task before asking for help.',observation:'The task leaves the practice requirement unknown.',focus:'practice requirement',whyQuestionFollows:'The missing practice requirement is the exact unknown the next question investigates.',changedAction:'The student replaces a degree-label guess with a specific practice question.',visibleConsequence:'The student writes the question beside the unknown requirement on the task.',channelExperience:device},
   id,title:id,audienceGap:'The target student needs an overlooked decision question.',hlni,
   viewerChange:'Use the demonstrated result to choose a concrete next question.',concept:device,mechanismKey,device,
   supportType:'method',support:'A test-only reasoned method, not verified academic evidence.',evidenceNeeded:[],
@@ -27,7 +28,7 @@ export function installConceptPlanningMocks():()=>void {
  const wrapper:typeof fetch=async(input,init)=>{
   let body:any;try{body=JSON.parse(String(init?.body||'{}'));}catch{}
   const prompt=body?.contents?.[0]?.parts?.[0]?.text||body?.messages?.at(-1)?.content||'';
-  if(prompt.startsWith('TASK: EDITORIAL_REVIEW')) {
+  if(prompt.startsWith('TASK: EDITORIAL_REVIEW')||prompt.startsWith('TASK: CONCEPT_REVIEW')) {
    const content=JSON.stringify({issues:[]});
    return new Response(JSON.stringify(body.contents?{candidates:[{content:{parts:[{text:content}]}}]}:{choices:[{message:{content}}]}));
   }

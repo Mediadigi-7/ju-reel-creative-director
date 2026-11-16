@@ -1,0 +1,185 @@
+{
+  "startedAt": "2026-11-16T06:38:54.366Z",
+  "gitHead": "8b2ef01b89fce2b18a545b05ff79ceed0445f00d",
+  "workingTree": "Uncommitted changes identified by sourceSha256; HEAD alone is not the source revision.",
+  "request": {
+    "channels": [
+      "Trust"
+    ],
+    "topic": "B.Com vs BBA",
+    "treatment": "Auto",
+    "language": "English",
+    "duration": "28 sec",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "diagnosticFunctionTags": true,
+    "narrativeContract": "six-stage-v2",
+    "qualityTarget": 90,
+    "conceptQualityContract": "story-spine-v1",
+    "totalTimeoutMs": 50000
+  },
+  "planning": "Only the requested channel is planned and reviewed; completed stories are compared separately.",
+  "referenceApproval": "User-approved non-mandatory creative benchmarks; academic claims are not independently verified by this approval.",
+  "sourceSha256": {
+    "server/channelConceptPlanner.ts": "def21c85b8d84c3ba8497cc195795e2fcf29b0b51e2ab532866302ca02c9178e",
+    "shared/conceptQuality.ts": "9a4c1bbc8ddb3253fdb2aa62ef89de9ec1d97b47b23daee2fefdb7310f9a8a8f",
+    "shared/verifiedCreativeEvidence.ts": "1682e5d7bdd22d34f7480c562d8c60edb3b9f782e33163884217044f4bfe7bee",
+    "server/conceptQualityReview.ts": "5ce3ecdde345853576b9f6f2ba2a190df0796ab4c9f0175712e19d40fab9d176",
+    "server/channelComparison.ts": "93a19da11c2272480b5e4c6b7312b66a736e3fa04107e9e78097772c6c39875e",
+    "server/finishedStoryMemory.ts": "f91671912ab912d7ad8c571d5d2b99967e10b9fe534bc1364dff6e752374cd56",
+    "shared/narrativeStages.ts": "3787f2c6c4b514a9f6dedebce23c741cc07771c47e633ddca4b40bdf8addb6d4",
+    "server/informationIntegrity.ts": "9056fa864a9dc387f66d8974d3538a9ce6d272e5a055097b393e3283c1be1398",
+    "server/outputRepair.ts": "b62bf85a6bb8c24d238bdd67fe51e0c77267418e4072a81024d2d01ac50ebced",
+    "server/aiService.ts": "58ec53eb94a84dc1e50dd8e9476fc2ad246d566897a805585d7d021ee00441d6",
+    "server/conceptPlanner.ts": "f49b6235851419f60222108714030111c0bf7d0a67d77201dae954559a396d02",
+    "server/providerClient.ts": "241d95c794e457bdea6bae5a47e194437f6f7fe6857ab930abd3051e9cb6f207",
+    "server/generationSchemas.ts": "ce9440280a3bbd3a451dd6ed47d2202a0f89ad2af513922f6ae437bea7025592",
+    "server/editorialReview.ts": "97a4d6e02298b45d318b1054a96745d15a1b7224cdd20012a5b06331f484d398",
+    "server/requestBudget.ts": "1e9d0d2c71c8df99310ad7a162e4399d6f5d0e6087d0a6e421c31e91c47da69c",
+    "server/requestCancellation.ts": "572d35f3f32dc88557ba63d3aceb5239de05ec96dae0006519c7273cd1e547d2",
+    "server/aiErrors.ts": "2c1401b385d1dfa1f37570a10f725b618f9bf6aca4ac9af5c238f79c76cb980d",
+    "server/index.ts": "3c30fef29c3783ff415e16c04c97b040637eb4e4e9cd8b584355864a4da48b17",
+    "api/index.ts": "5bc11a077a4accce6e2c8f312f5c9bba36c51e099f84ee1ce50f5eb7b6b36508",
+    "src/services/api.ts": "3855ccb0cca2ed470c1d6076ebb4f6fbfef7ff6050d764bfdb0724cf00c5de9a",
+    "shared/providers.ts": "47747c0b93159ab54a0f407a495570d4db60bddbb62214615dda6d2a1cecb92f",
+    "shared/concepts.ts": "9efe68c78cf05f8f2ca0d55b779bd011a7da7b85cd8b7ca76d2e4df2178d9a11",
+    "shared/reasoningTools.ts": "ee03ba1be92558e0a85b3c4db0f641920884ba7e67fc0d3186aa7c2d5899b1d1",
+    "server/freshnessEngine.ts": "9bb80afd1f839a071f7e18ff7cd32e61334cfea5728a712d777899aae1310d67",
+    "server/realityTrigger.ts": "e21a51d8cd46d753d0d1423e10156db5e6f29fd392a9e0cdf3e4c7fb560f7dc8",
+    "shared/creativeFramework.ts": "90c50bdb93d3287ccd45f7da0a1a06c80692a4b5a300cc9d9a2c08d96427c909",
+    "shared/hlni.ts": "7e0d7339e20ca4532f619e89a71d5173e28d14049388eb9b504a38bfb3271b99",
+    "shared/editorialBenchmarks.ts": "026a0b8c28ad2ed40e3d6663f2439b2183872ad7d33a13ee8ef199123c65bef1",
+    "shared/channels.ts": "4297dc7e6d16d6d36bf1552d7c03241dcd32dffc350607efbbac91d4d2afe3ca",
+    "shared/knowledgeBase.ts": "55e4926c4d4d31105d6a3519d05091bc1f239e914131aae17fecb6519ef8252e",
+    "shared/schema.ts": "2deaab7e54478eb16907745ea871e6350e40d1ce069f62f02dd9c8b4a8e7f46f",
+    "docs/creative-references/BCOM_VS_BBA_APPROVED.md": "f0516cb75a6bfe2800d8573945ef847907ba5ec39b9befb9c983933ca128d7e6"
+  },
+  "rubric": [
+    {
+      "key": "hlni",
+      "label": "High-Leverage New Information",
+      "weight": 25
+    },
+    {
+      "key": "differentiation",
+      "label": "Channel differentiation",
+      "weight": 20
+    },
+    {
+      "key": "coherence",
+      "label": "Narrative coherence",
+      "weight": 20
+    },
+    {
+      "key": "payoff",
+      "label": "Payoff",
+      "weight": 15
+    },
+    {
+      "key": "production",
+      "label": "Production readiness",
+      "weight": 15
+    },
+    {
+      "key": "originality",
+      "label": "Originality",
+      "weight": 5
+    }
+  ],
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "results": [
+    {
+      "channel": "Trust",
+      "status": "FAILED",
+      "category": "output_validation",
+      "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+      "elapsedMs": 18098,
+      "finalStatus": "error",
+      "stages": [
+        {
+          "stage": "channel_concept",
+          "outcome": "complete",
+          "elapsedMs": 4735,
+          "remainingMs": 45262,
+          "at": "2026-11-16T06:38:59.115Z"
+        },
+        {
+          "stage": "concept_review",
+          "outcome": "complete",
+          "elapsedMs": 1155,
+          "remainingMs": 44104,
+          "at": "2026-11-16T06:39:00.273Z"
+        },
+        {
+          "stage": "channel_concept",
+          "outcome": "complete",
+          "elapsedMs": 3747,
+          "remainingMs": 40355,
+          "at": "2026-11-16T06:39:04.022Z"
+        },
+        {
+          "stage": "concept_review",
+          "outcome": "complete",
+          "elapsedMs": 725,
+          "remainingMs": 39629,
+          "at": "2026-11-16T06:39:04.748Z"
+        },
+        {
+          "stage": "story",
+          "outcome": "complete",
+          "elapsedMs": 5261,
+          "remainingMs": 34367,
+          "at": "2026-11-16T06:39:10.010Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "Delivery (Scene pacing)",
+          "elapsedMs": 4,
+          "remainingMs": 34363,
+          "at": "2026-11-16T06:39:10.014Z"
+        },
+        {
+          "stage": "repair",
+          "outcome": "complete",
+          "elapsedMs": 1177,
+          "remainingMs": 33186,
+          "at": "2026-11-16T06:39:11.191Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "Delivery (Scene pacing)",
+          "elapsedMs": 2,
+          "remainingMs": 33184,
+          "at": "2026-11-16T06:39:11.193Z"
+        },
+        {
+          "stage": "repair",
+          "outcome": "complete",
+          "elapsedMs": 1279,
+          "remainingMs": 31905,
+          "at": "2026-11-16T06:39:12.472Z"
+        },
+        {
+          "stage": "validation",
+          "outcome": "Concept delivery",
+          "elapsedMs": 1,
+          "remainingMs": 31904,
+          "at": "2026-11-16T06:39:12.473Z"
+        }
+      ]
+    }
+  ],
+  "editorialDecision": "NOT_EVALUATED",
+  "productionChanged": false,
+  "finishedChannelComparison": {
+    "status": "NOT_ATTEMPTED",
+    "reason": "Three complete storyboards are required."
+  },
+  "completedAt": "2026-11-16T06:39:12.475Z",
+  "complete": false
+}

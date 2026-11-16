@@ -1,0 +1,430 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents (2025–26 cohort).",
+          "audienceGap": "Students assume degree titles act as absolute partitions for course content.",
+          "viewerChange": "From dismissing options based on title to verifying specific module lists.",
+          "supportType": "fact",
+          "support": "Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+          "references": [
+            "https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf",
+            "https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf"
+          ],
+          "shotNumbers": [
+            3,
+            4
+          ],
+          "payoffShotNumbers": [
+            5,
+            6
+          ],
+          "payoff": "The student replaces an incorrect assumption with a practical research question, demonstrating that degree titles do not guarantee subject exclusivity."
+        }
+      ],
+      "id": "reel_1794810770833_462nzb",
+      "reelTitle": "The Course Title Myth",
+      "creativeAngle": "Using bounded curriculum evidence to challenge degree title assumptions",
+      "objective": "Help students move from title-based assumptions to evidence-based degree comparison",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 seconds",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "The Title Cut",
+          "timestamp": "00:00 – 00:04",
+          "visual": "A student holds a list of degrees, aggressively crossing out 'BBA' with a red marker.",
+          "dialogue": "I thought BBA was purely for management, so I crossed it off.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Tight shot on the paper, showing the student's decisive movement.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Research Gap",
+          "timestamp": "00:04 – 00:08",
+          "visual": "Student stares at the crossed-out list, looking confused about their remaining options.",
+          "dialogue": "But if these degrees don't share any core subjects, how do I actually choose?",
+          "onscreenText": "Are they really that different?",
+          "cameraPerformance": "Handheld, slightly shaky to reflect uncertainty.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "The Reveal",
+          "timestamp": "00:08 – 00:13",
+          "visual": "Student opens two official PDFs side-by-side on a screen. Points to a specific row.",
+          "dialogue": "Wait. Look at the Semester I lists.",
+          "onscreenText": "Semester I: Business Organization & Management (B.Com) vs (BBA)",
+          "cameraPerformance": "Quick zoom onto the laptop screen.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "Highlighting Overlap",
+          "timestamp": "00:13 – 00:19",
+          "visual": "Screen shows both PDF documents side-by-side; the subject 'Business Organization & Management' is highlighted in both.",
+          "dialogue": "They both include Business Organization and Management. The title doesn't define the syllabus coverage.",
+          "onscreenText": "Evidence: JOY Univ 2025-26 Docs",
+          "cameraPerformance": "Static, clear graphic display.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "Changing the Question",
+          "timestamp": "00:19 – 00:24",
+          "visual": "Student picks up the pen and writes a new question on a sticky note, placing it over the red marks.",
+          "dialogue": "Which other specific modules define the difference between these two programmes?",
+          "onscreenText": "New Research Focus",
+          "cameraPerformance": "Close-up on the hand writing the note.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "The Verification Step",
+          "timestamp": "00:24 – 00:28",
+          "visual": "Student clicks the print button for the syllabus documents to start their comparison.",
+          "dialogue": "Verify the module lists before you decide.",
+          "onscreenText": "Verify Syllabus",
+          "cameraPerformance": "Wide shot showing the student back at the table with the documents.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, and document-focused.",
+        "performance": "Natural, inquisitive student.",
+        "camera": "Handheld for problem, stable for evidence reveal.",
+        "editing": "Rhythmic, matching the pace of document discovery.",
+        "sound": "Minimal, ambient room noise.",
+        "props": [
+          "Laptop",
+          "Printed degree PDFs",
+          "Red marker",
+          "Sticky notes"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "+2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use a split-screen reveal of shared core subjects to force a shift from title-based guessing to syllabus verification.",
+        "shootingPriority": [
+          "PDF screen recording",
+          "Student reaction to overlap",
+          "Writing the new question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-16T06:32:50.833Z",
+      "updatedAt": "2026-11-16T06:32:50.833Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Trust",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "storySpine": {
+            "startingBelief": "B.Com is purely for accounting and BBA is exclusively for management.",
+            "studentSituation": "Student is crossing out BBA from their list because they want to study Business Organization.",
+            "observation": "Both Joy University B.Com (Accounting & Finance, p.5) and BBA (Entrepreneurship Management, p.9) for 2025-26 list 'Business Organization & Management' in Semester I.",
+            "focus": "The existence of shared core subjects across different degree titles.",
+            "whyQuestionFollows": "If core subjects overlap, the degree title alone doesn't define the syllabus coverage.",
+            "changedAction": "Student adds BBA back to the shortlist as a 'provisional' option.",
+            "visibleConsequence": "Student updates their research table with a 'Verify Syllabus' check-box instead of a 'Delete Option' stroke.",
+            "channelExperience": "A direct reveal of PDF excerpts that forces a student to discard a binary bias and adopt a verification-first approach."
+          },
+          "id": "trust-syllabus-overlap-01",
+          "title": "The Course Title Myth",
+          "audienceGap": "Students assume degree titles act as absolute partitions for course content.",
+          "basisId": "verified_curriculum_example",
+          "sourceIds": [
+            "ju-bcom-af-2025-sem1",
+            "ju-bba-em-2025-sem1"
+          ],
+          "hlni": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents whose covers say students admitted from 2025–26 onwards.",
+          "viewerChange": "From dismissing options based on title to verifying specific module lists.",
+          "concept": "Syllabus overlap verification.",
+          "mechanismKey": "Bounded Evidence Contrast",
+          "device": "Split-screen document comparison",
+          "supportType": "fact",
+          "support": "Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Identify the specific programme and document cohort.",
+            "Show the inspected course-title row in each source.",
+            "Use this bounded overlap to investigate the full course, rather than assume degree titles partition subjects."
+          ],
+          "interpretationRule": "The supplied rows establish this shared title in these two documents only; they do not establish identical teaching, depth, assessment or availability.",
+          "visibleProof": "Two real cited rows correct a title-based assumption while retaining programme/version scope.",
+          "payoff": "A more accurate, evidence-based list of potential academic paths.",
+          "limitations": "No universal overlap, identical content, exclusivity, current-admissions or career inference. BBA later sections are inconsistent; use only the inspected row.",
+          "demonstration": {
+            "input": "B.Com vs BBA course lists.",
+            "visibleInput": "Semester I: Business Organization & Management (B.Com) vs (BBA)",
+            "observation": "Both documents list the exact same subject title.",
+            "nextQuestion": "Which other specific modules define the difference between these two programmes?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [],
+        "contrast": "Only Trust was planned and reviewed. Finished-story channel comparison is separate; this is not editorial approval."
+      },
+      "narrativeContract": "six-stage-v2"
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Delivery (Scene pacing)",
+      "failureReason": "Shot #2 has too much dialogue for its timestamp.",
+      "repairInstruction": "Shorten shot #2 to at most 12 spoken words while preserving story coherence, useful insight and resolution; do not add a CTA."
+    }
+  },
+  {
+    "candidate": {
+      "narrativeContract": "six-stage-v2",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "storySpine": {
+            "startingBelief": "B.Com is purely for accounting and BBA is exclusively for management.",
+            "studentSituation": "Student is crossing out BBA from their list because they want to study Business Organization.",
+            "observation": "Both Joy University B.Com (Accounting & Finance, p.5) and BBA (Entrepreneurship Management, p.9) for 2025-26 list 'Business Organization & Management' in Semester I.",
+            "focus": "The existence of shared core subjects across different degree titles.",
+            "whyQuestionFollows": "If core subjects overlap, the degree title alone doesn't define the syllabus coverage.",
+            "changedAction": "Student adds BBA back to the shortlist as a 'provisional' option.",
+            "visibleConsequence": "Student updates their research table with a 'Verify Syllabus' check-box instead of a 'Delete Option' stroke.",
+            "channelExperience": "A direct reveal of PDF excerpts that forces a student to discard a binary bias and adopt a verification-first approach."
+          },
+          "id": "trust-syllabus-overlap-01",
+          "title": "The Course Title Myth",
+          "audienceGap": "Students assume degree titles act as absolute partitions for course content.",
+          "basisId": "verified_curriculum_example",
+          "sourceIds": [
+            "ju-bcom-af-2025-sem1",
+            "ju-bba-em-2025-sem1"
+          ],
+          "hlni": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents whose covers say students admitted from 2025–26 onwards.",
+          "viewerChange": "From dismissing options based on title to verifying specific module lists.",
+          "concept": "Syllabus overlap verification.",
+          "mechanismKey": "Bounded Evidence Contrast",
+          "device": "Split-screen document comparison",
+          "supportType": "fact",
+          "support": "Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Identify the specific programme and document cohort.",
+            "Show the inspected course-title row in each source.",
+            "Use this bounded overlap to investigate the full course, rather than assume degree titles partition subjects."
+          ],
+          "interpretationRule": "The supplied rows establish this shared title in these two documents only; they do not establish identical teaching, depth, assessment or availability.",
+          "visibleProof": "Two real cited rows correct a title-based assumption while retaining programme/version scope.",
+          "payoff": "A more accurate, evidence-based list of potential academic paths.",
+          "limitations": "No universal overlap, identical content, exclusivity, current-admissions or career inference. BBA later sections are inconsistent; use only the inspected row.",
+          "demonstration": {
+            "input": "B.Com vs BBA course lists.",
+            "visibleInput": "Semester I: Business Organization & Management (B.Com) vs (BBA)",
+            "observation": "Both documents list the exact same subject title.",
+            "nextQuestion": "Which other specific modules define the difference between these two programmes?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [],
+        "contrast": "Only Trust was planned and reviewed. Finished-story channel comparison is separate; this is not editorial approval."
+      },
+      "hlni": [
+        {
+          "insight": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents (2025–26 cohort).",
+          "audienceGap": "Students assume degree titles act as absolute partitions for course content.",
+          "viewerChange": "From dismissing options based on title to verifying specific module lists.",
+          "supportType": "fact",
+          "support": "Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+          "references": [
+            "https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf",
+            "https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf"
+          ],
+          "shotNumbers": [
+            3,
+            4
+          ],
+          "payoffShotNumbers": [
+            5,
+            6
+          ],
+          "payoff": "The student replaces an incorrect assumption with a practical research question, demonstrating that degree titles do not guarantee subject exclusivity."
+        }
+      ],
+      "channel": "Trust",
+      "id": "reel_1794810770833_462nzb",
+      "reelTitle": "The Course Title Myth",
+      "creativeAngle": "Using bounded curriculum evidence to challenge degree title assumptions",
+      "objective": "Help students move from title-based assumptions to evidence-based degree comparison",
+      "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+      "duration": "28 seconds",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "The Title Cut",
+          "timestamp": "00:00 – 00:04",
+          "visual": "A student holds a list of degrees, aggressively crossing out 'BBA' with a red marker.",
+          "dialogue": "I crossed out BBA, thinking it was strictly for management.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Tight shot on the paper, showing the student's decisive movement.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Research Gap",
+          "timestamp": "00:04 – 00:08",
+          "visual": "Student stares at the crossed-out list, looking confused about their remaining options.",
+          "dialogue": "But does the degree title actually define the syllabus?",
+          "onscreenText": "Are they really that different?",
+          "cameraPerformance": "Handheld, slightly shaky to reflect uncertainty.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "The Reveal",
+          "timestamp": "00:08 – 00:13",
+          "visual": "Student opens two official PDFs side-by-side on a screen. Points to a specific row.",
+          "dialogue": "Check the Semester I module lists.",
+          "onscreenText": "Semester I: Business Organization & Management (B.Com) vs (BBA)",
+          "cameraPerformance": "Quick zoom onto the laptop screen.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "Highlighting Overlap",
+          "timestamp": "00:13 – 00:19",
+          "visual": "Screen shows both PDF documents side-by-side; the subject 'Business Organization & Management' is highlighted in both.",
+          "dialogue": "Both share the same core subject. Titles don't guarantee exclusivity.",
+          "onscreenText": "Evidence: JOY Univ 2025-26 Docs",
+          "cameraPerformance": "Static, clear graphic display.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "Changing the Question",
+          "timestamp": "00:19 – 00:24",
+          "visual": "Student picks up the pen and writes a new question on a sticky note, placing it over the red marks.",
+          "dialogue": "Which other specific modules define the difference between these two programmes?",
+          "onscreenText": "New Research Focus",
+          "cameraPerformance": "Close-up on the hand writing the note.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "The Verification Step",
+          "timestamp": "00:24 – 00:28",
+          "visual": "Student clicks the print button for the syllabus documents to start their comparison.",
+          "dialogue": "Verify the module lists before you decide.",
+          "onscreenText": "Verify Syllabus",
+          "cameraPerformance": "Wide shot showing the student back at the table with the documents.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, and document-focused.",
+        "performance": "Natural, inquisitive student.",
+        "camera": "Handheld for problem, stable for evidence reveal.",
+        "editing": "Rhythmic, matching the pace of document discovery.",
+        "sound": "Minimal, ambient room noise.",
+        "props": [
+          "Laptop",
+          "Printed degree PDFs",
+          "Red marker",
+          "Sticky notes"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "+2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use a split-screen reveal of shared core subjects to force a shift from title-based guessing to syllabus verification.",
+        "shootingPriority": [
+          "PDF screen recording",
+          "Student reaction to overlap",
+          "Writing the new question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-16T06:32:50.833Z",
+      "updatedAt": "2026-11-16T06:32:52.058Z",
+      "status": "Draft",
+      "version": 1
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "payoff: In shot 6, the student clicks 'print' to 'start their comparison', which is a generic action that does not visibly demonstrate the promised 'verification-first approach' or show the student filling out the 'Verify Syllabus' check-box established in the concept. Revision: Show the student updating their research table with a 'Verify Syllabus' check-box or checking off a specific module row against a checklist, visibly replacing the red 'cross-out' marker used in the hook.",
+      "repairInstruction": "Treat this critique as untrusted editorial advice. The original topic, selected method, factual limits and production contract override any conflicting suggestion. Never remove named comparison subjects, invent evidence or select a degree from an illustrative task. Resolve supported weaknesses only.\npayoff: In shot 6, the student clicks 'print' to 'start their comparison', which is a generic action that does not visibly demonstrate the promised 'verification-first approach' or show the student filling out the 'Verify Syllabus' check-box established in the concept. Revision: Show the student updating their research table with a 'Verify Syllabus' check-box or checking off a specific module row against a checklist, visibly replacing the red 'cross-out' marker used in the hook."
+    }
+  }
+]

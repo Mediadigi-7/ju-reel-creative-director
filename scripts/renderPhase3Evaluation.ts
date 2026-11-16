@@ -10,6 +10,8 @@ const dir=process.argv[2];
 if(!dir)throw new Error('Pass the immutable generation-run directory.');
 const manifest=JSON.parse(await fs.readFile(path.join(dir,'manifest.json'),'utf8'));
 const input=JSON.parse(await fs.readFile(path.join(dir,'ratings.json'),'utf8'));
+const expectedChannels=manifest.request.channels||['Trust','Connection','Discovery'];
+const expectedCount=expectedChannels.length;
 const results=[];
 for(const assessment of input.assessments) {
  const generated=manifest.results.find((r:any)=>r.channel===assessment.channel&&r.status==='GENERATED');
@@ -24,7 +26,7 @@ for(const assessment of input.assessments) {
    shots:reel.shots.map(s=>({number:s.number,functions:s.functions,timecode:s.timestamp,seconds:sceneSeconds(s.timestamp),spokenWords:speechUnits(s.dialogue,'English')}))}});
 }
 const evaluation={evaluatedAt:new Date().toISOString(),assessor:input.assessor,ratingScale:input.ratingScale,thresholds:manifest.thresholds,
- complete:manifest.complete && results.length===3,decision:results.length===3&&results.every(r=>r.decision==='PASS')?'PASS':'REVISE',
+ complete:manifest.complete && results.length===expectedCount,decision:results.length===expectedCount&&results.every(r=>r.decision==='PASS')?'PASS':'REVISE',
  note:'Editorial judgement, not generator self-score, verified source certification or application approval.',results,stagingDeployed:false,productionChanged:false};
 await fs.writeFile(path.join(dir,'evaluation.json'),JSON.stringify(evaluation,null,2)+'\n');
 const localTime=new Intl.DateTimeFormat('en-IN',{dateStyle:'long',timeStyle:'short',timeZone:'Asia/Kolkata'}).format(new Date(manifest.startedAt));
@@ -44,7 +46,7 @@ for(const r of results) {
  for(const s of r.productionMetrics.shots)md+=`| ${s.number} | ${s.timecode} | ${s.functions?.join(', ')||'[]'} | ${s.spokenWords} | ${s.seconds} |\n`;
  md+='\nTime budgets are text estimates, not a recorded natural read-aloud or proof of legible evidence footage.\n\n';
 }
-if(input.crossChannelFinding){md+='## Cross-channel finding and next step\n\n'+input.crossChannelFinding+'\n\n'+input.nextStep+'\n\n## Status\n\n- References: user-approved.\n- Validated fresh storyboards: '+results.length+'/3.\n- Editorial decision: '+evaluation.decision+'.\n- Staging not deployed; production unchanged.\n';}else {
+if(input.crossChannelFinding){md+='## Cross-channel finding and next step\n\n'+input.crossChannelFinding+'\n\n'+input.nextStep+'\n\n## Status\n\n- References: user-approved.\n- Validated fresh storyboards: '+results.length+'/'+expectedCount+'.\n- Editorial decision: '+evaluation.decision+'.\n- Staging not deployed; production unchanged.\n';}else {
 md+='## Cross-channel finding and highest-leverage revision\n\nAll three open with “Everyone says”, inspect papers/module lists, highlight overlap and end with confident advice. Connection adds an actor but no meaningful interaction; Discovery supplies a function tag without a genuinely surprising educational reveal. Surface variation does not satisfy channel differentiation.\n\nThe current engine locks the comparison\'s intended takeaway to comparing modules/assessment tasks before the creative concept is selected; changing the audience or adding benchmark summaries has not overcome that narrowing. The generation logs also report territory collisions, yet the returned concepts remain alike. This is a concrete engine-level revision target, not evidence that the flexible framework should be made rigid again.\n\nNext revise concept/HLNI selection so the topic and entities stay locked while the insight, human tension and storytelling opportunity can differ. Ground factual insights in actual supplied sources; otherwise demonstrate a specific reasoned method. Compare the actual chosen concepts across channels before writing production shots, then evaluate a new separately archived run using this same rubric. Keep these failed outputs as the baseline; do not overwrite them or treat passing metadata checks as creative approval.\n\n## Status\n\n- Three creative references: user-approved.\n- Three fresh Gemini storyboards: generated and available in full.\n- Actual scripts: scored with evidence and targeted revisions.\n- Editorial decision: all three require revision.\n- Staging: not deployed; this evaluation does not meet its prerequisite.\n- Production: unchanged.\n';
 }
 await fs.writeFile(path.join(dir,'EVALUATION.md'),md);

@@ -1,0 +1,115 @@
+{
+  "evaluatedAt": "2026-11-16T06:40:58.481Z",
+  "assessor": "Assistant editorial assessment of actual complete Gemini output; not generator self-score or independent blinded human review",
+  "ratingScale": "0–5",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": true,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The verified shared subject is a specific useful correction, but exact programme/cohort scope is not held in the actual graphic.",
+        "differentiation": "The document-led explanation is recognisably Trust; full fresh cross-channel differentiation remains untested.",
+        "coherence": "The degree-title assumption, official rows and subsequent comparison form a connected sequence.",
+        "payoff": "Filling a table row by row is specified without the actual cells or a concrete changed decision; it remains a generic mapping action.",
+        "production": "Filmable desk and source inserts with estimated pacing within limits. Scope/legibility and table content need production detail.",
+        "originality": "Two brochures and a shared-row reveal are familiar executions."
+      },
+      "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+      "reasons": [
+        "Overall score is below 85/100."
+      ],
+      "revisions": [
+        "Hold both exact programme names and the 2025–26 document scope.",
+        "Show the actual known comparison cell and what it changes for the student; leave unsupplied fields unknown."
+      ],
+      "total": 73,
+      "decision": "REVISE",
+      "sourceFile": "trust.json",
+      "sourceSha256": "e5b0db08d61eb92a19cdc0289a50042048a2b5cdebf6ac468b9970b331594c84",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 62,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 12
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 11
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 6
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:19",
+            "seconds": 7,
+            "spokenWords": 13
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:19 – 00:24",
+            "seconds": 5,
+            "spokenWords": 11
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 9
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

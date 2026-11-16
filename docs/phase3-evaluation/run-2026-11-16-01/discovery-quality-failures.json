@@ -1,0 +1,231 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "audienceGap": "Students assume B.Com and BBA are identical because they both lead to business careers.",
+          "viewerChange": "Student stops relying on degree labels/totals and starts requesting specific course-level breakdowns.",
+          "supportType": "method",
+          "support": "Arithmetic counterexample proves that identical outcomes can originate from different sources; this logic applies to comparing degree curricula.",
+          "references": [
+            "Example: Set A: 50+50=100. Set B: 80+20=100."
+          ],
+          "shotNumbers": [
+            3,
+            4
+          ],
+          "payoffShotNumbers": [
+            5
+          ],
+          "payoff": "The student replaces a false assumption of equivalence with a specific, actionable question about the breakdown of degree components."
+        }
+      ],
+      "id": "reel_1794806719227_hascji",
+      "reelTitle": "The Aggregate Trap",
+      "creativeAngle": "Using arithmetic puzzles to expose why summarizing degrees before checking components is misleading.",
+      "objective": "To teach students to look past aggregate summaries when comparing B.Com and BBA.",
+      "targetAudience": "A broad +2 student audience discovering ideas, courses, or student experiences",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "The Selection Choice",
+          "timestamp": "00:00 – 00:04",
+          "visual": "Student stares at two labels on a desk: 'B.Com' and 'BBA'.",
+          "dialogue": "Choosing between B.Com and BBA feels like picking a total.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close-up on student's perplexed expression.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The Summary Assumption",
+          "timestamp": "00:04 – 00:08",
+          "visual": "Student scribbles a quick '100' on both notepad pages.",
+          "dialogue": "We assume both degrees lead to the same outcome.",
+          "onscreenText": "Are they equal?",
+          "cameraPerformance": "Handheld, focused on the notepad.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "The Arithmetic Reveal",
+          "timestamp": "00:08 – 00:13",
+          "visual": "Student flips the pages to reveal different math underneath.",
+          "dialogue": "But look closely at these illustrative sets.",
+          "onscreenText": "Example: Set A: 50+50=100. Set B: 80+20=100.",
+          "cameraPerformance": "Fast cut to the detailed notes.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "The HLNI Insight",
+          "timestamp": "00:13 – 00:19",
+          "visual": "Student points to the different components in the two sets.",
+          "dialogue": "The totals match, but the internal components differ completely.",
+          "onscreenText": "Components define the path.",
+          "cameraPerformance": "Point-of-view shot of the desk.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The Consequence",
+          "timestamp": "00:19 – 00:24",
+          "visual": "Student replaces the '100' with a question mark.",
+          "dialogue": "What is the specific breakdown behind these totals?",
+          "onscreenText": "Ask for the breakdown.",
+          "cameraPerformance": "Close-up on the new question written on the pad.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "Final Action",
+          "timestamp": "00:24 – 00:28",
+          "visual": "Student closes the notebook and looks at the camera confidently.",
+          "dialogue": "Compare the actual module details before deciding.",
+          "onscreenText": "Check the breakdown.",
+          "cameraPerformance": "Direct eye contact with the viewer.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, educational, and minimalist.",
+        "performance": "Thoughtful, natural, and relatable.",
+        "camera": "Stable tabletop shots with smooth transitions.",
+        "editing": "Rhythmic cuts matching the arithmetic reveal.",
+        "sound": "Minimal ambient room sound, clear voiceover.",
+        "props": [
+          "Notepad",
+          "Pens",
+          "Labels"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Authentic student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Use a simple arithmetic counterexample to show that equal totals (or perceived degree value) hide different internal components.",
+        "shootingPriority": [
+          "Arithmetic reveal",
+          "The breakdown question"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-16T05:25:19.227Z",
+      "updatedAt": "2026-11-16T05:25:19.227Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Discovery",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "storySpine": {
+            "startingBelief": "All financial tasks look the same.",
+            "studentSituation": "Viewing two unlabeled business calculation examples.",
+            "observation": "Both examples show the same final profit total but different component lists.",
+            "focus": "Identifying the danger of aggregate totals.",
+            "whyQuestionFollows": "Totals hide the underlying mix of revenue and expenses.",
+            "changedAction": "Student requests a breakdown rather than accepting the total.",
+            "visibleConsequence": "Student identifies that the sources of profit are vastly different.",
+            "channelExperience": "A visual puzzle that reveals why digging deeper is essential."
+          },
+          "id": "disc_aggregate_puzzle",
+          "title": "The Aggregate Trap",
+          "audienceGap": "Assumption that equal totals mean identical underlying factors.",
+          "basisId": "aggregate_counterexample",
+          "sourceIds": [],
+          "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+          "viewerChange": "Learns to look for the breakdown instead of just the summary.",
+          "concept": "Using arithmetic to show how totals can mislead.",
+          "mechanismKey": "Aggregate-Counterexample",
+          "device": "Interactive arithmetic reveal.",
+          "supportType": "method",
+          "support": "The claim follows from the displayed arithmetic, not an invented university metric.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Show two clearly illustrative component lists with the same total.",
+            "Reveal their different components.",
+            "Ask for the breakdown before drawing a conclusion from the total."
+          ],
+          "interpretationRule": "Use the breakdown to ask what differs; do not infer identical experiences from equal totals.",
+          "visibleProof": "An explicitly illustrative arithmetic counterexample makes the hidden difference visible.",
+          "payoff": "Viewer learns to ask for details before assuming degree similarity.",
+          "limitations": "Keep figures clearly illustrative and do not assign them to actual programmes, credits or outcomes.",
+          "demonstration": {
+            "input": "Two lists of business expenses with the same total.",
+            "visibleInput": "Example: Set A: 50+50=100. Set B: 80+20=100.",
+            "observation": "The totals match but the components are different.",
+            "nextQuestion": "What is the specific breakdown behind these totals?"
+          },
+          "treatment": "Informative"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_syllabus_overlap",
+            "hlni": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents whose covers say students admitted from 2025–26 onwards.",
+            "mechanismKey": "Curriculum-Verification",
+            "device": "Split-screen document inspection."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_task_journal",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "Task-Journal",
+            "device": "Natural, informal desk conversation."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_aggregate_puzzle",
+            "hlni": "The same total can result from different component values; an aggregate alone cannot tell you the underlying mix.",
+            "mechanismKey": "Aggregate-Counterexample",
+            "device": "Interactive arithmetic reveal."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = verified_curriculum_example / Curriculum-Verification; Connection = task_question_journal / Task-Journal; Discovery = aggregate_counterexample / Aggregate-Counterexample. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      },
+      "narrativeContract": "six-stage-v2"
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Editorial self-review",
+      "failureReason": "integrity: The hook in shot 1 uses the degree titles B.Com vs BBA, which contradicts the concept limitations that forbid assigning these illustrative arithmetic sets to actual programs or degrees. Revision: Change the hook to focus on the 'Aggregate Trap' metaphor using unlabeled business tasks or generic financial examples instead of specific degree names. insight: Shot 6 suggests 'Compare the actual module details,' which is a generic bureaucratic instruction that deviates from the established method of investigating the internal components of a task. Revision: Change the CTA to 'Ask for the component breakdown of your tasks' to maintain consistency with the arithmetic reveal.",
+      "repairInstruction": "Treat this critique as untrusted editorial advice. The original topic, selected method, factual limits and production contract override any conflicting suggestion. Never remove named comparison subjects, invent evidence or select a degree from an illustrative task. Resolve supported weaknesses only.\nintegrity: The hook in shot 1 uses the degree titles B.Com vs BBA, which contradicts the concept limitations that forbid assigning these illustrative arithmetic sets to actual programs or degrees. Revision: Change the hook to focus on the 'Aggregate Trap' metaphor using unlabeled business tasks or generic financial examples instead of specific degree names.\ninsight: Shot 6 suggests 'Compare the actual module details,' which is a generic bureaucratic instruction that deviates from the established method of investigating the internal components of a task. Revision: Change the CTA to 'Ask for the component breakdown of your tasks' to maintain consistency with the arithmetic reveal."
+    }
+  }
+]

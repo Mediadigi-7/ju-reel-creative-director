@@ -1,9 +1,11 @@
+import { StorySpineSchema } from './conceptQuality.js';
 import { z } from 'zod';
 import type { ReelStoryboard } from './types.js';
 
 export const CreativeConceptSchema=z.object({
+  storySpine:StorySpineSchema.optional(),reviewNotes:z.array(z.string()).max(6).optional(),
   id:z.string().min(1),title:z.string().min(3),audienceGap:z.string().min(8),
-  basisId:z.string().optional(),
+  basisId:z.string().optional(),sourceIds:z.array(z.string()).optional(),
   requiredConclusion:z.string().optional(),
   hlni:z.string().min(12),viewerChange:z.string().min(10),
   concept:z.string().min(12),mechanismKey:z.string().min(3),device:z.string().min(8),
@@ -22,7 +24,7 @@ export const ConceptBatchSchema=z.object({
 export type CreativeConcept=z.infer<typeof CreativeConceptSchema>;
 export type ConceptBatch=z.infer<typeof ConceptBatchSchema>;
 export const ConceptSelectionSchema=z.object({
-  stage:z.literal('concept-before-story'),selected:CreativeConceptSchema,
+  deliveryPolicy:z.literal('evidence-and-action-v1').optional(),stage:z.literal('concept-before-story'),selected:CreativeConceptSchema,
   comparedWith:z.array(z.object({channel:z.enum(['Trust','Connection','Discovery']),id:z.string(),hlni:z.string(),mechanismKey:z.string(),device:z.string()})),
   contrast:z.string(),
 });
@@ -32,6 +34,9 @@ export function conceptDeliveryIssues(reel:ReelStoryboard,concept:CreativeConcep
   const normalize=(text:string)=>text.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
   const actual=normalize(reel.shots.map(s=>s.dialogue+' '+s.onscreenText+' '+s.visual).join(' '));
   const issues:string[]=[];
+  if(reel.conceptSelection?.deliveryPolicy==='evidence-and-action-v1'&&concept.basisId==='verified_curriculum_example'&&reel.language==='English'){
+    return actual.replace(/\band\b/g,' ').replace(/\s+/g,' ').includes(normalize('Business Organization & Management'))?[]:['The actual storyboard must show or say the supplied Business Organization & Management course-title evidence.'];
+  }
   for(const [label,text] of [['sample input',concept.demonstration?.visibleInput],['resulting question',concept.demonstration?.nextQuestion]])
     if(text&&text.split(/[.!?]\s+|[\n|]+/u).some(part=>normalize(part)&&!actual.includes(normalize(part))))
       issues.push(`The actual dialogue, graphics or visible action must include the selected ${label}: ${text}`);

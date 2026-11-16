@@ -1,3 +1,4 @@
+import { SIX_STAGE_CONTRACT,sixStageIssues } from './narrativeStages.js';
 import type { ReelStoryboard } from './types.js';
 
 export const HLNI_STANDARD = 'HLNI-v1' as const;
@@ -64,7 +65,7 @@ export function hlniIssues(candidate:HlniCandidate, reel:ReelStoryboard):string[
 export function editorialSnapshot(reel:ReelStoryboard):string {
   return JSON.stringify({title:reel.reelTitle,channel:reel.channel,angle:reel.creativeAngle,objective:reel.objective,
     audience:reel.targetAudience,language:reel.language,treatment:reel.creativeDirection,duration:reel.duration,
-    shots:reel.shots,hlni:reel.hlni,conceptSelection:reel.conceptSelection,productionNotes:reel.productionNotes,creativeSummary:reel.creativeSummary},(_key,value)=>
+    narrativeContract:reel.narrativeContract,shots:reel.shots,hlni:reel.hlni,conceptSelection:reel.conceptSelection,productionNotes:reel.productionNotes,creativeSummary:reel.creativeSummary},(_key,value)=>
       value && typeof value==='object' && !Array.isArray(value)?Object.fromEntries(Object.keys(value).sort().map(key=>[key,value[key]])):value);
 }
 export function isEditoriallyApproved(reel:ReelStoryboard):boolean {
@@ -82,6 +83,7 @@ export function enforceEditorialStatus(reel:ReelStoryboard):ReelStoryboard {
   return {...rest,status:reel.status==='Ready for Production'?'Draft':reel.status};
 }
 export function approveEditorialReview(reel:ReelStoryboard, checks:HlniChecks):ReelStoryboard {
+  if(reel.narrativeContract===SIX_STAGE_CONTRACT&&sixStageIssues(reel).length)throw new Error('Complete all six storytelling stages before approval.');
   if(!reel.hlni?.some(candidate=>hlniIssues(candidate,reel).length===0))throw new Error('Identify a complete, supported HLNI in the actual shots before approval.');
   if(!Object.keys(HLNI_CHECKS).every(key=>checks[key as keyof HlniChecks]===true))throw new Error('All five editorial checks must pass.');
   const now=new Date().toISOString();

@@ -1,9 +1,10 @@
 import type { ReelStoryboard, Shot } from './types.js';
+import { SIX_STAGE_WRITING_CONTRACT } from './narrativeStages.js';
 import { HLNI_CREATIVE_CONTRACT } from './hlni.js';
 
 export const NARRATIVE_FUNCTIONS = ['HOOK','PROBLEM','PATTERN_INTERRUPT','VALUE','PAYOFF','CTA'] as const;
 export const FLEXIBLE_CREATIVE_FRAMEWORK = `
-FLEXIBLE 6 × 3 CREATIVE MATRIX — an ideation and diagnostic tool, not a checklist.
+6 × 3 CREATIVE MATRIX — channel guidance with six required narrative stages.
 Narrative function | Trust | Connection | Discovery
 Hook | Raise a question worth understanding | Introduce a relatable situation or emotion | Create curiosity, surprise or a challenge
 Problem | Reveal a knowledge gap or misconception | Establish a personal dilemma or tension | Challenge an assumption or expectation
@@ -12,13 +13,11 @@ Value | Deliver verified facts, comparisons or methods | Offer a practical insig
 Payoff | Help the viewer reach an informed conclusion | Resolve emotional or personal tension | Deliver a satisfying reveal with a meaningful takeaway
 CTA | Encourage saving or exploring further | Encourage sharing or responding | Invite participation or a relevant next action
 
-Story first, framework second: choose the strongest concept before arranging scenes.
-Narrative functions are not individual shots. Combine functions, reorder them, repeat a useful function, and use as many shots as the story needs. No fixed shot count or equal timings.
-A pattern interrupt is optional; use one only when it creates a meaningful change in attention or understanding.
-Value and payoff are conceptually distinct: deliver both usefulness and resolution, even in the same exchange.
-Use at most one purposeful next action when appropriate. Omit an engagement CTA if it weakens the ending. CTA suggestions in the matrix are possibilities, not required channel-specific actions.
+Story first: choose the strongest concept, then develop the six required stages.
+${SIX_STAGE_WRITING_CONTRACT}
+Value and payoff are conceptually distinct: deliver usefulness and demonstrate its consequence.
 Channel identity guides creativity, not style: Trust can entertain, Connection can educate, Discovery can be emotional. Treatment and sequence follow the topic, target student, channel objective, and strongest storytelling opportunity.
-Success means narrative coherence, audience relevance, useful insight and a satisfying outcome. Do not measure success by the presence of six separate stages.
+Success means narrative coherence, audience relevance, useful insight and a satisfying outcome. Six-stage structure is necessary, but labels alone never prove creative quality.
 Production format stays: Shot / Timecode / Visual Action / Dialogue or Voiceover / Camera Direction / On-Screen Graphic.
 ${HLNI_CREATIVE_CONTRACT}
 `;

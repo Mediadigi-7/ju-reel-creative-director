@@ -1,0 +1,1 @@
+PASS: six visible stage links; keyboard Tab/Enter focuses real shot; eight-shot grouping; legacy three-shot record unchanged; 320/390/720px reflow; 44px targets. Isolated illustrative fixture, no live generation or user data.

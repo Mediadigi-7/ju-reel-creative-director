@@ -1,0 +1,42 @@
+{
+  "assessor": "Assistant editorial assessment of actual complete Gemini output; not generator self-score or independent blinded human review",
+  "ratingScale": "0\u20135",
+  "assessments": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 4,
+        "payoff": 3,
+        "production": 3,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The verified shared subject is a specific useful correction, but exact programme/cohort scope is not held in the actual graphic.",
+        "differentiation": "The document-led explanation is recognisably Trust; full fresh cross-channel differentiation remains untested.",
+        "coherence": "The degree-title assumption, official rows and subsequent comparison form a connected sequence.",
+        "payoff": "Filling a table row by row is specified without the actual cells or a concrete changed decision; it remains a generic mapping action.",
+        "production": "Filmable desk and source inserts with estimated pacing within limits. Scope/legibility and table content need production detail.",
+        "originality": "Two brochures and a shared-row reveal are familiar executions."
+      },
+      "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+      "reasons": [
+        "This is a Trust-only pilot assessment; it does not establish three-channel differentiation or production approval."
+      ],
+      "revisions": [
+        "Hold both exact programme names and the 2025\u201326 document scope.",
+        "Show the actual known comparison cell and what it changes for the student; leave unsupplied fields unknown."
+      ]
+    }
+  ],
+  "methodology": "The full returned storyboard, HLNI, concept spine, production notes and warnings were read. The same assistant implemented and assessed the change. Scores use the unchanged rubric. Channel differentiation here assesses the recognisable Trust experience against the approved channel objectives and archived references; a fresh three-channel group comparison was not performed. No recorded read-aloud or deployed-app test was performed.",
+  "runSummary": "First isolated Trust run returned six scenes. Its optional rewrite completed, but the payoff remained an under-specified table-filling action. This source predates later pilot-brief revisions.",
+  "crossChannelFinding": "Only Trust was generated in this run. Other channels were deliberately held back pending repeatable Trust acceptance. Output remains Draft and no model review grants application approval.",
+  "nextStep": "Check repeatability on identical source and preserve every failure. Keep the 85 overall/4 HLNI/4 differentiation floors and above-90 target unchanged. Do not expand or deploy based on one passing example."
+}

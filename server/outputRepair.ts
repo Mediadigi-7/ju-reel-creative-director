@@ -1,3 +1,4 @@
+import {SIX_STAGE_CONTRACT,SIX_STAGE_WRITING_CONTRACT} from '../shared/narrativeStages.js';
 import type { ReelStoryboard } from '../shared/types.js';
 import { channelPrompt } from '../shared/channels.js';
 
@@ -33,9 +34,10 @@ Problem: ${reason}
 Selected concept: ${JSON.stringify(reel.conceptSelection?.selected || null)}
 Existing HLNI proposal: ${JSON.stringify(reel.hlni || [])}
 Preserve the actual high-leverage information, its qualifications and the way its payoff changes the viewer's understanding/action. Do not replace it with generic reassurance or familiar advice. Metadata alone is not delivery. Keep all references aligned with these unchanged scene numbers. Editorial approval will still require human verification.
-Keep the same continuous story, factual qualifications, student situation, reveal, and any purposeful next action. Keep a CTA optional; never add one to a story that ends without it. Do not add career guarantees, institutional claims or a link/guide/DM service. Do not cut words mechanically; rewrite naturally for speech.
+Keep the same continuous story, factual qualifications, student situation, reveal, and any purposeful next action. ${reel.narrativeContract===SIX_STAGE_CONTRACT?'Preserve all six ordered stages and the one final CTA.': 'Keep a CTA optional; never add one to a story that ends without it.'} Do not add career guarantees, institutional claims or a link/guide/DM service. Do not cut words mechanically; rewrite naturally for speech.
 If comparing degrees without actual syllabuses, describe a practical comparison method. Do not assert that one degree is always narrow/deep and the other broad/strategic, or that either guarantees a particular career.
 ${reel.language === 'English' ? 'Use English.' : reel.language === 'Tanglish' ? 'Tanglish is allowed.' : `EVERY dialogue and caption must use native ${reel.language} script. Translate English words such as "vs", "Save", "Share", "syllabus" and "career". Only degree identifiers (B.Com, BBA, B.Tech, B.Sc, BCA, MBA), AI, ML, CSE, VLSI and Joy University may remain in Latin letters.`}
+${reel.conceptSelection?.deliveryPolicy==='evidence-and-action-v1'?'Preserve the exact supplied course-title evidence and the student’s action correction. Paraphrase research questions naturally for speech; planning wording is not mandatory.':'Preserve the selected visibleInput and nextQuestion verbatim in their existing on-screen graphics when they are already there; shorten speech instead of shortening these protected examples/questions.'}
 Scene budgets are deliberately below the hard delivery limit to leave room for pauses. Count before responding.
 ${JSON.stringify(reel.shots.map(s => ({ number: s.number, type: s.type, visual: s.visual, timestamp: s.timestamp,
   maximumDialogueUnits: Math.max(1, Math.floor((sceneSeconds(s.timestamp) || parseInt(reel.duration,10) / reel.shots.length) * rate)), unit,
@@ -46,10 +48,25 @@ Return exactly {"shots":[{"number":1,"dialogue":"...","onscreenText":"..."}, ...
 export function applyDialogueRepair(reel: ReelStoryboard, patch: unknown): ReelStoryboard {
   const shots = (patch as { shots?: unknown[] })?.shots;
   if (!Array.isArray(shots) || shots.length !== reel.shots.length) throw new Error('Incomplete dialogue repair');
-  return { ...reel, shots: reel.shots.map((shot, i) => {
+  const repaired = { ...reel, shots: reel.shots.map((shot, i) => {
     const edit = shots[i] as Record<string, unknown>;
     if (!edit || edit.number !== shot.number || typeof edit.dialogue !== 'string' || typeof edit.onscreenText !== 'string'
      ) throw new Error('Invalid dialogue repair');
     return { ...shot, dialogue: edit.dialogue, onscreenText: edit.onscreenText };
   }) };
+  // Speech compression must not erase already-visible concept evidence. Restore
+  // only original graphics, never invent a new claim or add words to speech.
+  if(reel.language==='English'){
+    const normalize=(text:string)=>text.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+    const demo=reel.conceptSelection?.selected.demonstration;
+    for(const anchor of [demo?.visibleInput,...(reel.conceptSelection?.deliveryPolicy==='evidence-and-action-v1'?[]:[demo?.nextQuestion])]){
+      if(!anchor)continue;
+      const target=normalize(anchor);
+      const actual=normalize(repaired.shots.map(s=>s.dialogue+' '+s.onscreenText+' '+s.visual).join(' '));
+      if(actual.includes(target))continue;
+      const sourceIndex=reel.shots.findIndex(s=>normalize(s.onscreenText).includes(target));
+      if(sourceIndex>=0)repaired.shots[sourceIndex].onscreenText=reel.shots[sourceIndex].onscreenText;
+    }
+  }
+  return repaired;
 }

@@ -1,0 +1,958 @@
+{
+  "sourceSha256": {
+    "shared/conceptQuality.ts": "949adf69708968e6fdc7c6d3554d4d75a8bc4128d59edd171d435083c58d3c26",
+    "shared/verifiedCreativeEvidence.ts": "1682e5d7bdd22d34f7480c562d8c60edb3b9f782e33163884217044f4bfe7bee",
+    "server/conceptQualityReview.ts": "c331ecf0e070104bf94417cbbe63f857584f9dd5a351fb159f011e6698d69284",
+    "server/channelComparison.ts": "93a19da11c2272480b5e4c6b7312b66a736e3fa04107e9e78097772c6c39875e",
+    "server/finishedStoryMemory.ts": "f91671912ab912d7ad8c571d5d2b99967e10b9fe534bc1364dff6e752374cd56",
+    "shared/narrativeStages.ts": "3787f2c6c4b514a9f6dedebce23c741cc07771c47e633ddca4b40bdf8addb6d4",
+    "server/informationIntegrity.ts": "9056fa864a9dc387f66d8974d3538a9ce6d272e5a055097b393e3283c1be1398",
+    "server/outputRepair.ts": "b62bf85a6bb8c24d238bdd67fe51e0c77267418e4072a81024d2d01ac50ebced",
+    "server/aiService.ts": "9d81c834096118df27ff5f73d84b554a50645e8eb885b2c66ad9a481472d44ba",
+    "server/conceptPlanner.ts": "62ee4d33c18232d2182709f52caf1e541d1d4cde64c3027c5de12f50e64f9c72",
+    "server/providerClient.ts": "a3e81fea7f000e14c340fac51ce594b00d8d98fa0746d6864e16426bfd4073df",
+    "server/generationSchemas.ts": "7ddb597a7ce8db450fd405d60bbbc9504a5a893fcdcd22805b72aaa4b532261d",
+    "server/editorialReview.ts": "dec6c184e879c426f0adde0433891051a32d945c3e0d47910b95ee46784325bd",
+    "server/requestBudget.ts": "9bab775522c7d923b48c5821580910e715ed3bff61665561a9af160dcea2be83",
+    "server/requestCancellation.ts": "572d35f3f32dc88557ba63d3aceb5239de05ec96dae0006519c7273cd1e547d2",
+    "server/aiErrors.ts": "2c1401b385d1dfa1f37570a10f725b618f9bf6aca4ac9af5c238f79c76cb980d",
+    "server/index.ts": "3c30fef29c3783ff415e16c04c97b040637eb4e4e9cd8b584355864a4da48b17",
+    "api/index.ts": "5bc11a077a4accce6e2c8f312f5c9bba36c51e099f84ee1ce50f5eb7b6b36508",
+    "src/services/api.ts": "3855ccb0cca2ed470c1d6076ebb4f6fbfef7ff6050d764bfdb0724cf00c5de9a",
+    "shared/providers.ts": "47747c0b93159ab54a0f407a495570d4db60bddbb62214615dda6d2a1cecb92f",
+    "shared/concepts.ts": "9efe68c78cf05f8f2ca0d55b779bd011a7da7b85cd8b7ca76d2e4df2178d9a11",
+    "shared/reasoningTools.ts": "ee03ba1be92558e0a85b3c4db0f641920884ba7e67fc0d3186aa7c2d5899b1d1",
+    "server/freshnessEngine.ts": "9bb80afd1f839a071f7e18ff7cd32e61334cfea5728a712d777899aae1310d67",
+    "server/realityTrigger.ts": "e21a51d8cd46d753d0d1423e10156db5e6f29fd392a9e0cdf3e4c7fb560f7dc8",
+    "shared/creativeFramework.ts": "90c50bdb93d3287ccd45f7da0a1a06c80692a4b5a300cc9d9a2c08d96427c909",
+    "shared/hlni.ts": "7e0d7339e20ca4532f619e89a71d5173e28d14049388eb9b504a38bfb3271b99",
+    "shared/editorialBenchmarks.ts": "026a0b8c28ad2ed40e3d6663f2439b2183872ad7d33a13ee8ef199123c65bef1",
+    "shared/channels.ts": "4297dc7e6d16d6d36bf1552d7c03241dcd32dffc350607efbbac91d4d2afe3ca",
+    "shared/knowledgeBase.ts": "55e4926c4d4d31105d6a3519d05091bc1f239e914131aae17fecb6519ef8252e",
+    "shared/schema.ts": "2deaab7e54478eb16907745ea871e6350e40d1ce069f62f02dd9c8b4a8e7f46f",
+    "docs/creative-references/BCOM_VS_BBA_APPROVED.md": "f0516cb75a6bfe2800d8573945ef847907ba5ec39b9befb9c983933ca128d7e6"
+  },
+  "request": {
+    "topic": "B.Com vs BBA",
+    "treatment": "Auto",
+    "language": "English",
+    "duration": "28 sec",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "diagnosticFunctionTags": true,
+    "narrativeContract": "six-stage-v2",
+    "qualityTarget": 90,
+    "conceptQualityContract": "story-spine-v1",
+    "totalTimeoutMs": 50000
+  },
+  "runs": [
+    "docs/phase3-evaluation/run-2026-11-16-01",
+    "docs/phase3-evaluation/run-2026-11-16-02",
+    "docs/phase3-evaluation/run-2026-11-16-03"
+  ],
+  "stats": [
+    {
+      "channel": "Trust",
+      "planned": 3,
+      "generated": 1,
+      "scored": 1,
+      "editorialPass": 0,
+      "above90": 0,
+      "mean": 76,
+      "min": 76,
+      "max": 76,
+      "cases": [
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-01",
+          "generation": {
+            "channel": "Trust",
+            "status": "FAILED",
+            "category": "output_validation",
+            "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+            "elapsedMs": 24700,
+            "finalStatus": "error",
+            "stages": [
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 11053,
+                "remainingMs": 38944,
+                "at": "2026-11-16T05:24:36.206Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 3233,
+                "remainingMs": 35703,
+                "at": "2026-11-16T05:24:39.447Z"
+              },
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 7799,
+                "remainingMs": 27904,
+                "at": "2026-11-16T05:24:47.246Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 2600,
+                "remainingMs": 25302,
+                "at": "2026-11-16T05:24:49.848Z"
+              }
+            ]
+          }
+        },
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-02",
+          "generation": {
+            "channel": "Trust",
+            "status": "GENERATED",
+            "file": "trust.json",
+            "readableFile": "trust.md",
+            "shotCount": 6,
+            "elapsedMs": 22985,
+            "qualityRepairCount": 0,
+            "finalStatus": "Draft",
+            "warnings": [
+              "Optional advisory review was skipped to preserve the validated Draft within the request budget. Human editorial review is required."
+            ],
+            "stages": [
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 11381,
+                "remainingMs": 38616,
+                "at": "2026-11-16T05:26:41.194Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 2825,
+                "remainingMs": 35783,
+                "at": "2026-11-16T05:26:44.027Z"
+              },
+              {
+                "stage": "story",
+                "outcome": "complete",
+                "elapsedMs": 8759,
+                "remainingMs": 27024,
+                "at": "2026-11-16T05:26:52.786Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "passed",
+                "elapsedMs": 4,
+                "remainingMs": 27020,
+                "at": "2026-11-16T05:26:52.790Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "skipped_insufficient_budget",
+                "elapsedMs": 0,
+                "remainingMs": 27019,
+                "at": "2026-11-16T05:26:52.791Z"
+              }
+            ]
+          },
+          "assessment": {
+            "channel": "Trust",
+            "ratings": {
+              "hlni": 4,
+              "differentiation": 4,
+              "coherence": 4,
+              "payoff": 4,
+              "production": 3,
+              "originality": 3
+            },
+            "triggers": {
+              "materialFactualError": false,
+              "missingMeaningfulInsight": false,
+              "unworkableProduction": false
+            },
+            "evidence": {
+              "hlni": "The shared Business Organization & Management title is supported by the two inspected official source rows and corrects a concrete misconception. Scope must remain those programmes/documents.",
+              "differentiation": "The actual evidence comparison differs from Connection’s peer task exercise.",
+              "coherence": "The initial assumption of completely different subjects is tested against real rows and replaced by a deeper comparison question.",
+              "payoff": "The question changes from degree labels to assessment criteria and syllabus depth, demonstrating a useful bounded research shift; it still stops short of a worked decision.",
+              "production": "Six timed scenes and available official source assets. Specific programme names and the 2025–26 document scope are not explicitly held in the graphic/voiceover; source-identifying footage needs production instructions.",
+              "originality": "The document reveal is familiar but specific evidence strengthens its usefulness."
+            },
+            "automaticTriggerExplanation": "No proven material factual error or impossible production instruction was established. Partial meaningful insight exists, but the rubric floors still apply. No external institutional assertions beyond the inspected source rows were certified.",
+            "reasons": [
+              "Overall score is below 85/100."
+            ],
+            "revisions": [
+              "Hold the exact programme names and document cohort visibly with the two highlighted rows.",
+              "State that shared titles do not establish identical depth or assessment.",
+              "Demonstrate how one known comparison criterion changes the student’s next investigation without inventing a university assessment fact."
+            ],
+            "total": 76,
+            "decision": "REVISE",
+            "sourceFile": "trust.json",
+            "sourceSha256": "6eff7a81a9950175d671e0f233684d8d8cc9342f314970fbd2adc3076579b6a7",
+            "productionMetrics": {
+              "shotCount": 6,
+              "chosenTreatment": "Informative",
+              "totalSpokenWords": 51,
+              "shots": [
+                {
+                  "number": 1,
+                  "functions": [
+                    "HOOK"
+                  ],
+                  "timecode": "00:00 – 00:04",
+                  "seconds": 4,
+                  "spokenWords": 9
+                },
+                {
+                  "number": 2,
+                  "functions": [
+                    "PROBLEM"
+                  ],
+                  "timecode": "00:04 – 00:08",
+                  "seconds": 4,
+                  "spokenWords": 8
+                },
+                {
+                  "number": 3,
+                  "functions": [
+                    "PATTERN_INTERRUPT"
+                  ],
+                  "timecode": "00:08 – 00:12",
+                  "seconds": 4,
+                  "spokenWords": 7
+                },
+                {
+                  "number": 4,
+                  "functions": [
+                    "VALUE"
+                  ],
+                  "timecode": "00:12 – 00:19",
+                  "seconds": 7,
+                  "spokenWords": 8
+                },
+                {
+                  "number": 5,
+                  "functions": [
+                    "PAYOFF"
+                  ],
+                  "timecode": "00:19 – 00:24",
+                  "seconds": 5,
+                  "spokenWords": 13
+                },
+                {
+                  "number": 6,
+                  "functions": [
+                    "CTA"
+                  ],
+                  "timecode": "00:24 – 00:28",
+                  "seconds": 4,
+                  "spokenWords": 6
+                }
+              ]
+            }
+          }
+        },
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-03",
+          "generation": {
+            "channel": "Trust",
+            "status": "FAILED",
+            "category": "output_validation",
+            "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+            "elapsedMs": 22945,
+            "finalStatus": "error",
+            "stages": [
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 10755,
+                "remainingMs": 39242,
+                "at": "2026-11-16T05:27:41.183Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 2961,
+                "remainingMs": 36275,
+                "at": "2026-11-16T05:27:44.150Z"
+              },
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 7739,
+                "remainingMs": 28535,
+                "at": "2026-11-16T05:27:51.890Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 1477,
+                "remainingMs": 27057,
+                "at": "2026-11-16T05:27:53.368Z"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "channel": "Connection",
+      "planned": 3,
+      "generated": 2,
+      "scored": 2,
+      "editorialPass": 0,
+      "above90": 0,
+      "mean": 63,
+      "min": 63,
+      "max": 63,
+      "cases": [
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-01",
+          "generation": {
+            "channel": "Connection",
+            "status": "GENERATED",
+            "file": "connection.json",
+            "readableFile": "connection.md",
+            "shotCount": 6,
+            "elapsedMs": 22635,
+            "qualityRepairCount": 1,
+            "finalStatus": "Draft",
+            "warnings": [
+              "Optional advisory review was skipped to preserve the validated Draft within the request budget. Human editorial review is required."
+            ],
+            "stages": [
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 10619,
+                "remainingMs": 39381,
+                "at": "2026-11-16T05:25:00.469Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 2079,
+                "remainingMs": 37300,
+                "at": "2026-11-16T05:25:02.550Z"
+              },
+              {
+                "stage": "story",
+                "outcome": "complete",
+                "elapsedMs": 6375,
+                "remainingMs": 30924,
+                "at": "2026-11-16T05:25:08.926Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "Delivery (Scene pacing)",
+                "elapsedMs": 5,
+                "remainingMs": 30919,
+                "at": "2026-11-16T05:25:08.931Z"
+              },
+              {
+                "stage": "repair",
+                "outcome": "complete",
+                "elapsedMs": 3547,
+                "remainingMs": 27371,
+                "at": "2026-11-16T05:25:12.479Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "passed",
+                "elapsedMs": 3,
+                "remainingMs": 27368,
+                "at": "2026-11-16T05:25:12.482Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "skipped_insufficient_budget",
+                "elapsedMs": 0,
+                "remainingMs": 27368,
+                "at": "2026-11-16T05:25:12.482Z"
+              }
+            ]
+          },
+          "assessment": {
+            "channel": "Connection",
+            "ratings": {
+              "hlni": 3,
+              "differentiation": 3,
+              "coherence": 4,
+              "payoff": 3,
+              "production": 3,
+              "originality": 2
+            },
+            "triggers": {
+              "materialFactualError": false,
+              "missingMeaningfulInsight": false,
+              "unworkableProduction": false
+            },
+            "evidence": {
+              "hlni": "The task-question method is useful, but the break-even task provides no actual inputs or demonstrated calculation from which the sticking point emerges.",
+              "differentiation": "Two students and a peer-choice dilemma support Connection, but most speech is a general instruction; their different observations and supportive exchange are not actually developed.",
+              "coherence": "The bakery task, cost-component difficulty and resulting breakdown question remain within one academic investigation.",
+              "payoff": "A specific question improves on copying a friend, but the ending returns to a smile and generic instruction without showing a consequential interaction.",
+              "production": "Six timed scenes and practical props; technical fixed/variable costs are unexplained, and the promised task has no visible data.",
+              "originality": "The desk, brochures, worksheet and confident close remain familiar."
+            },
+            "automaticTriggerExplanation": "No proven material factual error or impossible production instruction was established. Partial meaningful insight exists, but the rubric floors still apply. No external institutional assertions beyond the inspected source rows were certified.",
+            "reasons": [
+              "Overall score is below 85/100.",
+              "HLNI is below 4/5.",
+              "Channel differentiation is below 4/5."
+            ],
+            "revisions": [
+              "Supply a tiny understandable example with enough inputs to expose the exact sticking point.",
+              "Show each student articulating their different uncertainty and asking for the corresponding help.",
+              "Use the question in a visible interaction rather than ending with generic confidence."
+            ],
+            "total": 63,
+            "decision": "REVISE",
+            "sourceFile": "connection.json",
+            "sourceSha256": "4fecae7c10ae1bc4dcbe72cf6d6bb16dbed6d27849c3dadf80a2c1937aa2a728",
+            "productionMetrics": {
+              "shotCount": 6,
+              "chosenTreatment": "Informative",
+              "totalSpokenWords": 51,
+              "shots": [
+                {
+                  "number": 1,
+                  "functions": [
+                    "HOOK"
+                  ],
+                  "timecode": "00:00-00:04",
+                  "seconds": 4,
+                  "spokenWords": 8
+                },
+                {
+                  "number": 2,
+                  "functions": [
+                    "PROBLEM"
+                  ],
+                  "timecode": "00:04-00:09",
+                  "seconds": 5,
+                  "spokenWords": 8
+                },
+                {
+                  "number": 3,
+                  "functions": [
+                    "PATTERN_INTERRUPT"
+                  ],
+                  "timecode": "00:09-00:13",
+                  "seconds": 4,
+                  "spokenWords": 8
+                },
+                {
+                  "number": 4,
+                  "functions": [
+                    "VALUE"
+                  ],
+                  "timecode": "00:13-00:20",
+                  "seconds": 7,
+                  "spokenWords": 8
+                },
+                {
+                  "number": 5,
+                  "functions": [
+                    "PAYOFF"
+                  ],
+                  "timecode": "00:20-00:25",
+                  "seconds": 5,
+                  "spokenWords": 12
+                },
+                {
+                  "number": 6,
+                  "functions": [
+                    "CTA"
+                  ],
+                  "timecode": "00:25-00:28",
+                  "seconds": 3,
+                  "spokenWords": 7
+                }
+              ]
+            }
+          }
+        },
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-02",
+          "generation": {
+            "channel": "Connection",
+            "status": "GENERATED",
+            "file": "connection.json",
+            "readableFile": "connection.md",
+            "shotCount": 6,
+            "elapsedMs": 11013,
+            "qualityRepairCount": 2,
+            "finalStatus": "Draft",
+            "warnings": [
+              "The optional advisory rewrite failed output checks. The validated initial Draft was retained; human editorial review is required."
+            ],
+            "stages": [
+              {
+                "stage": "story",
+                "outcome": "complete",
+                "elapsedMs": 4344,
+                "remainingMs": 45656,
+                "at": "2026-11-16T05:26:57.138Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "passed",
+                "elapsedMs": 1,
+                "remainingMs": 45655,
+                "at": "2026-11-16T05:26:57.139Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "attempted",
+                "elapsedMs": 0,
+                "remainingMs": 45655,
+                "at": "2026-11-16T05:26:57.139Z"
+              },
+              {
+                "stage": "critique",
+                "outcome": "complete",
+                "elapsedMs": 1407,
+                "remainingMs": 44247,
+                "at": "2026-11-16T05:26:58.547Z"
+              },
+              {
+                "stage": "advisory_rewrite",
+                "outcome": "complete",
+                "elapsedMs": 5258,
+                "remainingMs": 38989,
+                "at": "2026-11-16T05:27:03.805Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "Delivery (Scene pacing)",
+                "elapsedMs": 0,
+                "remainingMs": 38989,
+                "at": "2026-11-16T05:27:03.805Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "retained_valid_draft",
+                "category": "output_validation",
+                "elapsedMs": 0,
+                "remainingMs": 38989,
+                "at": "2026-11-16T05:27:03.805Z"
+              }
+            ]
+          },
+          "assessment": {
+            "channel": "Connection",
+            "ratings": {
+              "hlni": 3,
+              "differentiation": 4,
+              "coherence": 3,
+              "payoff": 3,
+              "production": 3,
+              "originality": 2
+            },
+            "triggers": {
+              "materialFactualError": false,
+              "missingMeaningfulInsight": false,
+              "unworkableProduction": false
+            },
+            "evidence": {
+              "hlni": "It shows a specific question about fixed overheads, but the source task has no actual cost items or values; the observation is asserted rather than demonstrated.",
+              "differentiation": "The friend supplies the task and the student voices a difficulty, creating a more recognisable human exchange than a lone narrator.",
+              "coherence": "Fixed overheads relate to the break-even exercise, but the task trial does not visibly establish where the confusion occurred. The opening stereotypes are not explicitly resolved.",
+              "payoff": "The student records a more specific question, then receives a generic course-team CTA; the intended relief is not tied to a demonstrated reasoning change.",
+              "production": "Filmable library setup and pacing within estimated limits, but cost-volume-profit vocabulary is dense for a beginner. Method references list curriculum PDFs that do not support the task-journal reasoning.",
+              "originality": "The stressed student, worksheet and relieved reaction repeat common executions."
+            },
+            "automaticTriggerExplanation": "No proven material factual error or impossible production instruction was established. Partial meaningful insight exists, but the rubric floors still apply. No external institutional assertions beyond the inspected source rows were certified.",
+            "reasons": [
+              "Overall score is below 85/100.",
+              "HLNI is below 4/5."
+            ],
+            "revisions": [
+              "Show one simple expense and the exact classification ambiguity before naming technical terms.",
+              "Explicitly bound the exercise as a way to ask for help, not to diagnose degree fit.",
+              "Remove irrelevant curriculum citations from the method’s support; cite only claims those rows actually establish."
+            ],
+            "total": 63,
+            "decision": "REVISE",
+            "sourceFile": "connection.json",
+            "sourceSha256": "20dcd6194dced459ce2b3fc90d23176c5261968f83433bb4348cb2e582a122a1",
+            "productionMetrics": {
+              "shotCount": 6,
+              "chosenTreatment": "Informative",
+              "totalSpokenWords": 58,
+              "shots": [
+                {
+                  "number": 1,
+                  "functions": [
+                    "HOOK"
+                  ],
+                  "timecode": "00:00 - 00:04",
+                  "seconds": 4,
+                  "spokenWords": 11
+                },
+                {
+                  "number": 2,
+                  "functions": [
+                    "PROBLEM"
+                  ],
+                  "timecode": "00:04 - 00:08",
+                  "seconds": 4,
+                  "spokenWords": 10
+                },
+                {
+                  "number": 3,
+                  "functions": [
+                    "PATTERN_INTERRUPT"
+                  ],
+                  "timecode": "00:08 - 00:12",
+                  "seconds": 4,
+                  "spokenWords": 7
+                },
+                {
+                  "number": 4,
+                  "functions": [
+                    "VALUE"
+                  ],
+                  "timecode": "00:12 - 00:18",
+                  "seconds": 6,
+                  "spokenWords": 7
+                },
+                {
+                  "number": 5,
+                  "functions": [
+                    "PAYOFF"
+                  ],
+                  "timecode": "00:18 - 00:24",
+                  "seconds": 6,
+                  "spokenWords": 14
+                },
+                {
+                  "number": 6,
+                  "functions": [
+                    "CTA"
+                  ],
+                  "timecode": "00:24 - 00:28",
+                  "seconds": 4,
+                  "spokenWords": 9
+                }
+              ]
+            }
+          }
+        },
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-03",
+          "generation": {
+            "channel": "Connection",
+            "status": "FAILED",
+            "category": "output_validation",
+            "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+            "elapsedMs": 18858,
+            "finalStatus": "error",
+            "stages": [
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 9601,
+                "remainingMs": 40399,
+                "at": "2026-11-16T05:28:02.972Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 1363,
+                "remainingMs": 39034,
+                "at": "2026-11-16T05:28:04.337Z"
+              },
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 6870,
+                "remainingMs": 32164,
+                "at": "2026-11-16T05:28:11.207Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 1020,
+                "remainingMs": 31142,
+                "at": "2026-11-16T05:28:12.229Z"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "channel": "Discovery",
+      "planned": 3,
+      "generated": 1,
+      "scored": 1,
+      "editorialPass": 0,
+      "above90": 0,
+      "mean": 64,
+      "min": 64,
+      "max": 64,
+      "cases": [
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-01",
+          "generation": {
+            "channel": "Discovery",
+            "status": "GENERATED",
+            "file": "discovery.json",
+            "readableFile": "discovery.md",
+            "shotCount": 6,
+            "elapsedMs": 18043,
+            "qualityRepairCount": 1,
+            "finalStatus": "Draft",
+            "warnings": [],
+            "stages": [
+              {
+                "stage": "story",
+                "outcome": "complete",
+                "elapsedMs": 6740,
+                "remainingMs": 43259,
+                "at": "2026-11-16T05:25:19.227Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "passed",
+                "elapsedMs": 1,
+                "remainingMs": 43258,
+                "at": "2026-11-16T05:25:19.228Z"
+              },
+              {
+                "stage": "advisory",
+                "outcome": "attempted",
+                "elapsedMs": 0,
+                "remainingMs": 43258,
+                "at": "2026-11-16T05:25:19.228Z"
+              },
+              {
+                "stage": "critique",
+                "outcome": "complete",
+                "elapsedMs": 5079,
+                "remainingMs": 38179,
+                "at": "2026-11-16T05:25:24.307Z"
+              },
+              {
+                "stage": "advisory_rewrite",
+                "outcome": "complete",
+                "elapsedMs": 6217,
+                "remainingMs": 31961,
+                "at": "2026-11-16T05:25:30.525Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "passed",
+                "elapsedMs": 2,
+                "remainingMs": 31959,
+                "at": "2026-11-16T05:25:30.527Z"
+              }
+            ]
+          },
+          "assessment": {
+            "channel": "Discovery",
+            "ratings": {
+              "hlni": 3,
+              "differentiation": 4,
+              "coherence": 3,
+              "payoff": 3,
+              "production": 3,
+              "originality": 3
+            },
+            "triggers": {
+              "materialFactualError": false,
+              "missingMeaningfulInsight": false,
+              "unworkableProduction": false
+            },
+            "evidence": {
+              "hlni": "The arithmetic counterexample is valid, but equal totals hiding components is familiar and the actual relevance of 100 to this degree comparison is unspecified.",
+              "differentiation": "The physical arithmetic reveal offers a distinct mechanism from the peer task journal; shared setting alone is not a failure.",
+              "coherence": "The arithmetic sequence connects internally, but the opening degree analogy has no defined comparable total and the CTA shifts to task components.",
+              "payoff": "Writing a breakdown question restates the method rather than showing a meaningful change in the original comparison.",
+              "production": "Filmable illustrative A/B sums and clear timecodes; Business Path/Management Path folders make the neutral illustration’s scope ambiguous.",
+              "originality": "A recognisable reveal with modest execution novelty."
+            },
+            "automaticTriggerExplanation": "No proven material factual error or impossible production instruction was established. Partial meaningful insight exists, but the rubric floors still apply. No external institutional assertions beyond the inspected source rows were certified.",
+            "reasons": [
+              "Overall score is below 85/100.",
+              "HLNI is below 4/5."
+            ],
+            "revisions": [
+              "Explain the narrowly bounded relevance of the arithmetic example without assigning invented totals to either degree.",
+              "Show what a previously hidden component changes about the viewer’s next investigation.",
+              "End on the same comparison rather than changing the CTA to generic tasks."
+            ],
+            "total": 64,
+            "decision": "REVISE",
+            "sourceFile": "discovery.json",
+            "sourceSha256": "4d20112d123cd7749e74f738de6efdc1caeafe53c1788f8a711cde176bfb77f8",
+            "productionMetrics": {
+              "shotCount": 6,
+              "chosenTreatment": "Informative",
+              "totalSpokenWords": 51,
+              "shots": [
+                {
+                  "number": 1,
+                  "functions": [
+                    "HOOK"
+                  ],
+                  "timecode": "00:00 – 00:04",
+                  "seconds": 4,
+                  "spokenWords": 11
+                },
+                {
+                  "number": 2,
+                  "functions": [
+                    "PROBLEM"
+                  ],
+                  "timecode": "00:04 – 00:08",
+                  "seconds": 4,
+                  "spokenWords": 9
+                },
+                {
+                  "number": 3,
+                  "functions": [
+                    "PATTERN_INTERRUPT"
+                  ],
+                  "timecode": "00:08 – 00:13",
+                  "seconds": 5,
+                  "spokenWords": 5
+                },
+                {
+                  "number": 4,
+                  "functions": [
+                    "VALUE"
+                  ],
+                  "timecode": "00:13 – 00:19",
+                  "seconds": 6,
+                  "spokenWords": 9
+                },
+                {
+                  "number": 5,
+                  "functions": [
+                    "PAYOFF"
+                  ],
+                  "timecode": "00:19 – 00:24",
+                  "seconds": 5,
+                  "spokenWords": 8
+                },
+                {
+                  "number": 6,
+                  "functions": [
+                    "CTA"
+                  ],
+                  "timecode": "00:24 – 00:28",
+                  "seconds": 4,
+                  "spokenWords": 9
+                }
+              ]
+            }
+          }
+        },
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-02",
+          "generation": {
+            "channel": "Discovery",
+            "status": "FAILED",
+            "category": "output_validation",
+            "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+            "elapsedMs": 10312,
+            "finalStatus": "error",
+            "stages": [
+              {
+                "stage": "story",
+                "outcome": "complete",
+                "elapsedMs": 4083,
+                "remainingMs": 45916,
+                "at": "2026-11-16T05:27:07.892Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "Delivery (Spoken pacing)",
+                "elapsedMs": 1,
+                "remainingMs": 45915,
+                "at": "2026-11-16T05:27:07.893Z"
+              },
+              {
+                "stage": "repair",
+                "outcome": "complete",
+                "elapsedMs": 1378,
+                "remainingMs": 44537,
+                "at": "2026-11-16T05:27:09.271Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "Gate 3 (Idea Fidelity & Entity Persistence)",
+                "elapsedMs": 2,
+                "remainingMs": 44535,
+                "at": "2026-11-16T05:27:09.273Z"
+              },
+              {
+                "stage": "repair",
+                "outcome": "complete",
+                "elapsedMs": 4846,
+                "remainingMs": 39689,
+                "at": "2026-11-16T05:27:14.119Z"
+              },
+              {
+                "stage": "validation",
+                "outcome": "Delivery (Spoken pacing)",
+                "elapsedMs": 1,
+                "remainingMs": 39688,
+                "at": "2026-11-16T05:27:14.120Z"
+              }
+            ]
+          }
+        },
+        {
+          "run": "docs/phase3-evaluation/run-2026-11-16-03",
+          "generation": {
+            "channel": "Discovery",
+            "status": "FAILED",
+            "category": "output_validation",
+            "message": "The provider responded, but its storyboard did not pass the output checks. No template was substituted.",
+            "elapsedMs": 19130,
+            "finalStatus": "error",
+            "stages": [
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 9425,
+                "remainingMs": 40574,
+                "at": "2026-11-16T05:28:21.656Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 1243,
+                "remainingMs": 39328,
+                "at": "2026-11-16T05:28:22.902Z"
+              },
+              {
+                "stage": "concept",
+                "outcome": "complete",
+                "elapsedMs": 6982,
+                "remainingMs": 32345,
+                "at": "2026-11-16T05:28:29.885Z"
+              },
+              {
+                "stage": "concept_review",
+                "outcome": "complete",
+                "elapsedMs": 1473,
+                "remainingMs": 30870,
+                "at": "2026-11-16T05:28:31.360Z"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "note": "Scores are assistant editorial judgements. Unavailable outputs are unscored, not assigned zero. Means cover scored outputs only and can be biased by generation failures. Repetitions test the combined implementation, not causal contribution of each change. No independent blinded human panel or audience test.",
+  "stagingDeployed": false,
+  "productionChanged": false
+}

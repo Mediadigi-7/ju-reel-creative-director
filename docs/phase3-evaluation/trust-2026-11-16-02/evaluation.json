@@ -1,0 +1,116 @@
+{
+  "evaluatedAt": "2026-11-16T06:40:58.648Z",
+  "assessor": "Assistant editorial assessment of actual complete Gemini output; not generator self-score or independent blinded human review",
+  "ratingScale": "0–5",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": true,
+  "decision": "REVISE",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 3,
+        "differentiation": 4,
+        "coherence": 3,
+        "payoff": 3,
+        "production": 3,
+        "originality": 2
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The source-backed shared row is useful, but the script extends it into an unsupported assertion about four unique course titles.",
+        "differentiation": "The source comparison serves Trust; other fresh channels are not assessed.",
+        "coherence": "The title assumption connects to real evidence, then the unsupported count breaks the supported reasoning chain.",
+        "payoff": "The student starts a comparison, but its decisive fields are unverified and the script does not demonstrate a safe concrete consequence.",
+        "production": "Continuous six-scene timing and practical assets, but do not film invented comparison entries or imply equal course content.",
+        "originality": "The divider-line/brochure reveal remains a familiar device."
+      },
+      "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+      "reasons": [
+        "Overall score is below 85/100.",
+        "HLNI is below 4/5."
+      ],
+      "revisions": [
+        "Remove the unsupported four-unique-subject claim and the implication of identical foundations.",
+        "Use only the inspected row; mark other course details unknown rather than inventing a full comparison."
+      ],
+      "total": 63,
+      "decision": "REVISE",
+      "sourceFile": "trust.json",
+      "sourceSha256": "b28ce8edea4a62227e9c59763177be103d0979861b68c39c66e8166e73113c19",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 57,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 9
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 10
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:12",
+            "seconds": 4,
+            "spokenWords": 8
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:12 – 00:18",
+            "seconds": 6,
+            "spokenWords": 7
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:18 – 00:24",
+            "seconds": 6,
+            "spokenWords": 18
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 5
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

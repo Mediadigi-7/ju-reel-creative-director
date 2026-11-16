@@ -59,8 +59,13 @@ assert.deepEqual(validateAndRepairStoryboard(seed,seed.reelTitle).data.shots,see
 const original=globalThis.fetch;
 const restorePlanningMocks=installConceptPlanningMocks();
 try {
- for(const provider of ['gemini','openai'] as const) for(const count of [3,8]) {
+ globalThis.fetch=async()=>new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(makeReel(3))}]}}]}));
+ await assert.rejects(generateStoryboard({reelTitle:seed.reelTitle,apiProvider:'gemini',apiKey:'test-only'},{maxRepairs:0}),/storyboard|quality|generate|output/i,'New generation cannot opt out of six stages with legacy-shaped data');
+ for(const provider of ['gemini','openai'] as const) for(const count of [6,8]) {
   const reel={...makeReel(count),creativeDirection:'Funny'};
+  const types=['HOOK','PROBLEM','PATTERN_INTERRUPT',...Array(count-5).fill('VALUE'),'PAYOFF','CTA'] as const;
+  reel.shots.forEach((shot,i)=>{shot.type=types[i];shot.functions=[types[i]];});
+  reel.shots.at(-1)!.dialogue='Compare actual tasks.';
   globalThis.fetch=async(_url,init)=>{
    const body=JSON.parse(init!.body as string);
    const prompt=provider==='gemini'?body.contents[0].parts[0].text:body.messages[1].content;
@@ -72,10 +77,10 @@ try {
   assert.equal(result.creativeDirection,'Funny','Auto retains the AI-selected treatment');
  }
  const connectionFixture=generateOfflineStoryboard('How do I choose the right college?');
- connectionFixture.shots=connectionFixture.shots.slice(0,3);
+
  Object.assign(connectionFixture,withHlniTestProposal(connectionFixture));
  globalThis.fetch=async()=>new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(connectionFixture)}]}}]}));
- assert.equal((await testAiGeneration({provider:'gemini',apiKey:'test-only'})).shotCount,3,'Live test does not demand six scenes');
+ assert.equal((await testAiGeneration({provider:'gemini',apiKey:'test-only'})).shotCount,6,'Live test enforces six stages for new generation');
  const result={provider:'gemini',model:(await import('../shared/providers.js')).PROVIDER_MODELS.gemini,checkedAt:new Date().toISOString(),elapsedMs:10,success:true,shotCount:3};
  globalThis.fetch=async()=>new Response(JSON.stringify(result));
  assert.equal((await apiTestAiGeneration('gemini','test-only')).shotCount,3,'Browser test helper accepts variable shot counts');

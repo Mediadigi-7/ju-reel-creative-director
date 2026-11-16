@@ -1,0 +1,664 @@
+[
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A short illustrative activity identifies specific knowledge gaps instead of relying on degree stereotypes.",
+          "audienceGap": "Students feel overwhelmed by general degree descriptions and lack a process to compare them.",
+          "viewerChange": "Moves from passive browsing to active, question-driven investigation.",
+          "supportType": "method",
+          "support": "The method isolates specific task-based needs, providing a concrete metric for comparison rather than abstract speculation.",
+          "references": [
+            "Notebook entry",
+            "Course brief comparison"
+          ],
+          "shotNumbers": [
+            4,
+            5
+          ],
+          "payoffShotNumbers": [
+            5
+          ],
+          "payoff": "The student transforms vague anxiety into a researchable question about specific module coverage."
+        }
+      ],
+      "id": "reel_1794643246315_09ylfl",
+      "reelTitle": "B.Com vs BBA: Finding Your Focus",
+      "creativeAngle": "Using a specific inquiry task to clarify degree exploration",
+      "objective": "Empower students to move from general confusion to specific, actionable research",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Trendy",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "Overwhelmed student",
+          "timestamp": "00:00 – 00:04",
+          "visual": "Student sitting at a desk with two brochures, looking confused.",
+          "dialogue": "Stuck between B.Com and BBA? You aren't alone.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close-up, empathetic look.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "Vague research",
+          "timestamp": "00:04 – 00:08",
+          "visual": "Student scrolling aimlessly on a laptop screen.",
+          "dialogue": "Stop guessing. General descriptions won't tell you how you'll actually spend your time.",
+          "onscreenText": "Stop guessing",
+          "cameraPerformance": "Over-the-shoulder shot.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "Journaling activity",
+          "timestamp": "00:08 – 00:12",
+          "visual": "Student opens a notebook and writes with intent.",
+          "dialogue": "Try this: pick a tiny case study and write down where you get stuck.",
+          "onscreenText": "Try this method",
+          "cameraPerformance": "Top-down view of the notebook.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "Recording the gap",
+          "timestamp": "00:12 – 00:18",
+          "visual": "Close up of writing: 'Example: Help Needed: Defining resource constraints. Question: Where is this taught?'",
+          "dialogue": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+          "onscreenText": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+          "cameraPerformance": "Extreme close-up of handwritten notes.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "Refined focus",
+          "timestamp": "00:18 – 00:24",
+          "visual": "Student smiling, looking at the course search page with a clear question.",
+          "dialogue": "Now you have a real map. Ask: Is this concept covered in the introductory modules?",
+          "onscreenText": "Is this concept covered in the introductory modules?",
+          "cameraPerformance": "Medium shot, confident posture.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "Final action",
+          "timestamp": "00:24 – 00:28",
+          "visual": "Student closes the laptop and leans back satisfied.",
+          "dialogue": "Use this to compare your next course brief.",
+          "onscreenText": "Compare course briefs",
+          "cameraPerformance": "Wide shot, warm lighting.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, authentic student study environment",
+        "performance": "Natural, conversational, and relatable",
+        "camera": "Handheld feel for authenticity",
+        "editing": "Paced to allow reading time for the notebook text",
+        "sound": "Lo-fi acoustic background track",
+        "props": [
+          "Laptop",
+          "Notebook",
+          "Pen",
+          "B.Com/BBA brochures"
+        ],
+        "locations": [
+          "Student bedroom or library desk"
+        ],
+        "casting": "Two students, casual attire",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "A journal-based method turns vague degree comparison into a targeted research question.",
+        "shootingPriority": [
+          "Notebook close-up",
+          "Student reaction",
+          "Laptop screen interface"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-14T08:00:46.315Z",
+      "updatedAt": "2026-11-14T08:00:46.315Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Connection",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_01",
+          "title": "The Sticking Point Journal",
+          "audienceGap": "Students feel overwhelmed by the choice and don't know how to start researching.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Uses a journal to isolate a specific point of confusion rather than feeling lost.",
+          "concept": "Two students talk through a task; one records a specific moment where they needed help.",
+          "mechanismKey": "journal_method",
+          "device": "A personal notebook entry showing the transition from 'I'm stuck' to 'I need this answer'.",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "The student feels empowered by asking a precise, researchable question.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A short case study on project resource allocation.",
+            "visibleInput": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+            "observation": "The student identifies exactly where the difficulty lies in the process.",
+            "nextQuestion": "Is this concept covered in the introductory modules?"
+          },
+          "treatment": "Trendy"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "audit_worksheet",
+            "device": "Split-screen comparison of a task, an assessment criterion, and a feedback source."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "journal_method",
+            "device": "A personal notebook entry showing the transition from 'I'm stuck' to 'I need this answer'."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "evidence_gap",
+            "device": "A 'reveal' animation showing the lack of institutional source for the example."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / audit_worksheet; Connection = task_question_journal / journal_method; Discovery = insufficient_information / evidence_gap. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      },
+      "narrativeContract": "six-stage-v2"
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Delivery (Scene pacing)",
+      "failureReason": "Shot #2 has too much dialogue for its timestamp.",
+      "repairInstruction": "Shorten shot #2 to at most 12 spoken words while preserving story coherence, useful insight and resolution; do not add a CTA."
+    }
+  },
+  {
+    "candidate": {
+      "narrativeContract": "six-stage-v2",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_01",
+          "title": "The Sticking Point Journal",
+          "audienceGap": "Students feel overwhelmed by the choice and don't know how to start researching.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Uses a journal to isolate a specific point of confusion rather than feeling lost.",
+          "concept": "Two students talk through a task; one records a specific moment where they needed help.",
+          "mechanismKey": "journal_method",
+          "device": "A personal notebook entry showing the transition from 'I'm stuck' to 'I need this answer'.",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "The student feels empowered by asking a precise, researchable question.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A short case study on project resource allocation.",
+            "visibleInput": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+            "observation": "The student identifies exactly where the difficulty lies in the process.",
+            "nextQuestion": "Is this concept covered in the introductory modules?"
+          },
+          "treatment": "Trendy"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "audit_worksheet",
+            "device": "Split-screen comparison of a task, an assessment criterion, and a feedback source."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "journal_method",
+            "device": "A personal notebook entry showing the transition from 'I'm stuck' to 'I need this answer'."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "evidence_gap",
+            "device": "A 'reveal' animation showing the lack of institutional source for the example."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / audit_worksheet; Connection = task_question_journal / journal_method; Discovery = insufficient_information / evidence_gap. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      },
+      "hlni": [
+        {
+          "insight": "A short illustrative activity identifies specific knowledge gaps instead of relying on degree stereotypes.",
+          "audienceGap": "Students feel overwhelmed by general degree descriptions and lack a process to compare them.",
+          "viewerChange": "Moves from passive browsing to active, question-driven investigation.",
+          "supportType": "method",
+          "support": "The method isolates specific task-based needs, providing a concrete metric for comparison rather than abstract speculation.",
+          "references": [
+            "Notebook entry",
+            "Course brief comparison"
+          ],
+          "shotNumbers": [
+            4,
+            5
+          ],
+          "payoffShotNumbers": [
+            5
+          ],
+          "payoff": "The student transforms vague anxiety into a researchable question about specific module coverage."
+        }
+      ],
+      "channel": "Connection",
+      "id": "reel_1794643246315_09ylfl",
+      "reelTitle": "B.Com vs BBA: Finding Your Focus",
+      "creativeAngle": "Using a specific inquiry task to clarify degree exploration",
+      "objective": "Empower students to move from general confusion to specific, actionable research",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Trendy",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "Overwhelmed student",
+          "timestamp": "00:00 – 00:04",
+          "visual": "Student sitting at a desk with two brochures, looking confused.",
+          "dialogue": "Stuck between B.Com and BBA? You are not alone.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close-up, empathetic look.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "Vague research",
+          "timestamp": "00:04 – 00:08",
+          "visual": "Student scrolling aimlessly on a laptop screen.",
+          "dialogue": "Stop guessing. General descriptions do not show your daily focus.",
+          "onscreenText": "Stop guessing",
+          "cameraPerformance": "Over-the-shoulder shot.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "Journaling activity",
+          "timestamp": "00:08 – 00:12",
+          "visual": "Student opens a notebook and writes with intent.",
+          "dialogue": "Try this: pick a tiny case study and note your sticking point.",
+          "onscreenText": "Try this method",
+          "cameraPerformance": "Top-down view of the notebook.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "Recording the gap",
+          "timestamp": "00:12 – 00:18",
+          "visual": "Close up of writing: 'Example: Help Needed: Defining resource constraints. Question: Where is this taught?'",
+          "dialogue": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+          "onscreenText": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+          "cameraPerformance": "Extreme close-up of handwritten notes.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "Refined focus",
+          "timestamp": "00:18 – 00:24",
+          "visual": "Student smiling, looking at the course search page with a clear question.",
+          "dialogue": "Now you have a map. Ask: Is this covered in introductory modules?",
+          "onscreenText": "Is this covered in introductory modules?",
+          "cameraPerformance": "Medium shot, confident posture.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "Final action",
+          "timestamp": "00:24 – 00:28",
+          "visual": "Student closes the laptop and leans back satisfied.",
+          "dialogue": "Use this to compare your next course brief.",
+          "onscreenText": "Compare course briefs",
+          "cameraPerformance": "Wide shot, warm lighting.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, authentic student study environment",
+        "performance": "Natural, conversational, and relatable",
+        "camera": "Handheld feel for authenticity",
+        "editing": "Paced to allow reading time for the notebook text",
+        "sound": "Lo-fi acoustic background track",
+        "props": [
+          "Laptop",
+          "Notebook",
+          "Pen",
+          "B.Com/BBA brochures"
+        ],
+        "locations": [
+          "Student bedroom or library desk"
+        ],
+        "casting": "Two students, casual attire",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "A journal-based method turns vague degree comparison into a targeted research question.",
+        "shootingPriority": [
+          "Notebook close-up",
+          "Student reaction",
+          "Laptop screen interface"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-14T08:00:46.315Z",
+      "updatedAt": "2026-11-14T08:00:59.333Z",
+      "status": "Draft",
+      "version": 1
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Concept delivery",
+      "failureReason": "The actual dialogue, graphics or visible action must include the selected resulting question: Is this concept covered in the introductory modules?",
+      "repairInstruction": "The actual dialogue, graphics or visible action must include the selected resulting question: Is this concept covered in the introductory modules?. Preserve the selected concrete example, recorded observation and limitations. These can appear in any shot or combined exchange; do not add a compulsory scene or CTA."
+    }
+  },
+  {
+    "candidate": {
+      "hlni": [
+        {
+          "insight": "A short illustrative task can reveal your actual learning needs, replacing vague anxiety with researchable questions.",
+          "audienceGap": "Students rely on stereotypes or general descriptions to choose degrees.",
+          "viewerChange": "The viewer stops guessing and starts identifying specific knowledge gaps to investigate.",
+          "supportType": "method",
+          "support": "The method uses self-observation on a granular task to generate a targeted inquiry relevant to the student's personal learning experience.",
+          "references": [
+            "Shot 4",
+            "Shot 5"
+          ],
+          "shotNumbers": [
+            4,
+            5
+          ],
+          "payoffShotNumbers": [
+            5
+          ],
+          "payoff": "The student produces a concrete, answerable question that changes their research process from passive reading to active verification."
+        }
+      ],
+      "id": "reel_1794643265740_k934je",
+      "reelTitle": "The Sticking Point Journal",
+      "creativeAngle": "Using a personal observation journal to transform vague degree anxiety into actionable research questions.",
+      "objective": "Empower students to move from indecision to specific inquiry using a practical observation method.",
+      "targetAudience": "+2 students seeking accessible, supportive guidance, including students worried about marks, confidence, or belonging",
+      "duration": "28 sec",
+      "format": "9:16 Vertical Reel",
+      "creativeDirection": "Informative",
+      "language": "English",
+      "shots": [
+        {
+          "number": 1,
+          "type": "HOOK",
+          "functions": [
+            "HOOK"
+          ],
+          "name": "Staring at brochures",
+          "timestamp": "00:00 – 00:04",
+          "visual": "A student looks confused at two separate degree brochures labeled B.Com and BBA.",
+          "dialogue": "Choosing between B.Com and BBA feels like guessing without a map.",
+          "onscreenText": "B.Com vs BBA",
+          "cameraPerformance": "Close up, slightly handheld feel.",
+          "userEdited": false
+        },
+        {
+          "number": 2,
+          "type": "PROBLEM",
+          "functions": [
+            "PROBLEM"
+          ],
+          "name": "The overwhelm",
+          "timestamp": "00:04 – 00:08",
+          "visual": "Student rubs their temples, looking at a wall of text.",
+          "dialogue": "Generic descriptions don't show what you'll actually do every day.",
+          "onscreenText": "Stop guessing",
+          "cameraPerformance": "Medium shot, sympathetic lighting.",
+          "userEdited": false
+        },
+        {
+          "number": 3,
+          "type": "PATTERN_INTERRUPT",
+          "functions": [
+            "PATTERN_INTERRUPT"
+          ],
+          "name": "The journal reveal",
+          "timestamp": "00:08 – 00:12",
+          "visual": "Student slides a notebook into frame and starts writing.",
+          "dialogue": "Try this: work through a small task and record where you actually get stuck.",
+          "onscreenText": "Try the Sticking Point Method",
+          "cameraPerformance": "Close up on the notebook page.",
+          "userEdited": false
+        },
+        {
+          "number": 4,
+          "type": "VALUE",
+          "functions": [
+            "VALUE"
+          ],
+          "name": "Recording the insight",
+          "timestamp": "00:12 – 00:19",
+          "visual": "Focus on the notebook showing specific written notes.",
+          "dialogue": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+          "onscreenText": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+          "cameraPerformance": "Macro shot of pen on paper.",
+          "userEdited": false
+        },
+        {
+          "number": 5,
+          "type": "PAYOFF",
+          "functions": [
+            "PAYOFF"
+          ],
+          "name": "The new question",
+          "timestamp": "00:19 – 00:24",
+          "visual": "Student smiles, holding the notebook and looking at a course page.",
+          "dialogue": "Now you have a specific target: Is this concept covered in the introductory modules?",
+          "onscreenText": "Is this concept covered in the introductory modules?",
+          "cameraPerformance": "Bright, confident, eye-level shot.",
+          "userEdited": false
+        },
+        {
+          "number": 6,
+          "type": "CTA",
+          "functions": [
+            "CTA"
+          ],
+          "name": "Actionable next step",
+          "timestamp": "00:24 – 00:28",
+          "visual": "Student picks up a course brief and a highlighter.",
+          "dialogue": "Apply this to your own course briefs to find your fit.",
+          "onscreenText": "Check your course briefs",
+          "cameraPerformance": "Wide shot, student looking ready to work.",
+          "userEdited": false
+        }
+      ],
+      "productionNotes": {
+        "visualStyle": "Clean, academic, relatable student space.",
+        "performance": "Calm, practical, and encouraging.",
+        "camera": "Handheld for authenticity; macro shots for clarity.",
+        "editing": "Steady transitions between the method steps.",
+        "sound": "Soft lo-fi background track.",
+        "props": [
+          "Notebook",
+          "Pen",
+          "B.Com brochure",
+          "BBA brochure"
+        ],
+        "locations": [
+          "Study desk"
+        ],
+        "casting": "Authentic +2 student.",
+        "complexity": "LOW"
+      },
+      "creativeSummary": {
+        "keyCreativeIdea": "Transforming degree comparison from abstract lists into concrete task-based inquiry.",
+        "shootingPriority": [
+          "Notebook shots",
+          "Student expressions"
+        ]
+      },
+      "tags": [
+        "+2",
+        "careers",
+        "joy-university",
+        "course-choice"
+      ],
+      "createdAt": "2026-11-14T08:01:05.740Z",
+      "updatedAt": "2026-11-14T08:01:05.740Z",
+      "status": "Draft",
+      "version": 1,
+      "channel": "Connection",
+      "conceptSelection": {
+        "stage": "concept-before-story",
+        "selected": {
+          "id": "conn_01",
+          "title": "The Sticking Point Journal",
+          "audienceGap": "Students feel overwhelmed by the choice and don't know how to start researching.",
+          "basisId": "task_question_journal",
+          "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+          "viewerChange": "Uses a journal to isolate a specific point of confusion rather than feeling lost.",
+          "concept": "Two students talk through a task; one records a specific moment where they needed help.",
+          "mechanismKey": "journal_method",
+          "device": "A personal notebook entry showing the transition from 'I'm stuck' to 'I need this answer'.",
+          "supportType": "method",
+          "support": "The observation belongs to this activity and participant; it supports a next question rather than a general prediction.",
+          "evidenceNeeded": [],
+          "methodSteps": [
+            "Try or inspect a clearly illustrative task.",
+            "Record one point where you needed help and one question you want to investigate.",
+            "Turn the observation into a question for a real course brief or course team."
+          ],
+          "interpretationRule": "Use the recorded observation to choose the next question, not to select a degree from one activity.",
+          "visibleProof": "A person records a specific sticking point and asks a different, more useful question afterward.",
+          "payoff": "The student feels empowered by asking a precise, researchable question.",
+          "limitations": "A brief exercise does not measure aptitude, learning style, long-term interest or academic performance.",
+          "demonstration": {
+            "input": "A short case study on project resource allocation.",
+            "visibleInput": "Example: Help Needed: Defining resource constraints. Question: Where is this taught?",
+            "observation": "The student identifies exactly where the difficulty lies in the process.",
+            "nextQuestion": "Is this concept covered in the introductory modules?"
+          },
+          "treatment": "Trendy"
+        },
+        "comparedWith": [
+          {
+            "channel": "Trust",
+            "id": "trust_01",
+            "hlni": "A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.",
+            "mechanismKey": "audit_worksheet",
+            "device": "Split-screen comparison of a task, an assessment criterion, and a feedback source."
+          },
+          {
+            "channel": "Connection",
+            "id": "conn_01",
+            "hlni": "A short illustrative activity can reveal where you need help or what you want to investigate next; it cannot determine which degree suits you.",
+            "mechanismKey": "journal_method",
+            "device": "A personal notebook entry showing the transition from 'I'm stuck' to 'I need this answer'."
+          },
+          {
+            "channel": "Discovery",
+            "id": "disc_01",
+            "hlni": "One unlabeled example does not prove which category or programme contains it. An exclusive claim needs information that actually links the example to that category.",
+            "mechanismKey": "evidence_gap",
+            "device": "A 'reveal' animation showing the lack of institutional source for the example."
+          }
+        ],
+        "contrast": "Pre-story comparison selected different grounded insights and mechanisms: Trust = assessment_questions / audit_worksheet; Connection = task_question_journal / journal_method; Discovery = insufficient_information / evidence_gap. Each has an illustrative input, observable result and next question. This is not editorial approval."
+      },
+      "narrativeContract": "six-stage-v2"
+    },
+    "qa": {
+      "pass": false,
+      "failedGate": "Delivery (Spoken pacing)",
+      "failureReason": "Dialogue has 71 words; maximum 70 for 28 seconds.",
+      "repairInstruction": "Rewrite the scenes as one concise story. Use at most 70 English words of dialogue in total. Preserve the applicable narrative contract and match each spoken line to its scene duration."
+    }
+  }
+]

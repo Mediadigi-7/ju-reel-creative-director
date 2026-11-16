@@ -1,0 +1,66 @@
+[
+  {
+    "stage": "channel_concept",
+    "outcome": "complete",
+    "elapsedMs": 4575,
+    "remainingMs": 45423,
+    "at": "2026-11-16T06:47:56.114Z"
+  },
+  {
+    "stage": "concept_review",
+    "outcome": "complete",
+    "elapsedMs": 704,
+    "remainingMs": 44715,
+    "at": "2026-11-16T06:47:56.822Z"
+  },
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 4280,
+    "remainingMs": 40435,
+    "at": "2026-11-16T06:48:01.102Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "passed",
+    "elapsedMs": 4,
+    "remainingMs": 40431,
+    "at": "2026-11-16T06:48:01.106Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "attempted",
+    "elapsedMs": 0,
+    "remainingMs": 40431,
+    "at": "2026-11-16T06:48:01.106Z"
+  },
+  {
+    "stage": "critique",
+    "outcome": "complete",
+    "elapsedMs": 1527,
+    "remainingMs": 38904,
+    "at": "2026-11-16T06:48:02.633Z"
+  },
+  {
+    "stage": "advisory_rewrite",
+    "outcome": "complete",
+    "elapsedMs": 4505,
+    "remainingMs": 34399,
+    "at": "2026-11-16T06:48:07.138Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 1,
+    "remainingMs": 34398,
+    "at": "2026-11-16T06:48:07.139Z"
+  },
+  {
+    "stage": "advisory",
+    "outcome": "retained_valid_draft",
+    "category": "output_validation",
+    "elapsedMs": 0,
+    "remainingMs": 34398,
+    "at": "2026-11-16T06:48:07.139Z"
+  }
+]

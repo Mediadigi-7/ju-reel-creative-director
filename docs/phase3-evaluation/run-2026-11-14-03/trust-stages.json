@@ -1,0 +1,51 @@
+[
+  {
+    "stage": "concept",
+    "outcome": "complete",
+    "elapsedMs": 6981,
+    "remainingMs": 43016,
+    "at": "2026-11-14T08:03:33.251Z"
+  },
+  {
+    "stage": "story",
+    "outcome": "complete",
+    "elapsedMs": 5903,
+    "remainingMs": 37107,
+    "at": "2026-11-14T08:03:39.160Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Scene pacing)",
+    "elapsedMs": 3,
+    "remainingMs": 37104,
+    "at": "2026-11-14T08:03:39.163Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 6977,
+    "remainingMs": 30126,
+    "at": "2026-11-14T08:03:46.141Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Concept delivery",
+    "elapsedMs": 2,
+    "remainingMs": 30124,
+    "at": "2026-11-14T08:03:46.143Z"
+  },
+  {
+    "stage": "repair",
+    "outcome": "complete",
+    "elapsedMs": 6831,
+    "remainingMs": 23293,
+    "at": "2026-11-14T08:03:52.974Z"
+  },
+  {
+    "stage": "validation",
+    "outcome": "Delivery (Spoken pacing)",
+    "elapsedMs": 1,
+    "remainingMs": 23292,
+    "at": "2026-11-14T08:03:52.975Z"
+  }
+]

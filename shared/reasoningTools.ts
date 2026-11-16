@@ -2,6 +2,17 @@
 // channel templates. They supply bounded HLNI foundations while the model invents
 // the human situation, concept, visual device, treatment and production shots.
 export const REASONING_TOOLS = {
+  verified_curriculum_example:{
+    insight:'Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents whose covers say students admitted from 2025–26 onwards.',
+    steps:['Identify the specific programme and document cohort.','Show the inspected course-title row in each source.','Use this bounded overlap to investigate the full course, rather than assume degree titles partition subjects.'],
+    rule:'The supplied rows establish this shared title in these two documents only; they do not establish identical teaching, depth, assessment or availability.',
+    proof:'Two real cited rows correct a title-based assumption while retaining programme/version scope.',
+    support:'Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.',
+    limit:'No universal overlap, identical content, exclusivity, current-admissions or career inference. BBA later sections are inconsistent; use only the inspected row.',
+  },
+  original_reasoned_method:{
+    insight:'Supply an original, specific and logically supported method.',steps:['Supply usable steps.'],rule:'Supply the warranted interpretation.',proof:'Supply a concrete demonstration.',support:'Supply reasoning rather than invented external facts.',limit:'No institutional, empirical or diagnostic claims without supplied evidence.',
+  },
   assessment_questions:{
     insight:'A task label alone does not tell you what you must produce, what will be assessed, or what feedback you receive. Ask these as separate questions.',
     steps:['Write the expected work product.','Ask what criterion is used to assess it.','Ask what feedback is available; mark unknown answers as questions.'],

@@ -1,0 +1,178 @@
+[
+  {
+    "plan": {
+      "candidates": [
+        {
+          "storySpine": {
+            "startingBelief": "B.Com and BBA are completely different subjects.",
+            "studentSituation": "Choosing between B.Com and BBA based on title alone.",
+            "observation": "Both Joy University programmes list 'Business Organization & Management' in Semester I.",
+            "focus": "Degree title separation vs. curriculum content overlap.",
+            "whyQuestionFollows": "If a core subject appears in both, the title alone doesn't explain the full course experience.",
+            "changedAction": "Shift focus from general degree titles to comparing specific syllabus documents.",
+            "visibleConsequence": "Student marks the shared subject on a checklist and writes 'What is the rest of the syllabus?' instead of choosing a degree.",
+            "channelExperience": "Viewer sees two official PDF covers side-by-side, then zooms in on the identical Semester I row, triggering a realization that titles mask deeper content details."
+          },
+          "id": "trust-syllabus-001",
+          "basisId": "verified_curriculum_example",
+          "title": "B.Com vs BBA: The Title Myth",
+          "audienceGap": "Believing degree titles dictate entire subject content.",
+          "viewerChange": "Moves from title-based assumptions to evidence-based inquiry.",
+          "concept": "Bounded content overlap.",
+          "mechanismKey": "Curriculum overlap verification.",
+          "device": "Document comparison.",
+          "payoff": "A more grounded method for researching courses.",
+          "hlni": "https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf and https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf (2025-26 cohort).",
+          "support": "Official Joy University syllabus documents for Semester I, page 5 and page 9 respectively.",
+          "methodSteps": [
+            "Present B.Com and BBA program covers.",
+            "Highlight the shared 'Business Organization & Management' row.",
+            "Demonstrate the limitation of relying on titles alone.",
+            "Propose checking full syllabi for deeper distinction."
+          ],
+          "interpretationRule": "Shared titles do not imply identical degree depth or outcomes.",
+          "visibleProof": "Comparison of identical course rows in official documents.",
+          "limitations": "Only applies to the inspected Semester I row; does not generalise to other years or institutions.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Looking at B.Com and BBA covers.",
+            "visibleInput": "Semester I: Business Organization & Management",
+            "observation": "The same subject appears in both degrees.",
+            "nextQuestion": "What else is different beyond the title?"
+          }
+        },
+        {
+          "storySpine": {
+            "startingBelief": "A degree decision is made by picking the 'best' title.",
+            "studentSituation": "Struggling to decide between B.Com and BBA based on online reputation.",
+            "observation": "The student has a list of 'pros' for both degrees that are equally vague.",
+            "focus": "Differentiating between general label and specific course requirements.",
+            "whyQuestionFollows": "Without knowing assessment criteria, the 'pro' is just a label.",
+            "changedAction": "Replaces vague 'pros' with a concrete request for specific course tasks.",
+            "visibleConsequence": "Student crosses out 'Good for Jobs' and writes 'What are the Semester I core assessments?'",
+            "channelExperience": "Viewer watches a frantic 'pros/cons' list being actively dismantled and replaced by a structured, evidence-seeking question sheet."
+          },
+          "id": "trust-method-002",
+          "basisId": "assessment_questions",
+          "title": "Stop Guessing, Start Asking",
+          "audienceGap": "Relying on vague reputational labels for degree choices.",
+          "viewerChange": "From passive label-gathering to active information-gathering.",
+          "concept": "Assessment-focused inquiry.",
+          "mechanismKey": "Task-based questioning.",
+          "device": "Question journal.",
+          "payoff": "Actionable research criteria.",
+          "hlni": "A degree decision requires knowing specific assessment requirements rather than general title prestige.",
+          "support": "Logical framework of separating task, criterion, and feedback.",
+          "methodSteps": [
+            "Define the desired output (degree choice).",
+            "List current unknown factors for each programme.",
+            "Formulate specific questions for admissions or course briefs.",
+            "Refine the search to seek actual criteria."
+          ],
+          "interpretationRule": "Vague labels are not evidence; specific assessment tasks are the only reliable data.",
+          "visibleProof": "A three-column grid showing Task, Criterion, and Feedback.",
+          "limitations": "Requires access to course briefs; will not provide a 'correct' degree choice.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "List of pros for B.Com and BBA.",
+            "visibleInput": "Pros: 'Better for Jobs'",
+            "observation": "The 'pro' lacks a measurable criterion.",
+            "nextQuestion": "What is the assessment task for this course?"
+          }
+        }
+      ],
+      "selected": "trust-syllabus-001"
+    },
+    "issues": [
+      "trust-syllabus-001 | payoff: The visible consequence consists only of a student writing a generic research question. A research question that does not visibly improve the student's next step or act as a concrete correction to the starting belief is insufficient as a payoff. Correction: The student replaces their initial degree choice list with a comparative table identifying shared and distinct modules found in both programme PDFs, demonstrating a move from title-based assumption to evidence-based content comparison."
+    ]
+  },
+  {
+    "plan": {
+      "candidates": [
+        {
+          "storySpine": {
+            "startingBelief": "B.Com and BBA are completely different fields of study.",
+            "studentSituation": "Choosing a degree by assuming titles represent unique, non-overlapping subjects.",
+            "observation": "Both Joy University B.Com Accounting & Finance (p.5) and BBA Entrepreneurship Management (p.9) list 'Business Organization & Management' in Semester I.",
+            "focus": "Identifying course overlap to challenge title-based assumptions.",
+            "whyQuestionFollows": "If a core subject is shared, the title alone is an unreliable guide to the course experience.",
+            "changedAction": "The student replaces their initial 'Degree A vs Degree B' comparison with a table identifying shared vs. distinct modules.",
+            "visibleConsequence": "The student marks the shared subject on a checklist and writes 'What is the rest of the syllabus?' instead of choosing a degree.",
+            "channelExperience": "Viewer sees two official PDF covers side-by-side, then zooms in on the identical Semester I row, triggering a realization that titles mask deeper content details."
+          },
+          "id": "trust-syllabus-v2",
+          "basisId": "verified_curriculum_example",
+          "title": "B.Com vs BBA: Why Titles Mask Content",
+          "audienceGap": "Believing degree titles dictate entire subject content.",
+          "viewerChange": "Moves from title-based assumptions to evidence-based inquiry.",
+          "concept": "Bounded content overlap.",
+          "mechanismKey": "Curriculum overlap verification.",
+          "device": "Document comparison.",
+          "payoff": "A more grounded method for researching courses by syllabus content.",
+          "hlni": "https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf and https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf (2025-26 cohort).",
+          "support": "Official Joy University syllabus documents for Semester I, page 5 and page 9 respectively.",
+          "methodSteps": [
+            "Present B.Com and BBA program covers.",
+            "Highlight the shared 'Business Organization & Management' row.",
+            "Demonstrate the limitation of relying on titles alone.",
+            "Propose checking full syllabi for deeper distinction."
+          ],
+          "interpretationRule": "Shared titles do not imply identical degree depth or outcomes.",
+          "visibleProof": "Comparison of identical course rows in official documents.",
+          "limitations": "Only applies to the inspected Semester I row; does not generalise to other years or institutions.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "Looking at B.Com and BBA covers.",
+            "visibleInput": "Semester I: Business Organization & Management",
+            "observation": "The same subject appears in both degrees.",
+            "nextQuestion": "What else is different beyond the title?"
+          }
+        },
+        {
+          "storySpine": {
+            "startingBelief": "Choosing a degree is about picking the one that sounds more 'career-ready'.",
+            "studentSituation": "Comparing B.Com and BBA based on unverified prestige.",
+            "observation": "The student realizes they cannot define a single assessment task for either degree.",
+            "focus": "Moving from vague prestige to concrete assessment tasks.",
+            "whyQuestionFollows": "Without knowing what work is performed, 'career-ready' is a label rather than evidence.",
+            "changedAction": "The student stops guessing and drafts a list of questions to ask about specific course tasks.",
+            "visibleConsequence": "Student crosses out 'Better for Jobs' and writes 'What is the core assessment for Semester I?'",
+            "channelExperience": "Viewer watches a vague 'pros/cons' list being actively dismantled and replaced by a structured, evidence-seeking question sheet."
+          },
+          "id": "trust-method-v2",
+          "basisId": "assessment_questions",
+          "title": "Stop Guessing, Start Asking",
+          "audienceGap": "Relying on vague reputational labels for degree choices.",
+          "viewerChange": "From passive label-gathering to active information-gathering.",
+          "concept": "Assessment-focused inquiry.",
+          "mechanismKey": "Task-based questioning.",
+          "device": "Question journal.",
+          "payoff": "Actionable research criteria.",
+          "hlni": "A degree decision requires knowing specific assessment requirements rather than general title prestige.",
+          "support": "Logical framework of separating task, criterion, and feedback.",
+          "methodSteps": [
+            "Define the desired output (degree choice).",
+            "List current unknown factors for each programme.",
+            "Formulate specific questions for admissions or course briefs.",
+            "Refine the search to seek actual criteria."
+          ],
+          "interpretationRule": "Vague labels are not evidence; specific assessment tasks are the only reliable data.",
+          "visibleProof": "A three-column grid showing Task, Criterion, and Feedback.",
+          "limitations": "Requires access to course briefs; will not provide a 'correct' degree choice.",
+          "treatment": "Informative",
+          "demonstration": {
+            "input": "List of pros for B.Com and BBA.",
+            "visibleInput": "Pros: 'Better for Jobs'",
+            "observation": "The 'pro' lacks a measurable criterion.",
+            "nextQuestion": "What is the assessment task for this course?"
+          }
+        }
+      ],
+      "selected": "trust-syllabus-v2"
+    },
+    "issues": [
+      "trust-syllabus-v2 | payoff: The visible consequence is a research instruction rather than a concrete use of the insight to improve a decision. A restatement of the need for information ('What is the rest of the syllabus?') is not a completed action that demonstrates the consequence of the insight on the student's next step. Correction: The student uses the overlap discovery to cross-reference specific syllabi modules, identifying the unique core subjects for each degree to refine their selection criteria."
+    ]
+  }
+]

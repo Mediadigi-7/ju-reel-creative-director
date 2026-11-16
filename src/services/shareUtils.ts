@@ -30,6 +30,7 @@ export function encodeStoryboardForUrl(storyboard: ReelStoryboard): string {
       generation: storyboard.generation,
       hlni: storyboard.hlni,
       conceptSelection: storyboard.conceptSelection,
+      narrativeContract:storyboard.narrativeContract,
     };
 
     const json = JSON.stringify(minified);
@@ -55,6 +56,7 @@ export function decodeStoryboardFromUrl(shareParam: string): ReelStoryboard | nu
         generation: parsed.generation,
         hlni: parsed.hlni,
         conceptSelection: parsed.conceptSelection,
+        narrativeContract:parsed.narrativeContract,
         creativeAngle: parsed.a,
         objective: parsed.o,
         targetAudience: parsed.aud,

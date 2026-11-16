@@ -1,3 +1,4 @@
+import { NarrativeStages } from './components/NarrativeStages.js';
 import { HlniReviewCard } from './components/HlniReviewCard.js';
 import { enforceEditorialStatus } from '../shared/hlni.js';
 import type { ContentChannel } from '../shared/channels.js';
@@ -500,6 +501,7 @@ export const App: React.FC = () => {
               isLoading={isLoading}
             />
 
+            <NarrativeStages reel={currentReel} />
             <HlniReviewCard reel={currentReel} onUpdate={handleUpdateMetadata} />
 
             {/* 3. Main Storyboard Canvas (The Hero Content) */}

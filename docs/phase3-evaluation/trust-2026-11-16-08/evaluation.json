@@ -1,0 +1,114 @@
+{
+  "evaluatedAt": "2026-11-16T06:55:18.460Z",
+  "assessor": "Assistant editorial assessment of actual complete Gemini output; not generator self-score or independent blinded human review",
+  "ratingScale": "0–5",
+  "thresholds": {
+    "overall": 85,
+    "hlni": 4,
+    "differentiation": 4,
+    "scaleMaximum": 5
+  },
+  "complete": true,
+  "decision": "PASS",
+  "note": "Editorial judgement, not generator self-score, verified source certification or application approval.",
+  "results": [
+    {
+      "channel": "Trust",
+      "ratings": {
+        "hlni": 4,
+        "differentiation": 4,
+        "coherence": 5,
+        "payoff": 5,
+        "production": 4,
+        "originality": 3
+      },
+      "triggers": {
+        "materialFactualError": false,
+        "missingMeaningfulInsight": false,
+        "unworkableProduction": false
+      },
+      "evidence": {
+        "hlni": "The inspected shared management-course title corrects the accounting-only belief. Exact programme/cohort scope is supported by the cited sources; make the specialisation labels readable in source footage.",
+        "differentiation": "The evidence-led correction is recognisably Trust. No fresh three-channel comparison or broader topic generalisation is claimed.",
+        "coherence": "The student excludes B.Com, sees the supplied management-course row, and restores that same option. The original motive and action remain connected throughout.",
+        "payoff": "The rejected option visibly returns to an investigation/pending/provisional list. This corrects the particular exclusion without treating shared titles as equivalent teaching or selecting a final degree.",
+        "production": "Six practical timed scenes, source-document inserts and concise speech. Hold exact programme/version labels and clarify source cropping before filming. Estimated pacing is not a recorded read-aloud.",
+        "originality": "The folder/post-it shortlist reversal is clear but familiar rather than highly novel."
+      },
+      "automaticTriggerExplanation": "The supplied shared-title row is supported by the inspected sources. No proven material factual error, wholly missing meaningful insight or impossible production instruction was established. Unsupported extrapolations, where present, still require revision; absence of a proven falsehood is not certification.",
+      "reasons": [],
+      "revisions": [
+        "Hold exact programme names and the cohort visibly on the source inserts.",
+        "Show the restored option as provisional and leave unsupplied assessment/depth fields unknown.",
+        "Any comparison cells beyond the one inspected row need verification rather than invented module names."
+      ],
+      "total": 86,
+      "decision": "PASS",
+      "sourceFile": "trust.json",
+      "sourceSha256": "24fad76ed9e353fb2986e67dfb1a39fe14753f29cfe1ced6bfce3cfe2f1c01d2",
+      "productionMetrics": {
+        "shotCount": 6,
+        "chosenTreatment": "Informative",
+        "totalSpokenWords": 43,
+        "shots": [
+          {
+            "number": 1,
+            "functions": [
+              "HOOK"
+            ],
+            "timecode": "00:00 – 00:04",
+            "seconds": 4,
+            "spokenWords": 7
+          },
+          {
+            "number": 2,
+            "functions": [
+              "PROBLEM"
+            ],
+            "timecode": "00:04 – 00:08",
+            "seconds": 4,
+            "spokenWords": 7
+          },
+          {
+            "number": 3,
+            "functions": [
+              "PATTERN_INTERRUPT"
+            ],
+            "timecode": "00:08 – 00:13",
+            "seconds": 5,
+            "spokenWords": 7
+          },
+          {
+            "number": 4,
+            "functions": [
+              "VALUE"
+            ],
+            "timecode": "00:13 – 00:19",
+            "seconds": 6,
+            "spokenWords": 7
+          },
+          {
+            "number": 5,
+            "functions": [
+              "PAYOFF"
+            ],
+            "timecode": "00:19 – 00:24",
+            "seconds": 5,
+            "spokenWords": 8
+          },
+          {
+            "number": 6,
+            "functions": [
+              "CTA"
+            ],
+            "timecode": "00:24 – 00:28",
+            "seconds": 4,
+            "spokenWords": 7
+          }
+        ]
+      }
+    }
+  ],
+  "stagingDeployed": false,
+  "productionChanged": false
+}

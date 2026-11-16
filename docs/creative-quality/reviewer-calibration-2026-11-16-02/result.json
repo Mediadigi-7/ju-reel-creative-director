@@ -1,0 +1,92 @@
+{
+  "evaluatedAt": "2026-11-16T06:22:55.998Z",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "sourceSha256": {
+    "server/conceptQualityReview.ts": "5ce3ecdde345853576b9f6f2ba2a190df0796ab4c9f0175712e19d40fab9d176",
+    "shared/conceptQuality.ts": "9a4c1bbc8ddb3253fdb2aa62ef89de9ec1d97b47b23daee2fefdb7310f9a8a8f",
+    "shared/verifiedCreativeEvidence.ts": "1682e5d7bdd22d34f7480c562d8c60edb3b9f782e33163884217044f4bfe7bee",
+    "server/generationSchemas.ts": "ce9440280a3bbd3a451dd6ed47d2202a0f89ad2af513922f6ae437bea7025592",
+    "scripts/calibrateConceptReviewer.ts": "bbbd94d7b398a64d7fed02979c89f27dcadeb52dd6e376c67a4f530fda92616e"
+  },
+  "rawReview": {
+    "issues": [
+      {
+        "candidateId": "K4",
+        "quote": "The student feels confident about choosing a degree.",
+        "category": "payoff",
+        "evidence": "The concept contract requires a visible consequence that demonstrates why the insight matters, not a change in feeling. The visible consequence listed in the storySpine ('smiles, closes the notebook, and feels calm') violates the requirement that a smile or feeling calm is not a valid consequence.",
+        "revision": "The student uses the written reason to refine their poster design, directly addressing the marking criterion."
+      },
+      {
+        "candidateId": "K2",
+        "quote": "How are complete budgets audited?",
+        "category": "fidelity",
+        "evidence": "The observation involves a specific difficulty classifying a 'refundable deposit'. The resulting question ('How are complete budgets audited?') is a broad, unrelated jump that does not investigate the same specific uncertainty shown by the observation.",
+        "revision": "How should I classify this refundable deposit, and why?"
+      },
+      {
+        "candidateId": "K6",
+        "quote": "Both inspected rows list Business Simulation.",
+        "category": "fidelity",
+        "evidence": "The evidence supplied for the concept (and the HLNI) identifies 'Business Organization & Management' as the shared title. The concept incorrectly labels this as 'Business Simulation'.",
+        "revision": "Both inspected rows list Business Organization & Management."
+      }
+    ]
+  },
+  "groundedIssues": [
+    "K4 | payoff: The concept contract requires a visible consequence that demonstrates why the insight matters, not a change in feeling. The visible consequence listed in the storySpine ('smiles, closes the notebook, and feels calm') violates the requirement that a smile or feeling calm is not a valid consequence. Correction: The student uses the written reason to refine their poster design, directly addressing the marking criterion.",
+    "K2 | fidelity: The observation involves a specific difficulty classifying a 'refundable deposit'. The resulting question ('How are complete budgets audited?') is a broad, unrelated jump that does not investigate the same specific uncertainty shown by the observation. Correction: How should I classify this refundable deposit, and why?",
+    "K6 | fidelity: The evidence supplied for the concept (and the HLNI) identifies 'Business Organization & Management' as the shared title. The concept incorrectly labels this as 'Business Simulation'. Correction: Both inspected rows list Business Organization & Management."
+  ],
+  "results": [
+    {
+      "id": "K4",
+      "expectedReject": true,
+      "rejected": true,
+      "correct": true
+    },
+    {
+      "id": "K1",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    },
+    {
+      "id": "K6",
+      "expectedReject": true,
+      "rejected": true,
+      "correct": true
+    },
+    {
+      "id": "K3",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    },
+    {
+      "id": "K2",
+      "expectedReject": true,
+      "rejected": true,
+      "correct": true
+    },
+    {
+      "id": "K5",
+      "expectedReject": false,
+      "rejected": false,
+      "correct": true
+    }
+  ],
+  "correct": 6,
+  "total": 6,
+  "passed": true,
+  "traces": [
+    {
+      "stage": "concept_review",
+      "outcome": "complete",
+      "elapsedMs": 1600,
+      "remainingMs": 20399
+    }
+  ],
+  "note": "Small explicit calibration set. Expected labels were not sent to the model. This is not proof of general reviewer accuracy or publication approval."
+}

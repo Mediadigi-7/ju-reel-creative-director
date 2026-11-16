@@ -1,0 +1,210 @@
+{
+  "hlni": [
+    {
+      "insight": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents (2025–26).",
+      "audienceGap": "Students assume degree titles dictate exclusive subject matter.",
+      "viewerChange": "From rigid exclusion to informed provisional research.",
+      "supportType": "fact",
+      "support": "Official JOY University PDFs, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+      "references": [
+        "https://joyuniversity.edu.in/B.Com%20Accounting%20and%20Finance.pdf",
+        "https://joyuniversity.edu.in/BBA%20Entrepreneurship%20Management.pdf"
+      ],
+      "shotNumbers": [
+        3,
+        4
+      ],
+      "payoffShotNumbers": [
+        5
+      ],
+      "payoff": "The student stops excluding B.Com based on a false stereotype and pivots to an evidence-based comparison of shared curriculum."
+    }
+  ],
+  "id": "reel_1794812526411_lx8lnwzy",
+  "reelTitle": "B.Com vs BBA: Debunking the Content Myth",
+  "creativeAngle": "Using shared module titles to challenge false assumptions about degree content exclusivity.",
+  "objective": "Help +2 students move from rigid degree exclusion to evidence-based research.",
+  "targetAudience": "+2 students seeking academic depth and well-supported course and career decisions",
+  "duration": "28 sec",
+  "format": "9:16 Vertical Reel",
+  "creativeDirection": "Informative",
+  "language": "English",
+  "shots": [
+    {
+      "number": 1,
+      "type": "HOOK",
+      "functions": [
+        "HOOK"
+      ],
+      "name": "The Exclusion",
+      "timestamp": "00:00 – 00:04",
+      "visual": "A student looks at a research card labeled 'B.Com vs BBA' and crosses out 'B.Com' with a red marker.",
+      "dialogue": "I'm only looking at BBA. B.Com is just for accounting.",
+      "onscreenText": "B.Com: Discarded",
+      "cameraPerformance": "Close-up on the student's hand and the research card.",
+      "userEdited": false
+    },
+    {
+      "number": 2,
+      "type": "PROBLEM",
+      "functions": [
+        "PROBLEM"
+      ],
+      "name": "The Assumption",
+      "timestamp": "00:04 – 00:08",
+      "visual": "Student frowns at their laptop screen, feeling uncertain about the decision.",
+      "dialogue": "But is it really that simple?",
+      "onscreenText": "Is degree choice binary?",
+      "cameraPerformance": "Medium shot showing the student looking conflicted.",
+      "userEdited": false
+    },
+    {
+      "number": 3,
+      "type": "PATTERN_INTERRUPT",
+      "functions": [
+        "PATTERN_INTERRUPT"
+      ],
+      "name": "The Data Reveal",
+      "timestamp": "00:08 – 00:13",
+      "visual": "Split screen showing two official PDFs side-by-side with the same row highlighted.",
+      "dialogue": "Wait, both programmes list the same core subject in Semester I.",
+      "onscreenText": "Business Organization & Management",
+      "cameraPerformance": "Close-up on the shared module title on the screen.",
+      "userEdited": false
+    },
+    {
+      "number": 4,
+      "type": "VALUE",
+      "functions": [
+        "VALUE"
+      ],
+      "name": "The HLNI Insight",
+      "timestamp": "00:13 – 00:19",
+      "visual": "Student pointing to the Joy University documents on the screen.",
+      "dialogue": "Both B.Com Accounting & Finance and BBA Entrepreneurship Management include this module.",
+      "onscreenText": "Source: Joy University 2025-26 PDFs",
+      "cameraPerformance": "Over-the-shoulder shot looking at the laptop.",
+      "userEdited": false
+    },
+    {
+      "number": 5,
+      "type": "PAYOFF",
+      "functions": [
+        "PAYOFF"
+      ],
+      "name": "The Consequence",
+      "timestamp": "00:19 – 00:24",
+      "visual": "Student erases the 'Discard' mark and writes 'Provisional' on the research card.",
+      "dialogue": "Now I need to see what skills this module actually covers in each.",
+      "onscreenText": "Provisional: Need Analysis",
+      "cameraPerformance": "Close-up on the student's hand correcting the card.",
+      "userEdited": false
+    },
+    {
+      "number": 6,
+      "type": "CTA",
+      "functions": [
+        "CTA"
+      ],
+      "name": "The Action",
+      "timestamp": "00:24 – 00:28",
+      "visual": "Student closes the laptop and leans back, ready to research further.",
+      "dialogue": "Compare module descriptions for this specific course.",
+      "onscreenText": "Check official programme documents",
+      "cameraPerformance": "Medium shot of the student looking focused.",
+      "userEdited": false
+    }
+  ],
+  "productionNotes": {
+    "visualStyle": "Clean, academic, research-focused.",
+    "performance": "Natural, thoughtful, and analytical.",
+    "camera": "Handheld for the hook, static for document comparison.",
+    "editing": "Rhythmic, highlighting the reveal of the shared module.",
+    "sound": "Minimalist background beat.",
+    "props": [
+      "Laptop",
+      "Research card",
+      "Red marker",
+      "Printed document snippets"
+    ],
+    "locations": [
+      "Study desk"
+    ],
+    "casting": "+2 student",
+    "complexity": "LOW"
+  },
+  "creativeSummary": {
+    "keyCreativeIdea": "Use verified shared module titles to force a re-evaluation of rigid degree assumptions.",
+    "shootingPriority": [
+      "Split screen evidence",
+      "Card correction"
+    ]
+  },
+  "tags": [
+    "+2",
+    "careers",
+    "joy-university",
+    "course-choice"
+  ],
+  "createdAt": "2026-11-16T07:02:06.411Z",
+  "updatedAt": "2026-11-16T07:02:06.411Z",
+  "status": "Draft",
+  "version": 1,
+  "channel": "Trust",
+  "conceptSelection": {
+    "deliveryPolicy": "evidence-and-action-v1",
+    "stage": "concept-before-story",
+    "selected": {
+      "storySpine": {
+        "startingBelief": "I want to study management, so I am excluding B.Com, assuming it only focuses on accounting.",
+        "studentSituation": "A +2 student is filtering degree options based on perceived title exclusivity.",
+        "observation": "The official Joy University documents for both B.Com Accounting & Finance (2025-26, p.5) and BBA Entrepreneurship Management (2025-26, p.9) list 'Business Organization & Management' in Semester I.",
+        "focus": "The difference between degree titles and their internal curriculum content.",
+        "whyQuestionFollows": "If both degrees share a fundamental management course, the initial 'only accounting' assumption is incomplete.",
+        "changedAction": "The student adds B.Com back to their provisional shortlist for further investigation.",
+        "visibleConsequence": "The student replaces a 'Discard' label with a 'Provisional/Need Analysis' label on their B.Com research card.",
+        "channelExperience": "The viewer witnesses a student correcting a binary exclusion error using verified curriculum data."
+      },
+      "id": "trust_bcom_bba_overlap",
+      "title": "B.Com vs BBA: Debunking the Content Myth",
+      "audienceGap": "Students assume degree titles dictate exclusive subject matter.",
+      "basisId": "verified_curriculum_example",
+      "sourceIds": [
+        "ju-bcom-af-2025-sem1",
+        "ju-bba-em-2025-sem1"
+      ],
+      "hlni": "Business Organization & Management is listed in Semester I of the published JOY University B.Com Accounting & Finance and BBA Entrepreneurship Management documents whose covers say students admitted from 2025–26 onwards.",
+      "viewerChange": "From rigid exclusion to informed provisional research.",
+      "concept": "Using shared module titles to challenge false assumptions about degree content exclusivity.",
+      "mechanismKey": "Shared curriculum evidence as a tool for de-biasing.",
+      "device": "Side-by-side document comparison.",
+      "supportType": "fact",
+      "support": "Official JOY University PDF, B.Com Accounting & Finance p.5 and BBA Entrepreneurship Management p.9; covers identify the 2025–26-onwards cohort.",
+      "evidenceNeeded": [],
+      "methodSteps": [
+        "Identify the specific programme and document cohort.",
+        "Show the inspected course-title row in each source.",
+        "Use this bounded overlap to investigate the full course, rather than assume degree titles partition subjects."
+      ],
+      "interpretationRule": "The supplied rows establish this shared title in these two documents only; they do not establish identical teaching, depth, assessment or availability.",
+      "visibleProof": "Two real cited rows correct a title-based assumption while retaining programme/version scope.",
+      "payoff": "A more comprehensive, evidence-based approach to degree selection.",
+      "limitations": "No universal overlap, identical content, exclusivity, current-admissions or career inference. BBA later sections are inconsistent; use only the inspected row.",
+      "demonstration": {
+        "input": "Student's research notes showing B.Com crossed out.",
+        "visibleInput": "Semester I: Business Organization & Management (B.Com & BBA docs).",
+        "observation": "Both programmes include the same core management module in the first semester.",
+        "nextQuestion": "What specific skills are taught in this module across both degrees?"
+      },
+      "treatment": "Informative"
+    },
+    "comparedWith": [],
+    "contrast": "Only Trust was planned and reviewed. Finished-story channel comparison is separate; this is not editorial approval."
+  },
+  "narrativeContract": "six-stage-v2",
+  "generation": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "generatedAt": "2026-11-16T07:02:06.411Z"
+  }
+}
