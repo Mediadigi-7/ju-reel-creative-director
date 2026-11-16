@@ -2,7 +2,7 @@ import { installConceptPlanningMocks } from './conceptPlannerTestFixtures.js';
 import { withHlniTestProposal } from './hlniTestFixture.js';
 import assert from 'node:assert/strict';
 import { generateOfflineStoryboard } from '../shared/offline/index.js';
-import { applyDialogueRepair, buildDialogueRepair, normalizeComparisonCaptions, speechUnits } from './outputRepair.js';
+import { applyDialogueRepair, buildDialogueRepair, normalizeComparisonCaptions, speechUnits, dialogueBudget, dialogueTimingInstruction } from './outputRepair.js';
 import { generateStoryboard, regenerateShot, checkLanguageCompliance } from './aiService.js';
 import type { ReelStoryboard } from '../shared/types.js';
 
@@ -18,6 +18,21 @@ assert.equal(speechUnits('  ', 'English'),0);
 assert.equal(speechUnits('One useful next step.', 'English'),4);
 assert.ok(buildDialogueRepair({...fixture,channel:'Connection'},'Too long').includes('maximumDialogueUnits'));
 assert.ok(buildDialogueRepair({...fixture,language:'Tamil'},'English caption').includes('Translate English words'));
+
+// Unequal scenes must not borrow each other's speaking time; native scripts
+// use grapheme clusters and get an explicit total budget in both prompts.
+assert.deepEqual(dialogueBudget('English',4),{unit:'words',target:8,totalMaximum:10,sceneMaximum:12});
+assert.equal(dialogueBudget('Tamil',4).target,36);
+assert.equal(dialogueBudget('English',Number.NaN).target,0);
+for(const language of ['Tamil','Telugu','Malayalam','Hindi']) {
+ const prompt=dialogueTimingInstruction(language,'28 sec');
+ assert.ok(prompt.includes('252 spoken graphemes'));
+ assert.ok(prompt.includes('336 graphemes'));
+ assert.ok(buildDialogueRepair({...fixture,language:language as ReelStoryboard['language']},'Too long').includes(prompt));
+}
+assert.equal(speechUnits('கி','Tamil'),1,'Tamil combining marks are one spoken-text grapheme cluster');
+const uneven={...fixture,shots:fixture.shots.map((s,i)=>({...s,timestamp:i===0?'00:00–00:02':s.timestamp}))};
+assert.ok(buildDialogueRepair(uneven,'Too long').includes('"maximumDialogueUnits": 4'));
 
 for(const [language,line] of [['Tamil','பாடங்களை ஒப்பிடுங்கள்.'],['Telugu','పాఠ్యాంశాలను పోల్చండి.'],['Malayalam','പാഠ്യപദ്ധതികൾ താരതമ്യം ചെയ്യുക.'],['Hindi','पाठ्यक्रमों की तुलना करें।']] as const) {
  const native:ReelStoryboard = {...fixture,shots:fixture.shots.map(s=>({...s,dialogue:line,onscreenText:line}))};
