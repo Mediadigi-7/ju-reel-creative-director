@@ -115,7 +115,7 @@ export const ReelStoryboardSchema = z.object({
   editorialReview:EditorialReviewSchema.optional(),
   channel: z.enum(['Trust','Connection','Discovery']).optional(),
   generation: z.object({
-    source: z.enum(['openai', 'gemini', 'offline']),
+    source: z.enum(['openai', 'gemini', 'groq', 'offline']),
     warnings:z.array(z.string()).optional(),
     model: z.string().optional(), generatedAt: z.string(),
     templateId: z.string().optional(), catalogueVersion: z.string().optional(),

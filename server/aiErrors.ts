@@ -8,6 +8,7 @@ export async function providerResponseError(response: Response, provider?:AiProv
   const code = String(data?.error?.code || data?.error?.status || '');
   const message = String(data?.error?.message || '');
   if(response.status===401) return new AiProviderError('authentication',provider);
+  if(response.status===429 && /rate_limit/i.test(code)) return new AiProviderError('rate_limit',provider);
   if(response.status===429) return new AiProviderError(/quota|billing|credit|resource_exhausted/i.test(code+' '+message)?'billing_quota':'rate_limit',provider);
   if(response.status===404 || /model_not_found|model.*not.*found/i.test(code+' '+message)) return new AiProviderError('model_access',provider);
   if(response.status===403) return new AiProviderError('permission',provider);

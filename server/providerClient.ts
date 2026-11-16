@@ -14,14 +14,14 @@ export function providerJsonClient(config:{provider:AiProvider;apiKey:string;dea
   const scope=requestSignal(config.signal,Math.min(available,budget?.timeoutMs ?? (planning?22000:config.timeoutMs)));
   let outcome='error',category:string|undefined;
   try {
-  const gemini=config.provider==='gemini';
+  const gemini=config.provider==='gemini',groq=config.provider==='groq';
   const tokens=planning?6000:stage==='editorial'?1800:config.maxOutputTokens;
   let res:Response;
-  try{res=await fetch(gemini?`https://generativelanguage.googleapis.com/v1beta/models/${PROVIDER_MODELS.gemini}:generateContent`:'https://api.openai.com/v1/chat/completions',{
+  try{res=await fetch(gemini?`https://generativelanguage.googleapis.com/v1beta/models/${PROVIDER_MODELS.gemini}:generateContent`:groq?'https://api.groq.com/openai/v1/chat/completions':'https://api.openai.com/v1/chat/completions',{
    method:'POST',signal:scope.signal,
-   headers:{'Content-Type':'application/json',...(gemini?{'x-goog-api-key':config.apiKey}:{Authorization:'Bearer '+config.apiKey})},
+   headers:{'Content-Type':'application/json',...(groq?{'User-Agent':'JoyReelCreativeDirector/1.0'}:{}),...(gemini?{'x-goog-api-key':config.apiKey}:{Authorization:'Bearer '+config.apiKey})},
    body:JSON.stringify(gemini?{contents:[{parts:[{text:instruction}]}],generationConfig:{temperature:.8,responseMimeType:'application/json',responseSchema:stage==='channel_concept'?channelConceptResponseSchema:stage==='concept'?conceptResponseSchema:stage==='editorial'?(budget?.stage==='concept_review'?conceptQualityResponseSchema:editorialResponseSchema):shape==='dialogue'?dialogueResponseSchema:storyResponseSchema,...(tokens?{maxOutputTokens:tokens}:{})}}
-    :{model:PROVIDER_MODELS.openai,messages:[{role:'system',content:stage==='concept'?'Plan credible, distinct concepts before storyboarding. Return JSON.':'Write the requested production storyboard. Return JSON.'},{role:'user',content:instruction}],response_format:{type:'json_object'},temperature:.8,...(tokens?{max_tokens:tokens}:{})}),
+    :{model:PROVIDER_MODELS[config.provider],messages:[{role:'system',content:stage==='concept'?'Plan credible, distinct concepts before storyboarding. Return JSON.':'Write the requested production storyboard. Return JSON.'},{role:'user',content:instruction}],response_format:{type:'json_object'},temperature:.8,...(groq?{reasoning_effort:'low',...(tokens?{max_completion_tokens:tokens}:{})}:tokens?{max_tokens:tokens}:{})}),
   });}catch(error){ensureActive(config.signal);throw transportError(error);}
   if(!res.ok)throw await providerResponseError(res,config.provider);
   const data=await res.json().catch(error=>{ensureActive(config.signal);if(scope.signal.aborted)throw transportError(error);throw new AiProviderError('invalid_response');});

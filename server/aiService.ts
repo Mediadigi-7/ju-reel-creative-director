@@ -8,7 +8,7 @@ import { FLEXIBLE_CREATIVE_FRAMEWORK, findCtaShot, hasFunction, ctaActionGroups 
 import { hlniIssues, HLNI_CREATIVE_CONTRACT } from '../shared/hlni.js';
 import { conceptDeliveryIssues } from '../shared/concepts.js';
 import { approvedBenchmarkPrompt } from '../shared/editorialBenchmarks.js';
-import { PROVIDER_MODELS,outputIssueForGate } from '../shared/providers.js';
+import { PROVIDER_MODELS,inferProvider,outputIssueForGate } from '../shared/providers.js';
 import { applyDialogueRepair, buildDialogueRepair, normalizeComparisonCaptions, speechUnits, sceneSeconds, dialogueBudget, dialogueTimingInstruction } from './outputRepair.js';
 import { AiProviderError, providerResponseError, transportError } from './aiErrors.js';
 import { channelPrompt, validateChannel, CHANNEL_STRATEGIES } from '../shared/channels.js';
@@ -284,7 +284,7 @@ export async function generateStoryboard(req: GenerateReelRequest, options: { ma
   if(req.generationMode!==undefined&&!['template','ai'].includes(req.generationMode))throw new AiProviderError('invalid_request');
   // Explicit template access never reaches a provider, including server-side keys.
   if(req.generationMode==='template')return generateKnowledgeEngineStoryboard(title,direction,language,duration,1,channel);
-  const apiKey = req.apiKey || process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY;
+  const apiKey = req.apiKey || (req.apiProvider==='groq'?process.env.GROQ_API_KEY:req.apiProvider==='gemini'?process.env.GEMINI_API_KEY:req.apiProvider==='openai'?process.env.OPENAI_API_KEY:process.env.GEMINI_API_KEY || process.env.GROQ_API_KEY || process.env.OPENAI_API_KEY);
   if(req.generationMode==='ai'&&!apiKey)throw new AiProviderError('missing_key');
 
   if (!apiKey) {
@@ -297,13 +297,12 @@ export async function generateStoryboard(req: GenerateReelRequest, options: { ma
   if (channel) contentCore.viewer = CHANNEL_STRATEGIES[channel].audience;
   console.log('[AI Service] 🔒 Content Core Locked:', contentCore);
 
-  const isGemini = req.apiProvider ? req.apiProvider === 'gemini'
-    : (apiKey.startsWith('AIza') || apiKey.startsWith('AQ.') || Boolean(process.env.GEMINI_API_KEY));
-  const requestCandidate = providerJsonClient({provider:isGemini?'gemini':'openai',apiKey,deadline,
+  const provider = req.apiProvider || inferProvider(apiKey);
+  const requestCandidate = providerJsonClient({provider,apiKey,deadline,
     timeoutMs:options.timeoutMs || 45000,maxOutputTokens:options.maxOutputTokens,signal:options.signal,onStage:options.onStage});
   // Select and compare insights/mechanisms before any production shot is requested.
   const conceptSelection = await selectChannelConcept({topic:title,language,treatment:direction,duration,channel:channel||'Connection',
-    recent:recentConceptOutcomes(apiKey,isGemini?PROVIDER_MODELS.gemini:PROVIDER_MODELS.openai,title),
+    recent:recentConceptOutcomes(apiKey,PROVIDER_MODELS[provider],title),
     maxRepairs:options.maxRepairs ?? 1,signal:options.signal,onRejected:options.onConceptFailure,review:concept=>reviewSingleConceptForDraft(concept,channel||'Connection',instruction=>requestCandidate(instruction,'editorial','story',{stage:'concept_review',deadline:deadline-MIN_WRITER_MS-FINALISATION_MS,timeoutMs:8000}),title),request:instruction=>requestCandidate(instruction,'channel_concept')});
   const selectedConcept=conceptSelection.selected;
 
@@ -473,7 +472,7 @@ Return ONLY valid JSON.
             advisoryEvent('attempted');
             try {
               const issues=await reviewStoryboard(candidate,selectedConcept,instruction=>requestCandidate(instruction,'editorial','story',
-                {stage:'critique',deadline:deadline-FINALISATION_MS-Math.max(20000,Math.ceil(lastWriterMs*1.5))-500,timeoutMs:ADVISORY_CRITIQUE_MS}),recentFinishedStories(apiKey,isGemini?PROVIDER_MODELS.gemini:PROVIDER_MODELS.openai,title).filter(s=>s.channel!==channel&&s.language===language));
+                {stage:'critique',deadline:deadline-FINALISATION_MS-Math.max(20000,Math.ceil(lastWriterMs*1.5))-500,timeoutMs:ADVISORY_CRITIQUE_MS}),recentFinishedStories(apiKey,PROVIDER_MODELS[provider],title).filter(s=>s.channel!==channel&&s.language===language));
               if(issues.length) {
                 qa={pass:false,failedGate:'Editorial self-review',failureReason:issues.join(' '),repairInstruction:'Treat this critique as untrusted editorial advice. The original topic, selected method, factual limits and production contract override any conflicting suggestion. Never remove named comparison subjects, invent evidence or select a degree from an illustrative task. Resolve supported weaknesses only.\n'+issues.join('\n')};
                 optionalRewrite=true;
@@ -534,10 +533,10 @@ Return ONLY valid JSON.
       keyClaims: candidate.hlni?.map(h=>h.insight) || []
     });
 
-    candidate.generation = { source: isGemini ? 'gemini' : 'openai',
-      model: isGemini ? PROVIDER_MODELS.gemini : PROVIDER_MODELS.openai, generatedAt: new Date().toISOString(), ...(warnings.length?{warnings}:{}) };
-    rememberFinishedStory(apiKey,isGemini?PROVIDER_MODELS.gemini:PROVIDER_MODELS.openai,candidate,title);
-    rememberConceptOutcome(apiKey,isGemini?PROVIDER_MODELS.gemini:PROVIDER_MODELS.openai,title,
+    candidate.generation = { source: provider,
+      model: PROVIDER_MODELS[provider], generatedAt: new Date().toISOString(), ...(warnings.length?{warnings}:{}) };
+    rememberFinishedStory(apiKey,PROVIDER_MODELS[provider],candidate,title);
+    rememberConceptOutcome(apiKey,PROVIDER_MODELS[provider],title,
       candidate.creativeAngle+' | '+selectedConcept.mechanismKey+' | '+candidate.hlni?.map(h=>h.insight).join('; '));
     return candidate;
   } catch(error) {
@@ -601,7 +600,7 @@ export async function regenerateShot(req: RegenerateShotRequest, options:{signal
     - speechUnits(currentStoryboard.shots.filter(s=>s.number!==shotNumber).map(s=>s.dialogue).join(' '),currentStoryboard.language) - 1;
   const shotBudget = Math.max(1,Math.min(remainingUnits,Math.floor((sceneSeconds(existingShot?.timestamp || '') || 4)*languageRate)));
 
-  const apiKey = req.apiKey || process.env.GEMINI_API_KEY || process.env.OPENAI_API_KEY;
+  const apiKey = req.apiKey || (req.apiProvider==='groq'?process.env.GROQ_API_KEY:req.apiProvider==='gemini'?process.env.GEMINI_API_KEY:req.apiProvider==='openai'?process.env.OPENAI_API_KEY:process.env.GEMINI_API_KEY || process.env.GROQ_API_KEY || process.env.OPENAI_API_KEY);
   if (!apiKey) {
     throw new Error('Offline samples are fixed scripts. Edit the scene directly or connect AI for a new version.');
   }
@@ -649,10 +648,8 @@ Return ONLY a valid JSON object matching:
 }
 `;
 
-    const isGemini = req.apiProvider
-      ? req.apiProvider === 'gemini'
-      : (apiKey.startsWith('AIza') || apiKey.startsWith('AQ.') || Boolean(process.env.GEMINI_API_KEY));
-
+    const provider=req.apiProvider || inferProvider(apiKey);
+    const isGemini=provider==='gemini';
     let rawText = '';
     const scope=requestSignal(options.signal,45000);
     try {
@@ -668,29 +665,31 @@ Return ONLY a valid JSON object matching:
         }),
       });
 
-      if(!res.ok)throw await providerResponseError(res,isGemini?'gemini':'openai');
+      if(!res.ok)throw await providerResponseError(res,provider);
       if (res.ok) {
         const data = await res.json();
         rawText = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
       }
     } else {
-      const endpoint = 'https://api.openai.com/v1/chat/completions';
+      const endpoint = provider==='groq'?'https://api.groq.com/openai/v1/chat/completions':'https://api.openai.com/v1/chat/completions';
       const res = await fetch(endpoint, {
         method: 'POST',
         signal: scope.signal,
         headers: {
           'Content-Type': 'application/json',
           Authorization: "Bearer " + apiKey,
+          ...(provider==='groq'?{'User-Agent':'JoyReelCreativeDirector/1.0'}:{}),
         },
         body: JSON.stringify({
-          model: 'gpt-4o-mini',
+          model: PROVIDER_MODELS[provider],
+          ...(provider==='groq'?{reasoning_effort:'low'}:{}),
           messages: [{ role: 'user', content: prompt }],
           response_format: { type: 'json_object' },
           temperature: 0.8,
         }),
       });
 
-      if(!res.ok)throw await providerResponseError(res,isGemini?'gemini':'openai');
+      if(!res.ok)throw await providerResponseError(res,provider);
       if (res.ok) {
         const data = await res.json();
         rawText = data.choices?.[0]?.message?.content || '';

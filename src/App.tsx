@@ -520,7 +520,7 @@ export const App: React.FC = () => {
                   onUpdateShot={handleUpdateShot}
                   onRegenerateShot={handleRegenerateShot}
                   isRegenerating={regeneratingShotNumber === shot.number}
-                  canRegenerate={Boolean(apiSettings.apiKey?.trim()) || currentReel.generation?.source === 'openai' || currentReel.generation?.source === 'gemini'}
+                  canRegenerate={Boolean(apiSettings.apiKey?.trim()) || currentReel.generation?.source === 'openai' || currentReel.generation?.source === 'gemini' || currentReel.generation?.source === 'groq'}
                 />
               ))}
             </div>
