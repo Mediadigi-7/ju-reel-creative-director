@@ -9,7 +9,7 @@ import { hlniIssues, HLNI_CREATIVE_CONTRACT } from '../shared/hlni.js';
 import { conceptDeliveryIssues } from '../shared/concepts.js';
 import { approvedBenchmarkPrompt } from '../shared/editorialBenchmarks.js';
 import { PROVIDER_MODELS,outputIssueForGate } from '../shared/providers.js';
-import { applyDialogueRepair, buildDialogueRepair, normalizeComparisonCaptions, speechUnits, sceneSeconds } from './outputRepair.js';
+import { applyDialogueRepair, buildDialogueRepair, normalizeComparisonCaptions, speechUnits, sceneSeconds, dialogueBudget, dialogueTimingInstruction } from './outputRepair.js';
 import { AiProviderError, providerResponseError, transportError } from './aiErrors.js';
 import { channelPrompt, validateChannel, CHANNEL_STRATEGIES } from '../shared/channels.js';
 import { proposedProgrammeContext } from '../shared/proposedProgrammes.js';
@@ -241,7 +241,7 @@ export function runMultiGateQA(
   const seconds = parseInt(storyboard.duration,10);
   const speech = storyboard.shots.map(shot => shot.dialogue).join(' ');
   const units = speechUnits(speech, targetLanguage);
-  const limit = seconds * (targetLanguage === 'English' ? 2.5 : 12);
+  const limit = dialogueBudget(targetLanguage,seconds).totalMaximum;
   if (seconds > 0 && units > limit) return {
     pass:false, failedGate:'Delivery (Spoken pacing)', failureReason:`Dialogue has ${units} ${targetLanguage === 'English' ? 'words' : 'graphemes'}; maximum ${Math.floor(limit)} for ${seconds} seconds.`,
     repairInstruction:`Rewrite the scenes as one concise story. Use at most ${Math.floor(limit)} ${targetLanguage === 'English' ? 'English words' : 'graphemes'} of dialogue in total. Preserve the applicable narrative contract and match each spoken line to its scene duration.`,
@@ -354,8 +354,7 @@ CREATIVE TRANSFORMATION (6x3 MATRIX)
 - CREATIVE DIRECTION: "${direction.toUpperCase()}"
 - TARGET LANGUAGE: "${language.toUpperCase()}"
 - LANGUAGE CONTRACT: ${language === 'English' ? 'Use English dialogue and on-screen text.' : language === 'Tanglish' ? 'Tanglish may use romanized Tamil mixed with English.' : `Use native-script ${language} for every spoken line and on-screen phrase. Romanized ${language} or Tanglish is invalid. Only canonical degree identifiers such as B.Com and BBA may remain in Latin letters; translate surrounding prose and technical terms.`}
-- DRAFTING HEADROOM: ${language==='English'?`Aim for at most ${Math.floor((parseInt(duration,10)||28)*2)} spoken words total and about two words per second per scene, leaving room for reactions. Put worksheet labels on screen; never read the full graphic aloud.`:'Leave room for pauses and reactions in every scene.'}
-- SPOKEN WORD LIMIT: ${Math.floor((parseInt(duration,10) || 28) * 2.5)} total English words maximum. Keep each scene brief enough for its timestamp. In native languages use comparably concise speech.
+- SPOKEN DELIVERY BUDGET: ${dialogueTimingInstruction(language,duration)}
 - RESOURCE RULE: No link, guide, brochure, DM service or admissions destination was supplied. Do not invent one or say link in bio. End with one relevant action that follows from this story. Do not stack actions.
 - DURATION: "${duration}"
 
@@ -384,7 +383,7 @@ EDITORIAL SELF-REVIEW BEFORE RETURNING JSON (revise silently, never self-approve
 6. Make the selected channel experience recognisable through the human situation and execution, not just its title. Check supported claims, readable graphics, shootable actions and natural speaking time. Remove generic advice and unsupported conclusions.
 Do not output this private review or ratings. Keep the selected concept and flexible narrative format.
 FINAL DELIVERY CHECK BEFORE RETURNING JSON:
-The requested duration is ${duration}. Aim for ${Math.floor((parseInt(duration,10) || 28)*2)} total spoken words in English, leaving room for pauses. The hard maximum is ${Math.floor((parseInt(duration,10) || 28)*2.5)} words across ALL dialogue fields combined. Count them before returning. Each scene must fit its timestamp at no more than three spoken words per second. Shorten the speech rather than increasing the requested duration. Choose the shot count and unequal shot lengths to serve the story, within this duration.
+The requested duration is ${duration}. ${dialogueTimingInstruction(language,duration)} Each English scene has a hard maximum of three words per second. Choose unequal scene lengths to serve the story within this duration.
 Final content continuity check: ${conceptSelection.deliveryPolicy==='evidence-and-action-v1'?'The actual storyboard must include the supplied Business Organization & Management row and show the student correcting the specific exclusion. Natural question wording is allowed.':`The actual dialogue/graphics must contain ${JSON.stringify(selectedConcept.demonstration?.visibleInput)} and ${JSON.stringify(selectedConcept.demonstration?.nextQuestion)}.`} ${options.includeDiagnosticTags?'Include the functions array on every shot, including its primary stage.':''}
 Return ONLY valid JSON.
 `;

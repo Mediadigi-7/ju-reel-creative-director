@@ -22,10 +22,25 @@ export function sceneSeconds(timestamp: string): number {
   return times.length === 2 ? Math.max(0, times[1] - times[0]) : 0;
 }
 
+// These are conservative text proxies, not measured audio durations. Keep the
+// writer and repair prompts aligned with the validator's existing hard limits.
+export function dialogueBudget(language: string, seconds: number) {
+  const duration = Number.isFinite(seconds) ? Math.max(0, seconds) : 0;
+  const english = language === 'English';
+  return { unit: english ? 'words' : 'graphemes',
+    target: Math.floor(duration * (english ? 2 : 9)),
+    totalMaximum: Math.floor(duration * (english ? 2.5 : 12)),
+    sceneMaximum: Math.floor(duration * (english ? 3 : 12)) };
+}
+
+export function dialogueTimingInstruction(language: string, duration: string): string {
+  const budget = dialogueBudget(language, parseInt(duration, 10) || 28);
+  return `For ${language}, aim for at most ${budget.target} spoken ${budget.unit} total; the hard total maximum is ${budget.totalMaximum} ${budget.unit}. Before drafting each scene, reserve time for actions, reactions and pauses and budget its dialogue at ${language === 'English' ? 'two words' : 'nine graphemes'} per second or less. Count native-script grapheme clusters, not English words or Unicode code points. These counts are approximate speaking-time checks, not proof of natural delivery. Do not read the whole graphic aloud. Shorten dialogue rather than extending the requested duration or deleting the insight, qualifications, payoff or required stages.`;
+}
+
 // A repair edits language, not story identity, visuals, or scene boundaries.
 export function buildDialogueRepair(reel: ReelStoryboard, reason: string): string {
-  const rate = reel.language === 'English' ? 2 : 9;
-  const unit = reel.language === 'English' ? 'words' : 'graphemes';
+  const totalBudget = dialogueBudget(reel.language, parseInt(reel.duration,10));
   return `Repair the speech and captions of this reel. Return JSON only.
 Original idea: ${reel.reelTitle}
 ${channelPrompt(reel.channel)}
@@ -38,9 +53,10 @@ Keep the same continuous story, factual qualifications, student situation, revea
 If comparing degrees without actual syllabuses, describe a practical comparison method. Do not assert that one degree is always narrow/deep and the other broad/strategic, or that either guarantees a particular career.
 ${reel.language === 'English' ? 'Use English.' : reel.language === 'Tanglish' ? 'Tanglish is allowed.' : `EVERY dialogue and caption must use native ${reel.language} script. Translate English words such as "vs", "Save", "Share", "syllabus" and "career". Only degree identifiers (B.Com, BBA, B.Tech, B.Sc, BCA, MBA), AI, ML, CSE, VLSI and Joy University may remain in Latin letters.`}
 ${reel.conceptSelection?.deliveryPolicy==='evidence-and-action-v1'?'Preserve the exact supplied course-title evidence and the student’s action correction. Paraphrase research questions naturally for speech; planning wording is not mandatory.':'Preserve the selected visibleInput and nextQuestion verbatim in their existing on-screen graphics when they are already there; shorten speech instead of shortening these protected examples/questions.'}
-Scene budgets are deliberately below the hard delivery limit to leave room for pauses. Count before responding.
+${dialogueTimingInstruction(reel.language,reel.duration)}
+The repair must fit BOTH each scene's maximumDialogueUnits AND a total of at most ${totalBudget.target} ${totalBudget.unit} across all scenes. A short scene cannot borrow time from a later scene. Preserve lines already within budget when possible. Rewrite overlong lines naturally; never truncate words. Count before responding.
 ${JSON.stringify(reel.shots.map(s => ({ number: s.number, type: s.type, visual: s.visual, timestamp: s.timestamp,
-  maximumDialogueUnits: Math.max(1, Math.floor((sceneSeconds(s.timestamp) || parseInt(reel.duration,10) / reel.shots.length) * rate)), unit,
+  maximumDialogueUnits: dialogueBudget(reel.language, sceneSeconds(s.timestamp) || parseInt(reel.duration,10) / reel.shots.length).target, unit:totalBudget.unit,
   currentDialogueUnits: speechUnits(s.dialogue, reel.language), dialogue: s.dialogue, onscreenText: s.onscreenText })), null, 2)}
 Return exactly {"shots":[{"number":1,"dialogue":"...","onscreenText":"..."}, ...all original numbered scenes...]}. Do not return any other fields.`;
 }
